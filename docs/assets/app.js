@@ -134,8 +134,16 @@ async function renderIndexPage() {
       <a class="btn btn-secondary btn-sm" href="${escapeHtml(t.path || '#')}">查看趋势详情</a>
     </div>
   `).join('');
-  const root = `
-    <section class="hero">
+
+  function topPaperCard(item) {
+    return `<div class="card"><div class="card-title"><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title || '')}</a></div><div class="badge-group" style="margin-bottom:10px">${renderBadge(item.value_type_label || '', badgeClass(item.value_type || ''))}${renderBadge(item.decision || '', badgeClass(item.decision || ''))}</div><div class="muted">${escapeHtml(item.source || '')} · 分数 ${escapeHtml(item.score || 0)}</div><p>${escapeHtml(item.brief_cn || item.one_line_judgement || '')}</p></div>`;
+  }
+  function longTailRow(item) {
+    return `<tr><td><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title)}</a></td><td>${escapeHtml(item.why_save || '待补充')}</td><td>${escapeHtml(item.future_trigger || '待补充')}</td><td>${escapeHtml(maybeArray(item.reusable_assets).join(' / ') || '待补充')}</td></tr>`;
+  }
+
+  let sections = '';
+  sections += `<section class="hero">
       <div class="hero-badge"><span class="dot"></span>论文价值发现工作台</div>
       <h1>${escapeHtml(data.site_title || '前沿理论驱动技术雷达日报')}</h1>
       <p>${escapeHtml(data.site_subtitle || '')}</p>
@@ -152,10 +160,10 @@ async function renderIndexPage() {
       <div class="kpi-card"><div class="kpi-number">${escapeHtml(data.value_distribution?.trend ?? 0)}</div><div class="kpi-label">趋势价值</div></div>
       <div class="kpi-card"><div class="kpi-number">${escapeHtml(data.value_distribution?.long_tail ?? 0)}</div><div class="kpi-label">长尾价值</div></div>
       <div class="kpi-card"><div class="kpi-number">${escapeHtml(data.value_distribution?.ignore ?? 0)}</div><div class="kpi-label">暂时忽略</div></div>
-    </section>
+    </section>`;
 
-    <section class="section columns-2">
-      <div class="card">
+  sections += `<section class="section homepage-balanced-grid">
+      <div class="card homepage-primary-card">
         <div class="section-title"><span class="section-icon">🎯</span>今日核心判断</div>
         <div class="card-title" style="margin-top:14px"><a href="${escapeHtml(top.detail_path || '#')}">${escapeHtml(top.title || '待补充')}</a></div>
         <div class="badge-group" style="margin-bottom:10px">
@@ -165,66 +173,38 @@ async function renderIndexPage() {
         <p>${escapeHtml(top.one_line_judgement || '待补充')}</p>
         <ul class="note-list">
           <li><strong>今日建议动作：</strong>${escapeHtml(latest.daily_action || '待补充')}</li>
-          <li><strong>一句话判断：</strong>${escapeHtml(top.one_line_judgement || '待补充')}</li>
           <li><strong>最大不确定性：</strong>${escapeHtml(latest.max_uncertainty || '待补充')}</li>
+          <li><strong>查看入口：</strong><a href="${escapeHtml(latest.path || 'daily.html')}">打开今日日报</a></li>
         </ul>
       </div>
-      <div class="card">
-        <div class="section-title"><span class="section-icon">🧭</span>价值发现图</div>
-        <div style="margin-top:14px">${renderMermaidShell(`flowchart TD
-P[论文] --> V[价值判断]
-V --> I[即时价值]
-V --> T[趋势价值]
-V --> L[长尾价值]
-V --> N[暂时忽略]
-I --> A[立即学习 / 试点]
-T --> R[纳入趋势雷达 / 持续观察]
-L --> S[沉淀启发 / 加入长尾库]
-N --> X[保留最小索引]`)}</div>
-      </div>
-    </section>
-
-    <section class="section columns-2">
-      <div>
-        <div class="section-header"><h2 class="section-title"><span class="section-icon">📄</span>今日深挖论文</h2></div>
+      <div class="homepage-side-stack">
         <div class="card">
+          <div class="section-header"><h2 class="section-title"><span class="section-icon">📄</span>今日深挖论文</h2></div>
           <div class="card-title"><a href="${escapeHtml(top.detail_path || '#')}">${escapeHtml(top.title || '待补充')}</a></div>
           <div class="card-meta">${escapeHtml(formatDate(top.published))} · ${escapeHtml(top.source || '')} · 分数 ${escapeHtml(top.score || 0)}</div>
-          <p>${escapeHtml(top.brief_cn || '')}</p>
+          <p>${escapeHtml(top.brief_cn || top.one_line_judgement || '')}</p>
           <div class="badge-group" style="margin-bottom:12px">${renderTopicChips(top.matched_topics)}</div>
           ${renderPaperLinks(top)}
         </div>
+        ${topPapers.length ? `<div class="card"><div class="section-header"><h2 class="section-title"><span class="section-icon">⚡</span>高优先级候选</h2></div><div class="list-stack">${topPapers.map(topPaperCard).join('')}</div></div>` : ''}
       </div>
-      <div>
-        <div class="section-header"><h2 class="section-title"><span class="section-icon">⚡</span>高优先级候选</h2></div>
-        <div class="list-stack">${topPapers.map(item => `<div class="card"><div class="card-title"><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title || '')}</a></div><div class="badge-group" style="margin-bottom:10px">${renderBadge(item.value_type_label || '', badgeClass(item.value_type || ''))}${renderBadge(item.decision || '', badgeClass(item.decision || ''))}</div><div class="muted">${escapeHtml(item.source || '')} · 分数 ${escapeHtml(item.score || 0)}</div><p>${escapeHtml(item.brief_cn || item.one_line_judgement || '')}</p></div>`).join('') || '<div class="card">暂无数据</div>'}</div>
-      </div>
-    </section>
+    </section>`;
 
-    <section class="section columns-2">
+  sections += `<section class="section homepage-dual-grid">
       <div>
-        <div class="section-header"><h2 class="section-title"><span class="section-icon">🧳</span>今日长尾保存</h2></div>
-        <div class="grid grid-1">${longTail.map(item => `
-          <div class="card">
-            <div class="card-title"><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title)}</a></div>
-            <p><strong>为什么值得保存：</strong>${escapeHtml(item.why_save || '待补充')}</p>
-            <p><strong>未来触发条件：</strong>${escapeHtml(item.future_trigger || '待补充')}</p>
-            <p><strong>可沉淀资产：</strong>${escapeHtml(maybeArray(item.reusable_assets).join(' / ') || '待补充')}</p>
-          </div>`).join('') || '<div class="card">暂无长尾论文</div>'}
-        </div>
+        ${longTail.length ? `<div class="section-header"><h2 class="section-title"><span class="section-icon">🧳</span>今日长尾保存</h2><span class="muted">${longTail.length} 篇</span></div><div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>为什么保存</th><th>未来触发条件</th><th>可沉淀资产</th></tr></thead><tbody>${longTail.map(longTailRow).join('')}</tbody></table></div>` : ''}
       </div>
       <div>
-        <div class="section-header"><h2 class="section-title"><span class="section-icon">📈</span>趋势雷达概览</h2><a href="trends.html">查看全部</a></div>
-        <div class="grid grid-1">${trendCards || '<div class="card">暂无趋势数据</div>'}</div>
+        ${trendCards ? `<div class="section-header"><h2 class="section-title"><span class="section-icon">📈</span>趋势雷达概览</h2><a href="trends.html">查看全部</a></div><div class="grid grid-1">${trendCards}</div>` : ''}
       </div>
-    </section>
+    </section>`;
 
-    <section class="section">
-      <div class="section-header"><h2 class="section-title"><span class="section-icon">📚</span>最近 7 篇日报</h2><a href="daily.html">查看全部</a></div>
+  sections += `<section class="section">
+      <div class="section-header"><h2 class="section-title"><span class="section-icon">📚</span>最近日报</h2><a href="daily.html">查看全部</a></div>
       <div class="grid grid-3">${recent.map(renderDailySummaryCard).join('') || '<div class="card">暂无日报</div>'}</div>
     </section>`;
-  showState('index-root', root);
-  await enhanceMermaid();
+
+  showState('index-root', sections);
 }
 
 async function renderDailyPage() {
@@ -388,7 +368,7 @@ async function renderAboutPage() {
     <div class="card"><div class="card-title">为什么先看论文</div><p>因为真正的方向变化通常先在论文中露头，再逐步外溢到工程、产品与团队实践。</p></div>
     <div class="card"><div class="card-title">为什么不强制固定链路</div><p>“论文 → 理论 → 工程实践 → 趋势 → 启发 → 行动”仍然是常见研究路径，但不是所有论文都值得走完整链路。系统先做价值路由，再决定投入深度。</p></div>
     <div class="card"><div class="card-title">如何过滤噪声</div><p>明确标记暂时忽略，避免把注意力浪费在新意弱、证据弱、相关性弱的论文上。</p></div>
-    <div class="card"><div class="card-title">趋势价值图说明</div><p>趋势价值图用于展示论文从发现到价值落地的判断流程：论文经过价值路由后，分为即时价值（立即学习/试点）、趋势价值（纳入趋势雷达/持续观察）、长尾价值（沉淀启发/加入长尾库）和暂时忽略（保留最小索引）四类。每篇论文只走一条最有价值的路径，避免平均用力。</p></div>
+    <div class="card"><div class="card-title">趋势价值图说明</div><p>趋势价值图本质上不是“页面装饰图”，而是一套判断框架：一篇论文如果已经能指导今天的学习或实验，就归入即时价值；如果更适合持续跟踪其对工程生态的外溢，就归入趋势价值；如果现在不热但未来可能触发新机会，就进入长尾库；如果证据弱、相关性弱，就明确忽略。这个图说明的是分类逻辑，而不是要求每个页面重复展示同一张图。</p></div>
     <div class="card"><div class="card-title">GitHub 仓库</div><p><a href="https://github.com/lohasle/frontier-theory-radar" target="_blank" rel="noopener noreferrer">lohasle/frontier-theory-radar</a></p></div>
   </div>`);
 }
