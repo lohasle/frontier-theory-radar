@@ -158,6 +158,17 @@ python3 scripts/update_index.py
 python3 scripts/build_pages.py
 ```
 
+### Hermes 推理增强（无自建 LLM API）
+
+项目支持由 Hermes 任务直接产出推理结果并回填：
+
+- `papers/YYYY/YYYY-MM-DD-llm-scores.json`：覆盖/增强评分（score + reason）
+- `papers/YYYY/YYYY-MM-DD-analysis.json`：填充“核心理论提取 / 启发 / 行动建议”
+
+`scripts/score_papers.py` 和 `scripts/generate_daily.py` 会自动读取这两个文件（若存在）。
+
+已创建 Hermes 定时任务：`frontier-theory-radar-daily`（every 24h）。
+
 ### 本地预览 GitHub Pages
 
 ```bash

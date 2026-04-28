@@ -13,6 +13,7 @@ import json
 import os
 import sys
 from datetime import date, datetime
+from pathlib import Path
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
@@ -65,6 +66,22 @@ def format_engineering_rows():
     )
 
 
+def load_analysis(target_date):
+    """加载 Hermes 推理增强内容（可选）。
+
+    文件路径：papers/YYYY/YYYY-MM-DD-analysis.json
+    """
+    year = target_date[:4]
+    analysis_path = Path(PAPERS_DIR) / year / f"{target_date}-analysis.json"
+    if not analysis_path.exists():
+        return {}
+    try:
+        return json.loads(analysis_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"[generate] 读取分析文件失败: {e}")
+        return {}
+
+
 def generate_daily_report(papers, target_date):
     """生成日报"""
     # 选择深挖论文（取评分最高的）
@@ -85,6 +102,34 @@ def generate_daily_report(papers, target_date):
 
     # 论文表格
     paper_table = format_paper_table(papers, 5)
+
+    # 可选 Hermes 推理增强
+    analysis = load_analysis(target_date)
+    theory_section = analysis.get("core_theory_markdown") or (
+        "- **它解决的底层问题是什么？** 待分析（需要 Hermes 定时任务补充）\n"
+        "- **它挑战了什么旧假设？** 待分析\n"
+        "- **它提出了什么新假设？** 待分析\n"
+        "- **它的核心机制是什么？** 待分析\n"
+        "- **它带来的新能力是什么？** 待分析\n"
+        "- **它的限制条件是什么？** 待分析"
+    )
+    insights_section = analysis.get("insights_markdown") or (
+        "### 对系统设计的启发\n待分析\n\n"
+        "### 对 AI Agent 工程化的启发\n待分析\n\n"
+        "### 对团队研发流程的启发\n待分析\n\n"
+        "### 对企业落地的启发\n待分析\n\n"
+        "### 对个人学习路径的启发\n待分析\n\n"
+        "### 对未来 6-12 个月技术趋势的启发\n待分析"
+    )
+    actions_section = analysis.get("actions_markdown") or (
+        "- **30 分钟学习任务：** 阅读论文摘要，理解核心问题\n"
+        "- **2 小时实践任务：** 搜索相关 GitHub 项目，了解工程实现\n"
+        "- **1 周研究任务：** 深读论文，尝试复现核心实验\n"
+        "- **是否值得精读论文：** 待确认\n"
+        "- **是否值得本地复现：** 待确认\n"
+        "- **是否值得纳入技术雷达：** 待确认\n"
+        "- **是否值得沉淀成 Prompt / Skill / Checklist / 模板：** 待确认"
+    )
 
     # 工程实践行
     eng_rows = format_engineering_rows()
@@ -162,12 +207,7 @@ def generate_daily_report(papers, target_date):
 
 ## 3. 核心理论提取
 
-- **它解决的底层问题是什么？** 待分析（需要 LLM 或人工补充）
-- **它挑战了什么旧假设？** 待分析
-- **它提出了什么新假设？** 待分析
-- **它的核心机制是什么？** 待分析
-- **它带来的新能力是什么？** 待分析
-- **它的限制条件是什么？** 待分析
+{theory_section}
 
 ---
 
@@ -217,35 +257,13 @@ def generate_daily_report(papers, target_date):
 
 ## 8. 启发
 
-### 对系统设计的启发
-待分析
-
-### 对 AI Agent 工程化的启发
-待分析
-
-### 对团队研发流程的启发
-待分析
-
-### 对企业落地的启发
-待分析
-
-### 对个人学习路径的启发
-待分析
-
-### 对未来 6-12 个月技术趋势的启发
-待分析
+{insights_section}
 
 ---
 
 ## 9. 行动建议
 
-- **30 分钟学习任务：** 阅读论文摘要，理解核心问题
-- **2 小时实践任务：** 搜索相关 GitHub 项目，了解工程实现
-- **1 周研究任务：** 深读论文，尝试复现核心实验
-- **是否值得精读论文：** 待确认
-- **是否值得本地复现：** 待确认
-- **是否值得纳入技术雷达：** 待确认
-- **是否值得沉淀成 Prompt / Skill / Checklist / 模板：** 待确认
+{actions_section}
 
 ---
 
@@ -265,8 +283,8 @@ def generate_daily_report(papers, target_date):
 ---
 
 > 生成时间：{now}
-> 数据来源：arXiv API
-> 状态：初始化样例
+> 数据来源：arXiv API + 固定源配置
+> 状态：{'Hermes 推理增强' if analysis else '初始化样例/规则生成'}
 """
 
     return report, deep_dive

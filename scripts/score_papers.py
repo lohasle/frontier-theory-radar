@@ -14,6 +14,7 @@ import json
 import os
 import sys
 from datetime import date
+from pathlib import Path
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
@@ -219,13 +220,53 @@ def get_decision(score):
         return "暂时忽略"
 
 
-def score_papers(papers):
-    """对论文列表评分"""
+def load_llm_overrides(target_date):
+    """加载 Hermes 推理增强评分（可选）。
+
+    文件路径：papers/YYYY/YYYY-MM-DD-llm-scores.json
+    格式：
+    {
+      "by_url": {
+        "https://arxiv.org/abs/xxxx": {
+          "score": 83.5,
+          "reason": "...",
+          "matched_topics": ["ai-agent"]
+        }
+      }
+    }
+    """
+    year = target_date[:4]
+    llm_path = Path(PAPERS_DIR) / year / f"{target_date}-llm-scores.json"
+    if not llm_path.exists():
+        return {}
+
+    try:
+        data = json.loads(llm_path.read_text(encoding="utf-8"))
+        return data.get("by_url", {})
+    except Exception as e:
+        print(f"[score] 读取 LLM 增强评分失败: {e}")
+        return {}
+
+
+def score_papers(papers, llm_overrides=None):
+    """对论文列表评分（规则分 + 可选 LLM 增强覆盖）"""
+    llm_overrides = llm_overrides or {}
     scored = []
     for paper in papers:
         scores, topics = compute_score(paper)
         total = calculate_total_score(scores)
         decision = get_decision(total)
+
+        url = paper.get("url", "")
+        llm_hit = llm_overrides.get(url)
+        if llm_hit and isinstance(llm_hit, dict):
+            llm_score = llm_hit.get("score")
+            if isinstance(llm_score, (int, float)):
+                total = round(max(0, min(100, float(llm_score))), 1)
+                decision = get_decision(total)
+                paper["llm_reason"] = llm_hit.get("reason", "")
+                if isinstance(llm_hit.get("matched_topics"), list) and llm_hit.get("matched_topics"):
+                    topics = llm_hit["matched_topics"]
 
         paper["score"] = total
         paper["decision"] = decision
@@ -262,8 +303,11 @@ def main():
     papers = data.get("papers", [])
     print(f"[score] 加载 {len(papers)} 篇论文")
 
-    # 评分
-    scored_papers = score_papers(papers)
+    # 评分（可选：叠加 Hermes 推理增强分）
+    llm_overrides = load_llm_overrides(target_date)
+    if llm_overrides:
+        print(f"[score] 检测到 LLM 增强评分: {len(llm_overrides)} 条")
+    scored_papers = score_papers(papers, llm_overrides=llm_overrides)
 
     # 输出评分结果摘要
     for i, p in enumerate(scored_papers[:10]):
