@@ -1,0 +1,29 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2604.24715v1": {
+      "score": 88,
+      "reason": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "matched_topics": ["context-engineering", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2604.24712v1": {
+      "score": 83,
+      "reason": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "matched_topics": ["coding-agent", "llm-evaluation", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2604.24710v1": {
+      "score": 80,
+      "reason": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
+      "matched_topics": ["llm-evaluation", "security-governance", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2604.24737v1": {
+      "score": 78,
+      "reason": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "matched_topics": ["ai-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2604.24758v1": {
+      "score": 74,
+      "reason": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+      "matched_topics": ["coding-agent", "llm-evaluation"]
+    }
+  }
+}
