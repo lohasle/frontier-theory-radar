@@ -1,3 +1,13 @@
+---
+date: {{DATE}}
+title: 前沿理论驱动技术雷达日报 - {{DATE}}
+decision: {{FINAL_DECISION}}
+stage: {{ENGINEERING_STATUS}}
+deep_dive_title: {{DEEP_DIVE_TITLE}}
+deep_dive_url: {{DEEP_DIVE_URL}}
+source: [arXiv, OpenReview, HuggingFace, PapersWithCode, GitHub]
+---
+
 # 前沿理论驱动技术雷达日报 - {{DATE}}
 
 > 研究范式：论文 → 理论 → 工程实践 → 趋势 → 启发 → 行动

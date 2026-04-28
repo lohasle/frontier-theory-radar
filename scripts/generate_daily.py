@@ -167,7 +167,17 @@ def generate_daily_report(papers, target_date):
 
     now = datetime.now().isoformat()
 
-    report = f"""# 前沿理论驱动技术雷达日报 - {target_date}
+    report = f"""---
+date: {target_date}
+title: 前沿理论驱动技术雷达日报 - {target_date}
+decision: {final_decision}
+stage: C
+deep_dive_title: {dd_title}
+deep_dive_url: {dd_url}
+source: [arXiv, OpenReview, HuggingFace, PapersWithCode, GitHub]
+---
+
+# 前沿理论驱动技术雷达日报 - {target_date}
 
 > 研究范式：论文 → 理论 → 工程实践 → 趋势 → 启发 → 行动
 > ⚠️ **注意：这是初始化样例，后续运行会替换为真实数据。**

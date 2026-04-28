@@ -1,3 +1,11 @@
+---
+slug: coding-agent
+title: Coding Agent
+stage: 主流化
+updated_at: 2026-04-28
+priority_topics: [coding-agent, llm-evaluation, ai-agent]
+---
+
 # Coding Agent
 
 > 当前阶段：主流化 | 最近更新：2026-04-28

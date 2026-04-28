@@ -13,6 +13,31 @@ import glob
 import re
 from datetime import date, datetime
 
+
+def parse_front_matter(text):
+    """Parse YAML-like front matter without external deps."""
+    if not text.startswith("---\n"):
+        return {}, text
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return {}, text
+    fm_block = text[4:end]
+    body = text[end + 5:]
+    meta = {}
+    for raw in fm_block.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or ":" not in line:
+            continue
+        k, v = line.split(":", 1)
+        k = k.strip()
+        v = v.strip().strip('"').strip("'")
+        if v.startswith("[") and v.endswith("]"):
+            items = [x.strip().strip('"').strip("'") for x in v[1:-1].split(",") if x.strip()]
+            meta[k] = items
+        else:
+            meta[k] = v
+    return meta, body
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAILY_DIR = os.path.join(PROJECT_ROOT, "daily")
 PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
@@ -24,15 +49,18 @@ DOCS_DATA_DIR = os.path.join(PROJECT_ROOT, "docs", "data")
 def parse_daily_markdown(filepath):
     """解析日报 Markdown 提取结构化数据"""
     with open(filepath, "r", encoding="utf-8") as f:
-        content = f.read()
+        raw = f.read()
+
+    front_matter, content = parse_front_matter(raw)
 
     result = {
         "has_content": True,
         "paper_table": [],
         "deep_dive": {},
         "references": [],
-        "decision": "",
-        "stage": "",
+        "decision": front_matter.get("decision", ""),
+        "stage": front_matter.get("stage", ""),
+        "meta": front_matter,
     }
 
     lines = content.split("\n")
@@ -123,13 +151,16 @@ def build_trend_details():
         slug = filename.replace(".md", "")
 
         with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
+            raw = f.read()
+
+        front_matter, content = parse_front_matter(raw)
 
         # 转换 Markdown 为简单 HTML（基础实现）
         html_content = markdown_to_simple_html(content)
 
         details[slug] = {
             "slug": slug,
+            "meta": front_matter,
             "content": content,
             "html": html_content
         }

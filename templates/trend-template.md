@@ -1,3 +1,11 @@
+---
+slug: {{TREND_SLUG}}
+title: {{TREND_NAME}}
+stage: {{STAGE}}
+updated_at: {{LAST_UPDATED}}
+priority_topics: [ai-agent, coding-agent, context-engineering]
+---
+
 # {{TREND_NAME}}
 
 > 当前阶段：{{STAGE}} | 最近更新：{{LAST_UPDATED}}

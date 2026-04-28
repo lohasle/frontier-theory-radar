@@ -1,3 +1,11 @@
+---
+slug: agentic-world-modeling
+title: Agentic World Modeling
+stage: 上升
+updated_at: 2026-04-28
+priority_topics: [ai-agent, multimodal-agent, context-engineering]
+---
+
 # Agentic World Modeling
 
 > 当前阶段：上升 | 最近更新：2026-04-28

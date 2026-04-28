@@ -167,7 +167,15 @@ python3 scripts/build_pages.py
 
 `scripts/score_papers.py` 和 `scripts/generate_daily.py` 会自动读取这两个文件（若存在）。
 
-已创建 Hermes 定时任务：`frontier-theory-radar-daily`（every 24h）。
+### Markdown 结构化（稳定 Pages 生成）
+
+所有核心内容以 Markdown 为单一真源（SSOT），并支持 front matter：
+- 日报：`date/title/decision/stage/deep_dive_*`
+- 趋势：`slug/title/stage/updated_at/priority_topics`
+
+`scripts/build_pages.py` 会优先解析 front matter，再解析正文，稳定生成 `docs/data/*.json`，便于交给 skill + agent 自动化生产页面。
+
+已创建 Hermes 定时任务：`frontier-theory-radar-daily`。
 
 ### 本地预览 GitHub Pages
 
