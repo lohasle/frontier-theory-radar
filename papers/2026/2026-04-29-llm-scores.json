@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2604.24715v1": {
+      "score": 89,
+      "value_type": "immediate",
+      "reason": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
+      "matched_topics": ["context-engineering", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2604.24712v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
+      "matched_topics": ["coding-agent", "context-engineering", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2604.24710v1": {
+      "score": 82,
+      "value_type": "trend",
+      "reason": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短期更多属于评测治理趋势资产，适合沉淀到 rubric 设计与人机校准流程。",
+      "matched_topics": ["llm-evaluation", "security-governance", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2604.24737v1": {
+      "score": 77,
+      "value_type": "trend",
+      "reason": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿沟。",
+      "matched_topics": ["ai-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2604.24758v1": {
+      "score": 72,
+      "value_type": "long_tail",
+      "reason": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
+      "matched_topics": ["coding-agent", "llm-evaluation"]
+    }
+  }
+}

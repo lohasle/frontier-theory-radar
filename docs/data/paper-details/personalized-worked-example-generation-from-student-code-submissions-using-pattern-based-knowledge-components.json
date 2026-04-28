@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-04-28",
-  "first_deep_dive_daily": "2026-04-28",
-  "value_type": "immediate",
-  "value_type_label": "即时价值",
+  "first_seen_date": "2026-04-29",
+  "first_deep_dive_daily": "2026-04-29",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,13 +30,13 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 74.0,
+  "score": 72.0,
   "decision": "轻量试点",
-  "one_line_judgement": "今天值得试：以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到…",
-  "one_line_essence": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+  "one_line_judgement": "值得先保存：把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 ag…",
+  "one_line_essence": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
-  "research_position": "source_paper",
+  "new_claim_or_method": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
+  "research_position": "long_tail_insight",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "long_tail_watch",
     "related_trends": [
       "coding-agent"
     ],
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+    "why_save": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企",
     "future_trigger": [
-      "待更多证据"
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -78,7 +78,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": ""
+    "revisit_date": "2026-05-20"
   },
   "insights": {
     "system_design": [
@@ -101,13 +101,13 @@
     ]
   },
   "actions": {
-    "immediate_actions": [
-      "今天读摘要与方法",
-      "今天试最小实验",
-      "一周内沉淀为 Skill / Checklist"
-    ],
+    "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [],
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
+    ],
     "ignore_reason": ""
   },
   "references": [
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
-  "daily_path": "daily-detail.html?date=2026-04-28",
+  "daily_path": "daily-detail.html?date=2026-04-29",
   "trend_paths": [
     "trend-detail.html?id=coding-agent"
   ],

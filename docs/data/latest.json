@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-04-28T17:03:31.119106",
+  "updated_at": "2026-04-29T04:24:59.269047",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-04-28",
-    "title": "论文价值发现日报 - 2026-04-28",
+    "date": "2026-04-29",
+    "title": "论文价值发现日报 - 2026-04-29",
     "deep_dive_title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
     "deep_dive_url": "http://arxiv.org/abs/2604.24715v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "完成摘要精读与最小实验设计",
-    "max_uncertainty": "缺少多源工程证据",
-    "one_line_judgement": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
-    "path": "daily-detail.html?date=2026-04-28"
+    "daily_action": "完成三件事：列出 HyLo 架构 PoC 指标、设计提示词规格 A/B 实验、起草 case-specific rubric 模板。",
+    "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验。",
+    "one_line_judgement": "它把长上下文升级从\"重训新模型\"转成\"复用现有资产做架构改造\"，最贴近团队近期可执行的工程路径。",
+    "path": "daily-detail.html?date=2026-04-29"
   },
   "top_paper": {
     "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
@@ -44,7 +44,7 @@
       "evaluation",
       "inference"
     ],
-    "score": 88.0,
+    "score": 89.0,
     "decision": "重点学习",
     "links": [
       {
@@ -56,7 +56,9 @@
         "url": "https://arxiv.org/pdf/2604.24715v1"
       }
     ],
-    "llm_reason": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+    "llm_reason": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
+    "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
+    "value_type": "immediate",
     "matched_topics": [
       "context-engineering",
       "inference-serving"
@@ -77,33 +79,44 @@
       "engineering_cost_penalty": 4.0,
       "reproducibility_risk": 5.0
     },
-    "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
-    "value_type": "immediate",
     "trend_status": "emerging",
     "brief_cn": "Context Engineering：Hybrid sequence models that combine efficient Transformer components with line…",
-    "one_line_judgement": "今天值得试：提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上…",
-    "first_seen_date": "2026-04-28",
-    "first_deep_dive_daily": "2026-04-28",
+    "one_line_judgement": "今天值得试：HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文…",
+    "first_seen_date": "2026-04-29",
+    "first_deep_dive_daily": "2026-04-29",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+    "long_tail_summary": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上",
     "related_trends": [
       "context-engineering"
     ],
     "detail_path": "paper-detail.html?id=long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling"
   },
   "paper_count": 11,
-  "daily_count": 1,
+  "daily_count": 2,
   "trend_count": 3,
   "long_tail_count": 1,
   "value_distribution": {
-    "immediate": 4,
-    "trend": 1,
+    "immediate": 2,
+    "trend": 3,
     "long_tail": 1,
     "ignore": 5
   },
   "recent_dailies": [
+    {
+      "date": "2026-04-29",
+      "title": "论文价值发现日报 - 2026-04-29",
+      "deep_dive_title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+      "deep_dive_url": "http://arxiv.org/abs/2604.24715v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成三件事：列出 HyLo 架构 PoC 指标、设计提示词规格 A/B 实验、起草 case-specific rubric 模板。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验。",
+      "one_line_judgement": "它把长上下文升级从\"重训新模型\"转成\"复用现有资产做架构改造\"，最贴近团队近期可执行的工程路径。",
+      "path": "daily-detail.html?date=2026-04-29"
+    },
     {
       "date": "2026-04-28",
       "title": "论文价值发现日报 - 2026-04-28",
@@ -148,7 +161,7 @@
         "evaluation",
         "inference"
       ],
-      "score": 88.0,
+      "score": 89.0,
       "decision": "重点学习",
       "links": [
         {
@@ -160,7 +173,9 @@
           "url": "https://arxiv.org/pdf/2604.24715v1"
         }
       ],
-      "llm_reason": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "llm_reason": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
+      "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
+      "value_type": "immediate",
       "matched_topics": [
         "context-engineering",
         "inference-serving"
@@ -181,17 +196,15 @@
         "engineering_cost_penalty": 4.0,
         "reproducibility_risk": 5.0
       },
-      "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
-      "value_type": "immediate",
       "trend_status": "emerging",
       "brief_cn": "Context Engineering：Hybrid sequence models that combine efficient Transformer components with line…",
-      "one_line_judgement": "今天值得试：提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "one_line_judgement": "今天值得试：HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文…",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "long_tail_summary": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上",
       "related_trends": [
         "context-engineering"
       ],
@@ -222,7 +235,7 @@
       "keywords": [
         "benchmark"
       ],
-      "score": 83.0,
+      "score": 84.0,
       "decision": "重点学习",
       "links": [
         {
@@ -234,11 +247,13 @@
           "url": "https://arxiv.org/pdf/2604.24712v1"
         }
       ],
-      "llm_reason": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "llm_reason": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
+      "id": "when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
+      "value_type": "immediate",
       "matched_topics": [
         "coding-agent",
-        "llm-evaluation",
-        "context-engineering"
+        "context-engineering",
+        "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
@@ -256,17 +271,15 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
-      "value_type": "long_tail",
-      "trend_status": "long_tail_watch",
+      "trend_status": "emerging",
       "brief_cn": "Coding Agent：Large language models are increasingly used for code generation, yet the corre…",
-      "one_line_judgement": "值得先保存：聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "one_line_judgement": "今天值得试：研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-ag…",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范",
       "related_trends": [
         "coding-agent",
         "context-engineering"
@@ -302,7 +315,7 @@
         "evaluation",
         "RAG"
       ],
-      "score": 80.0,
+      "score": 82.0,
       "decision": "重点学习",
       "links": [
         {
@@ -314,7 +327,9 @@
           "url": "https://arxiv.org/pdf/2604.24710v1"
         }
       ],
-      "llm_reason": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
+      "llm_reason": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短期更多属于评测治理趋势资产，适合沉淀到 rubric 设计与人机校准流程。",
+      "id": "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
+      "value_type": "trend",
       "matched_topics": [
         "llm-evaluation",
         "security-governance",
@@ -336,17 +351,15 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
-      "value_type": "immediate",
       "trend_status": "emerging",
       "brief_cn": "LLM 评测：Objective. Clinical AI documentation systems require evaluation methodologies …",
-      "one_line_judgement": "今天值得试：给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounte…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type_label": "即时价值",
+      "one_line_judgement": "值得继续观察：以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823…",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短",
       "related_trends": [
         "coding-agent",
         "context-engineering"
@@ -380,7 +393,7 @@
         "stat.ML"
       ],
       "keywords": [],
-      "score": 78.0,
+      "score": 77.0,
       "decision": "轻量试点",
       "links": [
         {
@@ -392,7 +405,9 @@
           "url": "https://arxiv.org/pdf/2604.24737v1"
         }
       ],
-      "llm_reason": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "llm_reason": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿沟。",
+      "id": "learning-to-think-from-multiple-thinkers",
+      "value_type": "trend",
       "matched_topics": [
         "ai-agent",
         "llm-evaluation"
@@ -413,17 +428,15 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "learning-to-think-from-multiple-thinkers",
-      "value_type": "immediate",
       "trend_status": "emerging",
       "brief_cn": "AI Agent：We study learning with Chain-of-Thought (CoT) supervision from multiple thinke…",
-      "one_line_judgement": "今天值得试：研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type_label": "即时价值",
+      "one_line_judgement": "值得继续观察：从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计…",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿",
       "related_trends": [
         "agentic-world-modeling",
         "coding-agent"
@@ -460,7 +473,7 @@
       "keywords": [
         "evaluation"
       ],
-      "score": 74.0,
+      "score": 72.0,
       "decision": "轻量试点",
       "links": [
         {
@@ -472,7 +485,9 @@
           "url": "https://arxiv.org/pdf/2604.24758v1"
         }
       ],
-      "llm_reason": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+      "llm_reason": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
+      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
+      "value_type": "long_tail",
       "matched_topics": [
         "coding-agent",
         "llm-evaluation"
@@ -493,17 +508,15 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
-      "value_type": "immediate",
-      "trend_status": "emerging",
+      "trend_status": "long_tail_watch",
       "brief_cn": "Coding Agent：Adaptive programming practice often relies on fixed libraries of worked exampl…",
-      "one_line_judgement": "今天值得试：以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+      "one_line_judgement": "值得先保存：把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 ag…",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企",
       "related_trends": [
         "coding-agent"
       ],
@@ -547,6 +560,8 @@
           "url": "https://arxiv.org/pdf/2604.24729v1"
         }
       ],
+      "id": "specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning",
+      "value_type": "ignore",
       "matched_topics": [
         "llm-evaluation"
       ],
@@ -566,13 +581,11 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning",
-      "value_type": "ignore",
       "trend_status": "noise",
       "brief_cn": "LLM 评测：Specification-guided reinforcement learning (RL) provides a principled framewo…",
       "one_line_judgement": "当前可忽略：LLM 评测：Specification-guided reinforcement learning (RL) provides a pri…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -620,6 +633,8 @@
           "url": "https://arxiv.org/pdf/2604.24720v1"
         }
       ],
+      "id": "sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking",
+      "value_type": "ignore",
       "matched_topics": [
         "llm-evaluation"
       ],
@@ -639,13 +654,11 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking",
-      "value_type": "ignore",
       "trend_status": "noise",
       "brief_cn": "LLM 评测：Indonesian marketplace reviews mix standard vocabulary with slang, regional lo…",
       "one_line_judgement": "当前可忽略：LLM 评测：Indonesian marketplace reviews mix standard vocabulary with sla…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -689,6 +702,8 @@
           "url": "https://arxiv.org/pdf/2604.24717v1"
         }
       ],
+      "id": "learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling",
+      "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
         "novelty": 5.4,
@@ -706,13 +721,11 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling",
-      "value_type": "ignore",
       "trend_status": "noise",
       "brief_cn": "前沿论文：Every Transformer architecture dedicates enormous capacity to learning rich re…",
       "one_line_judgement": "当前可忽略：前沿论文：Every Transformer architecture dedicates enormous capacity to lea…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -753,6 +766,8 @@
           "url": "https://arxiv.org/pdf/2604.24749v1"
         }
       ],
+      "id": "the-optimal-sample-complexity-of-multiclass-and-list-learning",
+      "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
         "novelty": 5.4,
@@ -770,13 +785,11 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "the-optimal-sample-complexity-of-multiclass-and-list-learning",
-      "value_type": "ignore",
       "trend_status": "noise",
       "brief_cn": "前沿论文：While the optimal sample complexity of binary classification in terms of the V…",
       "one_line_judgement": "当前可忽略：前沿论文：While the optimal sample complexity of binary classification in t…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -816,6 +829,8 @@
           "url": "https://arxiv.org/pdf/2604.24745v1"
         }
       ],
+      "id": "conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes",
+      "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
         "novelty": 4.8,
@@ -833,13 +848,11 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "id": "conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes",
-      "value_type": "ignore",
       "trend_status": "noise",
       "brief_cn": "前沿论文：In this paper, we propose a harmonized rotational gradient method, termed HRGr…",
       "one_line_judgement": "当前可忽略：前沿论文：In this paper, we propose a harmonized rotational gradient method…",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -850,19 +863,19 @@
   ],
   "long_tail_highlights": [
     {
-      "id": "when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
-      "title": "When Prompt Under-Specification Improves Code Correctness: An Exploratory Study of Prompt Wording and Structure Effects on LLM-Based Code Generation",
+      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
+      "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
       "direction": "Coding Agent / LLM 评测",
       "long_tail_type": "工程抽象",
-      "why_save": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "why_save": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-05-19",
-      "detail_path": "paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation"
+      "revisit_date": "2026-05-20",
+      "detail_path": "paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components"
     }
   ],
   "common_research_path": [

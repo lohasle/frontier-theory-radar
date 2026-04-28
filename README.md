@@ -78,6 +78,7 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-04-29 · Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](daily-detail.html?date=2026-04-29) · 即时价值 · 重点学习
 - [2026-04-28 · Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](daily-detail.html?date=2026-04-28) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引

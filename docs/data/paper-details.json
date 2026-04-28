@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T17:05:42.510449",
+  "updated_at": "2026-04-29T04:24:59.423999",
   "papers": {
     "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling": {
       "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
@@ -19,8 +19,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "value_scores": {
@@ -33,12 +33,12 @@
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 88.0,
+      "score": 89.0,
       "decision": "重点学习",
-      "one_line_judgement": "今天值得试：提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上…",
-      "one_line_essence": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "one_line_judgement": "今天值得试：HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文…",
+      "one_line_essence": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "new_claim_or_method": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -64,7 +64,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+        "why_save": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上",
         "future_trigger": [
           "待更多证据"
         ],
@@ -124,7 +124,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [
         "trend-detail.html?id=context-engineering"
       ],
@@ -152,10 +152,10 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
       "value_scores": {
         "novelty": 4.8,
         "relevance": 7.4,
@@ -166,13 +166,421 @@
         "actionability": 5.0,
         "noise_risk": 2.2
       },
-      "score": 83.0,
+      "score": 84.0,
       "decision": "重点学习",
-      "one_line_judgement": "值得先保存：聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未…",
-      "one_line_essence": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "one_line_judgement": "今天值得试：研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-ag…",
+      "one_line_essence": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "new_claim_or_method": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
       "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "coding-agent",
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2604.24712v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2604.24712v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
+      "daily_path": "daily-detail.html?date=2026-04-29",
+      "trend_paths": [
+        "trend-detail.html?id=coding-agent",
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters": {
+      "id": "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
+      "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
+      "authors": [
+        "Aaryan Shah",
+        "Andrew Hines",
+        "Alexia Downs",
+        "Denis Bajet",
+        "Paulius Mui"
+      ],
+      "source": "arXiv",
+      "published": "2026-04-27",
+      "url": "http://arxiv.org/abs/2604.24710v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24710v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 5.85,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 82.0,
+      "decision": "重点学习",
+      "one_line_judgement": "值得继续观察：以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823…",
+      "one_line_essence": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短期更多属于评测治理趋势资产，适合沉淀到 rubric 设计与人机校准流程。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短期更多属于评测治理趋势资产，适合沉淀到 rubric 设计与人机校准流程。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "coding-agent",
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2604.24710v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2604.24710v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
+      "daily_path": "daily-detail.html?date=2026-04-29",
+      "trend_paths": [
+        "trend-detail.html?id=coding-agent",
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "learning-to-think-from-multiple-thinkers": {
+      "id": "learning-to-think-from-multiple-thinkers",
+      "title": "Learning to Think from Multiple Thinkers",
+      "authors": [
+        "Nirmit Joshi",
+        "Roey Magen",
+        "Nathan Srebro",
+        "Nikolaos Tsilivis",
+        "Gal Vardi"
+      ],
+      "source": "arXiv",
+      "published": "2026-04-27",
+      "url": "http://arxiv.org/abs/2604.24737v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 2.4
+      },
+      "score": 77.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计…",
+      "one_line_essence": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿沟。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿沟。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2604.24737v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2604.24737v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=learning-to-think-from-multiple-thinkers",
+      "daily_path": "daily-detail.html?date=2026-04-29",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components": {
+      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
+      "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
+      "authors": [
+        "Griffin Pitts",
+        "Muntasir Hoq",
+        "Peter Brusilovsky",
+        "Narges Norouzi",
+        "Arto Hellas"
+      ],
+      "source": "arXiv",
+      "published": "2026-04-27",
+      "url": "http://arxiv.org/abs/2604.24758v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 72.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得先保存：把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 ag…",
+      "one_line_essence": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
+      "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
         "has_benchmark": false,
@@ -187,8 +595,7 @@
       "trend_relation": {
         "status": "long_tail_watch",
         "related_trends": [
-          "coding-agent",
-          "context-engineering"
+          "coding-agent"
         ],
         "evidence": [
           "论文主题匹配固定研究方向"
@@ -198,7 +605,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+        "why_save": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -215,7 +622,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-05-19"
+        "revisit_date": "2026-05-20"
       },
       "insights": {
         "system_design": [
@@ -250,413 +657,6 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24712v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24712v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
-      "daily_path": "daily-detail.html?date=2026-04-28",
-      "trend_paths": [
-        "trend-detail.html?id=coding-agent",
-        "trend-detail.html?id=context-engineering"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters": {
-      "id": "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
-      "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
-      "authors": [
-        "Aaryan Shah",
-        "Andrew Hines",
-        "Alexia Downs",
-        "Denis Bajet",
-        "Paulius Mui"
-      ],
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "url": "http://arxiv.org/abs/2604.24710v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24710v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 5.85,
-        "engineering_testability": 4.6,
-        "trend_signal": 4.05,
-        "long_tail_potential": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 80.0,
-      "decision": "重点学习",
-      "one_line_judgement": "今天值得试：给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounte…",
-      "one_line_essence": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "coding-agent",
-          "context-engineering"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [
-          "今天读摘要与方法",
-          "今天试最小实验",
-          "一周内沉淀为 Skill / Checklist"
-        ],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24710v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24710v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
-      "daily_path": "daily-detail.html?date=2026-04-28",
-      "trend_paths": [
-        "trend-detail.html?id=coding-agent",
-        "trend-detail.html?id=context-engineering"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "learning-to-think-from-multiple-thinkers": {
-      "id": "learning-to-think-from-multiple-thinkers",
-      "title": "Learning to Think from Multiple Thinkers",
-      "authors": [
-        "Nirmit Joshi",
-        "Roey Magen",
-        "Nathan Srebro",
-        "Nikolaos Tsilivis",
-        "Gal Vardi"
-      ],
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "url": "http://arxiv.org/abs/2604.24737v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 2.4
-      },
-      "score": 78.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "今天值得试：研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
-      "one_line_essence": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [
-          "今天读摘要与方法",
-          "今天试最小实验",
-          "一周内沉淀为 Skill / Checklist"
-        ],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24737v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24737v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=learning-to-think-from-multiple-thinkers",
-      "daily_path": "daily-detail.html?date=2026-04-28",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components": {
-      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
-      "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
-      "authors": [
-        "Griffin Pitts",
-        "Muntasir Hoq",
-        "Peter Brusilovsky",
-        "Narges Norouzi",
-        "Arto Hellas"
-      ],
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "url": "http://arxiv.org/abs/2604.24758v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 1.2
-      },
-      "score": 74.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "今天值得试：以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到…",
-      "one_line_essence": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [
-          "今天读摘要与方法",
-          "今天试最小实验",
-          "一周内沉淀为 Skill / Checklist"
-        ],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
           "url": "http://arxiv.org/abs/2604.24758v1"
         },
         {
@@ -665,7 +665,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [
         "trend-detail.html?id=coding-agent"
       ],
@@ -693,8 +693,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -794,7 +794,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [
         "trend-detail.html?id=coding-agent"
       ],
@@ -822,8 +822,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -923,7 +923,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [
         "trend-detail.html?id=coding-agent"
       ],
@@ -950,8 +950,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1049,7 +1049,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -1072,8 +1072,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1171,7 +1171,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=the-optimal-sample-complexity-of-multiclass-and-list-learning",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -1194,8 +1194,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-04-28",
-      "first_deep_dive_daily": "2026-04-28",
+      "first_seen_date": "2026-04-29",
+      "first_deep_dive_daily": "2026-04-29",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1293,7 +1293,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes",
-      "daily_path": "daily-detail.html?date=2026-04-28",
+      "daily_path": "daily-detail.html?date=2026-04-29",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {

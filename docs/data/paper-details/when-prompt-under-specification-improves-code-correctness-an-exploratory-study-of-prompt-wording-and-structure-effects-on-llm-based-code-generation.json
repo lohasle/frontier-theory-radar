@@ -15,10 +15,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-04-28",
-  "first_deep_dive_daily": "2026-04-28",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-04-29",
+  "first_deep_dive_daily": "2026-04-29",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 7.4,
@@ -29,12 +29,12 @@
     "actionability": 5.0,
     "noise_risk": 2.2
   },
-  "score": 83.0,
+  "score": 84.0,
   "decision": "重点学习",
-  "one_line_judgement": "值得先保存：聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未…",
-  "one_line_essence": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+  "one_line_judgement": "今天值得试：研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-ag…",
+  "one_line_essence": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+  "new_claim_or_method": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -48,7 +48,7 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
+    "status": "emerging",
     "related_trends": [
       "coding-agent",
       "context-engineering"
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+    "why_save": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -78,7 +78,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-05-19"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -101,13 +101,13 @@
     ]
   },
   "actions": {
-    "immediate_actions": [],
-    "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
     ],
+    "trend_actions": [],
+    "long_tail_actions": [],
     "ignore_reason": ""
   },
   "references": [
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
-  "daily_path": "daily-detail.html?date=2026-04-28",
+  "daily_path": "daily-detail.html?date=2026-04-29",
   "trend_paths": [
     "trend-detail.html?id=coding-agent",
     "trend-detail.html?id=context-engineering"
