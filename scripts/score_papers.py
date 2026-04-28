@@ -1,17 +1,8 @@
 #!/usr/bin/env python3
-"""
-前沿理论驱动技术雷达 - 论文评分脚本
-
-基于 config/scoring.yml 的规则对论文打分。
-当前实现：关键词 + 分类规则打分。
-后续扩展：LLM 辅助评分。
-
-输入：papers/YYYY/YYYY-MM-DD-papers.json
-输出：同文件（更新 score 和 decision 字段）
-"""
-
+"""论文价值发现系统 - 论文评分脚本"""
 import json
 import os
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -19,227 +10,166 @@ from pathlib import Path
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
 
-# ============================================================
-# 评分规则（对应 config/scoring.yml）
-# ============================================================
-
-# 高优先级关键词 -> topic 映射
 TOPIC_KEYWORDS = {
-    "ai-agent": ["agent", "agentic", "tool use", "function calling", "multi-agent",
-                  "autonomous agent", "agent framework", "planning"],
-    "coding-agent": ["coding agent", "code generation", "program synthesis",
-                      "automated debugging", "code review", "software engineering ai"],
-    "context-engineering": ["context engineering", "long context", "in-context learning",
-                            "prompt engineering", "memory", "skill learning"],
-    "rag-knowledge": ["rag", "retrieval augmented", "knowledge graph", "semantic search",
-                      "document understanding"],
-    "multimodal-agent": ["multimodal", "world model", "vision language", "embodied",
-                         "robotics", "simulation"],
-    "llm-evaluation": ["evaluation", "benchmark", "auto-eval", "llm judge", "alignment",
-                       "safety evaluation"],
-    "inference-serving": ["inference", "serving", "quantization", "distillation",
-                          "speculative decoding", "optimization"],
-    "ai-k8s-platform": ["kubernetes", "mlops", "platform engineering", "gpu scheduling"],
-    "data-engineering": ["data engineering", "cdc", "lakehouse", "streaming", "real-time",
-                         "data pipeline"],
-    "security-governance": ["security", "governance", "red teaming", "adversarial",
-                            "privacy", "reliability"]
+    "ai-agent": ["agent", "agentic", "multi-agent", "planning", "tool use", "function calling"],
+    "coding-agent": ["coding agent", "code generation", "program synthesis", "software engineering", "code review", "debugging"],
+    "context-engineering": ["context engineering", "long context", "context window", "memory", "prompt", "in-context learning"],
+    "rag-knowledge": ["rag", "retrieval", "knowledge", "search", "knowledge graph", "retrieval-augmented"],
+    "multimodal-agent": ["multimodal", "world model", "vision-language", "embodied", "robotics", "simulation"],
+    "llm-evaluation": ["evaluation", "benchmark", "rubric", "judge", "leaderboard", "agreement", "auto-eval"],
+    "inference-serving": ["inference", "serving", "latency", "throughput", "quantization", "speculative decoding", "distillation"],
+    "ai-k8s-platform": ["kubernetes", "platform engineering", "scheduling", "gpu", "infra"],
+    "data-engineering": ["data pipeline", "streaming", "cdc", "lakehouse", "real-time", "state management"],
+    "security-governance": ["security", "governance", "privacy", "reliability", "guardrail", "audit", "risk"],
 }
 
-# 高分关键词（theory_novelty 加分）
-HIGH_NOVELTY_KEYWORDS = [
-    "new paradigm", "novel", "first", "breakthrough", "foundation",
-    "emergent", "zero-shot", "self-", "meta-", "auto-"
-]
+HIGH_VALUE_KEYWORDS = {
+    "novelty": ["novel", "new", "first", "foundation", "frontier", "upcycling", "generalization", "emergent", "hypothesis"],
+    "evidence": ["experiment", "evaluation", "ablation", "agreement", "benchmark", "validation", "proof", "empirical"],
+    "actionability": ["framework", "workflow", "pipeline", "practical", "deployment", "production", "tool", "system"],
+    "long_tail": ["negative", "failure", "blind spot", "rubric", "taxonomy", "survey", "counterexample", "case-specific"],
+    "trend": ["scaling", "agentic", "world model", "long-context", "coding", "evaluation", "memory", "benchmark"],
+}
 
-# 炒作风险关键词（hype_risk 加分）
-HYPE_KEYWORDS = [
-    "revolutionary", "game-changing", "unprecedented", "groundbreaking",
-    "paradigm shift", "next generation"
-]
+IGNORE_PATTERNS = ["sentiment", "e-commerce reviews", "indonesian", "medical image segmentation"]
+
+
+def slugify(text: str) -> str:
+    text = text.lower().strip()
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return re.sub(r"-+", "-", text).strip("-") or "paper"
+
+
+def clamp(v, lo=0, hi=10):
+    return max(lo, min(hi, round(v, 2)))
+
+
+def match_topics(text: str):
+    matched = []
+    for topic_id, kws in TOPIC_KEYWORDS.items():
+        if any(kw in text for kw in kws):
+            matched.append(topic_id)
+    return matched
 
 
 def compute_score(paper):
-    """基于规则的论文评分"""
-    title = paper.get("title", "").lower()
-    abstract = paper.get("abstract", "").lower()
-    categories = paper.get("categories", [])
-    keywords = paper.get("keywords", [])
-    text = f"{title} {abstract}"
+    title = paper.get("title", "")
+    abstract = paper.get("abstract", "")
+    text = f"{title} {abstract}".lower()
+    matched_topics = match_topics(text)
 
-    scores = {}
+    novelty = 4.8 + sum(0.6 for kw in HIGH_VALUE_KEYWORDS["novelty"] if kw in text)
+    problem_importance = 4.5 + len(matched_topics) * 0.65
+    relevance = 3.8 + len(matched_topics) * 1.2
+    evidence_strength = 4.5 + sum(0.45 for kw in HIGH_VALUE_KEYWORDS["evidence"] if kw in text)
+    engineering_testability = 3.5 + sum(0.55 for kw in HIGH_VALUE_KEYWORDS["actionability"] if kw in text)
+    trend_signal = 3.5 + sum(0.55 for kw in HIGH_VALUE_KEYWORDS["trend"] if kw in text)
+    long_tail_potential = 3.5 + sum(0.65 for kw in HIGH_VALUE_KEYWORDS["long_tail"] if kw in text)
+    asset_convertibility = 4.0 + (1.4 if any(k in text for k in ["rubric", "checklist", "workflow", "framework", "prompt"]) else 0) + (0.8 if matched_topics else 0)
+    actionability = 3.8 + (1.2 if any(k in text for k in ["practical", "system", "workflow", "code generation", "context", "evaluation"]) else 0) + (1.5 if paper.get("code_url") else 0)
 
-    # theory_novelty: 理论新意 (0-10)
-    novelty = 5  # 基础分
-    for kw in HIGH_NOVELTY_KEYWORDS:
-        if kw in text:
-            novelty += 0.5
-    novelty = min(novelty, 10)
-    scores["theory_novelty"] = novelty
-
-    # problem_importance: 问题重要性 (0-10)
-    importance = 5
-    matched_topics = []
-    for topic_id, topic_kws in TOPIC_KEYWORDS.items():
-        for kw in topic_kws:
-            if kw in text:
-                matched_topics.append(topic_id)
-                importance += 0.3
-                break
-    importance = min(importance, 10)
-    scores["problem_importance"] = importance
-
-    # engineering_impact: 工程影响力 (0-10)
-    eng_impact = 4
-    eng_keywords = ["system", "architecture", "pipeline", "framework", "deployment",
-                    "production", "scalab", "efficien"]
-    for kw in eng_keywords:
-        if kw in text:
-            eng_impact += 0.4
-    eng_impact = min(eng_impact, 10)
-    scores["engineering_impact"] = eng_impact
-
-    # engineering_potential: 工程外溢价值 (0-10)
-    eng_potential = 4
-    if any(kw in text for kw in ["agent", "tool", "automat", "workflow"]):
-        eng_potential += 1.5
-    if any(kw in text for kw in ["api", "sdk", "integration", "plugin"]):
-        eng_potential += 1
-    eng_potential = min(eng_potential, 10)
-    scores["engineering_potential"] = eng_potential
-
-    # evidence_strength: 证据强度 (0-10)
-    evidence = 5
     if paper.get("code_url"):
-        evidence += 2
+        evidence_strength += 1.4
+        engineering_testability += 2.0
+        actionability += 0.8
     if paper.get("benchmark_url"):
-        evidence += 2
-    if any(kw in text for kw in ["experiment", "empirical", "ablation"]):
-        evidence += 1
-    evidence = min(evidence, 10)
-    scores["evidence_strength"] = evidence
+        evidence_strength += 1.3
+        trend_signal += 0.8
+    if paper.get("paperswithcode_url"):
+        engineering_testability += 1.2
+    if paper.get("openreview_url"):
+        evidence_strength += 0.6
+    if "survey" in text:
+        long_tail_potential += 1.2
+        actionability -= 0.6
+    if "benchmark" in text:
+        trend_signal += 1.4
+        asset_convertibility += 0.8
+    if any(pat in text for pat in IGNORE_PATTERNS):
+        relevance -= 2.8
 
-    # source_quality: 来源质量 (0-10)
-    source_quality = 6  # arXiv 基础分
-    if paper.get("source") == "OpenReview":
-        source_quality = 8
-    if any(kw in text for kw in ["google", "meta", "openai", "anthropic", "microsoft",
-                                  "stanford", "mit", "berkeley", "cmu"]):
-        source_quality += 1.5
-    source_quality = min(source_quality, 10)
-    scores["source_quality"] = source_quality
+    noise_risk = 1.2 + (1.2 if not matched_topics else 0) + (1.0 if "exploratory" in text else 0)
+    weak_evidence_penalty = 2.0 + (2.0 if not paper.get("code_url") else 0) + (1.0 if "evaluation" not in text and "experiment" not in text else 0)
+    low_relevance_penalty = max(0, 5 - len(matched_topics) * 1.4)
+    engineering_cost_penalty = 2.5 + (1.5 if "pretrain" in text or "from scratch" in text else 0)
+    reproducibility_risk = 2.0 + (2.0 if not paper.get("code_url") else 0) + (1.0 if not paper.get("benchmark_url") else 0)
 
-    # reproducibility: 可复现性 (0-10)
-    reproducibility = 3
-    if paper.get("code_url"):
-        reproducibility += 3
-    if paper.get("benchmark_url"):
-        reproducibility += 2
-    if any(kw in text for kw in ["open source", "code available", "github"]):
-        reproducibility += 1.5
-    reproducibility = min(reproducibility, 10)
-    scores["reproducibility"] = reproducibility
-
-    # personal_relevance: 对资深架构师的相关性 (0-10)
-    relevance = 4
-    if matched_topics:
-        relevance += min(len(matched_topics) * 0.8, 3)
-    relevance = min(relevance, 10)
-    scores["personal_relevance"] = relevance
-
-    # long_term_value: 长期学习复利 (0-10)
-    long_term = 5
-    if any(kw in text for kw in ["foundation", "general", "universal", "principle"]):
-        long_term += 2
-    if any(kw in text for kw in ["framework", "taxonomy", "survey"]):
-        long_term += 1
-    long_term = min(long_term, 10)
-    scores["long_term_value"] = long_term
-
-    # 负向评分
-    # hype_risk (0-10)
-    hype = 0
-    for kw in HYPE_KEYWORDS:
-        if kw in text:
-            hype += 2
-    hype = min(hype, 10)
-    scores["hype_risk"] = hype
-
-    # weak_evidence_penalty (0-10)
-    weak_penalty = 3
-    if not paper.get("code_url") and "code" not in text:
-        weak_penalty += 2
-    if not any(kw in text for kw in ["experiment", "result", "evaluation"]):
-        weak_penalty += 2
-    weak_penalty = min(weak_penalty, 10)
-    scores["weak_evidence_penalty"] = weak_penalty
-
-    # low_relevance_penalty (0-10)
-    low_rel = 5
-    if matched_topics:
-        low_rel = max(0, 5 - len(matched_topics))
-    scores["low_relevance_penalty"] = low_rel
-
+    scores = {
+        "novelty": clamp(novelty),
+        "problem_importance": clamp(problem_importance),
+        "relevance": clamp(relevance),
+        "evidence_strength": clamp(evidence_strength),
+        "engineering_testability": clamp(engineering_testability),
+        "trend_signal": clamp(trend_signal),
+        "long_tail_potential": clamp(long_tail_potential),
+        "asset_convertibility": clamp(asset_convertibility),
+        "actionability": clamp(actionability),
+        "noise_risk": clamp(noise_risk),
+        "weak_evidence_penalty": clamp(weak_evidence_penalty),
+        "low_relevance_penalty": clamp(low_relevance_penalty),
+        "engineering_cost_penalty": clamp(engineering_cost_penalty),
+        "reproducibility_risk": clamp(reproducibility_risk),
+    }
     return scores, matched_topics
 
 
 def calculate_total_score(scores):
-    """计算总分"""
-    # 正向权重
     positive_weights = {
-        "theory_novelty": 15, "problem_importance": 15,
-        "engineering_impact": 15, "engineering_potential": 10,
-        "evidence_strength": 10, "source_quality": 5,
-        "reproducibility": 10, "personal_relevance": 10,
-        "long_term_value": 10
+        "novelty": 14, "problem_importance": 12, "relevance": 13,
+        "evidence_strength": 10, "engineering_testability": 12,
+        "trend_signal": 10, "long_tail_potential": 10,
+        "asset_convertibility": 10, "actionability": 9,
     }
-    # 负向权重
     negative_weights = {
-        "hype_risk": 10, "weak_evidence_penalty": 8,
-        "low_relevance_penalty": 5
+        "noise_risk": 8, "weak_evidence_penalty": 6, "low_relevance_penalty": 6,
+        "engineering_cost_penalty": 5, "reproducibility_risk": 5,
     }
-
-    total = 0
-    for key, weight in positive_weights.items():
-        total += scores.get(key, 0) * weight / 10
-    for key, weight in negative_weights.items():
-        total -= scores.get(key, 0) * weight / 10
-
+    total = sum(scores.get(k, 0) * w / 10 for k, w in positive_weights.items())
+    total -= sum(scores.get(k, 0) * w / 10 for k, w in negative_weights.items())
     return round(max(0, min(100, total)), 1)
 
 
 def get_decision(score):
-    """根据分数判断"""
     if score >= 80:
         return "重点学习"
-    elif score >= 65:
+    if score >= 65:
         return "轻量试点"
-    elif score >= 50:
+    if score >= 50:
         return "持续观察"
-    else:
-        return "暂时忽略"
+    return "暂时忽略"
+
+
+def classify_value_type(scores, total):
+    if total < 50 or (scores["novelty"] < 4.5 and scores["long_tail_potential"] < 5):
+        return "ignore"
+    if scores["relevance"] >= 7 and scores["engineering_testability"] >= 6.2 and scores["actionability"] >= 6.2:
+        return "immediate"
+    if scores["trend_signal"] >= 7.2 and scores["evidence_strength"] >= 5.2:
+        return "trend"
+    if scores["long_tail_potential"] >= 6.4 or scores["asset_convertibility"] >= 7:
+        return "long_tail"
+    if total >= 72:
+        return "immediate"
+    if total >= 58:
+        return "trend"
+    return "long_tail"
+
+
+def trend_status_from_value_type(value_type, scores):
+    if value_type == "ignore":
+        return "noise"
+    if value_type == "long_tail":
+        return "long_tail_watch"
+    if value_type == "trend":
+        return "rising" if scores.get("evidence_strength", 0) >= 6 else "emerging"
+    return "emerging"
 
 
 def load_llm_overrides(target_date):
-    """加载 Hermes 推理增强评分（可选）。
-
-    文件路径：papers/YYYY/YYYY-MM-DD-llm-scores.json
-    格式：
-    {
-      "by_url": {
-        "https://arxiv.org/abs/xxxx": {
-          "score": 83.5,
-          "reason": "...",
-          "matched_topics": ["ai-agent"]
-        }
-      }
-    }
-    """
     year = target_date[:4]
     llm_path = Path(PAPERS_DIR) / year / f"{target_date}-llm-scores.json"
     if not llm_path.exists():
         return {}
-
     try:
         data = json.loads(llm_path.read_text(encoding="utf-8"))
         return data.get("by_url", {})
@@ -249,77 +179,65 @@ def load_llm_overrides(target_date):
 
 
 def score_papers(papers, llm_overrides=None):
-    """对论文列表评分（规则分 + 可选 LLM 增强覆盖）"""
     llm_overrides = llm_overrides or {}
     scored = []
     for paper in papers:
         scores, topics = compute_score(paper)
         total = calculate_total_score(scores)
         decision = get_decision(total)
+        value_type = classify_value_type(scores, total)
 
-        url = paper.get("url", "")
-        llm_hit = llm_overrides.get(url)
+        llm_hit = llm_overrides.get(paper.get("url", ""))
         if llm_hit and isinstance(llm_hit, dict):
             llm_score = llm_hit.get("score")
             if isinstance(llm_score, (int, float)):
                 total = round(max(0, min(100, float(llm_score))), 1)
                 decision = get_decision(total)
-                paper["llm_reason"] = llm_hit.get("reason", "")
-                if isinstance(llm_hit.get("matched_topics"), list) and llm_hit.get("matched_topics"):
-                    topics = llm_hit["matched_topics"]
+                value_type = classify_value_type(scores, total)
+            if llm_hit.get("value_type"):
+                value_type = llm_hit["value_type"]
+            if isinstance(llm_hit.get("matched_topics"), list) and llm_hit.get("matched_topics"):
+                topics = llm_hit["matched_topics"]
+            if llm_hit.get("reason"):
+                paper["llm_reason"] = llm_hit["reason"]
 
+        paper["id"] = paper.get("id") or slugify(paper.get("title", ""))
         paper["score"] = total
         paper["decision"] = decision
+        paper["value_type"] = value_type
         paper["matched_topics"] = topics
         paper["score_breakdown"] = scores
-
+        paper["trend_status"] = trend_status_from_value_type(value_type, scores)
         scored.append(paper)
 
-    # 按分数降序排序
     scored.sort(key=lambda x: x["score"], reverse=True)
     return scored
 
 
 def main():
     print("=" * 60)
-    print("前沿理论驱动技术雷达 - 论文评分")
+    print("论文价值发现系统 - 论文评分")
     print("=" * 60)
-
     target_date = date.today().isoformat()
     if len(sys.argv) > 1:
         target_date = sys.argv[1]
-
     year = target_date[:4]
     papers_path = os.path.join(PAPERS_DIR, year, f"{target_date}-papers.json")
-
     if not os.path.exists(papers_path):
         print(f"[error] 论文文件不存在: {papers_path}")
-        print("[hint] 请先运行 fetch_papers.py")
         return 1
-
-    with open(papers_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
+    data = json.loads(Path(papers_path).read_text(encoding="utf-8"))
     papers = data.get("papers", [])
     print(f"[score] 加载 {len(papers)} 篇论文")
-
-    # 评分（可选：叠加 Hermes 推理增强分）
     llm_overrides = load_llm_overrides(target_date)
     if llm_overrides:
         print(f"[score] 检测到 LLM 增强评分: {len(llm_overrides)} 条")
     scored_papers = score_papers(papers, llm_overrides=llm_overrides)
-
-    # 输出评分结果摘要
-    for i, p in enumerate(scored_papers[:10]):
-        print(f"  #{i+1} [{p['score']:5.1f}] {p['decision']:6s} | {p['title'][:60]}")
-
-    # 更新文件
+    for i, p in enumerate(scored_papers[:10], start=1):
+        print(f"  #{i} [{p['score']:5.1f}] {p['value_type']:10s} | {p['title'][:60]}")
     data["papers"] = scored_papers
     data["scored_at"] = date.today().isoformat()
-
-    with open(papers_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
+    Path(papers_path).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[score] 评分完成，结果已保存到: {papers_path}")
     return 0
 

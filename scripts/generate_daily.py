@@ -1,357 +1,246 @@
 #!/usr/bin/env python3
-"""
-前沿理论驱动技术雷达 - 日报生成脚本
-
-基于当天论文和模板生成日报 Markdown。
-如果无法调用 LLM，则生成结构化占位版。
-
-输入：papers/YYYY/YYYY-MM-DD-papers.json
-输出：daily/YYYY/YYYY-MM-DD.md
-"""
-
+"""论文价值发现系统 - 日报生成脚本"""
 import json
 import os
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
+from textwrap import dedent
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
 DAILY_DIR = os.path.join(PROJECT_ROOT, "daily")
-PROMPTS_DIR = os.path.join(PROJECT_ROOT, "prompts")
+
+VALUE_LABELS = {
+    "immediate": "即时价值",
+    "trend": "趋势价值",
+    "long_tail": "长尾价值",
+    "ignore": "暂时忽略",
+}
 
 
 def load_papers(target_date):
-    """加载论文数据"""
     year = target_date[:4]
     papers_path = os.path.join(PAPERS_DIR, year, f"{target_date}-papers.json")
-
     if not os.path.exists(papers_path):
-        print(f"[generate] 论文文件不存在: {papers_path}")
         return []
-
-    with open(papers_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    return data.get("papers", [])
-
-
-def format_paper_table(papers, top_n=5):
-    """格式化论文表格"""
-    rows = []
-    for p in papers[:top_n]:
-        title = p.get("title", "未知")
-        url = p.get("url", "#")
-        source = p.get("source", "未知")
-        topics = p.get("matched_topics", ["未分类"])
-        topic_str = " / ".join(topics[:2]) if topics else "未分类"
-        score = p.get("score", 0)
-        decision = p.get("decision", "待定")
-
-        rows.append(
-            f"| [{title}]({url}) | {source} | {topic_str} | {score:.1f} | {decision} |"
-        )
-
-    return "\n".join(rows)
-
-
-def format_engineering_rows():
-    """格式化工程实践搜索占位行"""
-    return (
-        "| 待搜索 | GitHub 项目 | 理论验证 | 待确认 | 待评估 |\n"
-        "| 待搜索 | 开源框架 | 理论验证 | 待确认 | 待评估 |\n"
-        "| 待搜索 | Benchmark | 性能验证 | 待确认 | 待评估 |\n"
-        "| 待搜索 | 大厂工程博客 | 生产实践 | 待确认 | 待评估 |\n"
-        "| 待搜索 | 社区讨论 | 弱信号 | 待确认 | 待评估 |"
-    )
+    return json.loads(Path(papers_path).read_text(encoding="utf-8")).get("papers", [])
 
 
 def load_analysis(target_date):
-    """加载 Hermes 推理增强内容（可选）。
-
-    文件路径：papers/YYYY/YYYY-MM-DD-analysis.json
-    """
     year = target_date[:4]
-    analysis_path = Path(PAPERS_DIR) / year / f"{target_date}-analysis.json"
-    if not analysis_path.exists():
+    p = Path(PAPERS_DIR) / year / f"{target_date}-analysis.json"
+    if not p.exists():
         return {}
     try:
-        return json.loads(analysis_path.read_text(encoding="utf-8"))
-    except Exception as e:
-        print(f"[generate] 读取分析文件失败: {e}")
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
         return {}
+
+
+def paper_link(label, url):
+    return f"[{label}]({url})" if url and url.startswith("http") else (url or "暂无")
+
+
+def paper_links_line(paper):
+    chunks = []
+    for label, key in [("arXiv", "url"), ("PDF", "pdf_url"), ("OpenReview", "openreview_url"), ("Code", "code_url"), ("Benchmark", "benchmark_url"), ("Papers with Code", "paperswithcode_url")]:
+        chunks.append(f"- **{label}：** {paper_link(label, paper.get(key, ''))}")
+    return "\n".join(chunks)
+
+
+def build_paper_table(papers):
+    rows = []
+    for p in papers[:5]:
+        rows.append(
+            f"| [{p.get('title','未知')}]({p.get('url','#')}) | {' / '.join(p.get('matched_topics',[])[:2]) or '未分类'} | {VALUE_LABELS.get(p.get('value_type'),'待定')} | {p.get('score',0):.1f} | {p.get('decision','待定')} | {'是' if p.get('code_url') else '否'} | {'是' if p.get('benchmark_url') else '否'} | {'是' if p.get('score',0) >= 70 else '否'} |"
+        )
+    return "\n".join(rows)
+
+
+def choose_long_tail(papers):
+    tails = [p for p in papers if p.get('value_type') == 'long_tail']
+    return tails[:3] if tails else [p for p in papers if p.get('decision') in ('持续观察', '轻量试点')][:3]
+
+
+def choose_ignore_reasons(papers):
+    ignored = [p for p in papers if p.get('value_type') == 'ignore' or p.get('decision') == '暂时忽略']
+    reasons = [f"- [{p.get('title')}]({p.get('url')})：新意弱 / 证据弱 / 当前相关性有限。" for p in ignored[:3]]
+    return "\n".join(reasons) or '- 当前样本中暂无明确噪声论文，但仍需保留忽略标准。'
 
 
 def generate_daily_report(papers, target_date):
-    """生成日报"""
-    # 选择深挖论文（取评分最高的）
-    deep_dive = papers[0] if papers else None
-
-    if deep_dive is None:
-        deep_dive = {
-            "title": "[占位] 今日无可用论文数据",
-            "url": "",
-            "source": "placeholder",
-            "authors": [],
-            "published": target_date,
-            "score": 0,
-            "decision": "待定",
-            "abstract": "今日论文抓取失败或无新论文。",
-            "links": []
-        }
-
-    # 论文表格
-    paper_table = format_paper_table(papers, 5)
-
-    # 可选 Hermes 推理增强
     analysis = load_analysis(target_date)
-    theory_section = analysis.get("core_theory_markdown") or (
-        "- **它解决的底层问题是什么？** 待分析（需要 Hermes 定时任务补充）\n"
-        "- **它挑战了什么旧假设？** 待分析\n"
-        "- **它提出了什么新假设？** 待分析\n"
-        "- **它的核心机制是什么？** 待分析\n"
-        "- **它带来的新能力是什么？** 待分析\n"
-        "- **它的限制条件是什么？** 待分析"
+    deep = papers[0] if papers else {
+        'title': '[占位] 今日无可用论文数据', 'url': '', 'source': 'placeholder', 'authors': [], 'published': target_date,
+        'score': 0, 'decision': '暂时忽略', 'value_type': 'ignore', 'abstract': '今日论文抓取失败或无新论文。', 'links': []
+    }
+    value_type = deep.get('value_type', 'ignore')
+    value_label = VALUE_LABELS.get(value_type, '待定')
+    stage = {'trend':'上升','immediate':'萌芽','long_tail':'长尾观察','ignore':'噪声'}.get(value_type, '萌芽')
+    long_tail = choose_long_tail(papers)
+    candidate_table = build_paper_table(papers)
+    summary = analysis.get('summary_markdown') or (
+        f"- **今天最值得看什么：** [{deep.get('title')}]({deep.get('url')})。\n"
+        f"- **为什么值得看：** {deep.get('llm_reason') or '它同时具备问题重要性、工程可验证性和研究资产转化价值。'}\n"
+        f"- **它属于什么价值类型：** {value_label}。\n"
+        f"- **今天该做什么：** 先读摘要与方法，随后验证是否能沉淀为 Prompt / Skill / Checklist。\n"
+        f"- **最大不确定性：** {analysis.get('uncertainty') or '是否存在可核验代码、benchmark 与多源趋势证据。'}"
     )
-    insights_section = analysis.get("insights_markdown") or (
-        "### 对系统设计的启发\n待分析\n\n"
-        "### 对 AI Agent 工程化的启发\n待分析\n\n"
-        "### 对团队研发流程的启发\n待分析\n\n"
-        "### 对企业落地的启发\n待分析\n\n"
-        "### 对个人学习路径的启发\n待分析\n\n"
-        "### 对未来 6-12 个月技术趋势的启发\n待分析"
+    deep_dive_section = analysis.get('deep_dive_markdown') or (
+        f"- **一句话本质：** {deep.get('llm_reason') or '提出了值得快速判断是否可转化为工程资产的新方法。'}\n"
+        f"- **底层问题：** {analysis.get('core_problem') or '如何在有限注意力下快速分辨哪些论文值得今天就投入。'}\n"
+        f"- **新命题 / 新方法 / 新证据：** {analysis.get('new_claim_or_method') or '通过新的方法路径或评测视角提升价值密度。'}\n"
+        f"- **研究位置：** {analysis.get('research_position') or '源头论文 / 改进论文之间，仍需后续核验。'}\n"
+        f"- **工程可验证性：** {'有明确代码入口，可安排最小实验。' if deep.get('code_url') else '暂缺代码，但可从提示词、评测或架构思路侧做最小验证。'}\n"
+        f"- **趋势关联：** {('值得纳入趋势雷达继续观察。' if value_type == 'trend' else '更偏即时试验或长尾保存。')}\n"
+        f"- **长尾价值：** {analysis.get('long_tail_value') or '即使短期不火，也可能沉淀为未来可复用的研究资产。'}\n"
+        f"- **启发：** {analysis.get('one_line_insight') or '先做价值路由，再决定是否投入深读与工程搜索。'}\n"
+        f"- **行动建议：** {analysis.get('today_action') or '今天完成摘要精读 + 最小验证计划。'}"
     )
-    actions_section = analysis.get("actions_markdown") or (
-        "- **30 分钟学习任务：** 阅读论文摘要，理解核心问题\n"
-        "- **2 小时实践任务：** 搜索相关 GitHub 项目，了解工程实现\n"
-        "- **1 周研究任务：** 深读论文，尝试复现核心实验\n"
-        "- **是否值得精读论文：** 待确认\n"
-        "- **是否值得本地复现：** 待确认\n"
-        "- **是否值得纳入技术雷达：** 待确认\n"
-        "- **是否值得沉淀成 Prompt / Skill / Checklist / 模板：** 待确认"
-    )
+    insights = analysis.get('insights_markdown') or dedent('''### 系统设计启发
+- 先做价值路由，而不是默认每篇都深挖到同样层级。
 
-    # 工程实践行
-    eng_rows = format_engineering_rows()
+### Agent 工程启发
+- 让 Agent 先判断“今天值不值得试”，再决定是否展开复杂研究链路。
 
-    # 深挖论文信息
-    dd_title = deep_dive.get("title", "")
-    dd_url = deep_dive.get("url", "#")
-    dd_authors = ", ".join(deep_dive.get("authors", [])[:3]) or "未知"
-    dd_source = deep_dive.get("source", "")
-    dd_published = deep_dive.get("published", "")
-    dd_score = deep_dive.get("score", 0)
-    dd_decision = deep_dive.get("decision", "待定")
-    dd_abstract = deep_dive.get("abstract", "")[:200]
+### 研发流程启发
+- 论文筛选要能输出 Prompt / Skill / Checklist，而不是只停留在摘要解释。
 
-    # 格式化链接
-    links_md = []
-    for link in deep_dive.get("links", []):
-        if link.get("url"):
-            links_md.append(f"- [{link['label']}]({link['url']})")
-    if not links_md:
-        links_md.append("- 暂未发现可信链接")
+### 评测方法启发
+- 把“是否值得继续投入”本身也当作一个评测对象。
 
-    # 引用
-    references = "\n".join(links_md)
+### 平台工程启发
+- 长尾库让团队能低成本保留未来资产，不被短期热度绑架。
 
-    # 判断
-    if dd_score >= 80:
-        final_decision = "重点学习"
-    elif dd_score >= 65:
-        final_decision = "轻量试点"
-    elif dd_score >= 50:
-        final_decision = "持续观察"
+### 个人学习启发
+- 优先读能形成研究资产的论文，而不是单纯追热度。''')
+
+    if value_type == 'immediate':
+        action_block = dedent('''- **30 分钟学习任务：** 读摘要、方法、实验设定，记下 3 个可验证假设。
+- **2 小时实践任务：** 做最小实验、Prompt 试验或评测脚本草图。
+- **1 周研究任务：** 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。''')
+    elif value_type == 'trend':
+        action_block = dedent('''- **纳入趋势雷达：** 记录为需要连续观察的方向。
+- **设置观察问题：** 它是否会出现代码、benchmark、工程博客或多篇跟进论文？
+- **连续观察周期：** 7-30 天滚动复盘一次。''')
+    elif value_type == 'long_tail':
+        action_block = dedent('''- **加入长尾库：** 先保存，不急于投入大量精力。
+- **设置未来触发条件：** 开源实现、benchmark 收录、被高质量论文引用、成本下降。
+- **沉淀资产：** 先提炼成 Prompt / Skill / Checklist / 模板草稿。''')
     else:
-        final_decision = "暂时忽略"
+        action_block = dedent('''- **保留最小索引：** 记录标题、来源、分数与忽略理由。
+- **忽略理由：** 当前证据弱、相关性低或难以转化为研究资产。
+- **后续策略：** 除非出现强外部信号，否则不继续投入。''')
 
+    long_tail_md = []
+    for p in long_tail:
+        revisit = (datetime.fromisoformat(target_date) + timedelta(days=21)).date().isoformat()
+        long_tail_md.append(
+            f"### [{p.get('title')}]({p.get('url')})\n"
+            f"- **为什么现在不火也值得保存：** {p.get('llm_reason') or '具备方法抽象、评测启发或反证价值。'}\n"
+            f"- **未来触发条件：** 出现开源实现 / 被高质量论文引用 / 进入 benchmark。\n"
+            f"- **可能应用场景：** Prompt 设计、Agent workflow、评测治理、系统设计。\n"
+            f"- **可沉淀资产：** Prompt / Skill / Checklist / 架构模式 / 评测方法。\n"
+            f"- **建议复盘时间：** {revisit}"
+        )
+    long_tail_section = "\n\n".join(long_tail_md) if long_tail_md else '暂无长尾保存候选。'
+    refs = paper_links_line(deep)
     now = datetime.now().isoformat()
-
-    report = f"""---
+    report = f'''---
 date: {target_date}
-title: 前沿理论驱动技术雷达日报 - {target_date}
-decision: {final_decision}
-stage: C
-deep_dive_title: {dd_title}
-deep_dive_url: {dd_url}
-source: [arXiv, OpenReview, HuggingFace, PapersWithCode, GitHub]
+title: 论文价值发现日报 - {target_date}
+decision: {deep.get('decision','待定')}
+value_type: {value_type}
+stage: {stage}
+deep_dive_title: {deep.get('title','')}
+deep_dive_url: {deep.get('url','')}
+daily_action: {analysis.get('today_action') or '完成摘要精读与最小实验设计'}
+max_uncertainty: {analysis.get('uncertainty') or '缺少多源工程证据'}
 ---
 
-# 前沿理论驱动技术雷达日报 - {target_date}
+# 论文价值发现日报 - {target_date}
 
-> 今日焦点：从论文信号提炼可执行技术判断。
+> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。
 > ⚠️ **注意：这是初始化样例，后续运行会替换为真实数据。**
 
----
+## 1. 标题区
+- **今日最值得关注论文：** [{deep.get('title')}]({deep.get('url')})
+- **价值类型：** {value_label}
+- **今日建议动作：** {analysis.get('today_action') or '完成摘要精读与最小实验设计'}
+- **分数：** {deep.get('score',0)}
+- **趋势阶段：** {stage}
 
-## 1. 今日最值得关注的前沿论文
+## 2. 先说结论
+{summary}
 
-| 论文 | 来源 | 方向 | 分数 | 判断 |
-|------|------|------|-----:|------|
-{paper_table}
+## 3. 今日候选论文表
 
----
+| 论文标题 | 方向 | 价值类型 | 分数 | 判断 | 是否有代码 | 是否有 Benchmark | 是否值得深挖 |
+|---|---|---|---:|---|---|---|---|
+{candidate_table}
 
-## 2. 今日选择深挖的论文
+## 4. 今日深挖论文
 
-**论文：** [{dd_title}]({dd_url})
+{deep_dive_section}
 
-**作者 / 机构：** {dd_authors}
+## 5. 今日长尾保存
 
-**来源：** {dd_source}
+{long_tail_section}
 
-**发布时间：** {dd_published}
+## 6. 今日忽略理由
 
-**评分：** {dd_score}
+{choose_ignore_reasons(papers)}
 
-**摘要：** {dd_abstract}
+## 7. 启发
 
-**选择理由：**
-- 是否可能改变工程范式：待分析
-- 是否有工程外溢价值：待分析
-- 是否能映射到真实系统问题：待分析
-- 是否适合架构师学习：待分析
-- 是否可能产生工程机会：待分析
+{insights}
 
----
+## 8. 行动建议
 
-## 3. 核心理论提取
+{action_block}
 
-{theory_section}
+## 9. 引用与延伸阅读
 
----
+{refs}
 
-## 4. 工程演绎推导
-
-| 推导方向 | 可能变化 | 影响程度 | 可信度 | 说明 |
-|----------|----------|----------|--------|------|
-| 系统架构 | 待分析 | 中 | 待验证 | 需要进一步研究 |
-| 开发流程 | 待分析 | 中 | 待验证 | 需要进一步研究 |
-| AI Agent 设计 | 待分析 | 高 | 待验证 | 核心影响方向 |
-| RAG / 上下文系统 | 待分析 | 中 | 待验证 | 需要进一步研究 |
-| 数据流与状态管理 | 待分析 | 中 | 待验证 | 需要进一步研究 |
-| 推理成本 | 待分析 | 低 | 待验证 | 需要进一步研究 |
-| 部署与运维 | 待分析 | 低 | 待验证 | 需要进一步研究 |
-| 评测与治理 | 待分析 | 中 | 待验证 | 需要进一步研究 |
-| 团队协作方式 | 待分析 | 低 | 待验证 | 需要进一步研究 |
-
----
-
-## 5. 沿理论搜索工程实践
-
-| 实践名称 | 类型 | 与论文理论的关系 | 成熟度 | 价值判断 |
-|----------|------|-----------------|--------|----------|
-| 暂未发现可信链接 | GitHub 项目 | 待搜索 | 待确认 | 待评估 |
-
-> 🔍 需要进一步搜索 GitHub、Papers with Code、工程博客等工程证据。
-
----
-
-## 6. 工程状态判断
-
-**判断：** C. 理论还没有明显工程实践，但存在潜在机会
-
-**理由：** 初始化阶段，工程实践搜索尚未执行。后续运行将自动搜索并更新。
-
----
-
-## 7. 潜在工程机会
-
-- **为什么现在还没有成熟实践？** 待分析
-- **是因为太新，还是因为难以落地？** 待分析
-- **哪些场景最可能先落地？** 待分析
-- **对个人或团队来说，能否做一个最小 Demo？** 待分析
-- **是否适合沉淀为 Skill、Prompt、架构模板或工具？** 待分析
-
----
-
-## 8. 启发
-
-{insights_section}
-
----
-
-## 9. 行动建议
-
-{actions_section}
-
----
-
-## 10. 引用与延伸阅读
-
-{references}
-
----
-
-## 11. 最终结论
-
-- **结论：** {final_decision}
-- **原因：** 初始化样例，基于初步评分规则自动生成
-- **最大不确定性：** 核心理论提取和工程实践验证尚未完成
-- **下一步动作：** 运行完整流程后更新
-
----
+## 10. 最终结论
+- **结论：** {deep.get('decision','待定')}
+- **价值类型：** {value_label}
+- **原因：** {deep.get('llm_reason') or '同时具备较高相关性、可验证性或长尾资产价值。'}
+- **最大不确定性：** {analysis.get('uncertainty') or '是否有后续工程证据与多源跟进。'}
+- **下一步动作：** {analysis.get('next_action') or '更新趋势页、长尾库与论文详情档案。'}
 
 > 生成时间：{now}
 > 数据来源：arXiv API + 固定源配置
 > 状态：{'Hermes 推理增强' if analysis else '初始化样例/规则生成'}
-"""
-
-    return report, deep_dive
+'''
+    return report, deep
 
 
 def save_daily_report(report, target_date):
-    """保存日报"""
-    year = target_date[:4]
-    output_dir = os.path.join(DAILY_DIR, year)
+    output_dir = os.path.join(DAILY_DIR, target_date[:4])
     os.makedirs(output_dir, exist_ok=True)
-
     output_path = os.path.join(output_dir, f"{target_date}.md")
-
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(report)
-
+    Path(output_path).write_text(report, encoding='utf-8')
     print(f"[generate] 日报已保存到: {output_path}")
     return output_path
 
 
 def main():
-    print("=" * 60)
-    print("前沿理论驱动技术雷达 - 日报生成")
-    print("=" * 60)
-
+    print('=' * 60)
+    print('论文价值发现系统 - 日报生成')
+    print('=' * 60)
     target_date = date.today().isoformat()
     if len(sys.argv) > 1:
         target_date = sys.argv[1]
-
-    print(f"[generate] 目标日期: {target_date}")
-
-    # 加载论文
     papers = load_papers(target_date)
     print(f"[generate] 加载 {len(papers)} 篇论文")
-
-    # 生成日报
     report, deep_dive = generate_daily_report(papers, target_date)
-
-    # 保存
     output_path = save_daily_report(report, target_date)
-
-    # 输出深挖论文信息（供后续脚本使用）
-    info = {
-        "date": target_date,
-        "output_path": output_path,
-        "deep_dive": {
-            "title": deep_dive.get("title", ""),
-            "url": deep_dive.get("url", ""),
-            "decision": deep_dive.get("decision", ""),
-            "score": deep_dive.get("score", 0)
-        }
-    }
     print(f"[generate] 深挖论文: {deep_dive.get('title', 'N/A')}")
     print(f"[generate] 完成！日报已保存到: {output_path}")
-
     return 0
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     sys.exit(main())

@@ -1,100 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于 - 前沿理论驱动技术雷达</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script defer src="assets/app.js"></script>
 </head>
 <body data-page="about">
   <nav class="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="navbar-brand">技术雷达</a>
-      <button class="navbar-toggle" aria-label="菜单">☰</button>
-      <ul class="navbar-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="daily.html">日报</a></li>
-        <li><a href="papers.html">论文库</a></li>
-        <li><a href="trends.html">趋势雷达</a></li>
-        <li><a href="insights.html">启发</a></li>
-        <li><a href="sources.html">数据源</a></li>
-        <li><a href="about.html">关于</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="page-header">
-      <h1>📖 关于本项目</h1>
-    </div>
-
-    <div class="about-content">
-      <div class="card" style="padding:32px">
-        <h2>项目定位</h2>
-        <p>这是一个长期运行的「前沿理论驱动技术雷达日报」系统。核心不是追热点，而是：</p>
-        <p><strong>从前沿论文出发，提取理论假设，沿理论搜索工程实践，判断趋势阶段，蒸馏启发，最终形成可执行的行动建议和可复用的技术判断系统。</strong></p>
-
-        <h2>研究范式</h2>
-        <div class="chain-vis" style="padding:12px 0">
-          <div class="chain-step"><div class="chain-step-icon">1</div><div class="chain-step-label">论文</div><div class="chain-step-desc">前沿论文发现</div></div>
-          <span class="chain-arrow">→</span>
-          <div class="chain-step"><div class="chain-step-icon">2</div><div class="chain-step-label">理论</div><div class="chain-step-desc">核心理论提取</div></div>
-          <span class="chain-arrow">→</span>
-          <div class="chain-step"><div class="chain-step-icon">3</div><div class="chain-step-label">工程</div><div class="chain-step-desc">实践验证搜索</div></div>
-          <span class="chain-arrow">→</span>
-          <div class="chain-step"><div class="chain-step-icon">4</div><div class="chain-step-label">趋势</div><div class="chain-step-desc">阶段判断</div></div>
-          <span class="chain-arrow">→</span>
-          <div class="chain-step"><div class="chain-step-icon">5</div><div class="chain-step-label">启发</div><div class="chain-step-desc">蒸馏洞察</div></div>
-          <span class="chain-arrow">→</span>
-          <div class="chain-step"><div class="chain-step-icon">6</div><div class="chain-step-label">行动</div><div class="chain-step-desc">执行建议</div></div>
-        </div>
-
-        <h2>为什么先看论文？</h2>
-        <p>论文是新理论和新技术最早的信号源。新闻、博客、社区讨论都是论文的下游。从论文出发，可以在信息传播链的最上游建立技术判断。</p>
-
-        <h2>为什么需要工程验证？</h2>
-        <p>理论不等于实践。很多论文提出的方法在实际工程中可能不可行、不稳定或成本过高。只有经过工程验证的理论才值得投入学习。</p>
-        <p>我们的工程验证源包括：</p>
-        <ul>
-          <li>GitHub 项目 — 代码实现和社区活跃度</li>
-          <li>Benchmark — 性能和效果验证</li>
-          <li>大厂工程博客 — 生产环境案例</li>
-          <li>Papers with Code — 可复现性验证</li>
-        </ul>
-
-        <h2>为什么不追普通热点？</h2>
-        <p>普通技术热点往往是营销驱动的，信息密度低，重复性高。我们关注的是<strong>从论文理论出发的长期技术趋势</strong>，而不是短期的流量热点。</p>
-
-        <h2>如何判断是否值得学习？</h2>
-        <p>使用多维度评分模型，综合考虑：</p>
-        <ul>
-          <li><strong>理论新意</strong> — 是否提出了真正的新假设</li>
-          <li><strong>问题重要性</strong> — 解决的是否是核心问题</li>
-          <li><strong>工程影响力</strong> — 对系统架构的潜在影响</li>
-          <li><strong>证据强度</strong> — 实验和代码的充分性</li>
-          <li><strong>长期价值</strong> — 6-12 个月后是否仍有价值</li>
-        </ul>
-        <p>最终判断为四个等级：<span class="badge badge-focus">重点学习</span> <span class="badge badge-trial">轻量试点</span> <span class="badge badge-watch">持续观察</span> <span class="badge badge-ignore">暂时忽略</span></p>
-
-        <h2>如何过滤噪声？</h2>
-        <p>我们的规则：</p>
-        <ul>
-          <li>不允许用单一来源直接下结论</li>
-          <li>社区讨论只作为弱信号和反证</li>
-          <li>如果数据不足，必须明确写"不确定"或"待验证"</li>
-          <li>炒作风险高的论文会被扣分</li>
-          <li>不编造论文、数据、链接</li>
-        </ul>
-
-        <h2>GitHub 仓库</h2>
-        <p><a href="https://github.com/lohasle/frontier-theory-radar" target="_blank" rel="noopener noreferrer">https://github.com/lohasle/frontier-theory-radar</a></p>
-      </div>
-    </div>
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html"><span class="brand-dot"></span><span>论文价值发现系统</span></a>
+    <button class="navbar-toggle" aria-label="menu">☰</button>
+    <ul class="navbar-links">
+      <li><a data-page="index" href="index.html">首页</a></li>
+      <li><a data-page="daily" href="daily.html">日报</a></li>
+      <li><a data-page="papers" href="papers.html">论文库</a></li>
+      <li><a data-page="trends" href="trends.html">趋势雷达</a></li>
+      <li><a data-page="long-tail" href="long-tail.html">长尾库</a></li>
+      <li><a data-page="insights" href="insights.html">启发</a></li>
+      <li><a data-page="sources" href="sources.html">数据源</a></li>
+      <li><a data-page="about" href="about.html">关于</a></li>
+    </ul>
   </div>
-
-  <footer class="footer">
-    <p>前沿理论驱动技术雷达日报 · <a href="https://github.com/lohasle/frontier-theory-radar" target="_blank" rel="noopener noreferrer">GitHub 仓库</a></p>
-  </footer>
-  <script src="assets/app.js"></script>
+</nav>
+  <main class="container"><div id="about-root"></div></main>
+  <footer class="footer">前沿理论驱动技术雷达日报 · GitHub Pages 工作台</footer>
 </body>
 </html>

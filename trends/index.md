@@ -1,7 +1,7 @@
 # 趋势雷达索引
 
-> 从前沿论文出发，跟踪长期技术演化
+> 只保留确有趋势价值、值得持续观察的方向。
 
-- [Agentic World Modeling](https://github.com/lohasle/frontier-theory-radar/blob/main/trends/agentic-world-modeling.md) — 阶段：上升
-- [Coding Agent](https://github.com/lohasle/frontier-theory-radar/blob/main/trends/coding-agent.md) — 阶段：主流化
-- [Context Engineering](https://github.com/lohasle/frontier-theory-radar/blob/main/trends/context-engineering.md) — 阶段：上升
+- [Agentic World Modeling](trends/agentic-world-modeling.md) · 上升 · 关联论文 3
+- [Coding Agent](trends/coding-agent.md) · 主流化 · 关联论文 6
+- [Context Engineering](trends/context-engineering.md) · 上升 · 关联论文 3

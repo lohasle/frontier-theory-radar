@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>论文详解 - 前沿理论驱动技术雷达</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>论文详情</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script defer src="assets/app.js"></script>
 </head>
 <body data-page="paper-detail">
   <nav class="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="navbar-brand">技术雷达</a>
-      <button class="navbar-toggle" aria-label="菜单">☰</button>
-      <ul class="navbar-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="daily.html">日报</a></li>
-        <li><a href="papers.html">论文库</a></li>
-        <li><a href="trends.html">趋势雷达</a></li>
-        <li><a href="insights.html">启发</a></li>
-        <li><a href="sources.html">数据源</a></li>
-        <li><a href="about.html">关于</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div id="paper-detail-content">
-      <div class="loading"><div class="loading-spinner"></div></div>
-    </div>
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html"><span class="brand-dot"></span><span>论文价值发现系统</span></a>
+    <button class="navbar-toggle" aria-label="menu">☰</button>
+    <ul class="navbar-links">
+      <li><a data-page="index" href="index.html">首页</a></li>
+      <li><a data-page="daily" href="daily.html">日报</a></li>
+      <li><a data-page="papers" href="papers.html">论文库</a></li>
+      <li><a data-page="trends" href="trends.html">趋势雷达</a></li>
+      <li><a data-page="long-tail" href="long-tail.html">长尾库</a></li>
+      <li><a data-page="insights" href="insights.html">启发</a></li>
+      <li><a data-page="sources" href="sources.html">数据源</a></li>
+      <li><a data-page="about" href="about.html">关于</a></li>
+    </ul>
   </div>
-
-  <footer class="footer">
-    <p>前沿理论驱动技术雷达日报 · <a href="https://github.com/lohasle/frontier-theory-radar" target="_blank" rel="noopener noreferrer">GitHub 仓库</a></p>
-  </footer>
-  <script src="assets/app.js"></script>
+</nav>
+  <main class="container"><div id="paper-detail-root"></div></main>
+  <footer class="footer">前沿理论驱动技术雷达日报 · GitHub Pages 工作台</footer>
 </body>
 </html>

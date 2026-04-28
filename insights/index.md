@@ -1,7 +1,9 @@
 # 启发索引
 
-> 从论文和工程实践中蒸馏的启发
+> 从论文中提炼可复用研究资产。
 
-- [工程机会](./engineering-opportunities.md)
-- [学习决策记录](./learning-decisions.md)
-- [系统设计模式与启发](./patterns.md)
+- [Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](../docs/paper-detail.html?id=long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling) · 即时价值 · 今天值得试：提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上…
+- [When Prompt Under-Specification Improves Code Correctness: An Exploratory Study of Prompt Wording and Structure Effects on LLM-Based Code Generation](../docs/paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation) · 长尾价值 · 值得先保存：聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未…
+- [Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters](../docs/paper-detail.html?id=case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters) · 即时价值 · 今天值得试：给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounte…
+- [Learning to Think from Multiple Thinkers](../docs/paper-detail.html?id=learning-to-think-from-multiple-thinkers) · 即时价值 · 今天值得试：研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。
+- [Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components](../docs/paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components) · 即时价值 · 今天值得试：以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到…

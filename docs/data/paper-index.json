@@ -1,26 +1,38 @@
 {
-  "updated_at": "2026-04-28T15:51:04.412373",
-  "total": 10,
+  "updated_at": "2026-04-28T16:40:05.618803",
+  "total": 11,
   "papers": [
     {
       "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
-      "url": "http://arxiv.org/abs/2604.24715v1",
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "score": 88.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "context-engineering",
-        "inference-serving"
+      "authors": [
+        "Parsa Ashrafi Fashi",
+        "Utkarsh Saxena",
+        "Mehdi Rezagholizadeh",
+        "Aref Jafari",
+        "Akash Haridas"
       ],
-      "tags": [
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24715v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24715v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Hybrid sequence models that combine efficient Transformer components with linear sequence modeling blocks are a promising alternative to pure Transformers, but most are still pretrained from scratch and therefore fail to reuse existing Transformer checkpoints. We study upcycling as a practical path to convert pretrained Transformer LLMs into hybrid architectures while preserving short-context quality and improving long-context capability. We call our solution \\emph{HyLo} (HYbrid LOng-context): a",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "keywords": [
         "memory",
         "evaluation",
         "inference"
       ],
-      "brief_cn": "上下文工程：Hybrid sequence models that combine efficient Transformer components with linear…",
+      "score": 88.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
@@ -31,30 +43,70 @@
           "url": "https://arxiv.org/pdf/2604.24715v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24715v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "llm_reason": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "matched_topics": [
+        "context-engineering",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 6.6,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
+      "value_type": "immediate",
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Hybrid sequence models that combine efficient Transformer components with line…",
+      "one_line_judgement": "今天值得试：提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling"
     },
     {
       "title": "When Prompt Under-Specification Improves Code Correctness: An Exploratory Study of Prompt Wording and Structure Effects on LLM-Based Code Generation",
-      "url": "http://arxiv.org/abs/2604.24712v1",
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "score": 83.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "coding-agent",
-        "llm-evaluation",
-        "context-engineering"
+      "authors": [
+        "Amal AKLI",
+        "Mike PAPADAKIS",
+        "Maxime CORDY",
+        "Yves Le TRAON"
       ],
-      "tags": [
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24712v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24712v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models are increasingly used for code generation, yet the correctness of their outputs depends not only on model capability but also on how tasks are specified. Prior studies demonstrate that small changes in natural language prompts, particularly under-specification can substantially reduce code correctness; however, these findings are largely based on minimal-specification benchmarks such as HumanEval and MBPP, where limited structural redundancy may exaggerate sensitivity. In t",
+      "categories": [
+        "cs.SE"
+      ],
+      "keywords": [
         "benchmark"
       ],
-      "brief_cn": "Coding Agent：Large language models are increasingly used for code generation, yet the correct…",
+      "score": 83.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
@@ -65,32 +117,76 @@
           "url": "https://arxiv.org/pdf/2604.24712v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24712v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "llm_reason": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "matched_topics": [
+        "coding-agent",
+        "llm-evaluation",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 2.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
+      "value_type": "long_tail",
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Coding Agent：Large language models are increasingly used for code generation, yet the corre…",
+      "one_line_judgement": "值得先保存：聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "聚焦提示词欠规格化对代码正确率的反直觉影响，能直接指导 coding-agent 的提示模板与评测流程；有明确实验设定，但外部可复现资产尚未明确。",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation"
     },
     {
       "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
-      "url": "http://arxiv.org/abs/2604.24710v1",
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "score": 80.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "llm-evaluation",
-        "security-governance",
-        "rag-knowledge"
+      "authors": [
+        "Aaryan Shah",
+        "Andrew Hines",
+        "Alexia Downs",
+        "Denis Bajet",
+        "Paulius Mui"
       ],
-      "tags": [
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24710v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24710v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Objective. Clinical AI documentation systems require evaluation methodologies that are clinically valid, economically viable, and sensitive to iterative changes. Methods requiring expert review per scoring instance are too slow and expensive for safe, iterative deployment. We present a case-specific, clinician-authored rubric methodology for clinical AI evaluation and examine whether LLM-generated rubrics can approximate clinician agreement. Materials and Methods. Twenty clinicians authored 1,64",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
         "agent",
         "evaluation",
         "RAG"
       ],
-      "brief_cn": "LLM 评测：Objective. Clinical AI documentation systems require evaluation methodologies th…",
+      "score": 80.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
@@ -101,27 +197,74 @@
           "url": "https://arxiv.org/pdf/2604.24710v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24710v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "llm_reason": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 5.85,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.8,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
+      "value_type": "immediate",
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Objective. Clinical AI documentation systems require evaluation methodologies …",
+      "one_line_judgement": "今天值得试：给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounte…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "给出临床场景 case-specific rubric 与 LLM-Clinician 一致性验证框架，样本量较大（823 encounters），对高风险行业的评测治理落地价值高。",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters"
     },
     {
       "title": "Learning to Think from Multiple Thinkers",
-      "url": "http://arxiv.org/abs/2604.24737v1",
-      "source": "arXiv",
+      "authors": [
+        "Nirmit Joshi",
+        "Roey Magen",
+        "Nathan Srebro",
+        "Nikolaos Tsilivis",
+        "Gal Vardi"
+      ],
       "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24737v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We study learning with Chain-of-Thought (CoT) supervision from multiple thinkers, all of whom provide correct but possibly systematically different solutions, e.g., step-by-step solutions to math problems written by different thinkers, or step-by-step execution traces of different programs solving the same problem. We consider classes that are computationally easy to learn using CoT supervision from a single thinker, but hard to learn with only end-result supervision, i.e., without CoT (Joshi et",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CC",
+        "stat.ML"
+      ],
+      "keywords": [],
       "score": 78.0,
       "decision": "轻量试点",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "ai-agent",
-        "llm-evaluation"
-      ],
-      "tags": [],
-      "brief_cn": "AI Agent：We study learning with Chain-of-Thought (CoT) supervision from multiple thinkers…",
       "links": [
         {
           "label": "arXiv",
@@ -132,29 +275,76 @@
           "url": "https://arxiv.org/pdf/2604.24737v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "llm_reason": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "learning-to-think-from-multiple-thinkers",
+      "value_type": "immediate",
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：We study learning with Chain-of-Thought (CoT) supervision from multiple thinke…",
+      "one_line_judgement": "今天值得试：研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=learning-to-think-from-multiple-thinkers"
     },
     {
       "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
-      "url": "http://arxiv.org/abs/2604.24758v1",
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "score": 74.0,
-      "decision": "轻量试点",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "coding-agent",
-        "llm-evaluation"
+      "authors": [
+        "Griffin Pitts",
+        "Muntasir Hoq",
+        "Peter Brusilovsky",
+        "Narges Norouzi",
+        "Arto Hellas"
       ],
-      "tags": [
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24758v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Adaptive programming practice often relies on fixed libraries of worked examples and practice problems, which require substantial authoring effort and may not correspond well to the logical errors and partial solutions students produce while writing code. As a result, students may receive learning content that does not directly address the concepts they are working to understand, while instructors must either invest additional effort in expanding content libraries or accept a coarse level of per",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "keywords": [
         "evaluation"
       ],
-      "brief_cn": "Coding Agent：Adaptive programming practice often relies on fixed libraries of worked examples…",
+      "score": 74.0,
+      "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
@@ -165,29 +355,71 @@
           "url": "https://arxiv.org/pdf/2604.24758v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "llm_reason": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+      "matched_topics": [
+        "coding-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
+      "value_type": "immediate",
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：Adaptive programming practice often relies on fixed libraries of worked exampl…",
+      "one_line_judgement": "今天值得试：以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "以学生代码模式为知识组件生成个性化 worked examples，适合 coding tutor/agent 场景；应用价值明确，但通用到企业代码助手的证据仍有限。",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components"
     },
     {
       "title": "SpecRLBench: A Benchmark for Generalization in Specification-Guided Reinforcement Learning",
-      "url": "http://arxiv.org/abs/2604.24729v1",
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "score": 43.8,
-      "decision": "暂时忽略",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "llm-evaluation"
+      "authors": [
+        "Zijian Guo",
+        "İlker Işık",
+        "H. M. Sabbir Ahmad",
+        "Wenchao Li"
       ],
-      "tags": [
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24729v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24729v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Specification-guided reinforcement learning (RL) provides a principled framework for encoding complex, temporally extended tasks using formal specifications such as linear temporal logic (LTL). While recent methods have shown promising results, their ability to generalize across unseen specifications and diverse environments remains insufficiently understood. In this work, we introduce SpecRLBench, a benchmark designed to evaluate the generalization capabilities of LTL-based specification-guided",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
         "evaluation",
         "benchmark"
       ],
-      "brief_cn": "LLM 评测：Specification-guided reinforcement learning (RL) provides a principled framework…",
+      "score": 40.1,
+      "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
@@ -198,29 +430,69 @@
           "url": "https://arxiv.org/pdf/2604.24729v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24729v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning",
+      "value_type": "ignore",
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：Specification-guided reinforcement learning (RL) provides a principled framewo…",
+      "one_line_judgement": "当前可忽略：LLM 评测：Specification-guided reinforcement learning (RL) provides a pri…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：Specification-guided reinforcement learning (RL) provides a principled framewo…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning"
     },
     {
       "title": "Sentiment and Emotion Classification of Indonesian E-Commerce Reviews via Multi-Task BiLSTM and AutoML Benchmarking",
-      "url": "http://arxiv.org/abs/2604.24720v1",
-      "source": "arXiv",
-      "published": "2026-04-27",
-      "score": 41.5,
-      "decision": "暂时忽略",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [
-        "llm-evaluation"
+      "authors": [
+        "Hermawan Manurung",
+        "Ibrahim Al-Kahfi",
+        "Ahmad Rizqi",
+        "Martin Clinton Tosima Manullang"
       ],
-      "tags": [
+      "published": "2026-04-27",
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24720v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24720v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Indonesian marketplace reviews mix standard vocabulary with slang, regional loanwords, numeric shorthands, and emoji, making lexicon-based sentiment tools unreliable in practice. This paper describes a two-track classification pipeline applied to the PRDECT-ID dataset, which contains 5,400 product reviews from 29 Indonesian e-commerce categories, each labeled for binary sentiment (Positive/Negative) and five-class emotion (Happy, Sad, Fear, Love, Anger). The first track applies TF-IDF vectorizat",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
         "memory",
         "benchmark"
       ],
-      "brief_cn": "LLM 评测：Indonesian marketplace reviews mix standard vocabulary with slang, regional loan…",
+      "score": 35.8,
+      "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
@@ -231,24 +503,65 @@
           "url": "https://arxiv.org/pdf/2604.24720v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24720v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 2.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 5.45,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking",
+      "value_type": "ignore",
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：Indonesian marketplace reviews mix standard vocabulary with slang, regional lo…",
+      "one_line_judgement": "当前可忽略：LLM 评测：Indonesian marketplace reviews mix standard vocabulary with sla…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：Indonesian marketplace reviews mix standard vocabulary with slang, regional lo…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking"
     },
     {
       "title": "Learning to Rotate: Temporal and Semantic Rotary Encoding for Sequential Modeling",
-      "url": "http://arxiv.org/abs/2604.24717v1",
-      "source": "arXiv",
+      "authors": [
+        "Hailing Cheng",
+        "Daqi Sun",
+        "Xinyu Lu"
+      ],
       "published": "2026-04-27",
-      "score": 38.1,
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24717v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24717v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Every Transformer architecture dedicates enormous capacity to learning rich representations in semantic embedding space -- yet the rotation manifold acted upon by Rotary Positional Embeddings (RoPE) has been treated as a fixed, hand-crafted structure, populated only by discrete ordinal indices. We argue that this rotation space is a largely overlooked second dimension of expressivity in the attention mechanism, one whose systematic exploration may open a new door for attention-based architecture",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 31.6,
       "decision": "暂时忽略",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [],
-      "tags": [],
-      "brief_cn": "前沿研究：Every Transformer architecture dedicates enormous capacity to learning rich repr…",
       "links": [
         {
           "label": "arXiv",
@@ -259,24 +572,60 @@
           "url": "https://arxiv.org/pdf/2604.24717v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24717v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling",
+      "value_type": "ignore",
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Every Transformer architecture dedicates enormous capacity to learning rich re…",
+      "one_line_judgement": "当前可忽略：前沿论文：Every Transformer architecture dedicates enormous capacity to lea…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Every Transformer architecture dedicates enormous capacity to learning rich re…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling"
     },
     {
       "title": "The Optimal Sample Complexity of Multiclass and List Learning",
-      "url": "http://arxiv.org/abs/2604.24749v1",
-      "source": "arXiv",
+      "authors": [
+        "Chirag Pabbaraju"
+      ],
       "published": "2026-04-27",
-      "score": 37.6,
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24749v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24749v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "While the optimal sample complexity of binary classification in terms of the VC dimension is well-established, determining the optimal sample complexity of multiclass classification has remained open. The appropriate complexity parameter for multiclass classification is the DS dimension, and despite significant efforts, a gap of $\\sqrt{\\text{DS}}$ has persisted between the upper and lower bounds on sample complexity. Recent work by Hanneke et al. (2026) shows a novel algebraic characterization o",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 29.3,
       "decision": "暂时忽略",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [],
-      "tags": [],
-      "brief_cn": "前沿研究：While the optimal sample complexity of binary classification in terms of the VC …",
       "links": [
         {
           "label": "arXiv",
@@ -287,24 +636,59 @@
           "url": "https://arxiv.org/pdf/2604.24749v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24749v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": ""
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "the-optimal-sample-complexity-of-multiclass-and-list-learning",
+      "value_type": "ignore",
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：While the optimal sample complexity of binary classification in terms of the V…",
+      "one_line_judgement": "当前可忽略：前沿论文：While the optimal sample complexity of binary classification in t…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：While the optimal sample complexity of binary classification in terms of the V…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=the-optimal-sample-complexity-of-multiclass-and-list-learning"
     },
     {
       "title": "Conflict-Aware Harmonized Rotational Gradient for Multiscale Kinetic Regimes",
-      "url": "http://arxiv.org/abs/2604.24745v1",
-      "source": "arXiv",
+      "authors": [
+        "Zhangyong Liang"
+      ],
       "published": "2026-04-27",
-      "score": 36.9,
+      "updated": "2026-04-27",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2604.24745v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24745v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In this paper, we propose a harmonized rotational gradient method, termed HRGrad, for simultaneously tackling multiscale time-dependent kinetic problems with varying small parameters. These parameters exhibit asymptotic transitions from microscopic to macroscopic physics, making it a challenging multi-task problem to solve over all ranges simultaneously. Solving tasks in different asymptotic regions often encounter gradient conflicts, which can lead to the failure of multi-task learning. To addr",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 29.2,
       "decision": "暂时忽略",
-      "has_code": false,
-      "has_benchmark": false,
-      "topics": [],
-      "tags": [],
-      "brief_cn": "前沿研究：In this paper, we propose a harmonized rotational gradient method, termed HRGrad…",
       "links": [
         {
           "label": "arXiv",
@@ -315,11 +699,101 @@
           "url": "https://arxiv.org/pdf/2604.24745v1"
         }
       ],
-      "pdf_url": "https://arxiv.org/pdf/2604.24745v1",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "id": "conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes",
+      "value_type": "ignore",
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：In this paper, we propose a harmonized rotational gradient method, termed HRGr…",
+      "one_line_judgement": "当前可忽略：前沿论文：In this paper, we propose a harmonized rotational gradient method…",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：In this paper, we propose a harmonized rotational gradient method, termed HRGr…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes"
+    },
+    {
+      "id": "agentic-world-modeling",
+      "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+      "authors": [
+        "待核验"
+      ],
+      "source": "arXiv",
+      "published": "2026-04-28",
+      "url": "https://arxiv.org/abs/2604.22748",
+      "pdf_url": "https://arxiv.org/pdf/2604.22748",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
-      "benchmark_url": ""
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "从世界状态建模、执行前预测、失败修正和行动规划视角梳理 Agentic World Modeling 的基础、能力边界与未来方向。",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agentic world modeling",
+        "world model",
+        "ai agent"
+      ],
+      "score": 86,
+      "decision": "重点学习",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 8.2,
+        "relevance": 8.5,
+        "evidence_strength": 6.4,
+        "engineering_testability": 5.8,
+        "trend_signal": 8.7,
+        "long_tail_potential": 8.0,
+        "actionability": 6.6,
+        "noise_risk": 2.5
+      },
+      "trend_status": "rising",
+      "brief_cn": "AI Agent：把执行前预测、状态模拟与失败修正纳入 Agent 世界模型框架，适合纳入趋势观察。",
+      "one_line_judgement": "值得继续观察：它可能把 Agent 从“会调用工具”推进到“会预测后果与修正执行”。",
+      "first_seen_date": "2026-04-28",
+      "first_deep_dive_daily": "2026-04-28",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "上升",
+      "future_trigger": "出现开源实现 / benchmark / 多篇跟进论文 / 工程博客共振",
+      "long_tail_summary": "值得作为趋势锚点长期保存，尤其适用于 Agent 规划、状态建模与执行修正研究。",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=agentic-world-modeling",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.22748"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2604.22748"
+        }
+      ]
     }
   ]
 }
