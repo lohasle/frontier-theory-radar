@@ -120,14 +120,34 @@ function initMobileMenu() {
 // ===== Index Page Rendering =====
 async function renderIndexPage() {
   const latest = await loadJSON('latest.json');
+  const papersData = await loadJSON('paper-index.json');
+  const trendsData = await loadJSON('trend-index.json');
   if (!latest) {
     showError('hero-data', '数据加载失败');
     showError('daily-list', '');
     return;
   }
 
-  // Core judgment card
   const dd = latest.latest_daily;
+
+  // KPI cards
+  const kpiEl = document.getElementById('kpi-grid');
+  if (kpiEl) {
+    const reports = latest.recent_dailies || [];
+    const latestDate = dd?.date ? formatDate(dd.date) : '--';
+    const paperCount = Array.isArray(papersData?.papers) ? papersData.papers.length : 0;
+    const trendCount = Array.isArray(trendsData?.trends) ? trendsData.trends.length : 0;
+    const focusCount = reports.filter(r => (r.decision || '').includes('重点')).length;
+    const focusRatio = reports.length ? `${Math.round((focusCount / reports.length) * 100)}%` : '--';
+    kpiEl.innerHTML = `
+      <div class="kpi-card"><div class="kpi-label">最新日报</div><div class="kpi-value">${latestDate}</div></div>
+      <div class="kpi-card"><div class="kpi-label">论文总数</div><div class="kpi-value">${paperCount}</div></div>
+      <div class="kpi-card"><div class="kpi-label">趋势主题</div><div class="kpi-value">${trendCount}</div></div>
+      <div class="kpi-card"><div class="kpi-label">重点学习占比</div><div class="kpi-value">${focusRatio}</div></div>
+    `;
+  }
+
+  // Core judgment card
   const coreEl = document.getElementById('core-judgment');
   if (coreEl && dd) {
     const dec = dd.decision || '待定';
@@ -170,10 +190,10 @@ async function renderIndexPage() {
     const trends = await loadJSON('trend-index.json');
     if (trends && trends.trends) {
       const stages = {
-        '萌芽': { icon: '🌱', items: [] },
-        '上升': { icon: '📈', items: [] },
-        '主流化': { icon: '✅', items: [] },
-        '过热': { icon: '🔥', items: [] },
+        '萌芽': { icon: 'M1', items: [] },
+        '上升': { icon: 'R2', items: [] },
+        '主流化': { icon: 'S3', items: [] },
+        '过热': { icon: 'H4', items: [] },
       };
       trends.trends.forEach(t => {
         const s = t.stage || '萌芽';
@@ -236,7 +256,7 @@ async function renderDailyPage() {
         <div class="daily-card-date">${formatDate(d.date)}</div>
         <div class="daily-card-paper"><a href="${escapeHtml(d.deep_dive_url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(d.deep_dive_title || '待分析')}</a></div>
         <div class="badge-group">${renderBadge(dec, decisionBadgeClass(dec))}${d.topics ? renderBadge(d.topics, 'badge-trial') : ''}</div>
-        <div class="daily-card-insight">${escapeHtml(d.inspiration || '')}</div>
+        <div class="daily-card-insight">${escapeHtml(cleanInspiration(d.inspiration || '') || '—')}</div>
         <div class="daily-card-footer">
           <span class="card-meta">${formatDate(d.date)}</span>
           <a href="${escapeHtml(d.path || '#')}" class="btn btn-sm btn-outline" style="color:var(--primary-lighter);border-color:var(--border)">查看日报</a>
@@ -312,7 +332,7 @@ async function renderTrendsPage() {
 
   container.innerHTML = Object.entries(stages).map(([stage, items]) => `
     <div class="section">
-      <h2 class="section-title">${icons[stage] || '📊'} ${stage}</h2>
+      <h2 class="section-title">${icons[stage] || 'NA'} ${stage}</h2>
       <div class="grid grid-3">
         ${items.map(t => `
           <div class="card">
@@ -356,9 +376,9 @@ async function renderSourcesPage() {
 
   const container = document.getElementById('sources-content');
   const groups = [
-    { key: 'theory_sources', title: '📚 理论源头', desc: '负责理论发现' },
-    { key: 'engineering_sources', title: '🔧 工程验证源', desc: '负责工程证据验证' },
-    { key: 'community_sources', title: '💬 社区信号', desc: '弱信号和反证' },
+    { key: 'theory_sources', title: '理论源头', desc: '负责理论发现' },
+    { key: 'engineering_sources', title: '工程验证源', desc: '负责工程证据验证' },
+    { key: 'community_sources', title: '社区信号', desc: '弱信号和反证' },
   ];
 
   container.innerHTML = groups.map(g => {
