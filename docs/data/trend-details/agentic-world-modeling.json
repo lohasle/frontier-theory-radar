@@ -1,0 +1,76 @@
+{
+  "slug": "agentic-world-modeling",
+  "title": "Agentic World Modeling",
+  "stage": "上升",
+  "updated_at": "2026-04-28",
+  "key_insight": "[Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond](https://arxiv.org/abs/2604.22748)",
+  "paper_count": 3,
+  "practice_count": 0,
+  "path": "trend-detail.html?id=agentic-world-modeling",
+  "markdown_path": "trends/agentic-world-modeling.md",
+  "related_papers": [
+    {
+      "id": "agentic-world-modeling",
+      "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+      "detail_path": "paper-detail.html?id=agentic-world-modeling",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 86,
+      "decision": "重点学习",
+      "one_line_judgement": "值得继续观察：它可能把 Agent 从“会调用工具”推进到“会预测后果与修正执行”。",
+      "source": "arXiv",
+      "published": "2026-04-28",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "https://arxiv.org/abs/2604.22748",
+      "pdf_url": "https://arxiv.org/pdf/2604.22748"
+    },
+    {
+      "id": "learning-to-think-from-multiple-thinkers",
+      "title": "Learning to Think from Multiple Thinkers",
+      "detail_path": "paper-detail.html?id=learning-to-think-from-multiple-thinkers",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 78.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "今天值得试：研究多思维链监督下的学习可学性，理论上解释多风格推理示例的收益，能转化为多轨迹蒸馏/训练数据设计；但距生产系统仍有实现鸿沟。",
+      "source": "arXiv",
+      "published": "2026-04-27",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2604.24737v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.24737v1"
+    }
+  ],
+  "value_distribution": {
+    "immediate": 1,
+    "trend": 1,
+    "long_tail": 0,
+    "ignore": 0
+  },
+  "top_paper": {
+    "id": "agentic-world-modeling",
+    "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+    "detail_path": "paper-detail.html?id=agentic-world-modeling",
+    "score": 86,
+    "decision": "重点学习",
+    "value_type": "trend",
+    "value_type_label": "趋势价值",
+    "one_line_judgement": "值得继续观察：它可能把 Agent 从“会调用工具”推进到“会预测后果与修正执行”。"
+  },
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  },
+  "priority_topics": [
+    "ai-agent",
+    "multimodal-agent",
+    "context-engineering"
+  ],
+  "raw_markdown_html": "<h2>Agentic World Modeling</h2>\n<p>> 当前阶段：上升 | 最近更新：2026-04-28</p>\n<h3>核心问题</h3>\n<p>传统 AI Agent 依赖工具调用和即时反馈，缺乏对环境的内部建模能力。Agentic World Modeling 研究如何让 Agent 在行动前进行状态模拟、预测和失败预演，从而提升决策质量和系统可靠性。</p>\n<h3>代表论文</h3>\n<ul>\n<li><a href=\"https://arxiv.org/abs/2604.22748\" target=\"_blank\" rel=\"noopener noreferrer\">Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond</a></li>\n<li><a href=\"https://arxiv.org/abs/2402.02569\" target=\"_blank\" rel=\"noopener noreferrer\">World Models for Autonomous Agent Decision Making</a></li>\n</ul>\n<h3>工程实践</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>实践名称</td><td>类型</td><td>成熟度</td><td>价值</td></tr>\n<tr><td><a href=\"https://github.com/langchain-ai/langgraph\" target=\"_blank\" rel=\"noopener noreferrer\">LangGraph</a></td><td>开源框架</td><td>生产可用</td><td>高</td></tr>\n<tr><td><a href=\"https://github.com/microsoft/autogen\" target=\"_blank\" rel=\"noopener noreferrer\">AutoGen</a></td><td>开源框架</td><td>实验阶段</td><td>高</td></tr>\n<tr><td><a href=\"https://github.com/crewAIInc/crewAI\" target=\"_blank\" rel=\"noopener noreferrer\">CrewAI</a></td><td>开源框架</td><td>早期</td><td>中</td></tr>\n</tbody></table></div>\n<h3>关键启发</h3>\n<p>1. <strong>Agent 下一阶段不是更多工具，而是执行前预测</strong></p>\n<p>2. <strong>状态模拟是关键基础设施</strong></p>\n<p>3. <strong>失败归因比成功更重要</strong></p>\n<p>4. <strong>工具权限边界需要动态调整</strong></p>\n<h3>演化时间线</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>时间</td><td>事件</td><td>影响</td></tr>\n<tr><td>2024 Q1</td><td>早期 World Model 论文出现</td><td>理论奠基</td></tr>\n<tr><td>2024 Q3</td><td>LangGraph 发布 Stateful Agent</td><td>工程探索</td></tr>\n<tr><td>2025 Q1</td><td>多篇 Agentic World Model 论文</td><td>理论升温</td></tr>\n<tr><td>2025 Q4</td><td>OpenAI o1 展示推理能力</td><td>能力验证</td></tr>\n<tr><td>2026 Q1</td><td>企业开始探索预测性 Agent</td><td>上升阶段</td></tr>\n</tbody></table></div>\n<h3>相关趋势</h3>\n<ul>\n<li><a href=\"trend-detail.html?id=context-engineering\" target=\"_blank\" rel=\"noopener noreferrer\">Context Engineering</a> — 上下文管理是 World Model 的信息基础</li>\n<li><a href=\"trend-detail.html?id=coding-agent\" target=\"_blank\" rel=\"noopener noreferrer\">Coding Agent</a> — Coding Agent 是 World Model 最佳落地场景之一</li>\n</ul>\n<p>> 最近更新：2026-04-28</p>"
+}

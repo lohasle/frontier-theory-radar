@@ -75,40 +75,53 @@ def markdown_to_simple_html(md_text):
     html_lines = []
     in_list = False
     in_table = False
+
+    def render_inline(text):
+        text = re.sub(r'\]\(\./([a-z0-9-]+)\.md\)', r'](trend-detail.html?id=\1)', text)
+        text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', text)
+        text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
+        return text
+
     for line in md_text.split('\n'):
+        if line.strip() == '---':
+            if in_list:
+                html_lines.append('</ul>'); in_list = False
+            if in_table:
+                html_lines.append('</tbody></table></div>'); in_table = False
+            continue
         if line.startswith('# '):
             if in_list:
                 html_lines.append('</ul>'); in_list = False
             if in_table:
                 html_lines.append('</tbody></table></div>'); in_table = False
-            html_lines.append(f'<h2>{line[2:]}</h2>')
+            html_lines.append(f'<h2>{render_inline(line[2:])}</h2>')
         elif line.startswith('## '):
             if in_list:
                 html_lines.append('</ul>'); in_list = False
             if in_table:
                 html_lines.append('</tbody></table></div>'); in_table = False
-            html_lines.append(f'<h3>{line[3:]}</h3>')
+            html_lines.append(f'<h3>{render_inline(line[3:])}</h3>')
         elif line.startswith('### '):
             if in_list:
                 html_lines.append('</ul>'); in_list = False
             if in_table:
                 html_lines.append('</tbody></table></div>'); in_table = False
-            html_lines.append(f'<h4>{line[4:]}</h4>')
+            html_lines.append(f'<h4>{render_inline(line[4:])}</h4>')
         elif line.startswith('- '):
             if in_table:
                 html_lines.append('</tbody></table></div>'); in_table = False
             if not in_list:
                 html_lines.append('<ul>'); in_list = True
-            text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', line[2:])
-            text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
-            html_lines.append(f'<li>{text}</li>')
+            html_lines.append(f'<li>{render_inline(line[2:])}</li>')
         elif line.strip().startswith('|') and '---' not in line:
             if in_list:
                 html_lines.append('</ul>'); in_list = False
             if not in_table:
                 html_lines.append('<div class="table-wrapper"><table><tbody>'); in_table = True
-            cells = [c.strip() for c in line.split('|')[1:-1]]
+            cells = [render_inline(c.strip()) for c in line.split('|')[1:-1]]
             html_lines.append('<tr>' + ''.join(f'<td>{c}</td>' for c in cells) + '</tr>')
+        elif line.strip().startswith('|') and set(line.replace('|', '').replace('-', '').strip()) == set():
+            continue
         elif line.strip() == '':
             if in_list:
                 html_lines.append('</ul>'); in_list = False
@@ -117,9 +130,7 @@ def markdown_to_simple_html(md_text):
                 html_lines.append('</ul>'); in_list = False
             if in_table:
                 html_lines.append('</tbody></table></div>'); in_table = False
-            text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', line)
-            text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
-            html_lines.append(f'<p>{text}</p>')
+            html_lines.append(f'<p>{render_inline(line)}</p>')
     if in_list:
         html_lines.append('</ul>')
     if in_table:
@@ -219,7 +230,7 @@ def build_paper_details(papers, long_tail_items, trends):
             'references': p.get('links', []),
             'detail_path': p.get('detail_path', ''),
             'daily_path': f"daily-detail.html?date={p.get('first_deep_dive_daily','')}" if p.get('first_deep_dive_daily') else '',
-            'trend_paths': [f"trends/{slug}.md" for slug in related_trends],
+            'trend_paths': [f"trend-detail.html?id={slug}" for slug in related_trends],
             'long_tail_path': 'long-tail.html',
             'mermaid': {'value_discovery': MERMAID_VALUE_DISCOVERY, 'evidence': MERMAID_EVIDENCE, 'actions': MERMAID_ACTIONS}
         }
@@ -312,12 +323,86 @@ def build_daily_details(papers_by_id):
     save_json('daily-details.json', aggregate)
 
 
+def build_trend_details(trends, papers_by_id):
+    aggregate = {'updated_at': datetime.now().isoformat(), 'trends': {}}
+    paper_list = list(papers_by_id.values())
+    for trend in trends:
+        slug = trend['slug']
+        related_papers = [p for p in paper_list if slug in (p.get('trend_relation', {}).get('related_trends') or [])]
+        detail = {
+            'slug': slug,
+            'title': trend['title'],
+            'stage': trend.get('stage', '待定'),
+            'updated_at': trend.get('updated_at', ''),
+            'key_insight': trend.get('key_insight', ''),
+            'paper_count': trend.get('paper_count', 0),
+            'practice_count': trend.get('practice_count', 0),
+            'path': trend.get('path', f'trend-detail.html?id={slug}'),
+            'markdown_path': trend.get('markdown_path', f'trends/{slug}.md'),
+            'related_papers': [
+                {
+                    'id': p['id'],
+                    'title': p['title'],
+                    'detail_path': p.get('detail_path', ''),
+                    'value_type': p.get('value_type', ''),
+                    'value_type_label': p.get('value_type_label', ''),
+                    'score': p.get('score', 0),
+                    'decision': p.get('decision', ''),
+                    'one_line_judgement': p.get('one_line_judgement', ''),
+                    'source': p.get('source', ''),
+                    'published': p.get('published', ''),
+                    'brief_cn': p.get('brief_cn', ''),
+                    'code_url': p.get('code_url', ''),
+                    'benchmark_url': p.get('benchmark_url', ''),
+                    'paperswithcode_url': p.get('paperswithcode_url', ''),
+                    'url': p.get('url', ''),
+                    'pdf_url': p.get('pdf_url', ''),
+                }
+                for p in sorted(related_papers, key=lambda item: item.get('score', 0), reverse=True)
+            ],
+            'value_distribution': {
+                'immediate': sum(1 for p in related_papers if p.get('value_type') == 'immediate'),
+                'trend': sum(1 for p in related_papers if p.get('value_type') == 'trend'),
+                'long_tail': sum(1 for p in related_papers if p.get('value_type') == 'long_tail'),
+                'ignore': sum(1 for p in related_papers if p.get('value_type') == 'ignore'),
+            },
+            'top_paper': next(({
+                'id': p['id'],
+                'title': p['title'],
+                'detail_path': p.get('detail_path', ''),
+                'score': p.get('score', 0),
+                'decision': p.get('decision', ''),
+                'value_type': p.get('value_type', ''),
+                'value_type_label': p.get('value_type_label', ''),
+                'one_line_judgement': p.get('one_line_judgement', ''),
+            } for p in sorted(related_papers, key=lambda item: item.get('score', 0), reverse=True)), None),
+            'mermaid': {
+                'value_discovery': MERMAID_VALUE_DISCOVERY,
+                'evidence': MERMAID_EVIDENCE,
+                'actions': MERMAID_ACTIONS,
+            },
+        }
+        markdown_path = Path(PROJECT_ROOT) / 'trends' / f'{slug}.md'
+        if markdown_path.exists():
+            raw = markdown_path.read_text(encoding='utf-8')
+            meta, body = parse_front_matter(raw)
+            detail['priority_topics'] = meta.get('priority_topics', [])
+            detail['raw_markdown_html'] = markdown_to_simple_html(body)
+        else:
+            detail['priority_topics'] = []
+            detail['raw_markdown_html'] = '<p>暂无趋势详情。</p>'
+        save_json(f'trend-details/{slug}.json', detail)
+        aggregate['trends'][slug] = detail
+    save_json('trend-details.json', aggregate)
+
+
 def main():
     papers = load_json('paper-index.json', 'papers')
     long_tail_items = load_json('long-tail-index.json', 'items')
     trends = load_json('trend-index.json', 'trends')
     papers_by_id = build_paper_details(papers, long_tail_items, trends)
     build_daily_details(papers_by_id)
+    build_trend_details(trends, papers_by_id)
     print('[build] Pages 数据构建完成！')
     return 0
 
