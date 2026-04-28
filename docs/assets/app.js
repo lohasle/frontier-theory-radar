@@ -95,6 +95,18 @@ function showEmpty(containerId, msg) {
   if (el) el.innerHTML = `<div class="empty-state"><p>${escapeHtml(msg || '暂无数据')}</p></div>`;
 }
 
+function q(name) {
+  return new URLSearchParams(window.location.search).get(name) || '';
+}
+
+function dailyDetailLink(date) {
+  return `daily-detail.html?date=${encodeURIComponent(date || '')}`;
+}
+
+function paperDetailLink(url) {
+  return `paper-detail.html?url=${encodeURIComponent(url || '')}`;
+}
+
 // ===== Navigation Active State =====
 function setActiveNav() {
   const path = window.location.pathname;
@@ -231,7 +243,7 @@ async function renderIndexPage() {
             <div class="daily-card-insight">${escapeHtml(cleanInspiration(d.inspiration || '') || '—')}</div>
             <div class="daily-card-footer">
               <span></span>
-              <a href="${escapeHtml(d.path || '#')}" class="btn btn-sm btn-outline" style="color:var(--primary-lighter);border-color:var(--border)">查看日报</a>
+              <a href="${dailyDetailLink(d.date)}" class="btn btn-sm btn-outline" style="color:var(--primary-lighter);border-color:var(--border)">查看日报</a>
             </div>
           </div>`;
       }).join('');
@@ -259,7 +271,7 @@ async function renderDailyPage() {
         <div class="daily-card-insight">${escapeHtml(cleanInspiration(d.inspiration || '') || '—')}</div>
         <div class="daily-card-footer">
           <span class="card-meta">${formatDate(d.date)}</span>
-          <a href="${escapeHtml(d.path || '#')}" class="btn btn-sm btn-outline" style="color:var(--primary-lighter);border-color:var(--border)">查看日报</a>
+          <a href="${dailyDetailLink(d.date)}" class="btn btn-sm btn-outline" style="color:var(--primary-lighter);border-color:var(--border)">查看日报</a>
         </div>
       </div>`;
   }).join('');
@@ -294,7 +306,7 @@ async function renderPapersPage() {
     const hasCode = p.has_code || p.code_url ? '✅' : '—';
     const hasBench = p.has_benchmark || p.benchmark_url ? '✅' : '—';
     return `<tr data-decision="${escapeHtml(dec)}" data-source="${escapeHtml(p.source || '')}" data-score="${p.score || 0}" data-code="${(p.has_code || p.code_url) ? 'yes' : 'no'}" data-benchmark="${(p.has_benchmark || p.benchmark_url) ? 'yes' : 'no'}">
-      <td><a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title || '未知')}</a></td>
+      <td><a href="${paperDetailLink(p.url)}">${escapeHtml(p.title || '未知')}</a></td>
       <td class="paper-brief">${escapeHtml(p.brief_cn || '暂无概述')}</td>
       <td><div class="topic-chip-group">${topicBadges}${keywordBadges}</div></td>
       <td>${formatDate(p.published)}</td>
@@ -447,6 +459,78 @@ function applyFilters(containerId, itemSelector) {
   });
 }
 
+async function renderDailyDetailPage() {
+  const date = q('date');
+  if (!date) return showError('daily-detail-content', '缺少 date 参数');
+  const data = await loadJSON('daily-details.json');
+  const detail = data?.dailies?.[date];
+  if (!detail) return showError('daily-detail-content', `未找到 ${date} 的日报详情`);
+
+  const rows = (detail.paper_table || []).map(p => `
+    <tr>
+      <td><a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title || '')}</a></td>
+      <td>${escapeHtml(p.source || '')}</td>
+      <td>${escapeHtml(p.direction || '')}</td>
+      <td class="num">${escapeHtml(p.score || '')}</td>
+      <td>${renderBadge(p.decision || '待定', decisionBadgeClass(p.decision || ''))}</td>
+    </tr>`).join('');
+
+  const refs = (detail.references || []).map(r => `<li><a href="${escapeHtml(r.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.label || r.url || '')}</a></li>`).join('');
+
+  document.getElementById('daily-detail-content').innerHTML = `
+    <div class="page-header">
+      <h1>日报详情 · ${escapeHtml(date)}</h1>
+      <p>结论：${renderBadge(detail.decision || '待定', decisionBadgeClass(detail.decision || ''))}</p>
+    </div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">深挖论文</div>
+      <div><a href="${escapeHtml(detail.deep_dive?.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(detail.deep_dive?.title || '待分析')}</a></div>
+    </div>
+    <div class="table-wrapper" style="margin-bottom:12px">
+      <table>
+        <thead><tr><th>论文</th><th>来源</th><th>方向</th><th>分数</th><th>判断</th></tr></thead>
+        <tbody>${rows || '<tr><td colspan="5">暂无</td></tr>'}</tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">引用与延伸阅读</div>
+      <ul>${refs || '<li>暂无</li>'}</ul>
+    </div>
+  `;
+}
+
+async function renderPaperDetailPage() {
+  const url = q('url');
+  if (!url) return showError('paper-detail-content', '缺少 url 参数');
+  const data = await loadJSON('paper-index.json');
+  const p = (data?.papers || []).find(x => (x.url || '') === url);
+  if (!p) return showError('paper-detail-content', '未找到该论文');
+
+  const topicBadges = (p.topics || []).map(t => `<span class="topic-chip">${escapeHtml(t)}</span>`).join('');
+  const tagBadges = (p.tags || []).map(t => `<span class="topic-chip topic-chip-light">${escapeHtml(t)}</span>`).join('');
+
+  document.getElementById('paper-detail-content').innerHTML = `
+    <div class="page-header">
+      <h1>论文详解</h1>
+      <p>${renderBadge(p.decision || '待定', decisionBadgeClass(p.decision || ''))} · 分数 ${escapeHtml(String(p.score || 0))}</p>
+    </div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">${escapeHtml(p.title || '')}</div>
+      <div class="card-meta">${formatDate(p.published)} · ${escapeHtml(p.source || '')}</div>
+      <p class="card-desc">${escapeHtml(p.brief_cn || '暂无概述')}</p>
+      <div class="badge-group">${topicBadges}${tagBadges}</div>
+    </div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-title">链接</div>
+      <div>${renderPaperLinks(p.links || [])}</div>
+    </div>
+    <div class="card">
+      <div class="card-title">原文入口</div>
+      <a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.url || '')}</a>
+    </div>
+  `;
+}
+
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
   setActiveNav();
@@ -456,7 +540,9 @@ document.addEventListener('DOMContentLoaded', () => {
   switch (page) {
     case 'index': renderIndexPage(); break;
     case 'daily': renderDailyPage(); break;
+    case 'daily-detail': renderDailyDetailPage(); break;
     case 'papers': renderPapersPage(); break;
+    case 'paper-detail': renderPaperDetailPage(); break;
     case 'trends': renderTrendsPage(); break;
     case 'insights': renderInsightsPage(); break;
     case 'sources': renderSourcesPage(); break;
