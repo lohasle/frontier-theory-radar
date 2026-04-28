@@ -58,6 +58,14 @@ function renderBadge(text, cls) {
   return `<span class="badge ${cls}">${escapeHtml(text)}</span>`;
 }
 
+function cleanInspiration(text) {
+  if (!text) return '';
+  return text
+    .replace(/^>\s*研究范式：.*$/m, '')
+    .replace(/论文\s*→\s*理论\s*→\s*工程实践\s*→\s*趋势\s*→\s*启发\s*→\s*行动/g, '')
+    .trim();
+}
+
 function renderPaperLinks(links) {
   if (!links || !links.length) return '<span style="color:var(--text-muted);font-size:12px">暂无</span>';
   const linkMap = {
@@ -127,7 +135,7 @@ async function renderIndexPage() {
     coreEl.innerHTML = `
       <div class="card">
         <div class="section-header">
-          <h2 class="section-title">🎯 今日核心判断</h2>
+          <h2 class="section-title">今日核心判断</h2>
           ${renderBadge(dec, decClass)}
         </div>
         <div class="card-meta">日期：${formatDate(dd.date)}</div>
@@ -143,12 +151,12 @@ async function renderIndexPage() {
   const chainEl = document.getElementById('chain-vis');
   if (chainEl) {
     const steps = [
-      { icon: '📄', label: '论文', desc: '前沿论文发现' },
-      { icon: '🧠', label: '理论', desc: '核心理论提取' },
-      { icon: '🔧', label: '工程', desc: '实践验证搜索' },
-      { icon: '📈', label: '趋势', desc: '阶段判断' },
-      { icon: '💡', label: '启发', desc: '蒸馏洞察' },
-      { icon: '🚀', label: '行动', desc: '执行建议' },
+      { icon: '1', label: '论文', desc: '前沿论文发现' },
+      { icon: '2', label: '理论', desc: '核心理论提取' },
+      { icon: '3', label: '工程', desc: '实践验证搜索' },
+      { icon: '4', label: '趋势', desc: '阶段判断' },
+      { icon: '5', label: '启发', desc: '蒸馏洞察' },
+      { icon: '6', label: '行动', desc: '执行建议' },
     ];
     chainEl.innerHTML = steps.map((s, i) => {
       const arrow = i < steps.length - 1 ? '<span class="chain-arrow">→</span>' : '';
@@ -200,7 +208,7 @@ async function renderIndexPage() {
             <div class="daily-card-date">${formatDate(d.date)}</div>
             <div class="daily-card-paper"><a href="${escapeHtml(d.deep_dive_url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(d.deep_dive_title || '待分析')}</a></div>
             <div class="badge-group">${renderBadge(dec, decisionBadgeClass(dec))}${d.topics ? renderBadge(d.topics, 'badge-trial') : ''}</div>
-            <div class="daily-card-insight">${escapeHtml(d.inspiration || '')}</div>
+            <div class="daily-card-insight">${escapeHtml(cleanInspiration(d.inspiration || '') || '—')}</div>
             <div class="daily-card-footer">
               <span></span>
               <a href="${escapeHtml(d.path || '#')}" class="btn btn-sm btn-outline" style="color:var(--primary-lighter);border-color:var(--border)">查看日报</a>
@@ -300,7 +308,7 @@ async function renderTrendsPage() {
   });
 
   const container = document.getElementById('trends-content');
-  const icons = { '萌芽': '🌱', '上升': '📈', '主流化': '✅', '过热': '🔥', '噪声': '❓' };
+  const icons = { '萌芽': 'M1', '上升': 'R2', '主流化': 'S3', '过热': 'H4', '噪声': 'N5' };
 
   container.innerHTML = Object.entries(stages).map(([stage, items]) => `
     <div class="section">

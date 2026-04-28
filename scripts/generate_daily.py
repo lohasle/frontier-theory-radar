@@ -179,7 +179,7 @@ source: [arXiv, OpenReview, HuggingFace, PapersWithCode, GitHub]
 
 # 前沿理论驱动技术雷达日报 - {target_date}
 
-> 研究范式：论文 → 理论 → 工程实践 → 趋势 → 启发 → 行动
+> 今日焦点：从论文信号提炼可执行技术判断。
 > ⚠️ **注意：这是初始化样例，后续运行会替换为真实数据。**
 
 ---
