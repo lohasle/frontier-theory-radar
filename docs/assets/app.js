@@ -162,8 +162,8 @@ async function renderIndexPage() {
       <div class="kpi-card"><div class="kpi-number">${escapeHtml(data.value_distribution?.ignore ?? 0)}</div><div class="kpi-label">暂时忽略</div></div>
     </section>`;
 
-  sections += `<section class="section homepage-balanced-grid">
-      <div class="card homepage-primary-card">
+  sections += `<section class="section">
+      <div class="card homepage-row-card">
         <div class="section-title"><span class="section-icon">🎯</span>今日核心判断</div>
         <div class="card-title" style="margin-top:14px"><a href="${escapeHtml(top.detail_path || '#')}">${escapeHtml(top.title || '待补充')}</a></div>
         <div class="badge-group" style="margin-bottom:10px">
@@ -177,27 +177,27 @@ async function renderIndexPage() {
           <li><strong>查看入口：</strong><a href="${escapeHtml(latest.path || 'daily.html')}">打开今日日报</a></li>
         </ul>
       </div>
-      <div class="homepage-side-stack">
-        <div class="card">
-          <div class="section-header"><h2 class="section-title"><span class="section-icon">📄</span>今日深挖论文</h2></div>
-          <div class="card-title"><a href="${escapeHtml(top.detail_path || '#')}">${escapeHtml(top.title || '待补充')}</a></div>
-          <div class="card-meta">${escapeHtml(formatDate(top.published))} · ${escapeHtml(top.source || '')} · 分数 ${escapeHtml(top.score || 0)}</div>
-          <p>${escapeHtml(top.brief_cn || top.one_line_judgement || '')}</p>
-          <div class="badge-group" style="margin-bottom:12px">${renderTopicChips(top.matched_topics)}</div>
-          ${renderPaperLinks(top)}
-        </div>
-        ${topPapers.length ? `<div class="card"><div class="section-header"><h2 class="section-title"><span class="section-icon">⚡</span>高优先级候选</h2></div><div class="list-stack">${topPapers.map(topPaperCard).join('')}</div></div>` : ''}
-      </div>
     </section>`;
 
-  sections += `<section class="section homepage-dual-grid">
-      <div>
-        ${longTail.length ? `<div class="section-header"><h2 class="section-title"><span class="section-icon">🧳</span>今日长尾保存</h2><span class="muted">${longTail.length} 篇</span></div><div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>为什么保存</th><th>未来触发条件</th><th>可沉淀资产</th></tr></thead><tbody>${longTail.map(longTailRow).join('')}</tbody></table></div>` : ''}
-      </div>
-      <div>
-        ${trendCards ? `<div class="section-header"><h2 class="section-title"><span class="section-icon">📈</span>趋势雷达概览</h2><a href="trends.html">查看全部</a></div><div class="grid grid-1">${trendCards}</div>` : ''}
-      </div>
-    </section>`;
+  sections += `<section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">📄</span>今日深挖论文</h2></div><div class="card homepage-row-card">
+        <div class="card-title"><a href="${escapeHtml(top.detail_path || '#')}">${escapeHtml(top.title || '待补充')}</a></div>
+        <div class="card-meta">${escapeHtml(formatDate(top.published))} · ${escapeHtml(top.source || '')} · 分数 ${escapeHtml(top.score || 0)}</div>
+        <p>${escapeHtml(top.brief_cn || top.one_line_judgement || '')}</p>
+        <div class="badge-group" style="margin-bottom:12px">${renderTopicChips(top.matched_topics)}</div>
+        ${renderPaperLinks(top)}
+      </div></section>`;
+
+  if (topPapers.length) {
+    sections += `<section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">⚡</span>高优先级候选</h2></div><div class="grid grid-3">${topPapers.map(topPaperCard).join('')}</div></section>`;
+  }
+
+  if (longTail.length) {
+    sections += `<section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">🧳</span>今日长尾保存</h2><span class="muted">${longTail.length} 篇</span></div><div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>为什么保存</th><th>未来触发条件</th><th>可沉淀资产</th></tr></thead><tbody>${longTail.map(longTailRow).join('')}</tbody></table></div></section>`;
+  }
+
+  if (trendCards) {
+    sections += `<section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">📈</span>趋势雷达概览</h2><a href="trends.html">查看全部</a></div><div class="grid grid-2">${trendCards}</div></section>`;
+  }
 
   sections += `<section class="section">
       <div class="section-header"><h2 class="section-title"><span class="section-icon">📚</span>最近日报</h2><a href="daily.html">查看全部</a></div>
