@@ -1,0 +1,152 @@
+# 前沿理论驱动技术雷达 - 评分模型
+# 用于对论文进行打分和分类
+
+positive_scores:
+  theory_novelty:
+    name: "理论新意"
+    weight: 15
+    range: [0, 10]
+    description: "论文提出的新假设、新方法、新范式的创新程度"
+
+  problem_importance:
+    name: "问题重要性"
+    weight: 15
+    range: [0, 10]
+    description: "解决的问题是否是领域内的核心或关键问题"
+
+  engineering_impact:
+    name: "工程影响力"
+    weight: 15
+    range: [0, 10]
+    description: "对系统架构、开发流程、AI Agent 设计等工程实践的潜在影响"
+
+  engineering_potential:
+    name: "工程外溢价值"
+    weight: 10
+    range: [0, 10]
+    description: "能否映射到真实系统问题，是否有工程机会"
+
+  evidence_strength:
+    name: "证据强度"
+    weight: 10
+    range: [0, 10]
+    description: "实验证据、理论证明、代码复现的充分性"
+
+  source_quality:
+    name: "来源质量"
+    weight: 5
+    range: [0, 10]
+    description: "arXiv / 顶会 / 顶刊 / 知名机构等来源可信度"
+
+  reproducibility:
+    name: "可复现性"
+    weight: 10
+    range: [0, 10]
+    description: "是否有代码、数据集、详细实验设置"
+
+  personal_relevance:
+    name: "对资深架构师的相关性"
+    weight: 10
+    range: [0, 10]
+    description: "与 AI Agent、平台工程、系统设计等方向的相关性"
+
+  long_term_value:
+    name: "长期学习复利"
+    weight: 10
+    range: [0, 10]
+    description: "6-12 个月后是否仍有学习价值"
+
+negative_scores:
+  hype_risk:
+    name: "炒作风险"
+    weight: -10
+    range: [0, 10]
+    description: "标题党、过度宣传、缺乏实质内容的可能性"
+
+  weak_evidence_penalty:
+    name: "证据不足惩罚"
+    weight: -8
+    range: [0, 10]
+    description: "缺乏实验验证、代码或复现路径"
+
+  low_relevance_penalty:
+    name: "与主线弱相关惩罚"
+    weight: -5
+    range: [0, 10]
+    description: "与当前重点研究方向关联度低"
+
+decision_rules:
+  focus:
+    name: "重点学习"
+    min_score: 80
+    color: "#22c55e"
+    description: "值得精读论文、本地复现、纳入技术雷达"
+
+  trial:
+    name: "轻量试点"
+    min_score: 65
+    max_score: 79
+    color: "#3b82f6"
+    description: "值得花 2 小时了解和实践"
+
+  watch:
+    name: "持续观察"
+    min_score: 50
+    max_score: 64
+    color: "#eab308"
+    description: "保持关注，等待更多证据"
+
+  ignore:
+    name: "暂时忽略"
+    max_score: 49
+    color: "#94a3b8"
+    description: "当前不值得投入时间"
+
+trend_stages:
+  - id: "emerging"
+    name: "萌芽"
+    color: "#8b5cf6"
+    description: "理论刚出现，工程实践几乎没有"
+
+  - id: "rising"
+    name: "上升"
+    color: "#3b82f6"
+    description: "理论开始被多个团队验证，开源项目出现"
+
+  - id: "mainstream"
+    name: "主流化"
+    color: "#22c55e"
+    description: "理论已被广泛采纳，生产环境验证"
+
+  - id: "overheated"
+    name: "过热"
+    color: "#ef4444"
+    description: "过度关注，实际价值可能低于预期"
+
+  - id: "noise"
+    name: "噪声"
+    color: "#94a3b8"
+    description: "伪创新或过时概念重新包装"
+
+keyword_boost:
+  high_boost:
+    - "agent"
+    - "agentic"
+    - "world model"
+    - "context engineering"
+    - "memory"
+    - "coding agent"
+    - "evaluation"
+    - "benchmark"
+  medium_boost:
+    - "RAG"
+    - "retrieval"
+    - "inference"
+    - "optimization"
+    - "multimodal"
+    - "safety"
+    - "alignment"
+  low_boost:
+    - "dataset"
+    - "visualization"
+    - "survey"

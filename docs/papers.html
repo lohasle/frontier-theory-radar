@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>论文库 - 前沿理论驱动技术雷达</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="papers">
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">📡 技术雷达</a>
+      <button class="navbar-toggle" aria-label="菜单">☰</button>
+      <ul class="navbar-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="daily.html">日报</a></li>
+        <li><a href="papers.html">论文库</a></li>
+        <li><a href="trends.html">趋势雷达</a></li>
+        <li><a href="insights.html">启发</a></li>
+        <li><a href="sources.html">数据源</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>📚 论文库</h1>
+      <p>沉淀所有被筛选、评分、判断过的论文，是整个系统的证据链中心。</p>
+    </div>
+
+    <div class="filter-bar">
+      <select data-filter="decision">
+        <option value="">全部判断</option>
+        <option value="重点学习">重点学习</option>
+        <option value="轻量试点">轻量试点</option>
+        <option value="持续观察">持续观察</option>
+        <option value="暂时忽略">暂时忽略</option>
+      </select>
+      <select data-filter="source">
+        <option value="">全部来源</option>
+        <option value="arXiv">arXiv</option>
+        <option value="OpenReview">OpenReview</option>
+      </select>
+    </div>
+
+    <div id="papers-content">
+      <div class="loading"><div class="loading-spinner"></div></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>前沿理论驱动技术雷达日报 · <a href="https://github.com/lohasle/frontier-theory-radar" target="_blank" rel="noopener noreferrer">GitHub 仓库</a></p>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

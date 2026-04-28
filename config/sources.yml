@@ -1,0 +1,161 @@
+# 前沿理论驱动技术雷达 - 固定数据源配置
+# 所有数据源必须在此声明，不允许随意更换信息源
+
+theory_sources:
+  arxiv:
+    name: "arXiv"
+    type: "theory_primary"
+    url: "http://export.arxiv.org/api/query"
+    categories:
+      - cs.AI
+      - cs.CL
+      - cs.LG
+      - cs.SE
+      - cs.IR
+      - cs.MA
+      - cs.RO
+      - cs.CV
+      - cs.DC
+      - cs.DB
+      - cs.CR
+      - stat.ML
+    max_results: 50
+    update_frequency: "daily"
+    status: "active"
+    notes: "主源头，负责理论发现"
+
+  openreview:
+    name: "OpenReview"
+    type: "theory_primary"
+    url: "https://api.openreview.net"
+    venues:
+      - ICLR
+      - ICML
+      - NeurIPS
+      - ACL
+      - CVPR
+    update_frequency: "daily"
+    status: "pending"
+    notes: "主源头，负责会议论文跟踪"
+
+  huggingface_papers:
+    name: "Hugging Face Daily Papers"
+    type: "theory_auxiliary"
+    url: "https://huggingface.co/papers"
+    update_frequency: "daily"
+    status: "pending"
+    notes: "辅助排序信号，社区关注度"
+
+  papers_with_code:
+    name: "Papers with Code"
+    type: "theory_auxiliary"
+    url: "https://paperswithcode.com/api/v1"
+    update_frequency: "daily"
+    status: "pending"
+    notes: "代码、Benchmark、Leaderboard 验证"
+
+engineering_sources:
+  github_search:
+    name: "GitHub Search"
+    type: "engineering_primary"
+    url: "https://api.github.com/search"
+    update_frequency: "daily"
+    status: "pending"
+    notes: "工程实践验证"
+
+  github_trending:
+    name: "GitHub Trending"
+    type: "engineering_primary"
+    url: "https://github.com/trending"
+    update_frequency: "daily"
+    status: "pending"
+    notes: "社区热度参考"
+
+  github_topics:
+    name: "GitHub Topics"
+    type: "engineering_primary"
+    url: "https://github.com/topics"
+    update_frequency: "weekly"
+    status: "pending"
+    notes: "主题追踪"
+
+  engineering_blogs:
+    name: "大厂 Engineering Blog"
+    type: "engineering_verification"
+    sources:
+      - name: "Google AI Blog"
+        url: "https://ai.googleblog.com"
+      - name: "Meta AI Blog"
+        url: "https://ai.meta.com/blog"
+      - name: "OpenAI Blog"
+        url: "https://openai.com/blog"
+      - name: "Anthropic Blog"
+        url: "https://www.anthropic.com/research"
+      - name: "Netflix TechBlog"
+        url: "https://netflixtechblog.com"
+      - name: "Uber Engineering"
+        url: "https://eng.uber.com"
+    update_frequency: "weekly"
+    status: "pending"
+    notes: "生产实践验证"
+
+  cncf:
+    name: "CNCF"
+    type: "engineering_verification"
+    url: "https://www.cncf.io"
+    update_frequency: "weekly"
+    status: "pending"
+    notes: "云原生技术趋势"
+
+  thoughtworks_radar:
+    name: "Thoughtworks Technology Radar"
+    type: "engineering_verification"
+    url: "https://www.thoughtworks.com/radar"
+    update_frequency: "quarterly"
+    status: "pending"
+    notes: "技术趋势判断参考"
+
+  infoq:
+    name: "InfoQ"
+    type: "engineering_verification"
+    url: "https://www.infoq.com"
+    update_frequency: "weekly"
+    status: "pending"
+    notes: "技术趋势参考"
+
+community_sources:
+  hackernews:
+    name: "Hacker News"
+    type: "community_weak_signal"
+    url: "https://hacker-news.firebaseio.com/v0"
+    update_frequency: "daily"
+    status: "pending"
+    notes: "弱信号和反证，不作为主判断"
+
+  reddit:
+    name: "Reddit"
+    type: "community_weak_signal"
+    subreddits:
+      - MachineLearning
+      - artificial
+      - LocalLLaMA
+      - codingAI
+    update_frequency: "daily"
+    status: "pending"
+    notes: "弱信号和反证"
+
+  x_twitter:
+    name: "X (Twitter)"
+    type: "community_weak_signal"
+    update_frequency: "daily"
+    status: "pending"
+    notes: "弱信号和反证"
+
+rules:
+  - "arXiv / OpenReview 负责理论源头"
+  - "Hugging Face 负责辅助排序"
+  - "Papers with Code / GitHub 负责工程证据"
+  - "工程博客负责生产实践验证"
+  - "社区讨论只作为弱信号和反证，不作为主判断依据"
+  - "不允许用单一来源直接下结论"
+  - "如果数据不足，必须明确写'不确定'或'待验证'"

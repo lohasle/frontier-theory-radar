@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前沿理论驱动技术雷达日报</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">📡 技术雷达</a>
+      <button class="navbar-toggle" aria-label="菜单">☰</button>
+      <ul class="navbar-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="daily.html">日报</a></li>
+        <li><a href="papers.html">论文库</a></li>
+        <li><a href="trends.html">趋势雷达</a></li>
+        <li><a href="insights.html">启发</a></li>
+        <li><a href="sources.html">数据源</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero -->
+    <div class="hero">
+      <h1>📡 前沿理论驱动技术雷达日报</h1>
+      <div class="subtitle">从前沿论文出发，用工程实践验证，用架构思维蒸馏，最终形成可执行的技术判断。</div>
+      <div class="chain">论文 → 理论 → 工程实践 → 趋势 → 启发 → 行动</div>
+      <div class="hero-buttons">
+        <a href="daily.html" class="btn btn-primary">📊 今日日报</a>
+        <a href="papers.html" class="btn btn-outline">📚 论文库</a>
+        <a href="trends.html" class="btn btn-outline">🎯 趋势雷达</a>
+      </div>
+    </div>
+
+    <!-- Core Judgment -->
+    <div class="section" id="core-judgment">
+      <div class="loading"><div class="loading-spinner"></div></div>
+    </div>
+
+    <!-- Research Chain -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">🔗 研究链路</h2>
+      </div>
+      <div class="card">
+        <div class="chain-vis" id="chain-vis"></div>
+      </div>
+    </div>
+
+    <!-- Radar Overview -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">🎯 技术雷达概览</h2>
+        <a href="trends.html" class="section-link">查看全部 →</a>
+      </div>
+      <div class="radar-grid" id="radar-overview">
+        <div class="loading"><div class="loading-spinner"></div></div>
+      </div>
+    </div>
+
+    <!-- Recent Dailies -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">📰 最近日报</h2>
+        <a href="daily.html" class="section-link">查看全部 →</a>
+      </div>
+      <div class="grid grid-2" id="daily-list">
+        <div class="loading"><div class="loading-spinner"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>前沿理论驱动技术雷达日报 · 论文 → 理论 → 工程实践 → 趋势 → 启发 → 行动</p>
+    <p><a href="https://github.com/lohasle/frontier-theory-radar" target="_blank" rel="noopener noreferrer">GitHub 仓库</a></p>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
