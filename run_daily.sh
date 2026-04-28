@@ -4,7 +4,7 @@
 # 用法: ./run_daily.sh [YYYY-MM-DD]
 # ============================================================
 
-set -e
+set -euo pipefail
 
 TARGET_DATE=${1:-$(date +%Y-%m-%d)}
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -27,7 +27,39 @@ echo ""
 echo "[2/7] 抓取论文..."
 python3 scripts/fetch_papers.py "$TARGET_DATE" || {
   echo "[error] 论文抓取失败，生成占位数据"
-  python3 scripts/fetch_papers.py "$TARGET_DATE"
+  YEAR=${TARGET_DATE:0:4}
+  PAPERS_PATH="papers/$YEAR/$TARGET_DATE-papers.json"
+  mkdir -p "papers/$YEAR"
+  cat > "$PAPERS_PATH" << EOF
+{
+  "date": "$TARGET_DATE",
+  "source_status": "fetch_failed",
+  "notes": "自动抓取失败，已生成占位数据；后续可重跑 run_daily.sh 覆盖",
+  "papers": [
+    {
+      "title": "[占位] 抓取失败，请后续重试",
+      "authors": [],
+      "published": "$TARGET_DATE",
+      "updated": "$TARGET_DATE",
+      "source": "placeholder",
+      "url": "",
+      "pdf_url": "",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "抓取失败占位条目，防止日报为空。",
+      "categories": [],
+      "keywords": [],
+      "score": 0,
+      "decision": "持续观察",
+      "links": []
+    }
+  ]
+}
+EOF
+  echo "[fallback] 已生成占位论文文件: $PAPERS_PATH"
 }
 
 # 3. 打分

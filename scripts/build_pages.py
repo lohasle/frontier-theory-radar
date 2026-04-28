@@ -185,7 +185,7 @@ def markdown_to_simple_html(md_text):
         elif line.startswith("- "):
             # 处理链接
             text = line[2:]
-            text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank">\1</a>', text)
+            text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', text)
             html_lines.append(f"<li>{text}</li>")
         elif line.startswith("| ") and "---" not in line:
             cells = [c.strip() for c in line.split("|")[1:-1]]
