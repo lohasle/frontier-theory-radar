@@ -293,7 +293,7 @@ async function renderPapersPage() {
     const keywordBadges = tags.slice(0, 2).map(t => `<span class="topic-chip topic-chip-light">${escapeHtml(t)}</span>`).join('');
     const hasCode = p.has_code || p.code_url ? '✅' : '—';
     const hasBench = p.has_benchmark || p.benchmark_url ? '✅' : '—';
-    return `<tr data-decision="${escapeHtml(dec)}" data-source="${escapeHtml(p.source || '')}" data-score="${p.score || 0}">
+    return `<tr data-decision="${escapeHtml(dec)}" data-source="${escapeHtml(p.source || '')}" data-score="${p.score || 0}" data-code="${(p.has_code || p.code_url) ? 'yes' : 'no'}" data-benchmark="${(p.has_benchmark || p.benchmark_url) ? 'yes' : 'no'}">
       <td><a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title || '未知')}</a></td>
       <td class="paper-brief">${escapeHtml(p.brief_cn || '暂无概述')}</td>
       <td><div class="topic-chip-group">${topicBadges}${keywordBadges}</div></td>
@@ -425,11 +425,24 @@ function applyFilters(containerId, itemSelector) {
 
   const decisionFilter = filterBar.querySelector('[data-filter="decision"]')?.value || '';
   const sourceFilter = filterBar.querySelector('[data-filter="source"]')?.value || '';
+  const scoreFilter = filterBar.querySelector('[data-filter="score"]')?.value || '';
+  const codeFilter = filterBar.querySelector('[data-filter="code"]')?.value || '';
+  const benchmarkFilter = filterBar.querySelector('[data-filter="benchmark"]')?.value || '';
 
   items.forEach(item => {
     let show = true;
+    const score = Number(item.dataset.score || 0);
     if (decisionFilter && !item.dataset.decision?.includes(decisionFilter)) show = false;
     if (sourceFilter && item.dataset.source !== sourceFilter) show = false;
+
+    if (scoreFilter === '80+' && score < 80) show = false;
+    if (scoreFilter === '65-79' && (score < 65 || score > 79.99)) show = false;
+    if (scoreFilter === '50-64' && (score < 50 || score > 64.99)) show = false;
+    if (scoreFilter === '<50' && score >= 50) show = false;
+
+    if (codeFilter && item.dataset.code !== codeFilter) show = false;
+    if (benchmarkFilter && item.dataset.benchmark !== benchmarkFilter) show = false;
+
     item.style.display = show ? '' : 'none';
   });
 }
