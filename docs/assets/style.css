@@ -87,6 +87,16 @@ tr:hover td{background:#fdfaff}
 .paper-link.disabled{background:#f8fafc;color:#94a3b8;pointer-events:none}
 .daily-card-insight,.highlight-box,.mermaid-shell,.callout{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
 .daily-card-insight,.highlight-box,.callout{padding:16px}
+.daily-row-list{gap:14px}
+.daily-row-card{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:18px;align-items:start}
+.daily-row-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.daily-row-date{font-size:13px;font-weight:800;color:var(--primary-dark)}
+.daily-row-title{margin-bottom:8px}
+.daily-row-meta{font-size:13px;margin-bottom:12px}
+.daily-row-insight{padding:14px 16px}
+.daily-row-side{display:grid;gap:10px;padding-left:4px}
+.daily-row-action-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.daily-row-action{font-size:14px;color:var(--text)}
 .list-stack{display:grid;gap:12px}
 .item-row{padding:14px 0;border-bottom:1px solid #f1e8ff}.item-row:last-child{border-bottom:none}
 .mermaid-shell{padding:16px;background:linear-gradient(180deg,#fff,#fcfaff)}
@@ -101,7 +111,7 @@ tr:hover td{background:#fdfaff}
 .note-list{margin:0;padding-left:18px}
 .note-list li{margin:8px 0}
 @media (max-width: 900px){
-  .kpi-grid,.grid-2,.grid-3,.columns-2{grid-template-columns:1fr}
+  .kpi-grid,.grid-2,.grid-3,.columns-2,.daily-row-card{grid-template-columns:1fr}
   .hero h1{font-size:30px}
   .navbar-toggle{display:block}
   .navbar-links{display:none;position:absolute;left:0;right:0;top:68px;background:#fff;border-bottom:1px solid var(--border);padding:12px 24px;flex-direction:column}

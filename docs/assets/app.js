@@ -91,17 +91,26 @@ function renderTopicChips(topics, light = false) {
   return maybeArray(topics).map(t => `<span class="topic-chip ${light ? 'topic-chip-light' : ''}">${escapeHtml(t)}</span>`).join('');
 }
 
-function renderDailySummaryCard(item) {
-  return `<div class="card">
-    <div class="card-meta">${escapeHtml(item.date || '')}</div>
-    <div class="card-title"><a href="${escapeHtml(item.path || '#')}">${escapeHtml(item.deep_dive_title || '待分析')}</a></div>
-    <div class="badge-group" style="margin-bottom:10px">
-      ${renderBadge(item.value_type_label || valueTypeLabels[item.value_type] || '待定', badgeClass(item.value_type))}
-      ${renderBadge(item.decision || '待定', badgeClass(item.decision))}
+function renderDailySummaryRow(item) {
+  return `<article class="card daily-row-card">
+    <div class="daily-row-main">
+      <div class="daily-row-topline">
+        <span class="daily-row-date">${escapeHtml(item.date || '')}</span>
+        <div class="badge-group">
+          ${renderBadge(item.value_type_label || valueTypeLabels[item.value_type] || '待定', badgeClass(item.value_type))}
+          ${renderBadge(item.decision || '待定', badgeClass(item.decision))}
+        </div>
+      </div>
+      <div class="card-title daily-row-title"><a href="${escapeHtml(item.path || '#')}">${escapeHtml(item.deep_dive_title || '待分析')}</a></div>
+      <div class="daily-row-meta muted">趋势方向：${escapeHtml(item.main_topic || item.trend_label || '待补充')} · 阶段：${escapeHtml(item.stage_label || item.stage || '待补充')} · 分数：${escapeHtml(item.score || 0)}</div>
+      <div class="daily-card-insight daily-row-insight">${escapeHtml(item.one_line_judgement || '待补充价值判断')}</div>
     </div>
-    <div class="daily-card-insight">${escapeHtml(item.one_line_judgement || '待补充价值判断')}</div>
-    <div class="muted">建议动作：${escapeHtml(item.daily_action || '待补充')}</div>
-  </div>`;
+    <div class="daily-row-side">
+      <div class="muted daily-row-action-label">建议动作</div>
+      <div class="daily-row-action">${escapeHtml(item.daily_action || '待补充')}</div>
+      <a class="btn btn-secondary btn-sm" href="${escapeHtml(item.path || '#')}">查看日报</a>
+    </div>
+  </article>`;
 }
 
 function renderFilterBar(filters) {
@@ -218,10 +227,10 @@ async function renderDailyPage() {
   const reportsFiltered = reports.filter(item => (!selectedValue || item.value_type === selectedValue) && (!selectedDecision || item.decision === selectedDecision));
   const valueSelect = `<label>价值类型 <select id="daily-filter-value"><option value="">全部</option>${uniq(reports.map(r => r.value_type).filter(Boolean)).map(v => `<option value="${escapeHtml(v)}" ${v === selectedValue ? 'selected' : ''}>${escapeHtml(valueTypeLabels[v] || v)}</option>`).join('')}</select></label>`;
   const decisionSelect = `<label>判断 <select id="daily-filter-decision"><option value="">全部</option>${uniq(reports.map(r => r.decision).filter(Boolean)).map(v => `<option value="${escapeHtml(v)}" ${v === selectedDecision ? 'selected' : ''}>${escapeHtml(v)}</option>`).join('')}</select></label>`;
-  const html = `<div class="page-header"><h1>日报</h1><p>查看每日候选论文、价值类型分布、今日重点与长尾保存。</p></div>
+  const html = `<div class="page-header"><h1>日报</h1><p>按时间线查看每天的深挖论文、判断结论与可执行动作，采用按行展示避免信息块失衡。</p></div>
     ${renderFilterBar([valueSelect, decisionSelect])}
     ${renderResultMeta(reports.length, reportsFiltered.length, '支持按价值类型与判断快速筛选')}
-    <div class="grid grid-3">${reportsFiltered.map(renderDailySummaryCard).join('') || '<div class="card">没有匹配的日报</div>'}</div>`;
+    <div class="list-stack daily-row-list">${reportsFiltered.map(renderDailySummaryRow).join('') || '<div class="card">没有匹配的日报</div>'}</div>`;
   showState('daily-root', html);
   const apply = () => {
     const params = new URLSearchParams(window.location.search);
