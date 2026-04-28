@@ -22,6 +22,7 @@ PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
 TRENDS_DIR = os.path.join(PROJECT_ROOT, "trends")
 INSIGHTS_DIR = os.path.join(PROJECT_ROOT, "insights")
 DOCS_DATA_DIR = os.path.join(PROJECT_ROOT, "docs", "data")
+GITHUB_BLOB_BASE = "https://github.com/lohasle/frontier-theory-radar/blob/main"
 
 
 def load_daily_reports(max_count=30):
@@ -85,10 +86,32 @@ def load_daily_reports(max_count=30):
             "decision": decision or "待定",
             "topics": topics or "综合",
             "inspiration": inspiration or "待分析",
-            "path": f"daily/{date_str[:4]}/{date_str}.md"
+            "path": f"{GITHUB_BLOB_BASE}/daily/{date_str[:4]}/{date_str}.md"
         })
 
     return reports
+
+
+def make_cn_brief(title, topics, abstract=""):
+    """生成中文一句话概述"""
+    topic_map = {
+        "ai-agent": "AI Agent",
+        "coding-agent": "Coding Agent",
+        "context-engineering": "上下文工程",
+        "rag-knowledge": "RAG/知识系统",
+        "multimodal-agent": "多模态 Agent",
+        "llm-evaluation": "LLM 评测",
+        "inference-serving": "推理与服务",
+        "ai-k8s-platform": "AI 平台工程",
+        "data-engineering": "数据工程",
+        "security-governance": "安全与治理",
+    }
+    t = topics[0] if isinstance(topics, list) and topics else ""
+    domain = topic_map.get(t, "前沿研究")
+    if abstract:
+        brief = " ".join(abstract.strip().split())
+        return f"{domain}：{brief[:80]}{'…' if len(brief) > 80 else ''}"
+    return f"{domain}：该论文提出新方法，建议结合工程证据进一步验证。"
 
 
 def load_paper_index():
@@ -118,6 +141,12 @@ def load_paper_index():
                     "has_code": bool(p.get("code_url")),
                     "has_benchmark": bool(p.get("benchmark_url")),
                     "topics": p.get("matched_topics", []),
+                    "tags": p.get("keywords", [])[:5],
+                    "brief_cn": make_cn_brief(
+                        p.get("title", ""),
+                        p.get("matched_topics", []),
+                        p.get("abstract", "")
+                    ),
                     "links": p.get("links", []),
                     "pdf_url": p.get("pdf_url", ""),
                     "openreview_url": p.get("openreview_url", ""),
@@ -164,7 +193,7 @@ def load_trends():
             "title": title or slug,
             "slug": slug,
             "stage": stage,
-            "path": f"trends/{filename}"
+            "path": f"{GITHUB_BLOB_BASE}/trends/{filename}"
         })
 
     return trends
@@ -240,7 +269,7 @@ def update_insight_index_json():
         insights.append({
             "title": title or slug,
             "slug": slug,
-            "path": f"insights/{filename}"
+            "path": f"{GITHUB_BLOB_BASE}/insights/{filename}"
         })
 
     save_json("insight-index.json", {

@@ -251,19 +251,26 @@ async function renderPapersPage() {
   const container = document.getElementById('papers-content');
   const header = `<div class="table-wrapper"><table>
     <thead><tr>
-      <th>论文</th><th>日期</th><th>来源</th><th>方向</th><th style="text-align:right">分数</th><th>判断</th><th>代码</th><th>Benchmark</th><th>链接</th>
+      <th>论文</th><th>一句话概述</th><th>领域标签</th><th>日期</th><th>来源</th><th style="text-align:right">分数</th><th>判断</th><th>代码</th><th>Benchmark</th><th>链接</th>
     </tr></thead><tbody>`;
 
   const rows = data.papers.map(p => {
     const dec = p.decision || '待定';
-    const topics = Array.isArray(p.topics) ? p.topics.join(' / ') : (p.topics || '');
+    const topics = Array.isArray(p.topics) ? p.topics : [];
+    const tags = Array.isArray(p.tags) ? p.tags : [];
+    const topicBadges = (topics.length ? topics : ['未分类'])
+      .slice(0, 3)
+      .map(t => `<span class="topic-chip">${escapeHtml(t)}</span>`)
+      .join('');
+    const keywordBadges = tags.slice(0, 2).map(t => `<span class="topic-chip topic-chip-light">${escapeHtml(t)}</span>`).join('');
     const hasCode = p.has_code || p.code_url ? '✅' : '—';
     const hasBench = p.has_benchmark || p.benchmark_url ? '✅' : '—';
     return `<tr data-decision="${escapeHtml(dec)}" data-source="${escapeHtml(p.source || '')}" data-score="${p.score || 0}">
       <td><a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title || '未知')}</a></td>
+      <td class="paper-brief">${escapeHtml(p.brief_cn || '暂无概述')}</td>
+      <td><div class="topic-chip-group">${topicBadges}${keywordBadges}</div></td>
       <td>${formatDate(p.published)}</td>
       <td>${escapeHtml(p.source || '')}</td>
-      <td>${escapeHtml(topics)}</td>
       <td class="num">${p.score || 0}</td>
       <td>${renderBadge(dec, decisionBadgeClass(dec))}</td>
       <td>${hasCode}</td>
