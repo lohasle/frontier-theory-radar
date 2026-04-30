@@ -210,7 +210,7 @@ async function renderIndexPage() {
 
   sections += `<section class="section">
       <div class="section-header"><h2 class="section-title"><span class="section-icon">📚</span>最近日报</h2><a href="daily.html">查看全部</a></div>
-      <div class="grid grid-3">${recent.map(renderDailySummaryCard).join('') || '<div class="card">暂无日报</div>'}</div>
+      <div class="list-stack daily-row-list">${recent.map(renderDailySummaryRow).join('') || '<div class="card">暂无日报</div>'}</div>
     </section>`;
 
   showState('index-root', sections);
