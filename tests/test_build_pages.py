@@ -36,3 +36,14 @@ def test_markdown_to_simple_html_external_link_attrs():
     html = build_pages.markdown_to_simple_html(md)
     assert 'target="_blank"' in html
     assert 'rel="noopener noreferrer"' in html
+
+
+def test_markdown_to_simple_html_ignores_markdown_table_separator_row():
+    md = """| 列1 | 列2 |
+|---|---:|
+| A | B |
+"""
+    html = build_pages.markdown_to_simple_html(md)
+    assert '<p>|---|---:|</p>' not in html
+    assert html.count('<tr>') == 2
+    assert '|---|---:|' not in html

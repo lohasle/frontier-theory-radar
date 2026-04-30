@@ -75,6 +75,7 @@ def markdown_to_simple_html(md_text):
     html_lines = []
     in_list = False
     in_table = False
+    table_separator_re = re.compile(r'^\|(?:\s*:?-{3,}:?\s*\|)+\s*$')
 
     def render_inline(text):
         text = re.sub(r'\]\(\./([a-z0-9-]+)\.md\)', r'](trend-detail.html?id=\1)', text)
@@ -113,15 +114,15 @@ def markdown_to_simple_html(md_text):
             if not in_list:
                 html_lines.append('<ul>'); in_list = True
             html_lines.append(f'<li>{render_inline(line[2:])}</li>')
-        elif line.strip().startswith('|') and '---' not in line:
+        elif table_separator_re.match(line.strip()):
+            continue
+        elif line.strip().startswith('|'):
             if in_list:
                 html_lines.append('</ul>'); in_list = False
             if not in_table:
                 html_lines.append('<div class="table-wrapper"><table><tbody>'); in_table = True
             cells = [render_inline(c.strip()) for c in line.split('|')[1:-1]]
             html_lines.append('<tr>' + ''.join(f'<td>{c}</td>' for c in cells) + '</tr>')
-        elif line.strip().startswith('|') and set(line.replace('|', '').replace('-', '').strip()) == set():
-            continue
         elif line.strip() == '':
             if in_list:
                 html_lines.append('</ul>'); in_list = False
