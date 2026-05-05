@@ -1,0 +1,93 @@
+{
+  "date": "2026-05-06",
+  "model": "glm-5.1",
+  "generated_at": "2026-05-06T04:35:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "scores": [
+    {
+      "paper_index": 1,
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "arxiv_id": "2605.02888v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 9,
+        "trend_relevance": 9,
+        "actionability": 10
+      },
+      "weighted_total": 8.8,
+      "confidence": "high",
+      "one_line": "用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速",
+      "decision": "strong_accept",
+      "reasoning": "直接解决 LLM 部署核心瓶颈（推理延迟），实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。"
+    },
+    {
+      "paper_index": 4,
+      "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+      "arxiv_id": "2605.02868v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 9,
+        "trend_relevance": 8,
+        "actionability": 9
+      },
+      "weighted_total": 8.6,
+      "confidence": "high",
+      "one_line": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成",
+      "decision": "strong_accept",
+      "reasoning": "98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M，赚取 $2900 赏金。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接价值。"
+    },
+    {
+      "paper_index": 13,
+      "title": "Compress Then Adapt? No, Do It Together via Task-aware Union of Subspaces (JACTUS)",
+      "arxiv_id": "2605.02829v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 8,
+        "trend_relevance": 8,
+        "actionability": 8
+      },
+      "weighted_total": 8.0,
+      "confidence": "high",
+      "one_line": "将模型压缩与 PEFT 适配统一为联合优化，在 80% 参数预算下超越 100% PEFT 基线",
+      "decision": "accept",
+      "reasoning": "解决了一个工程痛点：先压缩再微调的流水线导致子空间不对齐。JACTUS 通过校准集估计输入/梯度协方差，构建任务感知的子空间并集进行投影低秩近似。ViT-Base 8 数据集 89.2%（超 DoRA 87.9%），Llama2-7B 80.9%（超 DoRA 79.7%）。对模型部署场景（边缘设备、多任务服务）有直接价值。"
+    },
+    {
+      "paper_index": 20,
+      "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+      "arxiv_id": "2605.02801v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 9,
+        "evidence_strength": 6,
+        "trend_relevance": 10,
+        "actionability": 6
+      },
+      "weighted_total": 7.6,
+      "confidence": "medium",
+      "one_line": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习",
+      "decision": "accept",
+      "reasoning": "综述/框架论文而非实验驱动，但提供了极有价值的概念框架：8 族奖励、8 级信用单元、5 个编排子决策。连接了 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的团队有架构设计参考价值。"
+    },
+    {
+      "paper_index": 16,
+      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+      "arxiv_id": "2605.02815v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 6,
+        "evidence_strength": 8,
+        "trend_relevance": 7,
+        "actionability": 8
+      },
+      "weighted_total": 7.4,
+      "confidence": "high",
+      "one_line": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线",
+      "decision": "accept",
+      "reasoning": "工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询，而非一次性检索 schema。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有直接参考价值。"
+    }
+  ]
+}

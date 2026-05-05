@@ -1,109 +1,118 @@
 {
-  "updated_at": "2026-04-29T04:24:59.269047",
+  "updated_at": "2026-05-06T04:36:31.090727",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-04-29",
-    "title": "论文价值发现日报 - 2026-04-29",
-    "deep_dive_title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
-    "deep_dive_url": "http://arxiv.org/abs/2604.24715v1",
-    "decision": "重点学习",
-    "value_type": "immediate",
-    "value_type_label": "即时价值",
-    "daily_action": "完成三件事：列出 HyLo 架构 PoC 指标、设计提示词规格 A/B 实验、起草 case-specific rubric 模板。",
-    "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验。",
-    "one_line_judgement": "它把长上下文升级从\"重训新模型\"转成\"复用现有资产做架构改造\"，最贴近团队近期可执行的工程路径。",
-    "path": "daily-detail.html?date=2026-04-29"
+    "date": "2026-05-06",
+    "title": "论文价值发现日报 - 2026-05-06",
+    "deep_dive_title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+    "deep_dive_url": "http://arxiv.org/abs/2605.02868v1",
+    "decision": "持续观察",
+    "value_type": "long_tail",
+    "value_type_label": "长尾价值",
+    "daily_action": "完成摘要精读与最小实验设计",
+    "max_uncertainty": "缺少多源工程证据",
+    "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
+    "path": "daily-detail.html?date=2026-05-06"
   },
   "top_paper": {
-    "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+    "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
     "authors": [
-      "Parsa Ashrafi Fashi",
-      "Utkarsh Saxena",
-      "Mehdi Rezagholizadeh",
-      "Aref Jafari",
-      "Akash Haridas"
+      "Ruichao Liang",
+      "Jing Chen",
+      "Xianglong Li",
+      "Huangpeng Gu",
+      "Yebo Feng",
+      "Yue Xue",
+      "Cong Wu",
+      "Yang Liu"
     ],
-    "published": "2026-04-27",
-    "updated": "2026-04-27",
-    "source": "arXiv",
-    "url": "http://arxiv.org/abs/2604.24715v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.24715v1",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "source": "arxiv",
+    "url": "http://arxiv.org/abs/2605.02868v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Hybrid sequence models that combine efficient Transformer components with linear sequence modeling blocks are a promising alternative to pure Transformers, but most are still pretrained from scratch and therefore fail to reuse existing Transformer checkpoints. We study upcycling as a practical path to convert pretrained Transformer LLMs into hybrid architectures while preserving short-context quality and improving long-context capability. We call our solution \\emph{HyLo} (HYbrid LOng-context): a",
+    "abstract": "Smart contract vulnerabilities in Decentralized Finance caused over billions of dollars losses every year, yet the security community faces a critical bottleneck: identifying a vulnerability is not the same as proving it is exploitable. Manual PoC construction is prohibitively labor-intensive, leaving most disclosed vulnerabilities unverified and protocols exposed long before mitigation is applied. In this paper, we propose \\sys, a knowledge-driven agentic system for end-to-end contract vulnerability detection and exploit synthesis. Our core insight is that exploit synthesis is not a code generation task but a \\emph{structured reasoning problem} that requires grounded knowledge of protocol semantics, failure root cause, and exploit primitives. \\sys organizes this knowledge into a \\emph{Hierarchical Knowledge Graph} (HKG) that serves as structured memory for LLM-guided multi-hop reasoning. To validate exploit feasibility beyond code synthesis, \\sys employs a two-stage validation framework that checks exploit-path reachability via SMT solving and profit realizability via asset-level state simulation, ensuring generated PoCs satisfy both logical and economic viability constraints. Evaluated on 88 real-world DeFi attacks and 72 audited projects (2,573 contracts), \\sys achieves 98\\% recall and 0.9 F1-score in detection, and a 96.6\\% exploit success rate (ESR), reproducing 85 historical exploits and recovering over \\$116.2M revenue. \\sys outperforms SOTA fuzzers (\\textsc{Verite}, \\textsc{ItyFuzz}) by up to $5\\times$ in ESR and $300\\times$ in recoverable value, and the LLM-based exploit generator \\textsc{A1} by $2\\times$ and $8.5\\times$ respectively. In bug bounty evaluation, \\sys identified 16 confirmed 0-day vulnerabilities, helping secure over \\$70.6M and earning \\$2,900 in bounties.",
     "categories": [
-      "cs.CL",
-      "cs.LG"
+      "cs.CR",
+      "cs.SE"
     ],
-    "keywords": [
-      "memory",
-      "evaluation",
-      "inference"
-    ],
-    "score": 89.0,
-    "decision": "重点学习",
-    "links": [
-      {
-        "label": "arXiv",
-        "url": "http://arxiv.org/abs/2604.24715v1"
-      },
-      {
-        "label": "PDF",
-        "url": "https://arxiv.org/pdf/2604.24715v1"
-      }
-    ],
-    "llm_reason": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
-    "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
-    "value_type": "immediate",
+    "keywords": [],
+    "score": 54.4,
+    "decision": "持续观察",
+    "links": [],
+    "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+    "value_type": "long_tail",
     "matched_topics": [
+      "ai-agent",
+      "coding-agent",
       "context-engineering",
-      "inference-serving"
+      "rag-knowledge",
+      "multimodal-agent",
+      "llm-evaluation",
+      "security-governance"
     ],
     "score_breakdown": {
-      "novelty": 6.6,
-      "problem_importance": 5.15,
-      "relevance": 5.0,
-      "evidence_strength": 4.5,
-      "engineering_testability": 4.05,
-      "trend_signal": 4.6,
-      "long_tail_potential": 3.5,
-      "asset_convertibility": 4.8,
+      "novelty": 4.8,
+      "problem_importance": 9.05,
+      "relevance": 10,
+      "evidence_strength": 5.4,
+      "engineering_testability": 4.6,
+      "trend_signal": 5.15,
+      "long_tail_potential": 4.15,
+      "asset_convertibility": 6.2,
       "actionability": 5.0,
       "noise_risk": 1.2,
-      "weak_evidence_penalty": 5.0,
-      "low_relevance_penalty": 3.6,
-      "engineering_cost_penalty": 4.0,
+      "weak_evidence_penalty": 4.0,
+      "low_relevance_penalty": 0,
+      "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
-    "trend_status": "emerging",
-    "brief_cn": "Context Engineering：Hybrid sequence models that combine efficient Transformer components with line…",
-    "one_line_judgement": "今天值得试：HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文…",
-    "first_seen_date": "2026-04-29",
-    "first_deep_dive_daily": "2026-04-29",
-    "value_type_label": "即时价值",
-    "trend_stage_label": "萌芽",
-    "future_trigger": "待更多证据",
-    "long_tail_summary": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上",
+    "trend_status": "long_tail_watch",
+    "brief_cn": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+    "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
+    "first_seen_date": "2026-05-06",
+    "first_deep_dive_daily": "2026-05-06",
+    "value_type_label": "长尾价值",
+    "trend_stage_label": "长尾观察",
+    "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+    "long_tail_summary": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
     "related_trends": [
+      "agentic-world-modeling",
+      "coding-agent",
       "context-engineering"
     ],
-    "detail_path": "paper-detail.html?id=long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling"
+    "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs"
   },
-  "paper_count": 11,
-  "daily_count": 2,
+  "paper_count": 36,
+  "daily_count": 3,
   "trend_count": 3,
-  "long_tail_count": 1,
+  "long_tail_count": 4,
   "value_distribution": {
     "immediate": 2,
     "trend": 3,
-    "long_tail": 1,
-    "ignore": 5
+    "long_tail": 4,
+    "ignore": 27
   },
   "recent_dailies": [
+    {
+      "date": "2026-05-06",
+      "title": "论文价值发现日报 - 2026-05-06",
+      "deep_dive_title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+      "deep_dive_url": "http://arxiv.org/abs/2605.02868v1",
+      "decision": "持续观察",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "daily_action": "完成摘要精读与最小实验设计",
+      "max_uncertainty": "缺少多源工程证据",
+      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
+      "path": "daily-detail.html?date=2026-05-06"
+    },
     {
       "date": "2026-04-29",
       "title": "论文价值发现日报 - 2026-04-29",
@@ -133,127 +142,646 @@
   ],
   "top_papers": [
     {
-      "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+      "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
       "authors": [
-        "Parsa Ashrafi Fashi",
-        "Utkarsh Saxena",
-        "Mehdi Rezagholizadeh",
-        "Aref Jafari",
-        "Akash Haridas"
+        "Ruichao Liang",
+        "Jing Chen",
+        "Xianglong Li",
+        "Huangpeng Gu",
+        "Yebo Feng",
+        "Yue Xue",
+        "Cong Wu",
+        "Yang Liu"
       ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24715v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24715v1",
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02868v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Hybrid sequence models that combine efficient Transformer components with linear sequence modeling blocks are a promising alternative to pure Transformers, but most are still pretrained from scratch and therefore fail to reuse existing Transformer checkpoints. We study upcycling as a practical path to convert pretrained Transformer LLMs into hybrid architectures while preserving short-context quality and improving long-context capability. We call our solution \\emph{HyLo} (HYbrid LOng-context): a",
+      "abstract": "Smart contract vulnerabilities in Decentralized Finance caused over billions of dollars losses every year, yet the security community faces a critical bottleneck: identifying a vulnerability is not the same as proving it is exploitable. Manual PoC construction is prohibitively labor-intensive, leaving most disclosed vulnerabilities unverified and protocols exposed long before mitigation is applied. In this paper, we propose \\sys, a knowledge-driven agentic system for end-to-end contract vulnerability detection and exploit synthesis. Our core insight is that exploit synthesis is not a code generation task but a \\emph{structured reasoning problem} that requires grounded knowledge of protocol semantics, failure root cause, and exploit primitives. \\sys organizes this knowledge into a \\emph{Hierarchical Knowledge Graph} (HKG) that serves as structured memory for LLM-guided multi-hop reasoning. To validate exploit feasibility beyond code synthesis, \\sys employs a two-stage validation framework that checks exploit-path reachability via SMT solving and profit realizability via asset-level state simulation, ensuring generated PoCs satisfy both logical and economic viability constraints. Evaluated on 88 real-world DeFi attacks and 72 audited projects (2,573 contracts), \\sys achieves 98\\% recall and 0.9 F1-score in detection, and a 96.6\\% exploit success rate (ESR), reproducing 85 historical exploits and recovering over \\$116.2M revenue. \\sys outperforms SOTA fuzzers (\\textsc{Verite}, \\textsc{ItyFuzz}) by up to $5\\times$ in ESR and $300\\times$ in recoverable value, and the LLM-based exploit generator \\textsc{A1} by $2\\times$ and $8.5\\times$ respectively. In bug bounty evaluation, \\sys identified 16 confirmed 0-day vulnerabilities, helping secure over \\$70.6M and earning \\$2,900 in bounties.",
       "categories": [
-        "cs.CL",
-        "cs.LG"
+        "cs.CR",
+        "cs.SE"
       ],
-      "keywords": [
-        "memory",
-        "evaluation",
-        "inference"
-      ],
-      "score": 89.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24715v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24715v1"
-        }
-      ],
-      "llm_reason": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上下文质量并提升长上下文能力的证据线索，虽代码暂无，但最适合做架构 PoC。",
-      "id": "long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling",
-      "value_type": "immediate",
+      "keywords": [],
+      "score": 54.4,
+      "decision": "持续观察",
+      "links": [],
+      "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+      "value_type": "long_tail",
       "matched_topics": [
+        "ai-agent",
+        "coding-agent",
         "context-engineering",
-        "inference-serving"
+        "rag-knowledge",
+        "multimodal-agent",
+        "llm-evaluation",
+        "security-governance"
       ],
       "score_breakdown": {
-        "novelty": 6.6,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 4.6,
+        "novelty": 4.8,
+        "problem_importance": 9.05,
+        "relevance": 10,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.6,
+        "trend_signal": 5.15,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+      "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs"
+    },
+    {
+      "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
+      "authors": [
+        "Vicente Pelechanoa",
+        "Antoni Mestre",
+        "Manoli Albert",
+        "Miriam Gil"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02832v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02832v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Deciding how to distribute work between humans and AI systems is a central challenge in organisational design. Most approaches treat this as a binary choice, yet the operational reality is richer: humans and AI routinely share tasks or take complementary roles depending on context, fatigue, and the stakes involved. Governing that distribution -- balancing efficiency, oversight, and human capability -- remains an open problem. This paper presents Human-AI Adaptive Symbiosis (HAAS), an implemented framework for adaptive task allocation in software engineering and manufacturing. HAAS combines two coupled components: a rule-based expert system that enforces governance constraints before any learning occurs, and a contextual-bandit learner that selects among feasible collaboration modes from outcome feedback. Task-agent fit is represented through five auditable cognitive dimensions and a five-mode autonomy spectrum -- from human-only to fully autonomous -- embedded in a reproducible benchmark spanning both domains. Three empirical findings emerge. First, governance is not a binary switch but a tunable design variable: tighter constraints predictably convert autonomous AI assignments into supervised collaborations, with domain-specific costs and benefits. Second, in manufacturing, stronger governance can improve operational performance and reduce fatigue simultaneously -- a workload-buffering effect that contradicts the usual framing of governance as pure overhead. Third, no single governance setting dominates across all contexts; moderate governance becomes increasingly competitive as the learner accumulates experience within the governed action space. Together, these findings position HAAS as a pre-deployment workbench for comparing and inspecting human--AI allocation policies before organisational commitment.",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.SE"
+      ],
+      "keywords": [],
+      "score": 51.6,
+      "decision": "持续观察",
+      "links": [],
+      "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "coding-agent",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 5.4,
+        "engineering_testability": 5.15,
+        "trend_signal": 5.45,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
+        "asset_convertibility": 7.0,
         "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 4.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "Context Engineering：Hybrid sequence models that combine efficient Transformer components with line…",
-      "one_line_judgement": "今天值得试：HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "HyLo 把\"长上下文能力提升\"从昂贵重训问题，转成可在既有 Transformer 检查点上做的 upcycling 改造，直接对应上下文窗口、吞吐和迁移成本三类工程痛点；摘要已给出保持短上",
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
+      "one_line_judgement": "值得先保存：AI Agent：Deciding how to distribute work between humans and AI systems…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
       "related_trends": [
-        "context-engineering"
+        "agentic-world-modeling",
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling"
+      "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems"
     },
     {
-      "title": "When Prompt Under-Specification Improves Code Correctness: An Exploratory Study of Prompt Wording and Structure Effects on LLM-Based Code Generation",
+      "title": "When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition",
       "authors": [
-        "Amal AKLI",
-        "Mike PAPADAKIS",
-        "Maxime CORDY",
-        "Yves Le TRAON"
+        "Pehuén Moure",
+        "Niclas Pokel",
+        "Bilal Bounajma",
+        "Yingqiang Gao",
+        "Roman Boehringer",
+        "Longbiao Cheng",
+        "Shih-Chii Liu"
       ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24712v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24712v1",
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02782v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02782v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Large language models are increasingly used for code generation, yet the correctness of their outputs depends not only on model capability but also on how tasks are specified. Prior studies demonstrate that small changes in natural language prompts, particularly under-specification can substantially reduce code correctness; however, these findings are largely based on minimal-specification benchmarks such as HumanEval and MBPP, where limited structural redundancy may exaggerate sensitivity. In t",
+      "abstract": "Automatic speech recognition (ASR) systems remain brittle on dysarthric and other atypical speech. Recent audio-language models raise the possibility of improving performance by conditioning on additional clinical context at inference time, but it is unclear whether these models can make use of such information. We introduce a benchmark built on the Speech Accessibility Project (SAP) dataset that tests whether diagnosis labels, clinician-derived speech ratings, and progressively richer clinical descriptions improve transcription accuracy for dysarthric speech. Across matched comparisons on nine models, we find that current models do not meaningfully use this context: diagnosis-informed and clinically detailed prompts yield negligible improvements and often degrade word error rate. We complement the prompting analysis with context-dependent fine-tuning, showing that LoRA adaptation with a mixture of clinical prompt formats achieves a WER of 0.066, a 52% relative reduction over the frozen baseline, while preserving performance when context is unavailable. Subgroup analyses reveal significant gains for Down syndrome and mild-severity speakers. These results clarify where current models fall short and provide a testbed for measuring progress toward more inclusive ASR.",
       "categories": [
+        "cs.AI",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "keywords": [],
+      "score": 51.3,
+      "decision": "持续观察",
+      "links": [],
+      "id": "when-audio-language-models-fail-to-leverage-multimodal-context-for-dysarthric-speech-recognition",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "multimodal-agent",
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Context Engineering：Automatic speech recognition (ASR) systems remain brittle on dysarthric and ot…",
+      "one_line_judgement": "值得先保存：Context Engineering：Automatic speech recognition (ASR) systems remain …",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Context Engineering：Automatic speech recognition (ASR) systems remain brittle on dysarthric and ",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=when-audio-language-models-fail-to-leverage-multimodal-context-for-dysarthric-speech-recognition"
+    },
+    {
+      "title": "Standing on the Shoulders of Giants: Stabilized Knowledge Distillation for Cross--Language Code Clone Detection",
+      "authors": [
+        "Mohamad Khajezade",
+        "Fatemeh H. Fard",
+        "Mohamed Sami Shehata"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02860v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02860v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Cross-language code clone detection (X-CCD) is challenging because semantically equivalent programs written in different languages often share little surface similarity. Although large language models (LLMs) have shown promise for semantic clone detection, their use as black-box systems raises concerns about cost, reproducibility, privacy, and unreliable output formatting. In particular, compact open-source models often struggle to follow reasoning-oriented prompts and to produce outputs that can be consistently mapped to binary clone labels.   To address these limitations, we propose a knowledge distillation framework that transfers reasoning capabilities from DeepSeek-R1 into compact open-source student models for X-CCD. Using cross-language code pairs derived from Project CodeNet, we construct reasoning-oriented synthetic training data and fine-tune Phi3 and Qwen-Coder with LoRA adapters. We further introduce response stabilization methods, including forced conclusion prompting, a binary classification head, and a contrastive classification head, and evaluate model behavior using both predictive metrics and response rate.   Experiments on Python--Java, Rust--Java, Rust--Python, and Rust--Ruby show that knowledge distillation consistently improves the reliability of compact models and often improves predictive performance, especially under distribution shift. In addition, classification-head variants substantially reduce inference time compared to generation-based inference. Overall, our results show that reasoning-oriented distillation combined with response stabilization makes compact open-source models more practical and reliable for X-CCD detection.",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
         "cs.SE"
       ],
-      "keywords": [
-        "benchmark"
-      ],
-      "score": 84.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24712v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24712v1"
-        }
-      ],
-      "llm_reason": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范；证据来自系统性实验，但缺少可核验代码与外部复现资产。",
-      "id": "when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation",
-      "value_type": "immediate",
+      "keywords": [],
+      "score": 48.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "standing-on-the-shoulders-of-giants-stabilized-knowledge-distillation-for-cross-language-code-clone-detection",
+      "value_type": "ignore",
       "matched_topics": [
-        "coding-agent",
         "context-engineering",
+        "rag-knowledge",
+        "inference-serving",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.15,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Cross-language code clone detection (X-CCD) is challenging because semanticall…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Cross-language code clone detection (X-CCD) is cha…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Cross-language code clone detection (X-CCD) is challenging because semantica",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=standing-on-the-shoulders-of-giants-stabilized-knowledge-distillation-for-cross-language-code-clone-detection"
+    },
+    {
+      "title": "AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion",
+      "authors": [
+        "Yu-Ju Tsai",
+        "Brian Price",
+        "Qing Liu",
+        "Luis Figueroa",
+        "Daniil Pakhomov",
+        "Zhihong Ding",
+        "Scott Cohen",
+        "Ming-Hsuan Yang"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02892v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02892v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Personalized image completion aims to restore occluded regions in personal photos while preserving identity and appearance. Existing methods either rely on generic inpainting models that often fail to maintain identity consistency, or assume that suitable reference images are explicitly provided. In practice, suitable references are often not explicitly provided, requiring the system to search for identity-consistent images within personal photo collections. We present AlbumFill, a training-free framework that retrieves identity-consistent references from personal albums for personalized completion. Given an occluded image and a personal album, a vision-language model infers missing semantic cues to guide composed image retrieval, and the retrieved references are used by reference-based completion models. To facilitate this task, we introduce a dataset containing 54K human-centric samples with associated album images. Experiments across multiple baselines demonstrate the difficulty of personalized completion and highlight the importance of identity-consistent reference retrieval. Project Page: https://liagm.github.io/AlbumFill/",
+      "categories": [
+        "cs.CV",
+        "cs.IR"
+      ],
+      "keywords": [],
+      "score": 44.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "albumfill-album-guided-reasoning-and-retrieval-for-personalized-image-completion",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Personalized image completion aims to restore occluded regions in personal pho…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Personalized image completion aims to restore occluded regi…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Personalized image completion aims to restore occluded regions in personal pho…",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=albumfill-album-guided-reasoning-and-retrieval-for-personalized-image-completion"
+    },
+    {
+      "title": "A Closed-Form Persistence-Landmark Pipeline for Certified Point-Cloud and Graph Classification",
+      "authors": [
+        "Sushovan Majhi",
+        "Atish Mitra",
+        "Žiga Virk",
+        "Pramita Bagchi"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02836v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02836v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We introduce PLACE (Persistence-Landmark Analytic Classification Engine), a closed-form pipeline for classifying point clouds and graphs through their persistent-homology signatures. Three quantitative guarantees -- a margin-based excess-risk rate, a closed-form descriptor-selection rule, and a per-prediction certificate -- are derived from training labels alone, with no learned weights or held-out calibration. The embedding sums Mitra-Virk single-point coordinate functions over a sparse landmark grid; closed-form weights maximize a structural distortion constant $λ(ν)$ (a Lipschitz lower bound on $\\mathcal{D}_n$ under non-interference). (i) An $O(kR/(Δ\\sqrt{m_{\\min}}))$ margin bound, driven by class-mean separation $Δ$ and embedding radius $R$, matched by a sample-starved minimax lower bound. (ii) The Mahalanobis margin under Ledoit-Wolf-shrunk covariance is the strongest closed-form descriptor selector on a heterogeneous 64-descriptor chemical-graph pool (mean Spearman $ρ\\approx +0.54$ across 10 benchmarks, positive on 9 of 10); the isotropic surrogate $Δ/\\sqrt\\ell$ admits a closed-form selection-consistency rate on homogeneous (14-15 descriptor) protein/social pools. (iii) A training-time-decided certificate with no per-prediction overhead, in non-asymptotic Pinelis and asymptotic Gaussian plug-in forms. Empirically, PLACE is the strongest diagram-based method on Orbit5k and matches the strongest topology-based baseline within statistical noise on MUTAG and COX2. The remaining gaps fall into two diagnosable regimes: descriptor blindness on NCI1/NCI109, and pool-coverage limits elsewhere. Both radii exceed the firing threshold $\\hatΔ/2$ on every benchmark at our training-set sizes, dominated by the $\\sqrt\\ell$ scaling of the multivariate-norm bound; the per-prediction certificate is constructive but not yet operational at these sizes.",
+      "categories": [
+        "cs.LG",
+        "math.AT"
+      ],
+      "keywords": [],
+      "score": 44.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "a-closed-form-persistence-landmark-pipeline-for-certified-point-cloud-and-graph-classification",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：We introduce PLACE (Persistence-Landmark Analytic Classification Engine), a cl…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：We introduce PLACE (Persistence-Landmark Analytic Classific…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：We introduce PLACE (Persistence-Landmark Analytic Classification Engine), a cl…",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=a-closed-form-persistence-landmark-pipeline-for-certified-point-cloud-and-graph-classification"
+    },
+    {
+      "title": "VideoNet: A Large-Scale Dataset for Domain-Specific Action Recognition",
+      "authors": [
+        "Tanush Yadav",
+        "Mohammadreza Salehi",
+        "Jae Sung Park",
+        "Vivek Ramanujan",
+        "Hannaneh Hajishirzi",
+        "Yejin Choi",
+        "Ali Farhadi",
+        "Rohun Tripathi",
+        "Ranjay Krishna"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02834v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02834v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Videos are unique in their ability to capture actions which transcend multiple frames. Accordingly, for many years action recognition was the quintessential task for video understanding. Unfortunately, due to a lack of sufficiently diverse and challenging data, modern vision-language models (VLMs) are no longer evaluated on their action recognition capabilities. To revitalize action recognition in the era of VLMs, we advocate for a returned focus on domain-specific actions. To this end, we introduce VideoNet, a domain-specific action recognition benchmark covering 1,000 distinct actions from 37 domains. We begin with a multiple-choice evaluation setting, where the difference between closed and open models is stark: Gemini 3.1 Pro attains 69.9% accuracy while Qwen3-VL-8B gets a mere 45.0%. To understand why VLMs struggle on VideoNet, we relax the questions into a binary setting, where random chance is 50%. Still, Qwen achieves only 59.2% accuracy. Further relaxing the evaluation setup, we provide $k\\in\\{1,2,3\\}$ in-context examples of the action. Some models excel in the few-shot setting, while others falter; Qwen improves $+7.0\\%$, while Gemini declines $-4.8\\%$. Notably, these gains fall short of the $+13.6\\%$ improvement in non-expert humans when given few-shot examples. Finding that VLMs struggle to fully exploit in-context examples, we shift from test-time improvements to the training side. We collect the first large-scale training dataset for domain-specific actions, totaling nearly 500k video question-answer pairs. Fine-tuning a Molmo2-4B model on our data, we surpass all open-weight 8B models on the VideoNet benchmark.",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 43.4,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "videonet-a-large-scale-dataset-for-domain-specific-action-recognition",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent",
         "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：Videos are unique in their ability to capture actions which transcend multiple…",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Videos are unique in their ability to capture actions…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：Videos are unique in their ability to capture actions which transcend multiple…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=videonet-a-large-scale-dataset-for-domain-specific-action-recognition"
+    },
+    {
+      "title": "Enhancing RL Generalizability in Robotics through SHAP Analysis of Algorithms and Hyperparameters",
+      "authors": [
+        "Lingxiao Kong",
+        "Cong Yang",
+        "Oya Deniz Beyan",
+        "Zeyd Boukhers"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02867v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02867v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Despite significant advances in Reinforcement Learning (RL), model performance remains highly sensitive to algorithm and hyperparameter configurations, while generalization gaps across environments complicate real-world deployment. Although prior work has studied RL generalization, the relative contribution of specific configurations to the generalization gap has not been quantitatively decomposed and systematically leveraged for configuration selection. To address this limitation, we propose an explainable framework that evaluates RL performance across robotic environments using SHapley Additive exPlanations (SHAP) to quantify configuration impacts. We establish a theoretical foundation connecting Shapley values to generalizability, empirically analyze configuration impact patterns, and introduce SHAP-guided configuration selection to enhance generalization. Our results reveal distinct patterns across algorithms and hyperparameters, with consistent configuration impacts across diverse tasks and environments. By applying these insights to configuration selection, we achieve improved RL generalizability and provide actionable guidance for practitioners.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "keywords": [],
+      "score": 43.2,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "enhancing-rl-generalizability-in-robotics-through-shap-analysis-of-algorithms-and-hyperparameters",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.15,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Despite significant advances in Reinforcement Learning (RL), model performance…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Despite significant advances in Reinforcement Learning (RL)…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Despite significant advances in Reinforcement Learning (RL), model performance…",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=enhancing-rl-generalizability-in-robotics-through-shap-analysis-of-algorithms-and-hyperparameters"
+    },
+    {
+      "title": "(POSTER) From Sensors to Insight: Rapid, Edge-to-Core Application Development for Sensor-Driven Applications",
+      "authors": [
+        "Komal Thareja",
+        "Anirban Mandal",
+        "Ewa Deelman"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02844v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02844v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Scientists increasingly rely on sensor-based data; however transforming raw streams into insights across the edge-to-cloud continuum remains difficult due to the breadth of expertise required to coordinate the necessary data and computation flow. This paper introduces a pattern-based, AI-assisted methodology for rapid development of sensor-driven applications. Using Pegasus workflows executing on the FABRIC testbed, we demonstrate a 5-step development loop that shifts workflow construction and deployment from code-first to intent-first design. Starting from an existing Orcasound hydrophone workflow as a reusable template, we generate and refine workflows for air quality, earthquake, and soil moisture monitoring applications. We further show how these workflows extend to edge resources-including BlueField-3 DPUs and Raspberry Pis-through configuration and placement rather than workflow redesign. Our evaluation, from the perspective of a novice Pegasus user, shows that AI-assisted pattern reuse compresses multi-stage workflow development to 1-1.5 days per workflow while preserving the rigor and portability of workflow-based execution.",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "keywords": [],
+      "score": 42.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "poster-from-sensors-to-insight-rapid-edge-to-core-application-development-for-sensor-driven-applications",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：Scientists increasingly rely on sensor-based data; however transforming raw st…",
+      "one_line_judgement": "当前可忽略：LLM 评测：Scientists increasingly rely on sensor-based data; however tran…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：Scientists increasingly rely on sensor-based data; however transforming raw st…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=poster-from-sensors-to-insight-rapid-edge-to-core-application-development-for-sensor-driven-applications"
+    },
+    {
+      "title": "SCPRM: A Schema-aware Cumulative Process Reward Model for Knowledge Graph Question Answering",
+      "authors": [
+        "Jiujiu Chen",
+        "Yazheng Liu",
+        "Sihong Xie",
+        "Hui Xiong"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2605.02819v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02819v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models excel at complex reasoning, yet evaluating their intermediate steps remains challenging. Although process reward models provide step-wise supervision, they often suffer from a risk compensation effect, where incorrect steps are offset by later correct ones, assigning high rewards to flawed reasoning paths. This issue is further exacerbated in knowledge graph (KG) reasoning, as there may exist multiple paths between the start and end entities in the KGs, and a risky step can make the reasoning path flawed. Those limitations are problematic in risk-sensitive tasks such as medical and legal KG reasoning. To address the issues, we propose a Schema-aware Cumulative Process Reward Model (SCPRM) that evaluates reasoning paths by conditioning on the reasoning prefix , and incorporating schema distance between current reasoning step and the implicit target parsed from the query, which provides cumulative and future rewards to guide the path explorations. We further integrate SCPRM into Monte Carlo Tree Search (MCTS) as SCPRM-MCTS to conduct multi-hop reasoning on KGs for question answering (QA) tasks. Across medical and legal KGQA and CWQ, SCPRM-MCTS improves the performance of Hits@k by an average of 1.18% over strong baselines, demonstrating more accurate and risk-sensitive reasoning evaluation.",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 42.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "scprm-a-schema-aware-cumulative-process-reward-model-for-knowledge-graph-question-answering",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "security-governance"
       ],
       "score_breakdown": {
         "novelty": 4.8,
@@ -261,621 +789,77 @@
         "relevance": 7.4,
         "evidence_strength": 4.95,
         "engineering_testability": 3.5,
-        "trend_signal": 5.45,
+        "trend_signal": 4.05,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
+        "asset_convertibility": 4.8,
         "actionability": 5.0,
-        "noise_risk": 2.2,
-        "weak_evidence_penalty": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
         "low_relevance_penalty": 0.8,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "Coding Agent：Large language models are increasingly used for code generation, yet the corre…",
-      "one_line_judgement": "今天值得试：研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-ag…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Large language models excel at complex reasoning, yet evaluating their interme…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Large language models excel at complex reasoning, yet evalu…",
+      "first_seen_date": "2026-05-06",
+      "first_deep_dive_daily": "2026-05-06",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "研究 prompt wording 与结构变化对代码正确率的影响，而且给出\"欠规格化有时更好\"这一反直觉命题，能直接转成 coding-agent 的提示模板 A/B 实验、回归测试与评测规范",
+      "long_tail_summary": "RAG / 知识系统：Large language models excel at complex reasoning, yet evaluating their interme…",
       "related_trends": [
-        "coding-agent",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=when-prompt-under-specification-improves-code-correctness-an-exploratory-study-of-prompt-wording-and-structure-effects-on-llm-based-code-generation"
-    },
-    {
-      "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
-      "authors": [
-        "Aaryan Shah",
-        "Andrew Hines",
-        "Alexia Downs",
-        "Denis Bajet",
-        "Paulius Mui"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24710v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24710v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Objective. Clinical AI documentation systems require evaluation methodologies that are clinically valid, economically viable, and sensitive to iterative changes. Methods requiring expert review per scoring instance are too slow and expensive for safe, iterative deployment. We present a case-specific, clinician-authored rubric methodology for clinical AI evaluation and examine whether LLM-generated rubrics can approximate clinician agreement. Materials and Methods. Twenty clinicians authored 1,64",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "keywords": [
-        "agent",
-        "evaluation",
-        "RAG"
-      ],
-      "score": 82.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24710v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24710v1"
-        }
-      ],
-      "llm_reason": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短期更多属于评测治理趋势资产，适合沉淀到 rubric 设计与人机校准流程。",
-      "id": "case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters",
-      "value_type": "trend",
-      "matched_topics": [
-        "llm-evaluation",
-        "security-governance",
-        "rag-knowledge"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 5.85,
-        "engineering_testability": 4.6,
-        "trend_signal": 4.05,
-        "long_tail_potential": 4.8,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "LLM 评测：Objective. Clinical AI documentation systems require evaluation methodologies …",
-      "one_line_judgement": "值得继续观察：以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "以 case-specific rubric + LLM-clinician agreement 解决高风险场景评测成本与可信度问题，823 encounters 让证据强于一般经验性论文；短",
-      "related_trends": [
-        "coding-agent",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=case-specific-rubrics-for-clinical-ai-evaluation-methodology-validation-and-llm-clinician-agreement-across-823-encounters"
-    },
-    {
-      "title": "Learning to Think from Multiple Thinkers",
-      "authors": [
-        "Nirmit Joshi",
-        "Roey Magen",
-        "Nathan Srebro",
-        "Nikolaos Tsilivis",
-        "Gal Vardi"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24737v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We study learning with Chain-of-Thought (CoT) supervision from multiple thinkers, all of whom provide correct but possibly systematically different solutions, e.g., step-by-step solutions to math problems written by different thinkers, or step-by-step execution traces of different programs solving the same problem. We consider classes that are computationally easy to learn using CoT supervision from a single thinker, but hard to learn with only end-result supervision, i.e., without CoT (Joshi et",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CC",
-        "stat.ML"
-      ],
-      "keywords": [],
-      "score": 77.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24737v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24737v1"
-        }
-      ],
-      "llm_reason": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿沟。",
-      "id": "learning-to-think-from-multiple-thinkers",
-      "value_type": "trend",
-      "matched_topics": [
-        "ai-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 5.0,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：We study learning with Chain-of-Thought (CoT) supervision from multiple thinke…",
-      "one_line_judgement": "值得继续观察：从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "从理论角度解释多 thinker CoT 监督为何可能优于单一 thinker，有助于指导多轨迹蒸馏、合成数据构造和 agent 训练集设计；工程启发明确，但离直接上线仍有一层数据与训练实现鸿",
-      "related_trends": [
-        "agentic-world-modeling",
+        "context-engineering",
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=learning-to-think-from-multiple-thinkers"
-    },
-    {
-      "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
-      "authors": [
-        "Griffin Pitts",
-        "Muntasir Hoq",
-        "Peter Brusilovsky",
-        "Narges Norouzi",
-        "Arto Hellas"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24758v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Adaptive programming practice often relies on fixed libraries of worked examples and practice problems, which require substantial authoring effort and may not correspond well to the logical errors and partial solutions students produce while writing code. As a result, students may receive learning content that does not directly address the concepts they are working to understand, while instructors must either invest additional effort in expanding content libraries or accept a coarse level of per",
-      "categories": [
-        "cs.HC",
-        "cs.AI",
-        "cs.CY",
-        "cs.ET",
-        "cs.LG"
-      ],
-      "keywords": [
-        "evaluation"
-      ],
-      "score": 72.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24758v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24758v1"
-        }
-      ],
-      "llm_reason": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企业开发场景的泛化仍待核验。",
-      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
-      "value_type": "long_tail",
-      "matched_topics": [
-        "coding-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "Coding Agent：Adaptive programming practice often relies on fixed libraries of worked exampl…",
-      "one_line_judgement": "值得先保存：把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 ag…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components"
-    },
-    {
-      "title": "SpecRLBench: A Benchmark for Generalization in Specification-Guided Reinforcement Learning",
-      "authors": [
-        "Zijian Guo",
-        "İlker Işık",
-        "H. M. Sabbir Ahmad",
-        "Wenchao Li"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24729v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24729v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Specification-guided reinforcement learning (RL) provides a principled framework for encoding complex, temporally extended tasks using formal specifications such as linear temporal logic (LTL). While recent methods have shown promising results, their ability to generalize across unseen specifications and diverse environments remains insufficiently understood. In this work, we introduce SpecRLBench, a benchmark designed to evaluate the generalization capabilities of LTL-based specification-guided",
-      "categories": [
-        "cs.LG"
-      ],
-      "keywords": [
-        "evaluation",
-        "benchmark"
-      ],
-      "score": 40.1,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24729v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24729v1"
-        }
-      ],
-      "id": "specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning",
-      "value_type": "ignore",
-      "matched_topics": [
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.05,
-        "trend_signal": 6.0,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "LLM 评测：Specification-guided reinforcement learning (RL) provides a principled framewo…",
-      "one_line_judgement": "当前可忽略：LLM 评测：Specification-guided reinforcement learning (RL) provides a pri…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "LLM 评测：Specification-guided reinforcement learning (RL) provides a principled framewo…",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=specrlbench-a-benchmark-for-generalization-in-specification-guided-reinforcement-learning"
-    },
-    {
-      "title": "Sentiment and Emotion Classification of Indonesian E-Commerce Reviews via Multi-Task BiLSTM and AutoML Benchmarking",
-      "authors": [
-        "Hermawan Manurung",
-        "Ibrahim Al-Kahfi",
-        "Ahmad Rizqi",
-        "Martin Clinton Tosima Manullang"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24720v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24720v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Indonesian marketplace reviews mix standard vocabulary with slang, regional loanwords, numeric shorthands, and emoji, making lexicon-based sentiment tools unreliable in practice. This paper describes a two-track classification pipeline applied to the PRDECT-ID dataset, which contains 5,400 product reviews from 29 Indonesian e-commerce categories, each labeled for binary sentiment (Positive/Negative) and five-class emotion (Happy, Sad, Fear, Love, Anger). The first track applies TF-IDF vectorizat",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [
-        "memory",
-        "benchmark"
-      ],
-      "score": 35.8,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24720v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24720v1"
-        }
-      ],
-      "id": "sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking",
-      "value_type": "ignore",
-      "matched_topics": [
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 5.15,
-        "relevance": 2.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.6,
-        "trend_signal": 5.45,
-        "long_tail_potential": 4.15,
-        "asset_convertibility": 5.6,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "LLM 评测：Indonesian marketplace reviews mix standard vocabulary with slang, regional lo…",
-      "one_line_judgement": "当前可忽略：LLM 评测：Indonesian marketplace reviews mix standard vocabulary with sla…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "LLM 评测：Indonesian marketplace reviews mix standard vocabulary with slang, regional lo…",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=sentiment-and-emotion-classification-of-indonesian-e-commerce-reviews-via-multi-task-bilstm-and-automl-benchmarking"
-    },
-    {
-      "title": "Learning to Rotate: Temporal and Semantic Rotary Encoding for Sequential Modeling",
-      "authors": [
-        "Hailing Cheng",
-        "Daqi Sun",
-        "Xinyu Lu"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24717v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24717v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Every Transformer architecture dedicates enormous capacity to learning rich representations in semantic embedding space -- yet the rotation manifold acted upon by Rotary Positional Embeddings (RoPE) has been treated as a fixed, hand-crafted structure, populated only by discrete ordinal indices. We argue that this rotation space is a largely overlooked second dimension of expressivity in the attention mechanism, one whose systematic exploration may open a new door for attention-based architecture",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [],
-      "score": 31.6,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24717v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24717v1"
-        }
-      ],
-      "id": "learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 5.0,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：Every Transformer architecture dedicates enormous capacity to learning rich re…",
-      "one_line_judgement": "当前可忽略：前沿论文：Every Transformer architecture dedicates enormous capacity to lea…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：Every Transformer architecture dedicates enormous capacity to learning rich re…",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=learning-to-rotate-temporal-and-semantic-rotary-encoding-for-sequential-modeling"
-    },
-    {
-      "title": "The Optimal Sample Complexity of Multiclass and List Learning",
-      "authors": [
-        "Chirag Pabbaraju"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24749v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24749v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "While the optimal sample complexity of binary classification in terms of the VC dimension is well-established, determining the optimal sample complexity of multiclass classification has remained open. The appropriate complexity parameter for multiclass classification is the DS dimension, and despite significant efforts, a gap of $\\sqrt{\\text{DS}}$ has persisted between the upper and lower bounds on sample complexity. Recent work by Hanneke et al. (2026) shows a novel algebraic characterization o",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "keywords": [],
-      "score": 29.3,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24749v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24749v1"
-        }
-      ],
-      "id": "the-optimal-sample-complexity-of-multiclass-and-list-learning",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：While the optimal sample complexity of binary classification in terms of the V…",
-      "one_line_judgement": "当前可忽略：前沿论文：While the optimal sample complexity of binary classification in t…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：While the optimal sample complexity of binary classification in terms of the V…",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=the-optimal-sample-complexity-of-multiclass-and-list-learning"
-    },
-    {
-      "title": "Conflict-Aware Harmonized Rotational Gradient for Multiscale Kinetic Regimes",
-      "authors": [
-        "Zhangyong Liang"
-      ],
-      "published": "2026-04-27",
-      "updated": "2026-04-27",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2604.24745v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.24745v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "In this paper, we propose a harmonized rotational gradient method, termed HRGrad, for simultaneously tackling multiscale time-dependent kinetic problems with varying small parameters. These parameters exhibit asymptotic transitions from microscopic to macroscopic physics, making it a challenging multi-task problem to solve over all ranges simultaneously. Solving tasks in different asymptotic regions often encounter gradient conflicts, which can lead to the failure of multi-task learning. To addr",
-      "categories": [
-        "cs.LG"
-      ],
-      "keywords": [],
-      "score": 29.2,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2604.24745v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2604.24745v1"
-        }
-      ],
-      "id": "conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 4.15,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：In this paper, we propose a harmonized rotational gradient method, termed HRGr…",
-      "one_line_judgement": "当前可忽略：前沿论文：In this paper, we propose a harmonized rotational gradient method…",
-      "first_seen_date": "2026-04-29",
-      "first_deep_dive_daily": "2026-04-29",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：In this paper, we propose a harmonized rotational gradient method, termed HRGr…",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=conflict-aware-harmonized-rotational-gradient-for-multiscale-kinetic-regimes"
+      "detail_path": "paper-detail.html?id=scprm-a-schema-aware-cumulative-process-reward-model-for-knowledge-graph-question-answering"
     }
   ],
   "long_tail_highlights": [
     {
-      "id": "personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components",
-      "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
-      "direction": "Coding Agent / LLM 评测",
+      "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+      "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+      "direction": "AI Agent / Coding Agent",
       "long_tail_type": "工程抽象",
-      "why_save": "把学生代码模式映射为知识组件并生成个性化 worked examples，说明\"从错误模式反推教学干预\"这一路径可迁移到代码助手与辅导 agent；应用场景清晰，但证据主要集中在教育场景，跨企",
+      "why_save": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-05-20",
-      "detail_path": "paper-detail.html?id=personalized-worked-example-generation-from-student-code-submissions-using-pattern-based-knowledge-components"
+      "revisit_date": "2026-05-27",
+      "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs"
+    },
+    {
+      "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
+      "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
+      "direction": "AI Agent / Coding Agent",
+      "long_tail_type": "工程抽象",
+      "why_save": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-05-27",
+      "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems"
+    },
+    {
+      "id": "when-audio-language-models-fail-to-leverage-multimodal-context-for-dysarthric-speech-recognition",
+      "title": "When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition",
+      "direction": "Context Engineering / RAG / 知识系统",
+      "long_tail_type": "工程抽象",
+      "why_save": "Context Engineering：Automatic speech recognition (ASR) systems remain brittle on dysarthric and ",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-05-27",
+      "detail_path": "paper-detail.html?id=when-audio-language-models-fail-to-leverage-multimodal-context-for-dysarthric-speech-recognition"
     }
   ],
   "common_research_path": [

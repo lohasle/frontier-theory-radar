@@ -1,0 +1,177 @@
+{
+  "date": "2026-05-06",
+  "model": "glm-5.1",
+  "generated_at": "2026-05-06T04:35:00",
+  "analysis": [
+    {
+      "paper_index": 1,
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "arxiv_id": "2605.02888v1",
+      "url": "http://arxiv.org/abs/2605.02888v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "推测解码（Speculative Decoding）的最优推测长度 γ 是压缩级别相关的动态参数，可通过草稿模型的置信度和熵信号进行自适应预测",
+        "key_insight": "当目标模型被量化压缩（FP16→INT8→NF4）时，最优 γ 显著漂移；草稿模型的置信度/熵与接受率呈 ~0.56 相关性",
+        "mathematical_foundation": "基于 MLP 学习 γ→接受率映射，最大化每步期望 token 数；统计验证使用配对 bootstrap 检验（p<0.001）"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有系统（vLLM、TensorRT-LLM）均使用固定 γ=4，在压缩模型场景下严重次优",
+        "proposed_solution": "轻量 MLP 控制器（<0.5% 步时间开销），从草稿模型提取信号后自适应选择 γ",
+        "integration_path": "可直接集成到任何支持推测解码的推理框架，如 vLLM SpeculativeDecoder、HuggingFace Assistants",
+        "performance_gain": "56.0% 相对提升 over 固定 γ=4 基线，额外延迟仅 0.34ms/step"
+      },
+      "trend": {
+        "macro_trend": "LLM 推理优化从固定策略转向自适应/学习型策略",
+        "related_work": "与 Medusa 多头推测、Eagle 特征级推测互补；量化后推理优化是 Edge AI 部署刚需",
+        "future_direction": "扩展到多头推测（multi-head speculative decoding）的联合 γ 分配；结合 KV cache 压缩策略"
+      },
+      "insights": {
+        "surprising_finding": "量化级别对最优 γ 的影响比任务类型更大——这意味着部署同一模型的不同量化版本需要不同的推测策略",
+        "practical_wisdom": "在量化模型上部署推测解码时，应先 profile 最优 γ 而非直接使用默认值",
+        "risk_assessment": "MLP 控制器需要离线 profile 数据，新增模型需要重新采集；profile 成本约为数小时 GPU 时间"
+      },
+      "action": {
+        "immediate": "在当前使用推测解码的推理服务中，实验 profile 不同量化级别的最优 γ，评估与固定 γ=4 的差距",
+        "short_term": "将 SpecKV MLP 控制器集成到 vLLM 或推理框架中，作为自适应 γ 选择器",
+        "long_term": "建立推理参数（γ、batch size、量化级别）的联合优化框架，实现部署即优化的自动调优"
+      }
+    },
+    {
+      "paper_index": 4,
+      "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+      "arxiv_id": "2605.02868v1",
+      "url": "http://arxiv.org/abs/2605.02868v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "智能合约漏洞利用合成是结构化推理问题（非纯代码生成），需要协议语义、故障根因与利用原语的接地知识",
+        "key_insight": "层次知识图谱（HKG）作为 LLM 多跳推理的结构化记忆，结合 SMT 可达性验证 + 资产级状态模拟的双重验证",
+        "mathematical_foundation": "HKG 编码协议语义层→故障模式层→利用原语层的层次关系；SMT solver 验证路径可达性；资产状态模拟验证经济可行性"
+      },
+      "engineering_practice": {
+        "current_limitation": "手动 PoC 构建极度劳动密集，大部分公开漏洞缺少验证；现有 fuzzer（Verite、ItyFuzz）ESR 远低于自动化需求",
+        "proposed_solution": "端到端知识驱动 Agent 系统：检测→知识图谱构建→利用合成→双阶段验证",
+        "integration_path": "可直接集成到 CI/CD 安全审计流水线；兼容现有审计工具链",
+        "performance_gain": "96.6% ESR，超越 Verite/ItyFuzz 5× ESR 和 300× 追回价值，超越 A1 系统 2× ESR 和 8.5× 追回价值"
+      },
+      "trend": {
+        "macro_trend": "安全审计从规则/fuzzer 驱动转向知识驱动 + LLM 辅助推理",
+        "related_work": "与 A1（纯 LLM 生成 Exploit）对比，EvoPoC 的知识图谱接地策略显著优于纯生成方案",
+        "future_direction": "扩展到跨合约攻击链、Layer 2 协议、MEV 策略分析"
+      },
+      "insights": {
+        "surprising_finding": "仅 16 个 0-day 就锁定了 $70.6M 资金安全——说明当前 DeFi 协议的审计覆盖率严重不足",
+        "practical_wisdom": "漏洞检测 ≠ 漏洞可利用性证明；双阶段验证（逻辑+经济）是必要的完整性保证",
+        "risk_assessment": "知识图谱依赖人工构建的领域知识；新攻击模式可能超出 HKG 覆盖范围"
+      },
+      "action": {
+        "immediate": "关注 EvoPoC 开源计划；评估现有 DeFi 项目的审计流程是否覆盖了 HKG 中的攻击模式",
+        "short_term": "在安全审计 CI/CD 中引入自动化利用合成步骤，将 EvoPoC 或类似工具作为漏洞验证环节",
+        "long_term": "建立覆盖多链、多协议的智能合约安全知识图谱，持续更新攻击模式库"
+      }
+    },
+    {
+      "paper_index": 13,
+      "title": "JACTUS: Joint Adaptation and Compression with Task-aware Union of Subspaces",
+      "arxiv_id": "2605.02829v1",
+      "url": "http://arxiv.org/abs/2605.02829v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02829v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "模型压缩的低秩子空间与下游适配的低秩子空间可以通过任务感知的子空间并集实现联合优化",
+        "key_insight": "先压缩再微调的流水线中，压缩丢弃的方向可能恰好是下游任务需要的方向；联合优化通过校准集的输入/梯度协方差保留关键方向",
+        "mathematical_foundation": "正交子空间并集上的投影低秩近似；边际增益/参数的全局秩分配"
+      },
+      "engineering_practice": {
+        "current_limitation": "PEFT（LoRA/DoRA）需要保留完整冻结权重，部署体积大；先压缩再适配会丢失任务关键方向",
+        "proposed_solution": "JACTUS 从小校准集估计协方差→构建子空间并集→投影低秩近似→全局秩分配→仅训练核心矩阵",
+        "integration_path": "替代现有的 Compress-then-LoRA 流水线；可作为 PEFT 库（如 PEFT、LLaMA-Factory）的新后端",
+        "performance_gain": "80% 参数预算下：ViT-Base 89.2%（超 DoRA 87.9%），Llama2-7B 80.9%（超 DoRA 79.7%）"
+      },
+      "trend": {
+        "macro_trend": "模型部署从'压缩 OR 适配'走向'压缩 + 适配'联合优化",
+        "related_work": "与 LoRA、DoRA、QLoRA 等方法对比，JACTUS 在同等参数预算下一致更优",
+        "future_direction": "扩展到多模态模型；探索动态子空间调整（训练中更新子空间并集）"
+      },
+      "insights": {
+        "surprising_finding": "80% 参数预算即可超越 100% 参数的 PEFT 基线——说明现有 PEFT 方法在参数利用效率上有显著浪费",
+        "practical_wisdom": "在模型部署前，应同时考虑压缩和适配的联合效果，而非分步独立优化",
+        "risk_assessment": "校准集质量和大小对子空间估计有直接影响；极小校准集可能导致子空间偏差"
+      },
+      "action": {
+        "immediate": "在需要部署压缩模型+微调的场景中，评估 JACTUS 与现有 Compress-then-LoRA 流水线的对比",
+        "short_term": "将 JACTUS 集成为 PEFT 库的替代后端，在多任务基准上验证",
+        "long_term": "探索 JACTUS 在联邦学习、边缘部署中的潜力——其核心矩阵训练天然适合分布式场景"
+      }
+    },
+    {
+      "paper_index": 20,
+      "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+      "arxiv_id": "2605.02801v1",
+      "url": "http://arxiv.org/abs/2605.02801v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02801v1",
+      "code_url": "https://github.com/xxzcc/awesome-llm-mas-rl",
+      "theory": {
+        "core_theory": "LLM 多智能体系统的 RL 训练应以编排轨迹（orchestration traces）为核心优化对象，而非单智能体行为",
+        "key_insight": "编排轨迹是包含 spawn/delegate/communicate/aggregate/stop 事件的时间交互图；RL 应优化这些编排决策而非单个 token 选择",
+        "mathematical_foundation": "8 族奖励函数（包括并行加速、分割正确性、聚合质量）；8 级信用单元（token→team）；5 个编排子决策"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有 LLM 多智能体系统主要依赖 prompt engineering 或人工编排策略，缺少系统化的 RL 训练方法",
+        "proposed_solution": "编排轨迹形式化 + 奖励/信用/学习三轴分类框架",
+        "integration_path": "为多智能体框架（AutoGen、CrewAI、LangGraph）提供 RL 训练的理论指导",
+        "performance_gain": "框架论文，提供 84 篇论文的系统化分析和可回放的 JSON schema"
+      },
+      "trend": {
+        "macro_trend": "LLM 应用从单智能体工具使用走向多智能体协作编排",
+        "related_work": "直接关联 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业系统的编排策略",
+        "future_direction": "停止决策（when to stop）的 RL 训练方法仍是空白——这是一个重要的开放问题"
+      },
+      "insights": {
+        "surprising_finding": "在 84 篇论文池中没有发现显式训练停止决策的 RL 方法——这是多智能体系统的一个关键能力缺口",
+        "practical_wisdom": "构建多智能体系统时，应将编排决策（何时委派、何时聚合、何时停止）显式建模为可学习的策略",
+        "risk_assessment": "工业界（Kimi/Codex/Claude Code）与学术界的规模差距巨大，公开的评估体系远落后于实际部署"
+      },
+      "action": {
+        "immediate": "在构建多智能体系统时，参考编排轨迹框架设计 reward 和 credit assignment",
+        "short_term": "使用论文提供的 JSON schema 记录和回放多智能体交互，建立编排质量的量化评估",
+        "long_term": "探索停止决策的 RL 训练方法——这是多智能体系统自主性的关键瓶颈"
+      }
+    },
+    {
+      "paper_index": 16,
+      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+      "arxiv_id": "2605.02815v1",
+      "url": "http://arxiv.org/abs/2605.02815v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02815v1",
+      "code_url": "https://github.com/StringNLPLAB/FlexSQL",
+      "theory": {
+        "core_theory": "Text-to-SQL 的核心设计原则应是'灵活数据库交互'——Agent 应在推理任意阶段探索 schema、检查数据、运行验证查询",
+        "key_insight": "固定管线（一次性 schema 检索→生成→后置修复）限制了从早期错误中恢复的能力；灵活探索允许 Agent 动态收集信息",
+        "mathematical_foundation": "双层级修复：代码级错误修复→计划级修订回溯；多样化执行计划覆盖多种查询解释"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有 Text-to-SQL 系统在复杂 schema 上表现差，且无法从早期错误中恢复",
+        "proposed_solution": "灵活交互 Agent：任意阶段 schema 探索 + SQL/Python 双模式执行 + 双层级修复",
+        "integration_path": "已作为 Claude Code 的 skill 集成，带来 >10% 相对提升；可集成到任何 Text-to-SQL 产品",
+        "performance_gain": "Spider2-Snow 上 65.4%（使用 gpt-oss-120b），超越使用更大模型（gpt-o3、DeepSeek-R1）的基线"
+      },
+      "trend": {
+        "macro_trend": "Agent 设计从固定管线走向灵活交互——允许 Agent 在推理过程中主动获取信息",
+        "related_work": "与 ReAct、Toolformer 等 Agent 框架理念一致，但专门针对数据库交互场景优化",
+        "future_direction": "扩展到多数据库联合查询、实时数据流查询、跨模态数据分析"
+      },
+      "insights": {
+        "surprising_finding": "灵活探索 + 灵活执行的联合贡献大于任一单独因素——说明 Agent 的自主性需要全方位支持",
+        "practical_wisdom": "在构建数据分析 Agent 时，应允许 Agent 在任意阶段查询数据库而非一次性检索所有信息",
+        "risk_assessment": "灵活交互增加了查询次数和延迟；在实时场景下需要平衡灵活性与效率"
+      },
+      "action": {
+        "immediate": "评估现有 Text-to-SQL 系统的错误恢复能力，识别是否需要灵活交互模式",
+        "short_term": "在数据分析产品中引入 FlexSQL 的灵活探索模式，允许 Agent 主动检查 schema 和数据",
+        "long_term": "将灵活交互模式推广到其他数据分析 Agent（如数据清洗、特征工程、可视化生成）"
+      }
+    }
+  ]
+}
