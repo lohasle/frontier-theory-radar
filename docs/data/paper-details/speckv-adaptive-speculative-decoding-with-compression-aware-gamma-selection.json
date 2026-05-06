@@ -4,7 +4,7 @@
   "authors": [
     "Shikhar Shukla"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-05-04",
   "url": "http://arxiv.org/abs/2605.02888v1",
   "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
@@ -12,10 +12,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-05-06",
-  "first_deep_dive_daily": "2026-05-06",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-05-07",
+  "first_deep_dive_daily": "2026-05-07",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -26,12 +26,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 36.2,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：推理与服务：Speculative decoding accelerates large language model (LLM) infe…",
-  "one_line_essence": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
+  "score": 88.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4…",
+  "one_line_essence": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
+  "new_claim_or_method": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -45,8 +45,10 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [],
+    "status": "emerging",
+    "related_trends": [
+      "context-engineering"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -55,7 +57,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
+    "why_save": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 51",
     "future_trigger": [
       "待更多证据"
     ],
@@ -95,15 +97,30 @@
     ]
   },
   "actions": {
-    "immediate_actions": [],
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
     "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2605.02888v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2605.02888v1"
+    }
+  ],
   "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
-  "daily_path": "daily-detail.html?date=2026-05-06",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-05-07",
+  "trend_paths": [
+    "trend-detail.html?id=context-engineering"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

@@ -1,0 +1,125 @@
+{
+  "date": "2026-05-07",
+  "model": "glm-5.1",
+  "generated_at": "2026-05-07T04:36:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "http://arxiv.org/abs/2605.02888v1": {
+      "score": 88,
+      "value_type": "immediate",
+      "reason": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+      "matched_topics": ["inference-serving", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2605.02868v1": {
+      "score": 86,
+      "value_type": "trend",
+      "reason": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接趋势价值。",
+      "matched_topics": ["ai-agent", "coding-agent", "security-governance", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2605.02801v1": {
+      "score": 76,
+      "value_type": "trend",
+      "reason": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的团队有架构设计参考价值。",
+      "matched_topics": ["ai-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2605.02815v1": {
+      "score": 74,
+      "value_type": "long_tail",
+      "reason": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有参考价值。",
+      "matched_topics": ["ai-agent", "coding-agent"]
+    },
+    "http://arxiv.org/abs/2605.02832v1": {
+      "score": 70,
+      "value_type": "long_tail",
+      "reason": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁移模式。发现制造业中更强治理可同时提升性能和降低疲劳（反直觉）。五维认知审计 + 五模自治光谱对 AI Agent 的安全治理设计有借鉴意义。",
+      "matched_topics": ["ai-agent", "llm-evaluation", "security-governance"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 0,
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "arxiv_id": "2605.02888v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 9,
+        "trend_relevance": 9,
+        "actionability": 10
+      },
+      "weighted_total": 8.8,
+      "confidence": "high",
+      "one_line": "用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速",
+      "decision": "strong_accept",
+      "reasoning": "直接解决 LLM 部署核心瓶颈（推理延迟），实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。"
+    },
+    {
+      "paper_index": 1,
+      "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+      "arxiv_id": "2605.02868v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 9,
+        "trend_relevance": 8,
+        "actionability": 9
+      },
+      "weighted_total": 8.6,
+      "confidence": "high",
+      "one_line": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成",
+      "decision": "strong_accept",
+      "reasoning": "98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M，赚取 $2900 赏金。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接价值。"
+    },
+    {
+      "paper_index": 2,
+      "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+      "arxiv_id": "2605.02801v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 9,
+        "evidence_strength": 6,
+        "trend_relevance": 10,
+        "actionability": 6
+      },
+      "weighted_total": 7.6,
+      "confidence": "medium",
+      "one_line": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习",
+      "decision": "accept",
+      "reasoning": "综述/框架论文而非实验驱动，但提供了极有价值的概念框架：8 族奖励、8 级信用单元、5 个编排子决策。连接了 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的团队有架构设计参考价值。"
+    },
+    {
+      "paper_index": 3,
+      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+      "arxiv_id": "2605.02815v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 6,
+        "evidence_strength": 8,
+        "trend_relevance": 7,
+        "actionability": 8
+      },
+      "weighted_total": 7.4,
+      "confidence": "high",
+      "one_line": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线",
+      "decision": "accept",
+      "reasoning": "工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询，而非一次性检索 schema。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有直接参考价值。"
+    },
+    {
+      "paper_index": 4,
+      "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and AI Systems",
+      "arxiv_id": "2605.02832v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 7,
+        "actionability": 7
+      },
+      "weighted_total": 7.0,
+      "confidence": "high",
+      "one_line": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量",
+      "decision": "accept",
+      "reasoning": "框架设计精巧：rule-based expert system + contextual-bandit 耦合，五维认知审计 + 五模自治光谱。三个反直觉发现（治理可同时提升性能和降低疲劳）有工程启发。可复用资产：审计维度设计、治理-性能权衡曲线、benchmark 跨领域设计。对 AI Agent 安全治理、Human-in-the-Loop 系统有参考价值。"
+    }
+  ]
+}

@@ -11,39 +11,39 @@
     "Xi Ye",
     "Jocelyn Qiaochu Chen"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-05-04",
   "url": "http://arxiv.org/abs/2605.02815v1",
   "pdf_url": "https://arxiv.org/pdf/2605.02815v1",
-  "code_url": "",
+  "code_url": "https://github.com/StringNLPLAB/FlexSQL",
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-05-06",
-  "first_deep_dive_daily": "2026-05-06",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-05-07",
+  "first_deep_dive_daily": "2026-05-07",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
   "value_scores": {
     "novelty": 4.8,
-    "relevance": 6.2,
-    "evidence": 4.5,
-    "engineering_testability": 4.6,
-    "trend_signal": 4.05,
+    "relevance": 5.0,
+    "evidence": 5.9,
+    "engineering_testability": 5.5,
+    "trend_signal": 3.5,
     "long_tail_potential": 3.5,
-    "actionability": 5.0,
+    "actionability": 6.1,
     "noise_risk": 1.2
   },
-  "score": 39.6,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：AI Agent：Text-to-SQL over large analytical databases requires navigati…",
-  "one_line_essence": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
+  "score": 74.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得先保存：灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 …",
+  "one_line_essence": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有参考价值。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
-  "research_position": "source_paper",
+  "new_claim_or_method": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言",
+  "research_position": "long_tail_insight",
   "engineering_testability": {
-    "has_code": false,
+    "has_code": true,
     "has_benchmark": false,
-    "can_reproduce": false,
+    "can_reproduce": true,
     "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
     "engineering_scenarios": [
       "AI Agent",
@@ -52,7 +52,7 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "long_tail_watch",
     "related_trends": [
       "agentic-world-modeling",
       "coding-agent"
@@ -65,9 +65,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
+    "why_save": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数",
     "future_trigger": [
-      "待更多证据"
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -82,7 +82,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": ""
+    "revisit_date": "2026-05-28"
   },
   "insights": {
     "system_design": [
@@ -107,12 +107,29 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
+    ],
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2605.02815v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2605.02815v1"
+    },
+    {
+      "label": "Code",
+      "url": "https://github.com/StringNLPLAB/FlexSQL"
+    }
+  ],
   "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
-  "daily_path": "daily-detail.html?date=2026-05-06",
+  "daily_path": "daily-detail.html?date=2026-05-07",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"

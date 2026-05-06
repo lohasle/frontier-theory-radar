@@ -4,39 +4,39 @@
   "authors": [
     "Chenchen Zhang"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-05-04",
   "url": "http://arxiv.org/abs/2605.02801v1",
   "pdf_url": "https://arxiv.org/pdf/2605.02801v1",
-  "code_url": "",
+  "code_url": "https://github.com/xxzcc/awesome-llm-mas-rl",
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-05-06",
-  "first_deep_dive_daily": "2026-05-06",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-05-07",
+  "first_deep_dive_daily": "2026-05-07",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
-    "novelty": 5.4,
-    "relevance": 6.2,
-    "evidence": 4.95,
-    "engineering_testability": 5.15,
-    "trend_signal": 4.05,
+    "novelty": 4.8,
+    "relevance": 5.0,
+    "evidence": 5.9,
+    "engineering_testability": 6.6,
+    "trend_signal": 3.5,
     "long_tail_potential": 3.5,
-    "actionability": 5.0,
+    "actionability": 7.3,
     "noise_risk": 1.2
   },
-  "score": 42.1,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：AI Agent：As large language model (LLM) agents evolve from isolated too…",
-  "one_line_essence": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
+  "score": 76.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策…",
+  "one_line_essence": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的团队有架构设计参考价值。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
+  "new_claim_or_method": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的",
   "research_position": "source_paper",
   "engineering_testability": {
-    "has_code": false,
+    "has_code": true,
     "has_benchmark": false,
-    "can_reproduce": false,
+    "can_reproduce": true,
     "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
     "engineering_scenarios": [
       "AI Agent",
@@ -45,7 +45,7 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [
       "agentic-world-modeling",
       "coding-agent"
@@ -58,9 +58,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
+    "why_save": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -99,13 +99,30 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2605.02801v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2605.02801v1"
+    },
+    {
+      "label": "Code",
+      "url": "https://github.com/xxzcc/awesome-llm-mas-rl"
+    }
+  ],
   "detail_path": "paper-detail.html?id=reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
-  "daily_path": "daily-detail.html?date=2026-05-06",
+  "daily_path": "daily-detail.html?date=2026-05-07",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"

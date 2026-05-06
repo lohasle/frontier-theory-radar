@@ -78,15 +78,16 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-05-07 · SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](daily-detail.html?date=2026-05-07) · 即时价值 · 重点学习
 - [2026-05-06 · EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs](daily-detail.html?date=2026-05-06) · 长尾价值 · 持续观察
 - [2026-04-29 · Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](daily-detail.html?date=2026-04-29) · 即时价值 · 重点学习
 - [2026-04-28 · Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](daily-detail.html?date=2026-04-28) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 19
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 20
 - [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 17
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 19
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 20
 
 ## 启发沉淀说明
 

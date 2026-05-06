@@ -1,6 +1,314 @@
 {
-  "updated_at": "2026-05-06T04:36:34.567136",
+  "updated_at": "2026-05-07T04:39:26.702921",
   "dailies": {
+    "2026-05-07": {
+      "date": "2026-05-07",
+      "title": "论文价值发现日报 - 2026-05-07",
+      "deep_dive_id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+      "deep_dive_title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "重点学习",
+      "daily_action": "今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案",
+      "score": 88.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4…",
+      "max_uncertainty": "SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证",
+      "conclusion_lines": [
+        "今天最值得看的是《SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案。",
+        "最大不确定性：SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+          "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+          "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 88.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+          "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+          "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
+          "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 76.0,
+          "decision": "轻量试点",
+          "has_code": true,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+          "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+          "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 74.0,
+          "decision": "轻量试点",
+          "has_code": true,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
+          "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
+          "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        }
+      ],
+      "deep_dive": {
+        "id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+        "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+        "authors": [
+          "Shikhar Shukla"
+        ],
+        "source": "arXiv",
+        "published": "2026-05-04",
+        "url": "http://arxiv.org/abs/2605.02888v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-05-07",
+        "first_deep_dive_daily": "2026-05-07",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 5.0,
+          "evidence": 4.95,
+          "engineering_testability": 4.05,
+          "trend_signal": 4.05,
+          "long_tail_potential": 3.5,
+          "actionability": 5.0,
+          "noise_risk": 1.2
+        },
+        "score": 88.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4…",
+        "one_line_essence": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "context-engineering"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 51",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2605.02888v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2605.02888v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+        "daily_path": "daily-detail.html?date=2026-05-07",
+        "trend_paths": [
+          "trend-detail.html?id=context-engineering"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [
+        {
+          "id": "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+          "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+          "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+          "why_save": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-28"
+        },
+        {
+          "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
+          "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
+          "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
+          "why_save": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-28"
+        }
+      ],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02888v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02888v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-05-07</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2605.02888v1\" target=\"_blank\" rel=\"noopener noreferrer\">SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案</li>\n<li><strong>分数：</strong> 88.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2605.02888v1\" target=\"_blank\" rel=\"noopener noreferrer\">SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection</a>。</li>\n<li><strong>为什么值得看：</strong> 直接解决 LLM 部署最核心的推理延迟瓶颈，用轻量 MLP 自适应选择推测解码长度，在压缩模型上实现 56% 加速且开销仅 0.34ms/step。实验覆盖 5112 条记录、统计显著 p<0.001，工程集成路径清晰——任何使用推测解码的框架均可直接接入。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值（immediate）。有明确代码可集成，可安排最小实验验证收益。</li>\n<li><strong>今天该做什么：</strong> 先读摘要与方法，然后 profile 当前推理服务的推测解码 γ 设定，评估固定 γ=4 与自适应 γ 的差距。</li>\n<li><strong>最大不确定性：</strong> 是否已开源代码、MLP 控制器在新模型架构上的泛化能力。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2605.02888v1\" target=\"_blank\" rel=\"noopener noreferrer\">SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection</a></td><td>inference-serving / context-engineering</td><td>即时价值</td><td>88.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2605.02868v1\" target=\"_blank\" rel=\"noopener noreferrer\">EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs</a></td><td>ai-agent / coding-agent</td><td>趋势价值</td><td>86.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2605.02801v1\" target=\"_blank\" rel=\"noopener noreferrer\">Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces</a></td><td>ai-agent / llm-evaluation</td><td>趋势价值</td><td>76.0</td><td>轻量试点</td><td>是</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2605.02815v1\" target=\"_blank\" rel=\"noopener noreferrer\">FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents</a></td><td>ai-agent / coding-agent</td><td>长尾价值</td><td>74.0</td><td>轻量试点</td><td>是</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2605.02832v1\" target=\"_blank\" rel=\"noopener noreferrer\">HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems</a></td><td>ai-agent / llm-evaluation</td><td>长尾价值</td><td>70.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 推测解码的最优推测长度 γ 应随压缩级别动态调整，而非固定为 4。</li>\n<li><strong>底层问题：</strong> LLM 推理延迟是生产部署核心瓶颈，推测解码是最有前景的加速手段，但现有系统忽略了压缩级别对最优 γ 的显著影响。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 用轻量 MLP 从草稿模型提取置信度和熵信号，自适应选择 γ，在 5112 条记录上验证 56% 相对提升（p<0.001）。</li>\n<li><strong>研究位置：</strong> 源头论文。首次系统揭示量化级别对推测解码 γ 的影响，并提出端到端解决方案。</li>\n<li><strong>工程可验证性：</strong> 暂缺代码链接，但方法描述清晰，可从 profiling 数据 + MLP 训练侧做最小验证。任何使用推测解码的推理框架（vLLM、TensorRT-LLM）都是潜在集成目标。</li>\n<li><strong>趋势关联：</strong> 推理优化从固定策略转向自适应/学习型策略的大趋势，与 Medusa 多头推测、Eagle 特征级推测互补。</li>\n<li><strong>长尾价值：</strong> 即使短期不部署，SpecKV 的 profiling 方法和数据集可作为推理优化的基准资产。</li>\n<li><strong>启发：</strong> 在量化模型上部署推测解码时，应先 profile 最优 γ 而非直接使用默认值。部署同一模型的不同量化版本需要不同的推测策略。</li>\n<li><strong>行动建议：</strong> 今天读摘要与方法，评估当前推理服务 γ=4 的次优程度，设计 SpecKV MLP 控制器集成方案。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2605.02815v1\" target=\"_blank\" rel=\"noopener noreferrer\">FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有参考价值。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-05-28</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2605.02832v1\" target=\"_blank\" rel=\"noopener noreferrer\">HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁移模式。发现制造业中更强治理可同时提升性能和降低疲劳（反直觉）。五维认知审计 + 五模自治光谱对 AI Agent 的安全治理设计有借鉴意义。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-05-28</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li>当前样本中暂无明确噪声论文，但仍需保留忽略标准。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>系统设计启发</h4>\n<ul>\n<li>推理参数（γ、batch size、量化级别）的联合优化是推理服务自动调优的重要方向。</li>\n</ul>\n<h4>Agent 工程启发</h4>\n<ul>\n<li>EvoPoC 将漏洞验证从纯代码生成提升为结构化推理（知识图谱 + SMT + 资产模拟），是 Agent 工程从'会调用工具'到'会验证结果'的范式升级。</li>\n<li>FlexSQL 的灵活探索模式说明：Agent 应在推理任意阶段主动获取信息，而非一次性检索所有上下文。</li>\n</ul>\n<h4>研发流程启发</h4>\n<ul>\n<li>编排轨迹（Orchestration Traces）是评估多智能体系统质量的系统化框架，可沉淀为可回放的 JSON schema。</li>\n</ul>\n<h4>评测方法启发</h4>\n<ul>\n<li>HAAS 的五维认知审计 + 五模自治光谱是 AI 治理评测的可迁移模式。</li>\n</ul>\n<h4>平台工程启发</h4>\n<ul>\n<li>SpecKV 的自适应 γ 选择可作为推理框架的内置优化器，降低运维手动调参成本。</li>\n</ul>\n<h4>个人学习启发</h4>\n<ul>\n<li>优先读能直接转化为工程加速或安全加固的论文，而非单纯追热度。</li>\n</ul>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2605.02888v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2605.02888v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。</li>\n<li><strong>最大不确定性：</strong> SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证</li>\n<li><strong>下一步动作：</strong> 更新趋势页（推理优化方向）、长尾库（EvoPoC 安全审计模式）与论文详情档案</li>\n</ul>\n<p>> 生成时间：2026-05-07T04:39:17.166673</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
     "2026-05-06": {
       "date": "2026-05-06",
       "title": "论文价值发现日报 - 2026-05-06",
@@ -10,9 +318,9 @@
       "value_type_label": "长尾价值",
       "decision": "持续观察",
       "daily_action": "完成摘要精读与最小实验设计",
-      "score": 54.4,
-      "trend_stage": "long_tail_watch",
-      "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
+      "score": 86.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "值得继续观察：通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击…",
       "max_uncertainty": "缺少多源工程证据",
       "conclusion_lines": [
         "今天最值得看的是《EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs》。",
@@ -21,32 +329,6 @@
         "最大不确定性：缺少多源工程证据。"
       ],
       "candidate_papers": [
-        {
-          "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-          "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-          "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-          "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.4,
-          "decision": "持续观察",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
-        },
-        {
-          "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
-          "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
-          "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
-          "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 51.6,
-          "decision": "持续观察",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
-        },
         {
           "id": "when-audio-language-models-fail-to-leverage-multimodal-context-for-dysarthric-speech-recognition",
           "title": "When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition",
@@ -85,6 +367,32 @@
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
+        },
+        {
+          "id": "a-closed-form-persistence-landmark-pipeline-for-certified-point-cloud-and-graph-classification",
+          "title": "A Closed-Form Persistence-Landmark Pipeline for Certified Point-Cloud and Graph Classification",
+          "detail_path": "paper-detail.html?id=a-closed-form-persistence-landmark-pipeline-for-certified-point-cloud-and-graph-classification",
+          "direction": "未分类",
+          "value_type": "ignore",
+          "value_type_label": "暂时忽略",
+          "score": 44.7,
+          "decision": "暂时忽略",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "videonet-a-large-scale-dataset-for-domain-specific-action-recognition",
+          "title": "VideoNet: A Large-Scale Dataset for Domain-Specific Action Recognition",
+          "detail_path": "paper-detail.html?id=videonet-a-large-scale-dataset-for-domain-specific-action-recognition",
+          "direction": "未分类",
+          "value_type": "ignore",
+          "value_type_label": "暂时忽略",
+          "score": 43.4,
+          "decision": "暂时忽略",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -100,7 +408,7 @@
           "Cong Wu",
           "Yang Liu"
         ],
-        "source": "arxiv",
+        "source": "arXiv",
         "published": "2026-05-04",
         "url": "http://arxiv.org/abs/2605.02868v1",
         "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
@@ -108,27 +416,27 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-05-06",
-        "first_deep_dive_daily": "2026-05-06",
-        "value_type": "long_tail",
-        "value_type_label": "长尾价值",
+        "first_seen_date": "2026-05-07",
+        "first_deep_dive_daily": "2026-05-07",
+        "value_type": "trend",
+        "value_type_label": "趋势价值",
         "value_scores": {
           "novelty": 4.8,
-          "relevance": 10,
-          "evidence": 5.4,
-          "engineering_testability": 4.6,
-          "trend_signal": 5.15,
+          "relevance": 9.8,
+          "evidence": 4.5,
+          "engineering_testability": 4.05,
+          "trend_signal": 4.6,
           "long_tail_potential": 4.15,
           "actionability": 5.0,
           "noise_risk": 1.2
         },
-        "score": 54.4,
-        "decision": "持续观察",
-        "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
-        "one_line_essence": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+        "score": 86.0,
+        "decision": "重点学习",
+        "one_line_judgement": "值得继续观察：通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击…",
+        "one_line_essence": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接趋势价值。",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
-        "research_position": "long_tail_insight",
+        "new_claim_or_method": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接趋势价值。",
+        "research_position": "source_paper",
         "engineering_testability": {
           "has_code": false,
           "has_benchmark": false,
@@ -141,7 +449,7 @@
           ]
         },
         "trend_relation": {
-          "status": "long_tail_watch",
+          "status": "emerging",
           "related_trends": [
             "agentic-world-modeling",
             "coding-agent",
@@ -155,9 +463,9 @@
           ]
         },
         "long_tail": {
-          "why_save": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+          "why_save": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现",
           "future_trigger": [
-            "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+            "出现多篇跟进论文、开源项目和工程博客共振"
           ],
           "possible_use_cases": [
             "Prompt 设计",
@@ -172,7 +480,7 @@
             "模板"
           ],
           "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-          "revisit_date": "2026-05-27"
+          "revisit_date": ""
         },
         "insights": {
           "system_design": [
@@ -196,17 +504,26 @@
         },
         "actions": {
           "immediate_actions": [],
-          "trend_actions": [],
-          "long_tail_actions": [
-            "加入长尾库",
-            "标注未来触发条件",
-            "先沉淀 Prompt / Skill 草案"
+          "trend_actions": [
+            "纳入趋势雷达",
+            "观察代码 / benchmark / 工程博客",
+            "7-30 天复盘"
           ],
+          "long_tail_actions": [],
           "ignore_reason": ""
         },
-        "references": [],
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2605.02868v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2605.02868v1"
+          }
+        ],
         "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-        "daily_path": "daily-detail.html?date=2026-05-06",
+        "daily_path": "daily-detail.html?date=2026-05-07",
         "trend_paths": [
           "trend-detail.html?id=agentic-world-modeling",
           "trend-detail.html?id=coding-agent",
@@ -220,46 +537,6 @@
         }
       },
       "long_tail_saved": [
-        {
-          "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-          "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-          "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-          "why_save": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-05-27"
-        },
-        {
-          "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
-          "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
-          "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
-          "why_save": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-05-27"
-        },
         {
           "id": "when-audio-language-models-fail-to-leverage-multimodal-context-for-dysarthric-speech-recognition",
           "title": "When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition",
@@ -283,7 +560,8 @@
       ],
       "ignore_reasons": [
         "Standing on the Shoulders of Giants: Stabilized Knowledge Distillation for Cross--Language Code Clone Detection：新意弱、证据弱或当前相关性有限。",
-        "AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion：新意弱、证据弱或当前相关性有限。"
+        "AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion：新意弱、证据弱或当前相关性有限。",
+        "A Closed-Form Persistence-Landmark Pipeline for Certified Point-Cloud and Graph Classification：新意弱、证据弱或当前相关性有限。"
       ],
       "insights": {
         "system_design": [
@@ -315,7 +593,16 @@
         ],
         "ignore_reason": ""
       },
-      "references": [],
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02868v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02868v1"
+        }
+      ],
       "mermaid": {
         "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
         "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",

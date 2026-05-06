@@ -1,105 +1,118 @@
 {
-  "updated_at": "2026-05-06T04:36:31.090727",
+  "updated_at": "2026-05-07T04:39:21.986694",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-05-06",
-    "title": "论文价值发现日报 - 2026-05-06",
-    "deep_dive_title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-    "deep_dive_url": "http://arxiv.org/abs/2605.02868v1",
-    "decision": "持续观察",
-    "value_type": "long_tail",
-    "value_type_label": "长尾价值",
-    "daily_action": "完成摘要精读与最小实验设计",
-    "max_uncertainty": "缺少多源工程证据",
-    "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-    "path": "daily-detail.html?date=2026-05-06"
+    "date": "2026-05-07",
+    "title": "论文价值发现日报 - 2026-05-07",
+    "deep_dive_title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+    "deep_dive_url": "http://arxiv.org/abs/2605.02888v1",
+    "decision": "重点学习",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "daily_action": "今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案",
+    "max_uncertainty": "SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证",
+    "one_line_judgement": "直接解决 LLM 部署最核心的推理延迟瓶颈，用轻量 MLP 自适应选择推测解码长度，在压缩模型上实现 56% 加速且开销仅 0.34ms/step。实验覆盖 5112 条记录、统计显著 p<0.001，工程集成路径清晰——任何使用推测解码的框架均可直接接入。",
+    "path": "daily-detail.html?date=2026-05-07"
   },
   "top_paper": {
-    "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+    "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
     "authors": [
-      "Ruichao Liang",
-      "Jing Chen",
-      "Xianglong Li",
-      "Huangpeng Gu",
-      "Yebo Feng",
-      "Yue Xue",
-      "Cong Wu",
-      "Yang Liu"
+      "Shikhar Shukla"
     ],
     "published": "2026-05-04",
     "updated": "2026-05-04",
-    "source": "arxiv",
-    "url": "http://arxiv.org/abs/2605.02868v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
+    "source": "arXiv",
+    "url": "http://arxiv.org/abs/2605.02888v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Smart contract vulnerabilities in Decentralized Finance caused over billions of dollars losses every year, yet the security community faces a critical bottleneck: identifying a vulnerability is not the same as proving it is exploitable. Manual PoC construction is prohibitively labor-intensive, leaving most disclosed vulnerabilities unverified and protocols exposed long before mitigation is applied. In this paper, we propose \\sys, a knowledge-driven agentic system for end-to-end contract vulnerability detection and exploit synthesis. Our core insight is that exploit synthesis is not a code generation task but a \\emph{structured reasoning problem} that requires grounded knowledge of protocol semantics, failure root cause, and exploit primitives. \\sys organizes this knowledge into a \\emph{Hierarchical Knowledge Graph} (HKG) that serves as structured memory for LLM-guided multi-hop reasoning. To validate exploit feasibility beyond code synthesis, \\sys employs a two-stage validation framework that checks exploit-path reachability via SMT solving and profit realizability via asset-level state simulation, ensuring generated PoCs satisfy both logical and economic viability constraints. Evaluated on 88 real-world DeFi attacks and 72 audited projects (2,573 contracts), \\sys achieves 98\\% recall and 0.9 F1-score in detection, and a 96.6\\% exploit success rate (ESR), reproducing 85 historical exploits and recovering over \\$116.2M revenue. \\sys outperforms SOTA fuzzers (\\textsc{Verite}, \\textsc{ItyFuzz}) by up to $5\\times$ in ESR and $300\\times$ in recoverable value, and the LLM-based exploit generator \\textsc{A1} by $2\\times$ and $8.5\\times$ respectively. In bug bounty evaluation, \\sys identified 16 confirmed 0-day vulnerabilities, helping secure over \\$70.6M and earning \\$2,900 in bounties.",
+    "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a small draft model to propose candidate tokens that a larger target model verifies. A critical hyperparameter in this process is the speculation length γ, which determines how many tokens the draft model proposes per step. Nearly all existing systems use a fixed γ (typically 4), yet empirical evidence suggests that the optimal value varies across task types and, crucially, depends on the compression level applied to the target model. In this paper, we present SpecKV, a lightweight adaptive controller that selects γ per speculation step using signals extracted from the draft model itself. We profile speculative decoding across 4 task categories, 4 speculation lengths, and 3 compression levels (FP16, INT8, NF4), collecting 5,112 step-level records with per-step acceptance rates, draft entropy, and draft confidence. We demonstrate that the optimal γ shifts across compression regimes and that draft model confidence and entropy are strong predictors of acceptance rate (correlation ≈ 0.56). SpecKV uses a small MLP trained on these signals to maximize expected tokens per speculation step, achieving a 56.0% improvement over the fixed-γ=4 baseline with only 0.34 ms overhead per decision (<0.5% of step time). The improvement is statistically significant (p < 0.001, paired bootstrap test). We release all profiling data, trained models, and notebooks as open-source artifacts.",
     "categories": [
-      "cs.CR",
-      "cs.SE"
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.DC"
     ],
-    "keywords": [],
-    "score": 54.4,
-    "decision": "持续观察",
-    "links": [],
-    "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-    "value_type": "long_tail",
+    "keywords": [
+      "inference"
+    ],
+    "score": 88.0,
+    "decision": "重点学习",
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "http://arxiv.org/abs/2605.02888v1"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.02888v1"
+      }
+    ],
+    "llm_reason": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+    "id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+    "value_type": "immediate",
     "matched_topics": [
-      "ai-agent",
-      "coding-agent",
-      "context-engineering",
-      "rag-knowledge",
-      "multimodal-agent",
-      "llm-evaluation",
-      "security-governance"
+      "inference-serving",
+      "context-engineering"
     ],
     "score_breakdown": {
       "novelty": 4.8,
-      "problem_importance": 9.05,
-      "relevance": 10,
-      "evidence_strength": 5.4,
-      "engineering_testability": 4.6,
-      "trend_signal": 5.15,
-      "long_tail_potential": 4.15,
-      "asset_convertibility": 6.2,
+      "problem_importance": 5.15,
+      "relevance": 5.0,
+      "evidence_strength": 4.95,
+      "engineering_testability": 4.05,
+      "trend_signal": 4.05,
+      "long_tail_potential": 3.5,
+      "asset_convertibility": 4.8,
       "actionability": 5.0,
       "noise_risk": 1.2,
-      "weak_evidence_penalty": 4.0,
-      "low_relevance_penalty": 0,
+      "weak_evidence_penalty": 5.0,
+      "low_relevance_penalty": 3.6,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
-    "trend_status": "long_tail_watch",
-    "brief_cn": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
-    "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
-    "first_seen_date": "2026-05-06",
-    "first_deep_dive_daily": "2026-05-06",
-    "value_type_label": "长尾价值",
-    "trend_stage_label": "长尾观察",
-    "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-    "long_tail_summary": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+    "trend_status": "emerging",
+    "brief_cn": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
+    "one_line_judgement": "今天值得试：直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4…",
+    "first_seen_date": "2026-05-07",
+    "first_deep_dive_daily": "2026-05-07",
+    "value_type_label": "即时价值",
+    "trend_stage_label": "萌芽",
+    "future_trigger": "待更多证据",
+    "long_tail_summary": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 51",
     "related_trends": [
-      "agentic-world-modeling",
-      "coding-agent",
       "context-engineering"
     ],
-    "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs"
+    "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection"
   },
   "paper_count": 36,
-  "daily_count": 3,
+  "daily_count": 4,
   "trend_count": 3,
   "long_tail_count": 4,
   "value_distribution": {
-    "immediate": 2,
-    "trend": 3,
+    "immediate": 3,
+    "trend": 5,
     "long_tail": 4,
-    "ignore": 27
+    "ignore": 24
   },
   "recent_dailies": [
+    {
+      "date": "2026-05-07",
+      "title": "论文价值发现日报 - 2026-05-07",
+      "deep_dive_title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "deep_dive_url": "http://arxiv.org/abs/2605.02888v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案",
+      "max_uncertainty": "SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证",
+      "one_line_judgement": "直接解决 LLM 部署最核心的推理延迟瓶颈，用轻量 MLP 自适应选择推测解码长度，在压缩模型上实现 56% 加速且开销仅 0.34ms/step。实验覆盖 5112 条记录、统计显著 p<0.001，工程集成路径清晰——任何使用推测解码的框架均可直接接入。",
+      "path": "daily-detail.html?date=2026-05-07"
+    },
     {
       "date": "2026-05-06",
       "title": "论文价值发现日报 - 2026-05-06",
@@ -142,6 +155,80 @@
   ],
   "top_papers": [
     {
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "authors": [
+        "Shikhar Shukla"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.02888v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a small draft model to propose candidate tokens that a larger target model verifies. A critical hyperparameter in this process is the speculation length γ, which determines how many tokens the draft model proposes per step. Nearly all existing systems use a fixed γ (typically 4), yet empirical evidence suggests that the optimal value varies across task types and, crucially, depends on the compression level applied to the target model. In this paper, we present SpecKV, a lightweight adaptive controller that selects γ per speculation step using signals extracted from the draft model itself. We profile speculative decoding across 4 task categories, 4 speculation lengths, and 3 compression levels (FP16, INT8, NF4), collecting 5,112 step-level records with per-step acceptance rates, draft entropy, and draft confidence. We demonstrate that the optimal γ shifts across compression regimes and that draft model confidence and entropy are strong predictors of acceptance rate (correlation ≈ 0.56). SpecKV uses a small MLP trained on these signals to maximize expected tokens per speculation step, achieving a 56.0% improvement over the fixed-γ=4 baseline with only 0.34 ms overhead per decision (<0.5% of step time). The improvement is statistically significant (p < 0.001, paired bootstrap test). We release all profiling data, trained models, and notebooks as open-source artifacts.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.DC"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 88.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02888v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02888v1"
+        }
+      ],
+      "llm_reason": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+      "id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+      "value_type": "immediate",
+      "matched_topics": [
+        "inference-serving",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
+      "one_line_judgement": "今天值得试：直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4…",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 51",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection"
+    },
+    {
       "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
       "authors": [
         "Ruichao Liang",
@@ -155,7 +242,7 @@
       ],
       "published": "2026-05-04",
       "updated": "2026-05-04",
-      "source": "arxiv",
+      "source": "arXiv",
       "url": "http://arxiv.org/abs/2605.02868v1",
       "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
       "openreview_url": "",
@@ -163,57 +250,232 @@
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Smart contract vulnerabilities in Decentralized Finance caused over billions of dollars losses every year, yet the security community faces a critical bottleneck: identifying a vulnerability is not the same as proving it is exploitable. Manual PoC construction is prohibitively labor-intensive, leaving most disclosed vulnerabilities unverified and protocols exposed long before mitigation is applied. In this paper, we propose \\sys, a knowledge-driven agentic system for end-to-end contract vulnerability detection and exploit synthesis. Our core insight is that exploit synthesis is not a code generation task but a \\emph{structured reasoning problem} that requires grounded knowledge of protocol semantics, failure root cause, and exploit primitives. \\sys organizes this knowledge into a \\emph{Hierarchical Knowledge Graph} (HKG) that serves as structured memory for LLM-guided multi-hop reasoning. To validate exploit feasibility beyond code synthesis, \\sys employs a two-stage validation framework that checks exploit-path reachability via SMT solving and profit realizability via asset-level state simulation, ensuring generated PoCs satisfy both logical and economic viability constraints. Evaluated on 88 real-world DeFi attacks and 72 audited projects (2,573 contracts), \\sys achieves 98\\% recall and 0.9 F1-score in detection, and a 96.6\\% exploit success rate (ESR), reproducing 85 historical exploits and recovering over \\$116.2M revenue. \\sys outperforms SOTA fuzzers (\\textsc{Verite}, \\textsc{ItyFuzz}) by up to $5\\times$ in ESR and $300\\times$ in recoverable value, and the LLM-based exploit generator \\textsc{A1} by $2\\times$ and $8.5\\times$ respectively. In bug bounty evaluation, \\sys identified 16 confirmed 0-day vulnerabilities, helping secure over \\$70.6M and earning \\$2,900 in bounties.",
+      "abstract": "Smart contract vulnerabilities in Decentralized Finance caused over billions of dollars losses every year, yet the security community faces a critical bottleneck: identifying a vulnerability is not the same as proving it is exploitable. We propose a knowledge-driven agentic system for end-to-end contract vulnerability detection and exploit synthesis. Our core insight is that exploit synthesis is not a code generation task but a structured reasoning problem that requires grounded knowledge of protocol semantics, failure root cause, and exploit primitives. The system organizes this knowledge into a Hierarchical Knowledge Graph (HKG) that serves as structured memory for LLM-guided multi-hop reasoning. Evaluated on 88 real-world DeFi attacks and 72 audited projects (2,573 contracts), the system achieves 98% recall and 0.9 F1-score in detection, and a 96.6% exploit success rate (ESR), reproducing 85 historical exploits and recovering over $116.2M revenue. It outperforms SOTA fuzzers by up to 5× in ESR and 300× in recoverable value.",
       "categories": [
         "cs.CR",
         "cs.SE"
       ],
-      "keywords": [],
-      "score": 54.4,
-      "decision": "持续观察",
-      "links": [],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 86.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02868v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02868v1"
+        }
+      ],
+      "llm_reason": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接趋势价值。",
       "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-      "value_type": "long_tail",
+      "value_type": "trend",
       "matched_topics": [
         "ai-agent",
         "coding-agent",
-        "context-engineering",
-        "rag-knowledge",
-        "multimodal-agent",
-        "llm-evaluation",
-        "security-governance"
+        "security-governance",
+        "rag-knowledge"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 9.05,
-        "relevance": 10,
-        "evidence_strength": 5.4,
-        "engineering_testability": 4.6,
-        "trend_signal": 5.15,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.6,
         "long_tail_potential": 4.15,
-        "asset_convertibility": 6.2,
+        "asset_convertibility": 4.8,
         "actionability": 5.0,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
+        "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 0,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
+      "trend_status": "emerging",
       "brief_cn": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
-      "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+      "one_line_judgement": "值得继续观察：通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击…",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现",
       "related_trends": [
         "agentic-world-modeling",
         "coding-agent",
         "context-engineering"
       ],
       "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs"
+    },
+    {
+      "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+      "authors": [
+        "Chenchen Zhang"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.02801v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02801v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "https://github.com/xxzcc/awesome-llm-mas-rl",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "As large language model (LLM) agents evolve from isolated tool users into coordinated teams, reinforcement learning (RL) must optimize not only individual actions but also how work is spawned, delegated, communicated, aggregated, and stopped. This paper studies RL for LLM-based multi-agent systems through orchestration traces: temporal interaction graphs whose events include sub-agent spawning, delegation, communication, tool use, return, aggregation, and stopping decisions. Using this lens, we identify three technical axes: reward design spanning eight families; credit signals attaching to eight units from token to team; and orchestration learning decomposing into five sub-decisions. We connect academic methods to public industrial evidence from Kimi Agent Swarm, OpenAI Codex, and Anthropic Claude Code. We release an 84-entry tagged paper pool, a 32-record exclusion log, and a minimal JSON schema for replayable orchestration traces.",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "planning",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 76.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02801v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02801v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/xxzcc/awesome-llm-mas-rl"
+        }
+      ],
+      "llm_reason": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的团队有架构设计参考价值。",
+      "id": "reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 5.9,
+        "engineering_testability": 6.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 3.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
+      "one_line_judgement": "值得继续观察：提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策…",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces"
+    },
+    {
+      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+      "authors": [
+        "Quang Hieu Pham",
+        "Yang He",
+        "Ping Nie",
+        "Canwen Xu",
+        "Davood Rafiei",
+        "Yuepeng Wang",
+        "Xi Ye",
+        "Jocelyn Qiaochu Chen"
+      ],
+      "published": "2026-05-04",
+      "updated": "2026-05-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.02815v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02815v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "https://github.com/StringNLPLAB/FlexSQL",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Text-to-SQL over large analytical databases requires navigating complex schemas, resolving ambiguous queries, and grounding decisions in actual data. We present FlexSQL, a text-to-SQL agent whose core design principle is flexible database interaction: the agent can explore schema structure, inspect data values, and run verification queries at any point during reasoning. FlexSQL generates diverse execution plans to cover multiple query interpretations, implements each plan in either SQL or Python, and uses a two-tiered repair mechanism. On Spider2-Snow, using gpt-oss-120b, FlexSQL achieves a 65.4% score, outperforming strong open-source baselines that use stronger, larger models such as gpt-o3 and DeepSeek-R1. When integrated into Claude Code as skills, our approach yields over 10% relative improvement.",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "tool use",
+        "planning"
+      ],
+      "score": 74.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02815v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02815v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/StringNLPLAB/FlexSQL"
+        }
+      ],
+      "llm_reason": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有参考价值。",
+      "id": "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "coding-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 5.9,
+        "engineering_testability": 5.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 3.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
+      "one_line_judgement": "值得先保存：灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 …",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents"
     },
     {
       "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
@@ -225,7 +487,7 @@
       ],
       "published": "2026-05-04",
       "updated": "2026-05-04",
-      "source": "arxiv",
+      "source": "arXiv",
       "url": "http://arxiv.org/abs/2605.02832v1",
       "pdf_url": "https://arxiv.org/pdf/2605.02832v1",
       "openreview_url": "",
@@ -233,49 +495,62 @@
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Deciding how to distribute work between humans and AI systems is a central challenge in organisational design. Most approaches treat this as a binary choice, yet the operational reality is richer: humans and AI routinely share tasks or take complementary roles depending on context, fatigue, and the stakes involved. Governing that distribution -- balancing efficiency, oversight, and human capability -- remains an open problem. This paper presents Human-AI Adaptive Symbiosis (HAAS), an implemented framework for adaptive task allocation in software engineering and manufacturing. HAAS combines two coupled components: a rule-based expert system that enforces governance constraints before any learning occurs, and a contextual-bandit learner that selects among feasible collaboration modes from outcome feedback. Task-agent fit is represented through five auditable cognitive dimensions and a five-mode autonomy spectrum -- from human-only to fully autonomous -- embedded in a reproducible benchmark spanning both domains. Three empirical findings emerge. First, governance is not a binary switch but a tunable design variable: tighter constraints predictably convert autonomous AI assignments into supervised collaborations, with domain-specific costs and benefits. Second, in manufacturing, stronger governance can improve operational performance and reduce fatigue simultaneously -- a workload-buffering effect that contradicts the usual framing of governance as pure overhead. Third, no single governance setting dominates across all contexts; moderate governance becomes increasingly competitive as the learner accumulates experience within the governed action space. Together, these findings position HAAS as a pre-deployment workbench for comparing and inspecting human--AI allocation policies before organisational commitment.",
+      "abstract": "Deciding how to distribute work between humans and AI systems is a central challenge in organisational design. This paper presents Human-AI Adaptive Symbiosis (HAAS), an implemented framework for adaptive task allocation in software engineering and manufacturing. HAAS combines a rule-based expert system that enforces governance constraints before any learning occurs, and a contextual-bandit learner that selects among feasible collaboration modes from outcome feedback. Three empirical findings emerge. First, governance is not a binary switch but a tunable design variable. Second, in manufacturing, stronger governance can improve operational performance and reduce fatigue simultaneously. Third, no single governance setting dominates across all contexts; moderate governance becomes increasingly competitive as the learner accumulates experience.",
       "categories": [
         "cs.AI",
         "cs.HC",
         "cs.SE"
       ],
-      "keywords": [],
-      "score": 51.6,
-      "decision": "持续观察",
-      "links": [],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 70.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02832v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02832v1"
+        }
+      ],
+      "llm_reason": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁移模式。发现制造业中更强治理可同时提升性能和降低疲劳（反直觉）。五维认知审计 + 五模自治光谱对 AI Agent 的安全治理设计有借鉴意义。",
       "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
       "value_type": "long_tail",
       "matched_topics": [
         "ai-agent",
-        "coding-agent",
         "llm-evaluation",
         "security-governance"
       ],
       "score_breakdown": {
         "novelty": 5.4,
-        "problem_importance": 7.1,
-        "relevance": 8.6,
-        "evidence_strength": 5.4,
-        "engineering_testability": 5.15,
-        "trend_signal": 5.45,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
+        "asset_convertibility": 6.2,
         "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 0,
+        "low_relevance_penalty": 2.2,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
       "trend_status": "long_tail_watch",
       "brief_cn": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
-      "one_line_judgement": "值得先保存：AI Agent：Deciding how to distribute work between humans and AI systems…",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
+      "one_line_judgement": "值得先保存：Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based ex…",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
+      "long_tail_summary": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁",
       "related_trends": [
         "agentic-world-modeling",
         "coding-agent"
@@ -621,229 +896,37 @@
         "coding-agent"
       ],
       "detail_path": "paper-detail.html?id=videonet-a-large-scale-dataset-for-domain-specific-action-recognition"
-    },
-    {
-      "title": "Enhancing RL Generalizability in Robotics through SHAP Analysis of Algorithms and Hyperparameters",
-      "authors": [
-        "Lingxiao Kong",
-        "Cong Yang",
-        "Oya Deniz Beyan",
-        "Zeyd Boukhers"
-      ],
-      "published": "2026-05-04",
-      "updated": "2026-05-04",
-      "source": "arxiv",
-      "url": "http://arxiv.org/abs/2605.02867v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.02867v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Despite significant advances in Reinforcement Learning (RL), model performance remains highly sensitive to algorithm and hyperparameter configurations, while generalization gaps across environments complicate real-world deployment. Although prior work has studied RL generalization, the relative contribution of specific configurations to the generalization gap has not been quantitatively decomposed and systematically leveraged for configuration selection. To address this limitation, we propose an explainable framework that evaluates RL performance across robotic environments using SHapley Additive exPlanations (SHAP) to quantify configuration impacts. We establish a theoretical foundation connecting Shapley values to generalizability, empirically analyze configuration impact patterns, and introduce SHAP-guided configuration selection to enhance generalization. Our results reveal distinct patterns across algorithms and hyperparameters, with consistent configuration impacts across diverse tasks and environments. By applying these insights to configuration selection, we achieve improved RL generalizability and provide actionable guidance for practitioners.",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "keywords": [],
-      "score": 43.2,
-      "decision": "暂时忽略",
-      "links": [],
-      "id": "enhancing-rl-generalizability-in-robotics-through-shap-analysis-of-algorithms-and-hyperparameters",
-      "value_type": "ignore",
-      "matched_topics": [
-        "rag-knowledge",
-        "multimodal-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 6.0,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 5.15,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Despite significant advances in Reinforcement Learning (RL), model performance…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Despite significant advances in Reinforcement Learning (RL)…",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Despite significant advances in Reinforcement Learning (RL), model performance…",
-      "related_trends": [
-        "context-engineering",
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=enhancing-rl-generalizability-in-robotics-through-shap-analysis-of-algorithms-and-hyperparameters"
-    },
-    {
-      "title": "(POSTER) From Sensors to Insight: Rapid, Edge-to-Core Application Development for Sensor-Driven Applications",
-      "authors": [
-        "Komal Thareja",
-        "Anirban Mandal",
-        "Ewa Deelman"
-      ],
-      "published": "2026-05-04",
-      "updated": "2026-05-04",
-      "source": "arxiv",
-      "url": "http://arxiv.org/abs/2605.02844v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.02844v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Scientists increasingly rely on sensor-based data; however transforming raw streams into insights across the edge-to-cloud continuum remains difficult due to the breadth of expertise required to coordinate the necessary data and computation flow. This paper introduces a pattern-based, AI-assisted methodology for rapid development of sensor-driven applications. Using Pegasus workflows executing on the FABRIC testbed, we demonstrate a 5-step development loop that shifts workflow construction and deployment from code-first to intent-first design. Starting from an existing Orcasound hydrophone workflow as a reusable template, we generate and refine workflows for air quality, earthquake, and soil moisture monitoring applications. We further show how these workflows extend to edge resources-including BlueField-3 DPUs and Raspberry Pis-through configuration and placement rather than workflow redesign. Our evaluation, from the perspective of a novice Pegasus user, shows that AI-assisted pattern reuse compresses multi-stage workflow development to 1-1.5 days per workflow while preserving the rigor and portability of workflow-based execution.",
-      "categories": [
-        "cs.DC",
-        "cs.AI",
-        "cs.SE"
-      ],
-      "keywords": [],
-      "score": 42.9,
-      "decision": "暂时忽略",
-      "links": [],
-      "id": "poster-from-sensors-to-insight-rapid-edge-to-core-application-development-for-sensor-driven-applications",
-      "value_type": "ignore",
-      "matched_topics": [
-        "llm-evaluation",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.6,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "LLM 评测：Scientists increasingly rely on sensor-based data; however transforming raw st…",
-      "one_line_judgement": "当前可忽略：LLM 评测：Scientists increasingly rely on sensor-based data; however tran…",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "LLM 评测：Scientists increasingly rely on sensor-based data; however transforming raw st…",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=poster-from-sensors-to-insight-rapid-edge-to-core-application-development-for-sensor-driven-applications"
-    },
-    {
-      "title": "SCPRM: A Schema-aware Cumulative Process Reward Model for Knowledge Graph Question Answering",
-      "authors": [
-        "Jiujiu Chen",
-        "Yazheng Liu",
-        "Sihong Xie",
-        "Hui Xiong"
-      ],
-      "published": "2026-05-04",
-      "updated": "2026-05-04",
-      "source": "arxiv",
-      "url": "http://arxiv.org/abs/2605.02819v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.02819v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Large language models excel at complex reasoning, yet evaluating their intermediate steps remains challenging. Although process reward models provide step-wise supervision, they often suffer from a risk compensation effect, where incorrect steps are offset by later correct ones, assigning high rewards to flawed reasoning paths. This issue is further exacerbated in knowledge graph (KG) reasoning, as there may exist multiple paths between the start and end entities in the KGs, and a risky step can make the reasoning path flawed. Those limitations are problematic in risk-sensitive tasks such as medical and legal KG reasoning. To address the issues, we propose a Schema-aware Cumulative Process Reward Model (SCPRM) that evaluates reasoning paths by conditioning on the reasoning prefix , and incorporating schema distance between current reasoning step and the implicit target parsed from the query, which provides cumulative and future rewards to guide the path explorations. We further integrate SCPRM into Monte Carlo Tree Search (MCTS) as SCPRM-MCTS to conduct multi-hop reasoning on KGs for question answering (QA) tasks. Across medical and legal KGQA and CWQ, SCPRM-MCTS improves the performance of Hits@k by an average of 1.18% over strong baselines, demonstrating more accurate and risk-sensitive reasoning evaluation.",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [],
-      "score": 42.5,
-      "decision": "暂时忽略",
-      "links": [],
-      "id": "scprm-a-schema-aware-cumulative-process-reward-model-for-knowledge-graph-question-answering",
-      "value_type": "ignore",
-      "matched_topics": [
-        "rag-knowledge",
-        "llm-evaluation",
-        "security-governance"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Large language models excel at complex reasoning, yet evaluating their interme…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Large language models excel at complex reasoning, yet evalu…",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Large language models excel at complex reasoning, yet evaluating their interme…",
-      "related_trends": [
-        "context-engineering",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=scprm-a-schema-aware-cumulative-process-reward-model-for-knowledge-graph-question-answering"
     }
   ],
   "long_tail_highlights": [
     {
-      "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-      "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
+      "id": "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
       "direction": "AI Agent / Coding Agent",
       "long_tail_type": "工程抽象",
-      "why_save": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+      "why_save": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-05-27",
-      "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs"
+      "revisit_date": "2026-05-28",
+      "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents"
     },
     {
       "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
       "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
-      "direction": "AI Agent / Coding Agent",
+      "direction": "AI Agent / LLM 评测",
       "long_tail_type": "工程抽象",
-      "why_save": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
+      "why_save": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-05-27",
+      "revisit_date": "2026-05-28",
       "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems"
     },
     {

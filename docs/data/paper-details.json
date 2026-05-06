@@ -1,6 +1,136 @@
 {
-  "updated_at": "2026-05-06T04:36:34.506372",
+  "updated_at": "2026-05-07T04:39:26.634540",
   "papers": {
+    "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection": {
+      "id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "authors": [
+        "Shikhar Shukla"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-04",
+      "url": "http://arxiv.org/abs/2605.02888v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 88.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4…",
+      "one_line_essence": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 5112 条记录，统计显著性 p<0.001，开销仅 0.34ms/step。工程落地路径清晰：任何使用推测解码的推理框架都可直接集成。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "直接解决 LLM 部署核心瓶颈（推理延迟），用轻量 MLP 自适应选择推测解码长度 γ，在压缩模型场景下实现 56% 推理加速。实验覆盖 4 类任务 × 4 种 γ × 3 种压缩级别共 51",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02888v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02888v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
+      "daily_path": "daily-detail.html?date=2026-05-07",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
     "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs": {
       "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
       "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
@@ -14,7 +144,7 @@
         "Cong Wu",
         "Yang Liu"
       ],
-      "source": "arxiv",
+      "source": "arXiv",
       "published": "2026-05-04",
       "url": "http://arxiv.org/abs/2605.02868v1",
       "pdf_url": "https://arxiv.org/pdf/2605.02868v1",
@@ -22,27 +152,27 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
       "value_scores": {
         "novelty": 4.8,
-        "relevance": 10,
-        "evidence": 5.4,
-        "engineering_testability": 4.6,
-        "trend_signal": 5.15,
+        "relevance": 9.8,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.6,
         "long_tail_potential": 4.15,
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 54.4,
-      "decision": "持续观察",
-      "one_line_judgement": "值得先保存：AI Agent：Smart contract vulnerabilities in Decentralized Finance cause…",
-      "one_line_essence": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+      "score": 86.0,
+      "decision": "重点学习",
+      "one_line_judgement": "值得继续观察：通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击…",
+      "one_line_essence": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接趋势价值。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
-      "research_position": "long_tail_insight",
+      "new_claim_or_method": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现 16 个确认的 0-day，追回 $116.2M。将漏洞验证从纯代码生成提升为结构化推理 + SMT 验证 + 资产模拟。对安全审计、CI/CD 集成有直接趋势价值。",
+      "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
         "has_benchmark": false,
@@ -55,7 +185,7 @@
         ]
       },
       "trend_relation": {
-        "status": "long_tail_watch",
+        "status": "emerging",
         "related_trends": [
           "agentic-world-modeling",
           "coding-agent",
@@ -69,7 +199,283 @@
         ]
       },
       "long_tail": {
-        "why_save": "AI Agent：Smart contract vulnerabilities in Decentralized Finance caused over billions o…",
+        "why_save": "通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击 + 72 个审计项目（2573 合约）上验证。发现",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02868v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02868v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+      "daily_path": "daily-detail.html?date=2026-05-07",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent",
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces": {
+      "id": "reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
+      "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+      "authors": [
+        "Chenchen Zhang"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-04",
+      "url": "http://arxiv.org/abs/2605.02801v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02801v1",
+      "code_url": "https://github.com/xxzcc/awesome-llm-mas-rl",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 5.9,
+        "engineering_testability": 6.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 7.3,
+        "noise_risk": 1.2
+      },
+      "score": 76.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策…",
+      "one_line_essence": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的团队有架构设计参考价值。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、OpenAI Codex、Anthropic Claude Code 等工业实践。84 篇论文池 + 可回放 JSON schema 是可复用资产。对构建多智能体系统的",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": true,
+        "has_benchmark": false,
+        "can_reproduce": true,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "提出编排轨迹视角，系统化 RL 在 LLM 多智能体系统中的奖励设计、信用分配与编排学习。提供 8 族奖励、8 级信用单元、5 个编排子决策的概念框架。连接 Kimi Agent Swarm、",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02801v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02801v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/xxzcc/awesome-llm-mas-rl"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
+      "daily_path": "daily-detail.html?date=2026-05-07",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents": {
+      "id": "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+      "authors": [
+        "Quang Hieu Pham",
+        "Yang He",
+        "Ping Nie",
+        "Canwen Xu",
+        "Davood Rafiei",
+        "Yuepeng Wang",
+        "Xi Ye",
+        "Jocelyn Qiaochu Chen"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-04",
+      "url": "http://arxiv.org/abs/2605.02815v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.02815v1",
+      "code_url": "https://github.com/StringNLPLAB/FlexSQL",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 5.9,
+        "engineering_testability": 5.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 6.1,
+        "noise_risk": 1.2
+      },
+      "score": 74.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得先保存：灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 …",
+      "one_line_essence": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言查询接口产品有参考价值。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数据、运行验证查询。双层级修复（代码级→计划级）是实用的错误恢复策略。集成到 Claude Code 后带来 >10% 相对提升。开源代码可用。对数据分析自动化、自然语言",
+      "research_position": "long_tail_insight",
+      "engineering_testability": {
+        "has_code": true,
+        "has_benchmark": false,
+        "can_reproduce": true,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "long_tail_watch",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "灵活数据库交互的 Text-to-SQL Agent，在 Spider2-Snow 上 65.4% 超越更大模型的基线。工程理念清晰：允许 Agent 在推理任意阶段探索 schema、检查数",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -86,7 +492,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-05-27"
+        "revisit_date": "2026-05-28"
       },
       "insights": {
         "system_design": [
@@ -118,13 +524,25 @@
         ],
         "ignore_reason": ""
       },
-      "references": [],
-      "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-      "daily_path": "daily-detail.html?date=2026-05-06",
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02815v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02815v1"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/StringNLPLAB/FlexSQL"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
+      "daily_path": "daily-detail.html?date=2026-05-07",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent",
-        "trend-detail.html?id=context-engineering"
+        "trend-detail.html?id=coding-agent"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -142,7 +560,7 @@
         "Manoli Albert",
         "Miriam Gil"
       ],
-      "source": "arxiv",
+      "source": "arXiv",
       "published": "2026-05-04",
       "url": "http://arxiv.org/abs/2605.02832v1",
       "pdf_url": "https://arxiv.org/pdf/2605.02832v1",
@@ -150,27 +568,27 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
+      "first_seen_date": "2026-05-07",
+      "first_deep_dive_daily": "2026-05-07",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
         "novelty": 5.4,
-        "relevance": 8.6,
-        "evidence": 5.4,
-        "engineering_testability": 5.15,
-        "trend_signal": 5.45,
+        "relevance": 6.2,
+        "evidence": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 51.6,
-      "decision": "持续观察",
-      "one_line_judgement": "值得先保存：AI Agent：Deciding how to distribute work between humans and AI systems…",
-      "one_line_essence": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
+      "score": 70.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得先保存：Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based ex…",
+      "one_line_essence": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁移模式。发现制造业中更强治理可同时提升性能和降低疲劳（反直觉）。五维认知审计 + 五模自治光谱对 AI Agent 的安全治理设计有借鉴意义。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
-      "research_position": "benchmark",
+      "new_claim_or_method": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁移模式。发现制造业中更强治理可同时提升性能和降低疲劳（反直觉）。五维认知审计 + 五模自治光谱对 AI Agent 的安全治理设计有借鉴意义。",
+      "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
         "has_benchmark": false,
@@ -196,7 +614,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "AI Agent：Deciding how to distribute work between humans and AI systems is a central cha…",
+        "why_save": "Human-AI 自适应任务分配框架，将治理从二值开关提升为可调设计变量。contextual-bandit + rule-based expert system 的耦合设计是工程实践中的可迁",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -213,7 +631,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-05-27"
+        "revisit_date": "2026-05-28"
       },
       "insights": {
         "system_design": [
@@ -245,9 +663,18 @@
         ],
         "ignore_reason": ""
       },
-      "references": [],
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.02832v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.02832v1"
+        }
+      ],
       "detail_path": "paper-detail.html?id=haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
-      "daily_path": "daily-detail.html?date=2026-05-06",
+      "daily_path": "daily-detail.html?date=2026-05-07",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=coding-agent"
@@ -1369,125 +1796,6 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces": {
-      "id": "reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
-      "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
-      "authors": [
-        "Chenchen Zhang"
-      ],
-      "source": "arxiv",
-      "published": "2026-05-04",
-      "url": "http://arxiv.org/abs/2605.02801v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.02801v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 5.4,
-        "relevance": 6.2,
-        "evidence": 4.95,
-        "engineering_testability": 5.15,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 42.1,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：AI Agent：As large language model (LLM) agents evolve from isolated too…",
-      "one_line_essence": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "AI Agent：As large language model (LLM) agents evolve from isolated tool users into coor…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=reinforcement-learning-for-llm-based-multi-agent-systems-through-orchestration-traces",
-      "daily_path": "daily-detail.html?date=2026-05-06",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
     "from-sensors-to-insight-rapid-edge-to-core-application-development-for-sensor-driven-applications": {
       "id": "from-sensors-to-insight-rapid-edge-to-core-application-development-for-sensor-driven-applications",
       "title": "From Sensors to Insight: Rapid, Edge-to-Core Application Development for Sensor-Driven Applications",
@@ -1841,132 +2149,6 @@
       "trend_paths": [
         "trend-detail.html?id=context-engineering",
         "trend-detail.html?id=agentic-world-modeling"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents": {
-      "id": "flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
-      "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
-      "authors": [
-        "Quang Hieu Pham",
-        "Yang He",
-        "Ping Nie",
-        "Canwen Xu",
-        "Davood Rafiei",
-        "Yuepeng Wang",
-        "Xi Ye",
-        "Jocelyn Qiaochu Chen"
-      ],
-      "source": "arxiv",
-      "published": "2026-05-04",
-      "url": "http://arxiv.org/abs/2605.02815v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.02815v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 6.2,
-        "evidence": 4.5,
-        "engineering_testability": 4.6,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 39.6,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：AI Agent：Text-to-SQL over large analytical databases requires navigati…",
-      "one_line_essence": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "AI Agent：Text-to-SQL over large analytical databases requires navigating complex schema…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=flexsql-flexible-exploration-and-execution-make-better-text-to-sql-agents",
-      "daily_path": "daily-detail.html?date=2026-05-06",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -2446,119 +2628,6 @@
       "trend_paths": [
         "trend-detail.html?id=context-engineering"
       ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection": {
-      "id": "speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
-      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
-      "authors": [
-        "Shikhar Shukla"
-      ],
-      "source": "arxiv",
-      "published": "2026-05-04",
-      "url": "http://arxiv.org/abs/2605.02888v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-05-06",
-      "first_deep_dive_daily": "2026-05-06",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.95,
-        "engineering_testability": 4.05,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 36.2,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：推理与服务：Speculative decoding accelerates large language model (LLM) infe…",
-      "one_line_essence": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "推理与服务：Speculative decoding accelerates large language model (LLM) inference by using…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=speckv-adaptive-speculative-decoding-with-compression-aware-gamma-selection",
-      "daily_path": "daily-detail.html?date=2026-05-06",
-      "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {
         "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
