@@ -1,7 +1,746 @@
 {
-  "updated_at": "2026-05-07T04:39:21.993346",
-  "total": 36,
+  "updated_at": "2026-05-08T04:34:06.441210",
+  "total": 46,
   "papers": [
+    {
+      "title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
+      "authors": [
+        "Yijun Lu",
+        "Rui Ye",
+        "Yuwen Du",
+        "Jiajun Wang",
+        "Songhua Liu"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05191v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05191v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Long-horizon search agents must manage a rapidly growing working context as they reason, call tools, and observe information. Naively accumulating all intermediate content can overwhelm the agent, increasing costs and the risk of errors. We propose that effective context management should be adaptive: parts of the agent's trajectory are maintained at different levels of detail depending on their current relevance to the task. To operationalize this principle, we introduce Context-ReAct, a genera",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "memory",
+        "benchmark",
+        "tool use"
+      ],
+      "score": 86.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05191v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05191v1"
+        }
+      ],
+      "llm_reason": "直接解决长时序搜索 Agent 的上下文爆炸问题，提出 Context-ReAct 框架实现自适应上下文管理。弹性上下文编排（不同轨迹片段按相关性维护不同粒度）是 Agent 工程的关键基础设施。对 RAG 系统、长任务 Agent、代码 Agent 等场景有直接工程价值。",
+      "id": "longseeker-elastic-context-orchestration-for-long-horizon-search-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "memory"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Long-horizon search agents must manage a rapidly growing working context as th…",
+      "one_line_judgement": "今天值得试：直接解决长时序搜索 Agent 的上下文爆炸问题，提出 Context-ReAct 框架实现自适应上下文管理。弹性上下文编排（不同轨迹片段按…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "直接解决长时序搜索 Agent 的上下文爆炸问题，提出 Context-ReAct 框架实现自适应上下文管理。弹性上下文编排（不同轨迹片段按相关性维护不同粒度）是 Agent 工程的关键基础设",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=longseeker-elastic-context-orchestration-for-long-horizon-search-agents"
+    },
+    {
+      "title": "Sharp Capacity Thresholds in Linear Associative Memory: From Winner-Take-All to Listwise Retrieval",
+      "authors": [
+        "Nicholas Barnfield",
+        "Juno Kim",
+        "Eshaan Nichani",
+        "Jason D. Lee",
+        "Yue M. Lu"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05189v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05189v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "How many key-value associations can a $d\\times d$ linear memory store? We show that the answer depends not only on the $d^2$ degrees of freedom in the memory matrix, but also on the retrieval criterion. In an isotropic Gaussian model for the stored pairs, we show that top-1 retrieval, where every signal must beat its largest distractor, requires the logarithmic model-size scale $d^2\\asymp n\\log n$. We prove that the correlation matrix memory construction, which stores associations by superposing",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG"
+      ],
+      "keywords": [
+        "memory",
+        "RAG"
+      ],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05189v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05189v1"
+        }
+      ],
+      "llm_reason": "给出线性联想记忆的精确容量阈值：top-1 检索需要 d² ≍ n log n，listwise 检索只需 d² ≍ n。这一理论结果直接指导 RAG 系统的向量存储容量设计和检索策略选择。将记忆检索从工程经验提升为有理论保证的设计。",
+      "id": "sharp-capacity-thresholds-in-linear-associative-memory-from-winner-take-all-to-listwise-retrieval",
+      "value_type": "trend",
+      "matched_topics": [
+        "rag-knowledge",
+        "memory",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "RAG / 知识系统：How many key-value associations can a $d\\times d$ linear memory store? We show…",
+      "one_line_judgement": "值得继续观察：给出线性联想记忆的精确容量阈值：top-1 检索需要 d² ≍ n log n，listwise 检索只需 d² ≍ n。这一理论结果直接指…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "给出线性联想记忆的精确容量阈值：top-1 检索需要 d² ≍ n log n，listwise 检索只需 d² ≍ n。这一理论结果直接指导 RAG 系统的向量存储容量设计和检索策略选择。将",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=sharp-capacity-thresholds-in-linear-associative-memory-from-winner-take-all-to-listwise-retrieval"
+    },
+    {
+      "title": "Taming Outlier Tokens in Diffusion Transformers",
+      "authors": [
+        "Xiaoyu Wu",
+        "Yifei Wang",
+        "Tsu-Jui Fu",
+        "Liang-Chieh Chen",
+        "Zhe Gan"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05206v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05206v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We study outlier tokens in Diffusion Transformers (DiTs) for image generation. Prior work has shown that Vision Transformers (ViTs) can produce a small number of high-norm tokens that attract disproportionate attention while carrying limited local information, but their role in generative models remains underexplored. We show that this phenomenon appears in both the encoder and denoiser of modern Representation Autoencoder (RAE)-DiT pipelines: pretrained ViT encoders can produce outlier represen",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05206v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05206v1"
+        }
+      ],
+      "llm_reason": "揭示 DiT（Diffusion Transformer）中异常 token 机制及其对生成质量的影响。异常 token 是 ViT 的已知问题，本文首次在生成式管线（编码器+去噪器）中系统分析并提出抑制方案。对图像生成模型的质量优化有直接工程意义。",
+      "id": "taming-outlier-tokens-in-diffusion-transformers",
+      "value_type": "trend",
+      "matched_topics": [
+        "diffusion-model",
+        "vision-transformer"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "前沿论文：We study outlier tokens in Diffusion Transformers (DiTs) for image generation.…",
+      "one_line_judgement": "值得继续观察：揭示 DiT（Diffusion Transformer）中异常 token 机制及其对生成质量的影响。异常 token 是 ViT 的已知…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "揭示 DiT（Diffusion Transformer）中异常 token 机制及其对生成质量的影响。异常 token 是 ViT 的已知问题，本文首次在生成式管线（编码器+去噪器）中系统分",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=taming-outlier-tokens-in-diffusion-transformers"
+    },
+    {
+      "title": "Implicit Representations of Grammaticality in Language Models",
+      "authors": [
+        "Yingshan Susan Wang",
+        "Linlu Qiu",
+        "Zhaofeng Wu",
+        "Roger P. Levy",
+        "Yoon Kim"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05197v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05197v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Grammaticality and likelihood are distinct notions in human language. Pretrained language models (LMs), which are probabilistic models of language fitted to maximize corpus likelihood, generate grammatically well-formed text and discriminate well between grammatical and ungrammatical sentences in tightly controlled minimal pairs. However, their string probabilities do not sharply discriminate between grammatical and ungrammatical sentences overall. But do LMs implicitly acquire a grammaticality ",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 74.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05197v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05197v1"
+        }
+      ],
+      "llm_reason": "证明语言模型在语法性判断上隐式获得了与似然性不同的内部表示。这一发现对 LLM 安全评估、语言能力诊断和模型内部机制理解有重要意义。但工程落地路径不够直接，主要是理论贡献。",
+      "id": "implicit-representations-of-grammaticality-in-language-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Grammaticality and likelihood are distinct notions in human language. Pretrain…",
+      "one_line_judgement": "值得继续观察：证明语言模型在语法性判断上隐式获得了与似然性不同的内部表示。这一发现对 LLM 安全评估、语言能力诊断和模型内部机制理解有重要意义。但工程落…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "证明语言模型在语法性判断上隐式获得了与似然性不同的内部表示。这一发现对 LLM 安全评估、语言能力诊断和模型内部机制理解有重要意义。但工程落地路径不够直接，主要是理论贡献。",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=implicit-representations-of-grammaticality-in-language-models"
+    },
+    {
+      "title": "Understanding In-Context Learning for Nonlinear Regression with Transformers: Attention as Featurizer",
+      "authors": [
+        "Alexander Hsu",
+        "Zhaiming Shen",
+        "Wenjing Liao",
+        "Rongjie Lai"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05176v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05176v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Pre-trained transformers are able to learn from examples provided as part of the prompt without any weight updates, a remarkable ability known as in-context learning (ICL). Despite its demonstrated efficacy across various domains, the theoretical understanding of ICL is still developing. Whereas most existing theory has focused on linear models, we study ICL in the nonlinear regression setting. Through the interaction mechanism in attention, we explicitly construct transformer networks to realiz",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "keywords": [],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05176v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05176v1"
+        }
+      ],
+      "llm_reason": "首次给出 Transformer 在非线性回归中实现 ICL 的显式构造：注意力作为特征化器（Featurizer）将非线性映射转化为线性回归。理论价值高，但离工程实践还有距离。对理解 ICL 机制有基础意义。",
+      "id": "understanding-in-context-learning-for-nonlinear-regression-with-transformers-attention-as-featurizer",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：Pre-trained transformers are able to learn from examples provided as part of t…",
+      "one_line_judgement": "值得先保存：首次给出 Transformer 在非线性回归中实现 ICL 的显式构造：注意力作为特征化器（Featurizer）将非线性映射转化为线性回…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "首次给出 Transformer 在非线性回归中实现 ICL 的显式构造：注意力作为特征化器（Featurizer）将非线性映射转化为线性回归。理论价值高，但离工程实践还有距离。对理解 ICL",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=understanding-in-context-learning-for-nonlinear-regression-with-transformers-attention-as-featurizer"
+    },
+    {
+      "title": "MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge",
+      "authors": [
+        "Perry E. Radau"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05175v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05175v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Background: Existing MRI LLM benchmarks rely mainly on review-book multiple-choice questions, where top proprietary models already score highly, limiting discrimination. No systematic benchmark has evaluated vendor-specific scanner operational knowledge central to research MRI practice. Purpose: We developed MRI-Eval, a tiered benchmark for relative model comparison on MRI physics and GE scanner operations knowledge using primary multiple-choice questions (MCQ), with stem-only and primed diagnos",
+      "categories": [
+        "eess.IV",
+        "cs.CL",
+        "physics.med-ph"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 41.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05175v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05175v1"
+        }
+      ],
+      "id": "mri-eval-a-tiered-benchmark-for-evaluating-llm-performance-on-mri-physics-and-ge-scanner-operations-knowledge",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Background: Existing MRI LLM benchmarks rely mainly on review-book multiple-ch…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Background: Existing MRI LLM benchmarks rely mainly on revi…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Background: Existing MRI LLM benchmarks rely mainly on review-book multiple-ch…",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=mri-eval-a-tiered-benchmark-for-evaluating-llm-performance-on-mri-physics-and-ge-scanner-operations-knowledge"
+    },
+    {
+      "title": "Estimating the expected output of wide random MLPs more efficiently than sampling",
+      "authors": [
+        "Wilson Wu",
+        "Victor Lecomte",
+        "Michael Winer",
+        "George Robinson",
+        "Jacob Hilton"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05179v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05179v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "By far the most common way to estimate an expected loss in machine learning is to draw samples, compute the loss on each one, and take the empirical average. However, sampling is not necessarily optimal. Given an MLP at initialization, we show how to estimate its expected output over Gaussian inputs without running samples through the network at all. Instead, we produce approximate representations of the distributions of activations at each layer, leveraging tools such as cumulants and Hermite e",
+      "categories": [
+        "cs.LG",
+        "cond-mat.dis-nn",
+        "stat.ML"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 34.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05179v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05179v1"
+        }
+      ],
+      "id": "estimating-the-expected-output-of-wide-random-mlps-more-efficiently-than-sampling",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：By far the most common way to estimate an expected loss in machine learning is…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：By far the most common way to estimate an expected loss in …",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：By far the most common way to estimate an expected loss in machine learning is…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=estimating-the-expected-output-of-wide-random-mlps-more-efficiently-than-sampling"
+    },
+    {
+      "title": "Almost-Orthogonality in Lp Spaces: A Case Study with Grok",
+      "authors": [
+        "Ziang Chen",
+        "Jaume de Dios Pont",
+        "Paata Ivanisvili",
+        "Jose Madrid",
+        "Haozhu Wang"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05192v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05192v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Carbery proposed the following sharpened form of triangle inequality for many functions: for any $p\\ge 2$ and any finite sequence $(f_j)_j\\subset L^p$ we have \\[ \\Big\\|\\sum_j f_j\\Big\\|_p \\ \\le\\ \\left(\\sup_{j} \\sum_{k} α_{jk}^{\\,c}\\right)^{1/p'} \\Big(\\sum_j \\|f_j\\|_p^p\\Big)^{1/p}, \\] where $c=2$, $1/p+1/p'=1$, and $α_{jk}=\\sqrt{\\frac{\\|f_{j}f_{k}\\|_{p/2}}{\\|f_{j}\\|_{p}\\|f_{k}\\|_{p}}}$. In the first part of this paper we construct a counterexample showing that this inequality fails for every $p>2$",
+      "categories": [
+        "math.CA",
+        "cs.AI",
+        "math.CO",
+        "math.PR"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05192v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05192v1"
+        }
+      ],
+      "id": "almost-orthogonality-in-lp-spaces-a-case-study-with-grok",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Carbery proposed the following sharpened form of triangle inequality for many …",
+      "one_line_judgement": "当前可忽略：前沿论文：Carbery proposed the following sharpened form of triangle inequal…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Carbery proposed the following sharpened form of triangle inequality for many …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=almost-orthogonality-in-lp-spaces-a-case-study-with-grok"
+    },
+    {
+      "title": "Grokability in five inequalities",
+      "authors": [
+        "Paata Ivanisvili",
+        "Xinyuan Xie"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05193v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05193v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In this note, we report five mathematical discoveries made in collaboration with Grok, all of which have been subsequently verified by the authors. These include an improved lower bound on the maximal Gaussian perimeter of convex sets in $\\mathbb{R}^n$, sharper $L_2$-$L_1$ moment comparison inequalities on the Hamming cube $\\{-1,1\\}^n$, a strengthened autoconvolution inequality, improved asymptotic bounds on the size of the largest $g$-Sidon sets in $\\{1,\\dots,n\\}$, and an optimal balanced Szare",
+      "categories": [
+        "math.PR",
+        "cs.AI",
+        "math.AP",
+        "math.CA",
+        "math.FA"
+      ],
+      "keywords": [],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05193v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05193v1"
+        }
+      ],
+      "id": "grokability-in-five-inequalities",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：In this note, we report five mathematical discoveries made in collaboration wi…",
+      "one_line_judgement": "当前可忽略：前沿论文：In this note, we report five mathematical discoveries made in col…",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：In this note, we report five mathematical discoveries made in collaboration wi…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=grokability-in-five-inequalities"
+    },
+    {
+      "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
+      "authors": [
+        "Lakshita Dodeja",
+        "Ondrej Biza",
+        "Shivam Vats",
+        "Stephen Hart",
+        "Stefanie Tellex"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.05172v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05172v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Behavior Cloning (BC) has emerged as a highly effective paradigm for robot learning. However, BC lacks a self-guided mechanism for online improvement after demonstrations have been collected. Existing offline-to-online learning methods often cause policies to replace previously learned good actions due to a distribution mismatch between offline data and online learning. In this work, we propose Q2RL, Q-Estimation and Q-Gating from BC for Reinforcement Learning, an algorithm for efficient offline",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.05172v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.05172v1"
+        }
+      ],
+      "id": "when-life-gives-you-bc-make-q-functions-extracting-q-values-from-behavior-cloning-for-on-robot-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Behavior Cloning (BC) has emerged as a highly effective paradigm for robot lea…",
+      "one_line_judgement": "当前可忽略：前沿论文：Behavior Cloning (BC) has emerged as a highly effective paradigm …",
+      "first_seen_date": "2026-05-08",
+      "first_deep_dive_daily": "2026-05-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Behavior Cloning (BC) has emerged as a highly effective paradigm for robot lea…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=when-life-gives-you-bc-make-q-functions-extracting-q-values-from-behavior-cloning-for-on-robot-reinforcement-learning"
+    },
     {
       "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
       "authors": [

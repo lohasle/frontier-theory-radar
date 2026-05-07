@@ -4,11 +4,29 @@
   "stage": "上升",
   "updated_at": "2026-04-28",
   "key_insight": "[Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond](https://arxiv.org/abs/2604.22748)",
-  "paper_count": 20,
+  "paper_count": 26,
   "practice_count": 0,
   "path": "trend-detail.html?id=agentic-world-modeling",
   "markdown_path": "trends/agentic-world-modeling.md",
   "related_papers": [
+    {
+      "id": "longseeker-elastic-context-orchestration-for-long-horizon-search-agents",
+      "title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
+      "detail_path": "paper-detail.html?id=longseeker-elastic-context-orchestration-for-long-horizon-search-agents",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 86.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：直接解决长时序搜索 Agent 的上下文爆炸问题，提出 Context-ReAct 框架实现自适应上下文管理。弹性上下文编排（不同轨迹片段按…",
+      "source": "arXiv",
+      "published": "2026-05-06",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2605.05191v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.05191v1"
+    },
     {
       "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
       "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
@@ -209,20 +227,20 @@
     }
   ],
   "value_distribution": {
-    "immediate": 0,
+    "immediate": 1,
     "trend": 4,
     "long_tail": 3,
     "ignore": 4
   },
   "top_paper": {
-    "id": "evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
-    "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-    "detail_path": "paper-detail.html?id=evopoc-automated-exploit-synthesis-for-defi-smart-contracts-via-hierarchical-knowledge-graphs",
+    "id": "longseeker-elastic-context-orchestration-for-long-horizon-search-agents",
+    "title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
+    "detail_path": "paper-detail.html?id=longseeker-elastic-context-orchestration-for-long-horizon-search-agents",
     "score": 86.0,
     "decision": "重点学习",
-    "value_type": "trend",
-    "value_type_label": "趋势价值",
-    "one_line_judgement": "值得继续观察：通过层次知识图谱驱动的 LLM 多跳推理，实现 DeFi 合约漏洞自动利用合成。98% 召回率、96.6% 利用成功率，在 88 个真实攻击…"
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "one_line_judgement": "今天值得试：直接解决长时序搜索 Agent 的上下文爆炸问题，提出 Context-ReAct 框架实现自适应上下文管理。弹性上下文编排（不同轨迹片段按…"
   },
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

@@ -1,0 +1,125 @@
+{
+  "date": "2026-05-08",
+  "model": "glm-5.1",
+  "generated_at": "2026-05-08T04:31:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "http://arxiv.org/abs/2605.05191v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "直接解决长时序搜索 Agent 的上下文爆炸问题，提出 Context-ReAct 框架实现自适应上下文管理。弹性上下文编排（不同轨迹片段按相关性维护不同粒度）是 Agent 工程的关键基础设施。对 RAG 系统、长任务 Agent、代码 Agent 等场景有直接工程价值。",
+      "matched_topics": ["ai-agent", "context-engineering", "memory"]
+    },
+    "http://arxiv.org/abs/2605.05189v1": {
+      "score": 82,
+      "value_type": "trend",
+      "reason": "给出线性联想记忆的精确容量阈值：top-1 检索需要 d² ≍ n log n，listwise 检索只需 d² ≍ n。这一理论结果直接指导 RAG 系统的向量存储容量设计和检索策略选择。将记忆检索从工程经验提升为有理论保证的设计。",
+      "matched_topics": ["rag-knowledge", "memory", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2605.05206v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "揭示 DiT（Diffusion Transformer）中异常 token 机制及其对生成质量的影响。异常 token 是 ViT 的已知问题，本文首次在生成式管线（编码器+去噪器）中系统分析并提出抑制方案。对图像生成模型的质量优化有直接工程意义。",
+      "matched_topics": ["diffusion-model", "vision-transformer"]
+    },
+    "http://arxiv.org/abs/2605.05197v1": {
+      "score": 74,
+      "value_type": "trend",
+      "reason": "证明语言模型在语法性判断上隐式获得了与似然性不同的内部表示。这一发现对 LLM 安全评估、语言能力诊断和模型内部机制理解有重要意义。但工程落地路径不够直接，主要是理论贡献。",
+      "matched_topics": ["llm-evaluation", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2605.05176v1": {
+      "score": 72,
+      "value_type": "long_tail",
+      "reason": "首次给出 Transformer 在非线性回归中实现 ICL 的显式构造：注意力作为特征化器（Featurizer）将非线性映射转化为线性回归。理论价值高，但离工程实践还有距离。对理解 ICL 机制有基础意义。",
+      "matched_topics": ["llm-evaluation", "context-engineering"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 4,
+      "title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
+      "arxiv_id": "2605.05191v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.6,
+      "confidence": "high",
+      "one_line": "自适应上下文管理框架 Context-ReAct，按相关性维护不同粒度的轨迹片段，解决长时序 Agent 的上下文爆炸",
+      "decision": "strong_accept",
+      "reasoning": "长时序搜索 Agent 的上下文爆炸是实际部署核心瓶颈。Context-ReAct 将轨迹分段管理，按当前相关性动态调整粒度（全保留→摘要→丢弃），是 Agent 记忆管理的关键基础设施。弹性编排思想可迁移到代码 Agent、RAG Agent 等所有长任务场景。关键词匹配精准：agent, agentic, memory, benchmark, tool use。"
+    },
+    {
+      "paper_index": 5,
+      "title": "Sharp Capacity Thresholds in Linear Associative Memory: From Winner-Take-All to Listwise Retrieval",
+      "arxiv_id": "2605.05189v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 10,
+        "evidence_strength": 8,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 8.2,
+      "confidence": "high",
+      "one_line": "精确刻画线性联想记忆的容量阈值：top-1 检索需 d²≍n log n，listwise 检索只需 d²≍n，直接指导 RAG 向量库设计",
+      "decision": "strong_accept",
+      "reasoning": "理论贡献突出：给出了关联记忆检索的精确相变阈值。top-1 vs listwise 的容量差是一个 log n 因子，这直接告诉工程实践者：在同样维度下，改用 listwise 检索策略可多存储 O(n/log n) 倍的关联。对 RAG 系统的向量维度选择、检索策略优化有量化指导。关键词匹配：memory, RAG。"
+    },
+    {
+      "paper_index": 0,
+      "title": "Taming Outlier Tokens in Diffusion Transformers",
+      "arxiv_id": "2605.05206v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 8
+      },
+      "weighted_total": 7.8,
+      "confidence": "medium",
+      "one_line": "首次在 DiT 生成管线中系统分析异常 token 机制并提出抑制方案，提升图像生成质量",
+      "decision": "accept",
+      "reasoning": "异常 token 是 ViT 的已知问题（高范数 token 吸引过多注意力但携带有限局部信息），本文首次在 DiT 编码器+去噪器的完整生成管线中分析。工程价值在于：抑制异常 token 可直接提升图像生成质量。但摘要截断，具体抑制方法和定量结果需进一步确认。"
+    },
+    {
+      "paper_index": 1,
+      "title": "Implicit Representations of Grammaticality in Language Models",
+      "arxiv_id": "2605.05197v1",
+      "scores": {
+        "engineering_value": 6,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 5
+      },
+      "weighted_total": 7.4,
+      "confidence": "medium",
+      "one_line": "证明 LM 隐式习得语法性表示（与似然性可分离），对理解 LLM 内部机制有基础意义",
+      "decision": "accept",
+      "reasoning": "理论贡献强：证明 LM 内部存在可从字符串概率中提取的独立语法性信号。对 LLM 能力评估、安全审计（模型是否可靠区分合法/非法文本）有启发。但工程落地路径不够直接——目前更多是理解性贡献而非工具性贡献。关键词匹配：benchmark。"
+    },
+    {
+      "paper_index": 7,
+      "title": "Understanding In-Context Learning for Nonlinear Regression with Transformers: Attention as Featurizer",
+      "arxiv_id": "2605.05176v1",
+      "scores": {
+        "engineering_value": 5,
+        "theoretical_depth": 10,
+        "evidence_strength": 6,
+        "trend_relevance": 8,
+        "actionability": 4
+      },
+      "weighted_total": 7.2,
+      "confidence": "medium",
+      "one_line": "显式构造 Transformer 实现非线性回归 ICL：注意力作为特征化器将非线性映射转为线性回归",
+      "decision": "accept",
+      "reasoning": "ICL 理论的重要推进：从线性模型扩展到非线性回归。注意力机制被理解为特征化器（Featurizer），这一视角对理解 Transformer 的 ICL 能力有基础意义。但显式构造与实际预训练模型的行为之间存在差距，工程可操作性有限。属于理解性论文，行动建议较少。"
+    }
+  ]
+}

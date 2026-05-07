@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-05-07T04:39:21.992420",
-  "total": 4,
+  "updated_at": "2026-05-08T04:34:06.439730",
+  "total": 5,
   "reports": [
+    {
+      "date": "2026-05-08",
+      "title": "论文价值发现日报 - 2026-05-08",
+      "deep_dive_title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
+      "deep_dive_url": "http://arxiv.org/abs/2605.05191v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 LongSeeker 的 Context-ReAct 框架，评估在当前 Agent 系统中引入弹性上下文管理的最小方案",
+      "max_uncertainty": "LongSeeker 的完整实验结果需确认（摘要截断）；线性联想记忆容量结果的工程适用边界（实际 RAG 向量库的分布假设是否满足）",
+      "one_line_judgement": "直接解决长时序 Agent 的上下文爆炸问题——随着推理、工具调用、观察信息的积累，naive 上下文会迅速超限。Context-ReAct 框架按当前任务相关性动态维护不同粒度的轨迹片段（全保留→摘要→丢弃），是 Agent 记忆管理的关键基础设施。弹性上下文编排可迁移到所有长任务 Agent 场景。",
+      "path": "daily-detail.html?date=2026-05-08"
+    },
     {
       "date": "2026-05-07",
       "title": "论文价值发现日报 - 2026-05-07",
