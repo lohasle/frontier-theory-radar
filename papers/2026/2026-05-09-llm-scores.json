@@ -1,0 +1,102 @@
+{
+  "date": "2026-05-09",
+  "generated_at": "2026-05-09T04:30:00+08:00",
+  "model": "glm-5.1",
+  "papers": [
+    {
+      "arxiv_id": "2605.06665v1",
+      "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
+      "scores": {
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "novelty": 8,
+        "practical_impact": 9,
+        "theoretical_depth": 7
+      },
+      "overall_score": 8.4,
+      "decision": "deep_dive",
+      "score_rationale": "MoE架构的专家共享池设计直接挑战了当前所有主流MoE实现（Mixtral、DeepSeek等）的逐层专家分配范式。工程价值极高：(1) 证明随机路由仅掉1.0-1.6分，说明现有MoE专家冗余严重；(2) 用41.6%-66.7%的专家参数即可匹配或超越vanilla MoE，对推理成本优化有直接工程意义；(3) 5个LLaMA尺度上验证，实验充分。证据强度高：跨尺度一致、有消融。不足：最大仅978M参数，尚未在超大模型验证；代码未开源。",
+      "engineering_signals": [
+        "专家池共享可减少MoE模型推理显存占用40-60%",
+        "pool_size成为新的深度缩放超参数，简化架构搜索",
+        "NormRouter提供稳定的稀疏路由，可工程落地"
+      ]
+    },
+    {
+      "arxiv_id": "2605.06663v1",
+      "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
+      "scores": {
+        "engineering_value": 9,
+        "evidence_strength": 7,
+        "novelty": 8,
+        "practical_impact": 9,
+        "theoretical_depth": 8
+      },
+      "overall_score": 8.2,
+      "decision": "deep_dive",
+      "score_rationale": "与UniPool形成互补——UniPool优化专家共享效率，EMO优化专家模块化部署。核心洞察：通过文档级token共享专家池约束，让语义级专家分组自发涌现。工程影响深远：仅保留25%专家只掉1%，意味着在内存受限设备上可选择性加载领域专家。14B模型在1T token上预训练，规模可观。证据中等偏强：有消融，有领域专化分析，但开源代码和可复现性待验证。与UniPool并读可揭示MoE架构演进方向。",
+      "engineering_signals": [
+        "领域级专家模块化可让边缘设备按需加载模型子集",
+        "文档边界约束是零成本的模块化训练信号",
+        "语义级专家专化（math/code）vs 语法级专化的区别是部署决策关键"
+      ]
+    },
+    {
+      "arxiv_id": "2605.06654v1",
+      "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
+      "scores": {
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "novelty": 7,
+        "practical_impact": 8,
+        "theoretical_depth": 8
+      },
+      "overall_score": 8.0,
+      "decision": "deep_dive",
+      "score_rationale": "直接回答了工业界SFT实践的痛点：为什么LoRA有时不如全参微调？答案在于optimizer-shape一致性——优化器在预训练中对激活施加的正则化效应塑造了参数空间地形，延续同一优化器可避免破坏这种结构。Muon在推理任务上表现更差的发现尤其有工程警示意义。证据强度高：有理论分析+受控实验+合成实验。对任何做LLM微调的团队都有直接操作价值。",
+      "engineering_signals": [
+        "SFT阶段应优先使用与预训练相同的优化器，而非盲目追求LoRA",
+        "Muon优化器可能导致死记硬背倾向，不适合推理类SFT",
+        "优化器选择应被视为模型元信息的一部分，随checkpoint一起交付"
+      ]
+    },
+    {
+      "arxiv_id": "2605.06650v1",
+      "title": "Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients",
+      "scores": {
+        "engineering_value": 8,
+        "evidence_strength": 8,
+        "novelty": 8,
+        "practical_impact": 7,
+        "theoretical_depth": 7
+      },
+      "overall_score": 7.6,
+      "decision": "deep_dive",
+      "score_rationale": "对当前RLVR主流范式GRPO的直接改进。核心论点：在稀疏二元奖励下，负样本rollout几乎不提供有效梯度信号，不如纯靠正样本重分布。POPO在AIME 2025上36.67% vs GRPO 30.00%，证据明确。工程上简化了训练流程（无需采样负样本）。Siamese策略网络+有界相似性惩罚提供训练稳定性。局限性：仅在Qwen系列验证，数学推理外的泛化性待观察。",
+      "engineering_signals": [
+        "去除负样本采样可降低RLVR训练成本约50%",
+        "POPO可即插即用替代GRPO，代码改动小",
+        "有界重要性采样是稳定训练的关键工程细节"
+      ]
+    },
+    {
+      "arxiv_id": "2605.06651v1",
+      "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+      "scores": {
+        "engineering_value": 7,
+        "evidence_strength": 7,
+        "novelty": 9,
+        "practical_impact": 8,
+        "theoretical_depth": 6
+      },
+      "overall_score": 7.4,
+      "decision": "deep_dive",
+      "score_rationale": "来自Google DeepMind的AI数学家工作台，FrontierMath Tier 4 达48%是新SOTA。理论洞察：异步状态化工作空间+失败假设追踪是agentic AI的核心设计模式。工程上展示了多agent协作在科研场景的有效性。但论文更多是系统展示而非理论突破，技术细节（具体agent架构、工具链）有限。作为趋势信号价值高——AI辅助科研是明确方向。",
+      "engineering_signals": [
+        "异步状态化workspace是复杂agent系统的通用设计模式",
+        "失败假设追踪可用于任何探索式AI系统",
+        "48% FrontierMath Tier 4 说明专用数学agent已超越通用LLM天花板"
+      ]
+    }
+  ]
+}

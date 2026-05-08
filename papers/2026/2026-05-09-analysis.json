@@ -1,0 +1,86 @@
+{
+  "date": "2026-05-09",
+  "generated_at": "2026-05-09T04:30:00+08:00",
+  "model": "glm-5.1",
+  "top_picks": [
+    {
+      "rank": 1,
+      "arxiv_id": "2605.06665v1",
+      "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
+      "chain": {
+        "paper": "UniPool提出全局共享专家池替代MoE的逐层独立专家分配，通过pool-level辅助损失和NormRouter实现跨层专家共享。",
+        "theory": "MoE的专家冗余假说——深层路由器可被随机路由替代仅掉1分，说明逐层专家分配存在结构性冗余。专家容量应视为全局架构预算而非逐层局部预算。",
+        "engineering": "直接降低MoE模型推理显存40-60%（仅用41.6%-66.7%专家参数）；pool_size成为可调超参数简化架构搜索；NormRouter提供工程可落地的稳定稀疏路由。",
+        "trend": "MoE架构正从'逐层独立专家'向'全局共享专家池+语义模块化'演进。UniPool（共享效率）和EMO（模块化部署）代表了这一趋势的两个正交方向。",
+        "insight": "MoE的真正瓶颈不是路由算法，而是专家组织方式。将专家从'层私有'变为'全局共享'是参数效率的质变。",
+        "action": "① 在自有MoE模型上复现UniPool的random routing probe验证冗余度 ② 实验shared expert pool在7B+尺度上的效果 ③ 关注代码开源动态，优先在推理成本敏感场景试点"
+      }
+    },
+    {
+      "rank": 2,
+      "arxiv_id": "2605.06663v1",
+      "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
+      "chain": {
+        "paper": "EMO通过文档级token共享专家池约束，让MoE在预训练中自发涌现语义级专家模块化，支持选择性加载25%专家仅掉1%。",
+        "theory": "模块化涌现假说——不需要人为定义领域标签，仅通过文档边界约束即可引导专家在语义层面（math/code/reasoning）自动专化，而非语法层面。",
+        "engineering": "边缘设备可按领域加载模型子集（12.5%专家仅掉3%）；14B模型1T token预训练验证了工程可行性；文档边界约束是零成本训练信号。",
+        "trend": "与UniPool共同指向MoE架构新范式：从'均匀分布的稀疏激活'到'语义驱动的模块化部署'。未来MoE可能像微服务一样按需组装。",
+        "insight": "文档边界是最便宜的模块化训练信号——不需要领域标签，不需要课程学习，自然文本的文档结构本身就是领域分割。",
+        "action": "① 将EMO的文档级约束集成到现有MoE训练流程 ② 测试领域特定专家子集在下游任务的表现 ③ 与UniPool结合实验：共享池+模块化涌现"
+      }
+    },
+    {
+      "rank": 3,
+      "arxiv_id": "2605.06654v1",
+      "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
+      "chain": {
+        "paper": "发现全参微调时使用与预训练相同的优化器可获得更好的学习-遗忘平衡，甚至优于LoRA；Muon在推理任务SFT中表现不如AdamW。",
+        "theory": "优化器-模型一致性假说——优化器不仅更新参数，还通过正则化效应塑造激活空间的地形。预训练优化器创造了特定的参数空间结构，SFT时延续同一优化器可保持该结构。",
+        "engineering": "SFT优化器选择应与预train保持一致；优化器类型应作为模型元信息随checkpoint分发；Muon的死记硬背倾向意味着不适合推理类SFT任务。",
+        "trend": "LLM训练正在从'通用最佳实践'转向'模型特定最佳实践'——不同预训练配置需要不同的微调策略。",
+        "insight": "LoRA并非万能——在optimizer-model consistency视角下，全参微调+同优化器可能是更好的SFT策略。关键不是参数效率，而是参数空间结构保持。",
+        "action": "① 审查自有SFT流水线的优化器选择策略 ② 对比LoRA vs 全参同优化器的遗忘曲线 ③ 在Muon预训练模型上验证推理SFT的效果衰减"
+      }
+    },
+    {
+      "rank": 4,
+      "arxiv_id": "2605.06650v1",
+      "title": "Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients",
+      "chain": {
+        "paper": "POPO提出纯正样本策略优化，通过有界重要性采样实现隐式负梯度，在AIME 2025上36.67%超越GRPO的30.00%。",
+        "theory": "稀疏二元奖励下负样本的低效性假说——组合爆炸使得少数负样本采样无法覆盖有意义的奖励信号空间，正样本重分布可隐式产生等价负梯度。",
+        "engineering": "去除负样本采样可降低RLVR训练约50%计算成本；POPO可即插即用替换GRPO；Siamese策略网络+有界相似性惩罚保证训练稳定。",
+        "trend": "RLVR正从PPO→GRPO→POPO快速迭代，训练范式趋向更简单、更高效。减少对负样本的依赖是核心趋势。",
+        "insight": "在稀疏奖励场景下，'少即是多'——减少无效的负样本采样比增加采样量更有效。",
+        "action": "① 在自有RLVR流水线中用POPO替换GRPO做A/B测试 ② 验证POPO在非数学推理任务（代码、逻辑）上的泛化性 ③ 关注siamese策略网络的实现细节复现"
+      }
+    },
+    {
+      "rank": 5,
+      "arxiv_id": "2605.06651v1",
+      "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+      "chain": {
+        "paper": "Google DeepMind的AI数学家工作台，支持开放式数学研究，FrontierMath Tier 4 达48%新SOTA。",
+        "theory": "异步状态化协作理论——AI科研助手的核心不是单次推理能力，而是异步、有状态、可追踪失败假设的工作空间设计。",
+        "engineering": "异步状态化workspace可作为通用agent框架模式；失败假设追踪机制适用于所有探索式AI系统；48% FrontierMath Tier 4证明专用agent已超越通用LLM上限。",
+        "trend": "AI辅助科研从'问答式'向'协作式'转变——AI不再是工具，而是研究伙伴。数学、代码、药物发现等领域将率先受益。",
+        "insight": "科研AI的关键差异化能力是'管理不确定性'——追踪死胡同、维护假设空间、异步迭代比正确答案更重要。",
+        "action": "① 借鉴异步状态化workspace设计模式改进自有agent系统 ② 评估FrontierMath Tier 4结果判断专用数学agent的商业化时机 ③ 关注Google是否开源该工作台"
+      }
+    }
+  ],
+  "cross_cutting_themes": [
+    {
+      "theme": "MoE架构范式迁移",
+      "description": "UniPool和EMO从两个正交方向挑战传统MoE：UniPool优化专家共享效率（全局池），EMO优化专家模块化部署（语义涌现）。两者结合可能催生下一代MoE架构。",
+      "related_papers": ["2605.06665v1", "2605.06663v1"],
+      "actionability": "high"
+    },
+    {
+      "theme": "训练流程的精细化",
+      "description": "Optimizer-Model Consistency和POPO都指向同一个趋势：LLM训练不再是通用最佳实践，而需要针对模型特性和任务特性精细化配置。优化器一致性和正样本策略都是这一趋势的具体体现。",
+      "related_papers": ["2605.06654v1", "2605.06650v1"],
+      "actionability": "high"
+    }
+  ]
+}
