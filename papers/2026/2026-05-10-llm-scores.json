@@ -1,0 +1,67 @@
+{
+  "date": "2026-05-10",
+  "generated_at": "2026-05-10T04:30:00.000000",
+  "method": "Hermes LLM inference with theory→engineering→trend→insight→action chain",
+  "by_url": {
+    "https://arxiv.org/abs/2605.07101v1": {
+      "score": 68.5,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent", "coding-agent"],
+      "reason": "CoSpec 将 LLM Agent 多步推理应用于形式化规约翻译，直接打通自然语言需求到 TLA+/Alloy/SMT-LIB 的工程链路。72% 端到端准确率 + 减少 60% 人工规约工作量，工程价值明确。多 Agent 流水线（Parser→Spec→Verify）是可复用的架构模式，可迁移到合同审查、合规检查等场景。缺少开源代码是主要风险。"
+    },
+    "https://arxiv.org/abs/2605.07115v1": {
+      "score": 64.2,
+      "value_type": "trend",
+      "matched_topics": ["ai-agent"],
+      "reason": "ATCO 用 RL 学习动态工具组合策略，是 Tool-Use Agent 的重要进步。18% 完成率提升 + 30% 调用减少说明 RL 带来了真正的效率增益而非表面优化。离线基础 + 在线探索的框架设计有工程参考价值。但缺少开源代码和 benchmark URL，复现性存疑，适合作为趋势观察。"
+    },
+    "https://arxiv.org/abs/2605.07123v1": {
+      "score": 75.8,
+      "value_type": "immediate",
+      "matched_topics": ["context-engineering", "inference-serving", "rag-knowledge"],
+      "reason": "Context Cache 直击生产 RAG 系统的核心痛点：长上下文推理延迟和 KV-cache 内存开销。语义分块 + 跨查询复用的思路新颖且实用，2.7x 延迟降低 + 60% 内存节省 + 97% 精度保持是强工程证据。有开源代码，兼容 vLLM/SGLang，可直接集成到生产系统。属于今天就能试的即时价值论文。"
+    },
+    "https://arxiv.org/abs/2605.07130v1": {
+      "score": 71.3,
+      "value_type": "trend",
+      "matched_topics": ["security-governance", "llm-evaluation"],
+      "reason": "将红队测试建模为零和博弈是方法论上的重要创新，均衡攻击成功率是传统静态 benchmark 的 2.3 倍，说明当前安全评测严重低估了真实风险。对 6 个安全类别 × 12 攻击策略 × 8 防御配置的系统化评估有很高的参考价值。适合作为安全治理趋势的核心参考论文。"
+    },
+    "https://arxiv.org/abs/2605.07142v1": {
+      "score": 66.0,
+      "value_type": "immediate",
+      "matched_topics": ["rag-knowledge", "inference-serving"],
+      "reason": "Speculative Retrieval 受 Speculative Decoding 启发，将预测思想应用到 RAG 检索阶段，40-55% 延迟降低是显著改善。有开源代码，兼容任何 embedding retriever，实用性强。虽然创新幅度不如 Context Cache 大，但工程落地路径更清晰。适合本周做最小验证实验。"
+    },
+    "https://arxiv.org/abs/2605.07158v1": {
+      "score": 60.5,
+      "value_type": "trend",
+      "matched_topics": ["rag-knowledge", "llm-evaluation"],
+      "reason": "MultiHop-R1 用 RL 激励多跳推理行为，在 MuSiQue 上比 DeepSeek-R1-Distill-7B 高 12.3%。方法上中规中矩，但实验扎实。核心启发是：分阶段奖励可以引导模型学会显式规划检索步骤。缺少代码，适合趋势观察而非立即实践。"
+    },
+    "https://arxiv.org/abs/2605.07165v1": {
+      "score": 62.8,
+      "value_type": "trend",
+      "matched_topics": ["ai-agent", "multimodal-agent"],
+      "reason": "MemoryPalace 将经典记忆宫殿技术转化为 Agent 的空间-时序记忆架构，层次化空间图 + O(log n) 查询是好的系统设计。Habitat 2.0 上 24% 成功率提升 + 45% 内存减少说明结构化记忆优于非结构化对话记忆。架构思想（分层图 + 时序状态历史）可迁移到非具身 Agent 场景。"
+    },
+    "https://arxiv.org/abs/2605.07178v1": {
+      "score": 57.2,
+      "value_type": "long_tail",
+      "matched_topics": ["inference-serving", "llm-evaluation"],
+      "reason": "Knowledge Gap Alignment 是蒸馏推理链的好思路：先探测学生模型的认知盲区，再生成桥接解释。7B 匹配 32B 的结果是强证据。但创新更多在工程技巧层面，理论深度有限。长尾价值在于'认知盲区探测'这个抽象——可以迁移到其他教师-学生场景。"
+    },
+    "https://arxiv.org/abs/2605.07185v1": {
+      "score": 72.6,
+      "value_type": "immediate",
+      "matched_topics": ["llm-evaluation", "coding-agent"],
+      "reason": "AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好的工程实践。12 个前沿模型的横评结果有直接参考价值。有开源代码，可以立即用于搭建内部 Agent 评测流水线。"
+    },
+    "https://arxiv.org/abs/2605.07192v1": {
+      "score": 54.8,
+      "value_type": "long_tail",
+      "matched_topics": ["rag-knowledge"],
+      "reason": "GNN-Retriever 用知识图谱增强密集检索，思路合理但增量有限。8-12% recall 提升是不错的改善，但 15ms 额外延迟的假设需要在更大规模上验证。长尾价值在于'跨文档实体图 + 消息传递'这个架构模式，可能在特定领域（法律、医疗）有更大收益。"
+    }
+  }
+}

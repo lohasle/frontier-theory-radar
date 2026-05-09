@@ -1,203 +1,8 @@
 {
-  "updated_at": "2026-05-10T04:38:11.171425",
-  "site_title": "前沿理论驱动技术雷达日报",
-  "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
-  "latest_daily": {
-    "date": "2026-05-10",
-    "title": "论文价值发现日报 - 2026-05-10",
-    "deep_dive_title": "Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression",
-    "deep_dive_url": "https://arxiv.org/abs/2605.07123v1",
-    "decision": "轻量试点",
-    "value_type": "immediate",
-    "value_type_label": "即时价值",
-    "daily_action": "优先深读 Context Cache（有代码、有数据、可直接集成），然后评估 AgentSandbox 作为团队 Agent 评测基础设施的可行性。",
-    "max_uncertainty": "大部分论文缺少开源代码或 benchmark URL（仅 Context Cache / Speculative Retrieval / AgentSandbox 有代码），工程可复现性需要后续核验。arXiv 论文尚未经同行评审。",
-    "one_line_judgement": "直击生产 RAG 的延迟和内存痛点，有开源代码、兼容主流推理框架、工程证据扎实（2.7x 延迟降低 / 60% 内存节省 / 97% 精度保持）。",
-    "path": "daily-detail.html?date=2026-05-10"
-  },
-  "top_paper": {
-    "title": "Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression",
-    "arxiv_id": "2605.07123v1",
-    "authors": [
-      "Zhihao Zhang",
-      "Qiuhao Li",
-      "Yucheng Li",
-      "Jiahao Xu",
-      "Wang Tao",
-      "Mengdi Wang",
-      "Bingzhe Wu"
-    ],
-    "published": "2026-05-08",
-    "updated": "2026-05-08",
-    "source": "arxiv",
-    "url": "https://arxiv.org/abs/2605.07123v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.07123v1",
-    "openreview_url": "待核验/暂无",
-    "paperswithcode_url": "待核验/暂无",
-    "code_url": "https://github.com/zhihao-zhang/context-cache",
-    "benchmark_url": "待核验/暂无",
-    "project_url": "待核验/暂无",
-    "abstract": "Long-context language models can process up to 1M tokens, but the quadratic cost of attention makes practical deployment expensive. We introduce Context Cache, a semantic-aware prompt compression system that caches and reuses compressed representations across similar queries. Unlike naive token-level pruning, Context Cache operates at the semantic chunk level: it partitions prompts into coherent segments, computes semantic embeddings, and identifies reusable blocks that appear across multiple queries (e.g., system prompts, shared context, retrieved documents). On a benchmark of multi-turn RAG tasks with shared document sets, Context Cache achieves 2.7x latency reduction and 60% KV-cache memory savings while preserving 97% of task accuracy. The system integrates with vLLM and SGLang serving backends with minimal code changes, making it immediately deployable in production RAG pipelines.",
-    "categories": [
-      "cs.CL",
-      "cs.LG",
-      "cs.DC"
-    ],
-    "keywords": [
-      "long context",
-      "prompt compression",
-      "inference",
-      "KV-cache",
-      "RAG",
-      "context engineering"
-    ],
-    "score": 75.8,
-    "decision": "轻量试点",
-    "links": [
-      "https://github.com/zhihao-zhang/context-cache"
-    ],
-    "llm_reason": "Context Cache 直击生产 RAG 系统的核心痛点：长上下文推理延迟和 KV-cache 内存开销。语义分块 + 跨查询复用的思路新颖且实用，2.7x 延迟降低 + 60% 内存节省 + 97% 精度保持是强工程证据。有开源代码，兼容 vLLM/SGLang，可直接集成到生产系统。属于今天就能试的即时价值论文。",
-    "id": "context-cache-efficient-long-context-inference-with-semantic-aware-prompt-compression",
-    "value_type": "immediate",
-    "matched_topics": [
-      "context-engineering",
-      "inference-serving",
-      "rag-knowledge"
-    ],
-    "score_breakdown": {
-      "novelty": 4.8,
-      "problem_importance": 7.1,
-      "relevance": 8.6,
-      "evidence_strength": 8.25,
-      "engineering_testability": 9.45,
-      "trend_signal": 7.35,
-      "long_tail_potential": 3.5,
-      "asset_convertibility": 7.0,
-      "actionability": 7.3,
-      "noise_risk": 1.2,
-      "weak_evidence_penalty": 3.0,
-      "low_relevance_penalty": 0,
-      "engineering_cost_penalty": 2.5,
-      "reproducibility_risk": 2.0
-    },
-    "trend_status": "emerging",
-    "brief_cn": "Context Engineering：Long-context language models can process up to 1M tokens, but the quadratic co…",
-    "one_line_judgement": "今天值得试：Context Cache 直击生产 RAG 系统的核心痛点：长上下文推理延迟和 KV-cache 内存开销。语义分块 + 跨查询复用的思路…",
-    "first_seen_date": "2026-05-10",
-    "first_deep_dive_daily": "2026-05-10",
-    "value_type_label": "即时价值",
-    "trend_stage_label": "萌芽",
-    "future_trigger": "待更多证据",
-    "long_tail_summary": "Context Cache 直击生产 RAG 系统的核心痛点：长上下文推理延迟和 KV-cache 内存开销。语义分块 + 跨查询复用的思路新颖且实用，2.7x 延迟降低 + 60% 内存节省",
-    "related_trends": [
-      "context-engineering"
-    ],
-    "detail_path": "paper-detail.html?id=context-cache-efficient-long-context-inference-with-semantic-aware-prompt-compression"
-  },
-  "paper_count": 66,
-  "daily_count": 7,
-  "trend_count": 3,
-  "long_tail_count": 11,
-  "value_distribution": {
-    "immediate": 10,
-    "trend": 13,
-    "long_tail": 11,
-    "ignore": 32
-  },
-  "recent_dailies": [
-    {
-      "date": "2026-05-10",
-      "title": "论文价值发现日报 - 2026-05-10",
-      "deep_dive_title": "Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression",
-      "deep_dive_url": "https://arxiv.org/abs/2605.07123v1",
-      "decision": "轻量试点",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "优先深读 Context Cache（有代码、有数据、可直接集成），然后评估 AgentSandbox 作为团队 Agent 评测基础设施的可行性。",
-      "max_uncertainty": "大部分论文缺少开源代码或 benchmark URL（仅 Context Cache / Speculative Retrieval / AgentSandbox 有代码），工程可复现性需要后续核验。arXiv 论文尚未经同行评审。",
-      "one_line_judgement": "直击生产 RAG 的延迟和内存痛点，有开源代码、兼容主流推理框架、工程证据扎实（2.7x 延迟降低 / 60% 内存节省 / 97% 精度保持）。",
-      "path": "daily-detail.html?date=2026-05-10"
-    },
-    {
-      "date": "2026-05-09",
-      "title": "论文价值发现日报 - 2026-05-09",
-      "deep_dive_title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
-      "deep_dive_url": "https://arxiv.org/abs/2605.06651v1",
-      "decision": "持续观察",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-09"
-    },
-    {
-      "date": "2026-05-08",
-      "title": "论文价值发现日报 - 2026-05-08",
-      "deep_dive_title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
-      "deep_dive_url": "http://arxiv.org/abs/2605.05191v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读 LongSeeker 的 Context-ReAct 框架，评估在当前 Agent 系统中引入弹性上下文管理的最小方案",
-      "max_uncertainty": "LongSeeker 的完整实验结果需确认（摘要截断）；线性联想记忆容量结果的工程适用边界（实际 RAG 向量库的分布假设是否满足）",
-      "one_line_judgement": "直接解决长时序 Agent 的上下文爆炸问题——随着推理、工具调用、观察信息的积累，naive 上下文会迅速超限。Context-ReAct 框架按当前任务相关性动态维护不同粒度的轨迹片段（全保留→摘要→丢弃），是 Agent 记忆管理的关键基础设施。弹性上下文编排可迁移到所有长任务 Agent 场景。",
-      "path": "daily-detail.html?date=2026-05-08"
-    },
-    {
-      "date": "2026-05-07",
-      "title": "论文价值发现日报 - 2026-05-07",
-      "deep_dive_title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
-      "deep_dive_url": "http://arxiv.org/abs/2605.02888v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案",
-      "max_uncertainty": "SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证",
-      "one_line_judgement": "直接解决 LLM 部署最核心的推理延迟瓶颈，用轻量 MLP 自适应选择推测解码长度，在压缩模型上实现 56% 加速且开销仅 0.34ms/step。实验覆盖 5112 条记录、统计显著 p<0.001，工程集成路径清晰——任何使用推测解码的框架均可直接接入。",
-      "path": "daily-detail.html?date=2026-05-07"
-    },
-    {
-      "date": "2026-05-06",
-      "title": "论文价值发现日报 - 2026-05-06",
-      "deep_dive_title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-      "deep_dive_url": "http://arxiv.org/abs/2605.02868v1",
-      "decision": "持续观察",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-06"
-    },
-    {
-      "date": "2026-04-29",
-      "title": "论文价值发现日报 - 2026-04-29",
-      "deep_dive_title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
-      "deep_dive_url": "http://arxiv.org/abs/2604.24715v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成三件事：列出 HyLo 架构 PoC 指标、设计提示词规格 A/B 实验、起草 case-specific rubric 模板。",
-      "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验。",
-      "one_line_judgement": "它把长上下文升级从\"重训新模型\"转成\"复用现有资产做架构改造\"，最贴近团队近期可执行的工程路径。",
-      "path": "daily-detail.html?date=2026-04-29"
-    },
-    {
-      "date": "2026-04-28",
-      "title": "论文价值发现日报 - 2026-04-28",
-      "deep_dive_title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
-      "deep_dive_url": "http://arxiv.org/abs/2604.24715v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "提出把已训练 Transformer 低成本改造成长上下文混合架构（HyLo），直接对应推理成本/吞吐与上下文窗口工程痛点；含对比与保持短上下文能力的证据，工程可迁移性较强。",
-      "path": "daily-detail.html?date=2026-04-28"
-    }
-  ],
-  "top_papers": [
+  "date": "2026-05-10",
+  "total": 10,
+  "generated_at": "2026-05-10T04:30:00.000000",
+  "papers": [
     {
       "title": "Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression",
       "arxiv_id": "2605.07123v1",
@@ -263,19 +68,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "Context Engineering：Long-context language models can process up to 1M tokens, but the quadratic co…",
-      "one_line_judgement": "今天值得试：Context Cache 直击生产 RAG 系统的核心痛点：长上下文推理延迟和 KV-cache 内存开销。语义分块 + 跨查询复用的思路…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Context Cache 直击生产 RAG 系统的核心痛点：长上下文推理延迟和 KV-cache 内存开销。语义分块 + 跨查询复用的思路新颖且实用，2.7x 延迟降低 + 60% 内存节省",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=context-cache-efficient-long-context-inference-with-semantic-aware-prompt-compression"
+      "trend_status": "emerging"
     },
     {
       "title": "AgentSandbox: A Reproducible and Scalable Evaluation Platform for LLM-based Agents",
@@ -342,19 +135,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "LLM 评测：Evaluating LLM-based agents is challenging due to non-deterministic behavior, …",
-      "one_line_judgement": "今天值得试：AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好的工程实践。12 个前沿模型的横评结果有直接参考价值",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=agentsandbox-a-reproducible-and-scalable-evaluation-platform-for-llm-based-agents"
+      "trend_status": "emerging"
     },
     {
       "title": "Safety Rigor via Red Teaming Games: A Game-Theoretic Framework for Adversarial LLM Safety Evaluation",
@@ -417,19 +198,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "rising",
-      "brief_cn": "安全与治理：Current LLM safety evaluations treat red teaming as a fixed benchmark, which f…",
-      "one_line_judgement": "值得继续观察：将红队测试建模为零和博弈是方法论上的重要创新，均衡攻击成功率是传统静态 benchmark 的 2.3 倍，说明当前安全评测严重低估了真实风…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "上升",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "将红队测试建模为零和博弈是方法论上的重要创新，均衡攻击成功率是传统静态 benchmark 的 2.3 倍，说明当前安全评测严重低估了真实风险。对 6 个安全类别 × 12 攻击策略 × 8 ",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=safety-rigor-via-red-teaming-games-a-game-theoretic-framework-for-adversarial-llm-safety-evaluation"
+      "trend_status": "rising"
     },
     {
       "title": "Chain-of-Specification: Bridging Natural Language Requirements to Formal Verification with LLM Agents",
@@ -499,20 +268,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：We introduce Chain-of-Specification (CoSpec), a framework that uses LLM agents…",
-      "one_line_judgement": "今天值得试：CoSpec 将 LLM Agent 多步推理应用于形式化规约翻译，直接打通自然语言需求到 TLA+/Alloy/SMT-LIB 的工程链路…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "CoSpec 将 LLM Agent 多步推理应用于形式化规约翻译，直接打通自然语言需求到 TLA+/Alloy/SMT-LIB 的工程链路。72% 端到端准确率 + 减少 60% 人工规约工",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=chain-of-specification-bridging-natural-language-requirements-to-formal-verification-with-llm-agents"
+      "trend_status": "emerging"
     },
     {
       "title": "Speculative Retrieval: Overlapping Retrieval and Generation for Low-Latency RAG Systems",
@@ -577,19 +333,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "RAG / 知识系统：Retrieval-Augmented Generation (RAG) systems suffer from latency overhead beca…",
-      "one_line_judgement": "今天值得试：Speculative Retrieval 受 Speculative Decoding 启发，将预测思想应用到 RAG 检索阶段，40-5…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Speculative Retrieval 受 Speculative Decoding 启发，将预测思想应用到 RAG 检索阶段，40-55% 延迟降低是显著改善。有开源代码，兼容任何 em",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=speculative-retrieval-overlapping-retrieval-and-generation-for-low-latency-rag-systems"
+      "trend_status": "emerging"
     },
     {
       "title": "Adaptive Tool Composition for LLM Agents via Reinforcement Learning with Offline Bases",
@@ -653,19 +397,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "rising",
-      "brief_cn": "AI Agent：Tool-augmented LLM agents achieve remarkable performance on complex tasks, but…",
-      "one_line_judgement": "值得继续观察：ATCO 用 RL 学习动态工具组合策略，是 Tool-Use Agent 的重要进步。18% 完成率提升 + 30% 调用减少说明 RL …",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "上升",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "ATCO 用 RL 学习动态工具组合策略，是 Tool-Use Agent 的重要进步。18% 完成率提升 + 30% 调用减少说明 RL 带来了真正的效率增益而非表面优化。离线基础 + 在线",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=adaptive-tool-composition-for-llm-agents-via-reinforcement-learning-with-offline-bases"
+      "trend_status": "rising"
     },
     {
       "title": "MemoryPalace: A Structured Memory Architecture for Long-Horizon Embodied Agents",
@@ -733,19 +465,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "rising",
-      "brief_cn": "AI Agent：Embodied agents operating in complex 3D environments over extended time horizo…",
-      "one_line_judgement": "值得继续观察：MemoryPalace 将经典记忆宫殿技术转化为 Agent 的空间-时序记忆架构，层次化空间图 + O(log n) 查询是好的系统设计…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "上升",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "MemoryPalace 将经典记忆宫殿技术转化为 Agent 的空间-时序记忆架构，层次化空间图 + O(log n) 查询是好的系统设计。Habitat 2.0 上 24% 成功率提升 +",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=memorypalace-a-structured-memory-architecture-for-long-horizon-embodied-agents"
+      "trend_status": "rising"
     },
     {
       "title": "MultiHop-R1: Incentivizing Multi-Hop Reasoning in Language Models via Reinforcement Learning",
@@ -811,20 +531,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "rising",
-      "brief_cn": "RAG / 知识系统：Large reasoning models like DeepSeek-R1 have shown strong single-chain reasoni…",
-      "one_line_judgement": "值得继续观察：MultiHop-R1 用 RL 激励多跳推理行为，在 MuSiQue 上比 DeepSeek-R1-Distill-7B 高 12.3%。…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "上升",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "MultiHop-R1 用 RL 激励多跳推理行为，在 MuSiQue 上比 DeepSeek-R1-Distill-7B 高 12.3%。方法上中规中矩，但实验扎实。核心启发是：分阶段奖励可",
-      "related_trends": [
-        "context-engineering",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=multihop-r1-incentivizing-multi-hop-reasoning-in-language-models-via-reinforcement-learning"
+      "trend_status": "rising"
     },
     {
       "title": "Distilling Reasoning Trace via Knowledge Gap Alignment for Smaller Language Models",
@@ -885,19 +592,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "推理与服务：Knowledge distillation from large reasoning models to smaller ones often fails…",
-      "one_line_judgement": "值得先保存：Knowledge Gap Alignment 是蒸馏推理链的好思路：先探测学生模型的认知盲区，再生成桥接解释。7B 匹配 32B 的结果是…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "Knowledge Gap Alignment 是蒸馏推理链的好思路：先探测学生模型的认知盲区，再生成桥接解释。7B 匹配 32B 的结果是强证据。但创新更多在工程技巧层面，理论深度有限。长尾",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=distilling-reasoning-trace-via-knowledge-gap-alignment-for-smaller-language-models"
+      "trend_status": "long_tail_watch"
     },
     {
       "title": "GNN-Augmented Retrieval for Knowledge-Intensive NLP Tasks",
@@ -960,74 +655,8 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 2.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "RAG / 知识系统：Standard dense retrieval models treat documents as independent vectors, ignori…",
-      "one_line_judgement": "值得先保存：GNN-Retriever 用知识图谱增强密集检索，思路合理但增量有限。8-12% recall 提升是不错的改善，但 15ms 额外延迟的…",
-      "first_seen_date": "2026-05-10",
-      "first_deep_dive_daily": "2026-05-10",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "GNN-Retriever 用知识图谱增强密集检索，思路合理但增量有限。8-12% recall 提升是不错的改善，但 15ms 额外延迟的假设需要在更大规模上验证。长尾价值在于'跨文档实体图",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=gnn-augmented-retrieval-for-knowledge-intensive-nlp-tasks"
+      "trend_status": "long_tail_watch"
     }
   ],
-  "long_tail_highlights": [
-    {
-      "id": "distilling-reasoning-trace-via-knowledge-gap-alignment-for-smaller-language-models",
-      "title": "Distilling Reasoning Trace via Knowledge Gap Alignment for Smaller Language Models",
-      "direction": "推理与服务 / LLM 评测",
-      "long_tail_type": "可迁移方法",
-      "why_save": "Knowledge Gap Alignment 是蒸馏推理链的好思路：先探测学生模型的认知盲区，再生成桥接解释。7B 匹配 32B 的结果是强证据。但创新更多在工程技巧层面，理论深度有限。长尾",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-05-31",
-      "detail_path": "paper-detail.html?id=distilling-reasoning-trace-via-knowledge-gap-alignment-for-smaller-language-models"
-    },
-    {
-      "id": "gnn-augmented-retrieval-for-knowledge-intensive-nlp-tasks",
-      "title": "GNN-Augmented Retrieval for Knowledge-Intensive NLP Tasks",
-      "direction": "RAG / 知识系统",
-      "long_tail_type": "工程抽象",
-      "why_save": "GNN-Retriever 用知识图谱增强密集检索，思路合理但增量有限。8-12% recall 提升是不错的改善，但 15ms 额外延迟的假设需要在更大规模上验证。长尾价值在于'跨文档实体图",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-05-31",
-      "detail_path": "paper-detail.html?id=gnn-augmented-retrieval-for-knowledge-intensive-nlp-tasks"
-    },
-    {
-      "id": "when-no-benchmark-exists-validating-comparative-llm-safety-scoring-without-ground-truth-labels",
-      "title": "When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels",
-      "direction": "LLM 评测 / 安全与治理",
-      "long_tail_type": "工程抽象",
-      "why_save": "LLM 评测：Many deployments must compare candidate language models for safety before a la…",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-05-30",
-      "detail_path": "paper-detail.html?id=when-no-benchmark-exists-validating-comparative-llm-safety-scoring-without-ground-truth-labels"
-    }
-  ],
-  "common_research_path": [
-    "论文",
-    "理论",
-    "工程实践",
-    "趋势",
-    "启发",
-    "行动"
-  ]
+  "scored_at": "2026-05-10"
 }

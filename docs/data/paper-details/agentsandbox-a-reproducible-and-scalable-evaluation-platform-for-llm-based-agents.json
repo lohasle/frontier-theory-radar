@@ -1,0 +1,130 @@
+{
+  "id": "agentsandbox-a-reproducible-and-scalable-evaluation-platform-for-llm-based-agents",
+  "title": "AgentSandbox: A Reproducible and Scalable Evaluation Platform for LLM-based Agents",
+  "authors": [
+    "Xiangying Jin",
+    "Shuyi Gu",
+    "Ruiqi Wang",
+    "Chen Ariale",
+    "Bowen Tan",
+    "Ning Liang",
+    "Haifeng Lin",
+    "Pengfei Liu"
+  ],
+  "source": "arxiv",
+  "published": "2026-05-08",
+  "url": "https://arxiv.org/abs/2605.07185v1",
+  "pdf_url": "https://arxiv.org/pdf/2605.07185v1",
+  "code_url": "https://github.com/agentsandbox/agentsandbox",
+  "benchmark_url": "待核验/暂无",
+  "paperswithcode_url": "待核验/暂无",
+  "openreview_url": "待核验/暂无",
+  "first_seen_date": "2026-05-10",
+  "first_deep_dive_daily": "2026-05-10",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "value_scores": {
+    "novelty": 5.4,
+    "relevance": 6.2,
+    "evidence": 9.15,
+    "engineering_testability": 8.35,
+    "trend_signal": 7.35,
+    "long_tail_potential": 3.5,
+    "actionability": 7.3,
+    "noise_risk": 1.2
+  },
+  "score": 72.6,
+  "decision": "轻量试点",
+  "one_line_judgement": "今天值得试：AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好…",
+  "one_line_essence": "AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好的工程实践。12 个前沿模型的横评结果有直接参考价值。有开源代码，可以立即用于搭建内部 Agent 评测流水线。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好的工程实践。12 个前沿模型的横评结果有直接参考价值。有开源代码，可以立即用于搭建内部 Agent 评测流水线。",
+  "research_position": "benchmark",
+  "engineering_testability": {
+    "has_code": true,
+    "has_benchmark": true,
+    "can_reproduce": true,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "AgentSandbox 解决了 Agent 评测的核心痛点：确定性、可复现性、多域覆盖。200 个评测任务 × 密封容器 × 录制回放是好的工程实践。12 个前沿模型的横评结果有直接参考价值",
+    "future_trigger": [
+      "待更多证据"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    "https://github.com/agentsandbox/agentsandbox"
+  ],
+  "detail_path": "paper-detail.html?id=agentsandbox-a-reproducible-and-scalable-evaluation-platform-for-llm-based-agents",
+  "daily_path": "daily-detail.html?date=2026-05-10",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

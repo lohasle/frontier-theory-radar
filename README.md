@@ -78,6 +78,7 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-05-10 · Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression](daily-detail.html?date=2026-05-10) · 即时价值 · 轻量试点
 - [2026-05-09 · AI Co-Mathematician: Accelerating Mathematicians with Agentic AI](daily-detail.html?date=2026-05-09) · 即时价值 · 持续观察
 - [2026-05-08 · LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents](daily-detail.html?date=2026-05-08) · 即时价值 · 重点学习
 - [2026-05-07 · SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](daily-detail.html?date=2026-05-07) · 即时价值 · 重点学习
@@ -87,9 +88,9 @@ python3 scripts/build_pages.py
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 32
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 26
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 32
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 36
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 31
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 36
 
 ## 启发沉淀说明
 
