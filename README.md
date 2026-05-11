@@ -78,13 +78,13 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-05-12 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-12) · 暂时忽略 · 暂时忽略
 - [2026-05-11 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-11) · 暂时忽略 · 暂时忽略
 - [2026-05-10 · Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression](daily-detail.html?date=2026-05-10) · 即时价值 · 轻量试点
 - [2026-05-09 · AI Co-Mathematician: Accelerating Mathematicians with Agentic AI](daily-detail.html?date=2026-05-09) · 即时价值 · 持续观察
 - [2026-05-08 · LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents](daily-detail.html?date=2026-05-08) · 即时价值 · 重点学习
 - [2026-05-07 · SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](daily-detail.html?date=2026-05-07) · 即时价值 · 重点学习
 - [2026-05-06 · EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs](daily-detail.html?date=2026-05-06) · 长尾价值 · 持续观察
-- [2026-04-29 · Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](daily-detail.html?date=2026-04-29) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
