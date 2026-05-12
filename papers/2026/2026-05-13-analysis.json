@@ -1,0 +1,114 @@
+{
+  "date": "2026-05-13",
+  "generated_at": "2026-05-13T04:31:00",
+  "model": "glm-5.1",
+  "selected_papers": 5,
+  "total_papers": 10,
+  "deep_analysis": [
+    {
+      "rank": 1,
+      "title": "ELF: Embedded Language Flows",
+      "arxiv_id": "2605.10938v1",
+      "authors": ["Keya Hu", "Linlu Qiu", "Yiyang Lu", "Hanhong Zhao", "Tianhong Li"],
+      "url": "http://arxiv.org/abs/2605.10938v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10938v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "categories": ["cs.CL", "cs.AI", "cs.LG"],
+      "overall_score": 8.5,
+      "innovation_type": "架构范式创新",
+      "theory_chain": {
+        "theory": "流模型(Flow-based Models)在连续空间中的语言建模范式——将文本生成从离散token空间映射到连续嵌入空间，利用常微分方程(ODE)定义的概率流进行生成",
+        "engineering_practice": "可应用于：(1)连续空间中的可控文本生成，通过调整ODE求解精度控制生成质量与速度的权衡；(2)与现有embedding模型的无缝集成，省去离散化损失；(3)为后续连续空间RLHF等对齐技术提供新路线",
+        "trend": "标志着语言建模从'离散token自回归'向'连续流生成'的范式迁移趋势。如果scaling验证成功，可能触发类似Diffusion在图像领域的颠覆效应",
+        "insight": "核心启发：语言的本质表示可能是连续的，离散token化只是工程妥协。连续表示天然支持插值、可控和渐进式生成",
+        "action": "建议：(1)追踪作者后续scaling实验结果；(2)在小规模语言任务(如文本风格迁移)上复现连续流方法，评估可行性；(3)关注该方向对推理优化的潜在影响——ODE求解器的自适应步长可能比自回归逐token生成更高效"
+      }
+    },
+    {
+      "rank": 2,
+      "title": "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+      "arxiv_id": "2605.10933v1",
+      "authors": ["Chenyang Song", "Weilin Zhao", "Xu Han", "Chaojun Xiao", "Yingfa Chen"],
+      "url": "http://arxiv.org/abs/2605.10933v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10933v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "categories": ["cs.LG", "cs.CL"],
+      "overall_score": 8.0,
+      "innovation_type": "工程架构优化",
+      "theory_chain": {
+        "theory": "在相同总参数预算下，通过架构设计使稀疏MoE达到Dense Transformer性能——核心是解决MoE的参数冗余和内存访问效率问题",
+        "engineering_practice": "直接应用场景：(1)手机/平板端部署参数量大但激活量小的模型；(2)IoT设备上的轻量级推理；(3)边缘计算场景中平衡模型容量与存储开销",
+        "trend": "端侧AI部署从'压缩大模型'(量化/剪枝)向'原生高效架构设计'演进。MoE从云端走向端侧是大趋势，DECO代表了这一方向的重要进展",
+        "insight": "核心启发：模型效率优化不应仅在推理时做后处理，而应在架构设计阶段就考虑部署约束。MoE的稀疏激活天然适合边缘设备的算力限制",
+        "action": "建议：(1)在目标端侧硬件(如骁龙/苹果芯片)上实测DECO推理延迟和内存占用；(2)与现有端侧方案(如MobileLLM/Gemma)做对比评测；(3)评估与推理框架集成的工程成本"
+      }
+    },
+    {
+      "rank": 3,
+      "title": "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning",
+      "arxiv_id": "2605.10923v1",
+      "authors": ["Junhao Shen", "Teng Zhang", "Xiaoyan Zhao", "Hong Cheng"],
+      "url": "http://arxiv.org/abs/2605.10923v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10923v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "categories": ["cs.LG", "cs.CL"],
+      "overall_score": 7.5,
+      "innovation_type": "系统方法论",
+      "theory_chain": {
+        "theory": "Agent外部技能应具有完整生命周期(创建→使用→评估→淘汰/内化)，而非简单累积。在有限参数容量约束下，技能的边际贡献决定其存续策略",
+        "engineering_practice": "直接应用于：(1)LLM Agent的Tool库管理——动态加载/卸载工具；(2)RAG系统中的知识更新策略；(3)多任务Agent系统中避免技能干扰",
+        "trend": "Agent系统从'能力堆叠'向'能力治理'演进。随着Agent使用的工具/技能越来越多，生命周期管理将成为基础设施级需求",
+        "insight": "核心启发：AI系统的能力管理可以借鉴软件工程中的依赖管理思想——不是所有依赖都需要常驻，版本升级和废弃机制同样适用",
+        "action": "建议：(1)在现有Agent平台中引入技能使用频率追踪和ROI评估机制；(2)设计技能淘汰的A/B测试框架，量化淘汰对任务完成率的影响；(3)关注作者开源代码，复现技能生命周期策略的核心算法"
+      }
+    },
+    {
+      "rank": 4,
+      "title": "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace",
+      "arxiv_id": "2605.10913v1",
+      "authors": ["Simon Yu", "Derek Chong", "Ananjan Nandi", "Dilara Soylu", "Jiuding Sun"],
+      "url": "http://arxiv.org/abs/2605.10913v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10913v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "categories": ["cs.AI", "cs.PL", "cs.SE"],
+      "overall_score": 7.5,
+      "innovation_type": "系统基础设施",
+      "theory_chain": {
+        "theory": "将函数式编程范式应用于Agent运行时——Agent操作被形式化为纯函数，执行追踪作为不可变事件日志，支持确定性重放和分支。用Lean定理证明器保证核心操作的正确性",
+        "engineering_practice": "应用场景：(1)Agent调试与审计——完整回溯任何执行路径；(2)Agent A/B测试——从同一状态fork不同策略；(3)成本优化——95%的prompt缓存复用率直接降低API调用成本",
+        "trend": "Agent基础设施从'快速原型'向'工程化/生产级'演进。形式化验证在AI系统中的应用正在从模型验证扩展到系统验证",
+        "insight": "核心启发：Agent的可信度不仅取决于模型本身，还取决于运行时基础设施的可靠性。Git-like的版本控制思想可以扩展到Agent状态管理",
+        "action": "建议：(1)评估Shepherd的进程隔离方案在企业多租户环境中的安全性；(2)实验性地将执行追踪机制集成到现有Agent开发流程中；(3)关注Lean形式化验证的覆盖范围和验证成本"
+      }
+    },
+    {
+      "rank": 5,
+      "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
+      "arxiv_id": "2605.10912v1",
+      "authors": ["Shuangrui Ding", "Xuanlang Dai", "Long Xing", "Shengyuan Ding", "Ziyu Liu"],
+      "url": "http://arxiv.org/abs/2605.10912v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.10912v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "categories": ["cs.CL"],
+      "overall_score": 7.0,
+      "innovation_type": "评测基准",
+      "theory_chain": {
+        "theory": "真实世界Agent评测应满足：(1)原生运行时环境而非合成沙箱；(2)长程任务(多步骤+时间跨度大)；(3)多模态+双语输入；(4)过程评估而非仅最终结果检查",
+        "engineering_practice": "直接应用：(1)作为Agent系统开发的标准评测套件；(2)CI/CD中集成Agent能力回归测试；(3)跨模型Agent能力对比的公平基准",
+        "trend": "Agent评测从'玩具任务'向'真实场景'迁移。双语多模态设计反映了全球化部署需求，也暴露了现有模型在跨语言Agent任务上的差距",
+        "insight": "核心启发：好的评测基准本身就是重要的研究贡献。WildClawBench揭示了一个关键问题——在沙箱中表现良好的Agent在真实环境中可能显著退化",
+        "action": "建议：(1)在内部Agent评测流程中引入WildClawBench作为补充基准；(2)关注该基准在社区的采用度和排行榜动态；(3)基于其任务设计方法论，构建领域特定的长程评测任务"
+      }
+    }
+  ],
+  "cross_paper_insights": {
+    "theme": "AI系统的效率与可靠性正在从单点优化走向系统性工程",
+    "summary": "本期5篇深挖论文呈现三个核心趋势：(1)架构范式革新——ELF探索连续空间语言生成，挑战离散token统治地位；(2)部署效率突破——DECO将MoE带入端侧，原生高效架构取代后处理压缩；(3)Agent基础设施成熟化——从技能生命周期管理(Skill Lifecycle)到形式化运行时(Shepherd)再到真实评测(WildClawBench)，Agent系统正经历从原型到产品的工程化跃迁。",
+    "strategic_implications": "对工程团队的建议：重点关注ELF的连续生成范式和DECO的端侧MoE方案，两者可能在6-12个月内产生实际工程影响。Agent基础设施方向虽然论文数量多，但标准化程度低，建议选择性投入——优先关注Shepherd的可审计执行追踪和WildClawBench的真实场景评测。"
+  }
+}

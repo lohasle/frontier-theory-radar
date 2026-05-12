@@ -1,0 +1,92 @@
+{
+  "date": "2026-05-13",
+  "generated_at": "2026-05-13T04:31:00",
+  "model": "glm-5.1",
+  "scores": [
+    {
+      "title": "ELF: Embedded Language Flows",
+      "arxiv_id": "2605.10938v1",
+      "novelty": 9,
+      "technical_depth": 8,
+      "engineering_impact": 8,
+      "evidence_strength": 7,
+      "reproducibility": 6,
+      "overall_score": 8.5,
+      "score_rationale": "将连续扩散/流模型引入语言建模是范式级创新。论文证明连续DLM可在最小离散域适配后生效，挑战了当前主流离散token扩散路线。理论推导扎实，若实验证明scaling可行，将影响下一代LLM架构设计。工程影响在于：连续表示可能带来更平滑的生成质量-计算权衡曲线，对推理优化有直接启发。",
+      "theory_to_practice": "流模型→连续语义空间表示→新一代生成式语言模型架构→推理阶段可控生成与采样效率优化",
+      "key_risks": [
+        "连续表示与现有token化基础设施兼容性未明",
+        "scaling到大规模预训练尚未验证",
+        "与现有tokenizer/词表耦合方式未详述"
+      ]
+    },
+    {
+      "title": "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+      "arxiv_id": "2605.10933v1",
+      "novelty": 7,
+      "technical_depth": 8,
+      "engineering_impact": 9,
+      "evidence_strength": 7,
+      "reproducibility": 7,
+      "overall_score": 8.0,
+      "score_rationale": "MoE的端侧部署是当前工业界刚需痛点。DECO在相同总参数量下达到Dense Transformer性能，直接解决MoE存储与内存访问瓶颈。工程价值极高：对移动端/边缘设备部署大模型有直接应用前景。方法论上通过架构而非量化/剪枝来优化，属于更优雅的路线。",
+      "theory_to_practice": "稀疏MoE→参数效率优化→端侧大模型部署→移动端AI应用普及",
+      "key_risks": [
+        "端侧设备硬件异构性可能导致性能波动",
+        "与现有推理框架(如ONNX/TFLite)的兼容性待验证",
+        "长序列场景下的内存效率未充分讨论"
+      ]
+    },
+    {
+      "title": "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning",
+      "arxiv_id": "2605.10923v1",
+      "novelty": 8,
+      "technical_depth": 7,
+      "engineering_impact": 8,
+      "evidence_strength": 6,
+      "reproducibility": 6,
+      "overall_score": 7.5,
+      "score_rationale": "LLM Agent的外部技能管理是当前Agent系统的核心挑战。论文提出技能不应永久积累或全部内化，而应有动态生命周期——这个洞察非常实用。在有限参数容量下，技能的增删改查策略直接影响Agent效率。与当前Tool-use/Function-calling范式高度相关。",
+      "theory_to_practice": "技能生命周期管理→动态Tool-use策略→Agent系统架构优化→可维护可扩展的AI Agent平台",
+      "key_risks": [
+        "技能淘汰的时机判断标准可能依赖特定任务分布",
+        "与现有function-calling基础设施的集成方式不明确",
+        "RL训练的稳定性与收敛性验证有限"
+      ]
+    },
+    {
+      "title": "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace",
+      "arxiv_id": "2605.10913v1",
+      "novelty": 8,
+      "technical_depth": 8,
+      "engineering_impact": 7,
+      "evidence_strength": 7,
+      "reproducibility": 6,
+      "overall_score": 7.5,
+      "score_rationale": "将函数式编程模型引入Agent运行时管理是独特视角。用Lean形式化核心操作确保正确性，Git-like执行追踪支持fork/replay，比Docker快5×的进程分叉有明确工程价值。>95%的prompt-cache复用率对成本优化有直接意义。三个应用场景展示了泛化能力。",
+      "theory_to_practice": "形式化方法+函数式编程→Agent执行追踪→可审计可复现的Agent系统→企业级AI Agent基础设施",
+      "key_risks": [
+        "Lean形式化验证的覆盖范围有限",
+        "文件系统级别的隔离可能在多租户场景有安全风险",
+        "与现有Agent框架(LangChain/CrewAI等)的集成成本"
+      ]
+    },
+    {
+      "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
+      "arxiv_id": "2605.10912v1",
+      "novelty": 6,
+      "technical_depth": 7,
+      "engineering_impact": 8,
+      "evidence_strength": 8,
+      "reproducibility": 8,
+      "overall_score": 7.0,
+      "score_rationale": "现有Agent评测基准过度依赖合成沙箱和短任务，WildClawBench用60个人工编写的真实长程任务填补空白。双语多模态设计更贴近实际部署场景。对Agent能力评估标准化有直接贡献。但创新性相对有限——更多是工程贡献而非理论突破。",
+      "theory_to_practice": "真实世界评测基准→Agent能力量化评估→驱动Agent系统迭代优化→标准化Agent评测生态",
+      "key_risks": [
+        "60个任务的覆盖面可能不足",
+        "双语(中英)设计的文化偏见需要更多语言验证",
+        "评判标准的客观性(人工标注vs自动评估)"
+      ]
+    }
+  ]
+}
