@@ -1,7 +1,774 @@
 {
-  "updated_at": "2026-05-13T04:33:10.085522",
-  "total": 77,
+  "updated_at": "2026-05-14T04:33:03.916823",
+  "total": 87,
   "papers": [
+    {
+      "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
+      "authors": [
+        "Di Wu",
+        "Zixiang Ji",
+        "Asmi Kawatkar",
+        "Bryan Kwan",
+        "Jia-Chen Gu"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12493v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12493v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Long-term memory is crucial for agents in specialized web environments, where success depends on recalling interface affordances, state dynamics, workflows, and recurring failure modes. However, existing memory benchmarks for agents mostly focus on user histories, short traces, or downstream task success, leaving open how to directly evaluate whether memory systems effectively internalize environment-specific experience. To address this gap, we introduce LongMemEval-V2 (LME-V2), a benchmark for ",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "coding agent",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12493v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12493v1"
+        }
+      ],
+      "llm_reason": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的标准化评测框架；(2) 涵盖界面affordance、状态动态、工作流和失败模式召回等关键能力；(3) 可直接用于评估和改进RAG/记忆增强型Agent系统。证据强度高（系统性benchmark），工程可测试性强。",
+      "id": "longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 6.0,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Long-term memory is crucial for agents in specialized web environments, where …",
+      "one_line_judgement": "今天值得试：LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues"
+    },
+    {
+      "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+      "authors": [
+        "Seokwon Jung",
+        "Alexander Rubinstein",
+        "Arnas Uselis",
+        "Sangdoo Yun",
+        "Seong Joon Oh"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12477v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12477v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLM-based agents increasingly operate in persistent environments where they must store, update, and reason over information across many sessions. While prior benchmarks evaluate only single-entity updates, MEME defines six tasks spanning the full space defined by the multi-entity and evolving axes, including three not scored by prior work: Cascade and Absence (dependency reasoning) and Deletion (post-removal state). Evaluating six memory systems spanning three memory paradigms on 100 controlled ",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "evaluation",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 77.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12477v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12477v1"
+        }
+      ],
+      "llm_reason": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可作为记忆系统选型和优化的标准评测；(3) 100个受控场景提供了可复现的评测基准。与LongMemEval-V2互补，一个偏环境经验、一个偏实体记忆演化。",
+      "id": "meme-multi-entity-evolving-memory-evaluation",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.55,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：LLM-based agents increasingly operate in persistent environments where they mu…",
+      "one_line_judgement": "今天值得试：MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=meme-multi-entity-evolving-memory-evaluation"
+    },
+    {
+      "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+      "authors": [
+        "Xuhao Hu",
+        "Xi Zhang",
+        "Haiyang Xu",
+        "Kyle Qiao",
+        "Jingyi Yang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12481v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12481v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Computer Use Agents (CUAs) can act through both atomic GUI actions, such as click and type, and high-level tool calls, such as API-based file operations, but this hybrid action space often leaves them uncertain about when to continue with GUI actions or switch to tools, leading to suboptimal execution paths. This difficulty stems from the scarcity of high-quality interleaved GUI-Tool trajectories, the cost and brittleness of collecting real tool trajectories, and the lack of trajectory-level sup",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "RAG",
+        "tool use"
+      ],
+      "score": 76.5,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12481v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12481v1"
+        }
+      ],
+      "llm_reason": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的工程刚需；(2) 轨迹级监督思路可迁移到其他Agent场景；(3) 解决了高质量交错GUI-Tool轨迹稀缺的实际问题。actionability强，可直接指导CUA系统设计。",
+      "id": "toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Computer Use Agents (CUAs) can act through both atomic GUI actions, such as cl…",
+      "one_line_judgement": "今天值得试：ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Age…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents"
+    },
+    {
+      "title": "Task-Adaptive Embedding Refinement via Test-time LLM Guidance",
+      "authors": [
+        "Ariel Gera",
+        "Shir Ashury-Tahan",
+        "Gal Bloch",
+        "Ohad Eytan",
+        "Assaf Toledo"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12487v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12487v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We explore the effectiveness of an LLM-guided query refinement paradigm for extending the usability of embedding models to challenging zero-shot search and classification tasks. Our approach refines the embedding representation of a user query using feedback from a generative LLM on a small set of documents, enabling embeddings to adapt in real time to the target task. We conduct extensive experiments with state-of-the-art text embedding models across a diverse set of challenging search and clas",
+      "categories": [
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12487v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12487v1"
+        }
+      ],
+      "llm_reason": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2) 可集成到现有RAG pipeline作为查询增强层；(3) 跨搜索和分类任务的广泛实验验证。actionability高，可快速原型验证。",
+      "id": "task-adaptive-embedding-refinement-via-test-time-llm-guidance",
+      "value_type": "immediate",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "RAG / 知识系统：We explore the effectiveness of an LLM-guided query refinement paradigm for ex…",
+      "one_line_judgement": "今天值得试：LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2)",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=task-adaptive-embedding-refinement-via-test-time-llm-guidance"
+    },
+    {
+      "title": "Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for Language-Model Post-Training",
+      "authors": [
+        "Yuanda Xu",
+        "Hejian Sang",
+        "Zhengze Zhou",
+        "Ran He",
+        "Zhipeng Wang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12483v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12483v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In settings where labeled verifiable training data is the binding constraint, each checked example should be allocated carefully. The standard practice is to use this data directly on the model that will be deployed, for example by running GRPO on the deployment student. We argue that this is often an inefficient allocation because it overlooks a reward-density principle: sparse sequence-level reward should train models where exploration is productive, while dense token-level teacher reward shou",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 73.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12483v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12483v1"
+        }
+      ],
+      "llm_reason": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——如何更高效分配标注数据。是对GRPO+蒸馏范式的经验性改进，但证据仍需更多任务验证。",
+      "id": "beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：In settings where labeled verifiable training data is the binding constraint, …",
+      "one_line_judgement": "值得继续观察：提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training"
+    },
+    {
+      "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+      "authors": [
+        "Runhui Huang",
+        "Jie Wu",
+        "Rui Yang",
+        "Zhe Liu",
+        "Hengshuang Zhao"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12495v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12495v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabilities without an additional cold-start stage. Our approach unlocks the model's intrinsic potential to perform advanced reasoning tasks: Reasoning Text-to-Image Generation, where the model actively infers implicit user intents, and Self-Reflective Refinement, where it autonomously diagnoses and correc",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG",
+        "multimodal"
+      ],
+      "score": 72.5,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12495v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12495v1"
+        }
+      ],
+      "llm_reason": "AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型内生推理能力，对多模态Agent工程有直接启发：可借鉴'自反思修正'机制设计多轮生成pipeline。证据层面有benchmark但无公开代码，工程可验证性中等。趋势信号强：GRPO+多模态是当前强化学习后训练的热门方向。",
+      "id": "alphagrpo-unlocking-self-reflective-multimodal-generation-in-umms-via-decompositional-verifiable-reward",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：In this paper, we propose AlphaGRPO, a novel framework that applies Group Rela…",
+      "one_line_judgement": "值得继续观察：AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型内生推理能力，对多模态Agent工程有直接启发：可借",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=alphagrpo-unlocking-self-reflective-multimodal-generation-in-umms-via-decompositional-verifiable-reward"
+    },
+    {
+      "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
+      "authors": [
+        "Rishabh Tiwari",
+        "Kusha Sareen",
+        "Lakshya A Agrawal",
+        "Joseph E. Gonzalez",
+        "Matei Zaharia"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12484v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12484v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models (LLMs) are trained for downstream tasks by updating their parameters (e.g., via RL). However, updating parameters forces them to absorb task-specific information, which can result in catastrophic forgetting and loss of plasticity. In contrast, in-context learning with fixed LLM parameters can cheaply and rapidly adapt to task-specific requirements (e.g., prompt optimization), but cannot by itself typically match the performance gains available through updating LLM parameter",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 70.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12484v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12484v1"
+        }
+      ],
+      "llm_reason": "Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的双系统方案（慢学习=参数更新，快学习=ICL）对Agent持续学习架构设计有启发。关联continual learning和LLM adaptability两个热门方向，但偏框架性论文，需跟踪具体方法和实验。",
+      "id": "learning-fast-and-slow-towards-llms-that-adapt-continually",
+      "value_type": "trend",
+      "matched_topics": [
+        "context-engineering",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Large language models (LLMs) are trained for downstream tasks by updating thei…",
+      "one_line_judgement": "值得继续观察：Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的双系统方案（慢学习=参数更新，快学习=ICL）对Ag",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=learning-fast-and-slow-towards-llms-that-adapt-continually"
+    },
+    {
+      "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+      "authors": [
+        "Kexuan Shi",
+        "Hanxuan Li",
+        "Zeju Qiu",
+        "Yandong Wen",
+        "Simon Buchholz"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12492v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12492v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We introduce Pion, a spectrum-preserving optimizer for large language model (LLM) training based on orthogonal equivalence transformation. Unlike additive optimizers such as Adam and Muon, Pion updates each weight matrix through left and right orthogonal transformations, preserving its singular values throughout training. This yields an optimization mechanism that modulates the geometry of weight matrices while keeping their spectral norm fixed. We derive the Pion update rule, systematically exa",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 68.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12492v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12492v1"
+        }
+      ],
+      "llm_reason": "Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优化器，它通过调制权重矩阵几何结构来优化。对LLM训练基础设施有潜在影响，但当前缺少代码和benchmark，工程验证成本高。值得作为训练优化器的趋势信号持续观察。",
+      "id": "pion-a-spectrum-preserving-optimizer-via-orthogonal-equivalence-transformation",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：We introduce Pion, a spectrum-preserving optimizer for large language model (L…",
+      "one_line_judgement": "值得继续观察：Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优化器，它通过调制权重矩阵几何结构来优化。对LLM训练",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=pion-a-spectrum-preserving-optimizer-via-orthogonal-equivalence-transformation"
+    },
+    {
+      "title": "Elastic Attention Cores for Scalable Vision Transformers",
+      "authors": [
+        "Alan Z. Song",
+        "Yinjie Chen",
+        "Mu Nan",
+        "Rui Zhang",
+        "Jiahang Cao"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12491v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12491v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision Transformers (ViTs) achieve strong data-driven scaling by leveraging all-to-all self-attention. However, this flexibility incurs a computational cost that scales quadratically with image resolution, limiting ViTs in high-resolution domains. Underlying this approach is the assumption that pairwise token interactions are necessary for learning rich visual-semantic representations. In this work, we challenge this assumption, demonstrating that effective visual representations can be learned ",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG",
+        "inference"
+      ],
+      "score": 62.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12491v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12491v1"
+        }
+      ],
+      "llm_reason": "Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率场景的二次方计算开销。对推理服务优化有工程价值——如果可证明子线性注意力在视觉任务上不损失精度，可直接影响ViT部署成本。但当前仍偏研究阶段，缺少代码，需跟踪后续验证。",
+      "id": "elastic-attention-cores-for-scalable-vision-transformers",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Vision Transformers (ViTs) achieve strong data-driven scaling by leveraging al…",
+      "one_line_judgement": "值得继续观察：Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率场景的二次方计算开销。对推理服务优化有工程价值——如",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=elastic-attention-cores-for-scalable-vision-transformers"
+    },
+    {
+      "title": "OmniNFT: Modality-wise Omni Diffusion Reinforcement for Joint Audio-Video Generation",
+      "authors": [
+        "Guohui Zhang",
+        "XiaoXiao Ma",
+        "Jie Huang",
+        "Hang Xu",
+        "Hu Yu"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12480v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12480v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent advances in joint audio-video generation have been remarkable, yet real-world applications demand strong per-modality fidelity, cross-modal alignment, and fine-grained synchronization. Reinforcement Learning (RL) offers a promising paradigm, but its extension to multi-objective and multi-modal joint audio-video generation remains unexplored. Notably, our in-depth analysis first reveals that the primary obstacles to applying RL in this stem from: (i) multi-objective advantages inconsistenc",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "multimodal"
+      ],
+      "score": 55.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12480v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12480v1"
+        }
+      ],
+      "llm_reason": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长尾保存：如果音视频生成需求增长，其多目标RL框架有参考价值。",
+      "id": "omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：Recent advances in joint audio-video generation have been remarkable, yet real…",
+      "one_line_judgement": "值得先保存：OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用…",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation"
+    },
     {
       "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
       "authors": [

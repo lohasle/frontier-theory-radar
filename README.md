@@ -78,19 +78,19 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-05-14 · LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](daily-detail.html?date=2026-05-14) · 即时价值 · 轻量试点
 - [2026-05-13 · WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation](daily-detail.html?date=2026-05-13) · 暂时忽略 · 暂时忽略
 - [2026-05-12 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-12) · 暂时忽略 · 暂时忽略
 - [2026-05-11 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-11) · 暂时忽略 · 暂时忽略
 - [2026-05-10 · Context Cache: Efficient Long-Context Inference with Semantic-Aware Prompt Compression](daily-detail.html?date=2026-05-10) · 即时价值 · 轻量试点
 - [2026-05-09 · AI Co-Mathematician: Accelerating Mathematicians with Agentic AI](daily-detail.html?date=2026-05-09) · 即时价值 · 持续观察
 - [2026-05-08 · LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents](daily-detail.html?date=2026-05-08) · 即时价值 · 重点学习
-- [2026-05-07 · SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](daily-detail.html?date=2026-05-07) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 40
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 32
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 40
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 44
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 35
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 44
 
 ## 启发沉淀说明
 

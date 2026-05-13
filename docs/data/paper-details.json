@@ -1,6 +1,1350 @@
 {
-  "updated_at": "2026-05-13T04:33:13.332225",
+  "updated_at": "2026-05-14T04:33:12.135121",
   "papers": {
+    "longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues": {
+      "id": "longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues",
+      "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
+      "authors": [
+        "Di Wu",
+        "Zixiang Ji",
+        "Asmi Kawatkar",
+        "Bryan Kwan",
+        "Jia-Chen Gu"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12493v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12493v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 7.4,
+        "evidence": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 6.0,
+        "long_tail_potential": 4.15,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 78.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "今天值得试：LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。…",
+      "one_line_essence": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的标准化评测框架；(2) 涵盖界面affordance、状态动态、工作流和失败模式召回等关键能力；(3) 可直接用于评估和改进RAG/记忆增强型Agent系统。证据强度高（系统性benchmark），工程可测试性强。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的标准化评测框架；(2) 涵盖界面affordance、状态动态、工作流和失败模式召回等关键能力；(3) 可直接用于评估和改进RAG/记忆增强型Agent系统。证据强度高",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "context-engineering",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12493v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12493v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "meme-multi-entity-evolving-memory-evaluation": {
+      "id": "meme-multi-entity-evolving-memory-evaluation",
+      "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+      "authors": [
+        "Seokwon Jung",
+        "Alexander Rubinstein",
+        "Arnas Uselis",
+        "Sangdoo Yun",
+        "Seong Joon Oh"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12477v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12477v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 7.4,
+        "evidence": 5.4,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.55,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 77.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "今天值得试：MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了…",
+      "one_line_essence": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可作为记忆系统选型和优化的标准评测；(3) 100个受控场景提供了可复现的评测基准。与LongMemEval-V2互补，一个偏环境经验、一个偏实体记忆演化。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可作为记忆系统选型和优化的标准评测；(3) 100个受控场景提供了可复现的评测基准。与LongMemEval-V2互补，一个偏环境经验、一个偏实体记忆演化。",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "context-engineering",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12477v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12477v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=meme-multi-entity-evolving-memory-evaluation",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents": {
+      "id": "toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents",
+      "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+      "authors": [
+        "Xuhao Hu",
+        "Xi Zhang",
+        "Haiyang Xu",
+        "Kyle Qiao",
+        "Jingyi Yang"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12481v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12481v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 76.5,
+      "decision": "轻量试点",
+      "one_line_judgement": "今天值得试：ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Age…",
+      "one_line_essence": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的工程刚需；(2) 轨迹级监督思路可迁移到其他Agent场景；(3) 解决了高质量交错GUI-Tool轨迹稀缺的实际问题。actionability强，可直接指导CUA系统设计。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的工程刚需；(2) 轨迹级监督思路可迁移到其他Agent场景；(3) 解决了高质量交错GUI-Tool轨迹稀缺的实际问题。actionability强，可直接指导CUA系",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12481v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12481v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "task-adaptive-embedding-refinement-via-test-time-llm-guidance": {
+      "id": "task-adaptive-embedding-refinement-via-test-time-llm-guidance",
+      "title": "Task-Adaptive Embedding Refinement via Test-time LLM Guidance",
+      "authors": [
+        "Ariel Gera",
+        "Shir Ashury-Tahan",
+        "Gal Bloch",
+        "Ohad Eytan",
+        "Assaf Toledo"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12487v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12487v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 75.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "今天值得试：LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无…",
+      "one_line_essence": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2) 可集成到现有RAG pipeline作为查询增强层；(3) 跨搜索和分类任务的广泛实验验证。actionability高，可快速原型验证。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2) 可集成到现有RAG pipeline作为查询增强层；(3) 跨搜索和分类任务的广泛实验验证。actionability高，可快速原型验证。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "context-engineering",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2)",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12487v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12487v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=task-adaptive-embedding-refinement-via-test-time-llm-guidance",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training": {
+      "id": "beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training",
+      "title": "Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for Language-Model Post-Training",
+      "authors": [
+        "Yuanda Xu",
+        "Hejian Sang",
+        "Zhengze Zhou",
+        "Ran He",
+        "Zhipeng Wang"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12483v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12483v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 73.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则…",
+      "one_line_essence": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——如何更高效分配标注数据。是对GRPO+蒸馏范式的经验性改进，但证据仍需更多任务验证。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——如何更高效分配标注数据。是对GRPO+蒸馏范式的经验性改进，但证据仍需更多任务验证。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12483v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12483v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "alphagrpo-unlocking-self-reflective-multimodal-generation-in-umms-via-decompositional-verifiable-reward": {
+      "id": "alphagrpo-unlocking-self-reflective-multimodal-generation-in-umms-via-decompositional-verifiable-reward",
+      "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+      "authors": [
+        "Runhui Huang",
+        "Jie Wu",
+        "Rui Yang",
+        "Zhe Liu",
+        "Hengshuang Zhao"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12495v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12495v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 5.4,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 72.5,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型…",
+      "one_line_essence": "AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型内生推理能力，对多模态Agent工程有直接启发：可借鉴'自反思修正'机制设计多轮生成pipeline。证据层面有benchmark但无公开代码，工程可验证性中等。趋势信号强：GRPO+多模态是当前强化学习后训练的热门方向。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型内生推理能力，对多模态Agent工程有直接启发：可借鉴'自反思修正'机制设计多轮生成pipeline。证据层面有benchmark但无公开代码，工程可验证性中等。趋势信号强：GRPO+多模态是当前强化学习后训练的热门方向",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型内生推理能力，对多模态Agent工程有直接启发：可借",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12495v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12495v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=alphagrpo-unlocking-self-reflective-multimodal-generation-in-umms-via-decompositional-verifiable-reward",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "learning-fast-and-slow-towards-llms-that-adapt-continually": {
+      "id": "learning-fast-and-slow-towards-llms-that-adapt-continually",
+      "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
+      "authors": [
+        "Rishabh Tiwari",
+        "Kusha Sareen",
+        "Lakshya A Agrawal",
+        "Joseph E. Gonzalez",
+        "Matei Zaharia"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12484v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12484v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 70.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的…",
+      "one_line_essence": "Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的双系统方案（慢学习=参数更新，快学习=ICL）对Agent持续学习架构设计有启发。关联continual learning和LLM adaptability两个热门方向，但偏框架性论文，需跟踪具体方法和实验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的双系统方案（慢学习=参数更新，快学习=ICL）对Agent持续学习架构设计有启发。关联continual learning和LLM adaptability两个热门方向，但偏框架性论文，需跟踪具体方法和实验。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "context-engineering",
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的双系统方案（慢学习=参数更新，快学习=ICL）对Ag",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12484v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12484v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=learning-fast-and-slow-towards-llms-that-adapt-continually",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "pion-a-spectrum-preserving-optimizer-via-orthogonal-equivalence-transformation": {
+      "id": "pion-a-spectrum-preserving-optimizer-via-orthogonal-equivalence-transformation",
+      "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+      "authors": [
+        "Kexuan Shi",
+        "Hanxuan Li",
+        "Zeju Qiu",
+        "Yandong Wen",
+        "Simon Buchholz"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12492v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12492v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 68.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优…",
+      "one_line_essence": "Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优化器，它通过调制权重矩阵几何结构来优化。对LLM训练基础设施有潜在影响，但当前缺少代码和benchmark，工程验证成本高。值得作为训练优化器的趋势信号持续观察。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优化器，它通过调制权重矩阵几何结构来优化。对LLM训练基础设施有潜在影响，但当前缺少代码和benchmark，工程验证成本高。值得作为训练优化器的趋势信号持续观察。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优化器，它通过调制权重矩阵几何结构来优化。对LLM训练",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12492v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12492v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=pion-a-spectrum-preserving-optimizer-via-orthogonal-equivalence-transformation",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "elastic-attention-cores-for-scalable-vision-transformers": {
+      "id": "elastic-attention-cores-for-scalable-vision-transformers",
+      "title": "Elastic Attention Cores for Scalable Vision Transformers",
+      "authors": [
+        "Alan Z. Song",
+        "Yinjie Chen",
+        "Mu Nan",
+        "Rui Zhang",
+        "Jiahang Cao"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12491v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12491v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 62.0,
+      "decision": "持续观察",
+      "one_line_judgement": "值得继续观察：Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率…",
+      "one_line_essence": "Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率场景的二次方计算开销。对推理服务优化有工程价值——如果可证明子线性注意力在视觉任务上不损失精度，可直接影响ViT部署成本。但当前仍偏研究阶段，缺少代码，需跟踪后续验证。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率场景的二次方计算开销。对推理服务优化有工程价值——如果可证明子线性注意力在视觉任务上不损失精度，可直接影响ViT部署成本。但当前仍偏研究阶段，缺少代码，需跟踪后续验证。",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率场景的二次方计算开销。对推理服务优化有工程价值——如",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12491v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12491v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=elastic-attention-cores-for-scalable-vision-transformers",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation": {
+      "id": "omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation",
+      "title": "OmniNFT: Modality-wise Omni Diffusion Reinforcement for Joint Audio-Video Generation",
+      "authors": [
+        "Guohui Zhang",
+        "XiaoXiao Ma",
+        "Jie Huang",
+        "Hang Xu",
+        "Hu Yu"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12480v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12480v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-14",
+      "first_deep_dive_daily": "2026-05-14",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "value_scores": {
+        "novelty": 5.4,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 55.0,
+      "decision": "持续观察",
+      "one_line_judgement": "值得先保存：OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用…",
+      "one_line_essence": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长尾保存：如果音视频生成需求增长，其多目标RL框架有参考价值。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长尾保存：如果音视频生成需求增长，其多目标RL框架有参考价值。",
+      "research_position": "long_tail_insight",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "long_tail_watch",
+        "related_trends": [
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长",
+        "future_trigger": [
+          "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": "2026-06-04"
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [
+          "加入长尾库",
+          "标注未来触发条件",
+          "先沉淀 Prompt / Skill 草案"
+        ],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12480v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12480v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation",
+      "daily_path": "daily-detail.html?date=2026-05-14",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
     "wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation": {
       "id": "wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
       "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",

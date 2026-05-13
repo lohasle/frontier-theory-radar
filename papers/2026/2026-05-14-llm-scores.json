@@ -1,0 +1,66 @@
+{
+  "date": "2026-05-14",
+  "generated_at": "2026-05-14T04:31:30",
+  "by_url": {
+    "http://arxiv.org/abs/2605.12495v1": {
+      "score": 72.5,
+      "value_type": "trend",
+      "matched_topics": ["multimodal-agent", "ai-agent"],
+      "reason": "AlphaGRPO将GRPO强化学习范式引入统一多模态模型（UMMs），实现推理式文生图与自反思修正。核心创新在于无需冷启动阶段即可解锁模型内生推理能力，对多模态Agent工程有直接启发：可借鉴'自反思修正'机制设计多轮生成pipeline。证据层面有benchmark但无公开代码，工程可验证性中等。趋势信号强：GRPO+多模态是当前强化学习后训练的热门方向。"
+    },
+    "http://arxiv.org/abs/2605.12493v1": {
+      "score": 78.0,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent", "context-engineering", "llm-evaluation"],
+      "reason": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的标准化评测框架；(2) 涵盖界面affordance、状态动态、工作流和失败模式召回等关键能力；(3) 可直接用于评估和改进RAG/记忆增强型Agent系统。证据强度高（系统性benchmark），工程可测试性强。"
+    },
+    "http://arxiv.org/abs/2605.12492v1": {
+      "score": 68.0,
+      "value_type": "trend",
+      "matched_topics": [],
+      "reason": "Pion提出基于正交等价变换的新型LLM优化器，通过左右正交变换更新权重矩阵而保持奇异值不变。理论贡献明确：不同于Adam/Muon等加法优化器，它通过调制权重矩阵几何结构来优化。对LLM训练基础设施有潜在影响，但当前缺少代码和benchmark，工程验证成本高。值得作为训练优化器的趋势信号持续观察。"
+    },
+    "http://arxiv.org/abs/2605.12491v1": {
+      "score": 62.0,
+      "value_type": "trend",
+      "matched_topics": ["inference-serving"],
+      "reason": "Elastic Attention Cores挑战了ViT中全pairwise token交互的必要性假设，提出弹性注意力核心来降低高分辨率场景的二次方计算开销。对推理服务优化有工程价值——如果可证明子线性注意力在视觉任务上不损失精度，可直接影响ViT部署成本。但当前仍偏研究阶段，缺少代码，需跟踪后续验证。"
+    },
+    "http://arxiv.org/abs/2605.12487v1": {
+      "score": 75.0,
+      "value_type": "immediate",
+      "matched_topics": ["rag-knowledge", "llm-evaluation"],
+      "reason": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2) 可集成到现有RAG pipeline作为查询增强层；(3) 跨搜索和分类任务的广泛实验验证。actionability高，可快速原型验证。"
+    },
+    "http://arxiv.org/abs/2605.12484v1": {
+      "score": 70.0,
+      "value_type": "trend",
+      "matched_topics": ["context-engineering", "ai-agent"],
+      "reason": "Learning Fast and Slow探讨LLM持续适应问题——参数更新导致灾难性遗忘，而固定参数的ICL无法匹配参数更新性能。提出的双系统方案（慢学习=参数更新，快学习=ICL）对Agent持续学习架构设计有启发。关联continual learning和LLM adaptability两个热门方向，但偏框架性论文，需跟踪具体方法和实验。"
+    },
+    "http://arxiv.org/abs/2605.12483v1": {
+      "score": 73.0,
+      "value_type": "trend",
+      "matched_topics": ["ai-agent"],
+      "reason": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——如何更高效分配标注数据。是对GRPO+蒸馏范式的经验性改进，但证据仍需更多任务验证。"
+    },
+    "http://arxiv.org/abs/2605.12481v1": {
+      "score": 76.5,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent"],
+      "reason": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的工程刚需；(2) 轨迹级监督思路可迁移到其他Agent场景；(3) 解决了高质量交错GUI-Tool轨迹稀缺的实际问题。actionability强，可直接指导CUA系统设计。"
+    },
+    "http://arxiv.org/abs/2605.12480v1": {
+      "score": 55.0,
+      "value_type": "long_tail",
+      "matched_topics": ["multimodal-agent"],
+      "reason": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长尾保存：如果音视频生成需求增长，其多目标RL框架有参考价值。"
+    },
+    "http://arxiv.org/abs/2605.12477v1": {
+      "score": 77.0,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent", "context-engineering", "llm-evaluation"],
+      "reason": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可作为记忆系统选型和优化的标准评测；(3) 100个受控场景提供了可复现的评测基准。与LongMemEval-V2互补，一个偏环境经验、一个偏实体记忆演化。"
+    }
+  }
+}
