@@ -1,0 +1,37 @@
+{
+  "date": "2026-05-15",
+  "generated_at": "2026-05-15T04:32:00.000000",
+  "methodology": "论文→理论→工程实践→趋势→启发→行动 全链路推断",
+  "by_url": {
+    "http://arxiv.org/abs/2605.13527v1": {
+      "score": 82.5,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent", "coding-agent", "llm-evaluation"],
+      "reason": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直接复用搭建层级规划Agent；(2) WebArena/SWE-bench双验证，证据强度可靠；(3) 人类干预频率降低40%说明系统设计有效降低了认知负荷。从理论到工程实践的转化路径清晰：层级规划理论→Agent框架→生产环境部署。行动价值：可立即用于评估团队现有Agent架构的规划能力差距。"
+    },
+    "http://arxiv.org/abs/2605.12984v1": {
+      "score": 76.0,
+      "value_type": "trend",
+      "matched_topics": ["rag-knowledge", "context-engineering", "llm-evaluation"],
+      "reason": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理场景的短板；(2)幻觉率下降12%提供了可量化的质量改进；(3)消融实验证明图路由组件贡献65%提升，说明架构设计是关键而非调参。趋势价值突出：RAG+图结构+注意力路由的组合预示着下一代知识密集型AI系统的方向。缺少开源代码是不确定性，但方法论本身可直接启发架构设计。"
+    },
+    "http://arxiv.org/abs/2605.13201v1": {
+      "score": 71.0,
+      "value_type": "immediate",
+      "matched_topics": ["inference-serving"],
+      "reason": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大模型(Llama-3.1-70B, Qwen-2.5-72B)上实现2.8x-3.4x加速，远超固定draft方案；(2)开源router训练代码可立即集成到推理服务中；(3)推理加速直接转化为成本节约和用户体验提升。理论贡献相对适中（自适应路由思想并非全新），但工程落地度和证据强度非常高（多模型、多benchmark验证）。行动建议：优先在推理集群中试点评估。"
+    },
+    "http://arxiv.org/abs/2605.11876v2": {
+      "score": 68.5,
+      "value_type": "trend",
+      "matched_topics": ["multimodal-agent", "llm-evaluation", "ai-agent"],
+      "reason": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8个主流世界模型在12个环境上的横向对比提供了宝贵的选型参考；(3)'无单一模型在所有维度胜出'的发现对工程实践有直接指导意义——需要根据场景选择不同类型的世界模型。缺少代码但有HuggingFace benchmark数据集，可复现性尚可。对Agent工程团队的启发：在选择world model作为环境模拟器时，需优先考虑可控性维度。"
+    },
+    "http://arxiv.org/abs/2605.14012v1": {
+      "score": 85.0,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent", "security-governance", "llm-evaluation"],
+      "reason": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94%不安全动作拦截率+97%良性任务完成率，说明安全与可用性之间取得了优异平衡；(3)仅3ms中位延迟，工程开销可忽略；(4)开源代码+benchmark双重可复现。从理论到行动的转化路径：时序逻辑监控理论→Agent运行时框架→生产环境部署。这直接回应了业界对Agent安全性的迫切需求，可作为Agent安全治理的参考实现。行动建议：立即评估集成到现有Agent平台中。"
+    }
+  }
+}

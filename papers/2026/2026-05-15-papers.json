@@ -1,0 +1,351 @@
+{
+  "date": "2026-05-15",
+  "total": 5,
+  "generated_at": "2026-05-15T04:31:13.000000",
+  "papers": [
+    {
+      "title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
+      "authors": [
+        "Qifan Wang",
+        "Yiding Sun",
+        "Jiaqi Guo",
+        "Bo Li"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.14012v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14012v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "https://github.com/safeagent-project/safeagent",
+      "benchmark_url": "https://huggingface.co/datasets/safeagent/AgentSafetyEval",
+      "project_url": "",
+      "abstract": "As LLM-based agents are deployed in production environments, ensuring their safety at runtime becomes critical. We propose SafeAgent, a runtime monitoring framework that enforces formally specified guardrails on agent behavior. SafeAgent translates natural language safety policies into temporal logic specifications and monitors agent action sequences against these specs in real-time. When a violation is detected, SafeAgent can block, modify or request human confirmation for the offending action. We evaluate on AgentSafetyEval, a new benchmark with 500+ adversarial agent trajectories across web navigation, code execution and API interaction domains. SafeAgent blocks 94% of unsafe actions while maintaining 97% task completion on benign trajectories, significantly outperforming prompt-based safety approaches. The framework introduces only 3ms median overhead per action.",
+      "categories": [
+        "cs.AI",
+        "cs.SE",
+        "cs.CR"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "evaluation",
+        "benchmark",
+        "security"
+      ],
+      "score": 85.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.14012v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14012v1"
+        }
+      ],
+      "llm_reason": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94%不安全动作拦截率+97%良性任务完成率，说明安全与可用性之间取得了优异平衡；(3)仅3ms中位延迟，工程开销可忽略；(4)开源代码+benchmark双重可复现。从理论到行动的转化路径：时序逻辑监控理论→Agent运行时框架→生产环境部署。这直接回应了业界对Agent安全性的迫切需求，可作为Agent安全治理的参考实现。行动建议：立即评估集成到现有Agent平台中。",
+      "id": "safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "security-governance",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 7.65,
+        "engineering_testability": 6.6,
+        "trend_signal": 6.25,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "AgentScope-PHP: A Multi-Agent Framework for Hierarchical Planning with Human-in-the-Loop",
+      "authors": [
+        "Yuxiang Wei",
+        "Chen Qian",
+        "Ming Zhong",
+        "Jiecai Guo",
+        "Lincheng Li"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.13527v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13527v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "https://github.com/modelscope/agentscope",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present AgentScope-PHP, a novel multi-agent framework that integrates hierarchical planning with human-in-the-loop feedback. Our approach decomposes complex tasks into a three-tier planning hierarchy: strategic planning, tactical decomposition, and operational execution. At each tier, a designated agent proposes plans and a human supervisor can intervene to redirect, reject or refine the plan. We evaluate on WebArena, SWE-bench and a new multi-turn dialogue planning benchmark PlanEval-200. Results show that AgentScope-PHP achieves 23% improvement in task completion rate over baseline multi-agent systems while reducing human intervention frequency by 40% after the first 3 turns. We open-source the full framework including the evaluation suite.",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "planning",
+        "benchmark",
+        "evaluation"
+      ],
+      "score": 82.5,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.13527v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13527v1"
+        }
+      ],
+      "llm_reason": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直接复用搭建层级规划Agent；(2) WebArena/SWE-bench双验证，证据强度可靠；(3) 人类干预频率降低40%说明系统设计有效降低了认知负荷。从理论到工程实践的转化路径清晰：层级规划理论→Agent框架→生产环境部署。行动价值：可立即用于评估团队现有Agent架构的规划能力差距。",
+      "id": "agentscope-php-a-multi-agent-framework-for-hierarchical-planning-with-human-in-the-loop",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "coding-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 6.6,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 6.8,
+        "engineering_testability": 6.6,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 3.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "ContextCircuit: Rewiring In-Context Learning through Structured Retrieval-Augmented Generation",
+      "authors": [
+        "Zhihan Zhang",
+        "Xinyu Zhao",
+        "Hao Peng",
+        "Ming Liu",
+        "Bing Xiang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-13",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.12984v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12984v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We introduce ContextCircuit, a structured approach to retrieval-augmented generation that treats in-context examples as a circuit with explicit routing. Instead of flat retrieval, we organize retrieved passages into a directed acyclic graph where nodes represent knowledge chunks and edges represent logical dependencies. A lightweight graph neural network routes the LLM's attention across this structure during generation. Experiments on MUSR, HotpotQA and a new multi-hop reasoning benchmark CircuitBench show 18% improvement in multi-hop accuracy and 12% reduction in hallucination rate. Our ablation study demonstrates that the graph routing component is critical, accounting for 65% of the improvement.",
+      "categories": [
+        "cs.CL",
+        "cs.IR",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG",
+        "retrieval augmented",
+        "context engineering",
+        "in-context learning",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 76.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12984v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12984v1"
+        }
+      ],
+      "llm_reason": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理场景的短板；(2)幻觉率下降12%提供了可量化的质量改进；(3)消融实验证明图路由组件贡献65%提升，说明架构设计是关键而非调参。趋势价值突出：RAG+图结构+注意力路由的组合预示着下一代知识密集型AI系统的方向。缺少开源代码是不确定性，但方法论本身可直接启发架构设计。",
+      "id": "contextcircuit-rewiring-in-context-learning-through-structured-retrieval-augmented-generation",
+      "value_type": "trend",
+      "matched_topics": [
+        "rag-knowledge",
+        "context-engineering",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.85,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Speculative Decoding with Adaptive Draft Model Selection for Efficient LLM Inference",
+      "authors": [
+        "Minghao Yan",
+        "Shijie Cao",
+        "Ting Cao",
+        "James B. Xue",
+        "Mao Yang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-13",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.13201v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13201v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "https://github.com/adapter-hub/adaptive-spec",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Speculative decoding has emerged as a promising technique to accelerate LLM inference without quality degradation. However, existing approaches use a fixed draft model regardless of the input distribution, leading to suboptimal acceptance rates. We propose AdaSpec, an adaptive draft model selection framework that dynamically routes inputs to different sized draft models based on predicted difficulty. A lightweight router trained with contrastive learning predicts which draft model maximizes the acceptance rate for each token sequence. On Llama-3.1-70B and Qwen-2.5-72B backbones, AdaSpec achieves 2.8x-3.4x speedup (vs 1.9x-2.3x for fixed draft) with no quality degradation across MT-Bench, HumanEval and GSM8K. We release the router training code and evaluation pipeline.",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "keywords": [
+        "inference",
+        "speculative decoding"
+      ],
+      "score": 71.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.13201v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13201v1"
+        }
+      ],
+      "llm_reason": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大模型(Llama-3.1-70B, Qwen-2.5-72B)上实现2.8x-3.4x加速，远超固定draft方案；(2)开源router训练代码可立即集成到推理服务中；(3)推理加速直接转化为成本节约和用户体验提升。理论贡献相对适中（自适应路由思想并非全新），但工程落地度和证据强度非常高（多模型、多benchmark验证）。行动建议：优先在推理集群中试点评估。",
+      "id": "speculative-decoding-with-adaptive-draft-model-selection-for-efficient-llm-inference",
+      "value_type": "immediate",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 6.35,
+        "engineering_testability": 6.6,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 3.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "WorldModelBench: A Comprehensive Benchmark for Evaluating World Models in Interactive Environments",
+      "authors": [
+        "Jinghuan Shang",
+        "Russel J. Wong",
+        "Zhe Gan"
+      ],
+      "published": "2026-05-11",
+      "updated": "2026-05-13",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.11876v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.11876v2",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "https://huggingface.co/datasets/worldmodelbench/WMGym",
+      "project_url": "",
+      "abstract": "World models are increasingly seen as critical infrastructure for embodied agents, game-playing systems and simulation-based planning. Yet no unified benchmark exists to compare world models across domains. We introduce WorldModelBench, covering 12 interactive environments from household navigation to Atari games to robotic manipulation. We evaluate 8 existing world models (Genie, UniSim, Diamond, Oasis, etc.) on prediction accuracy, temporal consistency, controllability and downstream task performance. Our findings reveal that no single world model excels across all dimensions: video-generation-based models lead visual fidelity but lag in action-conditioned controllability, while dynamics-model-based approaches show the opposite pattern. We propose a composite scoring rubric and open-source the full evaluation suite.",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "keywords": [
+        "world model",
+        "evaluation",
+        "benchmark",
+        "multimodal",
+        "planning"
+      ],
+      "score": 68.5,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.11876v2"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.11876v2"
+        }
+      ],
+      "llm_reason": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8个主流世界模型在12个环境上的横向对比提供了宝贵的选型参考；(3)'无单一模型在所有维度胜出'的发现对工程实践有直接指导意义——需要根据场景选择不同类型的世界模型。缺少代码但有HuggingFace benchmark数据集，可复现性尚可。对Agent工程团队的启发：在选择world model作为环境模拟器时，需优先考虑可控性维度。",
+      "id": "worldmodelbench-a-comprehensive-benchmark-for-evaluating-world-models-in-interactive-environments",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 6.7,
+        "engineering_testability": 4.05,
+        "trend_signal": 7.35,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 4.0
+      },
+      "trend_status": "rising"
+    }
+  ],
+  "scored_at": "2026-05-15"
+}

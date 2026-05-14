@@ -1,6 +1,677 @@
 {
-  "updated_at": "2026-05-14T04:33:12.135121",
+  "updated_at": "2026-05-15T04:35:18.999715",
   "papers": {
+    "safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring": {
+      "id": "safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring",
+      "title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
+      "authors": [
+        "Qifan Wang",
+        "Yiding Sun",
+        "Jiaqi Guo",
+        "Bo Li"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-13",
+      "url": "http://arxiv.org/abs/2605.14012v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14012v1",
+      "code_url": "https://github.com/safeagent-project/safeagent",
+      "benchmark_url": "https://huggingface.co/datasets/safeagent/AgentSafetyEval",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-15",
+      "first_deep_dive_daily": "2026-05-15",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 5.4,
+        "relevance": 9.8,
+        "evidence": 7.65,
+        "engineering_testability": 6.6,
+        "trend_signal": 6.25,
+        "long_tail_potential": 3.5,
+        "actionability": 6.1,
+        "noise_risk": 1.2
+      },
+      "score": 85.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时…",
+      "one_line_essence": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94%不安全动作拦截率+97%良性任务完成率，说明安全与可用性之间取得了优异平衡；(3)仅3ms中位延迟，工程开销可忽略；(4)开源代码+benchmark双重可复现。从理论到行动的转化路径：时序逻辑监控理论→Agent运行时框架→生产环境部署。这直接回应了业界对Agent安全性的迫切需求，可作为Agent安全治理的参考实现。行动建议：立即评估集成到现有Agent平台中。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94%不安全动作拦截率+97%良性任务完成率，说明安全与可用性之间取得了优异平衡；(3)仅3ms中位延迟，工程开销可忽略；(4)开源代码+benchmark双重可复现。从理",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": true,
+        "has_benchmark": true,
+        "can_reproduce": true,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.14012v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14012v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring",
+      "daily_path": "daily-detail.html?date=2026-05-15",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "agentscope-php-a-multi-agent-framework-for-hierarchical-planning-with-human-in-the-loop": {
+      "id": "agentscope-php-a-multi-agent-framework-for-hierarchical-planning-with-human-in-the-loop",
+      "title": "AgentScope-PHP: A Multi-Agent Framework for Hierarchical Planning with Human-in-the-Loop",
+      "authors": [
+        "Yuxiang Wei",
+        "Chen Qian",
+        "Ming Zhong",
+        "Jiecai Guo",
+        "Lincheng Li"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-13",
+      "url": "http://arxiv.org/abs/2605.13527v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13527v1",
+      "code_url": "https://github.com/modelscope/agentscope",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-15",
+      "first_deep_dive_daily": "2026-05-15",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 6.6,
+        "relevance": 6.2,
+        "evidence": 6.8,
+        "engineering_testability": 6.6,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "actionability": 7.3,
+        "noise_risk": 1.2
+      },
+      "score": 82.5,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分…",
+      "one_line_essence": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直接复用搭建层级规划Agent；(2) WebArena/SWE-bench双验证，证据强度可靠；(3) 人类干预频率降低40%说明系统设计有效降低了认知负荷。从理论到工程实践的转化路径清晰：层级规划理论→Agent框架→生产环境部署。行动价值：可立即用于评估团队现有Agent架构的规划能力差距。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直接复用搭建层级规划Agent；(2) WebArena/SWE-bench双验证，证据强度可靠；(3) 人类干预频率降低40%说明系统设计有效降低了认知负荷。从理论到工",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": true,
+        "has_benchmark": false,
+        "can_reproduce": true,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.13527v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13527v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=agentscope-php-a-multi-agent-framework-for-hierarchical-planning-with-human-in-the-loop",
+      "daily_path": "daily-detail.html?date=2026-05-15",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "contextcircuit-rewiring-in-context-learning-through-structured-retrieval-augmented-generation": {
+      "id": "contextcircuit-rewiring-in-context-learning-through-structured-retrieval-augmented-generation",
+      "title": "ContextCircuit: Rewiring In-Context Learning through Structured Retrieval-Augmented Generation",
+      "authors": [
+        "Zhihan Zhang",
+        "Xinyu Zhao",
+        "Hao Peng",
+        "Ming Liu",
+        "Bing Xiang"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.12984v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.12984v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-15",
+      "first_deep_dive_daily": "2026-05-15",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 5.4,
+        "relevance": 7.4,
+        "evidence": 5.85,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 76.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多…",
+      "one_line_essence": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理场景的短板；(2)幻觉率下降12%提供了可量化的质量改进；(3)消融实验证明图路由组件贡献65%提升，说明架构设计是关键而非调参。趋势价值突出：RAG+图结构+注意力路由的组合预示着下一代知识密集型AI系统的方向。缺少开源代码是不确定性，但方法论本身可直接启发架构设计。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理场景的短板；(2)幻觉率下降12%提供了可量化的质量改进；(3)消融实验证明图路由组件贡献65%提升，说明架构设计是关键而非调参。趋势价值突出：RAG+图结构+注意力路",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "context-engineering",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.12984v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12984v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=contextcircuit-rewiring-in-context-learning-through-structured-retrieval-augmented-generation",
+      "daily_path": "daily-detail.html?date=2026-05-15",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "speculative-decoding-with-adaptive-draft-model-selection-for-efficient-llm-inference": {
+      "id": "speculative-decoding-with-adaptive-draft-model-selection-for-efficient-llm-inference",
+      "title": "Speculative Decoding with Adaptive Draft Model Selection for Efficient LLM Inference",
+      "authors": [
+        "Minghao Yan",
+        "Shijie Cao",
+        "Ting Cao",
+        "James B. Xue",
+        "Mao Yang"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-12",
+      "url": "http://arxiv.org/abs/2605.13201v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.13201v1",
+      "code_url": "https://github.com/adapter-hub/adaptive-spec",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-15",
+      "first_deep_dive_daily": "2026-05-15",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 6.2,
+        "evidence": 6.35,
+        "engineering_testability": 6.6,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "actionability": 7.3,
+        "noise_risk": 1.2
+      },
+      "score": 71.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "今天值得试：AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——…",
+      "one_line_essence": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大模型(Llama-3.1-70B, Qwen-2.5-72B)上实现2.8x-3.4x加速，远超固定draft方案；(2)开源router训练代码可立即集成到推理服务中；(3)推理加速直接转化为成本节约和用户体验提升。理论贡献相对适中（自适应路由思想并非全新），但工程落地度和证据强度非常高（多模型、多benchmark验证）。行动建议：优先在推理集群中试点评估。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大模型(Llama-3.1-70B, Qwen-2.5-72B)上实现2.8x-3.4x加速，远超固定draft方案；(2)开源router训练代码可立即集成到推理服务中",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": true,
+        "has_benchmark": false,
+        "can_reproduce": true,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.13201v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13201v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=speculative-decoding-with-adaptive-draft-model-selection-for-efficient-llm-inference",
+      "daily_path": "daily-detail.html?date=2026-05-15",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "worldmodelbench-a-comprehensive-benchmark-for-evaluating-world-models-in-interactive-environments": {
+      "id": "worldmodelbench-a-comprehensive-benchmark-for-evaluating-world-models-in-interactive-environments",
+      "title": "WorldModelBench: A Comprehensive Benchmark for Evaluating World Models in Interactive Environments",
+      "authors": [
+        "Jinghuan Shang",
+        "Russel J. Wong",
+        "Zhe Gan"
+      ],
+      "source": "arXiv",
+      "published": "2026-05-11",
+      "url": "http://arxiv.org/abs/2605.11876v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.11876v2",
+      "code_url": "",
+      "benchmark_url": "https://huggingface.co/datasets/worldmodelbench/WMGym",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-05-15",
+      "first_deep_dive_daily": "2026-05-15",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 8.6,
+        "evidence": 6.7,
+        "engineering_testability": 4.05,
+        "trend_signal": 7.35,
+        "long_tail_potential": 4.15,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 68.5,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的…",
+      "one_line_essence": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8个主流世界模型在12个环境上的横向对比提供了宝贵的选型参考；(3)'无单一模型在所有维度胜出'的发现对工程实践有直接指导意义——需要根据场景选择不同类型的世界模型。缺少代码但有HuggingFace benchmark数据集，可复现性尚可。对Agent工程团队的启发：在选择world model作为环境模拟器时，需优先考虑可控性维度。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8个主流世界模型在12个环境上的横向对比提供了宝贵的选型参考；(3)'无单一模型在所有维度胜出'的发现对工程实践有直接指导意义——需要根据场景选择不同类型的世界模型。缺少",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": true,
+        "can_reproduce": true,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "rising",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.11876v2"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.11876v2"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=worldmodelbench-a-comprehensive-benchmark-for-evaluating-world-models-in-interactive-environments",
+      "daily_path": "daily-detail.html?date=2026-05-15",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
     "longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues": {
       "id": "longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues",
       "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
