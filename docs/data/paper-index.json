@@ -1,7 +1,3679 @@
 {
-  "updated_at": "2026-05-15T04:35:11.490610",
-  "total": 92,
+  "updated_at": "2026-05-17T04:35:26.252675",
+  "total": 141,
   "papers": [
+    {
+      "title": "STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?",
+      "authors": [
+        "Hanxiang Chao",
+        "Yihan Bai",
+        "Rui Sheng",
+        "Tianle Li",
+        "Yushi Sun"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.06527",
+      "pdf_url": "https://arxiv.org/pdf/2605.06527",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.06527",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.06527",
+      "abstract": "Large Language Model (LLM) agents are increasingly expected to maintain coherent, long-term personalized memory, yet current benchmarks primarily measure static fact retrieval, overlooking the ability to revise stored beliefs when new evidence emerges. We identify a critical and underexplored failure mode, Implicit Conflict: a later observation invalidates an earlier memory without explicit negation, requiring contextual inference and commonsense reasoning to detect. To rigorously evaluate this ",
+      "categories": [],
+      "keywords": [],
+      "score": 64.0,
+      "decision": "持续观察",
+      "hf_upvotes": 37,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.06527"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.06527"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.06527"
+        }
+      ],
+      "id": "stale-can-llm-agents-know-when-their-memories-are-no-longer-valid",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge",
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 8.25,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Large Language Model (LLM) agents are increasingly expected to maintain cohere…",
+      "one_line_judgement": "今天值得试：AI Agent：Large Language Model (LLM) agents are increasingly expected t…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Large Language Model (LLM) agents are increasingly expected to maintain cohere…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=stale-can-llm-agents-know-when-their-memories-are-no-longer-valid"
+    },
+    {
+      "title": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+      "authors": [
+        "Minghao Guo",
+        "Qingyue Jiao",
+        "Zeru Shi",
+        "Yihao Quan",
+        "Boxuan Zhang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15128",
+      "pdf_url": "https://arxiv.org/pdf/2605.15128",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15128",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15128",
+      "abstract": "Long-term agent memory is increasingly multimodal, yet existing evaluations rarely test whether agents preserve the visual evidence needed for later reasoning. In prior work, many visually grounded questions can be answered using only captions or textual traces, allowing answers to be inferred without preserving the fine-grained visual evidence. Meanwhile, harder cases that require reasoning over changing visual states are largely absent. Therefore, we introduce MemEye, a framework that evaluate",
+      "categories": [],
+      "keywords": [],
+      "score": 63.0,
+      "decision": "持续观察",
+      "hf_upvotes": 49,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15128"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15128"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15128"
+        }
+      ],
+      "id": "memeye-a-visual-centric-evaluation-framework-for-multimodal-agent-memory",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "multimodal-agent",
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 5.4,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Long-term agent memory is increasingly multimodal, yet existing evaluations ra…",
+      "one_line_judgement": "今天值得试：AI Agent：Long-term agent memory is increasingly multimodal, yet existi…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Long-term agent memory is increasingly multimodal, yet existing evaluations ra…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=memeye-a-visual-centric-evaluation-framework-for-multimodal-agent-memory"
+    },
+    {
+      "title": "Orchard: An Open-Source Agentic Modeling Framework",
+      "authors": [
+        "Baolin Peng",
+        "Wenlin Yao",
+        "Qianhui Wu",
+        "Hao Cheng",
+        "Xiao Yu"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15040",
+      "pdf_url": "https://arxiv.org/pdf/2605.15040",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15040",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15040",
+      "abstract": "Agentic modeling aims to transform LLMs into autonomous agents capable of solving complex tasks through planning, reasoning, tool use, and multi-turn interaction with environments. Despite major investment, open research remains constrained by infrastructure and training gaps. Many high-performing systems rely on proprietary codebases, models, or services, while most open-source frameworks focus on orchestration and evaluation rather than scalable agent training. We present Orchard, an open-sour",
+      "categories": [],
+      "keywords": [],
+      "score": 62.0,
+      "decision": "持续观察",
+      "hf_upvotes": 12,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15040"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15040"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15040"
+        }
+      ],
+      "id": "orchard-an-open-source-agentic-modeling-framework",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge",
+        "llm-evaluation",
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 8.25,
+        "engineering_testability": 8.35,
+        "trend_signal": 5.4,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Agentic modeling aims to transform LLMs into autonomous agents capable of solv…",
+      "one_line_judgement": "今天值得试：AI Agent：Agentic modeling aims to transform LLMs into autonomous agent…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Agentic modeling aims to transform LLMs into autonomous agents capable of solv…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=orchard-an-open-source-agentic-modeling-framework"
+    },
+    {
+      "title": "MemLens: Benchmarking Multimodal Long-Term Memory in Large Vision-Language Models",
+      "authors": [
+        "Xiyu Ren",
+        "Zhaowei Wang",
+        "Yiming Du",
+        "Zhongwei Xie",
+        "Chi Liu"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14906",
+      "pdf_url": "https://arxiv.org/pdf/2605.14906",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14906",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14906",
+      "abstract": "Memory is essential for large vision-language models (LVLMs) to handle long, multimodal interactions, with two method directions providing this capability: long-context LVLMs and memory-augmented agents. However, no existing benchmark conducts a systematic comparison of the two on questions that genuinely require multimodal evidence. To close this gap, we introduce MEMLENS, a comprehensive benchmark for memory in multimodal multi-session conversations, comprising 789 questions across five memory",
+      "categories": [],
+      "keywords": [],
+      "score": 61.4,
+      "decision": "持续观察",
+      "hf_upvotes": 67,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14906"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14906"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14906"
+        }
+      ],
+      "id": "memlens-benchmarking-multimodal-long-term-memory-in-large-vision-language-models",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 7.35,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Memory is essential for large vision-language models (LVLMs) to handle long, m…",
+      "one_line_judgement": "今天值得试：AI Agent：Memory is essential for large vision-language models (LVLMs) …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Memory is essential for large vision-language models (LVLMs) to handle long, m…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=memlens-benchmarking-multimodal-long-term-memory-in-large-vision-language-models"
+    },
+    {
+      "title": "Quantitative Video World Model Evaluation for Geometric-Consistency",
+      "authors": [
+        "Jiaxin Wu",
+        "Yihao Pi",
+        "Yinling Zhang",
+        "Yuheng Li",
+        "Xueyan Zou"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15185",
+      "pdf_url": "https://arxiv.org/pdf/2605.15185",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15185",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15185",
+      "abstract": "Generative video models are increasingly studied as implicit world models, yet evaluating whether they produce physically plausible 3D structure and motion remains challenging. Most existing video evaluation pipelines rely heavily on human judgment or learned graders, which can be subjective and weakly diagnostic for geometric failures. We introduce PDI-Bench (Perspective Distortion Index), a quantitative framework for auditing geometric coherence in generated videos. Given a generated clip, we ",
+      "categories": [],
+      "keywords": [],
+      "score": 59.1,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15185"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15185"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15185"
+        }
+      ],
+      "id": "quantitative-video-world-model-evaluation-for-geometric-consistency",
+      "value_type": "immediate",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.8,
+        "trend_signal": 5.4,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Generative video models are increasingly studied as implicit world models, yet…",
+      "one_line_judgement": "今天值得试：Multimodal Agent：Generative video models are increasingly studied as i…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：Generative video models are increasingly studied as implicit world models, yet…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=quantitative-video-world-model-evaluation-for-geometric-consistency"
+    },
+    {
+      "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
+      "authors": [
+        "Shuangrui Ding",
+        "Xuanlang Dai",
+        "Long Xing",
+        "Shengyuan Ding",
+        "Ziyu Liu"
+      ],
+      "published": "2026-05-10",
+      "updated": "2026-05-10",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.10912",
+      "pdf_url": "https://arxiv.org/pdf/2605.10912",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.10912",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.10912",
+      "abstract": "Large language and vision-language models increasingly power agents that act on a user's behalf through command-line interface (CLI) harnesses. However, most agent benchmarks still rely on synthetic sandboxes, short-horizon tasks, mock-service APIs, and final-answer checks, leaving open whether agents can complete realistic long-horizon work in the runtimes where they are deployed. This work presents WildClawBench, a native-runtime benchmark of 60 human-authored, bilingual, multimodal tasks span",
+      "categories": [],
+      "keywords": [],
+      "score": 58.4,
+      "decision": "持续观察",
+      "hf_upvotes": 38,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.10912"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.10912"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.10912"
+        }
+      ],
+      "id": "wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 8.7,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
+      "one_line_judgement": "今天值得试：AI Agent：Large language and vision-language models increasingly power …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation"
+    },
+    {
+      "title": "EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents",
+      "authors": [
+        "Jiaqi Liu",
+        "Xinyu Ye",
+        "Peng Xia",
+        "Zeyu Zheng",
+        "Cihang Xie"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13941",
+      "pdf_url": "https://arxiv.org/pdf/2605.13941",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13941",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13941",
+      "abstract": "Long-term memory is essential for LLM agents that operate across multiple sessions, yet existing memory systems treat retrieval infrastructure as fixed: stored content evolves while scoring functions, fusion strategies, and answer-generation policies remain frozen at deployment. We argue that truly adaptive memory requires co-evolution at two levels: the stored knowledge and the retrieval mechanism that queries it. We present EvolveMem, a self-evolving memory architecture that exposes its full r",
+      "categories": [],
+      "keywords": [],
+      "score": 58.3,
+      "decision": "持续观察",
+      "hf_upvotes": 21,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13941"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13941"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13941"
+        }
+      ],
+      "id": "evolvemem-self-evolving-memory-architecture-via-autoresearch-for-llm-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge",
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.8,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Long-term memory is essential for LLM agents that operate across multiple sess…",
+      "one_line_judgement": "今天值得试：AI Agent：Long-term memory is essential for LLM agents that operate acr…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Long-term memory is essential for LLM agents that operate across multiple sess…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=evolvemem-self-evolving-memory-architecture-via-autoresearch-for-llm-agents"
+    },
+    {
+      "title": "WildTableBench: Benchmarking Multimodal Foundation Models on Table Understanding In the Wild",
+      "authors": [
+        "Junzhe Huang",
+        "Xiaoxiao Sun",
+        "Yan Yang",
+        "Yuxuan Hou",
+        "Ruotian Zhang"
+      ],
+      "published": "2026-04-30",
+      "updated": "2026-04-30",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.01018",
+      "pdf_url": "https://arxiv.org/pdf/2605.01018",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.01018",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.01018",
+      "abstract": "Using multimodal foundation models to analyze table images is a high-value yet challenging application in consumer and enterprise scenarios. Despite its importance, current evaluations rely largely on structured-text tables or clean rendered images, leaving the visual complexity of in-the-wild table images underexplored. Such images feature varied layouts and diverse domains that demand sophisticated structural perception and numerical reasoning. To bridge this gap, we introduce WildTableBench, ",
+      "categories": [],
+      "keywords": [],
+      "score": 56.1,
+      "decision": "持续观察",
+      "hf_upvotes": 6,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.01018"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.01018"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.01018"
+        }
+      ],
+      "id": "wildtablebench-benchmarking-multimodal-foundation-models-on-table-understanding-in-the-wild",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 8.7,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：Using multimodal foundation models to analyze table images is a high-value yet…",
+      "one_line_judgement": "值得先保存：Multimodal Agent：Using multimodal foundation models to analyze table i…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Multimodal Agent：Using multimodal foundation models to analyze table images is a high-value yet…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=wildtablebench-benchmarking-multimodal-foundation-models-on-table-understanding-in-the-wild"
+    },
+    {
+      "title": "PREPING: Building Agent Memory without Tasks",
+      "authors": [
+        "Yumin Choi",
+        "Sangwoo Park",
+        "Minki Kang",
+        "Jinheon Baek",
+        "Sung Ju Hwang"
+      ],
+      "published": "2026-05-10",
+      "updated": "2026-05-10",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13880",
+      "pdf_url": "https://arxiv.org/pdf/2605.13880",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13880",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13880",
+      "abstract": "Agent memory is typically constructed either offline from curated demonstrations or online from post-deployment interactions. However, regardless of how it is built, an agent faces a cold-start gap when first introduced to a new environment without any task-specific experience available. In this paper, we study pre-task memory construction: whether an agent can build procedural memory before observing any target-environment tasks, using only self-generated synthetic practice. Yet, synthetic inte",
+      "categories": [],
+      "keywords": [],
+      "score": 55.4,
+      "decision": "持续观察",
+      "hf_upvotes": 23,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13880"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13880"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13880"
+        }
+      ],
+      "id": "preping-building-agent-memory-without-tasks",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Agent memory is typically constructed either offline from curated demonstratio…",
+      "one_line_judgement": "值得先保存：AI Agent：Agent memory is typically constructed either offline from cur…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Agent memory is typically constructed either offline from curated demonstratio…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=preping-building-agent-memory-without-tasks"
+    },
+    {
+      "title": "Boosting Omni-Modal Language Models: Staged Post-Training with Visually Debiased Evaluation",
+      "authors": [
+        "Che Liu",
+        "Lichao Ma",
+        "Xiangyu Tony Zhang",
+        "Yuxin Zhang",
+        "Haoyang Zhang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.12034",
+      "pdf_url": "https://arxiv.org/pdf/2605.12034",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.12034",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.12034",
+      "abstract": "Omni-modal language models are intended to jointly understand audio, visual inputs, and language, but benchmark gains can be inflated when visual evidence alone is enough to answer a query. We study whether current omni-modal benchmarks separate visual shortcuts from genuine audio-visual-language evidence integration, and how post-training behaves under a visually debiased evaluation setting. We audit nine omni-modal benchmarks with visual-only probing, remove visually solvable queries, and reta",
+      "categories": [],
+      "keywords": [],
+      "score": 55.2,
+      "decision": "持续观察",
+      "hf_upvotes": 2,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.12034"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12034"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.12034"
+        }
+      ],
+      "id": "boosting-omni-modal-language-models-staged-post-training-with-visually-debiased-evaluation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 8.7,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：Omni-modal language models are intended to jointly understand audio, visual in…",
+      "one_line_judgement": "值得先保存：LLM 评测：Omni-modal language models are intended to jointly understand a…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "LLM 评测：Omni-modal language models are intended to jointly understand audio, visual in…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=boosting-omni-modal-language-models-staged-post-training-with-visually-debiased-evaluation"
+    },
+    {
+      "title": "LiSA: Lifelong Safety Adaptation via Conservative Policy Induction",
+      "authors": [
+        "Minbeom Kim",
+        "Lesly Miculicich",
+        "Bhavana Dalvi Mishra",
+        "Mihir Parmar",
+        "Phillip Wallis"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14454",
+      "pdf_url": "https://arxiv.org/pdf/2605.14454",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14454",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14454",
+      "abstract": "As AI agents move from chat interfaces to systems that read private data, call tools, and execute multi-step workflows, guardrails become a last line of defense against concrete deployment harms. In these settings, guardrail failures are no longer merely answer-quality errors: they can leak secrets, authorize unsafe actions, or block legitimate work. The hardest failures are often contextual: whether an action is acceptable depends on local privacy norms, organizational policies, and user expect",
+      "categories": [],
+      "keywords": [],
+      "score": 55.1,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14454"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14454"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14454"
+        }
+      ],
+      "id": "lisa-lifelong-safety-adaptation-via-conservative-policy-induction",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 8.9,
+        "trend_signal": 4.3,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：As AI agents move from chat interfaces to systems that read private data, call…",
+      "one_line_judgement": "值得先保存：AI Agent：As AI agents move from chat interfaces to systems that read p…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：As AI agents move from chat interfaces to systems that read private data, call…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=lisa-lifelong-safety-adaptation-via-conservative-policy-induction"
+    },
+    {
+      "title": "RewardHarness: Self-Evolving Agentic Post-Training",
+      "authors": [
+        "Yuxuan Zhang",
+        "Penghui Du",
+        "Bo Li",
+        "Cong Wei",
+        "Junwen Miao"
+      ],
+      "published": "2026-05-08",
+      "updated": "2026-05-08",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.08703",
+      "pdf_url": "https://arxiv.org/pdf/2605.08703",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.08703",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.08703",
+      "abstract": "Evaluating instruction-guided image edits requires rewards that reflect subtle human preferences, yet current reward models typically depend on large-scale preference annotation and additional model training. This creates a data-efficiency gap: humans can often infer the target evaluation criteria from only a few examples, while models are usually trained on hundreds of thousands of comparisons. We present RewardHarness, a self-evolving agentic reward framework that reframes reward modeling as c",
+      "categories": [],
+      "keywords": [],
+      "score": 54.6,
+      "decision": "持续观察",
+      "hf_upvotes": 3,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.08703"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.08703"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.08703"
+        }
+      ],
+      "id": "rewardharness-self-evolving-agentic-post-training",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 5.4,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Evaluating instruction-guided image edits requires rewards that reflect subtle…",
+      "one_line_judgement": "值得先保存：AI Agent：Evaluating instruction-guided image edits requires rewards th…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Evaluating instruction-guided image edits requires rewards that reflect subtle…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=rewardharness-self-evolving-agentic-post-training"
+    },
+    {
+      "title": "SPIN: Structural LLM Planning via Iterative Navigation for Industrial Tasks",
+      "authors": [
+        "Yusuke Ozaki",
+        "Dhaval Patel"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14051",
+      "pdf_url": "https://arxiv.org/pdf/2605.14051",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14051",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14051",
+      "abstract": "Industrial LLM agent systems often separate planning from execution, yet LLM planners frequently produce structurally invalid or unnecessarily long workflows, leading to brittle failures and avoidable tool and API cost. We propose SPIN, a planning wrapper that combines validated Directed Acyclic Graph (DAG) planning with prefix based execution control. SPIN enforces a strict DAG contract through \\_validate\\_plan\\_text and repair prompting, producing executable plans before downstream execution, ",
+      "categories": [],
+      "keywords": [],
+      "score": 54.5,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14051"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14051"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14051"
+        }
+      ],
+      "id": "spin-structural-llm-planning-via-iterative-navigation-for-industrial-tasks",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 8.35,
+        "trend_signal": 4.3,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Industrial LLM agent systems often separate planning from execution, yet LLM p…",
+      "one_line_judgement": "值得先保存：AI Agent：Industrial LLM agent systems often separate planning from exe…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Industrial LLM agent systems often separate planning from execution, yet LLM p…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=spin-structural-llm-planning-via-iterative-navigation-for-industrial-tasks"
+    },
+    {
+      "title": "Beyond Individual Intelligence: Surveying Collaboration, Failure Attribution, and Self-Evolution in LLM-based Multi-Agent Systems",
+      "authors": [
+        "Shihao Qi",
+        "Jie Ma",
+        "Rui Xing",
+        "Wei Guo",
+        "Xiao Huang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14892",
+      "pdf_url": "https://arxiv.org/pdf/2605.14892",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14892",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14892",
+      "abstract": "LLM-based autonomous agents have demonstrated strong capabilities in reasoning, planning, and tool use, yet remain limited when tasks require sustained coordination across roles, tools, and environments. Multi-agent systems address this through structured collaboration among specialized agents, but tighter coordination also amplifies a less explored risk: errors can propagate across agents and interaction rounds, producing failures that are difficult to diagnose and rarely translate into structu",
+      "categories": [],
+      "keywords": [],
+      "score": 53.7,
+      "decision": "持续观察",
+      "hf_upvotes": 42,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14892"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14892"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14892"
+        }
+      ],
+      "id": "beyond-individual-intelligence-surveying-collaboration-failure-attribution-and-self-evolution-in-llm-based-multi-agent-systems",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.8,
+        "trend_signal": 4.3,
+        "long_tail_potential": 6.0,
+        "asset_convertibility": 4.8,
+        "actionability": 6.7,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：LLM-based autonomous agents have demonstrated strong capabilities in reasoning…",
+      "one_line_judgement": "值得先保存：AI Agent：LLM-based autonomous agents have demonstrated strong capabili…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：LLM-based autonomous agents have demonstrated strong capabilities in reasoning…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=beyond-individual-intelligence-surveying-collaboration-failure-attribution-and-self-evolution-in-llm-based-multi-agent-systems"
+    },
+    {
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+      "authors": [
+        "Shashwat Goel",
+        "Nikhil Chandak",
+        "Arvindh Arun",
+        "Ameya Prabhu",
+        "Steffen Staab"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15188",
+      "pdf_url": "https://arxiv.org/pdf/2605.15188",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15188",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15188",
+      "abstract": "AI agents are being increasingly deployed in dynamic, open-ended environments that require adapting to new information as it arrives. To efficiently measure this capability for realistic use-cases, we propose building grounded simulations that replay real-world events in the order they occurred. We build FutureSim, where agents forecast world events beyond their knowledge cutoff while interacting with a chronological replay of the world: real news articles arriving and questions resolving over t",
+      "categories": [],
+      "keywords": [],
+      "score": 53.4,
+      "decision": "持续观察",
+      "hf_upvotes": 4,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15188"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15188"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15188"
+        }
+      ],
+      "id": "futuresim-replaying-world-events-to-evaluate-adaptive-agents",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：AI agents are being increasingly deployed in dynamic, open-ended environments …",
+      "one_line_judgement": "值得先保存：AI Agent：AI agents are being increasingly deployed in dynamic, open-en…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：AI agents are being increasingly deployed in dynamic, open-ended environments …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=futuresim-replaying-world-events-to-evaluate-adaptive-agents"
+    },
+    {
+      "title": "PreScam: A Benchmark for Predicting Scam Progression from Early Conversations",
+      "authors": [
+        "Weixiang Sun",
+        "Shang Ma",
+        "Yiyang Li",
+        "Tianyi Ma",
+        "Zehong Wang"
+      ],
+      "published": "2026-05-11",
+      "updated": "2026-05-11",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.12243",
+      "pdf_url": "https://arxiv.org/pdf/2605.12243",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.12243",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.12243",
+      "abstract": "Conversational scams, such as romance and investment scams, are emerging as a major form of online fraud. Unlike one-shot scam lures such as fake lottery or unpaid toll messages, they unfold through multi-turn conversations in which scammers gradually manipulate victims using evolving psychological techniques. However, existing research mainly focuses on static scam detection or synthetic scams, leaving open whether language models can understand how real-world scams progress over time. We intro",
+      "categories": [],
+      "keywords": [],
+      "score": 52.5,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.12243"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12243"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.12243"
+        }
+      ],
+      "id": "prescam-a-benchmark-for-predicting-scam-progression-from-early-conversations",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 8.25,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.25,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "RAG / 知识系统：Conversational scams, such as romance and investment scams, are emerging as a …",
+      "one_line_judgement": "值得先保存：RAG / 知识系统：Conversational scams, such as romance and investment scams,…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "RAG / 知识系统：Conversational scams, such as romance and investment scams, are emerging as a …",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=prescam-a-benchmark-for-predicting-scam-progression-from-early-conversations"
+    },
+    {
+      "title": "Forcing-KV: Hybrid KV Cache Compression for Efficient Autoregressive Video Diffusion Models",
+      "authors": [
+        "Yicheng Ji",
+        "Zhizhou Zhong",
+        "Jun Zhang",
+        "Qin Yang",
+        "XiTai Jin"
+      ],
+      "published": "2026-05-09",
+      "updated": "2026-05-09",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.09681",
+      "pdf_url": "https://arxiv.org/pdf/2605.09681",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.09681",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.09681",
+      "abstract": "Autoregressive (AR) video diffusion models adopt a streaming generation framework, enabling long-horizon video generation with real-time responsiveness, as exemplified by the Self Forcing training paradigm. However, existing AR video diffusion models still suffer from significant attention complexity and severe memory overhead due to the redundant key-value (KV) caches across historical frames, which limits scalability. In this paper, we tackle this challenge by introducing KV cache compression ",
+      "categories": [],
+      "keywords": [],
+      "score": 52.0,
+      "decision": "持续观察",
+      "hf_upvotes": 7,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.09681"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.09681"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.09681"
+        }
+      ],
+      "id": "forcing-kv-hybrid-kv-cache-compression-for-efficient-autoregressive-video-diffusion-models",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "context-engineering",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Context Engineering：Autoregressive (AR) video diffusion models adopt a streaming generation framew…",
+      "one_line_judgement": "值得先保存：Context Engineering：Autoregressive (AR) video diffusion models adopt a…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Context Engineering：Autoregressive (AR) video diffusion models adopt a streaming generation fram",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=forcing-kv-hybrid-kv-cache-compression-for-efficient-autoregressive-video-diffusion-models"
+    },
+    {
+      "title": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "authors": [
+        "Ziyu Guo",
+        "Rain Liu",
+        "Xinyan Chen",
+        "Pheng-Ann Heng"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15198",
+      "pdf_url": "https://arxiv.org/pdf/2605.15198",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15198",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15198",
+      "abstract": "Visual reasoning, often interleaved with intermediate visual states, has emerged as a promising direction in the field. A straightforward approach is to directly generate images via unified models during reasoning, but this is computationally expensive and architecturally non-trivial. Recent alternatives include agentic reasoning through code or tool calls, and latent reasoning with learnable hidden embeddings. However, agentic methods incur context-switching latency from external execution, whi",
+      "categories": [],
+      "keywords": [],
+      "score": 51.6,
+      "decision": "持续观察",
+      "hf_upvotes": 17,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15198"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15198"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15198"
+        }
+      ],
+      "id": "atlas-agentic-or-latent-visual-reasoning-one-word-is-enough-for-both",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Visual reasoning, often interleaved with intermediate visual states, has emerg…",
+      "one_line_judgement": "值得先保存：AI Agent：Visual reasoning, often interleaved with intermediate visual …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Visual reasoning, often interleaved with intermediate visual states, has emerg…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=atlas-agentic-or-latent-visual-reasoning-one-word-is-enough-for-both"
+    },
+    {
+      "title": "Unlocking Complex Visual Generation via Closed-Loop Verified Reasoning",
+      "authors": [
+        "Hanbo Cheng",
+        "Limin Lin",
+        "Ruo Zhang",
+        "Yicheng Pan",
+        "Jun Du"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14876",
+      "pdf_url": "https://arxiv.org/pdf/2605.14876",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14876",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14876",
+      "abstract": "Despite rapid advancements, current text-to-image (T2I) models predominantly rely on a single-step generation paradigm, which struggles with complex semantics and faces diminishing returns from parameter scaling.\n  While recent multi-step reasoning approaches show promise, they are hindered by ungrounded planning hallucinations lacking verification, monolithic post-hoc reflection, long-context optimization instabilities, and prohibitive inference latency. To overcome these bottlenecks, we propos",
+      "categories": [],
+      "keywords": [],
+      "score": 51.5,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14876"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14876"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14876"
+        }
+      ],
+      "id": "unlocking-complex-visual-generation-via-closed-loop-verified-reasoning",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 5.4,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Despite rapid advancements, current text-to-image (T2I) models predominantly r…",
+      "one_line_judgement": "值得先保存：AI Agent：Despite rapid advancements, current text-to-image (T2I) model…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Despite rapid advancements, current text-to-image (T2I) models predominantly r…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=unlocking-complex-visual-generation-via-closed-loop-verified-reasoning"
+    },
+    {
+      "title": "Nexus : An Agentic Framework for Time Series Forecasting",
+      "authors": [
+        "Sarkar Snigdha Sarathi Das",
+        "Palash Goyal",
+        "Mihir Parmar",
+        "Nanyun Peng",
+        "Vishy Tirumalashetty"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14389",
+      "pdf_url": "https://arxiv.org/pdf/2605.14389",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14389",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14389",
+      "abstract": "Time series forecasting is not just numerical extrapolation, but often requires reasoning with unstructured contextual data such as news or events. While specialized Time Series Foundation Models (TSFMs) excel at forecasting based on numerical patterns, they remain unaware to real-world textual signals. Conversely, while LLMs are emerging as zero-shot forecasters, their performance remains uneven across domains and contextual grounding. To bridge this gap, we introduce Nexus, a multi-agent forec",
+      "categories": [],
+      "keywords": [],
+      "score": 51.5,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14389"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14389"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14389"
+        }
+      ],
+      "id": "nexus-an-agentic-framework-for-time-series-forecasting",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Time series forecasting is not just numerical extrapolation, but often require…",
+      "one_line_judgement": "值得先保存：AI Agent：Time series forecasting is not just numerical extrapolation, …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Time series forecasting is not just numerical extrapolation, but often require…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=nexus-an-agentic-framework-for-time-series-forecasting"
+    },
+    {
+      "title": "RouteProfile: Elucidating the Design Space of LLM Profiles for Routing",
+      "authors": [
+        "Jingjun Xu",
+        "Hongji Pu",
+        "Tao Feng",
+        "Haozhen Zhang",
+        "Jiaxuan You"
+      ],
+      "published": "2026-04-29",
+      "updated": "2026-04-29",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.00180",
+      "pdf_url": "https://arxiv.org/pdf/2605.00180",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.00180",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.00180",
+      "abstract": "As the large language model (LLM) ecosystem expands, individual models exhibit varying capabilities across queries, benchmarks, and domains, motivating the development of LLM routing. While prior work has largely focused on router mechanism design, LLM profiles, which capture model capabilities, remain underexplored. In this work, we ask: How does LLM profile design affect routing performance across different routers? Addressing this question helps clarify the role of profiles in routing, disent",
+      "categories": [],
+      "keywords": [],
+      "score": 51.1,
+      "decision": "持续观察",
+      "hf_upvotes": 27,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.00180"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.00180"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.00180"
+        }
+      ],
+      "id": "routeprofile-elucidating-the-design-space-of-llm-profiles-for-routing",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 6.25,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：As the large language model (LLM) ecosystem expands, individual models exhibit…",
+      "one_line_judgement": "值得先保存：LLM 评测：As the large language model (LLM) ecosystem expands, individual…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "LLM 评测：As the large language model (LLM) ecosystem expands, individual models exhibit…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=routeprofile-elucidating-the-design-space-of-llm-profiles-for-routing"
+    },
+    {
+      "title": "Self-Distilled Agentic Reinforcement Learning",
+      "authors": [
+        "Zhengxi Lu",
+        "Zhiyuan Yao",
+        "Zhuowen Han",
+        "Zi-Han Wang",
+        "Jinyang Wu"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15155",
+      "pdf_url": "https://arxiv.org/pdf/2605.15155",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15155",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15155",
+      "abstract": "Reinforcement learning (RL) has emerged as a central paradigm for post-training LLM agents, yet its trajectory-level reward signal provides only coarse supervision for long-horizon interaction. On-Policy Self-Distillation (OPSD) complements RL by introducing dense token-level guidance from a teacher branch augmented with privileged context. However, transferring OPSD to multi-turn agents proves problematic: compounding multi-turn instability destabilizes supervision, while skill-conditioned priv",
+      "categories": [],
+      "keywords": [],
+      "score": 51.0,
+      "decision": "持续观察",
+      "hf_upvotes": 76,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15155"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15155"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15155"
+        }
+      ],
+      "id": "self-distilled-agentic-reinforcement-learning",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Reinforcement learning (RL) has emerged as a central paradigm for post-trainin…",
+      "one_line_judgement": "值得先保存：AI Agent：Reinforcement learning (RL) has emerged as a central paradigm…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Reinforcement learning (RL) has emerged as a central paradigm for post-trainin…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=self-distilled-agentic-reinforcement-learning"
+    },
+    {
+      "title": "ViMU: Benchmarking Video Metaphorical Understanding",
+      "authors": [
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14607",
+      "pdf_url": "https://arxiv.org/pdf/2605.14607",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14607",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14607",
+      "abstract": "Any new medium, once it emerges, is used for more than the transmission of overt content alone. The information it carries typically operates on two levels: one is the content directly presented, while the other is the subtext beneath it-the implicit ideas and intentions the creator seeks to convey through the medium. Likewise, since video technologies became widely adopted, video has served not only as a powerful tool for recording and communicating visual information, but also as a vehicle for",
+      "categories": [],
+      "keywords": [],
+      "score": 50.9,
+      "decision": "持续观察",
+      "hf_upvotes": 10,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14607"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14607"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14607"
+        }
+      ],
+      "id": "vimu-benchmarking-video-metaphorical-understanding",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 6.25,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：Any new medium, once it emerges, is used for more than the transmission of ove…",
+      "one_line_judgement": "值得先保存：LLM 评测：Any new medium, once it emerges, is used for more than the tran…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "LLM 评测：Any new medium, once it emerges, is used for more than the transmission of ove…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=vimu-benchmarking-video-metaphorical-understanding"
+    },
+    {
+      "title": "IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation",
+      "authors": [
+        "Shijie Lian",
+        "Bin Yu",
+        "Xiaopeng Lin",
+        "Zhaolong Shen",
+        "Laurence Tianruo Yang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14712",
+      "pdf_url": "https://arxiv.org/pdf/2605.14712",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14712",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14712",
+      "abstract": "Robot imitation data are often multimodal: similar visual-language observations may be followed by different action chunks because human demonstrators act with different short-horizon intents, task phases, or recent context. Existing frame-conditioned VLA policies infer each chunk from the current observation and instruction alone, so under partial observability they may resample different intents across adjacent replanning steps, leading to inter-chunk conflict and unstable execution. We introd",
+      "categories": [],
+      "keywords": [],
+      "score": 50.4,
+      "decision": "持续观察",
+      "hf_upvotes": 14,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14712"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14712"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14712"
+        }
+      ],
+      "id": "intentvla-short-horizon-intent-modeling-for-aliased-robot-manipulation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Robot imitation data are often multimodal: similar visual-language observation…",
+      "one_line_judgement": "值得先保存：AI Agent：Robot imitation data are often multimodal: similar visual-lan…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Robot imitation data are often multimodal: similar visual-language observation…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=intentvla-short-horizon-intent-modeling-for-aliased-robot-manipulation"
+    },
+    {
+      "title": "Overcoming Dynamics-Blindness: Training-Free Pace-and-Path Correction for VLA Models",
+      "authors": [
+        "Yanyan Zhang",
+        "Chaoda Song",
+        "Vikash Singh",
+        "Xinpeng Li",
+        "Kai Ye"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.11459",
+      "pdf_url": "https://arxiv.org/pdf/2605.11459",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.11459",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.11459",
+      "abstract": "Vision-Language-Action (VLA) models achieve remarkable flexibility and generalization beyond classical control paradigms. However, most prevailing VLAs are trained under a single-frame observation paradigm, which leaves them structurally blind to temporal dynamics. Consequently, these models degrade severely in non-stationary scenarios, even when trained or finetuned on dynamic datasets. Existing approaches either require expensive retraining or suffer from latency bottlenecks and poor temporal ",
+      "categories": [],
+      "keywords": [],
+      "score": 50.2,
+      "decision": "持续观察",
+      "hf_upvotes": 0,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.11459"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.11459"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.11459"
+        }
+      ],
+      "id": "overcoming-dynamics-blindness-training-free-pace-and-path-correction-for-vla-models",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：Vision-Language-Action (VLA) models achieve remarkable flexibility and general…",
+      "one_line_judgement": "值得先保存：Multimodal Agent：Vision-Language-Action (VLA) models achieve remarkabl…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Multimodal Agent：Vision-Language-Action (VLA) models achieve remarkable flexibility and general…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=overcoming-dynamics-blindness-training-free-pace-and-path-correction-for-vla-models"
+    },
+    {
+      "title": "PanoWorld: Towards Spatial Supersensing in 360^circ Panorama World",
+      "authors": [
+        "Changpeng Wang",
+        "Xin Lin",
+        "Junhan Liu",
+        "Yuheng Liu",
+        "Zhen Wang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13169",
+      "pdf_url": "https://arxiv.org/pdf/2605.13169",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13169",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13169",
+      "abstract": "Multimodal large laboratory models (MLLMs) still struggle with spatial understanding under the dominant perspective-image paradigm, which inherits the narrow field of view of human-like perception. For navigation, robotic search, and 3D scene understanding, 360-degree panoramic sensing offers a form of supersensing by capturing the entire surrounding environment at once. However, existing MLLM pipelines typically decompose panoramas into multiple perspective views, leaving the spherical structur",
+      "categories": [],
+      "keywords": [],
+      "score": 50.0,
+      "decision": "持续观察",
+      "hf_upvotes": 13,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13169"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13169"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13169"
+        }
+      ],
+      "id": "panoworld-towards-spatial-supersensing-in-360-circ-panorama-world",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "rag-knowledge",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "RAG / 知识系统：Multimodal large laboratory models (MLLMs) still struggle with spatial underst…",
+      "one_line_judgement": "值得先保存：RAG / 知识系统：Multimodal large laboratory models (MLLMs) still struggle w…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "RAG / 知识系统：Multimodal large laboratory models (MLLMs) still struggle with spatial underst…",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=panoworld-towards-spatial-supersensing-in-360-circ-panorama-world"
+    },
+    {
+      "title": "CurveBench: A Benchmark for Exact Topological Reasoning over Nested Jordan Curves",
+      "authors": [
+        "Amirreza Mohseni",
+        "Mona Mohammadi",
+        "Morteza Saghafian",
+        "Naser Talebizadeh Saradari"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14068",
+      "pdf_url": "https://arxiv.org/pdf/2605.14068",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14068",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14068",
+      "abstract": "We introduce CurveBench, a benchmark for hierarchical topological reasoning from visual input. CurveBench consists of 756 images of pairwise non-intersecting Jordan curves across easy, polygonal, topographic-inspired, maze-like, and dense counting configurations. Each image is annotated with a rooted tree encoding the containment relations between planar regions. We formulate the task as structured prediction: given an image, a model must recover the full rooted containment tree induced by the c",
+      "categories": [],
+      "keywords": [],
+      "score": 49.9,
+      "decision": "暂时忽略",
+      "hf_upvotes": 6,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14068"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14068"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14068"
+        }
+      ],
+      "id": "curvebench-a-benchmark-for-exact-topological-reasoning-over-nested-jordan-curves",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 8.25,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：We introduce CurveBench, a benchmark for hierarchical topological reasoning fr…",
+      "one_line_judgement": "当前可忽略：LLM 评测：We introduce CurveBench, a benchmark for hierarchical topologic…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：We introduce CurveBench, a benchmark for hierarchical topological reasoning fr…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=curvebench-a-benchmark-for-exact-topological-reasoning-over-nested-jordan-curves"
+    },
+    {
+      "title": "Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distillation for Real-Time Interactive Video Generation",
+      "authors": [
+        "Min Zhao",
+        "Hongzhou Zhu",
+        "Kaiwen Zheng",
+        "Zihan Zhou",
+        "Bokai Yan"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15141",
+      "pdf_url": "https://arxiv.org/pdf/2605.15141",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15141",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15141",
+      "abstract": "Real-time interactive video generation requires low-latency, streaming, and controllable rollout. Existing autoregressive (AR) diffusion distillation methods have achieved strong results in the chunk-wise 4-step regime by distilling bidirectional base models into few-step AR students, but they remain limited by coarse response granularity and non-negligible sampling latency. In this paper, we study a more aggressive setting: frame-wise autoregression with only 1--2 sampling steps. In this regime",
+      "categories": [],
+      "keywords": [],
+      "score": 49.3,
+      "decision": "暂时忽略",
+      "hf_upvotes": 82,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15141"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15141"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15141"
+        }
+      ],
+      "id": "causal-forcing-scalable-few-step-autoregressive-diffusion-distillation-for-real-time-interactive-video-generation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Real-time interactive video generation requires low-latency, streaming, and co…",
+      "one_line_judgement": "当前可忽略：推理与服务：Real-time interactive video generation requires low-latency, str…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Real-time interactive video generation requires low-latency, streaming, and co…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=causal-forcing-scalable-few-step-autoregressive-diffusion-distillation-for-real-time-interactive-video-generation"
+    },
+    {
+      "title": "Learning to Communicate Locally for Large-Scale Multi-Agent Pathfinding",
+      "authors": [
+        "Valeriy Vyaltsev",
+        "Alsu Sagirova",
+        "Anton Andreychuk",
+        "Oleg Bulichev",
+        "Yuri Kuratov"
+      ],
+      "published": "2026-05-11",
+      "updated": "2026-05-11",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.07637",
+      "pdf_url": "https://arxiv.org/pdf/2605.07637",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.07637",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.07637",
+      "abstract": "Multi-agent pathfinding (MAPF) is a widely used abstraction for multi-robot trajectory planning problems, where multiple homogeneous agents move simultaneously within a shared environment. Although solving MAPF optimally is NP-hard, scalable and efficient solvers are critical for real-world applications such as logistics and search-and-rescue. To this end, the research community has proposed various decentralized suboptimal MAPF solvers that leverage machine learning. Such methods frame MAPF (fr",
+      "categories": [],
+      "keywords": [],
+      "score": 49.3,
+      "decision": "暂时忽略",
+      "hf_upvotes": 16,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.07637"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.07637"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.07637"
+        }
+      ],
+      "id": "learning-to-communicate-locally-for-large-scale-multi-agent-pathfinding",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Multi-agent pathfinding (MAPF) is a widely used abstraction for multi-robot tr…",
+      "one_line_judgement": "当前可忽略：AI Agent：Multi-agent pathfinding (MAPF) is a widely used abstraction f…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Multi-agent pathfinding (MAPF) is a widely used abstraction for multi-robot tr…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=learning-to-communicate-locally-for-large-scale-multi-agent-pathfinding"
+    },
+    {
+      "title": "Long Context Pre-Training with Lighthouse Attention",
+      "authors": [
+        "Bowen Peng",
+        "Subho Ghosh",
+        "Jeffrey Quesnelle"
+      ],
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.06554",
+      "pdf_url": "https://arxiv.org/pdf/2605.06554",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.06554",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.06554",
+      "abstract": "Training causal transformers at extreme sequence lengths is bottlenecked by the quadratic time and memory of scaled dot-product attention (SDPA). In this work, we propose Lighthouse Attention, a training-only symmetrical selection-based hierarchical attention algorithm that wraps around ordinary SDPA and can be easily removed towards the end of the training. Our hierarchical selection is also gradient-free, which exempts us from dealing with a complicated and potentially inefficient backward pas",
+      "categories": [],
+      "keywords": [],
+      "score": 47.8,
+      "decision": "暂时忽略",
+      "hf_upvotes": 19,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.06554"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.06554"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.06554"
+        }
+      ],
+      "id": "long-context-pre-training-with-lighthouse-attention",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Training causal transformers at extreme sequence lengths is bottlenecked by th…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Training causal transformers at extreme sequence l…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Training causal transformers at extreme sequence lengths is bottlenecked by ",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=long-context-pre-training-with-lighthouse-attention"
+    },
+    {
+      "title": "DiffusionOPD: A Unified Perspective of On-Policy Distillation in Diffusion Models",
+      "authors": [
+        "Quanhao Li",
+        "Junqiu Yu",
+        "Kaixun Jiang",
+        "Yujie Wei",
+        "Zhen Xing"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15055",
+      "pdf_url": "https://arxiv.org/pdf/2605.15055",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15055",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15055",
+      "abstract": "Reinforcement learning has emerged as a powerful tool for improving diffusion-based text-to-image models, but existing methods are largely limited to single-task optimization. Extending RL to multiple tasks is challenging: joint optimization suffers from cross-task interference and imbalance, while cascade RL is cumbersome and prone to catastrophic forgetting. We propose DiffusionOPD, a new multi-task training paradigm for diffusion models based on Online Policy Distillation (OPD). DiffusionOPD ",
+      "categories": [],
+      "keywords": [],
+      "score": 47.7,
+      "decision": "暂时忽略",
+      "hf_upvotes": 14,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15055"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15055"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15055"
+        }
+      ],
+      "id": "diffusionopd-a-unified-perspective-of-on-policy-distillation-in-diffusion-models",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Reinforcement learning has emerged as a powerful tool for improving diffusion-…",
+      "one_line_judgement": "当前可忽略：推理与服务：Reinforcement learning has emerged as a powerful tool for improv…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Reinforcement learning has emerged as a powerful tool for improving diffusion-…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=diffusionopd-a-unified-perspective-of-on-policy-distillation-in-diffusion-models"
+    },
+    {
+      "title": "SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer",
+      "authors": [
+        "Haoyi Zhu",
+        "Haozhe Liu",
+        "Yuyang Zhao",
+        "Tian Ye",
+        "Junsong Chen"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15178",
+      "pdf_url": "https://arxiv.org/pdf/2605.15178",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15178",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15178",
+      "abstract": "We introduce SANA-WM, an efficient 2.6B-parameter open-source world model natively trained for one-minute generation, synthesizing high-fidelity, 720p, minute-scale videos with precise camera control. SANA-WM achieves visual quality comparable to large-scale industrial baselines such as LingBot-World and HY-WorldPlay, while significantly improving efficiency. Four core designs drive our architecture: (1) Hybrid Linear Attention combines frame-wise Gated DeltaNet (GDN) with softmax attention for ",
+      "categories": [],
+      "keywords": [],
+      "score": 46.7,
+      "decision": "暂时忽略",
+      "hf_upvotes": 57,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15178"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15178"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15178"
+        }
+      ],
+      "id": "sana-wm-efficient-minute-scale-world-modeling-with-hybrid-linear-diffusion-transformer",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：We introduce SANA-WM, an efficient 2.6B-parameter open-source world model nati…",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：We introduce SANA-WM, an efficient 2.6B-parameter ope…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：We introduce SANA-WM, an efficient 2.6B-parameter open-source world model nati…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=sana-wm-efficient-minute-scale-world-modeling-with-hybrid-linear-diffusion-transformer"
+    },
+    {
+      "title": "Dynamic Latent Routing",
+      "authors": [
+        "Fangyuan Yu",
+        "Xin Su",
+        "Amir Abdullah"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14323",
+      "pdf_url": "https://arxiv.org/pdf/2605.14323",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14323",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14323",
+      "abstract": "We investigate the temporal concatenation of sub-policies in Markov Decision Processes (MDP) with time-varying reward functions. We introduce General Dijkstra Search (GDS), and prove that globally optimal goal-reaching policies can be recovered through temporal composition of intermediate optimal sub-policies. Motivated by the \"search, select, update\" principle underlying GDS, we propose Dynamic Latent Routing (DLR), a language-model post-training method that jointly learns discrete latent codes",
+      "categories": [],
+      "keywords": [],
+      "score": 46.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 2,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14323"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14323"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14323"
+        }
+      ],
+      "id": "dynamic-latent-routing",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：We investigate the temporal concatenation of sub-policies in Markov Decision P…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：We investigate the temporal concatenation of sub-policies i…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：We investigate the temporal concatenation of sub-policies in Markov Decision P…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=dynamic-latent-routing"
+    },
+    {
+      "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+      "authors": [
+        "Juntong Wu",
+        "Jialiang Cheng",
+        "Qishen Yin",
+        "Yue Dai",
+        "Yuliang Yan"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14438",
+      "pdf_url": "https://arxiv.org/pdf/2605.14438",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14438",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14438",
+      "abstract": "Mixture-of-Experts (MoE) architectures enhance the efficiency of large language models by activating only a subset of experts per token. However, standard MoE employs a fixed Top-K routing strategy, leading to redundant computation and suboptimal inference latency. Existing acceleration methods either require costly retraining with architectural changes or suffer from severe performance drop at high sparsity due to train-inference mismatch. To address these limitations, we propose BEAM (Binary E",
+      "categories": [],
+      "keywords": [],
+      "score": 46.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14438"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14438"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14438"
+        }
+      ],
+      "id": "beam-binary-expert-activation-masking-for-dynamic-routing-in-moe",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Mixture-of-Experts (MoE) architectures enhance the efficiency of large languag…",
+      "one_line_judgement": "当前可忽略：推理与服务：Mixture-of-Experts (MoE) architectures enhance the efficiency of…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Mixture-of-Experts (MoE) architectures enhance the efficiency of large languag…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=beam-binary-expert-activation-masking-for-dynamic-routing-in-moe"
+    },
+    {
+      "title": "Topology-Preserving Neural Operator Learning via Hodge Decomposition",
+      "authors": [
+        "Dongzhe Zheng",
+        "Tao Zhong",
+        "Christine Allen-Blanchette"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13834",
+      "pdf_url": "https://arxiv.org/pdf/2605.13834",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13834",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13834",
+      "abstract": "In this paper, we study solution operators of physical field equations on geometric meshes from a function-space perspective. We reveal that Hodge orthogonality fundamentally resolves spectral interference by isolating unlearnable topological degrees of freedom from learnable geometric dynamics, enabling an additive approximation confined to structure-preserving subspaces. Building on Hodge theory and operator splitting, we derive a principled operator-level decomposition. The result is a Hybrid",
+      "categories": [],
+      "keywords": [],
+      "score": 46.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 3,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13834"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13834"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13834"
+        }
+      ],
+      "id": "topology-preserving-neural-operator-learning-via-hodge-decomposition",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：In this paper, we study solution operators of physical field equations on geom…",
+      "one_line_judgement": "当前可忽略：推理与服务：In this paper, we study solution operators of physical field equ…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：In this paper, we study solution operators of physical field equations on geom…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=topology-preserving-neural-operator-learning-via-hodge-decomposition"
+    },
+    {
+      "title": "Adaptive Teacher Exposure for Self-Distillation in LLM Reasoning",
+      "authors": [
+        "Zihao Han",
+        "Tiangang Zhang",
+        "Huaibin Wang",
+        "Yilun Sun"
+      ],
+      "published": "2026-05-11",
+      "updated": "2026-05-11",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.11458",
+      "pdf_url": "https://arxiv.org/pdf/2605.11458",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.11458",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.11458",
+      "abstract": "On-policy self-distillation has become a strong recipe for LLM reasoning, where a privileged teacher supervises the student's own rollouts while conditioning on the reference solution. A design choice shared by nearly all such methods, however, has gone unquestioned: the teacher always sees the full reference reasoning. We argue that this default itself is part of the problem and identify a teacher-side exposure mismatch: when the teacher conditions on reasoning far beyond the student's current ",
+      "categories": [],
+      "keywords": [],
+      "score": 46.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 4,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.11458"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.11458"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.11458"
+        }
+      ],
+      "id": "adaptive-teacher-exposure-for-self-distillation-in-llm-reasoning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：On-policy self-distillation has become a strong recipe for LLM reasoning, wher…",
+      "one_line_judgement": "当前可忽略：推理与服务：On-policy self-distillation has become a strong recipe for LLM r…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：On-policy self-distillation has become a strong recipe for LLM reasoning, wher…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=adaptive-teacher-exposure-for-self-distillation-in-llm-reasoning"
+    },
+    {
+      "title": "LLM-based Detection of Manipulative Political Narratives",
+      "authors": [
+        "Sinclair Schneider",
+        "Florian Steuber",
+        "Gabi Dreo Rodosek"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14354",
+      "pdf_url": "https://arxiv.org/pdf/2605.14354",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14354",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14354",
+      "abstract": "We present a new computational framework for detecting and structuring manipulative political narratives. A task that became more important due to the shift of political discussions to social media. One of the primary challenges thereby is differentiating between manipulative political narratives and legitimate critiques. Some posts may also reframe actual events within a manipulative context.\n  To achieve good clustering results, we filter manipulative posts beforehand using a detailed few-shot",
+      "categories": [],
+      "keywords": [],
+      "score": 45.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 2,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14354"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14354"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14354"
+        }
+      ],
+      "id": "llm-based-detection-of-manipulative-political-narratives",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 7.3,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：We present a new computational framework for detecting and structuring manipul…",
+      "one_line_judgement": "当前可忽略：前沿论文：We present a new computational framework for detecting and struct…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：We present a new computational framework for detecting and structuring manipul…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=llm-based-detection-of-manipulative-political-narratives"
+    },
+    {
+      "title": "Darwin Family: MRI-Trust-Weighted Evolutionary Merging for Training-Free Scaling of Language-Model Reasoning",
+      "authors": [
+        "Taebong Kim",
+        "Youngsik Hong",
+        "Minsik Kim",
+        "Sunyoung Choi",
+        "Jaewon Jang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14386",
+      "pdf_url": "https://arxiv.org/pdf/2605.14386",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14386",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14386",
+      "abstract": "We present Darwin Family, a framework for training-free evolutionary merging of large language models via gradient-free weight-space recombination. We ask whether frontier-level reasoning performance can be improved without additional training, by reorganizing latent capabilities already encoded in existing checkpoints. Darwin introduces three key ideas: (i) a 14-dimensional adaptive merge genome enabling fine-grained component- and block-level recombination; (ii) MRI-Trust Fusion, which adaptiv",
+      "categories": [],
+      "keywords": [],
+      "score": 44.7,
+      "decision": "暂时忽略",
+      "hf_upvotes": 50,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14386"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14386"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14386"
+        }
+      ],
+      "id": "darwin-family-mri-trust-weighted-evolutionary-merging-for-training-free-scaling-of-language-model-reasoning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：We present Darwin Family, a framework for training-free evolutionary merging o…",
+      "one_line_judgement": "当前可忽略：前沿论文：We present Darwin Family, a framework for training-free evolution…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：We present Darwin Family, a framework for training-free evolutionary merging o…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=darwin-family-mri-trust-weighted-evolutionary-merging-for-training-free-scaling-of-language-model-reasoning"
+    },
+    {
+      "title": "FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale",
+      "authors": [
+        "Runyuan He",
+        "Qiuyang Mang",
+        "Shang Zhou",
+        "Kaiyuan Liu",
+        "Hanchen Li"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14445",
+      "pdf_url": "https://arxiv.org/pdf/2605.14445",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14445",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14445",
+      "abstract": "Many real-world coding challenges are open-ended and admit no known optimal solution. Yet, recent progress in LLM coding has focused on well-defined tasks such as feature implementation, bug fixing, and competitive programming. Open-ended coding remains a weak spot for LLMs, largely because open-ended training problems are scarce and expensive to construct. Our goal is to synthesize open-ended coding problems at scale to train stronger LLM coders. We introduce FrontierSmith, an automated system ",
+      "categories": [],
+      "keywords": [],
+      "score": 44.4,
+      "decision": "暂时忽略",
+      "hf_upvotes": 17,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14445"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14445"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14445"
+        }
+      ],
+      "id": "frontiersmith-synthesizing-open-ended-coding-problems-at-scale",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 7.3,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Many real-world coding challenges are open-ended and admit no known optimal so…",
+      "one_line_judgement": "当前可忽略：前沿论文：Many real-world coding challenges are open-ended and admit no kno…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Many real-world coding challenges are open-ended and admit no known optimal so…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=frontiersmith-synthesizing-open-ended-coding-problems-at-scale"
+    },
+    {
+      "title": "Achieving Gold-Medal-Level Olympiad Reasoning via Simple and Unified Scaling",
+      "authors": [
+        "Yafu Li",
+        "Runzhe Zhan",
+        "Haoran Zhang",
+        "Shunkai Zhang",
+        "Yizhuo Li"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13301",
+      "pdf_url": "https://arxiv.org/pdf/2605.13301",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13301",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13301",
+      "abstract": "Recent progress in reasoning models has substantially advanced long-horizon mathematical and scientific problem solving, with several systems now reaching gold-medal-level performance on International Mathematical Olympiad (IMO) and International Physics Olympiad (IPhO) problems. In this paper, we introduce a simple and unified recipe for converting a post-trained reasoning backbone into a rigorous olympiad-level solver. The recipe first uses a reverse-perplexity curriculum for SFT to instill ri",
+      "categories": [],
+      "keywords": [],
+      "score": 44.4,
+      "decision": "暂时忽略",
+      "hf_upvotes": 137,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13301"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13301"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13301"
+        }
+      ],
+      "id": "achieving-gold-medal-level-olympiad-reasoning-via-simple-and-unified-scaling",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 7.3,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Recent progress in reasoning models has substantially advanced long-horizon ma…",
+      "one_line_judgement": "当前可忽略：前沿论文：Recent progress in reasoning models has substantially advanced lo…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Recent progress in reasoning models has substantially advanced long-horizon ma…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=achieving-gold-medal-level-olympiad-reasoning-via-simple-and-unified-scaling"
+    },
+    {
+      "title": "Sat3DGen: Comprehensive Street-Level 3D Scene Generation from Single Satellite Image",
+      "authors": [
+        "Ming Qian",
+        "Zimin Xia",
+        "Changkun Liu",
+        "Shuailei Ma",
+        "Wen Wang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14984",
+      "pdf_url": "https://arxiv.org/pdf/2605.14984",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14984",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14984",
+      "abstract": "Generating a street-level 3D scene from a single satellite image is a crucial yet challenging task. Current methods present a stark trade-off: geometry-colorization models achieve high geometric fidelity but are typically building-focused and lack semantic diversity. In contrast, proxy-based models use feed-forward image-to-3D frameworks to generate holistic scenes by jointly learning geometry and texture, a process that yields rich content but coarse and unstable geometry. We attribute these ge",
+      "categories": [],
+      "keywords": [],
+      "score": 43.3,
+      "decision": "暂时忽略",
+      "hf_upvotes": 3,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14984"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14984"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14984"
+        }
+      ],
+      "id": "sat3dgen-comprehensive-street-level-3d-scene-generation-from-single-satellite-image",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Generating a street-level 3D scene from a single satellite image is a crucial …",
+      "one_line_judgement": "当前可忽略：前沿论文：Generating a street-level 3D scene from a single satellite image …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Generating a street-level 3D scene from a single satellite image is a crucial …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=sat3dgen-comprehensive-street-level-3d-scene-generation-from-single-satellite-image"
+    },
+    {
+      "title": "Does Synthetic Layered Design Data Benefit Layered Design Decomposition?",
+      "authors": [
+        "Kam Man Wu",
+        "Haolin Yang",
+        "Qingyu Chen",
+        "Yihu Tang",
+        "Jingye Chen"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15167",
+      "pdf_url": "https://arxiv.org/pdf/2605.15167",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15167",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15167",
+      "abstract": "Recent advances in image generation have made it easy to produce high-quality images. However, these outputs are inherently flattened, entangling foreground elements, background, and text within a fixed canvas. As a result, flexible post-generation editing remains challenging, revealing a clear last-mile gap toward practical usability. Existing approaches either rely on scarce proprietary layered assets or construct partially synthetic data from limited structural priors. However, both strategie",
+      "categories": [],
+      "keywords": [],
+      "score": 43.0,
+      "decision": "暂时忽略",
+      "hf_upvotes": 6,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15167"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15167"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15167"
+        }
+      ],
+      "id": "does-synthetic-layered-design-data-benefit-layered-design-decomposition",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 7.3,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Recent advances in image generation have made it easy to produce high-quality …",
+      "one_line_judgement": "当前可忽略：前沿论文：Recent advances in image generation have made it easy to produce …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Recent advances in image generation have made it easy to produce high-quality …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=does-synthetic-layered-design-data-benefit-layered-design-decomposition"
+    },
+    {
+      "title": "Warp-as-History: Generalizable Camera-Controlled Video Generation from One Training Video",
+      "authors": [
+        "Yifan Wang",
+        "Tong He"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15182",
+      "pdf_url": "https://arxiv.org/pdf/2605.15182",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15182",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15182",
+      "abstract": "Camera-controlled video generation has made substantial progress, enabling generated videos to follow prescribed viewpoint trajectories. However, existing methods usually learn camera-specific conditioning through camera encoders, control branches, or attention and positional-encoding modifications, which often require post-training on large-scale camera-annotated videos. Training-free alternatives avoid such post-training, but often shift the cost to test-time optimization or extra denoising-ti",
+      "categories": [],
+      "keywords": [],
+      "score": 41.8,
+      "decision": "暂时忽略",
+      "hf_upvotes": 35,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15182"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15182"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15182"
+        }
+      ],
+      "id": "warp-as-history-generalizable-camera-controlled-video-generation-from-one-training-video",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Camera-controlled video generation has made substantial progress, enabling gen…",
+      "one_line_judgement": "当前可忽略：前沿论文：Camera-controlled video generation has made substantial progress,…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Camera-controlled video generation has made substantial progress, enabling gen…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=warp-as-history-generalizable-camera-controlled-video-generation-from-one-training-video"
+    },
+    {
+      "title": "Boosting Reinforcement Learning with Verifiable Rewards via Randomly Selected Few-Shot Guidance",
+      "authors": [
+        "Kai Yan",
+        "Alexander G. Schwing",
+        "Yu-Xiong Wang"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15012",
+      "pdf_url": "https://arxiv.org/pdf/2605.15012",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15012",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15012",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has achieved great success in developing Large Language Models (LLMs) with chain-of-thought rollouts for many tasks such as math and coding. Nevertheless, RLVR struggles with sample efficiency on difficult problems where correct rollouts are hard to generate. Prior works propose to address this issue via demonstration-guided RLVR, i.e., to conduct Supervised FineTuning (SFT) when RL fails; however, SFT often requires a lot of data, which can ",
+      "categories": [],
+      "keywords": [],
+      "score": 41.8,
+      "decision": "暂时忽略",
+      "hf_upvotes": 1,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15012"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15012"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15012"
+        }
+      ],
+      "id": "boosting-reinforcement-learning-with-verifiable-rewards-via-randomly-selected-few-shot-guidance",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Reinforcement Learning with Verifiable Rewards (RLVR) has achieved great succe…",
+      "one_line_judgement": "当前可忽略：前沿论文：Reinforcement Learning with Verifiable Rewards (RLVR) has achieve…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Reinforcement Learning with Verifiable Rewards (RLVR) has achieved great succe…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=boosting-reinforcement-learning-with-verifiable-rewards-via-randomly-selected-few-shot-guidance"
+    },
+    {
+      "title": "VGGT-Edit: Feed-forward Native 3D Scene Editing with Residual Field Prediction",
+      "authors": [
+        "Kaixin Zhu",
+        "Yiwen Tang",
+        "Yifan Yang",
+        "Renrui Zhang",
+        "Bohan Zeng"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15186",
+      "pdf_url": "https://arxiv.org/pdf/2605.15186",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15186",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15186",
+      "abstract": "High-quality 3D scene reconstruction has recently advanced toward generalizable feed-forward architectures, enabling the generation of complex environments in a single forward pass. However, despite their strong performance in static scene perception, these models remain limited in responding to dynamic human instructions, which restricts their use in interactive applications. Existing editing methods typically rely on a 2D-lifting strategy, where individual views are edited independently and th",
+      "categories": [],
+      "keywords": [],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 13,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15186"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15186"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15186"
+        }
+      ],
+      "id": "vggt-edit-feed-forward-native-3d-scene-editing-with-residual-field-prediction",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：High-quality 3D scene reconstruction has recently advanced toward generalizabl…",
+      "one_line_judgement": "当前可忽略：前沿论文：High-quality 3D scene reconstruction has recently advanced toward…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：High-quality 3D scene reconstruction has recently advanced toward generalizabl…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=vggt-edit-feed-forward-native-3d-scene-editing-with-residual-field-prediction"
+    },
+    {
+      "title": "Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis",
+      "authors": [
+        "Yucheng Shi",
+        "Zhenwen Liang",
+        "Kishan Panaganti",
+        "Dian Yu",
+        "Wenhao Yu"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14392",
+      "pdf_url": "https://arxiv.org/pdf/2605.14392",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14392",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14392",
+      "abstract": "We pursue a vision for self-improving language models in which the model does not merely generate problems or traces to imitate, but constructs the environments that train it. In zero-data reasoning RL, this reframes self-improvement from a data-generation loop into an environment-construction loop, where each artifact is a reusable executable object that samples instances, computes references, and scores responses. Whether this vision sustains improvement hinges on a single property: the enviro",
+      "categories": [],
+      "keywords": [],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 5,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14392"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14392"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14392"
+        }
+      ],
+      "id": "learning-to-build-the-environment-self-evolving-reasoning-rl-via-verifiable-environment-synthesis",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：We pursue a vision for self-improving language models in which the model does …",
+      "one_line_judgement": "当前可忽略：前沿论文：We pursue a vision for self-improving language models in which th…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：We pursue a vision for self-improving language models in which the model does …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=learning-to-build-the-environment-self-evolving-reasoning-rl-via-verifiable-environment-synthesis"
+    },
+    {
+      "title": "PhyMotion: Structured 3D Motion Reward for Physics-Grounded Human Video Generation",
+      "authors": [
+        "Yidong Huang",
+        "Zun Wang",
+        "Han Lin",
+        "Dong-Ki Kim",
+        "Shayegan Omidshafiei"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14269",
+      "pdf_url": "https://arxiv.org/pdf/2605.14269",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14269",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14269",
+      "abstract": "Generating realistic human motion is a central yet unsolved challenge in video generation. While reinforcement learning (RL)-based post-training has driven recent gains in general video quality, extending it to human motion remains bottlenecked by a reward signal that cannot reliably score motion realism. Existing video rewards primarily rely on 2D perceptual signals, without explicitly modeling the 3D body state, contact, and dynamics underlying articulated human motion, and often assign high s",
+      "categories": [],
+      "keywords": [],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 4,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.14269"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.14269"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14269"
+        }
+      ],
+      "id": "phymotion-structured-3d-motion-reward-for-physics-grounded-human-video-generation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Generating realistic human motion is a central yet unsolved challenge in video…",
+      "one_line_judgement": "当前可忽略：前沿论文：Generating realistic human motion is a central yet unsolved chall…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Generating realistic human motion is a central yet unsolved challenge in video…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=phymotion-structured-3d-motion-reward-for-physics-grounded-human-video-generation"
+    },
+    {
+      "title": "Aligning Latent Geometry for Spherical Flow Matching in Image Generation",
+      "authors": [
+        "Tuna Han Salih Meral",
+        "Kaan Oktay",
+        "Hidir Yesiltepe",
+        "Adil Kaan Akan",
+        "Pinar Yanardag"
+      ],
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15193",
+      "pdf_url": "https://arxiv.org/pdf/2605.15193",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15193",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15193",
+      "abstract": "Latent flow matching for image generation usually transports Gaussian noise to variational autoencoder latents along linear paths. Both endpoints, however, concentrate in thin spherical shells, and a Euclidean chord leaves those shells even when preprocessing aligns their radii. By decomposing each latent token into radial and angular components, we show through component-swap probes that decoded perceptual and semantic content is carried predominantly by direction, with radius contributing much",
+      "categories": [],
+      "keywords": [],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 3,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.15193"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.15193"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15193"
+        }
+      ],
+      "id": "aligning-latent-geometry-for-spherical-flow-matching-in-image-generation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Latent flow matching for image generation usually transports Gaussian noise to…",
+      "one_line_judgement": "当前可忽略：前沿论文：Latent flow matching for image generation usually transports Gaus…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Latent flow matching for image generation usually transports Gaussian noise to…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=aligning-latent-geometry-for-spherical-flow-matching-in-image-generation"
+    },
+    {
+      "title": "PRISM: Prior Rectification and Uncertainty-Aware Structure Modeling for Diffusion-Based Text Image Super-Resolution",
+      "authors": [
+        "Zihang Xu",
+        "Xiaoyang Liu",
+        "Zheng Chen",
+        "Yulun Zhang",
+        "Xiaokang Yang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13027",
+      "pdf_url": "https://arxiv.org/pdf/2605.13027",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13027",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13027",
+      "abstract": "Text image super-resolution (Text-SR) requires more than visually plausible detail synthesis: slight errors in stroke topology may alter character identity and break readability. Existing methods improve text fidelity with stronger recognition-based or generative priors, yet they still face two unresolved challenges under severe degradation: the text condition extracted from low-quality inputs can itself be unreliable, and a plausible global prior does not fully determine fine-grained stroke bou",
+      "categories": [],
+      "keywords": [],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 5,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13027"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13027"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13027"
+        }
+      ],
+      "id": "prism-prior-rectification-and-uncertainty-aware-structure-modeling-for-diffusion-based-text-image-super-resolution",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Text image super-resolution (Text-SR) requires more than visually plausible de…",
+      "one_line_judgement": "当前可忽略：前沿论文：Text image super-resolution (Text-SR) requires more than visually…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Text image super-resolution (Text-SR) requires more than visually plausible de…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=prism-prior-rectification-and-uncertainty-aware-structure-modeling-for-diffusion-based-text-image-super-resolution"
+    },
+    {
+      "title": "Realiz3D: 3D Generation Made Photorealistic via Domain-Aware Learning",
+      "authors": [
+        "Ido Sobol",
+        "Kihyuk Sohn",
+        "Yoav Blum",
+        "Egor Zakharov",
+        "Max Bluvstein"
+      ],
+      "published": "2026-03-24",
+      "updated": "2026-03-24",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13852",
+      "pdf_url": "https://arxiv.org/pdf/2605.13852",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13852",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13852",
+      "abstract": "We often aim to generate images that are both photorealistic and 3D-consistent, adhering to precise geometry, material, and viewpoint controls. Typically, this is achieved by fine-tuning an image generator, pre-trained on billions of real images, using renders of synthetic 3D assets, where annotations for control signals are available. While this approach can learn the desired controls, it often compromises the realism of the images due to domain gap between photographs and renders. We observe t",
+      "categories": [],
+      "keywords": [],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "hf_upvotes": 20,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13852"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13852"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13852"
+        }
+      ],
+      "id": "realiz3d-3d-generation-made-photorealistic-via-domain-aware-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 7.8,
+        "engineering_testability": 6.7,
+        "trend_signal": 4.3,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 6.1,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：We often aim to generate images that are both photorealistic and 3D-consistent…",
+      "one_line_judgement": "当前可忽略：前沿论文：We often aim to generate images that are both photorealistic and …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：We often aim to generate images that are both photorealistic and 3D-consistent…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=realiz3d-3d-generation-made-photorealistic-via-domain-aware-learning"
+    },
     {
       "title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
       "authors": [
@@ -1173,86 +4845,6 @@
         "agentic-world-modeling"
       ],
       "detail_path": "paper-detail.html?id=omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation"
-    },
-    {
-      "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
-      "authors": [
-        "Shuangrui Ding",
-        "Xuanlang Dai",
-        "Long Xing",
-        "Shengyuan Ding",
-        "Ziyu Liu"
-      ],
-      "published": "2026-05-11",
-      "updated": "2026-05-11",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.10912v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.10912v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Large language and vision-language models increasingly power agents that act on a user's behalf through command-line interface (CLI) harnesses. However, most agent benchmarks still rely on synthetic sandboxes, short-horizon tasks, mock-service APIs, and final-answer checks, leaving open whether agents can complete realistic long-horizon work in the runtimes where they are deployed. This work presents WildClawBench, a native-runtime benchmark of 60 human-authored, bilingual, multimodal tasks span",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [
-        "agent",
-        "evaluation",
-        "benchmark",
-        "RAG",
-        "multimodal"
-      ],
-      "score": 45.7,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.10912v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.10912v1"
-        }
-      ],
-      "id": "wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
-      "value_type": "ignore",
-      "matched_topics": [
-        "ai-agent",
-        "multimodal-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 5.4,
-        "engineering_testability": 3.5,
-        "trend_signal": 6.0,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.6,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
-      "one_line_judgement": "当前可忽略：AI Agent：Large language and vision-language models increasingly power …",
-      "first_seen_date": "2026-05-13",
-      "first_deep_dive_daily": "2026-05-13",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation"
     },
     {
       "title": "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning",

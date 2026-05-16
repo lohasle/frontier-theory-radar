@@ -1,81 +1,78 @@
 {
-  "updated_at": "2026-05-15T04:35:11.483904",
+  "updated_at": "2026-05-17T04:35:26.245901",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-05-15",
-    "title": "论文价值发现日报 - 2026-05-15",
-    "deep_dive_title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
-    "deep_dive_url": "http://arxiv.org/abs/2605.14012v1",
-    "decision": "重点学习",
+    "date": "2026-05-17",
+    "title": "论文价值发现日报 - 2026-05-17",
+    "deep_dive_title": "STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?",
+    "deep_dive_url": "https://arxiv.org/abs/2605.06527",
+    "decision": "持续观察",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "精读SafeAgent的方法部分（NL→LTL翻译机制），评估将时序逻辑监控集成到现有Agent框架的可行性。",
-    "max_uncertainty": "主要不确定性：(1)时序逻辑规格的表达能力上限——能否覆盖所有现实安全策略？(2)在更大规模Agent系统中的延迟表现需进一步验证；(3)对抗性鲁棒性——攻击者是否会针对监控器设计规避策略？(4)自然语言到时序逻辑的自动翻译准确性。",
-    "one_line_judgement": "它解决了Agent从实验走向生产的核心瓶颈——运行时安全防护，首次用形式化方法（时序逻辑）实现可验证的安全护栏，94%攻击拦截+97%正常完成率+3ms开销，三个数据点证明了工程可行性。开源代码和benchmark可直接复用。",
-    "path": "daily-detail.html?date=2026-05-15"
+    "daily_action": "完成摘要精读与最小实验设计",
+    "max_uncertainty": "缺少多源工程证据",
+    "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
+    "path": "daily-detail.html?date=2026-05-17"
   },
   "top_paper": {
-    "title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
+    "title": "STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?",
     "authors": [
-      "Qifan Wang",
-      "Yiding Sun",
-      "Jiaqi Guo",
-      "Bo Li"
+      "Hanxiang Chao",
+      "Yihan Bai",
+      "Rui Sheng",
+      "Tianle Li",
+      "Yushi Sun"
     ],
-    "published": "2026-05-13",
-    "updated": "2026-05-13",
-    "source": "arXiv",
-    "url": "http://arxiv.org/abs/2605.14012v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.14012v1",
-    "openreview_url": "",
-    "paperswithcode_url": "",
-    "code_url": "https://github.com/safeagent-project/safeagent",
-    "benchmark_url": "https://huggingface.co/datasets/safeagent/AgentSafetyEval",
-    "project_url": "",
-    "abstract": "As LLM-based agents are deployed in production environments, ensuring their safety at runtime becomes critical. We propose SafeAgent, a runtime monitoring framework that enforces formally specified guardrails on agent behavior. SafeAgent translates natural language safety policies into temporal logic specifications and monitors agent action sequences against these specs in real-time. When a violation is detected, SafeAgent can block, modify or request human confirmation for the offending action. We evaluate on AgentSafetyEval, a new benchmark with 500+ adversarial agent trajectories across web navigation, code execution and API interaction domains. SafeAgent blocks 94% of unsafe actions while maintaining 97% task completion on benign trajectories, significantly outperforming prompt-based safety approaches. The framework introduces only 3ms median overhead per action.",
-    "categories": [
-      "cs.AI",
-      "cs.SE",
-      "cs.CR"
-    ],
-    "keywords": [
-      "agent",
-      "agentic",
-      "evaluation",
-      "benchmark",
-      "security"
-    ],
-    "score": 85.0,
-    "decision": "重点学习",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "source": "HuggingFace Daily Papers",
+    "url": "https://arxiv.org/abs/2605.06527",
+    "pdf_url": "https://arxiv.org/pdf/2605.06527",
+    "openreview_url": "待核验/暂无",
+    "paperswithcode_url": "https://paperswithcode.com/paper/2605.06527",
+    "code_url": "待核验/暂无",
+    "benchmark_url": "待核验/暂无",
+    "project_url": "https://huggingface.co/papers/2605.06527",
+    "abstract": "Large Language Model (LLM) agents are increasingly expected to maintain coherent, long-term personalized memory, yet current benchmarks primarily measure static fact retrieval, overlooking the ability to revise stored beliefs when new evidence emerges. We identify a critical and underexplored failure mode, Implicit Conflict: a later observation invalidates an earlier memory without explicit negation, requiring contextual inference and commonsense reasoning to detect. To rigorously evaluate this ",
+    "categories": [],
+    "keywords": [],
+    "score": 64.0,
+    "decision": "持续观察",
+    "hf_upvotes": 37,
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2605.14012v1"
+        "url": "https://arxiv.org/abs/2605.06527"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2605.14012v1"
+        "url": "https://arxiv.org/pdf/2605.06527"
+      },
+      {
+        "label": "HuggingFace",
+        "url": "https://huggingface.co/papers/2605.06527"
       }
     ],
-    "llm_reason": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94%不安全动作拦截率+97%良性任务完成率，说明安全与可用性之间取得了优异平衡；(3)仅3ms中位延迟，工程开销可忽略；(4)开源代码+benchmark双重可复现。从理论到行动的转化路径：时序逻辑监控理论→Agent运行时框架→生产环境部署。这直接回应了业界对Agent安全性的迫切需求，可作为Agent安全治理的参考实现。行动建议：立即评估集成到现有Agent平台中。",
-    "id": "safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring",
+    "id": "stale-can-llm-agents-know-when-their-memories-are-no-longer-valid",
     "value_type": "immediate",
     "matched_topics": [
       "ai-agent",
-      "security-governance",
-      "llm-evaluation"
+      "context-engineering",
+      "rag-knowledge",
+      "llm-evaluation",
+      "inference-serving"
     ],
     "score_breakdown": {
       "novelty": 5.4,
       "problem_importance": 7.75,
       "relevance": 9.8,
-      "evidence_strength": 7.65,
-      "engineering_testability": 6.6,
-      "trend_signal": 6.25,
-      "long_tail_potential": 3.5,
-      "asset_convertibility": 7.0,
-      "actionability": 6.1,
+      "evidence_strength": 8.25,
+      "engineering_testability": 6.7,
+      "trend_signal": 6.8,
+      "long_tail_potential": 4.15,
+      "asset_convertibility": 5.6,
+      "actionability": 7.3,
       "noise_risk": 1.2,
       "weak_evidence_penalty": 3.0,
       "low_relevance_penalty": 0,
@@ -83,31 +80,45 @@
       "reproducibility_risk": 2.0
     },
     "trend_status": "emerging",
-    "brief_cn": "AI Agent：As LLM-based agents are deployed in production environments, ensuring their sa…",
-    "one_line_judgement": "今天值得试：SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时…",
-    "first_seen_date": "2026-05-15",
-    "first_deep_dive_daily": "2026-05-15",
+    "brief_cn": "AI Agent：Large Language Model (LLM) agents are increasingly expected to maintain cohere…",
+    "one_line_judgement": "今天值得试：AI Agent：Large Language Model (LLM) agents are increasingly expected t…",
+    "first_seen_date": "2026-05-17",
+    "first_deep_dive_daily": "2026-05-17",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94",
+    "long_tail_summary": "AI Agent：Large Language Model (LLM) agents are increasingly expected to maintain cohere…",
     "related_trends": [
       "agentic-world-modeling",
+      "context-engineering",
       "coding-agent"
     ],
-    "detail_path": "paper-detail.html?id=safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring"
+    "detail_path": "paper-detail.html?id=stale-can-llm-agents-know-when-their-memories-are-no-longer-valid"
   },
-  "paper_count": 92,
-  "daily_count": 12,
+  "paper_count": 141,
+  "daily_count": 13,
   "trend_count": 3,
-  "long_tail_count": 12,
+  "long_tail_count": 31,
   "value_distribution": {
-    "immediate": 17,
+    "immediate": 24,
     "trend": 20,
-    "long_tail": 12,
-    "ignore": 43
+    "long_tail": 31,
+    "ignore": 66
   },
   "recent_dailies": [
+    {
+      "date": "2026-05-17",
+      "title": "论文价值发现日报 - 2026-05-17",
+      "deep_dive_title": "STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?",
+      "deep_dive_url": "https://arxiv.org/abs/2605.06527",
+      "decision": "持续观察",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成摘要精读与最小实验设计",
+      "max_uncertainty": "缺少多源工程证据",
+      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
+      "path": "daily-detail.html?date=2026-05-17"
+    },
     {
       "date": "2026-05-15",
       "title": "论文价值发现日报 - 2026-05-15",
@@ -185,83 +196,67 @@
       "max_uncertainty": "大部分论文缺少开源代码或 benchmark URL（仅 Context Cache / Speculative Retrieval / AgentSandbox 有代码），工程可复现性需要后续核验。arXiv 论文尚未经同行评审。",
       "one_line_judgement": "直击生产 RAG 的延迟和内存痛点，有开源代码、兼容主流推理框架、工程证据扎实（2.7x 延迟降低 / 60% 内存节省 / 97% 精度保持）。",
       "path": "daily-detail.html?date=2026-05-10"
-    },
-    {
-      "date": "2026-05-09",
-      "title": "论文价值发现日报 - 2026-05-09",
-      "deep_dive_title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
-      "deep_dive_url": "https://arxiv.org/abs/2605.06651v1",
-      "decision": "持续观察",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-09"
     }
   ],
   "top_papers": [
     {
-      "title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
+      "title": "STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?",
       "authors": [
-        "Qifan Wang",
-        "Yiding Sun",
-        "Jiaqi Guo",
-        "Bo Li"
+        "Hanxiang Chao",
+        "Yihan Bai",
+        "Rui Sheng",
+        "Tianle Li",
+        "Yushi Sun"
       ],
-      "published": "2026-05-13",
-      "updated": "2026-05-13",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.14012v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.14012v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "https://github.com/safeagent-project/safeagent",
-      "benchmark_url": "https://huggingface.co/datasets/safeagent/AgentSafetyEval",
-      "project_url": "",
-      "abstract": "As LLM-based agents are deployed in production environments, ensuring their safety at runtime becomes critical. We propose SafeAgent, a runtime monitoring framework that enforces formally specified guardrails on agent behavior. SafeAgent translates natural language safety policies into temporal logic specifications and monitors agent action sequences against these specs in real-time. When a violation is detected, SafeAgent can block, modify or request human confirmation for the offending action. We evaluate on AgentSafetyEval, a new benchmark with 500+ adversarial agent trajectories across web navigation, code execution and API interaction domains. SafeAgent blocks 94% of unsafe actions while maintaining 97% task completion on benign trajectories, significantly outperforming prompt-based safety approaches. The framework introduces only 3ms median overhead per action.",
-      "categories": [
-        "cs.AI",
-        "cs.SE",
-        "cs.CR"
-      ],
-      "keywords": [
-        "agent",
-        "agentic",
-        "evaluation",
-        "benchmark",
-        "security"
-      ],
-      "score": 85.0,
-      "decision": "重点学习",
+      "published": "2026-05-06",
+      "updated": "2026-05-06",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.06527",
+      "pdf_url": "https://arxiv.org/pdf/2605.06527",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.06527",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.06527",
+      "abstract": "Large Language Model (LLM) agents are increasingly expected to maintain coherent, long-term personalized memory, yet current benchmarks primarily measure static fact retrieval, overlooking the ability to revise stored beliefs when new evidence emerges. We identify a critical and underexplored failure mode, Implicit Conflict: a later observation invalidates an earlier memory without explicit negation, requiring contextual inference and commonsense reasoning to detect. To rigorously evaluate this ",
+      "categories": [],
+      "keywords": [],
+      "score": 64.0,
+      "decision": "持续观察",
+      "hf_upvotes": 37,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.14012v1"
+          "url": "https://arxiv.org/abs/2605.06527"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.14012v1"
+          "url": "https://arxiv.org/pdf/2605.06527"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.06527"
         }
       ],
-      "llm_reason": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94%不安全动作拦截率+97%良性任务完成率，说明安全与可用性之间取得了优异平衡；(3)仅3ms中位延迟，工程开销可忽略；(4)开源代码+benchmark双重可复现。从理论到行动的转化路径：时序逻辑监控理论→Agent运行时框架→生产环境部署。这直接回应了业界对Agent安全性的迫切需求，可作为Agent安全治理的参考实现。行动建议：立即评估集成到现有Agent平台中。",
-      "id": "safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring",
+      "id": "stale-can-llm-agents-know-when-their-memories-are-no-longer-valid",
       "value_type": "immediate",
       "matched_topics": [
         "ai-agent",
-        "security-governance",
-        "llm-evaluation"
+        "context-engineering",
+        "rag-knowledge",
+        "llm-evaluation",
+        "inference-serving"
       ],
       "score_breakdown": {
         "novelty": 5.4,
         "problem_importance": 7.75,
         "relevance": 9.8,
-        "evidence_strength": 7.65,
-        "engineering_testability": 6.6,
-        "trend_signal": 6.25,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
-        "actionability": 6.1,
+        "evidence_strength": 8.25,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 3.0,
         "low_relevance_penalty": 0,
@@ -269,782 +264,765 @@
         "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：As LLM-based agents are deployed in production environments, ensuring their sa…",
-      "one_line_judgement": "今天值得试：SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时…",
-      "first_seen_date": "2026-05-15",
-      "first_deep_dive_daily": "2026-05-15",
+      "brief_cn": "AI Agent：Large Language Model (LLM) agents are increasingly expected to maintain cohere…",
+      "one_line_judgement": "今天值得试：AI Agent：Large Language Model (LLM) agents are increasingly expected t…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "SafeAgent 解决的是Agent从实验走向生产的最后一公里问题——运行时安全护栏。工程价值极高且紧迫：(1)将自然语言安全策略转化为时序逻辑规格，实现了安全策略的形式化可验证；(2)94",
+      "long_tail_summary": "AI Agent：Large Language Model (LLM) agents are increasingly expected to maintain cohere…",
       "related_trends": [
         "agentic-world-modeling",
+        "context-engineering",
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=safeagent-runtime-guardrails-for-llm-based-agents-via-formal-specification-monitoring"
+      "detail_path": "paper-detail.html?id=stale-can-llm-agents-know-when-their-memories-are-no-longer-valid"
     },
     {
-      "title": "AgentScope-PHP: A Multi-Agent Framework for Hierarchical Planning with Human-in-the-Loop",
+      "title": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
       "authors": [
-        "Yuxiang Wei",
-        "Chen Qian",
-        "Ming Zhong",
-        "Jiecai Guo",
-        "Lincheng Li"
+        "Minghao Guo",
+        "Qingyue Jiao",
+        "Zeru Shi",
+        "Yihao Quan",
+        "Boxuan Zhang"
       ],
       "published": "2026-05-13",
       "updated": "2026-05-13",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.13527v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.13527v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "https://github.com/modelscope/agentscope",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We present AgentScope-PHP, a novel multi-agent framework that integrates hierarchical planning with human-in-the-loop feedback. Our approach decomposes complex tasks into a three-tier planning hierarchy: strategic planning, tactical decomposition, and operational execution. At each tier, a designated agent proposes plans and a human supervisor can intervene to redirect, reject or refine the plan. We evaluate on WebArena, SWE-bench and a new multi-turn dialogue planning benchmark PlanEval-200. Results show that AgentScope-PHP achieves 23% improvement in task completion rate over baseline multi-agent systems while reducing human intervention frequency by 40% after the first 3 turns. We open-source the full framework including the evaluation suite.",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.MA"
-      ],
-      "keywords": [
-        "agent",
-        "agentic",
-        "planning",
-        "benchmark",
-        "evaluation"
-      ],
-      "score": 82.5,
-      "decision": "重点学习",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15128",
+      "pdf_url": "https://arxiv.org/pdf/2605.15128",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15128",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15128",
+      "abstract": "Long-term agent memory is increasingly multimodal, yet existing evaluations rarely test whether agents preserve the visual evidence needed for later reasoning. In prior work, many visually grounded questions can be answered using only captions or textual traces, allowing answers to be inferred without preserving the fine-grained visual evidence. Meanwhile, harder cases that require reasoning over changing visual states are largely absent. Therefore, we introduce MemEye, a framework that evaluate",
+      "categories": [],
+      "keywords": [],
+      "score": 63.0,
+      "decision": "持续观察",
+      "hf_upvotes": 49,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.13527v1"
+          "url": "https://arxiv.org/abs/2605.15128"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.13527v1"
+          "url": "https://arxiv.org/pdf/2605.15128"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15128"
         }
       ],
-      "llm_reason": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直接复用搭建层级规划Agent；(2) WebArena/SWE-bench双验证，证据强度可靠；(3) 人类干预频率降低40%说明系统设计有效降低了认知负荷。从理论到工程实践的转化路径清晰：层级规划理论→Agent框架→生产环境部署。行动价值：可立即用于评估团队现有Agent架构的规划能力差距。",
-      "id": "agentscope-php-a-multi-agent-framework-for-hierarchical-planning-with-human-in-the-loop",
+      "id": "memeye-a-visual-centric-evaluation-framework-for-multimodal-agent-memory",
       "value_type": "immediate",
       "matched_topics": [
         "ai-agent",
-        "coding-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 6.6,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 6.8,
-        "engineering_testability": 6.6,
-        "trend_signal": 6.0,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
-        "actionability": 7.3,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 2.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 3.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：We present AgentScope-PHP, a novel multi-agent framework that integrates hiera…",
-      "one_line_judgement": "今天值得试：AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分…",
-      "first_seen_date": "2026-05-15",
-      "first_deep_dive_daily": "2026-05-15",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "AgentScope-PHP 提出三层规划层级（战略/战术/执行）与人机协作反馈闭环，直击多Agent系统的核心工程痛点——复杂任务的层级分解与人机协同效率。工程价值极高：(1) 开源框架可直",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=agentscope-php-a-multi-agent-framework-for-hierarchical-planning-with-human-in-the-loop"
-    },
-    {
-      "title": "ContextCircuit: Rewiring In-Context Learning through Structured Retrieval-Augmented Generation",
-      "authors": [
-        "Zhihan Zhang",
-        "Xinyu Zhao",
-        "Hao Peng",
-        "Ming Liu",
-        "Bing Xiang"
-      ],
-      "published": "2026-05-12",
-      "updated": "2026-05-13",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.12984v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12984v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We introduce ContextCircuit, a structured approach to retrieval-augmented generation that treats in-context examples as a circuit with explicit routing. Instead of flat retrieval, we organize retrieved passages into a directed acyclic graph where nodes represent knowledge chunks and edges represent logical dependencies. A lightweight graph neural network routes the LLM's attention across this structure during generation. Experiments on MUSR, HotpotQA and a new multi-hop reasoning benchmark CircuitBench show 18% improvement in multi-hop accuracy and 12% reduction in hallucination rate. Our ablation study demonstrates that the graph routing component is critical, accounting for 65% of the improvement.",
-      "categories": [
-        "cs.CL",
-        "cs.IR",
-        "cs.AI"
-      ],
-      "keywords": [
-        "RAG",
-        "retrieval augmented",
-        "context engineering",
-        "in-context learning",
-        "evaluation",
-        "benchmark"
-      ],
-      "score": 76.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.12984v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.12984v1"
-        }
-      ],
-      "llm_reason": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理场景的短板；(2)幻觉率下降12%提供了可量化的质量改进；(3)消融实验证明图路由组件贡献65%提升，说明架构设计是关键而非调参。趋势价值突出：RAG+图结构+注意力路由的组合预示着下一代知识密集型AI系统的方向。缺少开源代码是不确定性，但方法论本身可直接启发架构设计。",
-      "id": "contextcircuit-rewiring-in-context-learning-through-structured-retrieval-augmented-generation",
-      "value_type": "trend",
-      "matched_topics": [
-        "rag-knowledge",
         "context-engineering",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 5.85,
-        "engineering_testability": 3.5,
-        "trend_signal": 5.45,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.6,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "RAG / 知识系统：We introduce ContextCircuit, a structured approach to retrieval-augmented gene…",
-      "one_line_judgement": "值得继续观察：ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多…",
-      "first_seen_date": "2026-05-15",
-      "first_deep_dive_daily": "2026-05-15",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "ContextCircuit 将RAG检索结构化为DAG并引入GNN路由，是从'扁平检索'到'结构化推理'的范式推进。工程价值：(1) 在多跳推理任务上18%提升，直接解决RAG系统在复杂推理",
-      "related_trends": [
-        "context-engineering",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=contextcircuit-rewiring-in-context-learning-through-structured-retrieval-augmented-generation"
-    },
-    {
-      "title": "Speculative Decoding with Adaptive Draft Model Selection for Efficient LLM Inference",
-      "authors": [
-        "Minghao Yan",
-        "Shijie Cao",
-        "Ting Cao",
-        "James B. Xue",
-        "Mao Yang"
-      ],
-      "published": "2026-05-12",
-      "updated": "2026-05-13",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.13201v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.13201v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "https://github.com/adapter-hub/adaptive-spec",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Speculative decoding has emerged as a promising technique to accelerate LLM inference without quality degradation. However, existing approaches use a fixed draft model regardless of the input distribution, leading to suboptimal acceptance rates. We propose AdaSpec, an adaptive draft model selection framework that dynamically routes inputs to different sized draft models based on predicted difficulty. A lightweight router trained with contrastive learning predicts which draft model maximizes the acceptance rate for each token sequence. On Llama-3.1-70B and Qwen-2.5-72B backbones, AdaSpec achieves 2.8x-3.4x speedup (vs 1.9x-2.3x for fixed draft) with no quality degradation across MT-Bench, HumanEval and GSM8K. We release the router training code and evaluation pipeline.",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "keywords": [
-        "inference",
-        "speculative decoding"
-      ],
-      "score": 71.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.13201v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.13201v1"
-        }
-      ],
-      "llm_reason": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大模型(Llama-3.1-70B, Qwen-2.5-72B)上实现2.8x-3.4x加速，远超固定draft方案；(2)开源router训练代码可立即集成到推理服务中；(3)推理加速直接转化为成本节约和用户体验提升。理论贡献相对适中（自适应路由思想并非全新），但工程落地度和证据强度非常高（多模型、多benchmark验证）。行动建议：优先在推理集群中试点评估。",
-      "id": "speculative-decoding-with-adaptive-draft-model-selection-for-efficient-llm-inference",
-      "value_type": "immediate",
-      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation",
         "inference-serving"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 6.35,
-        "engineering_testability": 6.6,
-        "trend_signal": 4.6,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 5.4,
         "long_tail_potential": 3.5,
         "asset_convertibility": 6.2,
         "actionability": 7.3,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 2.0,
-        "low_relevance_penalty": 2.2,
+        "low_relevance_penalty": 0,
         "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 3.0
+        "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "推理与服务：Speculative decoding has emerged as a promising technique to accelerate LLM in…",
-      "one_line_judgement": "今天值得试：AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——…",
-      "first_seen_date": "2026-05-15",
-      "first_deep_dive_daily": "2026-05-15",
+      "brief_cn": "AI Agent：Long-term agent memory is increasingly multimodal, yet existing evaluations ra…",
+      "one_line_judgement": "今天值得试：AI Agent：Long-term agent memory is increasingly multimodal, yet existi…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "AdaSpec 针对Speculative Decoding的实际工程痛点——固定draft模型导致acceptance rate不稳定——提出了自适应路由方案。工程价值直接：(1) 在主流大",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=speculative-decoding-with-adaptive-draft-model-selection-for-efficient-llm-inference"
+      "long_tail_summary": "AI Agent：Long-term agent memory is increasingly multimodal, yet existing evaluations ra…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=memeye-a-visual-centric-evaluation-framework-for-multimodal-agent-memory"
     },
     {
-      "title": "WorldModelBench: A Comprehensive Benchmark for Evaluating World Models in Interactive Environments",
+      "title": "Orchard: An Open-Source Agentic Modeling Framework",
       "authors": [
-        "Jinghuan Shang",
-        "Russel J. Wong",
-        "Zhe Gan"
+        "Baolin Peng",
+        "Wenlin Yao",
+        "Qianhui Wu",
+        "Hao Cheng",
+        "Xiao Yu"
       ],
-      "published": "2026-05-11",
+      "published": "2026-05-13",
       "updated": "2026-05-13",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.11876v2",
-      "pdf_url": "https://arxiv.org/pdf/2605.11876v2",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "https://huggingface.co/datasets/worldmodelbench/WMGym",
-      "project_url": "",
-      "abstract": "World models are increasingly seen as critical infrastructure for embodied agents, game-playing systems and simulation-based planning. Yet no unified benchmark exists to compare world models across domains. We introduce WorldModelBench, covering 12 interactive environments from household navigation to Atari games to robotic manipulation. We evaluate 8 existing world models (Genie, UniSim, Diamond, Oasis, etc.) on prediction accuracy, temporal consistency, controllability and downstream task performance. Our findings reveal that no single world model excels across all dimensions: video-generation-based models lead visual fidelity but lag in action-conditioned controllability, while dynamics-model-based approaches show the opposite pattern. We propose a composite scoring rubric and open-source the full evaluation suite.",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "keywords": [
-        "world model",
-        "evaluation",
-        "benchmark",
-        "multimodal",
-        "planning"
-      ],
-      "score": 68.5,
-      "decision": "轻量试点",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15040",
+      "pdf_url": "https://arxiv.org/pdf/2605.15040",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15040",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15040",
+      "abstract": "Agentic modeling aims to transform LLMs into autonomous agents capable of solving complex tasks through planning, reasoning, tool use, and multi-turn interaction with environments. Despite major investment, open research remains constrained by infrastructure and training gaps. Many high-performing systems rely on proprietary codebases, models, or services, while most open-source frameworks focus on orchestration and evaluation rather than scalable agent training. We present Orchard, an open-sour",
+      "categories": [],
+      "keywords": [],
+      "score": 62.0,
+      "decision": "持续观察",
+      "hf_upvotes": 12,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.11876v2"
+          "url": "https://arxiv.org/abs/2605.15040"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.11876v2"
+          "url": "https://arxiv.org/pdf/2605.15040"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15040"
         }
       ],
-      "llm_reason": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8个主流世界模型在12个环境上的横向对比提供了宝贵的选型参考；(3)'无单一模型在所有维度胜出'的发现对工程实践有直接指导意义——需要根据场景选择不同类型的世界模型。缺少代码但有HuggingFace benchmark数据集，可复现性尚可。对Agent工程团队的启发：在选择world model作为环境模拟器时，需优先考虑可控性维度。",
-      "id": "worldmodelbench-a-comprehensive-benchmark-for-evaluating-world-models-in-interactive-environments",
-      "value_type": "trend",
+      "id": "orchard-an-open-source-agentic-modeling-framework",
+      "value_type": "immediate",
       "matched_topics": [
-        "multimodal-agent",
+        "ai-agent",
+        "rag-knowledge",
         "llm-evaluation",
-        "ai-agent"
+        "ai-k8s-platform"
       ],
       "score_breakdown": {
         "novelty": 4.8,
         "problem_importance": 7.1,
         "relevance": 8.6,
-        "evidence_strength": 6.7,
-        "engineering_testability": 4.05,
-        "trend_signal": 7.35,
-        "long_tail_potential": 4.15,
-        "asset_convertibility": 7.0,
-        "actionability": 5.0,
+        "evidence_strength": 8.25,
+        "engineering_testability": 8.35,
+        "trend_signal": 5.4,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
+        "weak_evidence_penalty": 2.0,
         "low_relevance_penalty": 0,
         "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 4.0
-      },
-      "trend_status": "rising",
-      "brief_cn": "Multimodal Agent：World models are increasingly seen as critical infrastructure for embodied age…",
-      "one_line_judgement": "值得继续观察：WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的…",
-      "first_seen_date": "2026-05-15",
-      "first_deep_dive_daily": "2026-05-15",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "上升",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "WorldModelBench 首次为世界模型提供跨领域统一评测基准，填补了重要空白。趋势价值显著：(1)世界模型作为Agent和具身智能的基础设施，其评测标准化是生态成熟的关键信号；(2)8",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=worldmodelbench-a-comprehensive-benchmark-for-evaluating-world-models-in-interactive-environments"
-    },
-    {
-      "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
-      "authors": [
-        "Di Wu",
-        "Zixiang Ji",
-        "Asmi Kawatkar",
-        "Bryan Kwan",
-        "Jia-Chen Gu"
-      ],
-      "published": "2026-05-12",
-      "updated": "2026-05-12",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.12493v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12493v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Long-term memory is crucial for agents in specialized web environments, where success depends on recalling interface affordances, state dynamics, workflows, and recurring failure modes. However, existing memory benchmarks for agents mostly focus on user histories, short traces, or downstream task success, leaving open how to directly evaluate whether memory systems effectively internalize environment-specific experience. To address this gap, we introduce LongMemEval-V2 (LME-V2), a benchmark for ",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [
-        "agent",
-        "memory",
-        "coding agent",
-        "benchmark",
-        "RAG"
-      ],
-      "score": 78.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.12493v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.12493v1"
-        }
-      ],
-      "llm_reason": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的标准化评测框架；(2) 涵盖界面affordance、状态动态、工作流和失败模式召回等关键能力；(3) 可直接用于评估和改进RAG/记忆增强型Agent系统。证据强度高（系统性benchmark），工程可测试性强。",
-      "id": "longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues",
-      "value_type": "immediate",
-      "matched_topics": [
-        "ai-agent",
-        "context-engineering",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.6,
-        "trend_signal": 6.0,
-        "long_tail_potential": 4.15,
-        "asset_convertibility": 7.0,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
+        "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：Long-term memory is crucial for agents in specialized web environments, where …",
-      "one_line_judgement": "今天值得试：LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。…",
-      "first_seen_date": "2026-05-14",
-      "first_deep_dive_daily": "2026-05-14",
+      "brief_cn": "AI Agent：Agentic modeling aims to transform LLMs into autonomous agents capable of solv…",
+      "one_line_judgement": "今天值得试：AI Agent：Agentic modeling aims to transform LLMs into autonomous agent…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "LongMemEval-V2直击Agent长期记忆评测空白，定义了'经验丰富的同事'这一新评测维度——评估记忆系统是否有效内化环境特定经验。对Agent工程实践价值高：(1) 提供了记忆系统的",
+      "long_tail_summary": "AI Agent：Agentic modeling aims to transform LLMs into autonomous agents capable of solv…",
       "related_trends": [
         "agentic-world-modeling",
         "context-engineering",
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=longmemeval-v2-evaluating-long-term-agent-memory-toward-experienced-colleagues"
+      "detail_path": "paper-detail.html?id=orchard-an-open-source-agentic-modeling-framework"
     },
     {
-      "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+      "title": "MemLens: Benchmarking Multimodal Long-Term Memory in Large Vision-Language Models",
       "authors": [
-        "Seokwon Jung",
-        "Alexander Rubinstein",
-        "Arnas Uselis",
-        "Sangdoo Yun",
-        "Seong Joon Oh"
+        "Xiyu Ren",
+        "Zhaowei Wang",
+        "Yiming Du",
+        "Zhongwei Xie",
+        "Chi Liu"
       ],
-      "published": "2026-05-12",
-      "updated": "2026-05-12",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.12477v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12477v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "LLM-based agents increasingly operate in persistent environments where they must store, update, and reason over information across many sessions. While prior benchmarks evaluate only single-entity updates, MEME defines six tasks spanning the full space defined by the multi-entity and evolving axes, including three not scored by prior work: Cascade and Absence (dependency reasoning) and Deletion (post-removal state). Evaluating six memory systems spanning three memory paradigms on 100 controlled ",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "keywords": [
-        "agent",
-        "memory",
-        "evaluation",
-        "benchmark",
-        "RAG"
-      ],
-      "score": 77.0,
-      "decision": "轻量试点",
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.14906",
+      "pdf_url": "https://arxiv.org/pdf/2605.14906",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.14906",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.14906",
+      "abstract": "Memory is essential for large vision-language models (LVLMs) to handle long, multimodal interactions, with two method directions providing this capability: long-context LVLMs and memory-augmented agents. However, no existing benchmark conducts a systematic comparison of the two on questions that genuinely require multimodal evidence. To close this gap, we introduce MEMLENS, a comprehensive benchmark for memory in multimodal multi-session conversations, comprising 789 questions across five memory",
+      "categories": [],
+      "keywords": [],
+      "score": 61.4,
+      "decision": "持续观察",
+      "hf_upvotes": 67,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.12477v1"
+          "url": "https://arxiv.org/abs/2605.14906"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.12477v1"
+          "url": "https://arxiv.org/pdf/2605.14906"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.14906"
         }
       ],
-      "llm_reason": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可作为记忆系统选型和优化的标准评测；(3) 100个受控场景提供了可复现的评测基准。与LongMemEval-V2互补，一个偏环境经验、一个偏实体记忆演化。",
-      "id": "meme-multi-entity-evolving-memory-evaluation",
+      "id": "memlens-benchmarking-multimodal-long-term-memory-in-large-vision-language-models",
       "value_type": "immediate",
       "matched_topics": [
         "ai-agent",
         "context-engineering",
+        "multimodal-agent",
         "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 5.4,
-        "engineering_testability": 4.05,
-        "trend_signal": 6.55,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.25,
+        "trend_signal": 7.35,
         "long_tail_potential": 3.5,
         "asset_convertibility": 5.6,
-        "actionability": 5.0,
+        "actionability": 7.3,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 0.8,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0,
         "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
+        "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：LLM-based agents increasingly operate in persistent environments where they mu…",
-      "one_line_judgement": "今天值得试：MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了…",
-      "first_seen_date": "2026-05-14",
-      "first_deep_dive_daily": "2026-05-14",
+      "brief_cn": "AI Agent：Memory is essential for large vision-language models (LVLMs) to handle long, m…",
+      "one_line_judgement": "今天值得试：AI Agent：Memory is essential for large vision-language models (LVLMs) …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "MEME定义了多实体演化记忆评测的完整任务空间，包含前人未覆盖的级联推理、缺席推理和删除任务。对Agent记忆系统工程价值高：(1) 揭示了现有6个记忆系统在多实体和演化维度的弱点；(2) 可",
+      "long_tail_summary": "AI Agent：Memory is essential for large vision-language models (LVLMs) to handle long, m…",
       "related_trends": [
         "agentic-world-modeling",
         "context-engineering",
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=meme-multi-entity-evolving-memory-evaluation"
+      "detail_path": "paper-detail.html?id=memlens-benchmarking-multimodal-long-term-memory-in-large-vision-language-models"
     },
     {
-      "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+      "title": "Quantitative Video World Model Evaluation for Geometric-Consistency",
       "authors": [
-        "Xuhao Hu",
-        "Xi Zhang",
-        "Haiyang Xu",
-        "Kyle Qiao",
-        "Jingyi Yang"
+        "Jiaxin Wu",
+        "Yihao Pi",
+        "Yinling Zhang",
+        "Yuheng Li",
+        "Xueyan Zou"
       ],
-      "published": "2026-05-12",
-      "updated": "2026-05-12",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.12481v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12481v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Computer Use Agents (CUAs) can act through both atomic GUI actions, such as click and type, and high-level tool calls, such as API-based file operations, but this hybrid action space often leaves them uncertain about when to continue with GUI actions or switch to tools, leading to suboptimal execution paths. This difficulty stems from the scarcity of high-quality interleaved GUI-Tool trajectories, the cost and brittleness of collecting real tool trajectories, and the lack of trajectory-level sup",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent",
-        "agentic",
-        "RAG",
-        "tool use"
-      ],
-      "score": 76.5,
-      "decision": "轻量试点",
+      "published": "2026-05-13",
+      "updated": "2026-05-13",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.15185",
+      "pdf_url": "https://arxiv.org/pdf/2605.15185",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.15185",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.15185",
+      "abstract": "Generative video models are increasingly studied as implicit world models, yet evaluating whether they produce physically plausible 3D structure and motion remains challenging. Most existing video evaluation pipelines rely heavily on human judgment or learned graders, which can be subjective and weakly diagnostic for geometric failures. We introduce PDI-Bench (Perspective Distortion Index), a quantitative framework for auditing geometric coherence in generated videos. Given a generated clip, we ",
+      "categories": [],
+      "keywords": [],
+      "score": 59.1,
+      "decision": "持续观察",
+      "hf_upvotes": 1,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.12481v1"
+          "url": "https://arxiv.org/abs/2605.15185"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.12481v1"
+          "url": "https://arxiv.org/pdf/2605.15185"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.15185"
         }
       ],
-      "llm_reason": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的工程刚需；(2) 轨迹级监督思路可迁移到其他Agent场景；(3) 解决了高质量交错GUI-Tool轨迹稀缺的实际问题。actionability强，可直接指导CUA系统设计。",
-      "id": "toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents",
+      "id": "quantitative-video-world-model-evaluation-for-geometric-consistency",
       "value_type": "immediate",
       "matched_topics": [
-        "ai-agent"
+        "multimodal-agent",
+        "llm-evaluation",
+        "security-governance"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 8.25,
+        "engineering_testability": 7.8,
+        "trend_signal": 5.4,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 7.3,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 0.8,
         "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
+        "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：Computer Use Agents (CUAs) can act through both atomic GUI actions, such as cl…",
-      "one_line_judgement": "今天值得试：ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Age…",
-      "first_seen_date": "2026-05-14",
-      "first_deep_dive_daily": "2026-05-14",
+      "brief_cn": "Multimodal Agent：Generative video models are increasingly studied as implicit world models, yet…",
+      "one_line_judgement": "今天值得试：Multimodal Agent：Generative video models are increasingly studied as i…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "ToolCUA解决Computer Use Agent在GUI操作与工具调用间的路径编排问题——何时用GUI、何时切换到API工具。对Agent工程有高实用价值：(1) 混合动作空间是CUA的",
+      "long_tail_summary": "Multimodal Agent：Generative video models are increasingly studied as implicit world models, yet…",
       "related_trends": [
-        "agentic-world-modeling"
+        "agentic-world-modeling",
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=toolcua-towards-optimal-gui-tool-path-orchestration-for-computer-use-agents"
+      "detail_path": "paper-detail.html?id=quantitative-video-world-model-evaluation-for-geometric-consistency"
     },
     {
-      "title": "Task-Adaptive Embedding Refinement via Test-time LLM Guidance",
+      "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
       "authors": [
-        "Ariel Gera",
-        "Shir Ashury-Tahan",
-        "Gal Bloch",
-        "Ohad Eytan",
-        "Assaf Toledo"
+        "Shuangrui Ding",
+        "Xuanlang Dai",
+        "Long Xing",
+        "Shengyuan Ding",
+        "Ziyu Liu"
       ],
-      "published": "2026-05-12",
-      "updated": "2026-05-12",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.12487v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12487v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We explore the effectiveness of an LLM-guided query refinement paradigm for extending the usability of embedding models to challenging zero-shot search and classification tasks. Our approach refines the embedding representation of a user query using feedback from a generative LLM on a small set of documents, enabling embeddings to adapt in real time to the target task. We conduct extensive experiments with state-of-the-art text embedding models across a diverse set of challenging search and clas",
-      "categories": [
-        "cs.CL",
-        "cs.IR",
-        "cs.LG"
-      ],
-      "keywords": [
-        "benchmark"
-      ],
-      "score": 75.0,
-      "decision": "轻量试点",
+      "published": "2026-05-10",
+      "updated": "2026-05-10",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.10912",
+      "pdf_url": "https://arxiv.org/pdf/2605.10912",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.10912",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.10912",
+      "abstract": "Large language and vision-language models increasingly power agents that act on a user's behalf through command-line interface (CLI) harnesses. However, most agent benchmarks still rely on synthetic sandboxes, short-horizon tasks, mock-service APIs, and final-answer checks, leaving open whether agents can complete realistic long-horizon work in the runtimes where they are deployed. This work presents WildClawBench, a native-runtime benchmark of 60 human-authored, bilingual, multimodal tasks span",
+      "categories": [],
+      "keywords": [],
+      "score": 58.4,
+      "decision": "持续观察",
+      "hf_upvotes": 38,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.12487v1"
+          "url": "https://arxiv.org/abs/2605.10912"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.12487v1"
+          "url": "https://arxiv.org/pdf/2605.10912"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.10912"
         }
       ],
-      "llm_reason": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2) 可集成到现有RAG pipeline作为查询增强层；(3) 跨搜索和分类任务的广泛实验验证。actionability高，可快速原型验证。",
-      "id": "task-adaptive-embedding-refinement-via-test-time-llm-guidance",
+      "id": "wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
       "value_type": "immediate",
       "matched_topics": [
-        "rag-knowledge",
+        "ai-agent",
+        "multimodal-agent",
         "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 8.7,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 3.6,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 0.8,
         "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
+        "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "RAG / 知识系统：We explore the effectiveness of an LLM-guided query refinement paradigm for ex…",
-      "one_line_judgement": "今天值得试：LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无…",
-      "first_seen_date": "2026-05-14",
-      "first_deep_dive_daily": "2026-05-14",
+      "brief_cn": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
+      "one_line_judgement": "今天值得试：AI Agent：Large language and vision-language models increasingly power …",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "LLM引导的查询精炼范式对RAG和搜索系统有直接工程价值：通过生成式LLM对少量文档的反馈来实时精炼查询嵌入表示。关键工程价值点：(1) 无需重训嵌入模型即可适配zero-shot任务；(2)",
+      "long_tail_summary": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
       "related_trends": [
-        "context-engineering",
+        "agentic-world-modeling",
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=task-adaptive-embedding-refinement-via-test-time-llm-guidance"
+      "detail_path": "paper-detail.html?id=wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation"
     },
     {
-      "title": "Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for Language-Model Post-Training",
+      "title": "EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents",
       "authors": [
-        "Yuanda Xu",
-        "Hejian Sang",
-        "Zhengze Zhou",
-        "Ran He",
-        "Zhipeng Wang"
+        "Jiaqi Liu",
+        "Xinyu Ye",
+        "Peng Xia",
+        "Zeyu Zheng",
+        "Cihang Xie"
       ],
       "published": "2026-05-12",
       "updated": "2026-05-12",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2605.12483v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.12483v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "In settings where labeled verifiable training data is the binding constraint, each checked example should be allocated carefully. The standard practice is to use this data directly on the model that will be deployed, for example by running GRPO on the deployment student. We argue that this is often an inefficient allocation because it overlooks a reward-density principle: sparse sequence-level reward should train models where exploration is productive, while dense token-level teacher reward shou",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13941",
+      "pdf_url": "https://arxiv.org/pdf/2605.13941",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13941",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13941",
+      "abstract": "Long-term memory is essential for LLM agents that operate across multiple sessions, yet existing memory systems treat retrieval infrastructure as fixed: stored content evolves while scoring functions, fusion strategies, and answer-generation policies remain frozen at deployment. We argue that truly adaptive memory requires co-evolution at two levels: the stored knowledge and the retrieval mechanism that queries it. We present EvolveMem, a self-evolving memory architecture that exposes its full r",
+      "categories": [],
       "keywords": [],
-      "score": 73.0,
-      "decision": "轻量试点",
+      "score": 58.3,
+      "decision": "持续观察",
+      "hf_upvotes": 21,
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2605.12483v1"
+          "url": "https://arxiv.org/abs/2605.13941"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2605.12483v1"
+          "url": "https://arxiv.org/pdf/2605.13941"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13941"
         }
       ],
-      "llm_reason": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——如何更高效分配标注数据。是对GRPO+蒸馏范式的经验性改进，但证据仍需更多任务验证。",
-      "id": "beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training",
-      "value_type": "trend",
+      "id": "evolvemem-self-evolving-memory-architecture-via-autoresearch-for-llm-agents",
+      "value_type": "immediate",
       "matched_topics": [
-        "ai-agent"
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge",
+        "ai-k8s-platform"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.8,
+        "trend_signal": 4.85,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.8,
-        "actionability": 3.8,
+        "actionability": 7.3,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0,
         "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
+        "reproducibility_risk": 2.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：In settings where labeled verifiable training data is the binding constraint, …",
-      "one_line_judgement": "值得继续观察：提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则…",
-      "first_seen_date": "2026-05-14",
-      "first_deep_dive_daily": "2026-05-14",
-      "value_type_label": "趋势价值",
+      "brief_cn": "AI Agent：Long-term memory is essential for LLM agents that operate across multiple sess…",
+      "one_line_judgement": "今天值得试：AI Agent：Long-term memory is essential for LLM agents that operate acr…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "提出sparse-to-dense reward原则：稀疏序列级奖励应训练探索能力强的模型，密集token级教师奖励应训练部署模型。这一原则对LLM后训练pipeline设计有工程指导意义——",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Long-term memory is essential for LLM agents that operate across multiple sess…",
       "related_trends": [
-        "agentic-world-modeling"
+        "agentic-world-modeling",
+        "context-engineering"
       ],
-      "detail_path": "paper-detail.html?id=beyond-grpo-and-on-policy-distillation-an-empirical-sparse-to-dense-reward-principle-for-language-model-post-training"
+      "detail_path": "paper-detail.html?id=evolvemem-self-evolving-memory-architecture-via-autoresearch-for-llm-agents"
+    },
+    {
+      "title": "WildTableBench: Benchmarking Multimodal Foundation Models on Table Understanding In the Wild",
+      "authors": [
+        "Junzhe Huang",
+        "Xiaoxiao Sun",
+        "Yan Yang",
+        "Yuxuan Hou",
+        "Ruotian Zhang"
+      ],
+      "published": "2026-04-30",
+      "updated": "2026-04-30",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.01018",
+      "pdf_url": "https://arxiv.org/pdf/2605.01018",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.01018",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.01018",
+      "abstract": "Using multimodal foundation models to analyze table images is a high-value yet challenging application in consumer and enterprise scenarios. Despite its importance, current evaluations rely largely on structured-text tables or clean rendered images, leaving the visual complexity of in-the-wild table images underexplored. Such images feature varied layouts and diverse domains that demand sophisticated structural perception and numerical reasoning. To bridge this gap, we introduce WildTableBench, ",
+      "categories": [],
+      "keywords": [],
+      "score": 56.1,
+      "decision": "持续观察",
+      "hf_upvotes": 6,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.01018"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.01018"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.01018"
+        }
+      ],
+      "id": "wildtablebench-benchmarking-multimodal-foundation-models-on-table-understanding-in-the-wild",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 8.7,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：Using multimodal foundation models to analyze table images is a high-value yet…",
+      "one_line_judgement": "值得先保存：Multimodal Agent：Using multimodal foundation models to analyze table i…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Multimodal Agent：Using multimodal foundation models to analyze table images is a high-value yet…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=wildtablebench-benchmarking-multimodal-foundation-models-on-table-understanding-in-the-wild"
+    },
+    {
+      "title": "PREPING: Building Agent Memory without Tasks",
+      "authors": [
+        "Yumin Choi",
+        "Sangwoo Park",
+        "Minki Kang",
+        "Jinheon Baek",
+        "Sung Ju Hwang"
+      ],
+      "published": "2026-05-10",
+      "updated": "2026-05-10",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.13880",
+      "pdf_url": "https://arxiv.org/pdf/2605.13880",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.13880",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.13880",
+      "abstract": "Agent memory is typically constructed either offline from curated demonstrations or online from post-deployment interactions. However, regardless of how it is built, an agent faces a cold-start gap when first introduced to a new environment without any task-specific experience available. In this paper, we study pre-task memory construction: whether an agent can build procedural memory before observing any target-environment tasks, using only self-generated synthetic practice. Yet, synthetic inte",
+      "categories": [],
+      "keywords": [],
+      "score": 55.4,
+      "decision": "持续观察",
+      "hf_upvotes": 23,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.13880"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.13880"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.13880"
+        }
+      ],
+      "id": "preping-building-agent-memory-without-tasks",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 7.8,
+        "engineering_testability": 7.25,
+        "trend_signal": 4.85,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 6.1,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 3.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Agent memory is typically constructed either offline from curated demonstratio…",
+      "one_line_judgement": "值得先保存：AI Agent：Agent memory is typically constructed either offline from cur…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Agent memory is typically constructed either offline from curated demonstratio…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=preping-building-agent-memory-without-tasks"
+    },
+    {
+      "title": "Boosting Omni-Modal Language Models: Staged Post-Training with Visually Debiased Evaluation",
+      "authors": [
+        "Che Liu",
+        "Lichao Ma",
+        "Xiangyu Tony Zhang",
+        "Yuxin Zhang",
+        "Haoyang Zhang"
+      ],
+      "published": "2026-05-12",
+      "updated": "2026-05-12",
+      "source": "HuggingFace Daily Papers",
+      "url": "https://arxiv.org/abs/2605.12034",
+      "pdf_url": "https://arxiv.org/pdf/2605.12034",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "https://paperswithcode.com/paper/2605.12034",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "https://huggingface.co/papers/2605.12034",
+      "abstract": "Omni-modal language models are intended to jointly understand audio, visual inputs, and language, but benchmark gains can be inflated when visual evidence alone is enough to answer a query. We study whether current omni-modal benchmarks separate visual shortcuts from genuine audio-visual-language evidence integration, and how post-training behaves under a visually debiased evaluation setting. We audit nine omni-modal benchmarks with visual-only probing, remove visually solvable queries, and reta",
+      "categories": [],
+      "keywords": [],
+      "score": 55.2,
+      "decision": "持续观察",
+      "hf_upvotes": 2,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.12034"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.12034"
+        },
+        {
+          "label": "HuggingFace",
+          "url": "https://huggingface.co/papers/2605.12034"
+        }
+      ],
+      "id": "boosting-omni-modal-language-models-staged-post-training-with-visually-debiased-evaluation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 8.7,
+        "engineering_testability": 6.7,
+        "trend_signal": 6.8,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 7.3,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 2.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 2.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：Omni-modal language models are intended to jointly understand audio, visual in…",
+      "one_line_judgement": "值得先保存：LLM 评测：Omni-modal language models are intended to jointly understand a…",
+      "first_seen_date": "2026-05-17",
+      "first_deep_dive_daily": "2026-05-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "LLM 评测：Omni-modal language models are intended to jointly understand audio, visual in…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=boosting-omni-modal-language-models-staged-post-training-with-visually-debiased-evaluation"
     }
   ],
   "long_tail_highlights": [
     {
-      "id": "omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation",
-      "title": "OmniNFT: Modality-wise Omni Diffusion Reinforcement for Joint Audio-Video Generation",
-      "direction": "Multimodal Agent",
+      "id": "wildtablebench-benchmarking-multimodal-foundation-models-on-table-understanding-in-the-wild",
+      "title": "WildTableBench: Benchmarking Multimodal Foundation Models on Table Understanding In the Wild",
+      "direction": "Multimodal Agent / LLM 评测",
       "long_tail_type": "工程抽象",
-      "why_save": "OmniNFT将强化学习扩展到多目标多模态音视频联合生成，解决多目标优势不一致和模态间梯度干扰。工程价值有限——音视频联合生成是相对窄的应用场景，且RL在多模态生成中的应用仍处于早期。可作为长",
+      "why_save": "Multimodal Agent：Using multimodal foundation models to analyze table images is a high-value yet…",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-06-04",
-      "detail_path": "paper-detail.html?id=omninft-modality-wise-omni-diffusion-reinforcement-for-joint-audio-video-generation"
+      "revisit_date": "2026-06-07",
+      "detail_path": "paper-detail.html?id=wildtablebench-benchmarking-multimodal-foundation-models-on-table-understanding-in-the-wild"
     },
     {
-      "id": "distilling-reasoning-trace-via-knowledge-gap-alignment-for-smaller-language-models",
-      "title": "Distilling Reasoning Trace via Knowledge Gap Alignment for Smaller Language Models",
-      "direction": "推理与服务 / LLM 评测",
-      "long_tail_type": "可迁移方法",
-      "why_save": "Knowledge Gap Alignment 是蒸馏推理链的好思路：先探测学生模型的认知盲区，再生成桥接解释。7B 匹配 32B 的结果是强证据。但创新更多在工程技巧层面，理论深度有限。长尾",
+      "id": "preping-building-agent-memory-without-tasks",
+      "title": "PREPING: Building Agent Memory without Tasks",
+      "direction": "AI Agent / Context Engineering",
+      "long_tail_type": "工程抽象",
+      "why_save": "AI Agent：Agent memory is typically constructed either offline from curated demonstratio…",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-05-31",
-      "detail_path": "paper-detail.html?id=distilling-reasoning-trace-via-knowledge-gap-alignment-for-smaller-language-models"
+      "revisit_date": "2026-06-07",
+      "detail_path": "paper-detail.html?id=preping-building-agent-memory-without-tasks"
     },
     {
-      "id": "gnn-augmented-retrieval-for-knowledge-intensive-nlp-tasks",
-      "title": "GNN-Augmented Retrieval for Knowledge-Intensive NLP Tasks",
-      "direction": "RAG / 知识系统",
+      "id": "boosting-omni-modal-language-models-staged-post-training-with-visually-debiased-evaluation",
+      "title": "Boosting Omni-Modal Language Models: Staged Post-Training with Visually Debiased Evaluation",
+      "direction": "LLM 评测 / 安全与治理",
       "long_tail_type": "工程抽象",
-      "why_save": "GNN-Retriever 用知识图谱增强密集检索，思路合理但增量有限。8-12% recall 提升是不错的改善，但 15ms 额外延迟的假设需要在更大规模上验证。长尾价值在于'跨文档实体图",
+      "why_save": "LLM 评测：Omni-modal language models are intended to jointly understand audio, visual in…",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-05-31",
-      "detail_path": "paper-detail.html?id=gnn-augmented-retrieval-for-knowledge-intensive-nlp-tasks"
+      "revisit_date": "2026-06-07",
+      "detail_path": "paper-detail.html?id=boosting-omni-modal-language-models-staged-post-training-with-visually-debiased-evaluation"
     }
   ],
   "common_research_path": [

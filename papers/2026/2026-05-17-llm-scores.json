@@ -1,0 +1,100 @@
+{
+  "date": "2026-05-17",
+  "generated_at": "2026-05-17T04:35:00",
+  "scoring_method": "LLM-augmented scoring with engineering value and evidence strength assessment",
+  "scored_papers": [
+    {
+      "title": "Self-Distilled Agentic Reinforcement Learning",
+      "arxiv_id": "2605.15155",
+      "url": "https://arxiv.org/abs/2605.15155",
+      "hf_upvotes": 76,
+      "scores": {
+        "novelty": 9,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "reproducibility": 7,
+        "trend_alignment": 10,
+        "overall": 8.6
+      },
+      "score_rationale": "将自蒸馏（Self-Distillation）引入多轮 Agent RL 训练，解决长时交互中的稀疏奖励问题。核心创新在于将轨迹级奖励细化为 token 级密集监督，通过特权上下文教师分支实现稳定训练。工程价值极高：直接影响 Agent 后训练流程，可替代或增强现有 RLHF/GRPO 方案。证据强度良好——有明确的 multi-turn benchmark 对比。扣分项：代码未确认开源，复现需自行实现 OPSD+Agent 流程。",
+      "decision": "strong_accept",
+      "tags": ["agent", "reinforcement-learning", "self-distillation", "post-training", "multi-turn"]
+    },
+    {
+      "title": "MemLens: Benchmarking Multimodal Long-Term Memory in Large Vision-Language Models",
+      "arxiv_id": "2605.14906",
+      "url": "https://arxiv.org/abs/2605.14906",
+      "hf_upvotes": 67,
+      "scores": {
+        "novelty": 7,
+        "engineering_value": 9,
+        "evidence_strength": 9,
+        "reproducibility": 9,
+        "trend_alignment": 9,
+        "overall": 8.6
+      },
+      "score_rationale": "首个系统性多模态长期记忆基准测试。工程价值极高——为所有多模态 Agent 的记忆系统提供了标准化评估方案。覆盖显式记忆（RAG）和隐式记忆（上下文学习）两大方向，证据强度强：全面评测了主流 LVLM。对工程团队而言，可直接用于评估和选型多模态 Agent 的记忆架构。趋势高度相关——多模态 Agent 记忆是 2026 年核心赛道。",
+      "decision": "strong_accept",
+      "tags": ["benchmark", "multimodal", "memory", "long-term", "vision-language", "evaluation"]
+    },
+    {
+      "title": "SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer",
+      "arxiv_id": "2605.14906",
+      "url": "https://arxiv.org/abs/2605.14906",
+      "hf_upvotes": 57,
+      "scores": {
+        "novelty": 8,
+        "engineering_value": 8,
+        "evidence_strength": 8,
+        "reproducibility": 7,
+        "trend_alignment": 9,
+        "overall": 8.0
+      },
+      "score_rationale": "2.6B 参数开源世界模型，原生支持一分钟视频生成。工程价值显著——将世界模型从秒级推进到分钟级，对具身智能、游戏、仿真场景有直接应用。混合线性 Diffusion Transformer 架构在效率和保真度间取得平衡。扣分项：2.6B 参数意味着部署成本较高，且世界模型的工程落地仍需大量领域适配。",
+      "decision": "accept",
+      "tags": ["world-model", "diffusion", "video-generation", "open-source", "embodied-AI"]
+    },
+    {
+      "title": "Orchard: An Open-Source Agentic Modeling Framework",
+      "arxiv_id": "待核验/暂无",
+      "url": "待核验/暂无",
+      "hf_upvotes": 12,
+      "scores": {
+        "novelty": 5,
+        "engineering_value": 9,
+        "evidence_strength": 6,
+        "reproducibility": 9,
+        "trend_alignment": 9,
+        "overall": 7.6
+      },
+      "score_rationale": "开源 Agent 建模框架，覆盖规划、推理、工具调用和多轮交互。工程价值极高——直接可用的 Agent 开发基础设施。虽然框架类工作新颖性相对有限，但填补了 Agent 开发工具链的关键空白。开源属性提升复现性和实用性。扣分项：论文链接待核验，无法确认完整的技术深度和基准测试结果；与 LangGraph/CrewAI 等竞品的差异化需进一步验证。",
+      "decision": "accept",
+      "tags": ["agent", "framework", "open-source", "planning", "tool-use", "multi-turn"]
+    },
+    {
+      "title": "FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale",
+      "arxiv_id": "待核验/暂无",
+      "url": "待核验/暂无",
+      "hf_upvotes": 17,
+      "scores": {
+        "novelty": 8,
+        "engineering_value": 8,
+        "evidence_strength": 7,
+        "reproducibility": 7,
+        "trend_alignment": 8,
+        "overall": 7.6
+      },
+      "score_rationale": "聚焦开放式编码问题的合成评测——直接挑战当前 Coding Agent 的能力边界。工程价值高：现有 coding benchmark（HumanEval、MBPP）都是封闭式问题，无法评估 Agent 在真实开发场景（无最优解、需求模糊）中的表现。该方法可大幅提升 coding agent 的评估效度。扣分项：论文链接待核验；合成问题的质量验证机制需进一步确认。",
+      "decision": "accept",
+      "tags": ["coding-agent", "benchmark", "evaluation", "synthetic-data", "open-ended"]
+    }
+  ],
+  "scoring_criteria": {
+    "novelty": "理论/方法创新程度（1-10）",
+    "engineering_value": "对工程实践的直接可应用性（1-10）",
+    "evidence_strength": "实验证据的充分性和说服力（1-10）",
+    "reproducibility": "代码/数据/流程的可复现性（1-10）",
+    "trend_alignment": "与当前技术趋势的契合度（1-10）",
+    "overall": "加权综合得分"
+  }
+}

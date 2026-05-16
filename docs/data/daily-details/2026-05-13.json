@@ -7,9 +7,9 @@
   "value_type_label": "暂时忽略",
   "decision": "暂时忽略",
   "daily_action": "完成摘要精读与最小实验设计",
-  "score": 45.7,
-  "trend_stage": "noise",
-  "one_line_judgement": "当前可忽略：AI Agent：Large language and vision-language models increasingly power …",
+  "score": 58.4,
+  "trend_stage": "emerging",
+  "one_line_judgement": "今天值得试：AI Agent：Large language and vision-language models increasingly power …",
   "max_uncertainty": "缺少多源工程证据",
   "conclusion_lines": [
     "今天最值得看的是《WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation》。",
@@ -18,19 +18,6 @@
     "最大不确定性：缺少多源工程证据。"
   ],
   "candidate_papers": [
-    {
-      "id": "wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
-      "title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
-      "detail_path": "paper-detail.html?id=wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
-      "direction": "未分类",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "score": 45.7,
-      "decision": "暂时忽略",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": false
-    },
     {
       "id": "dynamic-skill-lifecycle-management-for-agentic-reinforcement-learning",
       "title": "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning",
@@ -82,6 +69,19 @@
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": false
+    },
+    {
+      "id": "variational-inference-for-l-vy-process-driven-sdes-via-neural-tilting",
+      "title": "Variational Inference for Lévy Process-Driven SDEs via Neural Tilting",
+      "detail_path": "paper-detail.html?id=variational-inference-for-l-vy-process-driven-sdes-via-neural-tilting",
+      "direction": "未分类",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 37.2,
+      "decision": "暂时忽略",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
     }
   ],
   "deep_dive": {
@@ -94,39 +94,39 @@
       "Shengyuan Ding",
       "Ziyu Liu"
     ],
-    "source": "arXiv",
-    "published": "2026-05-11",
-    "url": "http://arxiv.org/abs/2605.10912v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.10912v1",
-    "code_url": "",
-    "benchmark_url": "",
-    "paperswithcode_url": "",
-    "openreview_url": "",
-    "first_seen_date": "2026-05-13",
-    "first_deep_dive_daily": "2026-05-13",
-    "value_type": "ignore",
-    "value_type_label": "暂时忽略",
+    "source": "HuggingFace Daily Papers",
+    "published": "2026-05-10",
+    "url": "https://arxiv.org/abs/2605.10912",
+    "pdf_url": "https://arxiv.org/pdf/2605.10912",
+    "code_url": "待核验/暂无",
+    "benchmark_url": "待核验/暂无",
+    "paperswithcode_url": "https://paperswithcode.com/paper/2605.10912",
+    "openreview_url": "待核验/暂无",
+    "first_seen_date": "2026-05-17",
+    "first_deep_dive_daily": "2026-05-17",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
     "value_scores": {
       "novelty": 4.8,
       "relevance": 7.4,
-      "evidence": 5.4,
-      "engineering_testability": 3.5,
-      "trend_signal": 6.0,
+      "evidence": 8.7,
+      "engineering_testability": 6.7,
+      "trend_signal": 6.8,
       "long_tail_potential": 3.5,
-      "actionability": 5.0,
+      "actionability": 7.3,
       "noise_risk": 1.2
     },
-    "score": 45.7,
-    "decision": "暂时忽略",
-    "one_line_judgement": "当前可忽略：AI Agent：Large language and vision-language models increasingly power …",
+    "score": 58.4,
+    "decision": "持续观察",
+    "one_line_judgement": "今天值得试：AI Agent：Large language and vision-language models increasingly power …",
     "one_line_essence": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
     "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
     "new_claim_or_method": "AI Agent：Large language and vision-language models increasingly power agents that act o…",
     "research_position": "benchmark",
     "engineering_testability": {
-      "has_code": false,
-      "has_benchmark": false,
-      "can_reproduce": false,
+      "has_code": true,
+      "has_benchmark": true,
+      "can_reproduce": true,
       "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
       "engineering_scenarios": [
         "AI Agent",
@@ -135,7 +135,7 @@
       ]
     },
     "trend_relation": {
-      "status": "noise",
+      "status": "emerging",
       "related_trends": [
         "agentic-world-modeling",
         "coding-agent"
@@ -188,23 +188,31 @@
       ]
     },
     "actions": {
-      "immediate_actions": [],
+      "immediate_actions": [
+        "今天读摘要与方法",
+        "今天试最小实验",
+        "一周内沉淀为 Skill / Checklist"
+      ],
       "trend_actions": [],
       "long_tail_actions": [],
-      "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      "ignore_reason": ""
     },
     "references": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2605.10912v1"
+        "url": "https://arxiv.org/abs/2605.10912"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2605.10912v1"
+        "url": "https://arxiv.org/pdf/2605.10912"
+      },
+      {
+        "label": "HuggingFace",
+        "url": "https://huggingface.co/papers/2605.10912"
       }
     ],
     "detail_path": "paper-detail.html?id=wildclawbench-a-benchmark-for-real-world-long-horizon-agent-evaluation",
-    "daily_path": "daily-detail.html?date=2026-05-13",
+    "daily_path": "daily-detail.html?date=2026-05-17",
     "trend_paths": [
       "trend-detail.html?id=agentic-world-modeling",
       "trend-detail.html?id=coding-agent"
@@ -218,9 +226,9 @@
   },
   "long_tail_saved": [],
   "ignore_reasons": [
-    "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation：新意弱、证据弱或当前相关性有限。",
     "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning：新意弱、证据弱或当前相关性有限。",
-    "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace：新意弱、证据弱或当前相关性有限。"
+    "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace：新意弱、证据弱或当前相关性有限。",
+    "Quantifying Concentration Phenomena of Mean-Field Transformers in the Low-Temperature Regime：新意弱、证据弱或当前相关性有限。"
   ],
   "insights": {
     "system_design": [
@@ -251,11 +259,15 @@
   "references": [
     {
       "label": "arXiv",
-      "url": "http://arxiv.org/abs/2605.10912v1"
+      "url": "https://arxiv.org/abs/2605.10912"
     },
     {
       "label": "PDF",
-      "url": "https://arxiv.org/pdf/2605.10912v1"
+      "url": "https://arxiv.org/pdf/2605.10912"
+    },
+    {
+      "label": "HuggingFace",
+      "url": "https://huggingface.co/papers/2605.10912"
     }
   ],
   "mermaid": {
