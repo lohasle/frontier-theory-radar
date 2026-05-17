@@ -1,0 +1,82 @@
+{
+  "date": "2026-05-18",
+  "generated_at": "2026-05-18T04:30:00",
+  "model": "glm-5.1",
+  "scores": [
+    {
+      "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+      "url": "http://arxiv.org/abs/2605.15199v1",
+      "score": 82,
+      "dimensions": {
+        "novelty": 7,
+        "theoretical_depth": 6,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "trend_alignment": 8
+      },
+      "rationale": "多镜头视频生成的实体一致性是当前AIGC工程落地关键瓶颈。该论文提供140集(2491镜头)标准化基准，覆盖真实叙事媒体实体，直接解决生成式视频产品中角色/物体连续性问题。基准可复用，工程价值高。理论贡献偏实证型，但评估体系设计严谨。",
+      "theory_to_practice": "理论层面提出跨镜头实体一致性度量框架 → 工程层面为视频生成pipeline提供标准化测试集 → 趋势上推动长视频叙事生成商业化落地",
+      "keywords_matched": ["memory", "evaluation", "benchmark", "RAG"]
+    },
+    {
+      "title": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "url": "http://arxiv.org/abs/2605.15198v1",
+      "score": 85,
+      "dimensions": {
+        "novelty": 9,
+        "theoretical_depth": 8,
+        "engineering_value": 8,
+        "evidence_strength": 7,
+        "trend_alignment": 9
+      },
+      "rationale": "统一Agentic推理与潜在推理为单一框架是Agent推理架构的重要突破。通过token级切换在工具调用与隐式推理间灵活转换，降低了计算开销与上下文切换延迟。与当前Agent热潮高度契合，具备直接工程集成潜力。理论贡献在于消解了两种推理范式的对立。",
+      "theory_to_practice": "理论层面提出Agent推理与Latent推理的统一token机制 → 工程层面可降低Agent系统延迟与复杂度 → 趋势上指向多模态Agent推理标准化",
+      "keywords_matched": ["agent", "agentic", "benchmark"]
+    },
+    {
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+      "url": "http://arxiv.org/abs/2605.15188v1",
+      "score": 80,
+      "dimensions": {
+        "novelty": 8,
+        "theoretical_depth": 7,
+        "engineering_value": 8,
+        "evidence_strength": 7,
+        "trend_alignment": 8
+      },
+      "rationale": "基于真实世界事件时序重放的Agent评估框架，解决了当前Agent评测依赖合成环境、缺乏真实动态性的问题。按时间线回放新闻与事件，评测Agent的适应与预测能力，直接可应用于Agent产品评测体系。证据强度受限于数据覆盖面，但方法论框架有推广价值。",
+      "theory_to_practice": "理论层面提出基于真实事件时序的Agent适应能力评测范式 → 工程层面为Agent系统提供现实 grounding 的测试环境 → 趋势上推动Agent评测从封闭沙盒走向真实世界",
+      "keywords_matched": ["agent", "memory", "benchmark"]
+    },
+    {
+      "title": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search",
+      "url": "http://arxiv.org/abs/2605.15184v1",
+      "score": 78,
+      "dimensions": {
+        "novelty": 7,
+        "theoretical_depth": 6,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "trend_alignment": 8
+      },
+      "rationale": "系统性比较Agent架构中检索策略（grep/向量搜索/RAG）与工具调用范式的交互影响，填补了Agentic Search领域缺乏横向对比的空白。工程价值极高——直接指导RAG系统架构选型。证据强度来自系统性实验对比，而非单一case。",
+      "theory_to_practice": "理论层面建立检索策略×Agent架构的交互评估框架 → 工程层面为RAG系统架构选型提供实证指导 → 趋势上推动Agentic Search从原型走向生产级",
+      "keywords_matched": ["agent", "agentic", "RAG"]
+    },
+    {
+      "title": "OpenDeepThink: Parallel Reasoning via Bradley--Terry Aggregation",
+      "url": "http://arxiv.org/abs/2605.15177v1",
+      "score": 76,
+      "dimensions": {
+        "novelty": 8,
+        "theoretical_depth": 7,
+        "engineering_value": 7,
+        "evidence_strength": 6,
+        "trend_alignment": 9
+      },
+      "rationale": "提出基于Bradley-Terry成对比较的并行推理选择框架，解决test-time compute scaling中广度采样的选择瓶颈。在LLM推理增强热潮中有实际工程意义，Bradley-Terry模型引入了数学理论支撑。但证据强度取决于实际任务覆盖，需要更多下游验证。",
+      "theory_to_practice": "理论层面将Bradley-Terry模型引入LLM推理候选选择 → 工程层面为推理增强pipeline提供无需ground-truth的选择机制 → 趋势上指向test-time compute scaling的广度路线",
+      "keywords_matched": ["evaluation", "benchmark"]
+    }
+  ]
+}

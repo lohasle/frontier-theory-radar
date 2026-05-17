@@ -1,17 +1,16 @@
 {
-  "id": "vggt-edit-feed-forward-native-3d-scene-editing-with-residual-field-prediction",
-  "title": "VGGT-Edit: Feed-forward Native 3D Scene Editing with Residual Field Prediction",
+  "id": "entitybench-towards-entity-consistent-long-range-multi-shot-video-generation",
+  "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
   "authors": [
-    "Kaixin Zhu",
-    "Yiwen Tang",
-    "Yifan Yang",
-    "Renrui Zhang",
-    "Bohan Zeng"
+    "Ruozhen He",
+    "Meng Wei",
+    "Ziyan Yang",
+    "Vicente Ordonez"
   ],
   "source": "arXiv",
   "published": "2026-05-14",
-  "url": "http://arxiv.org/abs/2605.15186v1",
-  "pdf_url": "https://arxiv.org/pdf/2605.15186v1",
+  "url": "http://arxiv.org/abs/2605.15199v1",
+  "pdf_url": "https://arxiv.org/pdf/2605.15199v1",
   "code_url": "",
   "benchmark_url": "",
   "paperswithcode_url": "",
@@ -22,21 +21,21 @@
   "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
-    "relevance": 3.8,
-    "evidence": 4.5,
+    "relevance": 7.4,
+    "evidence": 5.4,
     "engineering_testability": 3.5,
-    "trend_signal": 3.5,
+    "trend_signal": 6.0,
     "long_tail_potential": 3.5,
-    "actionability": 3.8,
-    "noise_risk": 2.4
+    "actionability": 5.0,
+    "noise_risk": 1.2
   },
-  "score": 28.5,
+  "score": 47.1,
   "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：前沿论文：High-quality 3D scene reconstruction has recently advanced toward…",
-  "one_line_essence": "前沿论文：High-quality 3D scene reconstruction has recently advanced toward generalizabl…",
+  "one_line_judgement": "当前可忽略：Context Engineering：Multi-shot video generation extends single-shot ge…",
+  "one_line_essence": "Context Engineering：Multi-shot video generation extends single-shot generation to coherent visual …",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "前沿论文：High-quality 3D scene reconstruction has recently advanced toward generalizabl…",
-  "research_position": "source_paper",
+  "new_claim_or_method": "Context Engineering：Multi-shot video generation extends single-shot generation to coherent visual …",
+  "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -50,7 +49,10 @@
   },
   "trend_relation": {
     "status": "noise",
-    "related_trends": [],
+    "related_trends": [
+      "context-engineering",
+      "coding-agent"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -59,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "前沿论文：High-quality 3D scene reconstruction has recently advanced toward generalizabl…",
+    "why_save": "Context Engineering：Multi-shot video generation extends single-shot generation to coherent visua",
     "future_trigger": [
       "待更多证据"
     ],
@@ -107,16 +109,19 @@
   "references": [
     {
       "label": "arXiv",
-      "url": "http://arxiv.org/abs/2605.15186v1"
+      "url": "http://arxiv.org/abs/2605.15199v1"
     },
     {
       "label": "PDF",
-      "url": "https://arxiv.org/pdf/2605.15186v1"
+      "url": "https://arxiv.org/pdf/2605.15199v1"
     }
   ],
-  "detail_path": "paper-detail.html?id=vggt-edit-feed-forward-native-3d-scene-editing-with-residual-field-prediction",
+  "detail_path": "paper-detail.html?id=entitybench-towards-entity-consistent-long-range-multi-shot-video-generation",
   "daily_path": "daily-detail.html?date=2026-05-18",
-  "trend_paths": [],
+  "trend_paths": [
+    "trend-detail.html?id=context-engineering",
+    "trend-detail.html?id=coding-agent"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

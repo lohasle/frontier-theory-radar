@@ -1,0 +1,116 @@
+{
+  "date": "2026-05-18",
+  "generated_at": "2026-05-18T04:30:00",
+  "model": "glm-5.1",
+  "selected_count": 5,
+  "total_count": 10,
+  "analyses": [
+    {
+      "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+      "url": "http://arxiv.org/abs/2605.15199v1",
+      "authors": ["Ruozhen He", "Meng Wei", "Ziyan Yang", "Vicente Ordonez"],
+      "published": "2026-05-14",
+      "theory": "多镜头视频生成中实体一致性问题的形式化定义与评估方法论。核心贡献是提出基于真实叙事媒体的结构化基准，将角色/物体/地点的一致性从主观印象转化为可量化指标。",
+      "engineering_practice": "直接应用于视频生成产品的质量评测pipeline。140集/2491镜头规模可支撑自动化回归测试。对Sora/Runway等视频生成产品的长叙事场景是刚需。",
+      "trend": "AIGC从单帧/单镜头向长叙事视频迁移，实体一致性是核心工程瓶颈。评测标准化将加速该方向技术成熟度。",
+      "insight": "真实叙事媒体比合成数据更适合评测一致性——这一思路可推广到其他AIGC质量评估场景（如音频连续性、3D场景一致性）。",
+      "action": "1) 在视频生成项目中引入EntityBench评测流程 2) 将实体一致性指标纳入CI/CD质量门 3) 关注该基准的社区采用率以判断标准化程度",
+      "risk": "基准覆盖面是否足够多元（仅140集），以及指标是否能真实反映人眼感知的一致性。",
+      "links": {
+        "arxiv": "http://arxiv.org/abs/2605.15199v1",
+        "pdf": "https://arxiv.org/pdf/2605.15199v1",
+        "openreview": "待核验/暂无",
+        "code": "待核验/暂无"
+      }
+    },
+    {
+      "title": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "url": "http://arxiv.org/abs/2605.15198v1",
+      "authors": ["Ziyu Guo", "Rain Liu", "Xinyan Chen", "Pheng-Ann Heng"],
+      "published": "2026-05-14",
+      "theory": "统一Agentic推理（显式工具调用/代码执行）与Latent推理（隐式嵌入空间推理）为单一token驱动框架。核心洞察：一个token即可在两种模式间切换，消除了传统架构中agent模式与latent模式的硬切换开销。",
+      "engineering_practice": "可直接集成到多模态LLM推理引擎中，降低Agent系统复杂度。避免了外部工具调用的上下文切换延迟，同时保留了隐式推理的计算效率优势。",
+      "trend": "Agent系统从单一模式向混合推理范式演进。统一框架是降低部署复杂度的关键趋势，与Anthropic/OpenAI的工具使用路线形成互补。",
+      "insight": "推理模式切换不需要架构级变更，token级控制即可实现——这启示我们在其他系统设计中也可通过轻量控制信号实现复杂行为切换。",
+      "action": "1) 评估在现有Agent框架中引入ATLAS式token级推理切换的可行性 2) 比较与纯Agentic/Latent方案在延迟与精度上的trade-off 3) 追踪该工作的开源计划",
+      "risk": "统一框架是否在复杂推理链中保持两种模式各自的优势，以及token级切换的可靠性。",
+      "links": {
+        "arxiv": "http://arxiv.org/abs/2605.15198v1",
+        "pdf": "https://arxiv.org/pdf/2605.15198v1",
+        "openreview": "待核验/暂无",
+        "code": "待核验/暂无"
+      }
+    },
+    {
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+      "url": "http://arxiv.org/abs/2605.15188v1",
+      "authors": ["Shashwat Goel", "Nikhil Chandak", "Arvindh Arun", "Ameya Prabhu", "Steffen Staab"],
+      "published": "2026-05-14",
+      "theory": "基于真实世界事件时序重放的Agent评测方法论。核心创新：将Agent置于按时间线推进的真实新闻/事件流中，评测其预测、适应和信息整合能力，而非静态问答。",
+      "engineering_practice": "可直接用于Agent产品的A/B测试与能力评测。按时间线回放机制可嵌入到Agent开发循环中作为持续评测工具。特别适用于金融/新闻/决策支持类Agent。",
+      "trend": "Agent评测从静态benchmark走向动态真实世界模拟。与时序推理、知识截止日期评估方向高度相关。",
+      "insight": "用历史事件的时间序列作为评测素材——这是一个低成本但高保真的方案，避免了构建模拟环境的复杂性。",
+      "action": "1) 探索将FutureSim评测框架集成到Agent开发流程 2) 在金融/新闻预测类Agent中试点应用 3) 关注社区对该评测范式的反馈与改进",
+      "risk": "新闻数据覆盖面与时效性限制；Agent在评测中可能利用数据泄露（知识截止日后的训练数据）。",
+      "links": {
+        "arxiv": "http://arxiv.org/abs/2605.15188v1",
+        "pdf": "https://arxiv.org/pdf/2605.15188v1",
+        "openreview": "待核验/暂无",
+        "code": "待核验/暂无"
+      }
+    },
+    {
+      "title": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search",
+      "url": "http://arxiv.org/abs/2605.15184v1",
+      "authors": ["Sahil Sen", "Akhil Kasturi", "Elias Lumer", "Anmol Gulati", "Vamse Kumar Subbiah"],
+      "published": "2026-05-14",
+      "theory": "系统性研究检索策略（grep/向量搜索/混合RAG）与Agent架构、工具调用范式的交互效应。核心问题是：在Agentic Search场景中，检索策略的选择如何影响端到端性能。",
+      "engineering_practice": "直接指导RAG系统架构选型。系统性地回答了'何时用grep、何时用向量搜索、何时混合'这一工程决策问题。对构建生产级Agent搜索系统有立竿见影的参考价值。",
+      "trend": "Agentic Search从原型走向生产的关键转折点。检索策略选型的工程决策需要实证支撑，而非凭经验。",
+      "insight": "简单的grep在某些场景下可能优于复杂RAG——这提醒我们在系统设计中始终以实证而非直觉驱动技术选型。",
+      "action": "1) 基于该论文的实验框架评估现有RAG pipeline的检索策略 2) 在代码/文档搜索场景中对比grep与向量搜索的精度/延迟 3) 将检索策略选型纳入系统设计checklist",
+      "risk": "实验覆盖的Agent架构和任务类型有限，结论可能不适用于所有场景。",
+      "links": {
+        "arxiv": "http://arxiv.org/abs/2605.15184v1",
+        "pdf": "https://arxiv.org/pdf/2605.15184v1",
+        "openreview": "待核验/暂无",
+        "code": "待核验/暂无"
+      }
+    },
+    {
+      "title": "OpenDeepThink: Parallel Reasoning via Bradley--Terry Aggregation",
+      "url": "http://arxiv.org/abs/2605.15177v1",
+      "authors": ["Shang Zhou", "Wenhao Chai", "Kaiyuan Liu", "Huanzhi Mao", "Qiuyang Mang"],
+      "published": "2026-05-14",
+      "theory": "将Bradley-Terry成对比较模型引入LLM推理候选选择。核心机制：并行采样多个推理路径，通过成对比较而非点评分来选择最优推理结果，理论上更鲁棒。",
+      "engineering_practice": "可应用于需要推理增强的LLM调用场景（数学、代码、逻辑推理）。并行采样+BT选择相比传统self-consistency或best-of-N采样提供了更理论化的选择机制。",
+      "trend": "Test-time compute scaling是当前LLM推理增强的核心方向。从深度扩展（长思维链）到广度扩展（并行采样+选择）的路线正在形成互补。",
+      "insight": "成对比较比点评分更适合LLM输出选择——这与推荐系统中pairwise优于pointwise的发现形成有趣的类比。",
+      "action": "1) 在推理密集型任务中试验BT聚合选择机制 2) 对比self-consistency与BT选择在成本/精度上的差异 3) 关注该工作的开源实现",
+      "risk": "成对比较的O(n²)复杂度可能限制采样数量；BT模型假设可能不满足（传递性假设）。",
+      "links": {
+        "arxiv": "http://arxiv.org/abs/2605.15177v1",
+        "pdf": "https://arxiv.org/pdf/2605.15177v1",
+        "openreview": "待核验/暂无",
+        "code": "待核验/暂无"
+      }
+    }
+  ],
+  "cross_cutting_themes": [
+    {
+      "theme": "Agent评测标准化",
+      "papers": ["FutureSim", "ATLAS", "EntityBench"],
+      "description": "多篇论文同时关注如何标准化评估Agent/生成系统的能力，从视频一致性到世界事件适应到推理模式统一，反映出AI系统评测从通用benchmark向场景化、任务化评测迁移的趋势。"
+    },
+    {
+      "theme": "推理架构统一",
+      "papers": ["ATLAS", "OpenDeepThink"],
+      "description": "ATLAS统一Agentic与Latent推理，OpenDeepThink统一并行推理的选择机制——两者都指向降低AI系统架构复杂度、通过统一框架实现多模式协同的方向。"
+    },
+    {
+      "theme": "实证驱动的工程决策",
+      "papers": ["Is Grep All You Need?", "EntityBench"],
+      "description": "两篇论文都通过系统性实证实验为工程决策提供依据——前者指导检索策略选型，后者提供评测工具。反映出AI工程化从经验驱动向数据驱动决策的成熟化过程。"
+    }
+  ]
+}
