@@ -1,7 +1,746 @@
 {
-  "updated_at": "2026-05-18T04:32:43.314263",
-  "total": 147,
+  "updated_at": "2026-05-19T04:31:53.398756",
+  "total": 157,
   "papers": [
+    {
+      "title": "Designing Datacenter Power Delivery Hierarchies for the AI Era",
+      "authors": [
+        "Grant Wilkins",
+        "Fiodar Kazhamiaka",
+        "Alok Gautam Kumbhare",
+        "Chaojie Zhang",
+        "Ricardo Bianchini"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16255v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16255v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Demand for AI accelerators is rapidly increasing rack power density, with projections approaching 1MW per deployment by 2027. This poses a major challenge for datacenter power delivery designers. As power densities increase, a datacenter designed for a different target density may strand power, i.e., may be unable to use all the power that its delivery hierarchy has provisioned. Designs must remain efficient over long datacenter lifetimes and multiple hardware generations. Power utilization is p",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG",
+        "planning"
+      ],
+      "score": 87.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16255v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16255v1"
+        }
+      ],
+      "llm_reason": "直接面向'AI 加速器机架功率密度趋向 1MW'这一紧迫工程挑战，讨论数据中心供电层级设计与功率利用率优化；工程痛点明确（功率搁浅、多代硬件适配），决策框架可立即映射到基础设施规划；证据来自系统建模而非纯理论，对正在或即将做 GPU 集群扩容的团队有即时参考价值。",
+      "id": "designing-datacenter-power-delivery-hierarchies-for-the-ai-era",
+      "value_type": "immediate",
+      "matched_topics": [
+        "infrastructure",
+        "datacenter",
+        "power-delivery"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "前沿论文：Demand for AI accelerators is rapidly increasing rack power density, with proj…",
+      "one_line_judgement": "今天值得试：直接面向'AI 加速器机架功率密度趋向 1MW'这一紧迫工程挑战，讨论数据中心供电层级设计与功率利用率优化；工程痛点明确（功率搁浅、多代硬件…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "直接面向'AI 加速器机架功率密度趋向 1MW'这一紧迫工程挑战，讨论数据中心供电层级设计与功率利用率优化；工程痛点明确（功率搁浅、多代硬件适配），决策框架可立即映射到基础设施规划；证据来自系",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=designing-datacenter-power-delivery-hierarchies-for-the-ai-era"
+    },
+    {
+      "title": "Offline Semantic Guidance for Efficient Vision-Language-Action Policy Distillation",
+      "authors": [
+        "Jin Shi",
+        "Brady Zhang",
+        "Yishun Lu"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16241v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16241v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \\textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF a",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG",
+        "inference"
+      ],
+      "score": 83.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16241v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16241v1"
+        }
+      ],
+      "llm_reason": "VLA-AD 用 VLM 离线语义监督将大 VLA 教师蒸馏为轻量学生策略，直接解决'十亿参数 VLA 实时推理成本过高'这一工程瓶颈；蒸馏框架工程化程度高（离线即可完成、无需在线交互），可迁移到任何'大模型→边缘部署'场景；虽缺代码链接，但方法描述足以开始 PoC 复现。",
+      "id": "offline-semantic-guidance-for-efficient-vision-language-action-policy-distillation",
+      "value_type": "immediate",
+      "matched_topics": [
+        "model-distillation",
+        "robotics",
+        "edge-deployment",
+        "vla"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "前沿论文：Billion-parameter Vision-Language-Action (VLA) policies have recently shown im…",
+      "one_line_judgement": "今天值得试：VLA-AD 用 VLM 离线语义监督将大 VLA 教师蒸馏为轻量学生策略，直接解决'十亿参数 VLA 实时推理成本过高'这一工程瓶颈；蒸馏…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "VLA-AD 用 VLM 离线语义监督将大 VLA 教师蒸馏为轻量学生策略，直接解决'十亿参数 VLA 实时推理成本过高'这一工程瓶颈；蒸馏框架工程化程度高（离线即可完成、无需在线交互），可迁",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=offline-semantic-guidance-for-efficient-vision-language-action-policy-distillation"
+    },
+    {
+      "title": "AI-Mediated Communication Can Steer Collective Opinion",
+      "authors": [
+        "Stratis Tsirtsis",
+        "Kai Rawal",
+        "Chris Russell",
+        "Brent Mittelstadt",
+        "Sandra Wachter"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16245v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16245v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Generative artificial intelligence (AI) is increasingly integrated into the online platforms where humans exchange opinions; large language models (LLMs) now polish users' posts on LinkedIn and provide context for content shared on X. While prior work has shown that AI can express biased opinions and shape individuals' opinions during human-AI interactions, less attention has been paid to its influence on collective opinion formation when mediating human-to-human communication. We address this g",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SI"
+      ],
+      "keywords": [],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16245v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16245v1"
+        }
+      ],
+      "llm_reason": "系统研究 AI 中介通信对集体意见形成的操控效应，直接关联内容平台治理、AI 对齐与社会影响评估；方法论上结合实验设计与因果分析，证据强度高于纯观察性研究；对构建 AI 安全评测与平台治理流程有趋势级参考价值，但短期无直接工程产出路径。",
+      "id": "ai-mediated-communication-can-steer-collective-opinion",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-safety",
+        "social-impact",
+        "ai-alignment",
+        "evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "前沿论文：Generative artificial intelligence (AI) is increasingly integrated into the on…",
+      "one_line_judgement": "值得继续观察：系统研究 AI 中介通信对集体意见形成的操控效应，直接关联内容平台治理、AI 对齐与社会影响评估；方法论上结合实验设计与因果分析，证据强度高…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "系统研究 AI 中介通信对集体意见形成的操控效应，直接关联内容平台治理、AI 对齐与社会影响评估；方法论上结合实验设计与因果分析，证据强度高于纯观察性研究；对构建 AI 安全评测与平台治理流程",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=ai-mediated-communication-can-steer-collective-opinion"
+    },
+    {
+      "title": "IVGT: Implicit Visual Geometry Transformer for Neural Scene Representation",
+      "authors": [
+        "Yuqi Wu",
+        "Tianyu Hu",
+        "Wenzhao Zheng",
+        "Yuanhui Huang",
+        "Haowen Sun"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16258v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16258v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reconstructing coherent 3D geometry and appearance from unposed multi-view images is a fundamental yet challenging problem in computer vision. Most existing visual geometry foundation models predict explicit geometry by regressing pixel-aligned pointmaps, often suffering from redundancy and limited geometric continuity. We propose IVGT, an Implicit Visual Geometry Transformer that implicitly models continuous and coherent geometry from pose-free multi-view images. This formulation learns a conti",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "keywords": [],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16258v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16258v1"
+        }
+      ],
+      "llm_reason": "IVGT 将3D几何重建从显式点云预测转向隐式连续场表示，解决几何冗余与连续性痛点；属于视觉基础模型方向，工程上对自动驾驶、机器人感知有潜在价值，但当前证据限于 arXiv 摘要自述，无代码、benchmark、Papers with Code 链接可核验，离工程落地还有模型规模验证与实时推理的鸿沟。",
+      "id": "ivgt-implicit-visual-geometry-transformer-for-neural-scene-representation",
+      "value_type": "trend",
+      "matched_topics": [
+        "3d-reconstruction",
+        "foundation-model",
+        "implicit-representation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "前沿论文：Reconstructing coherent 3D geometry and appearance from unposed multi-view ima…",
+      "one_line_judgement": "值得继续观察：IVGT 将3D几何重建从显式点云预测转向隐式连续场表示，解决几何冗余与连续性痛点；属于视觉基础模型方向，工程上对自动驾驶、机器人感知有潜在…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "IVGT 将3D几何重建从显式点云预测转向隐式连续场表示，解决几何冗余与连续性痛点；属于视觉基础模型方向，工程上对自动驾驶、机器人感知有潜在价值，但当前证据限于 arXiv 摘要自述，无代码、",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=ivgt-implicit-visual-geometry-transformer-for-neural-scene-representation"
+    },
+    {
+      "title": "A Generative AI Framework for Intelligent Utility Billing CO 2 Analytics and Sustainable Resource Optimisation",
+      "authors": [
+        "Pavan Manjunath",
+        "Thomas Pruefer"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16250v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16250v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Distribution utilities are now expected to deliver bills that customers can actually read attach a defensible carbon number to every kWh sold and schedule load against grid stress and emissions constraints We propose an end-to-end framework that unifies four production-grade capabilities under one architectural roof a generative-AI agent that drafts each customers natural-language billing statement from structured numeric inputs under a constrained decoding policy a transformer-based forecaster ",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.DB",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 65.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16250v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16250v1"
+        }
+      ],
+      "llm_reason": "用生成式 AI 做公用事业账单自然语言生成与碳排放追踪，属于垂直行业应用整合；虽然架构四合一（NLG 账单、预测、优化、碳追踪）思路清晰，但工程价值主要面向能源行业特定场景，泛化到通用 AI 工程团队的价值有限；摘要未给出定量对比基线，证据强度偏弱。",
+      "id": "a-generative-ai-framework-for-intelligent-utility-billing-co-2-analytics-and-sustainable-resource-optimisation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "generative-ai",
+        "energy",
+        "carbon-analytics"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "前沿论文：Distribution utilities are now expected to deliver bills that customers can ac…",
+      "one_line_judgement": "值得先保存：用生成式 AI 做公用事业账单自然语言生成与碳排放追踪，属于垂直行业应用整合；虽然架构四合一（NLG 账单、预测、优化、碳追踪）思路清晰，但…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "用生成式 AI 做公用事业账单自然语言生成与碳排放追踪，属于垂直行业应用整合；虽然架构四合一（NLG 账单、预测、优化、碳追踪）思路清晰，但工程价值主要面向能源行业特定场景，泛化到通用 AI ",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=a-generative-ai-framework-for-intelligent-utility-billing-co-2-analytics-and-sustainable-resource-optimisation"
+    },
+    {
+      "title": "FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast",
+      "authors": [
+        "Igor Bogdanov",
+        "Chung-Horng Lung",
+        "Thomas Kunz",
+        "Jie Gao",
+        "Adrian Taylor"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16233v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16233v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Can LLM agents improve decision-making through self-generated memory without gradient updates? We propose FORGE (Failure-Optimized Reflective Graduation and Evolution), a staged, population-based protocol that evolves prompt-injected natural-language memory for hierarchical ReAct agents. FORGE wraps a Reflexion-style inner loop, where a dedicated reflection agent (using the same underlying LLM, no distillation from a stronger model) converts failed trajectories into reusable knowledge artifacts:",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA",
+        "eess.SY"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "evaluation",
+        "RAG"
+      ],
+      "score": 45.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16233v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16233v1"
+        }
+      ],
+      "id": "forge-self-evolving-agent-memory-with-no-weight-updates-via-population-broadcast",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Can LLM agents improve decision-making through self-generated memory without g…",
+      "one_line_judgement": "当前可忽略：AI Agent：Can LLM agents improve decision-making through self-generated…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Can LLM agents improve decision-making through self-generated memory without g…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=forge-self-evolving-agent-memory-with-no-weight-updates-via-population-broadcast"
+    },
+    {
+      "title": "Prospective multi-pathogen disease forecasting using autonomous LLM-guided tree search",
+      "authors": [
+        "Sarah Martinson",
+        "Michael P. Brenner",
+        "Martyna Plomecka",
+        "Brian P. Williams",
+        "Nicholas G. Reich"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16238v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16238v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Probabilistic forecasting of infectious diseases is crucial for public health but relies on labor-intensive manual model curation by expert modeling teams. This bespoke development bottlenecks scalability to granular geographic resolutions or emerging pathogens. Here, we present an autonomous system using Large Language Model (LLM)-guided tree search to iteratively generate, evaluate, and optimize executable forecasting software. In a fully prospective, real-time evaluation during the 2025-2026 ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 43.1,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16238v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16238v1"
+        }
+      ],
+      "id": "prospective-multi-pathogen-disease-forecasting-using-autonomous-llm-guided-tree-search",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Probabilistic forecasting of infectious diseases is crucial for public health …",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Probabilistic forecasting of infectious diseases is crucial…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Probabilistic forecasting of infectious diseases is crucial for public health …",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=prospective-multi-pathogen-disease-forecasting-using-autonomous-llm-guided-tree-search"
+    },
+    {
+      "title": "A Unified Generative-AI Framework for Smart Energy Infrastructure: Intelligent Gas Distribution, Utility Billing, Carbon Analytics, and Quantum-Inspired Optimisation",
+      "authors": [
+        "Pavan Manjunath",
+        "Thomas pruefer"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16232v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16232v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The accelerating convergence of smart metering, generative artificial intelligence, and quantum-inspired combinatorial optimisation is reshaping how energy utilities manage physical infrastructure, customer engagement, and environmental accountability",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.ET",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "keywords": [],
+      "score": 35.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16232v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16232v1"
+        }
+      ],
+      "id": "a-unified-generative-ai-framework-for-smart-energy-infrastructure-intelligent-gas-distribution-utility-billing-carbon-analytics-and-quantum-inspired-optimisation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI 平台工程：The accelerating convergence of smart metering, generative artificial intellig…",
+      "one_line_judgement": "当前可忽略：AI 平台工程：The accelerating convergence of smart metering, generative art…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI 平台工程：The accelerating convergence of smart metering, generative artificial intellig…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=a-unified-generative-ai-framework-for-smart-energy-infrastructure-intelligent-gas-distribution-utility-billing-carbon-analytics-and-quantum-inspired-optimisation"
+    },
+    {
+      "title": "Layer Equivalence Is Not a Property of Layers Alone: How You Test Redundancy Changes What You Find",
+      "authors": [
+        "Gabriel Garcia"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16234v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16234v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "When researchers ask whether two transformer layers are \"equivalent\" for compression, they often conflate distinct tests. Replacement asks whether one layer's map can substitute for another's in place; interchange asks whether two layers approximately commute when their positions are swapped. Both are output-grounded swap-KL probes, but they need not agree: on pretrained transformers the protocol gap can change which layers look safe to prune by several-fold under the same evaluator, especially ",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 32.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16234v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16234v1"
+        }
+      ],
+      "id": "layer-equivalence-is-not-a-property-of-layers-alone-how-you-test-redundancy-changes-what-you-find",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：When researchers ask whether two transformer layers are \"equivalent\" for compr…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：When researchers ask whether two transformer layers are \"eq…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：When researchers ask whether two transformer layers are \"equivalent\" for compr…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=layer-equivalence-is-not-a-property-of-layers-alone-how-you-test-redundancy-changes-what-you-find"
+    },
+    {
+      "title": "Dynamics-Level Watermarking of Flow Matching Models with Random Codes",
+      "authors": [
+        "Shuchan Wang"
+      ],
+      "published": "2026-05-15",
+      "updated": "2026-05-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2605.16239v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.16239v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We introduce a dynamics-level approach to watermarking generative models. Rather than embedding signals into model weights or outputs, we embed the watermark directly into the learned continuous dynamics -- the velocity field of a flow matching model. We formulate this as random coding over a continuous channel: a key-dependent perturbation is added during training, and the message is recovered at detection time from black-box queries. The perturbation is designed to leave the generated distribu",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 29.1,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2605.16239v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.16239v1"
+        }
+      ],
+      "id": "dynamics-level-watermarking-of-flow-matching-models-with-random-codes",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：We introduce a dynamics-level approach to watermarking generative models. Rath…",
+      "one_line_judgement": "当前可忽略：前沿论文：We introduce a dynamics-level approach to watermarking generative…",
+      "first_seen_date": "2026-05-19",
+      "first_deep_dive_daily": "2026-05-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：We introduce a dynamics-level approach to watermarking generative models. Rath…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=dynamics-level-watermarking-of-flow-matching-models-with-random-codes"
+    },
     {
       "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
       "authors": [

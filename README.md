@@ -78,19 +78,19 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-05-19 · Designing Datacenter Power Delivery Hierarchies for the AI Era](daily-detail.html?date=2026-05-19) · 即时价值 · 重点学习
 - [2026-05-18 · EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation](daily-detail.html?date=2026-05-18) · 暂时忽略 · 暂时忽略
 - [2026-05-17 · STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?](daily-detail.html?date=2026-05-17) · 即时价值 · 持续观察
 - [2026-05-15 · SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring](daily-detail.html?date=2026-05-15) · 即时价值 · 重点学习
 - [2026-05-14 · LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](daily-detail.html?date=2026-05-14) · 即时价值 · 轻量试点
 - [2026-05-13 · WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation](daily-detail.html?date=2026-05-13) · 暂时忽略 · 暂时忽略
 - [2026-05-12 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-12) · 暂时忽略 · 暂时忽略
-- [2026-05-11 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-11) · 暂时忽略 · 暂时忽略
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 61
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 52
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 61
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 64
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 53
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 64
 
 ## 启发沉淀说明
 

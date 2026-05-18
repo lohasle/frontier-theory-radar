@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2605.16258v1": {
+      "score": 75,
+      "value_type": "trend",
+      "reason": "IVGT 将3D几何重建从显式点云预测转向隐式连续场表示，解决几何冗余与连续性痛点；属于视觉基础模型方向，工程上对自动驾驶、机器人感知有潜在价值，但当前证据限于 arXiv 摘要自述，无代码、benchmark、Papers with Code 链接可核验，离工程落地还有模型规模验证与实时推理的鸿沟。",
+      "matched_topics": ["3d-reconstruction", "foundation-model", "implicit-representation"]
+    },
+    "http://arxiv.org/abs/2605.16255v1": {
+      "score": 87,
+      "value_type": "immediate",
+      "reason": "直接面向'AI 加速器机架功率密度趋向 1MW'这一紧迫工程挑战，讨论数据中心供电层级设计与功率利用率优化；工程痛点明确（功率搁浅、多代硬件适配），决策框架可立即映射到基础设施规划；证据来自系统建模而非纯理论，对正在或即将做 GPU 集群扩容的团队有即时参考价值。",
+      "matched_topics": ["infrastructure", "datacenter", "power-delivery"]
+    },
+    "http://arxiv.org/abs/2605.16250v1": {
+      "score": 65,
+      "value_type": "long_tail",
+      "reason": "用生成式 AI 做公用事业账单自然语言生成与碳排放追踪，属于垂直行业应用整合；虽然架构四合一（NLG 账单、预测、优化、碳追踪）思路清晰，但工程价值主要面向能源行业特定场景，泛化到通用 AI 工程团队的价值有限；摘要未给出定量对比基线，证据强度偏弱。",
+      "matched_topics": ["generative-ai", "energy", "carbon-analytics"]
+    },
+    "http://arxiv.org/abs/2605.16245v1": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "系统研究 AI 中介通信对集体意见形成的操控效应，直接关联内容平台治理、AI 对齐与社会影响评估；方法论上结合实验设计与因果分析，证据强度高于纯观察性研究；对构建 AI 安全评测与平台治理流程有趋势级参考价值，但短期无直接工程产出路径。",
+      "matched_topics": ["ai-safety", "social-impact", "ai-alignment", "evaluation"]
+    },
+    "http://arxiv.org/abs/2605.16241v1": {
+      "score": 83,
+      "value_type": "immediate",
+      "reason": "VLA-AD 用 VLM 离线语义监督将大 VLA 教师蒸馏为轻量学生策略，直接解决'十亿参数 VLA 实时推理成本过高'这一工程瓶颈；蒸馏框架工程化程度高（离线即可完成、无需在线交互），可迁移到任何'大模型→边缘部署'场景；虽缺代码链接，但方法描述足以开始 PoC 复现。",
+      "matched_topics": ["model-distillation", "robotics", "edge-deployment", "vla"]
+    }
+  }
+}
