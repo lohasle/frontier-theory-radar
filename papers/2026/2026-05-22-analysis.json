@@ -1,0 +1,165 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T04:31:00+08:00",
+  "total_papers_fetched": 10,
+  "candidate_papers": 5,
+  "deep_dive_papers": 3,
+  "analyses": [
+    {
+      "title": "Variance Reduction for Expectations with Diffusion Teachers",
+      "arxiv_id": "2605.21489",
+      "url": "http://arxiv.org/abs/2605.21489v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21489v1",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "待核验/暂无",
+      "theory_summary": "CARV框架将扩散模型下游管线中的梯度估计视为蒙特卡洛期望问题，引入分层方差缩减策略，使每次噪声采样所需的昂贵计算（渲染/模拟/编码）获得更高效的利用。",
+      "engineering_practice": {
+        "problem_solved": "Text-to-3D、单步蒸馏、数据归因等扩散模型下游管线的采样成本过高",
+        "approach": "分层方差缩减 + 计算感知的资源分配",
+        "complexity": "中等——可在现有扩散管线中作为采样策略替换层引入",
+        "dependencies": "需要预训练扩散模型作为teacher，需噪声采样器改造"
+      },
+      "trend_analysis": "扩散模型从训练优化向推理效率优化演进，与单步蒸馏、一致性模型等方向形成合力。2025-2026年扩散模型推理加速是核心赛道。",
+      "insights": [
+        "方差感知采样比朴素MC采样在计算预算有限时能获得显著更好的梯度估计",
+        "不同噪声层的方差贡献差异巨大，分配计算资源应不均匀",
+        "对任何需要反向传播通过扩散模型的场景都有价值"
+      ],
+      "action_items": [
+        "评估当前text-to-3D/图像生成管线中的采样策略",
+        "实验CARV分层方差缩减在内部扩散模型推理场景的加速比",
+        "关注作者开源代码发布动态"
+      ],
+      "composite_score": 8.0,
+      "decision": "deep_dive"
+    },
+    {
+      "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning",
+      "arxiv_id": "2605.21488",
+      "url": "http://arxiv.org/abs/2605.21488v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21488v1",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "待核验/暂无",
+      "theory_summary": "假设可泛化的推理能力源于学习任务条件化的吸引子——潜在动力系统的稳定不动点对应有效解。EqR框架将推理过程形式化为动力系统收敛到平衡态。",
+      "engineering_practice": {
+        "problem_solved": "Test-time compute scaling缺乏理论解释，迭代推理模型的泛化机制不明",
+        "approach": "将推理步骤建模为动力系统迭代，用吸引子理论解释泛化",
+        "complexity": "高——需要从架构层面设计满足吸引子条件的推理模块",
+        "dependencies": "需要可迭代更新的潜在状态架构"
+      },
+      "trend_analysis": "Test-time compute是当前LLM推理范式的核心演进方向。从CoT到思维树再到潜在空间迭代推理，EqR为这一趋势提供了理论基础。与o1/o3类推理模型的设计理念高度相关。",
+      "insights": [
+        "推理泛化可以用吸引子稳定性来量化——为test-time compute提供了可测量的质量指标",
+        "不动点的存在性为推理深度提供了理论边界",
+        "潜在空间推理可能比显式token-level CoT更高效"
+      ],
+      "action_items": [
+        "追踪EqR在标准推理benchmark（GSM8K, MATH等）上的实验结果",
+        "评估吸引子动力学框架对内部推理模型设计的启发",
+        "关注Zico Kolter团队的后续开源实现"
+      ],
+      "composite_score": 7.4,
+      "decision": "deep_dive"
+    },
+    {
+      "title": "Quantifying Hyperparameter Transfer and the Importance of Embedding Layer Learning Rate",
+      "arxiv_id": "2605.21486",
+      "url": "http://arxiv.org/abs/2605.21486v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21486v1",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "待核验/暂无",
+      "theory_summary": "提出量化超参数迁移的三个维度（质量、效率、鲁棒性），并证明embedding层学习率在大规模LLM训练中的关键重要性，对μP方法形成重要补充。",
+      "engineering_practice": {
+        "problem_solved": "LLM训练超参数从small-scale迁移到large-scale的可靠性不明确",
+        "approach": "三指标量化框架 + embedding层学习率敏感性分析",
+        "complexity": "低——结论可直接应用于现有训练配置",
+        "dependencies": "需要small-scale预实验验证超参数"
+      },
+      "trend_analysis": "随着LLM规模持续增长，训练成本优化成为刚需。μP和scaling law的结合是超参数迁移的前沿方向。Embedding层学习率的发现是对μP理论的重要修正。",
+      "insights": [
+        "Embedding层学习率对训练动态的影响被系统性地低估了",
+        "超参数迁移的质量/效率/鲁棒性三维度提供了更全面的评估",
+        "μP不是万能的——特定层需要独立调参"
+      ],
+      "action_items": [
+        "审查内部LLM训练配置中embedding层的学习率设置",
+        "采用三指标框架评估现有超参数迁移流程的可靠性",
+        "在小规模proxy实验中验证embedding层学习率的敏感性"
+      ],
+      "composite_score": 7.8,
+      "decision": "deep_dive"
+    },
+    {
+      "title": "EvoStruct: Bridging Evolutionary and Structural Priors for Antibody CDR Design via Protein Language Model Adaptation",
+      "arxiv_id": "2605.21485",
+      "url": "http://arxiv.org/abs/2605.21485v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21485v1",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "待核验/暂无",
+      "theory_summary": "将蛋白质语言模型的进化先验与等变GNN的结构先验融合，解决抗体CDR设计中的词汇崩塌问题——GNN过度预测少数氨基酸（酪氨酸、甘氨酸）。",
+      "engineering_practice": {
+        "problem_solved": "等变GNN在抗体设计中的词汇崩塌导致功能多样性不足",
+        "approach": "蛋白质语言模型adapter + 结构GNN的联合训练",
+        "complexity": "高——需要领域特定的蛋白质结构数据和专业评估流程",
+        "dependencies": "需要蛋白质语言模型预训练权重和抗体结构数据集"
+      },
+      "trend_analysis": "蛋白质语言模型是AI for Science的重要分支，但通用AI工程迁移有限。词汇崩塌问题的解法思路（引入外部先验校准分布）可类比到其他序列生成任务。",
+      "insights": [
+        "生成模型的'分布崩塌'是普遍问题，外部先验校准是通用解法思路",
+        "进化信息与结构信息的融合策略可迁移到其他分子设计场景"
+      ],
+      "action_items": [
+        "关注'词汇崩塌'解法在通用LLM生成多样性问题上的可迁移性",
+        "监控蛋白质语言模型领域的技术成熟度"
+      ],
+      "composite_score": 6.0,
+      "decision": "monitor"
+    },
+    {
+      "title": "Velocityformer: Broken-Symmetry-Matched Equivariant Graph Transformers for Cosmological Velocity Reconstruction",
+      "arxiv_id": "2605.21483",
+      "url": "http://arxiv.org/abs/2605.21483v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.21483v1",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "openreview_url": "待核验/暂无",
+      "paperswithcode_url": "待核验/暂无",
+      "theory_summary": "等变图Transformer结合破缺对称性匹配，用于从光谱巡天数据重建星系速度场，提升运动学Sunyaev-Zel'dovich效应的测量信噪比。",
+      "engineering_practice": {
+        "problem_solved": "宇宙学速度重建精度不足限制了kSZ效应测量",
+        "approach": "等变图Transformer + 对称性破缺匹配策略",
+        "complexity": "极高——需要天体物理学领域知识",
+        "dependencies": "光谱巡天数据和宇宙学模拟"
+      },
+      "trend_analysis": "等变架构在科学计算中持续有新应用，但通用工程价值有限。",
+      "insights": [
+        "对称性破缺的显式建模思路可借鉴到其他需要物理先验的场景"
+      ],
+      "action_items": [],
+      "composite_score": 4.4,
+      "decision": "skip"
+    }
+  ],
+  "daily_summary": {
+    "key_theme": "推理效率优化三重奏：扩散模型采样方差缩减、吸引子动力学的推理泛化理论、以及LLM训练超参数迁移的精准化",
+    "highlight_papers": [
+      "CARV (扩散模型方差缩减) - 直接工程价值最高",
+      "EqR (平衡推理器) - 理论创新最强，test-time compute方向",
+      "Hyperparameter Transfer (超参数迁移量化) - 训练工程最实用"
+    ],
+    "trend_observation": "2026年Q2的论文呈现出'效率优先'特征——无论是推理时还是训练时，研究者都在寻求用更少的计算获得更好的结果。这与硬件瓶颈和成本压力一致。"
+  }
+}

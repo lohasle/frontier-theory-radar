@@ -1,0 +1,82 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T04:31:00+08:00",
+  "scoring_method": "LLM-informed heuristic (论文→理论→工程实践→趋势→启发→行动)",
+  "papers": [
+    {
+      "title": "Variance Reduction for Expectations with Diffusion Teachers",
+      "arxiv_id": "2605.21489",
+      "scores": {
+        "theoretical_novelty": 8,
+        "engineering_value": 9,
+        "evidence_strength": 7,
+        "trend_alignment": 8,
+        "actionability": 8
+      },
+      "composite_score": 8.0,
+      "score_justification": "CARV框架直接解决扩散模型推理管线中的核心成本问题——蒙特卡洛估计方差。分层方差缩减方案（hierarchical variance reduction）可即刻应用于text-to-3D和单步蒸馏等高价值下游场景。作者来自知名机构，理论推导与实验验证并重。工程落地路径清晰：替换MC采样策略即可获得显著加速。",
+      "decision": "deep_dive",
+      "keywords": ["diffusion models", "variance reduction", "MC estimation", "compute optimization", "distillation"]
+    },
+    {
+      "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning",
+      "arxiv_id": "2605.21488",
+      "scores": {
+        "theoretical_novelty": 9,
+        "engineering_value": 7,
+        "evidence_strength": 6,
+        "trend_alignment": 9,
+        "actionability": 6
+      },
+      "composite_score": 7.4,
+      "score_justification": "将test-time compute scaling与动力系统吸引子理论关联，提出了EqR（Equilibrium Reasoners），为当前最热门的推理时计算范式提供了新的理论基础。理论创新性极高，但工程落地需吸引子动力学收敛稳定性验证。Zico Kolter参与增加了可信度。趋势高度对齐——test-time compute是2025-2026最核心方向之一。",
+      "decision": "deep_dive",
+      "keywords": ["test-time compute", "attractor dynamics", "reasoning", "latent systems", "equilibrium"]
+    },
+    {
+      "title": "Quantifying Hyperparameter Transfer and the Importance of Embedding Layer Learning Rate",
+      "arxiv_id": "2605.21486",
+      "scores": {
+        "theoretical_novelty": 6,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "trend_alignment": 7,
+        "actionability": 9
+      },
+      "composite_score": 7.8,
+      "score_justification": "提出了量化超参数迁移的三个指标框架，直接服务于LLM训练实践。embedding层学习率的发现对大规模预训练成本优化有即时价值。与μP（Maximal Update Parameterization）互补，证据充分。工程可操作性极强——训练团队可立即采纳结论调整学习率配置。",
+      "decision": "deep_dive",
+      "keywords": ["hyperparameter transfer", "μP", "LLM training", "scaling laws", "embedding learning rate"]
+    },
+    {
+      "title": "EvoStruct: Bridging Evolutionary and Structural Priors for Antibody CDR Design via Protein Language Model Adaptation",
+      "arxiv_id": "2605.21485",
+      "scores": {
+        "theoretical_novelty": 7,
+        "engineering_value": 6,
+        "evidence_strength": 7,
+        "trend_alignment": 5,
+        "actionability": 5
+      },
+      "composite_score": 6.0,
+      "score_justification": "解决了抗体CDR设计中GNN方法的词汇崩塌问题，结合蛋白质语言模型的进化先验是有意义的创新。但领域相对垂直（计算生物学），对通用AI工程实践的直接启发有限。证据强度中等——展示了序列恢复率的改善，但临床相关性尚未验证。",
+      "decision": "monitor",
+      "keywords": ["protein language model", "antibody design", "GNN", "vocabulary collapse", "CDR"]
+    },
+    {
+      "title": "Velocityformer: Broken-Symmetry-Matched Equivariant Graph Transformers for Cosmological Velocity Reconstruction",
+      "arxiv_id": "2605.21483",
+      "scores": {
+        "theoretical_novelty": 6,
+        "engineering_value": 4,
+        "evidence_strength": 6,
+        "trend_alignment": 3,
+        "actionability": 3
+      },
+      "composite_score": 4.4,
+      "score_justification": "等变图Transformer用于宇宙学速度重建，应用领域高度专业化。broken-symmetry匹配是技术亮点但对通用ML工程启发有限。主要服务于天体物理学社区，对AI工程实践迁移价值较低。",
+      "decision": "skip",
+      "keywords": ["equivariant graph transformer", "cosmology", "velocity reconstruction", "kSZ effect"]
+    }
+  ]
+}
