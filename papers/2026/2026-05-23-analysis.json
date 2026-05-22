@@ -1,0 +1,177 @@
+{
+  "date": "2026-05-23",
+  "model": "glm-5.1",
+  "generated_at": "2026-05-23T04:32:00",
+  "analysis": [
+    {
+      "paper_index": 1,
+      "title": "Tokenisation via Convex Relaxations",
+      "arxiv_id": "2605.22821v1",
+      "url": "http://arxiv.org/abs/2605.22821v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22821v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "分词器构建可形式化为线性规划问题——在词表约束下最小化全局编码损失，而非贪心迭代合并",
+        "key_insight": "BPE/Unigram 的贪心策略导致词表全局次优；凸松弛后可用现成凸优化工具求解全局最优词表分配",
+        "mathematical_foundation": "将词表选择建模为线性规划：目标函数为所有可能子词分配的加权编码成本，约束为词表大小上限；利用松弛技术将离散优化转化为凸连续优化"
+      },
+      "engineering_practice": {
+        "current_limitation": "BPE/Unigram 贪心算法无法回溯已做选择，导致词表存在全局冗余和次优分割",
+        "proposed_solution": "ConvexTok 算法：线性规划建模→凸优化求解→全局最优词表；持续改善 bits-per-byte (BpB)",
+        "integration_path": "可作为 HuggingFace tokenizers 库的替代后端；预训练语料处理阶段可直接替换",
+        "performance_gain": "持续改善内在分词指标和下游 BpB（摘要未给出具体数值，需等全文）"
+      },
+      "trend": {
+        "macro_trend": "LLM 基础组件（分词、位置编码、归一化）从启发式设计转向最优化理论驱动",
+        "related_work": "与 Unigram LM (Kudo)、Byte-level BPE 互补；与 SentencePiece 的训练目标优化相关",
+        "future_direction": "结合多语言词表联合优化；探索动态词表（inference 时自适应子词切分）"
+      },
+      "insights": {
+        "surprising_finding": "分词器这一 NLP 最基础组件在 2026 年仍可用凸优化获得系统性提升——说明基础组件的理论优化空间远未耗尽",
+        "practical_wisdom": "在训练新模型时，值得花时间对比不同分词策略对 BpB 的影响，而非默认使用 BPE",
+        "risk_assessment": "凸优化的计算开销需评估；对已训练好的模型更换分词器需要重新预训练，迁移成本极高"
+      },
+      "action": {
+        "immediate": "关注 ConvexTok 的具体 BpB 改善数值，对比现有 BPE/Unigram 基线",
+        "short_term": "在预训练新模型时，评估 ConvexTok 作为分词器后端的可行性和性能收益",
+        "long_term": "推动分词器从'预训练固定组件'转向'可联合优化的模型一部分'，探索分词与语言模型的联合训练"
+      }
+    },
+    {
+      "paper_index": 3,
+      "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
+      "arxiv_id": "2605.22817v1",
+      "url": "http://arxiv.org/abs/2605.22817v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22817v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "LLM 后训练应优化向量奖励而非标量奖励，使策略在推理时搜索（AlphaEvolve、beam search）中产生高多样性候选",
+        "key_insight": "标量 RLHF 训练导致策略坍缩到低熵模式分布，无法为推理时搜索提供足够的候选多样性；向量奖励通过分解奖励维度，显式保留策略的行为多样性",
+        "mathematical_foundation": "将标量奖励 r(s,a) 扩展为向量奖励 r(s,a)∈R^d，每个分量捕获任务的不同方面；优化目标是覆盖奖励向量空间的策略集合而非单点最优"
+      },
+      "engineering_practice": {
+        "current_limitation": "RLHF/PPO 训练的 LLM 输出低熵分布，beam search 和采样搜索产生大量重复候选，浪费推理计算",
+        "proposed_solution": "Vector Policy Optimization (VPO)：用向量奖励训练，保留策略在奖励空间中的覆盖广度",
+        "integration_path": "可直接应用于 OpenAI/Anthropic 等的后训练 pipeline；替代或补充现有的 PPO/DPO 训练",
+        "performance_gain": "使推理时搜索（如 AlphaEvolve 式搜索）获得更高质量的候选集，提升搜索效率"
+      },
+      "trend": {
+        "macro_trend": "推理时计算扩展（inference-time scaling）成为 LLM 性能提升主轴，但训练方法未适配搜索需求",
+        "related_work": "与 AlphaEvolve、o1/o3 的推理搜索互补；与多样性强化学习（QDAC、DIPO）相关",
+        "future_direction": "向量奖励的维度设计与任务对齐；自适应搜索深度与策略多样性的联合优化"
+      },
+      "insights": {
+        "surprising_finding": "当前推理模型的搜索效率受限于训练阶段的低熵策略——这是一个训练-推理失配问题",
+        "practical_wisdom": "在构建推理搜索系统时，应同时优化训练阶段的策略多样性，而非仅改进搜索算法",
+        "risk_assessment": "向量奖励的设计需要领域知识；维度选择不当可能导致策略分散到无关行为空间"
+      },
+      "action": {
+        "immediate": "评估当前 RLHF 训练的输出分布熵，量化搜索候选的重复率",
+        "short_term": "在后训练中实验向量奖励替代标量奖励，对比搜索效率和最终任务性能",
+        "long_term": "建立'训练为搜索服务'的 LLM 开发范式——将推理时搜索需求作为训练目标的一阶约束"
+      }
+    },
+    {
+      "paper_index": 5,
+      "title": "The Matching Principle: A Geometric Theory of Loss Functions for Nuisance-Robust Representation Learning",
+      "arxiv_id": "2605.22800v1",
+      "url": "http://arxiv.org/abs/2605.22800v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22800v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "鲁棒性、域适配、遮挡不变性、组合泛化、时间鲁棒性、对齐安全等七大问题共享同一统计结构——沿标签保持干扰协方差的匹配主轴正则化编码器 Jacobian",
+        "key_insight": "这些看似独立的鲁棒性问题本质上是同一问题：估计标签保持部署干扰（nuisance）的协方差，然后正则化编码器使其 Jacobian 的零空间覆盖这些干扰方向",
+        "mathematical_foundation": "Matching Principle：设 C 为干扰协方差矩阵，M 为匹配矩阵（range(M) ⊇ range(C)），则沿 M 正则化 Jacobian 可同时获得所有上述鲁棒性性质"
+      },
+      "engineering_practice": {
+        "current_limitation": "每种鲁棒性问题有独立的方法族（DA→域对抗、不变性→数据增强、安全→RLHF对齐），缺少统一处理框架",
+        "proposed_solution": "统一几何框架：估计干扰协方差→构建匹配矩阵→沿匹配方向正则化 Jacobian，一次解决多种鲁棒性",
+        "integration_path": "可作为表示学习训练的正则化模块集成；替代或增强现有独立鲁棒性技术",
+        "performance_gain": "框架论文，摘要未提供具体实验数据，需等全文确认统一框架相对各专用方法的竞争力"
+      },
+      "trend": {
+        "macro_trend": "机器学习从'为每种问题设计专用方案'走向'发现共享结构统一求解'",
+        "related_work": "与域适配（DANN）、对抗训练、不变风险最小化（IRM）、各向异性正则化相关但更统一",
+        "future_direction": "将匹配原理从监督学习扩展到 RL 和生成模型；探索干扰协方差的自动估计方法"
+      },
+      "insights": {
+        "surprising_finding": "七大看似独立的鲁棒性问题共享同一几何结构——这暗示当前'专用方法专用场景'的研究范式存在结构性冗余",
+        "practical_wisdom": "在构建需要多维度鲁棒性的系统时，应首先估计干扰的共享结构，再设计统一正则化策略",
+        "risk_assessment": "理论深度极高但缺乏实验验证（至少摘要如此）；干扰协方差的准确估计在实践中可能很困难"
+      },
+      "action": {
+        "immediate": "关注论文全文的实验部分，验证统一框架在各任务上的竞争力",
+        "short_term": "在需要多维度鲁棒性的场景（如自动驾驶感知系统）中，尝试匹配原理的正则化策略",
+        "long_term": "推动'干扰协方差估计'成为模型部署前的标准诊断步骤，类似于当前的模型评估基准"
+      }
+    },
+    {
+      "paper_index": 7,
+      "title": "MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems",
+      "arxiv_id": "2605.22794v1",
+      "url": "http://arxiv.org/abs/2605.22794v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22794v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "Agent 自进化应突破文本层限制，扩展到源码层重写——路由逻辑、Hook 排序、状态不变量等代码级控制流的自动修复",
+        "key_insight": "现有自进化 Agent 将进化限制在 skill file、prompt、memory schema 等文本产物上，但 Agent 的核心行为（路由、调度、异常处理）编码在不可变代码中，导致部署后结构性缺陷无法自修复",
+        "mathematical_foundation": "源码级重写的形式化框架：将 Agent 系统视为可重写的程序，在运行时通过 LLM 生成并验证补丁，实现行为级进化"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有自进化 Agent（如 Devin、OpenHands）只能修改文本配置，无法修复路由错误、Hook 冲突、状态不一致等代码级问题",
+        "proposed_solution": "MOSS 框架：在运行时检测失败模式→生成源码补丁→在沙箱中验证→部署修复后的代码",
+        "integration_path": "可直接集成到现有 Agent 框架（AutoGen、LangGraph、CrewAI）的异常处理层",
+        "performance_gain": "实现从'人工修复→下次更新'到'自动检测→即时修复'的范式转换，缩短缺陷响应周期"
+      },
+      "trend": {
+        "macro_trend": "Agent 从静态部署走向持续自进化，从 prompt/skill 级进化走向架构/代码级进化",
+        "related_work": "与 Devin、OpenHands、SWE-Agent 的文本级进化对比；与 self-debugging、self-repair 研究相关",
+        "future_direction": "源码级进化的安全边界设计；多 Agent 协作进化（一个 Agent 监督另一个 Agent 的代码修改）"
+      },
+      "insights": {
+        "surprising_finding": "Agent 行为的核心控制流（路由、调度）不在任何文本产物中，而在代码中——这意味着当前的自进化范式仅覆盖了 Agent 能力的表层",
+        "practical_wisdom": "在部署长期运行的 Agent 系统时，应设计源码级自修复能力，而非仅依赖 prompt/memory 更新",
+        "risk_assessment": "源码级自动修改的安全风险极高——需要严格的沙箱验证和回滚机制；LLM 生成的补丁可能引入隐蔽缺陷"
+      },
+      "action": {
+        "immediate": "评估当前部署的 Agent 系统中，哪些常见故障需要代码级修复而非配置级调整",
+        "short_term": "在 Agent 框架中引入源码级热修复模块，配合沙箱验证和自动回滚机制",
+        "long_term": "构建'自进化 Agent 平台'：Agent 不仅能修改自身行为，还能重构自身架构——实现真正的软件自演化"
+      }
+    },
+    {
+      "paper_index": 8,
+      "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+      "arxiv_id": "2605.22791v1",
+      "url": "http://arxiv.org/abs/2605.22891v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22791v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "线性注意力的递归状态更新应将擦除门和写入门解耦，解决单门控信号导致的关联扰乱问题",
+        "key_insight": "Delta-rule 模型用单个标量门同时控制擦除旧关联和写入新关联，导致两者相互干扰；KDA 引入通道级衰减但仍未解耦。Gated DeltaNet-2 用独立擦除门和写入门实现精确编辑",
+        "mathematical_foundation": "将递归状态更新从 ΔW = β·(v - W·k)k^T 分解为 W' = (I - α·k·k^T)W + β·v·k^T，其中 α（擦除）和 β（写入）独立可学习"
+      },
+      "engineering_practice": {
+        "current_limitation": "线性注意力模型在长序列建模时，固定大小递归状态的编辑会扰乱已存储的关联，导致召回质量下降",
+        "proposed_solution": "Gated DeltaNet-2：独立擦除门（α）和写入门（β）实现精确的关联更新，避免不相关的写入破坏已有记忆",
+        "integration_path": "可直接替代 DeltaNet、Mamba、RWKV 等线性注意力架构的注意力模块；对 RAG 系统的 KV cache 管理有启发",
+        "performance_gain": "解决线性注意力的核心缺陷（关联扰乱），有望在长上下文任务上显著提升"
+      },
+      "trend": {
+        "macro_trend": "注意力机制从 softmax 注意力走向线性注意力，从固定压缩走向精确编辑",
+        "related_work": "与 DeltaNet、Kimi Delta Attention (KDA)、Mamba-2、RWKV-6 同线；是线性注意力架构进化的最新一步",
+        "future_direction": "探索层级化门控（不同层使用不同擦除/写入策略）；与 KV cache 压缩方法的联合优化"
+      },
+      "insights": {
+        "surprising_finding": "擦除和写入的解耦比增加状态维度对性能的提升更大——说明线性注意力的瓶颈在于编辑精度而非容量",
+        "practical_wisdom": "在设计 Agent 记忆系统时，应独立控制'遗忘什么'和'记住什么'，而非用单一信号同时控制",
+        "risk_assessment": "双门控增加参数量和计算量；与 FlashAttention 等 softmax 优化生态的兼容性需评估"
+      },
+      "action": {
+        "immediate": "关注 Gated DeltaNet-2 在标准长上下文基准（LongBench、InfiniteBench）上的性能对比",
+        "short_term": "在需要长上下文建模的应用（长文档理解、Agent 长期记忆）中评估 Gated DeltaNet-2 替代 softmax 注意力的可行性",
+        "long_term": "推动线性注意力架构在 LLM 预训练中的主流化——从当前 softmax 注意力主导走向混合架构"
+      }
+    }
+  ]
+}

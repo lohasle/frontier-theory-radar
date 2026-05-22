@@ -1,0 +1,93 @@
+{
+  "date": "2026-05-23",
+  "model": "glm-5.1",
+  "generated_at": "2026-05-23T04:32:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "scores": [
+    {
+      "paper_index": 1,
+      "title": "Tokenisation via Convex Relaxations",
+      "arxiv_id": "2605.22821v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 7,
+        "actionability": 7
+      },
+      "weighted_total": 7.4,
+      "confidence": "high",
+      "one_line": "将分词器构建建模为线性规划并凸优化求解（ConvexTok），持续改善 BpB 等内在指标",
+      "decision": "accept",
+      "reasoning": "BPE/Unigram 的贪心策略已被广泛使用但存在全局次优问题。本文将分词器构建形式化为线性规划，使用凸优化求解全局最优词表，在 BpB 上持续改善。理论贡献扎实，工程落地路径明确——可作为 HuggingFace tokenizers 库的后端替代。局限：摘要未报告具体数值提升幅度，需等全文确认增益量级。对 NLP pipeline 的基础组件有根本性改进意义。"
+    },
+    {
+      "paper_index": 3,
+      "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
+      "arxiv_id": "2605.22817v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 10,
+        "actionability": 8
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "将 LLM 后训练从标量奖励优化转为向量奖励优化，解决推理时搜索（如 AlphaEvolve）的多样性瓶颈",
+      "decision": "strong_accept",
+      "reasoning": "直接解决当前最热的 inference-time scaling 痛点：标量奖励 RLHF 训练导致低熵输出分布，无法为搜索算法（AlphaEvolve、beam search）提供足够多样性。Vector Policy Optimization (VPO) 用向量奖励替代标量，在训练时显式优化策略多样性。与 OpenAI o1/o3、DeepSeek-R1 等推理模型路线高度相关。对构建推理搜索引擎、Code Agent 等系统有直接工程价值。"
+    },
+    {
+      "paper_index": 5,
+      "title": "The Matching Principle: A Geometric Theory of Loss Functions for Nuisance-Robust Representation Learning",
+      "arxiv_id": "2605.22800v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 10,
+        "evidence_strength": 5,
+        "trend_relevance": 7,
+        "actionability": 5
+      },
+      "weighted_total": 6.8,
+      "confidence": "medium",
+      "one_line": "提出统一几何理论，将鲁棒性、域适配、遮挡不变性等七大问题归结为同一统计问题的正则化解",
+      "decision": "accept",
+      "reasoning": "理论贡献突出：将鲁棒性、域适配、光度不变性、遮挡不变性、组合泛化、时间鲁棒性、对齐安全等七大看似独立的问题统一为同一统计框架——估计标签保持干扰的协方差并沿匹配主轴正则化编码器 Jacobian。但摘要缺乏具体实验数据支撑，证据强度受限。对研究者和高级工程团队有深远的理论指导价值，但短期工程落地门槛较高。"
+    },
+    {
+      "paper_index": 7,
+      "title": "MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems",
+      "arxiv_id": "2605.22794v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 10,
+        "actionability": 9
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "首个突破文本层限制的 Agent 自进化框架——直接在源码层重写 Agent 自身以修复路由、Hook、调度等代码级缺陷",
+      "decision": "strong_accept",
+      "reasoning": "现有自进化 Agent（OpenAI Codex、Devin 等）仅修改文本产物（skill file、prompt、memory schema），但路由逻辑、Hook 排序、状态不变量等核心控制流在代码中。MOSS 将进化范围扩展到源码级重写，实现真正的 Agent 自我修复。这与当前 Agent 生态的工程痛点高度契合——部署后的 Agent 无法修复自身结构性缺陷。对 Agent 框架开发者（AutoGen、LangGraph、CrewAI）有直接参考价值。"
+    },
+    {
+      "paper_index": 8,
+      "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+      "arxiv_id": "2605.22791v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 8
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "在线性注意力中分离擦除门与写入门，解决压缩记忆的关联扰乱问题，由 NVIDIA/华盛顿大学团队出品",
+      "decision": "strong_accept",
+      "reasoning": "线性注意力架构（替代 softmax 注意力）是当前最活跃的架构创新方向之一。核心问题：固定大小递归状态的编辑如何不扰乱已有关联？Delta-rule 用单标量门同时控制擦除和写入，导致冲突。Gated DeltaNet-2 将两者解耦为独立门控。作者阵容（Hatamizadeh@NVIDIA, Yejin Choi@UW, Jan Kautz@NVIDIA）权威性强。对长上下文模型、RAG 系统、Agent 记忆管理都有直接工程影响。"
+    }
+  ]
+}
