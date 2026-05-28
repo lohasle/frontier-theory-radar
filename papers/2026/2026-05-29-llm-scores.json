@@ -1,0 +1,87 @@
+{
+  "date": "2026-05-29",
+  "generated_at": "2026-05-29T04:31:00+08:00",
+  "method": "LLM-based scoring via 论文→理论→工程实践→趋势→启发→行动 framework",
+  "scores": [
+    {
+      "title": "Self-Improving Language Models with Bidirectional Evolutionary Search",
+      "arxiv_id": "2605.28814",
+      "url": "http://arxiv.org/abs/2605.28814v1",
+      "overall_score": 9.0,
+      "dimension_scores": {
+        "theoretical_novelty": 9.0,
+        "engineering_applicability": 9.0,
+        "evidence_strength": 8.0,
+        "trend_alignment": 9.5,
+        "actionability": 9.0
+      },
+      "score_rationale": "提出双向进化搜索（Bidirectional Evolutionary Search），突破传统 best-of-N 与树搜索的稀疏验证信号和单向自回归扩展限制。理论贡献在于引入前向-后向双向候选构建机制，配合密集验证信号。工程价值极高：可直接应用于后训练样本生成和推理阶段，覆盖 Agent、RAG、推理等热门场景。证据强度较好（声称覆盖多 benchmark），但需核验具体指标。",
+      "key_insight": "将进化搜索从单向扩展升级为双向构建，结合密集验证信号，可显著提升 LLM 自我改进的效率和上限。",
+      "engineering_implications": "可直接嵌入 RLHF/RLAIF 训练管线和 Agent 推理框架，降低采样成本同时提升输出质量。对构建 self-improving agent 系统有直接启发。"
+    },
+    {
+      "title": "PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective",
+      "arxiv_id": "2605.28819",
+      "url": "http://arxiv.org/abs/2605.28819v1",
+      "overall_score": 8.5,
+      "dimension_scores": {
+        "theoretical_novelty": 8.0,
+        "engineering_applicability": 9.5,
+        "evidence_strength": 8.5,
+        "trend_alignment": 8.5,
+        "actionability": 8.5
+      },
+      "score_rationale": "将认知科学的稳定性-可塑性困境引入 PEFT 评估，填补了当前 PEFT 评估偏重下游精度而忽略预训练能力保持的空白。工程价值极高：直接指导企业级 LLM 适配方案的选择（LoRA vs Prefix-tuning vs Adapter 等）。多方法对比基准具有强参考价值。",
+      "key_insight": "PEFT 方法不应仅看目标域精度，而应联合衡量下游适应性与预训练通用能力的保持——这是工程选型的核心维度。",
+      "engineering_implications": "为生产环境中的 PEFT 方法选型提供量化决策框架。企业可用此基准评估不同 PEFT 方案在特定业务场景下的适用性，避免灾难性遗忘。"
+    },
+    {
+      "title": "Calibrating Conservatism for Scalable Oversight",
+      "arxiv_id": "2605.28807",
+      "url": "http://arxiv.org/abs/2605.28807v1",
+      "overall_score": 8.0,
+      "dimension_scores": {
+        "theoretical_novelty": 8.5,
+        "engineering_applicability": 7.5,
+        "evidence_strength": 7.5,
+        "trend_alignment": 9.0,
+        "actionability": 8.0
+      },
+      "score_rationale": "提出校准集体监督（CCO）框架，解决 Agent AI 系统的可扩展监督问题。理论创新在于将多样辅助评分函数聚合，并提供统计保证。工程可落地性中等偏上——需要在实际 Agent 部署中集成辅助评分器。但趋势对齐度极高：AI 安全与 Agent 治理是 2026 年核心议题。",
+      "key_insight": "通过校准多个弱监督信号的聚合来逼近强监督，为 AI Agent 安全提供兼具理论保证和实用性的方案。",
+      "engineering_implications": "适用于需要人类监督的自主 Agent 系统设计。可集成到 Agent 编排框架中作为安全层，在 LLM 超越人类评估能力的场景下保持可控性。"
+    },
+    {
+      "title": "Personal Visual Memory from Explicit and Implicit Evidence",
+      "arxiv_id": "2605.28806",
+      "url": "http://arxiv.org/abs/2605.28806v1",
+      "overall_score": 7.5,
+      "dimension_scores": {
+        "theoretical_novelty": 7.5,
+        "engineering_applicability": 8.0,
+        "evidence_strength": 7.0,
+        "trend_alignment": 8.0,
+        "actionability": 7.0
+      },
+      "score_rationale": "针对个性化 AI Agent 的视觉长期记忆问题，区分显式证据（可识别实体）和隐式证据（场景氛围、情感）。问题定义精准且实用，但对方法和实验细节的可见度有限（abstract 被截断）。工程价值在于为个性化 Agent 提供超越纯文本记忆的架构。",
+      "key_insight": "图像中的个人信息远超文本可表达的范围——既有显式实体，也有隐式情感与偏好，AI Agent 需要专门的视觉记忆机制。",
+      "engineering_implications": "对构建个性化 AI 助手（如手机/穿戴设备上的 AI companion）有直接参考价值。视觉记忆模块可增强推荐、回忆、情感理解等能力。"
+    },
+    {
+      "title": "OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration",
+      "arxiv_id": "2605.28805",
+      "url": "http://arxiv.org/abs/2605.28805v1",
+      "overall_score": 7.0,
+      "dimension_scores": {
+        "theoretical_novelty": 7.5,
+        "engineering_applicability": 7.5,
+        "evidence_strength": 7.0,
+        "trend_alignment": 7.0,
+        "actionability": 6.5
+      },
+      "score_rationale": "将元验证（meta-verification）引入多模态 LLM，利用验证器生成 rationales 而非仅二元决策。符号化输出（bounding boxes 等）的结构化重校准是有意义的创新。工程价值在于提升 VLM 输出的可靠性，但集成复杂度较高。",
+      "key_insight": "多模态验证不应仅输出正确/错误，而应生成结构化 rationales 并反馈到训练中，形成验证-改进闭环。",
+      "engineering_implications": "可作为 VLM 应用的质量保证层，在高可靠场景（医疗、自动驾驶）中提升模型输出的可信度。工程集成需要额外的验证器训练成本。"
+    }
+  ]
+}

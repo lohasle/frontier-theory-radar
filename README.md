@@ -78,19 +78,19 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-05-29 · Personal Visual Memory from Explicit and Implicit Evidence](daily-detail.html?date=2026-05-29) · 暂时忽略 · 暂时忽略
 - [2026-05-28 · Multi-Agent Orchestration via Hierarchical Task Decomposition](daily-detail.html?date=2026-05-28) · 趋势价值 · 趋势价值
 - [2026-05-27 · RLHF with Constitutional AI Principles for Aligned Generation](daily-detail.html?date=2026-05-27) · 趋势价值 · 趋势价值
 - [2026-05-26 · Context Window Extension via Positional Interpolation and Retrieval](daily-detail.html?date=2026-05-26) · 趋势价值 · 趋势价值
 - [2026-05-25 · RLHF with Constitutional AI Principles for Aligned Generation](daily-detail.html?date=2026-05-25) · 趋势价值 · 趋势价值
 - [2026-05-24 · Compositional Generalization in Language Model Reasoning Chains](daily-detail.html?date=2026-05-24) · 长尾价值 · 长尾价值
 - [2026-05-23 · MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems](daily-detail.html?date=2026-05-23) · 暂时忽略 · 暂时忽略
-- [2026-05-22 · DeepWeb-Bench: A Deep Research Benchmark Demanding Massive Cross-Source Evidence and Long-Horizon Derivation](daily-detail.html?date=2026-05-22) · 暂时忽略 · 暂时忽略
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 82
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 69
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 82
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 86
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 71
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 86
 
 ## 启发沉淀说明
 
