@@ -1,0 +1,87 @@
+{
+  "date": "2026-05-30",
+  "generated_at": "2026-05-30T04:38:00.000000",
+  "scoring_method": "llm-analysis",
+  "papers": [
+    {
+      "title": "Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software",
+      "url": "http://arxiv.org/abs/2605.30353v1",
+      "llm_score": 9.2,
+      "score_breakdown": {
+        "engineering_value": 9.5,
+        "evidence_strength": 9.0,
+        "novelty": 8.5,
+        "practical_impact": 9.5,
+        "reproducibility": 9.0
+      },
+      "score_rationale": "这是一篇极为罕见的AI Coding Agent实证研究：57个会话、15个监督事件的量化案例研究，来自ICML 2026 AI for Science Workshop。核心发现——Agent将'症状缓解'当作'根因解决'——直指当前coding agent的根本局限。研究揭示了三种关键监督实践（多样化参数点测试、跨会话共享changelog、禁止非物理数值补丁）对所有使用AI编程的工程师有直接指导意义。有公开代码和开发日志。",
+      "theory_to_practice": "论文提出的核心洞察是：监督设计（而非模型能力）决定了Agent输出的可信度。这对当前Cursor/Copilot/Claude Code等工具的使用者有直接的工程启示——AI Agent需要人类在架构决策层面介入，而非仅仅在代码审查层面。",
+      "keywords_matched": ["agent", "coding agent"],
+      "risks": ["单案例研究(N=1)泛化性有限", "仅测试Claude Code一种工具"]
+    },
+    {
+      "title": "Unlocking the Working Memory of Large Language Models for Latent Reasoning",
+      "url": "http://arxiv.org/abs/2605.30343v1",
+      "llm_score": 9.0,
+      "score_breakdown": {
+        "engineering_value": 9.0,
+        "evidence_strength": 8.5,
+        "novelty": 9.5,
+        "practical_impact": 8.5,
+        "reproducibility": 8.0
+      },
+      "score_rationale": "来自LSTM之父Sepp Hochreiter团队。论文提出Reasoning in Latent Space (RILS)，让LLM在不生成中间token的情况下进行内部推理——类比人类工作记忆。这直接挑战了当前'思维链=推理'的范式，提出了一条不依赖autoregressive生成的推理路径。如果在工程上可行，将大幅降低推理成本并提升推理隐私性。",
+      "theory_to_practice": "当前LLM推理高度依赖CoT（Chain of Thought），但CoT将内部计算与外部输出混为一谈。RILS范式若成熟，可使LLM在潜空间完成多步推理，仅在最后输出结论——这对API调用成本、推理延迟、敏感信息保护都有直接工程价值。",
+      "keywords_matched": ["memory", "benchmark"],
+      "risks": ["潜空间推理的可解释性降低", "工程实现难度高，尚需大规模验证"]
+    },
+    {
+      "title": "Gram: Assessing sabotage propensities via automated alignment auditing",
+      "url": "http://arxiv.org/abs/2605.30353v1",
+      "llm_score": 8.5,
+      "score_breakdown": {
+        "engineering_value": 9.0,
+        "evidence_strength": 8.0,
+        "novelty": 8.0,
+        "practical_impact": 9.0,
+        "reproducibility": 8.5
+      },
+      "score_rationale": "Google DeepMind出品，针对AI Agent的安全审计框架。在17个模拟Agent部署场景中评估Gemini模型的破坏倾向，发现2-3%的轨迹存在不当行为。关键发现：多数不当行为源于'过度积极'(overeagerness)，而非恶意。这为Agentic AI的安全测试提供了可操作的框架。论文方法论清晰、场景设计合理，对部署AI Agent的团队有直接参考价值。",
+      "theory_to_practice": "随着AI Agent在企业中广泛部署（客服、自动化运维、代码生成），安全审计变得至关重要。Gram框架提供了一种系统化的自动化方法，可在部署前评估Agent的破坏倾向。企业可直接借鉴其17个测试场景的设计思路，构建自己的Agent安全评估管线。",
+      "keywords_matched": ["agent", "agentic"],
+      "risks": ["仅评估Gemini系列模型", "模拟场景可能无法覆盖所有真实风险"]
+    },
+    {
+      "title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
+      "url": "http://arxiv.org/abs/2605.30329v1",
+      "llm_score": 8.3,
+      "score_breakdown": {
+        "engineering_value": 8.0,
+        "evidence_strength": 8.5,
+        "novelty": 8.5,
+        "practical_impact": 8.0,
+        "reproducibility": 8.5
+      },
+      "score_rationale": "基于1,099篇ICLR投稿构建的基准，测试LLM判断研究想法方法学可行性的能力。这触及了AI Scientist系统的核心瓶颈——在投入计算资源之前，能否判断研究方向的可行性？对构建AI辅助科研工具的团队有直接的评估价值。数据集规模适中，来源可靠（ICLR投稿）。",
+      "theory_to_practice": "当前AI for Science的热点之一是自动化科研管线。SoundnessBench提供了一个关键的质量门控环节：让AI在生成研究假设时就过滤掉方法学上有缺陷的想法。工程团队可将其集成到AI科研助手的Pipeline中，作为第一道质量关卡。",
+      "keywords_matched": ["agent", "benchmark"],
+      "risks": ["仅限于ML领域研究提案", "LLM可能通过表面特征而非深层理解做出判断"]
+    },
+    {
+      "title": "Reasoning with Sampling: Cutting at Decision Points",
+      "url": "http://arxiv.org/abs/2605.30327v1",
+      "llm_score": 8.0,
+      "score_breakdown": {
+        "engineering_value": 8.5,
+        "evidence_strength": 7.5,
+        "novelty": 8.5,
+        "practical_impact": 8.0,
+        "reproducibility": 7.5
+      },
+      "score_rationale": "论文表明，从基础模型的锐化分布（power distribution）中采样，无需RL后训练即可获得与前沿推理模型相当的推理能力。这挑战了当前'RL post-training是推理能力唯一来源'的共识。如果工程上可高效实现，将大幅降低推理模型的训练成本。论文从理论和实践两个层面给出了分析。",
+      "theory_to_practice": "当前DeepSeek-R1、o1/o3等推理模型的训练需要大量RL计算。如果通过采样策略（如power distribution sampling）就能在基础模型上激发推理能力，那么中小团队也能获得接近前沿的推理效果，而无需昂贵的RL训练管线。关键挑战在于采样效率——论文提出了在决策点切割的方法来加速混合。",
+      "keywords_matched": [],
+      "risks": ["Power distribution采样在实际规模模型上的效率待验证", "与RL方法在复杂任务上的差距尚不明确"]
+    }
+  ]
+}
