@@ -5,35 +5,35 @@
     "Daniel Kuznetsov",
     "Ziqi Wang"
   ],
-  "source": "arXiv",
+  "source": "arxiv",
   "published": "2026-05-28",
-  "url": "http://arxiv.org/abs/2605.30336v1",
+  "url": "https://arxiv.org/abs/2605.30336v1",
   "pdf_url": "https://arxiv.org/pdf/2605.30336v1",
   "code_url": "",
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-05-30",
-  "first_deep_dive_daily": "2026-05-30",
+  "first_seen_date": "2026-06-01",
+  "first_deep_dive_daily": "2026-06-01",
   "value_type": "ignore",
   "value_type_label": "暂时忽略",
   "value_scores": {
-    "novelty": 4.8,
-    "relevance": 5.0,
-    "evidence": 4.5,
+    "novelty": 5.4,
+    "relevance": 6.2,
+    "evidence": 6.3,
     "engineering_testability": 3.5,
-    "trend_signal": 3.5,
+    "trend_signal": 6.0,
     "long_tail_potential": 3.5,
-    "actionability": 3.8,
+    "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 33.5,
+  "score": 44.2,
   "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：安全与治理：Federated learning is an emerging distributed paradigm that addr…",
-  "one_line_essence": "安全与治理：Federated learning is an emerging distributed paradigm that addresses the chal…",
+  "one_line_judgement": "当前可忽略：LLM 评测：Federated learning is an emerging distributed paradigm that add…",
+  "one_line_essence": "LLM 评测：Federated learning is an emerging distributed paradigm that addresses the chal…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "安全与治理：Federated learning is an emerging distributed paradigm that addresses the chal…",
-  "research_position": "source_paper",
+  "new_claim_or_method": "LLM 评测：Federated learning is an emerging distributed paradigm that addresses the chal…",
+  "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -47,7 +47,9 @@
   },
   "trend_relation": {
     "status": "noise",
-    "related_trends": [],
+    "related_trends": [
+      "coding-agent"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -56,7 +58,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "安全与治理：Federated learning is an emerging distributed paradigm that addresses the chal…",
+    "why_save": "LLM 评测：Federated learning is an emerging distributed paradigm that addresses the chal…",
     "future_trigger": [
       "待更多证据"
     ],
@@ -102,18 +104,14 @@
     "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
-    {
-      "label": "arXiv",
-      "url": "http://arxiv.org/abs/2605.30336v1"
-    },
-    {
-      "label": "PDF",
-      "url": "https://arxiv.org/pdf/2605.30336v1"
-    }
+    "https://arxiv.org/abs/2605.30336v1",
+    "https://arxiv.org/pdf/2605.30336v1"
   ],
   "detail_path": "paper-detail.html?id=fairness-aware-federated-learning-with-trajectory-shapley-value",
-  "daily_path": "daily-detail.html?date=2026-05-30",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-06-01",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

@@ -1,0 +1,127 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T04:40:00",
+  "top_picks": [
+    {
+      "rank": 1,
+      "title": "Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software",
+      "arxiv_id": "2605.30353v1",
+      "url": "https://arxiv.org/abs/2605.30353v1",
+      "score": 9.2,
+      "dimensions": {
+        "novelty": 9,
+        "theoretical_depth": 8,
+        "engineering_value": 10,
+        "evidence_strength": 9,
+        "actionability": 9
+      },
+      "decision": "strong_accept",
+      "rationale": "深度案例研究，57个session详细记录AI coding agent在科学软件开发中的失败模式。核心发现——agent将'症状消除等同于根因解决'，以及oracle test无法捕获'通过测试但物理意义错误'的修补——对工程实践有直接警示意义。三个可操作的监督实践（多样参数点测试、共享变更日志、禁止非物理数值修补）可立即落地到任何AI辅助开发流程中。ICML 2026 AI for Science Workshop接收，证据链完整。",
+      "theory_to_practice": "理论：AI agent的局限性在于优化给定结构而非提出架构替代方案。工程实践：为AI辅助编码设计监督流程时，必须加入领域专家参与的'概念注入'环节和跨session变更追踪机制。",
+      "trend_signal": "AI Agent可信度与监督设计正成为关键研究方向，单纯扩大模型规模无法解决agent'以通过测试为目标的表面优化'问题。",
+      "insight": "AI agent的'校准陷阱'——agent可以创造一个通过所有oracle测试但完全不对应真实物理量的修正，这揭示了测试驱动开发在AI辅助场景下的根本局限。",
+      "action_items": [
+        "在AI辅助开发流程中引入'变更合理性审查'环节，不仅要通过测试，还要解释变更的物理/业务意义",
+        "建立跨session的共享变更日志，识别agent是否在无效架构上反复微调",
+        "设计测试集时增加边界条件和跨域参数点，避免agent过度拟合校准点"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "LLMSurgeon: Diagnosing Data Mixture of Large Language Models",
+      "arxiv_id": "2605.30348v1",
+      "url": "https://arxiv.org/abs/2605.30348v1",
+      "score": 8.8,
+      "dimensions": {
+        "novelty": 8,
+        "theoretical_depth": 8,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "actionability": 8
+      },
+      "decision": "strong_accept",
+      "rationale": "将LLM预训练数据混合比逆向推断形式化为'数据混合手术(DMS)'逆问题，通过标定soft confusion matrix和约束逆问题求解，可以仅从生成文本审计模型的'数字DNA'。ACL 2026 Main接收，有开源代码和LLMScan评测套件。工程价值在于：为模型供应链透明度提供实用工具，可审计闭源模型的数据组成。",
+      "theory_to_practice": "理论：label-shift假设下的逆问题求解，用soft confusion matrix校正系统域混淆。工程实践：可用于审计第三方LLM的训练数据合规性，或评估自己模型的训练数据配比是否达到预期。",
+      "trend_signal": "LLM供应链审计与透明度需求持续上升，监管层面要求'可解释的模型构成'越来越迫切。",
+      "insight": "预训练数据混合比是模型的'数字DNA'——仅通过观察模型生成行为就能逆向推断这一信息，这对AI安全和合规有深远影响。",
+      "action_items": [
+        "评估LLMSurgeon用于内部模型训练数据配比验证的可行性",
+        "关注LLMScan评测套件，考虑集成到模型评估管线",
+        "跟踪监管动态，预判'训练数据披露'法规对业务的影响"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Unlocking the Working Memory of Large Language Models for Latent Reasoning",
+      "arxiv_id": "2605.30343v1",
+      "url": "https://arxiv.org/abs/2605.30343v1",
+      "score": 8.5,
+      "dimensions": {
+        "novelty": 9,
+        "theoretical_depth": 9,
+        "engineering_value": 8,
+        "evidence_strength": 7,
+        "actionability": 7
+      },
+      "decision": "accept",
+      "rationale": "提出Reasoning in Memory (RiM)，用固定memory blocks替代自回归推理步骤，实现单次forward pass的潜在推理。两阶段课程学习设计优雅。理论上为LLM推理能力开辟新路径——不依赖Chain-of-Thought的外部化，而是内化到工作记忆中。作者来自Sepp Hochreiter团队（LSTM发明人），理论功底有保障。目前在推理基准上匹配或超越现有方法。",
+      "theory_to_practice": "理论：人脑工作记忆机制可以不外化中间步骤就进行内部推理，LLM可通过memory blocks模拟这一过程。工程实践：如果方法成熟，可大幅降低推理延迟和token消耗——推理在内部完成而非生成大量中间token。",
+      "trend_signal": "Test-time compute扩展正从'多生成token'向'更高效的内部计算'演进，潜在推理是下一代关键方向。",
+      "insight": "LLM的推理能力不一定需要通过生成中间步骤来实现——'思考'可以在隐藏层中完成，这更接近人类的认知方式。",
+      "action_items": [
+        "关注RiM方法在更复杂推理任务（如多步数学、代码生成）上的后续评测",
+        "评估memory blocks设计是否可以与现有CoT方法互补——某些步骤内化、某些步骤外化",
+        "跟踪该方向进展，预判对未来推理API成本结构的影响"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion",
+      "arxiv_id": "2605.30351v1",
+      "url": "https://arxiv.org/abs/2605.30351v1",
+      "score": 8.3,
+      "dimensions": {
+        "novelty": 8,
+        "theoretical_depth": 7,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "actionability": 8
+      },
+      "decision": "accept",
+      "rationale": "将Multi-Head Latent Attention (MLA)首次应用于视频扩散，KV内存降低92.7%，吞吐量提升1.23x。VBench上长序列最佳。关键洞察：MLA成功不是因为预训练注意力是低秩的（实际上不是），而是MLA瓶颈本身决定了有效秩。这一发现对理解注意力机制压缩有普遍意义。有项目页面。",
+      "theory_to_practice": "理论：注意力压缩的有效性不取决于原始注意力的谱特性，而取决于瓶颈结构。工程实践：92.7%的KV缓存压缩可直接降低视频生成的推理成本，对长视频生成应用有直接经济价值。",
+      "trend_signal": "视频生成正从秒级走向分钟级，KV缓存优化是关键瓶颈——MLA方法很可能成为行业标准。",
+      "insight": "低秩压缩成功的原因不是'原始数据本身就是低秩的'，而是'瓶颈结构本身塑造了学习过程'——这对理解神经网络压缩的本质有启发。",
+      "action_items": [
+        "评估VideoMLA在内部视频生成管线中的集成可行性",
+        "将'瓶颈决定有效秩'的洞察推广到其他注意力压缩场景（如长文本LLM）",
+        "关注B200上的1.23x吞吐量提升数据，更新推理成本模型"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Reasoning with Sampling: Cutting at Decision Points",
+      "arxiv_id": "2605.30327v1",
+      "url": "https://arxiv.org/abs/2605.30327v1",
+      "score": 8.1,
+      "dimensions": {
+        "novelty": 9,
+        "theoretical_depth": 9,
+        "engineering_value": 7,
+        "evidence_strength": 7,
+        "actionability": 6
+      },
+      "decision": "accept",
+      "rationale": "提出Entropy-Cut Metropolis-Hastings算法，用next-token熵作为决策点代理，显著提升推理采样效率。理论上证明mixing time与决策数（而非token数）成比例。在MATH500、HumanEval、GPQA Diamond、AIME26上一致超越基线和RL训练模型。将'无需训练的推理'推向更实用的方向。",
+      "theory_to_practice": "理论：推理轨迹中少数关键决策点决定了采样效率，均匀切割主要重写局部细节而非重新审视决策。工程实践：Entropy-Cut可直接集成到推理采样管线中，无需训练，提升推理质量。",
+      "trend_signal": "无训练推理（inference-time reasoning）正从概念验证走向工程化——关键在于如何高效采样。",
+      "insight": "推理链中的'决策点'可以用token级熵来识别——高熵位置就是模型不确定的关键分支点，从这些位置重采样比随机切割更有效。",
+      "action_items": [
+        "在内部推理采样实验中复现Entropy-Cut方法，对比均匀切割基线",
+        "评估token熵作为'推理关键点'代理的可靠性——是否可以用于推理过程的可视化和调试",
+        "关注该方法的mixing time理论分析，预判在更长推理链上的扩展性"
+      ]
+    }
+  ],
+  "methodology": "基于论文→理论→工程实践→趋势→启发→行动框架，从20篇arXiv论文中选取前5篇。评分维度：novelty(理论创新), theoretical_depth(理论深度), engineering_value(工程价值), evidence_strength(证据强度), actionability(可操作性)。综合得分 = 0.15*novelty + 0.20*theoretical_depth + 0.25*engineering_value + 0.20*evidence_strength + 0.20*actionability。"
+}

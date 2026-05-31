@@ -1,0 +1,161 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T04:40:00",
+  "total_papers_fetched": 20,
+  "top_5_analysis": [
+    {
+      "rank": 1,
+      "title": "Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software",
+      "arxiv_id": "2605.30353v1",
+      "authors": ["Nhat-Minh Nguyen"],
+      "url": "https://arxiv.org/abs/2605.30353v1",
+      "code_url": "https://github.com/MinhMPA/clax-pt",
+      "venue": "ICML 2026 AI for Science Workshop",
+      "categories": ["cs.AI", "cs.SE"],
+      "chain": {
+        "theory": "AI coding agent在科学软件开发中存在系统性失败模式：将症状消除等同于根因解决（symptom reduction ≠ root-cause resolution）。Agent在错误架构上反复优化系数（33/57 sessions），无法自主重新审视架构选择。通过oracle test的修补可能完全不对应任何真实物理量。",
+        "engineering_practice": "三个可落地的监督实践：(1)在非校准参数点测试以发现过度拟合；(2)跨session共享变更日志以识别停滞探索；(3)明确禁止非物理数值修补。这些实践可立即应用到任何AI辅助开发工作流中。",
+        "trend": "AI Agent可信度研究正从'能力评估'转向'监督设计'。关键认知：监督设计（而非模型能力）决定了agent输出的可信赖程度。单纯scaling无法解决agent'在给定结构内优化而非提出替代方案'的问题。",
+        "insight": "最危险的AI失败不是测试失败，而是'通过所有测试但解决方案毫无意义'——这需要领域专家的'概念注入'才能发现。测试驱动开发在AI辅助场景下有根本局限。",
+        "action": [
+          "在AI辅助开发流程中增加'变更合理性审查'门控：每个AI提交的变更必须有物理/业务语义解释",
+          "建立跨session变更追踪仪表板，自动检测agent是否在无效方向上循环",
+          "测试集设计增加边界条件覆盖，减少AI过度拟合单一校准点的风险"
+        ]
+      },
+      "score_summary": {
+        "overall": 9.2,
+        "strengths": ["前所未有的量化案例研究（57 sessions, 15 supervision events）", "发现可推广的失败模式", "立即可操作的工程建议"],
+        "weaknesses": ["N=1案例研究，泛化性待验证", "仅涉及科学计算领域"],
+        "confidence": "high"
+      }
+    },
+    {
+      "rank": 2,
+      "title": "LLMSurgeon: Diagnosing Data Mixture of Large Language Models",
+      "arxiv_id": "2605.30348v1",
+      "authors": ["Yaxin Luo", "Jiacheng Cui", "Xiaohan Zhao", "Xinyi Shang", "Jiacheng Liu", "Xinyue Bi", "Zhaoyi Li", "Zhiqiang Shen"],
+      "url": "https://arxiv.org/abs/2605.30348v1",
+      "code_url": "https://github.com/Yaxin9Luo/LLMSurgeon",
+      "venue": "ACL 2026 Main",
+      "categories": ["cs.CL", "cs.AI", "cs.LG"],
+      "chain": {
+        "theory": "LLM预训练数据混合比可通过label-shift假设下的逆问题求解来推断。核心方法是估计校准的soft confusion matrix并求解约束逆问题，校正系统域混淆并恢复潜在混合先验。",
+        "engineering_practice": "可仅从模型生成文本审计闭源LLM的训练数据组成，为模型供应链透明度提供实用工具。LLMScan评测套件提供可复现的评估框架。",
+        "trend": "AI监管正从'模型行为审计'向'模型构成审计'深化。EU AI Act等法规要求更高的训练数据透明度，LLMSurgeon类工具将成为合规基础设施。",
+        "insight": "模型的'数字DNA'——训练数据混合比——会以微妙方式泄露在生成文本中，即使模型从未被明确要求透露训练信息。",
+        "action": [
+          "使用LLMSurgeon评估内部训练模型的数据配比是否达到预期",
+          "将LLMScan纳入模型评估管线，作为'数据合规自检'工具",
+          "关注监管动态，提前建立模型训练数据审计能力"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.8,
+        "strengths": ["形式化定义新问题（DMS）", "有开源代码和评测套件", "ACL 2026 Main接收，学术质量有保障"],
+        "weaknesses": ["依赖预定义taxonomy的准确性", "对高度混合或数据增强后数据的推断精度待验证"],
+        "confidence": "high"
+      }
+    },
+    {
+      "rank": 3,
+      "title": "Unlocking the Working Memory of Large Language Models for Latent Reasoning",
+      "arxiv_id": "2605.30343v1",
+      "authors": ["Lukas Aichberger", "Sepp Hochreiter"],
+      "url": "https://arxiv.org/abs/2605.30343v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.CL", "cs.AI"],
+      "chain": {
+        "theory": "受人类工作记忆启发，用固定memory blocks（特殊token序列）替代自回归推理步骤。Memory blocks可在单次forward pass中处理，避免逐token生成的开销。两阶段课程学习：先用地标（显式推理步骤）接地，再去除步骤级监督迭代精炼最终答案。",
+        "engineering_practice": "如果成熟，可将推理延迟从O(n) token生成降低到O(1) forward pass × memory block数。大幅减少推理API的token消耗和成本。",
+        "trend": "推理范式正从'外部化思考'(Chain-of-Thought)向'内部化思考'(Latent Reasoning)演进。RiM是这一方向的里程碑式工作。",
+        "insight": "LLM可以在不生成任何可见中间token的情况下完成推理——'思考'发生在隐藏状态空间中，这更接近人类认知的工作记忆机制。",
+        "action": [
+          "跟踪RiM在复杂推理任务上的后续评测数据",
+          "评估memory blocks与CoT的混合策略——简单步骤内化、复杂步骤外化",
+          "预判潜在推理技术对推理API定价模型的冲击"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.5,
+        "strengths": ["全新推理范式", "理论动机清晰（认知科学→ML）", "Hochreiter团队背书"],
+        "weaknesses": ["目前是预印本，未经同行评审", "在更大规模模型上的效果未充分展示", "缺少代码开源信息"],
+        "confidence": "medium"
+      }
+    },
+    {
+      "rank": 4,
+      "title": "VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion",
+      "arxiv_id": "2605.30351v1",
+      "authors": ["Hidir Yesiltepe", "Jiazhen Hu", "Tuna Han Salih Meral", "Adil Kaan Akan", "Kaan Oktay", "Hoda Eldardiry", "Pinar Yanardag"],
+      "url": "https://arxiv.org/abs/2605.30351v1",
+      "code_url": "待核验/暂无",
+      "project_url": "https://videomla.github.io/",
+      "venue": "Preprint",
+      "categories": ["cs.CV", "cs.AI"],
+      "chain": {
+        "theory": "Multi-Head Latent Attention (MLA)在视频扩散中的首次应用。关键发现：MLA成功不是因为预训练注意力是低秩的（实际上99%-energy有效秩远高于实用潜变量维度），而是MLA瓶颈本身决定了有效秩——训练从初始化就利用全部秩预算并在其中适应。",
+        "engineering_practice": "KV缓存内存降低92.7%，B200上吞吐量提升1.23x，VBench长序列最佳。可直接集成到视频生成推理管线中，降低分钟级视频生成的成本。",
+        "trend": "视频生成正从秒级走向分钟级，KV缓存是核心瓶颈。MLA方法借鉴自语言模型（DeepSeek等），跨领域迁移正在加速。",
+        "insight": "瓶颈假设（bottleneck determines effective rank）比谱假设（spectrum is low-rank）更准确地解释注意力压缩的成功——压缩不要求原始数据本身低秩。",
+        "action": [
+          "评估VideoMLA在内部视频生成pipeline中的集成可行性",
+          "将瓶颈假设推广到LLM推理场景的长上下文KV缓存压缩",
+          "更新视频生成成本模型：92.7% KV压缩对分钟级生成的影响量化"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.3,
+        "strengths": ["92.7% KV内存压缩是硬核工程指标", "VBench长序列最佳", "对MLA成功原因的理论解释有普遍意义"],
+        "weaknesses": ["仅测试了视频扩散场景", "缺少与更多视频生成长序列方法的对比"],
+        "confidence": "high"
+      }
+    },
+    {
+      "rank": 5,
+      "title": "Reasoning with Sampling: Cutting at Decision Points",
+      "arxiv_id": "2605.30327v1",
+      "authors": ["Felix Zhou", "Anay Mehrotra", "Quanquan C. Liu"],
+      "url": "https://arxiv.org/abs/2605.30327v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.LG", "cs.AI", "cs.CL", "math.ST", "stat.ML"],
+      "chain": {
+        "theory": "推理采样中，均匀随机切割主要重写局部细节而非重新审视关键决策。提出用next-token熵作为决策点代理，在推理轨迹中识别关键分支点。理论上证明Entropy-Cut的mixing time与决策数成比例（而非token数），这在决策数远小于token数时优势显著。",
+        "engineering_practice": "Entropy-Cut Metropolis-Hastings可直接集成到推理采样管线中，无需训练，在MATH500/HumanEval/GPQA Diamond/AIME26上一致超越基线和RL训练模型。",
+        "trend": "无训练推理（inference-time reasoning via base model sampling）正从概念验证走向工程化。关键瓶颈从'是否有效'转向'如何高效采样'。",
+        "insight": "推理链中的决策点可以用统计信号（token熵）自动识别——高熵位置就是模型的'不确定分支点'，从这些位置重采样比随机切割更有效。",
+        "action": [
+          "复现Entropy-Cut在MATH500上的结果，验证熵代理的可靠性",
+          "探索token熵作为推理过程调试工具——可视化模型在哪些位置'犹豫'",
+          "关注mixing time理论在更长推理链（如代码生成）上的扩展"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.1,
+        "strengths": ["理论证明mixing time与决策数成比例", "在4个推理基准上一致超越", "无需训练，即插即用"],
+        "weaknesses": ["预印本未经同行评审", "实验集中在数学/代码推理，泛化性待验证", "缺少代码开源信息"],
+        "confidence": "medium"
+      }
+    }
+  ],
+  "cross_cutting_themes": [
+    {
+      "theme": "AI系统的可信度与审计",
+      "papers": ["Physics Is All You Need?", "LLMSurgeon", "Gram"],
+      "description": "从AI agent监督设计、模型训练数据审计到AI安全对齐审查，多个方向同时指向'如何确保AI系统可信赖'这一核心议题。"
+    },
+    {
+      "theme": "推理效率的范式转变",
+      "papers": ["RiM", "Reasoning with Sampling", "HullFT"],
+      "description": "从外部化推理（CoT）到内部化推理（memory blocks），从均匀采样到决策点采样，推理效率正经历范式级别的转变。"
+    },
+    {
+      "theme": "注意力机制的压缩极限",
+      "papers": ["VideoMLA", "HullFT"],
+      "description": "MLA的92.7%压缩和凸重构的高效选择都表明，注意力机制还有巨大的压缩空间，关键在于理解'瓶颈塑造学习'这一机制。"
+    }
+  ],
+  "daily_highlight": "AI Agent可信度研究正从'能力评估'转向'监督设计'——Physics Is All You Need?论文以57个session的详实记录揭示，AI coding agent最危险的失败不是测试不通过，而是'通过所有测试但解决方案毫无意义'。这一发现对工程实践的警示意义深远：监督设计，而非模型能力，决定了AI输出的可信赖程度。"
+}

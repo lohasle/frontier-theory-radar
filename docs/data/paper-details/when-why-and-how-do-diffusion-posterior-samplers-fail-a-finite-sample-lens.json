@@ -5,34 +5,34 @@
     "Benjamin A. Burns",
     "Sara Fridovich-Keil"
   ],
-  "source": "arXiv",
+  "source": "arxiv",
   "published": "2026-05-28",
-  "url": "http://arxiv.org/abs/2605.30330v1",
+  "url": "https://arxiv.org/abs/2605.30330v1",
   "pdf_url": "https://arxiv.org/pdf/2605.30330v1",
   "code_url": "",
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-05-30",
-  "first_deep_dive_daily": "2026-05-30",
+  "first_seen_date": "2026-06-01",
+  "first_deep_dive_daily": "2026-06-01",
   "value_type": "ignore",
   "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
-    "relevance": 5.0,
+    "relevance": 6.2,
     "evidence": 4.95,
     "engineering_testability": 3.5,
     "trend_signal": 3.5,
-    "long_tail_potential": 3.5,
+    "long_tail_potential": 4.15,
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 33.9,
+  "score": 37.7,
   "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：推理与服务：Diffusion models have excellent capacity to model complex distri…",
-  "one_line_essence": "推理与服务：Diffusion models have excellent capacity to model complex distributions of nat…",
+  "one_line_judgement": "当前可忽略：Multimodal Agent：Diffusion models have excellent capacity to model com…",
+  "one_line_essence": "Multimodal Agent：Diffusion models have excellent capacity to model complex distributions of nat…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "推理与服务：Diffusion models have excellent capacity to model complex distributions of nat…",
+  "new_claim_or_method": "Multimodal Agent：Diffusion models have excellent capacity to model complex distributions of nat…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -47,7 +47,9 @@
   },
   "trend_relation": {
     "status": "noise",
-    "related_trends": [],
+    "related_trends": [
+      "agentic-world-modeling"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -56,7 +58,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "推理与服务：Diffusion models have excellent capacity to model complex distributions of nat…",
+    "why_save": "Multimodal Agent：Diffusion models have excellent capacity to model complex distributions of nat…",
     "future_trigger": [
       "待更多证据"
     ],
@@ -102,18 +104,14 @@
     "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
-    {
-      "label": "arXiv",
-      "url": "http://arxiv.org/abs/2605.30330v1"
-    },
-    {
-      "label": "PDF",
-      "url": "https://arxiv.org/pdf/2605.30330v1"
-    }
+    "https://arxiv.org/abs/2605.30330v1",
+    "https://arxiv.org/pdf/2605.30330v1"
   ],
   "detail_path": "paper-detail.html?id=when-why-and-how-do-diffusion-posterior-samplers-fail-a-finite-sample-lens",
-  "daily_path": "daily-detail.html?date=2026-05-30",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-06-01",
+  "trend_paths": [
+    "trend-detail.html?id=agentic-world-modeling"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
