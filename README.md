@@ -78,13 +78,13 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-06-02 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-06-02) · 暂时忽略 · 暂时忽略
 - [2026-06-01 · SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?](daily-detail.html?date=2026-06-01) · 长尾价值 · 持续观察
 - [2026-05-31 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-05-31) · 暂时忽略 · 暂时忽略
 - [2026-05-30 · SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?](daily-detail.html?date=2026-05-30) · 暂时忽略 · 暂时忽略
 - [2026-05-29 · Personal Visual Memory from Explicit and Implicit Evidence](daily-detail.html?date=2026-05-29) · 暂时忽略 · 暂时忽略
 - [2026-05-28 · Multi-Agent Orchestration via Hierarchical Task Decomposition](daily-detail.html?date=2026-05-28) · 趋势价值 · 趋势价值
 - [2026-05-27 · RLHF with Constitutional AI Principles for Aligned Generation](daily-detail.html?date=2026-05-27) · 趋势价值 · 趋势价值
-- [2026-05-26 · Context Window Extension via Positional Interpolation and Retrieval](daily-detail.html?date=2026-05-26) · 趋势价值 · 趋势价值
 
 ## 当前重点趋势索引
 
