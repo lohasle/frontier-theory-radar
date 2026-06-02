@@ -25,7 +25,7 @@ CONFIG_DIR = os.path.join(PROJECT_ROOT, "config")
 PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
 
 # arXiv API 配置
-ARXIV_API_URL = "http://export.arxiv.org/api/query"
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
 
 # 重点分类
 ARXIV_CATEGORIES = [

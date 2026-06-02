@@ -1,0 +1,142 @@
+{
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T04:35:00",
+  "total_papers_fetched": 10,
+  "top_5_analysis": [
+    {
+      "rank": 1,
+      "title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
+      "arxiv_id": "2606.02568v1",
+      "authors": ["Yuxing Lu", "Yushuhong Lin", "Wenqi Shi", "J. Ben Tamo", "Xukai Zhao"],
+      "url": "https://arxiv.org/abs/2606.02568v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.AI", "cs.CL", "cs.ET", "cs.MA"],
+      "chain": {
+        "theory": "专业决策的本质是增量式信息收集+不可逆序列决策（Longitudinal Inpatient Simulation），而非从枚举选项中选择。ClinEnv将临床实践建模为多阶段环境：Agent需要逐步获取异构信息（病史、检验、影像），在不确定性下做出不可撤回的诊疗决策。",
+        "engineering_practice": "环境架构（多阶段交互、异构数据融合、不可逆操作）可推广到任何需要评估Agent长期规划能力的领域。SRE故障排查、法律审查、金融风控均可借鉴此范式。关键工程贡献：将Agent评估从'答对问题'提升到'在正确时机做正确行动'。",
+        "trend": "Agent评估正经历从静态benchmark（MMLU/HumanEval式）向交互式模拟环境的范式转移。'不可逆决策'约束将成为区分'能聊天'和'能行动'的Agent的关键设计要素。",
+        "insight": "临床实践的本质不是选对答案而是在对的时刻做出不可撤回的判断——这一认知对AI Agent在所有高风险场景（自动驾驶、医疗、金融）中的应用都有根本性启发。",
+        "action": [
+          "研究ClinEnv环境架构在非医疗领域（如运维排障模拟）的可复用性",
+          "将'不可逆决策'约束引入内部Agent测试框架，评估Agent在高风险场景的决策质量",
+          "建立Agent长序列决策错误累积的监控机制"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.6,
+        "strengths": ["首次将临床实践建模为交互式长周期Agent环境", "基于真实住院病历数据，生态效度高", "范式可推广到其他专业决策领域"],
+        "weaknesses": ["仅覆盖临床场景", "作为新benchmark，基线模型数量有限", "预印本阶段，未经同行评审"],
+        "confidence": "medium-high"
+      }
+    },
+    {
+      "rank": 2,
+      "title": "HERO'S JOURNEY: Testing Complex Rule Induction with Text Games",
+      "arxiv_id": "2606.02556v1",
+      "authors": ["Anshun Asher Zheng", "Kanishka Misra", "David I. Beaver", "Junyi Jessy Li"],
+      "url": "https://arxiv.org/abs/2606.02556v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.CL"],
+      "chain": {
+        "theory": "规则归纳是智能体学习的核心能力——从少量示范中推断隐含规则并多步执行。HERO'S JOURNEY将其形式化为属性归纳（推断对象属性规则）和过程归纳（推断操作序列规则）两个维度，通过可控的词汇接地和可辨识性条件控制任务难度。",
+        "engineering_practice": "文本游戏框架可直接用于评估AI Agent的'学习能力'——从用户操作日志中学习业务流程、从代码提交历史中学习团队规范。框架的参数化设计（规则形式、词汇接地、可辨识性）允许精确控制评估难度。",
+        "trend": "Agent能力评估正从'任务完成度'向'学习效率'深化。能否从少量示范中泛化到新场景，比单次任务表现更能衡量Agent的实用智能水平。这与'few-shot learning'研究范式一致，但评估的是行为层面的泛化而非文本生成。",
+        "insight": "LLM的规则归纳能力存在'表面成功、深层脆弱'的问题——在简单规则上表现良好，但规则复杂度略微增加就急剧退化。这揭示了当前模型泛化能力的真正瓶颈：不是记忆不够多，而是抽象不够深。",
+        "action": [
+          "评估HERO'S JOURNEY框架用于内部Agent'学习能力'评估的可行性",
+          "将规则归纳测试纳入Agent选型标准——不只看任务完成率，还看从示范学习的效率",
+          "绘制规则复杂度vs Agent表现的退化曲线，建立Agent适用边界模型"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.3,
+        "strengths": ["系统化的规则归纳评估框架（8任务×4规则形式×可控参数）", "揭示了LLM泛化的脆弱性", "可推广到业务场景的规则学习评估"],
+        "weaknesses": ["仅通过文本游戏评估，与真实业务场景存在gap", "评估模型范围待扩大", "缺少代码/数据开源信息"],
+        "confidence": "medium"
+      }
+    },
+    {
+      "rank": 3,
+      "title": "From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression",
+      "arxiv_id": "2606.02559v1",
+      "authors": ["Elia Cunegatti", "Marcus Vukojevic", "Erik Nielsen", "Giovanni Iacca"],
+      "url": "https://arxiv.org/abs/2606.02559v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.CL", "cs.AI"],
+      "chain": {
+        "theory": "预训练transformer中的冗余分布是非均匀且非连续的——Attention和FeedForward的冗余模式不同，同一层内不同子模块的冗余程度也不同。传统'删除整层'的粗粒度方法忽略了这种不均匀性，导致压缩效率次优。",
+        "engineering_practice": "子模块级替换允许在非连续位置精确替换冗余组件，在相同压缩比下保留更多模型能力。这对推理成本敏感的部署场景（边缘设备、高并发API）有直接价值。可实现比层级压缩更精细的成本-性能平衡。",
+        "trend": "LLM部署优化正从粗粒度（量化INT8/INT4、剪枝整层）向细粒度（子模块、子结构级）演进。这是部署优化技术走向成熟的标志——优化粒度越细，效率天花板越高。",
+        "insight": "Attention和FeedForward不应该被同等对待——它们在不同层的冗余模式截然不同，这意味着'一刀切'的压缩策略会错失大量优化空间。",
+        "action": [
+          "在内部LLM部署中评估子模块级压缩vs层级压缩的效果差异",
+          "绘制子模块级压缩的Pareto前沿，确定最优成本-性能平衡点",
+          "关注该方法对MoE架构的兼容性，MoE的稀疏激活可能提供额外优化空间"
+        ]
+      },
+      "score_summary": {
+        "overall": 8.1,
+        "strengths": ["打破两个隐含假设（全层粒度+连续选择），有理论深度", "工程价值直接——降低推理成本", "对模型内部冗余结构的重新认知"],
+        "weaknesses": ["预印本阶段", "在不同规模模型上的通用性待验证", "缺少开源代码信息"],
+        "confidence": "medium"
+      }
+    },
+    {
+      "rank": 4,
+      "title": "Mitigating Perceptual Judgment Bias in Multimodal LLM-as-a-Judge via Perceptual Perturbation and Reward Modeling",
+      "arxiv_id": "2606.02578v1",
+      "authors": ["Seojeong Park", "Jiho Choi", "Junyong Kang", "Seonho Lee", "Jaeyo Shin"],
+      "url": "https://arxiv.org/abs/2606.02578v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.CV", "cs.AI"],
+      "chain": {
+        "theory": "多模态LLM作为评判者存在系统性感知判断偏差（Perceptual Judgment Bias）——当视觉证据与文本线索冲突时，模型倾向于奖励看似合理的叙述而非感知正确的答案。这是一种'文本锚定效应'，反映了多模态模型中文本模态的主导地位。",
+        "engineering_practice": "任何使用MLLM做自动评估的场景（A/B测试、模型对比、质量审核）都需要关注这一偏差。通过感知扰动数据集可以诊断和缓解这一问题。提出的统一训练框架可作为MLLM评判者的'校准工具'。",
+        "trend": "LLM-as-a-Judge正从纯文本场景扩展到多模态场景，暴露出新的可靠性挑战。自动化评估的'可信赖性'将成为工程基础设施的关键质量指标。",
+        "insight": "多模态LLM的'视觉理解'可能只是'文本推理的视觉装饰'——模型实际上是以文本推理为主、视觉信息为辅，这挑战了'多模态=深度视觉理解'的假设。",
+        "action": [
+          "如果使用MLLM做自动评估，引入感知扰动测试验证评估器的视觉可靠性",
+          "在多模态评估流程中增加'视觉vs文本冲突'的对抗性测试用例",
+          "关注Perceptually Perturbed Judgment Dataset，考虑集成到内部评估管线"
+        ]
+      },
+      "score_summary": {
+        "overall": 7.8,
+        "strengths": ["系统性地识别和定义了感知判断偏差", "提出了可操作的缓解方案（扰动数据集+训练框架）", "对所有使用MLLM做评估的团队有直接警示意义"],
+        "weaknesses": ["评估范围主要在视觉问答场景", "偏差缓解的泛化性待验证", "缺少与同类工作的系统性对比"],
+        "confidence": "medium"
+      }
+    },
+    {
+      "rank": 5,
+      "title": "AdaCodec: A Predictive Visual Code for Video MLLMs",
+      "arxiv_id": "2606.02569v1",
+      "authors": ["Haowen Hou", "Zhen Huang", "Zheming Liang", "Qingyi Si", "Chenglin Li"],
+      "url": "https://arxiv.org/abs/2606.02569v1",
+      "code_url": "待核验/暂无",
+      "venue": "Preprint",
+      "categories": ["cs.CV", "cs.AI", "cs.CL"],
+      "chain": {
+        "theory": "视频的时序冗余可以通过预测编码消除——相邻帧共享大部分内容，只有不可从前序上下文预测的部分需要显式编码。这是信息论中的条件编码思想在视频理解领域的首次系统化应用。",
+        "engineering_practice": "可集成到视频理解pipeline中，大幅减少传输到LLM的visual token数量。在长视频理解场景下，token节省可能达到50%以上，直接降低推理成本和延迟。",
+        "trend": "视频理解正从'逐帧独立编码'向'条件编码'演进。随着视频内容成为LLM的主要输入之一，高效的视觉编码将成为基础设施级技术。",
+        "insight": "视频理解不应该是'看每一帧'，而应该是'只在需要时看'——将计算资源集中在信息增益最大的时刻，这比均匀采样更高效也更智能。",
+        "action": [
+          "评估AdaCodec在内部视频理解pipeline中的token节省潜力",
+          "对比预测性编码与均匀采样在长视频理解任务上的效果和成本差异",
+          "关注预测编码与现有视频编码标准（H.264/AV1）的兼容可能性"
+        ]
+      },
+      "score_summary": {
+        "overall": 7.5,
+        "strengths": ["预测编码思想在视频MLLM中的首次系统化应用", "可显著降低video token消耗", "与视频压缩领域经典理论对接"],
+        "weaknesses": ["预印本阶段，实验充分性待验证", "预测失败时的回退机制描述不足", "在不同类型视频上的鲁棒性待评估"],
+        "confidence": "medium"
+      }
+    }
+  ]
+}
