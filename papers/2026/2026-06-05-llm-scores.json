@@ -1,0 +1,125 @@
+{
+  "date": "2026-06-05",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-05T04:38:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "https://arxiv.org/abs/2606.04874": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "首次系统解耦 Agent 的规划能力与执行能力评估，构建 4,209 个多模态案例、覆盖 22 个领域和 5 种设置的诊断式 benchmark。现有 Agent 评测通常只报告端到端成功率，APB 能精确定位失败来源（规划错误 vs 执行错误），对 Agent 工程调试与能力诊断有直接工程价值。规模和覆盖范围在同类 benchmark 中领先。",
+      "matched_topics": ["ai-agent", "llm-evaluation", "multimodal"]
+    },
+    "https://arxiv.org/abs/2606.04261": {
+      "score": 87,
+      "value_type": "trend",
+      "reason": "直击 AI 开发中最昂贵的人工环节——训练数据策展（data curation）。Curation-Bench 设计精巧：固定模型/训练流程/评测，仅让 Agent 通过命令行自主检查数据、实施策略、提交训练任务并迭代。这是首个系统测试通用编程 Agent 能否自动化数据-策展闭环的 benchmark。如果结论为肯定，将直接推动从人工策展到 Agent 自动策展的范式转变。",
+      "matched_topics": ["ai-agent", "coding-agent", "data-engineering"]
+    },
+    "https://arxiv.org/abs/2606.04435": {
+      "score": 82,
+      "value_type": "immediate",
+      "reason": "形式化了多步 Agentic RAG 中被系统性忽视的级联幻觉（cascading hallucination）问题——早期步骤的错误会在后续推理中传播和放大，而现有检测机制无法捕获。CHARM 框架提供检测与缓解双重能力。这对任何构建多步 RAG 管线的团队都有直接安全加固价值。",
+      "matched_topics": ["rag-knowledge", "ai-agent", "reliability-safety"]
+    },
+    "https://arxiv.org/abs/2606.04599": {
+      "score": 73,
+      "value_type": "long_tail",
+      "reason": "将 DMAIC 六西格玛方法论引入 LLM Agent 的工业异常检测（IAD），强调策略制定优先于执行。在异构模态统一处理上有工程价值。但领域较窄（工业制造），DMAIC 映射的创新性有限。对构建工业 AI Agent 的团队有参考价值。",
+      "matched_topics": ["ai-agent", "industry-deployment"]
+    },
+    "https://arxiv.org/abs/2606.04627": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "将移动端 UI Agent 的推理从外部化文本思维链转向隐式连续表征推理，配合生成式世界模型预测未来状态。解决了真实部署中长 CoT 导致的延迟、监督成本和部署复杂度问题。世界模型 + 隐式推理是当前 Agent 架构的前沿趋势。",
+      "matched_topics": ["ai-agent", "world-model", "mobile-ui", "efficiency"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 0,
+      "title": "Agent Planning Benchmark: A Diagnostic Framework for Planning Capabilities in LLM Agents",
+      "arxiv_id": "2606.04874",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 8
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "4,209 个多模态案例 × 22 领域 × 5 设置的诊断式 benchmark，首次系统解耦 Agent 规划能力与执行能力评估",
+      "decision": "strong_accept",
+      "reasoning": "现有 Agent 评测只报告端到端成功率，无法区分规划失败与执行失败。APB 通过诊断式设计（而非汇总式评分）精确定位能力瓶颈，覆盖多模态、22 领域、5 种设置（含 holistic planning + feasibility judgment），规模在同类 benchmark 中领先。对 Agent 工程调试、能力差距分析和迭代方向决策有直接价值。"
+    },
+    {
+      "paper_index": 1,
+      "title": "Can Generalist Agents Automate Data Curation?",
+      "arxiv_id": "2606.04261",
+      "scores": {
+        "engineering_value": 10,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.7,
+      "confidence": "high",
+      "one_line": "首个系统测试通用编程 Agent 能否自动化训练数据策展闭环的 benchmark（Curation-Bench）",
+      "decision": "strong_accept",
+      "reasoning": "数据策展是现代 AI 开发中最昂贵、最依赖人工的环节。Curation-Bench 设计精巧——固定模型/训练/评测三要素，仅让 Agent 通过 CLI 自主探索数据、实施策略、提交训练并迭代。这直接测试了'通用编程 Agent 能否替代专业数据工程师'这一关键问题。benchmark 设计的 agent-centric 范式本身对 Agent 评测领域有方法论贡献。"
+    },
+    {
+      "paper_index": 2,
+      "title": "Cascading Hallucination in Agentic RAG: The CHARM Framework for Detection and Mitigation",
+      "arxiv_id": "2606.04435",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 9
+      },
+      "weighted_total": 8.2,
+      "confidence": "medium",
+      "one_line": "形式化多步 Agentic RAG 中级联幻觉的传播机制，提供 CHARM 检测与缓解框架",
+      "decision": "strong_accept",
+      "reasoning": "多步 Agentic RAG 是生产环境中最常见的复杂推理架构之一，但现有的幻觉检测只关注单步输出。CHARM 首次形式化了'错误在管线步骤间传播并放大'这一系统性漏洞，对任何构建多步 RAG/Agent 推理系统的团队都有直接安全加固价值。检测+缓解双重设计具有工程完整性。"
+    },
+    {
+      "paper_index": 3,
+      "title": "Plan First, Judge Later, Run Better: A DMAIC-Inspired Agentic System for Industrial Anomaly Detection",
+      "arxiv_id": "2606.04599",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 6,
+        "evidence_strength": 7,
+        "trend_relevance": 6,
+        "actionability": 7
+      },
+      "weighted_total": 7.3,
+      "confidence": "medium",
+      "one_line": "将 DMAIC 六西格玛方法论映射到 LLM Agent 工业异常检测，强调策略制定优先于执行",
+      "decision": "accept",
+      "reasoning": "在异构模态统一处理和 Plan-first 策略上有工程价值。DMAIC→Agent 映射提供了制造业部署的可信框架。但领域较窄（工业异常检测），方法论创新性有限（DMAIC 是已有框架的迁移应用）。对构建工业 AI Agent 的团队有直接参考价值。"
+    },
+    {
+      "paper_index": 4,
+      "title": "MIRAGE: Mobile Agents with Implicit Reasoning and Generative World Models",
+      "arxiv_id": "2606.04627",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 7
+      },
+      "weighted_total": 8.0,
+      "confidence": "medium",
+      "one_line": "将移动端 UI Agent 推理从文本思维链转向隐式连续表征，配合生成式世界模型预测未来状态",
+      "decision": "accept",
+      "reasoning": "解决了真实部署中的核心痛点：长 CoT 导致延迟高、监督成本大、部署复杂。从显式文本推理到隐式表征推理是 Agent 架构的前沿方向。世界模型用于 UI 状态预测是新颖的应用。但系统复杂度高，移动端专用性限制了通用性。对关注 Agent 推理效率和端侧部署的团队有启发价值。"
+    }
+  ]
+}

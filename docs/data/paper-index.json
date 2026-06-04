@@ -1,7 +1,1979 @@
 {
-  "updated_at": "2026-06-03T04:37:07.971177",
-  "total": 244,
+  "updated_at": "2026-06-05T04:38:41.707321",
+  "total": 269,
   "papers": [
+    {
+      "title": "Can Generalist Agents Automate Data Curation?",
+      "authors": [
+        "Feiyang Kang",
+        "Hanze Li",
+        "Adam Nguyen",
+        "Mahavir Dabas",
+        "Jiaqi W. Ma"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04261",
+      "pdf_url": "https://arxiv.org/pdf/2606.04261",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Curating training data is among the most consequential yet labor-intensive parts of modern AI development: practitioners iteratively propose, implement, evaluate, and revise data policies against noisy benchmark feedback. We ask whether generalist coding agents can automate this data-curation loop. We introduce *Curation-Bench*, an agent-centric benchmark that fixes the model, training recipe, and evaluation suite while giving agents command-line access to inspect data, implement policies, submi",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "coding agent",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 87.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04261"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04261"
+        }
+      ],
+      "announce_type": "new",
+      "llm_reason": "直击 AI 开发中最昂贵的人工环节——训练数据策展（data curation）。Curation-Bench 设计精巧：固定模型/训练流程/评测，仅让 Agent 通过命令行自主检查数据、实施策略、提交训练任务并迭代。这是首个系统测试通用编程 Agent 能否自动化数据-策展闭环的 benchmark。如果结论为肯定，将直接推动从人工策展到 Agent 自动策展的范式转变。",
+      "id": "can-generalist-agents-automate-data-curation",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "coding-agent",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.4,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.55,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Curating training data is among the most consequential yet labor-intensive par…",
+      "one_line_judgement": "值得继续观察：直击 AI 开发中最昂贵的人工环节——训练数据策展（data curation）。Curation-Bench 设计精巧：固定模型/训练流程…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "直击 AI 开发中最昂贵的人工环节——训练数据策展（data curation）。Curation-Bench 设计精巧：固定模型/训练流程/评测，仅让 Agent 通过命令行自主检查数据、实",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=can-generalist-agents-automate-data-curation"
+    },
+    {
+      "title": "Agent Planning Benchmark: A Diagnostic Framework for Planning Capabilities in LLM Agents",
+      "authors": [
+        "Haoyu Sun",
+        "Wenxuan Wang",
+        "Mingyang Song",
+        "Jujie He",
+        "Weinan Zhang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04874",
+      "pdf_url": "https://arxiv.org/pdf/2606.04874",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Planning is central to LLM agents: before acting, an agent must decompose goals, select tools, reason over constraints, and decide when a task is infeasible. Yet existing agent evaluations often report only end-to-end success, making it difficult to determine whether failures stem from planning or execution. We introduce \\textbf{Agent Planning Benchmark (APB)}, a planning-specific diagnostic benchmark with 4,209 multimodal cases across 22 domains and five settings, covering holistic planning, fe",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark",
+        "multimodal",
+        "planning"
+      ],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04874"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04874"
+        }
+      ],
+      "announce_type": "new",
+      "llm_reason": "首次系统解耦 Agent 的规划能力与执行能力评估，构建 4,209 个多模态案例、覆盖 22 个领域和 5 种设置的诊断式 benchmark。现有 Agent 评测通常只报告端到端成功率，APB 能精确定位失败来源（规划错误 vs 执行错误），对 Agent 工程调试与能力诊断有直接工程价值。规模和覆盖范围在同类 benchmark 中领先。",
+      "id": "agent-planning-benchmark-a-diagnostic-framework-for-planning-capabilities-in-llm-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "multimodal"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.6,
+        "trend_signal": 6.0,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Planning is central to LLM agents: before acting, an agent must decompose goal…",
+      "one_line_judgement": "今天值得试：首次系统解耦 Agent 的规划能力与执行能力评估，构建 4,209 个多模态案例、覆盖 22 个领域和 5 种设置的诊断式 benchma…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "首次系统解耦 Agent 的规划能力与执行能力评估，构建 4,209 个多模态案例、覆盖 22 个领域和 5 种设置的诊断式 benchmark。现有 Agent 评测通常只报告端到端成功率，",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=agent-planning-benchmark-a-diagnostic-framework-for-planning-capabilities-in-llm-agents"
+    },
+    {
+      "title": "Cascading Hallucination in Agentic RAG: The CHARM Framework for Detection and Mitigation",
+      "authors": [
+        "Saroj Mishra"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04435",
+      "pdf_url": "https://arxiv.org/pdf/2606.04435",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Multi-step agentic retrieval-augmented generation (RAG) pipelines have demonstrated significant capability for complex reasoning tasks, yet remain vulnerable to a class of failure that existing hallucination detection mechanisms systematically miss: cascading hallucination, where errors introduced at early pipeline stages propagate and amplify across successive reasoning steps, producing confident but factually incorrect final outputs. To address this vulnerability, we formalize cascading halluc",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CR",
+        "cs.IR"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "RAG",
+        "reasoning"
+      ],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04435"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04435"
+        }
+      ],
+      "announce_type": "new",
+      "llm_reason": "形式化了多步 Agentic RAG 中被系统性忽视的级联幻觉（cascading hallucination）问题——早期步骤的错误会在后续推理中传播和放大，而现有检测机制无法捕获。CHARM 框架提供检测与缓解双重能力。这对任何构建多步 RAG 管线的团队都有直接安全加固价值。",
+      "id": "cascading-hallucination-in-agentic-rag-the-charm-framework-for-detection-and-mitigation",
+      "value_type": "immediate",
+      "matched_topics": [
+        "rag-knowledge",
+        "ai-agent",
+        "reliability-safety"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.15,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "RAG / 知识系统：Multi-step agentic retrieval-augmented generation (RAG) pipelines have demonst…",
+      "one_line_judgement": "今天值得试：形式化了多步 Agentic RAG 中被系统性忽视的级联幻觉（cascading hallucination）问题——早期步骤的错误会在后…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "形式化了多步 Agentic RAG 中被系统性忽视的级联幻觉（cascading hallucination）问题——早期步骤的错误会在后续推理中传播和放大，而现有检测机制无法捕获。CHAR",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=cascading-hallucination-in-agentic-rag-the-charm-framework-for-detection-and-mitigation"
+    },
+    {
+      "title": "MIRAGE: Mobile Agents with Implicit Reasoning and Generative World Models",
+      "authors": [
+        "Zhichao Yang",
+        "Yuanze Hu",
+        "Haojie Hao",
+        "Longkun Hao",
+        "Dongshuo Huang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04627",
+      "pdf_url": "https://arxiv.org/pdf/2606.04627",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Mobile agents are increasingly expected to operate everyday applications from screenshots and language goals, where reliable control requires reasoning over screen affordances, multi-step navigation, and future state changes. However, many agents externalize this computation as long textual chains of thought, which slows interaction, increases supervision cost, and complicates deployment. We introduce MIRAGE, a framework that learns continuous latent reasoning representations from visible textua",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "world model",
+        "RAG",
+        "reasoning"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04627"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04627"
+        }
+      ],
+      "announce_type": "new",
+      "llm_reason": "将移动端 UI Agent 的推理从外部化文本思维链转向隐式连续表征推理，配合生成式世界模型预测未来状态。解决了真实部署中长 CoT 导致的延迟、监督成本和部署复杂度问题。世界模型 + 隐式推理是当前 Agent 架构的前沿趋势。",
+      "id": "mirage-mobile-agents-with-implicit-reasoning-and-generative-world-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "world-model",
+        "mobile-ui",
+        "efficiency"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Mobile agents are increasingly expected to operate everyday applications from …",
+      "one_line_judgement": "值得继续观察：将移动端 UI Agent 的推理从外部化文本思维链转向隐式连续表征推理，配合生成式世界模型预测未来状态。解决了真实部署中长 CoT 导致的…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "将移动端 UI Agent 的推理从外部化文本思维链转向隐式连续表征推理，配合生成式世界模型预测未来状态。解决了真实部署中长 CoT 导致的延迟、监督成本和部署复杂度问题。世界模型 + 隐式推",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=mirage-mobile-agents-with-implicit-reasoning-and-generative-world-models"
+    },
+    {
+      "title": "Plan First, Judge Later, Run Better: A DMAIC-Inspired Agentic System for Industrial Anomaly Detection",
+      "authors": [
+        "Yongzi Yu",
+        "Ao Li",
+        "Le Wang",
+        "Ziyue Li",
+        "Fugee Tsung"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04599",
+      "pdf_url": "https://arxiv.org/pdf/2606.04599",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language model (LLM) agents have shown promise in automating complex data-analysis workflows, but their reliable deployment remains challenging in high-stakes industrial scenarios. Industrial anomaly detection (IAD) is essential for manufacturing quality, safety, and efficiency, yet existing LLM-based IAD agents mainly focus on execution while under-exploiting strategy formulation. Consequently, they struggle to handle heterogeneous modalities in a unified and cost-effective manner. Inspir",
+      "categories": [
+        "cs.AI",
+        "cs.CE"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "safety",
+        "efficiency"
+      ],
+      "score": 73.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04599"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04599"
+        }
+      ],
+      "announce_type": "new",
+      "llm_reason": "将 DMAIC 六西格玛方法论引入 LLM Agent 的工业异常检测（IAD），强调策略制定优先于执行。在异构模态统一处理上有工程价值。但领域较窄（工业制造），DMAIC 映射的创新性有限。对构建工业 AI Agent 的团队有参考价值。",
+      "id": "plan-first-judge-later-run-better-a-dmaic-inspired-agentic-system-for-industrial-anomaly-detection",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "industry-deployment"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.15,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Large language model (LLM) agents have shown promise in automating complex dat…",
+      "one_line_judgement": "值得先保存：将 DMAIC 六西格玛方法论引入 LLM Agent 的工业异常检测（IAD），强调策略制定优先于执行。在异构模态统一处理上有工程价值。但…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "将 DMAIC 六西格玛方法论引入 LLM Agent 的工业异常检测（IAD），强调策略制定优先于执行。在异构模态统一处理上有工程价值。但领域较窄（工业制造），DMAIC 映射的创新性有限。",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=plan-first-judge-later-run-better-a-dmaic-inspired-agentic-system-for-industrial-anomaly-detection"
+    },
+    {
+      "title": "FindIt: A Format-Informed Visual Detection Benchmark for Generalist Multimodal LLMs",
+      "authors": [
+        "Eshika Khandelwal",
+        "Jingjing Pan",
+        "Mingfang Zhang",
+        "Quan Kong",
+        "Lorenzo Garattoni"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04282",
+      "pdf_url": "https://arxiv.org/pdf/2606.04282",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Multimodal large language models (MLLMs) are predominantly evaluated on free-form vision-language tasks such as visual question answering, captioning, and summarization. However, their practical use is rapidly expanding to more structured computer vision settings, where users prompt models to perform localization-centric tasks such as object detection, often within larger agentic or decision-making systems. Despite this shift, there is currently no standardized benchmark that systematically eval",
+      "categories": [
+        "cs.CV"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 50.2,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04282"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04282"
+        }
+      ],
+      "announce_type": "new",
+      "id": "findit-a-format-informed-visual-detection-benchmark-for-generalist-multimodal-llms",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Multimodal large language models (MLLMs) are predominantly evaluated on free-f…",
+      "one_line_judgement": "值得先保存：AI Agent：Multimodal large language models (MLLMs) are predominantly ev…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "AI Agent：Multimodal large language models (MLLMs) are predominantly evaluated on free-f…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=findit-a-format-informed-visual-detection-benchmark-for-generalist-multimodal-llms"
+    },
+    {
+      "title": "LifeSide: Benchmarking Agents as Lifelong Digital Companions",
+      "authors": [
+        "Yuqian Wu",
+        "Zhijie Deng",
+        "Wei Chen",
+        "Junwei Li",
+        "Yutian Jiang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04660",
+      "pdf_url": "https://arxiv.org/pdf/2606.04660",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Lifelong digital companions must integrate cross-session cues, continually update their understanding of users, and adapt to shifting privacy boundaries. Existing evaluations fail to capture this, testing memory recall and short-term empathy in isolation. To bridge this gap, we introduce \\benchmark, a benchmark centered on multi-session \\textit{Memory-Emotion-Environment} loops. By modeling users as persistent worlds with layered profiles and event trajectories, \\benchmark uses multi-agent simul",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 49.1,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04660"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04660"
+        }
+      ],
+      "announce_type": "new",
+      "id": "lifeside-benchmarking-agents-as-lifelong-digital-companions",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 5.4,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.55,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Lifelong digital companions must integrate cross-session cues, continually upd…",
+      "one_line_judgement": "当前可忽略：AI Agent：Lifelong digital companions must integrate cross-session cues…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Lifelong digital companions must integrate cross-session cues, continually upd…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=lifeside-benchmarking-agents-as-lifelong-digital-companions"
+    },
+    {
+      "title": "The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?",
+      "authors": [
+        "Xinyu Lu",
+        "Tianshu Wang",
+        "Pengbo Wang",
+        "zujie wen",
+        "Zhiqiang Zhang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04455",
+      "pdf_url": "https://arxiv.org/pdf/2606.04455",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Current AI benchmarks evaluate agents on task execution within human-designed workflows. These evaluations fundamentally fail to measure a critical next-level capability: whether models can autonomously develop agent systems. We introduce the Meta-Agent Challenge (MAC), an evaluation framework designed to test the capacity of frontier models for autonomous agent development. Specifically, a code agent (the meta-agent) is given a sandboxed environment, an evaluation API, and a time limitation to ",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 46.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04455"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04455"
+        }
+      ],
+      "announce_type": "new",
+      "id": "the-meta-agent-challenge-are-current-agents-capable-of-autonomous-agent-development",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 5.15,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Current AI benchmarks evaluate agents on task execution within human-designed …",
+      "one_line_judgement": "当前可忽略：AI Agent：Current AI benchmarks evaluate agents on task execution withi…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Current AI benchmarks evaluate agents on task execution within human-designed …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=the-meta-agent-challenge-are-current-agents-capable-of-autonomous-agent-development"
+    },
+    {
+      "title": "Food-R1: A Unified Multi-Task Food Vision-Language Model with Reinforcement Learning",
+      "authors": [
+        "Yu Zhu",
+        "Yongkang Li",
+        "Wenjie Zhu",
+        "Haoyi Jiang",
+        "Wenyu Liu"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04986",
+      "pdf_url": "https://arxiv.org/pdf/2606.04986",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent studies have explored Vision-Language Models (VLMs) for food analysis. However, most existing methods rely primarily on supervised fine-tuning (SFT), which often limits reasoning and generalization capabilities. Moreover, high-quality large-scale nutritional annotations remain scarce. To address these issues, we introduce CalorieBench-80K, a large-scale benchmark with curated calorie labels and dietary advice annotations. To the best of our knowledge, it is the first food image benchmark ",
+      "categories": [
+        "cs.CV"
+      ],
+      "keywords": [
+        "benchmark",
+        "reasoning",
+        "fine-tuning",
+        "reinforcement learning"
+      ],
+      "score": 44.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04986"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04986"
+        }
+      ],
+      "announce_type": "new",
+      "id": "food-r1-a-unified-multi-task-food-vision-language-model-with-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Recent studies have explored Vision-Language Models (VLMs) for food analysis. …",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Recent studies have explored Vision-Language Models (VLMs) …",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Recent studies have explored Vision-Language Models (VLMs) for food analysis. …",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=food-r1-a-unified-multi-task-food-vision-language-model-with-reinforcement-learning"
+    },
+    {
+      "title": "Beyond Prompt-Based Planning: MCP-Native Graph Planning-based Biomedical Agent System",
+      "authors": [
+        "Zhangtianyi Chen",
+        "Florensia Widjaja",
+        "Wufei Dai",
+        "Xiangjun Zhang",
+        "Yuhao Shen"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04494",
+      "pdf_url": "https://arxiv.org/pdf/2606.04494",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Biomedical agents promise to automate complex biological workflows, yet current systems face two fundamental bottlenecks: bioinformatics tools are highly heterogeneous in interfaces and execution environments, while agent planning still relies on flat prompt-retrieved tool descriptions. As biomedical software ecosystems grow, this coupling between tool coverage and context size leads to tool confusion, unstable planning, and inefficient execution. We introduce BioManus, an MCP-native biomedical ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "RAG",
+        "planning"
+      ],
+      "score": 44.3,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04494"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04494"
+        }
+      ],
+      "announce_type": "new",
+      "id": "beyond-prompt-based-planning-mcp-native-graph-planning-based-biomedical-agent-system",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.15,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Biomedical agents promise to automate complex biological workflows, yet curren…",
+      "one_line_judgement": "当前可忽略：AI Agent：Biomedical agents promise to automate complex biological work…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Biomedical agents promise to automate complex biological workflows, yet curren…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=beyond-prompt-based-planning-mcp-native-graph-planning-based-biomedical-agent-system"
+    },
+    {
+      "title": "VAMPS: Visual-Assisted Mathematical Problem Solving Benchmark",
+      "authors": [
+        "Amirhossein Dabiriaghdam",
+        "Shayan Vassef",
+        "Mohammadreza Bakhtiari",
+        "Yasamin Medghalchi",
+        "Ilker Hacihaliloglu"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04244",
+      "pdf_url": "https://arxiv.org/pdf/2606.04244",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Multimodal large language models are increasingly capable of complex reasoning, yet their performance often degrades when they must externalize a problem through a tool and then reason over the tool's output, specifically when they rely on visual aids. This gap is especially important because real engineering and scientific workflows often rely on visualization tools for analysis, validation, and decision-making. To study this discrepancy, we introduce VAMPS (Visual-Assisted Mathematical Problem",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark",
+        "multimodal",
+        "reasoning"
+      ],
+      "score": 44.1,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04244"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04244"
+        }
+      ],
+      "announce_type": "new",
+      "id": "vamps-visual-assisted-mathematical-problem-solving-benchmark",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.6,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：Multimodal large language models are increasingly capable of complex reasoning…",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Multimodal large language models are increasingly cap…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：Multimodal large language models are increasingly capable of complex reasoning…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=vamps-visual-assisted-mathematical-problem-solving-benchmark"
+    },
+    {
+      "title": "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline",
+      "authors": [
+        "Zhikai Chen",
+        "Jialiang Gu",
+        "Junyu Yin",
+        "Xianxuan Long",
+        "Shenglai Zeng"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04315",
+      "pdf_url": "https://arxiv.org/pdf/2606.04315",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLM agents accumulate histories that outgrow their context windows, motivating a growing literature on memory systems. Yet most existing designs are tuned to a single scenario (multi-session chat or a single trajectory format), and there is little evidence that they generalize across the heterogeneous trajectories agents encounter in deployment. We revisit eight memory systems plus an agentic harness for search problems, on five scenarios: single-turn QA, multi-session chat, agentic-trajectory Q",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "memory"
+      ],
+      "score": 43.3,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04315"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04315"
+        }
+      ],
+      "announce_type": "new",
+      "id": "exploring-cross-scenario-generality-of-agentic-memory-systems-diagnostics-and-a-strong-baseline",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：LLM agents accumulate histories that outgrow their context windows, motivating…",
+      "one_line_judgement": "当前可忽略：AI Agent：LLM agents accumulate histories that outgrow their context wi…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：LLM agents accumulate histories that outgrow their context windows, motivating…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=exploring-cross-scenario-generality-of-agentic-memory-systems-diagnostics-and-a-strong-baseline"
+    },
+    {
+      "title": "Episodic Memory Temporal Consistency for Cooperative Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Zicheng Zhao",
+        "Yu Lan",
+        "Chengzhengxu Li",
+        "Zhaohan Zhang",
+        "Xiaoming Liu"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04492",
+      "pdf_url": "https://arxiv.org/pdf/2606.04492",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Cooperative Multi-Agent Reinforcement Learning (MARL) frequently suffers from severe reward sparsity and exploration bottlenecks. While episodic memory mechanisms mitigate these issues by reusing high-return trajectories, they often trap agents in local optima due to unconstrained incentive distribution and semantic representation collapse. To address this, we propose Episodic Memory Temporal Consistency (EMTC), a framework that robustly constructs and selectively leverages historical experience",
+      "categories": [
+        "cs.LG",
+        "cs.GT"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "RAG",
+        "reinforcement learning"
+      ],
+      "score": 42.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04492"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04492"
+        }
+      ],
+      "announce_type": "new",
+      "id": "episodic-memory-temporal-consistency-for-cooperative-multi-agent-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Cooperative Multi-Agent Reinforcement Learning (MARL) frequently suffers from …",
+      "one_line_judgement": "当前可忽略：AI Agent：Cooperative Multi-Agent Reinforcement Learning (MARL) frequen…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Cooperative Multi-Agent Reinforcement Learning (MARL) frequently suffers from …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=episodic-memory-temporal-consistency-for-cooperative-multi-agent-reinforcement-learning"
+    },
+    {
+      "title": "Trivium: Temporal Regret as a First-Class Objective for Causal-Memory Controllers",
+      "authors": [
+        "Edward Y. Chang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04421",
+      "pdf_url": "https://arxiv.org/pdf/2606.04421",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Many current agentic systems and LLM pipelines correct mistakes by optimizing outcome reward. This addresses only the what of failure: when an outcome diverges from prediction, the why and when of the mismatch are not systematically logged, reviewed, or corrected, so the same error can recur episode after episode. We argue that this is a structural problem, not merely a model-capacity one. We propose long-horizon temporal regret as a first-class objective alongside outcome regret and epistemic r",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "memory"
+      ],
+      "score": 41.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04421"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04421"
+        }
+      ],
+      "announce_type": "new",
+      "id": "trivium-temporal-regret-as-a-first-class-objective-for-causal-memory-controllers",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.6,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Many current agentic systems and LLM pipelines correct mistakes by optimizing …",
+      "one_line_judgement": "当前可忽略：AI Agent：Many current agentic systems and LLM pipelines correct mistak…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Many current agentic systems and LLM pipelines correct mistakes by optimizing …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=trivium-temporal-regret-as-a-first-class-objective-for-causal-memory-controllers"
+    },
+    {
+      "title": "StepPRM-RTL: Stepwise Process-Reward Guided LLM Fine-Tuning for Enhanced RTL Synthesis",
+      "authors": [
+        "Prashanth Vijayaraghavan",
+        "Apoorva Nitsure",
+        "Luyao Shi",
+        "Ehsan Degan",
+        "Vandana Mukherjee"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04246",
+      "pdf_url": "https://arxiv.org/pdf/2606.04246",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Automatic generation of RTL code for digital hardware designs remains challenging due to long-horizon reasoning, multi-step dependencies, and strict correctness constraints in Verilog and VHDL. We present StepPRM-RTL, a novel framework that combines stepwise trajectory modeling, process-reward modeling (PRM), and retrieval-augmented fine-tuning (RAFT) to enhance both the functional correctness and reasoning fidelity of LLM-based RTL code generation. StepPRM-RTL constructs stepwise reasoning traj",
+      "categories": [
+        "cs.AI",
+        "cs.AR",
+        "cs.CL"
+      ],
+      "keywords": [
+        "reasoning",
+        "fine-tuning",
+        "code generation"
+      ],
+      "score": 40.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04246"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04246"
+        }
+      ],
+      "announce_type": "new",
+      "id": "stepprm-rtl-stepwise-process-reward-guided-llm-fine-tuning-for-enhanced-rtl-synthesis",
+      "value_type": "ignore",
+      "matched_topics": [
+        "coding-agent",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Coding Agent：Automatic generation of RTL code for digital hardware designs remains challeng…",
+      "one_line_judgement": "当前可忽略：Coding Agent：Automatic generation of RTL code for digital hardware des…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Coding Agent：Automatic generation of RTL code for digital hardware designs remains challeng…",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=stepprm-rtl-stepwise-process-reward-guided-llm-fine-tuning-for-enhanced-rtl-synthesis"
+    },
+    {
+      "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
+      "authors": [
+        "Weidong Tang",
+        "Jierui Li",
+        "Yueling Hou",
+        "Zihan Mei",
+        "Can Zhang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04184",
+      "pdf_url": "https://arxiv.org/pdf/2606.04184",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "True general intelligence requires not only a model of the physical world but also a social world model: the capacity to infer how individual mental states interact and crystallize into group-level outcomes. Despite notable progress in individual-level Theory of Mind (ToM) reasoning, existing multimodal large language models fail at this broader task. Collective behavior emerges non-linearly from social tensions, conformity dynamics, and structural constraints, meaning it cannot be recovered by ",
+      "categories": [
+        "cs.CV"
+      ],
+      "keywords": [
+        "world model",
+        "benchmark",
+        "multimodal",
+        "reasoning"
+      ],
+      "score": 40.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04184"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04184"
+        }
+      ],
+      "announce_type": "new",
+      "id": "grouptom-bench-benchmarking-group-theory-of-mind-and-nonlinear-social-emergence-in-mllms",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：True general intelligence requires not only a model of the physical world but …",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：True general intelligence requires not only a model o…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：True general intelligence requires not only a model of the physical world but …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=grouptom-bench-benchmarking-group-theory-of-mind-and-nonlinear-social-emergence-in-mllms"
+    },
+    {
+      "title": "AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning",
+      "authors": [
+        "Qingxu Fu",
+        "Boyin Liu",
+        "Shuchang Tao",
+        "Zhaoyang Liu",
+        "Bolin Ding"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04484",
+      "pdf_url": "https://arxiv.org/pdf/2606.04484",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present AgentJet, a distributed swarm training framework for large language model (LLM) agent reinforcement learning. Unlike centralized frameworks that tightly couple agent rollouts with model optimization, AgentJet adopts a decoupled multi-node architecture in which swarm server nodes host trainable models and run optimization on GPU clusters, whereas swarm client nodes execute arbitrary agents on arbitrary devices. This design provides capabilities that are difficult to support in centrali",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "reinforcement learning"
+      ],
+      "score": 39.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04484"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04484"
+        }
+      ],
+      "announce_type": "new",
+      "id": "agentjet-a-flexible-swarm-training-framework-for-agentic-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：We present AgentJet, a distributed swarm training framework for large language…",
+      "one_line_judgement": "当前可忽略：AI Agent：We present AgentJet, a distributed swarm training framework f…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：We present AgentJet, a distributed swarm training framework for large language…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=agentjet-a-flexible-swarm-training-framework-for-agentic-reinforcement-learning"
+    },
+    {
+      "title": "DSA: Dynamic Step Allocation for Fast Autoregressive Video Generation",
+      "authors": [
+        "Thanh-Tung Le",
+        "Yunhan Zhao",
+        "Menglei Chai",
+        "Zhengyang Shen",
+        "Zhe Cao"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04432",
+      "pdf_url": "https://arxiv.org/pdf/2606.04432",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Video diffusion transformers have achieved state-of-the-art visual quality, but their high inference cost remains a major bottleneck for real-time applications. Recent distillation frameworks produce autoregressive video diffusion models with reduced latency, yet these models still use a fixed number of denoising steps per frame, wasting computation on predictable frames and under-refining challenging ones. We present DSA, a confidence-guided adaptive computation framework for AR video diffusion",
+      "categories": [
+        "cs.CV"
+      ],
+      "keywords": [
+        "inference",
+        "transformer",
+        "diffusion",
+        "distillation"
+      ],
+      "score": 38.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04432"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04432"
+        }
+      ],
+      "announce_type": "new",
+      "id": "dsa-dynamic-step-allocation-for-fast-autoregressive-video-generation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Video diffusion transformers have achieved state-of-the-art visual quality, bu…",
+      "one_line_judgement": "当前可忽略：推理与服务：Video diffusion transformers have achieved state-of-the-art visu…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Video diffusion transformers have achieved state-of-the-art visual quality, bu…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=dsa-dynamic-step-allocation-for-fast-autoregressive-video-generation"
+    },
+    {
+      "title": "The Saturation Trap and the Subjectivity of Intervention Timing: Why Affect-Based Triggers and LLM Judges Fail to Time Interventions on Autonomous Agents",
+      "authors": [
+        "Manvendra Modgil"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04296",
+      "pdf_url": "https://arxiv.org/pdf/2606.04296",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "As autonomous AI agents move from conversational systems to long-horizon software execution, runtime safety layers that decide when to interrupt an agent have become essential. We study this timing problem using a continuous 18-dimensional affective-dynamics engine (HEART) as a diagnostic probe, evaluating four intervention trigger families - absolute state thresholds, composite state-action patterns, regex reasoning-feature extraction, and zero-shot LLM-as-judge - against human-annotated interv",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "reasoning",
+        "safety"
+      ],
+      "score": 38.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04296"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04296"
+        }
+      ],
+      "announce_type": "new",
+      "id": "the-saturation-trap-and-the-subjectivity-of-intervention-timing-why-affect-based-triggers-and-llm-judges-fail-to-time-interventions-on-autonomous-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：As autonomous AI agents move from conversational systems to long-horizon softw…",
+      "one_line_judgement": "当前可忽略：AI Agent：As autonomous AI agents move from conversational systems to l…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：As autonomous AI agents move from conversational systems to long-horizon softw…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=the-saturation-trap-and-the-subjectivity-of-intervention-timing-why-affect-based-triggers-and-llm-judges-fail-to-time-interventions-on-autonomous-agents"
+    },
+    {
+      "title": "Improving the Efficiency and Effectiveness of LLM Knowledge Distillation for Conversational Search",
+      "authors": [
+        "Stan Fris",
+        "Jan Hutter",
+        "Jan Henrik Bertrand",
+        "Simon Lupart",
+        "Mohammad Aliannejadi"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04650",
+      "pdf_url": "https://arxiv.org/pdf/2606.04650",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Conversational Search (CS) considers retrieval of relevant documents based on conversational context. Large Language Models (LLMs) have significantly enhanced CS by enabling effective query rewriting. However, employing LLMs during inference poses efficiency challenges. A method to balance effectiveness and efficiency is the use of knowledge distillation from LLM-based query rewriting. Recent work applies the Kullback-Leibler Divergence (KLD) for distillation, relaxing the alignment with the tea",
+      "categories": [
+        "cs.IR"
+      ],
+      "keywords": [
+        "inference",
+        "alignment",
+        "distillation",
+        "efficiency"
+      ],
+      "score": 37.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04650"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04650"
+        }
+      ],
+      "announce_type": "new",
+      "id": "improving-the-efficiency-and-effectiveness-of-llm-knowledge-distillation-for-conversational-search",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Conversational Search (CS) considers retrieval of relevant documents based on …",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Conversational Search (CS) considers retrieval of relevant …",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Conversational Search (CS) considers retrieval of relevant documents based on …",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=improving-the-efficiency-and-effectiveness-of-llm-knowledge-distillation-for-conversational-search"
+    },
+    {
+      "title": "RePercENT: Scaling Disentangled Representation Learning Beyond Two Modalities",
+      "authors": [
+        "Vasiliki Rizou",
+        "Pascal Frossard",
+        "Dorina Thanou"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.05109",
+      "pdf_url": "https://arxiv.org/pdf/2606.05109",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "To leverage the full potential of multimodal data, we need representations that go beyond the state-of-the-art alignment and fusion approaches and exploit all cross-modal interactions without sacrificing modality-specific information. Learning disentangled representations is a principled way to identify these underlying shared and unique factors that are hidden in observational data. However, while multimodal disentanglement is a compelling paradigm, existing methods are largely confined to the ",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG",
+        "multimodal",
+        "alignment",
+        "scaling"
+      ],
+      "score": 37.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.05109"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.05109"
+        }
+      ],
+      "announce_type": "new",
+      "id": "repercent-scaling-disentangled-representation-learning-beyond-two-modalities",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：To leverage the full potential of multimodal data, we need representations tha…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：To leverage the full potential of multimodal data, we need …",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：To leverage the full potential of multimodal data, we need representations tha…",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=repercent-scaling-disentangled-representation-learning-beyond-two-modalities"
+    },
+    {
+      "title": "Toward Multi-Domain and Long-Tailed Quantization via Feature Alignment and Scaling",
+      "authors": [
+        "Chin-Yuan Yeh",
+        "Ting-An Chen",
+        "De-Nian Yang",
+        "Ming-Syan Chen"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04920",
+      "pdf_url": "https://arxiv.org/pdf/2606.04920",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Quantizing deep neural networks is essential for efficient inference on resource-constrained devices. However, most existing methods are designed for single-domain and class-balanced data, leaving practical settings with domain shifts or severe class imbalance underexplored. We address these challenges with Efficient Multi-Domain Alignment Quantization (EmaQ), which aligns domain distributions through a CDF-based projection and uses sensitivity-aware weight aggregation to stabilize multi-domain ",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "keywords": [
+        "inference",
+        "alignment",
+        "scaling",
+        "quantization"
+      ],
+      "score": 35.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04920"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04920"
+        }
+      ],
+      "announce_type": "new",
+      "id": "toward-multi-domain-and-long-tailed-quantization-via-feature-alignment-and-scaling",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Quantizing deep neural networks is essential for efficient inference on resour…",
+      "one_line_judgement": "当前可忽略：推理与服务：Quantizing deep neural networks is essential for efficient infer…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Quantizing deep neural networks is essential for efficient inference on resour…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=toward-multi-domain-and-long-tailed-quantization-via-feature-alignment-and-scaling"
+    },
+    {
+      "title": "When Autoregressive Consistency Hurts Safety Alignment",
+      "authors": [
+        "Bochen Lyu",
+        "Yiyang Jia",
+        "Xiaohao Cai",
+        "Zhanxing Zhu"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04168",
+      "pdf_url": "https://arxiv.org/pdf/2606.04168",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Safety alignment in large language models (LLMs) is fragile in part because it is often shallow: fine-tuning mainly reshapes the model's behavior near the first few output tokens. We argue that this phenomenon can be understood through autoregressive consistency, the tendency of next-token prediction to preserve and extend the current response trajectory consistently. By analyzing the learning dynamics of safety alignment, we show that autoregressive consistency can concentrate alignment updates",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "keywords": [
+        "RAG",
+        "alignment",
+        "safety",
+        "fine-tuning"
+      ],
+      "score": 34.3,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04168"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04168"
+        }
+      ],
+      "announce_type": "new",
+      "id": "when-autoregressive-consistency-hurts-safety-alignment",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Safety alignment in large language models (LLMs) is fragile in part because it…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Safety alignment in large language models (LLMs) is fragile…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Safety alignment in large language models (LLMs) is fragile in part because it…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=when-autoregressive-consistency-hurts-safety-alignment"
+    },
+    {
+      "title": "MeshFlow: Efficient Artistic Mesh Generation via MeshVAE and Flow-based Diffusion Transformer",
+      "authors": [
+        "Weiyu Li",
+        "Antoine Toisoul",
+        "Tom Monnier",
+        "Roman Shapovalov",
+        "Rakesh Ranjan"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04621",
+      "pdf_url": "https://arxiv.org/pdf/2606.04621",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present MeshFlow, a new method for generating artist-like 3D meshes. Current mesh generators often adopt Auto-Regressive (AR) next-token prediction, a natural choice given the discrete nature of mesh topology. However, AR methods scale poorly because the inference cost is quadratic in mesh size. They also require discretizing the vertex coordinates, which introduces quantization errors. To address these challenges, we introduce a Variational Autoencoder (VAE) that, supervised with a contrasti",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "keywords": [
+        "inference",
+        "transformer",
+        "diffusion",
+        "quantization"
+      ],
+      "score": 34.3,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04621"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04621"
+        }
+      ],
+      "announce_type": "new",
+      "id": "meshflow-efficient-artistic-mesh-generation-via-meshvae-and-flow-based-diffusion-transformer",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：We present MeshFlow, a new method for generating artist-like 3D meshes. Curren…",
+      "one_line_judgement": "当前可忽略：推理与服务：We present MeshFlow, a new method for generating artist-like 3D …",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：We present MeshFlow, a new method for generating artist-like 3D meshes. Curren…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=meshflow-efficient-artistic-mesh-generation-via-meshvae-and-flow-based-diffusion-transformer"
+    },
+    {
+      "title": "Expert-Aware Refusal Steering",
+      "authors": [
+        "Anna C. Marbut",
+        "Daniel R. Olson",
+        "Travis J. Wheeler"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.04160",
+      "pdf_url": "https://arxiv.org/pdf/2606.04160",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Safety alignment in instruction-tuned large language models (LLMs) depends on a model's ability to reliably refuse to respond to harmful or disallowed requests. Recent work has shown that a steering vector can be applied to a dense LLM during inference to effectively suppress refusal behavior, inducing response to harmful requests. We extend this refusal steering method to three open-source Mixture-of-Experts (MoE) LLMs and find that steering performance is uninhibited by the complex routing pat",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "keywords": [
+        "inference",
+        "alignment",
+        "safety",
+        "MoE"
+      ],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.04160"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.04160"
+        }
+      ],
+      "announce_type": "new",
+      "id": "expert-aware-refusal-steering",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Safety alignment in instruction-tuned large language models (LLMs) depends on …",
+      "one_line_judgement": "当前可忽略：推理与服务：Safety alignment in instruction-tuned large language models (LLM…",
+      "first_seen_date": "2026-06-05",
+      "first_deep_dive_daily": "2026-06-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Safety alignment in instruction-tuned large language models (LLMs) depends on …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=expert-aware-refusal-steering"
+    },
     {
       "title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
       "authors": [
