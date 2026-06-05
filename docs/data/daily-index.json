@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-05T04:38:41.705227",
+  "updated_at": "2026-06-06T04:33:31.479389",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-06",
+      "title": "论文价值发现日报 - 2026-06-06",
+      "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "deep_dive_url": "http://arxiv.org/abs/2606.06492v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "今天完成 Code2LoRA 摘要精读 + 超网络设计精读；评估当前代码助手（如 Continue / Cursor / 私有 Codex 部署）的仓级知识策略，列出'仓级 RAG vs 仓级 LoRA vs 长上下文'的成本-延迟-效果三维对比表",
+      "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
+      "one_line_judgement": "把'每仓一次微调'升级为'按需生成 LoRA 适配器'，零推理 token 开销注入仓级上下文，直接命中企业内部代码助手（Cursor/Copilot/Codex 私有部署）的核心痛点：长上下文窗口不应用于仓级 schema，模型走 RAG 又会拖慢推理。超网络生成的 LoRA 可作为静态索引服务持续维护，与代码仓 CI 解耦。",
+      "path": "daily-detail.html?date=2026-06-06"
+    },
     {
       "date": "2026-06-05",
       "title": "论文价值发现日报 - 2026-06-05",
@@ -378,19 +391,6 @@
       "max_uncertainty": "SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证",
       "one_line_judgement": "直接解决 LLM 部署最核心的推理延迟瓶颈，用轻量 MLP 自适应选择推测解码长度，在压缩模型上实现 56% 加速且开销仅 0.34ms/step。实验覆盖 5112 条记录、统计显著 p<0.001，工程集成路径清晰——任何使用推测解码的框架均可直接接入。",
       "path": "daily-detail.html?date=2026-05-07"
-    },
-    {
-      "date": "2026-05-06",
-      "title": "论文价值发现日报 - 2026-05-06",
-      "deep_dive_title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-      "deep_dive_url": "http://arxiv.org/abs/2605.02868v1",
-      "decision": "持续观察",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-06"
     }
   ]
 }

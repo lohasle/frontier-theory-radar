@@ -1,204 +1,8 @@
 {
-  "updated_at": "2026-06-06T04:33:31.474186",
-  "site_title": "前沿理论驱动技术雷达日报",
-  "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
-  "latest_daily": {
-    "date": "2026-06-06",
-    "title": "论文价值发现日报 - 2026-06-06",
-    "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-    "deep_dive_url": "http://arxiv.org/abs/2606.06492v1",
-    "decision": "重点学习",
-    "value_type": "immediate",
-    "value_type_label": "即时价值",
-    "daily_action": "今天完成 Code2LoRA 摘要精读 + 超网络设计精读；评估当前代码助手（如 Continue / Cursor / 私有 Codex 部署）的仓级知识策略，列出'仓级 RAG vs 仓级 LoRA vs 长上下文'的成本-延迟-效果三维对比表",
-    "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
-    "one_line_judgement": "把'每仓一次微调'升级为'按需生成 LoRA 适配器'，零推理 token 开销注入仓级上下文，直接命中企业内部代码助手（Cursor/Copilot/Codex 私有部署）的核心痛点：长上下文窗口不应用于仓级 schema，模型走 RAG 又会拖慢推理。超网络生成的 LoRA 可作为静态索引服务持续维护，与代码仓 CI 解耦。",
-    "path": "daily-detail.html?date=2026-06-06"
-  },
-  "top_paper": {
-    "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-    "authors": [
-      "Liliana Hotsko",
-      "Yinxi Li",
-      "Yuntian Deng",
-      "Pengyu Nie"
-    ],
-    "published": "2026-06-04",
-    "updated": "2026-06-04",
-    "source": "arXiv",
-    "url": "http://arxiv.org/abs/2606.06492v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.06492v1",
-    "openreview_url": "",
-    "paperswithcode_url": "",
-    "code_url": "",
-    "benchmark_url": "",
-    "project_url": "",
-    "abstract": "Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysis) or through per-repository fine-tuning and LoRA -- costly at repository scale and brittle to evolving codebases. We introduce Code2LoRA, a hypernetwork framework that generates repository-specific LoRA adapters, effectively injecting repository knowledge with zero inference-time token overhead. Co",
-    "categories": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "keywords": [
-      "benchmark",
-      "RAG",
-      "inference"
-    ],
-    "score": 86.0,
-    "decision": "重点学习",
-    "links": [
-      {
-        "label": "arXiv",
-        "url": "http://arxiv.org/abs/2606.06492v1"
-      },
-      {
-        "label": "PDF",
-        "url": "https://arxiv.org/pdf/2606.06492v1"
-      }
-    ],
-    "llm_reason": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提下注入仓级知识；这是企业内部代码助手（Cursor / Copilot / Codex 私有部署）长期面对的核心痛点：仓级上下文如何不挤占长上下文窗口。论文定位 cs.SE+cs.AI+cs.CL 跨三类，工程落点明确：可作为静态索引服务或 CI hook 持续生成 LoRA。",
-    "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-    "value_type": "immediate",
-    "matched_topics": [
-      "coding-agent",
-      "inference-serving",
-      "context-engineering"
-    ],
-    "score_breakdown": {
-      "novelty": 4.8,
-      "problem_importance": 5.8,
-      "relevance": 6.2,
-      "evidence_strength": 4.5,
-      "engineering_testability": 4.05,
-      "trend_signal": 3.5,
-      "long_tail_potential": 3.5,
-      "asset_convertibility": 6.2,
-      "actionability": 5.0,
-      "noise_risk": 1.2,
-      "weak_evidence_penalty": 5.0,
-      "low_relevance_penalty": 2.2,
-      "engineering_cost_penalty": 2.5,
-      "reproducibility_risk": 5.0
-    },
-    "trend_status": "emerging",
-    "brief_cn": "Coding Agent：Code language models need repository-level context to resolve imports, APIs, a…",
-    "one_line_judgement": "今天值得试：Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero infere…",
-    "first_seen_date": "2026-06-06",
-    "first_deep_dive_daily": "2026-06-06",
-    "value_type_label": "即时价值",
-    "trend_stage_label": "萌芽",
-    "future_trigger": "待更多证据",
-    "long_tail_summary": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提",
-    "related_trends": [
-      "coding-agent",
-      "context-engineering"
-    ],
-    "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution"
-  },
-  "paper_count": 279,
-  "daily_count": 30,
-  "trend_count": 3,
-  "long_tail_count": 37,
-  "value_distribution": {
-    "immediate": 28,
-    "trend": 33,
-    "long_tail": 37,
-    "ignore": 181
-  },
-  "recent_dailies": [
-    {
-      "date": "2026-06-06",
-      "title": "论文价值发现日报 - 2026-06-06",
-      "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-      "deep_dive_url": "http://arxiv.org/abs/2606.06492v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "今天完成 Code2LoRA 摘要精读 + 超网络设计精读；评估当前代码助手（如 Continue / Cursor / 私有 Codex 部署）的仓级知识策略，列出'仓级 RAG vs 仓级 LoRA vs 长上下文'的成本-延迟-效果三维对比表",
-      "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
-      "one_line_judgement": "把'每仓一次微调'升级为'按需生成 LoRA 适配器'，零推理 token 开销注入仓级上下文，直接命中企业内部代码助手（Cursor/Copilot/Codex 私有部署）的核心痛点：长上下文窗口不应用于仓级 schema，模型走 RAG 又会拖慢推理。超网络生成的 LoRA 可作为静态索引服务持续维护，与代码仓 CI 解耦。",
-      "path": "daily-detail.html?date=2026-06-06"
-    },
-    {
-      "date": "2026-06-05",
-      "title": "论文价值发现日报 - 2026-06-05",
-      "deep_dive_title": "Can Generalist Agents Automate Data Curation?",
-      "deep_dive_url": "https://arxiv.org/abs/2606.04261",
-      "decision": "重点学习",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "精读 Curation-Bench 的 Agent 接口设计，评估数据策展流程中 Agent 自动化的可行性；浏览 APB 的诊断维度设计，对比当前 Agent 评测方法的差距",
-      "max_uncertainty": "Curation-Bench 上通用 Agent 的具体表现数据待核验（摘要截断）；APB 在非多模态 Agent 上的适用性待确认；CHARM 框架的检测精度和延迟开销未知",
-      "one_line_judgement": "直击 AI 开发中最昂贵的人工环节——训练数据策展。Curation-Bench 首次系统测试通用编程 Agent 能否自动化 propose→implement→evaluate→revise 数据策略闭环，固定模型/训练/评测、仅让 Agent 通过 CLI 自主迭代。如果结论肯定，将推动从人工策展到 Agent 自动策展的范式转变。",
-      "path": "daily-detail.html?date=2026-06-05"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "论文价值发现日报 - 2026-06-03",
-      "deep_dive_title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
-      "deep_dive_url": "http://arxiv.org/abs/2606.02568v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-03"
-    },
-    {
-      "date": "2026-06-02",
-      "title": "论文价值发现日报 - 2026-06-02",
-      "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
-      "deep_dive_url": "",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-02"
-    },
-    {
-      "date": "2026-06-01",
-      "title": "论文价值发现日报 - 2026-06-01",
-      "deep_dive_title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
-      "deep_dive_url": "https://arxiv.org/abs/2605.30329v1",
-      "decision": "持续观察",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-01"
-    },
-    {
-      "date": "2026-05-31",
-      "title": "论文价值发现日报 - 2026-05-31",
-      "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
-      "deep_dive_url": "",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-31"
-    },
-    {
-      "date": "2026-05-30",
-      "title": "论文价值发现日报 - 2026-05-30",
-      "deep_dive_title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
-      "deep_dive_url": "http://arxiv.org/abs/2605.30329v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-30"
-    }
-  ],
-  "top_papers": [
+  "date": "2026-06-06",
+  "total": 10,
+  "generated_at": "2026-06-06T04:31:02.784399",
+  "papers": [
     {
       "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
       "authors": [
@@ -264,20 +68,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "Coding Agent：Code language models need repository-level context to resolve imports, APIs, a…",
-      "one_line_judgement": "今天值得试：Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero infere…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提",
-      "related_trends": [
-        "coding-agent",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution"
+      "trend_status": "emerging"
     },
     {
       "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
@@ -340,19 +131,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "推理与服务：Parameter-efficient finetuning methods based on spectral decomposition have en…",
-      "one_line_judgement": "值得继续观察：TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方向，显著降低连续学习中的灾难性遗忘。这是 PEFT ",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning"
+      "trend_status": "emerging"
     },
     {
       "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
@@ -419,19 +198,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "Multimodal Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
-      "one_line_judgement": "值得继续观察：HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space comma…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space command）蒸馏到单一 humanoid 全身控制器，让上",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers"
+      "trend_status": "emerging"
     },
     {
       "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
@@ -492,20 +259,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Recent advancements in reasoning language models have been driven by Reinforce…",
-      "one_line_judgement": "值得继续观察：RREDCoT 针对 GRPO 类 RLHF 中'最终答案才发奖励'的延迟奖励问题，提出段级奖励再分配（segment-level rewa…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "RREDCoT 针对 GRPO 类 RLHF 中'最终答案才发奖励'的延迟奖励问题，提出段级奖励再分配（segment-level reward redistribution）。Sepp Ho",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models"
+      "trend_status": "emerging"
     },
     {
       "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
@@ -568,19 +322,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
-      "one_line_judgement": "值得先保存：TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增广与速度 token 调控，把 VLA 从'单速策略",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies"
+      "trend_status": "long_tail_watch"
     },
     {
       "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
@@ -642,19 +384,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
-      "one_line_judgement": "当前可忽略：AI Agent：Many real-world competitive systems require multiple decision…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games"
+      "trend_status": "noise"
     },
     {
       "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
@@ -719,19 +449,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
-      "one_line_judgement": "当前可忽略：LLM 评测：As AI writing assistants become increasingly integrated into re…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection"
+      "trend_status": "noise"
     },
     {
       "title": "Self-Augmenting Retrieval for Diffusion Language Models",
@@ -795,19 +513,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Discrete diffusion language models generate text by iterati…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models"
+      "trend_status": "noise"
     },
     {
       "title": "Pretraining Recurrent Networks without Recurrence",
@@ -866,19 +572,7 @@
         "engineering_cost_penalty": 4.0,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
-      "one_line_judgement": "当前可忽略：Context Engineering：Training recurrent neural networks (RNNs) requires…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across l",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence"
+      "trend_status": "noise"
     },
     {
       "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
@@ -936,72 +630,8 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
-      "one_line_judgement": "当前可忽略：前沿论文：In this paper, we study regret minimization in repeated games wit…",
-      "first_seen_date": "2026-06-06",
-      "first_deep_dive_daily": "2026-06-06",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games"
+      "trend_status": "noise"
     }
   ],
-  "long_tail_highlights": [
-    {
-      "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
-      "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
-      "direction": "Multimodal Agent",
-      "long_tail_type": "工程抽象",
-      "why_save": "TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增广与速度 token 调控，把 VLA 从'单速策略",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-06-27",
-      "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies"
-    },
-    {
-      "id": "plan-first-judge-later-run-better-a-dmaic-inspired-agentic-system-for-industrial-anomaly-detection",
-      "title": "Plan First, Judge Later, Run Better: A DMAIC-Inspired Agentic System for Industrial Anomaly Detection",
-      "direction": "AI Agent / industry-deployment",
-      "long_tail_type": "工程抽象",
-      "why_save": "将 DMAIC 六西格玛方法论引入 LLM Agent 的工业异常检测（IAD），强调策略制定优先于执行。在异构模态统一处理上有工程价值。但领域较窄（工业制造），DMAIC 映射的创新性有限。",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-06-26",
-      "detail_path": "paper-detail.html?id=plan-first-judge-later-run-better-a-dmaic-inspired-agentic-system-for-industrial-anomaly-detection"
-    },
-    {
-      "id": "findit-a-format-informed-visual-detection-benchmark-for-generalist-multimodal-llms",
-      "title": "FindIt: A Format-Informed Visual Detection Benchmark for Generalist Multimodal LLMs",
-      "direction": "AI Agent / Context Engineering",
-      "long_tail_type": "工程抽象",
-      "why_save": "AI Agent：Multimodal large language models (MLLMs) are predominantly evaluated on free-f…",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-06-26",
-      "detail_path": "paper-detail.html?id=findit-a-format-informed-visual-detection-benchmark-for-generalist-multimodal-llms"
-    }
-  ],
-  "common_research_path": [
-    "论文",
-    "理论",
-    "工程实践",
-    "趋势",
-    "启发",
-    "行动"
-  ]
+  "scored_at": "2026-06-06"
 }

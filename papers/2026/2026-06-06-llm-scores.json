@@ -1,0 +1,125 @@
+{
+  "date": "2026-06-06",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-06T04:36:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "http://arxiv.org/abs/2606.06492v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提下注入仓级知识；这是企业内部代码助手（Cursor / Copilot / Codex 私有部署）长期面对的核心痛点：仓级上下文如何不挤占长上下文窗口。论文定位 cs.SE+cs.AI+cs.CL 跨三类，工程落点明确：可作为静态索引服务或 CI hook 持续生成 LoRA。",
+      "matched_topics": ["coding-agent", "inference-serving", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.06494v1": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方向，显著降低连续学习中的灾难性遗忘。这是 PEFT 与 Continual Learning 两个高活跃方向的交集，与 2025 年 PiSSA、MiLoRA、AdaLoRA 一脉相承，对'增量训练 / 持续微调'类工程链路（RLHF rollouts、A/B 模型分支、个性化适配器）有直接趋势价值。",
+      "matched_topics": ["inference-serving", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.06493v1": {
+      "score": 75,
+      "value_type": "trend",
+      "reason": "HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space command）蒸馏到单一 humanoid 全身控制器，让上游规划器无需输出密集运动参考即可驱动操作技能。这是具身 Agent 'planner ⇄ controller' 接口标准化的关键一步，对应趋势：把任务级指令与运动级执行解耦，是 Humanoid / VLA / 整机系统进入产品的必经路径。",
+      "matched_topics": ["multimodal-agent", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.06475v1": {
+      "score": 73,
+      "value_type": "trend",
+      "reason": "RREDCoT 针对 GRPO 类 RLHF 中'最终答案才发奖励'的延迟奖励问题，提出段级奖励再分配（segment-level reward redistribution）。Sepp Hochreiter 作者团队加持，与 DAPO / VinePPO / GRPO 改进族高度同向，是 2026 reasoning model 训练栈必看方向。方法论借鉴强化学习的 eligibility traces / GAE，能直接接进现有 GRPO 训练管线。",
+      "matched_topics": ["ai-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.06491v1": {
+      "score": 70,
+      "value_type": "long_tail",
+      "reason": "TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增广与速度 token 调控，把 VLA 从'单速策略'升级为'风险感知变速策略'。对具身产品化（家庭/工业机器人执行效率与安全性平衡）有直接价值，但短期内更偏研究资产与原型。",
+      "matched_topics": ["multimodal-agent"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 0,
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "arxiv_id": "2606.06492v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.6,
+      "confidence": "medium",
+      "one_line": "用超网络为代码 LM 按需生成仓级 LoRA 适配器，零推理 token 开销注入仓级知识，应对代码仓演化",
+      "decision": "strong_accept",
+      "reasoning": "工程落点明确：解决企业内部代码助手的仓级上下文注入问题，且不挤占推理长上下文预算。超网络生成的 LoRA 可作为静态索引服务持续维护，与代码仓 CI 解耦。证据强度受限于待核验的代码与 benchmark 数据。"
+    },
+    {
+      "paper_index": 1,
+      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+      "arxiv_id": "2606.06494v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 8.0,
+      "confidence": "medium",
+      "one_line": "用谱软惩罚保护预训练权重的主成分方向，把连续学习更新路由到长尾奇异方向，降低灾难性遗忘",
+      "decision": "strong_accept",
+      "reasoning": "理论新颖度（保护主成分的谱正则）+ 工程价值（可叠加到任意 LoRA 类训练流程）双高。与 PiSSA、MiLoRA、AdaLoRA、O-LoRA 同族，对持续 RLHF / 个性化适配 / 多分支微调有直接迁移价值。代码与 benchmark 待核验。"
+    },
+    {
+      "paper_index": 2,
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "arxiv_id": "2606.06493v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 7.5,
+      "confidence": "medium",
+      "one_line": "通过蒸馏互补教师学习人形机器人任务空间命令接口，让上游规划器直接输出操作级指令",
+      "decision": "accept",
+      "reasoning": "对'planner ⇄ controller'接口标准化贡献明确——这是 humanoid 商业化的关键工程断点。但当前主要面向人形仿真/真机研究社区，企业落地需要硬件栈与仿真栈双成熟。"
+    },
+    {
+      "paper_index": 3,
+      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "arxiv_id": "2606.06475v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 7
+      },
+      "weighted_total": 7.3,
+      "confidence": "medium",
+      "one_line": "针对 GRPO 类 RL 微调的延迟奖励问题，把最终奖励按 CoT 段级再分配，缓解 Monte Carlo 高方差",
+      "decision": "accept",
+      "reasoning": "属于 reasoning model 训练栈的高活跃改进方向（DAPO / VinePPO / GRPO-variant），与 OpenAI o1/o3、DeepSeek-R1、Kimi K2 等推理模型训练管线直接相关。Hochreiter 团队加持提升方法严谨度概率。"
+    },
+    {
+      "paper_index": 4,
+      "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+      "arxiv_id": "2606.06491v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 7,
+        "actionability": 6
+      },
+      "weighted_total": 7.0,
+      "confidence": "medium",
+      "one_line": "通过动作幅度阈值与速度 token 把 VLA 训成'风险感知变速策略'：transit 加速、contact 减速",
+      "decision": "accept",
+      "reasoning": "对具身操作产品化（执行效率 vs 安全性）有直接价值，但短期内更偏研究资产；适合作为长尾保存，等待人形/VLA 硬件成本下降后被工程界调用。"
+    }
+  ]
+}
