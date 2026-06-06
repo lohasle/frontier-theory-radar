@@ -1,0 +1,188 @@
+{
+  "date": "2026-06-07",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-07T04:34:00",
+  "summary_markdown": "- **今天最值得看什么：** [Self-Augmenting Retrieval for Diffusion Language Models](http://arxiv.org/abs/2606.06474v1)。\n- **为什么值得看：** 把离散扩散 LM 去噪过程中'低置信度被丢弃的 token'重新定义为 RAG 的前瞻检索信号——副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队。当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，需要新的检索基础设施。\n- **它属于什么价值类型：** 趋势价值（trend）。Diffusion LM 尚未规模化产品化，但方法学与检索范式已在定型期，应纳入趋势雷达。\n- **今天该做什么：** 先读摘要、'去噪轨迹中低置信度 token 是前瞻信号'的实验证据，然后判断'扩散 LM + 检索'在你 2026-2027 的应用窗口里是否需要提前布局检索基础设施。\n- **最大不确定性：** Diffusion LM 本身是否能在通用文本生成上与 autoregressive LM 竞争；低置信度 token 在更复杂领域（代码、长文档）的实体召回质量。",
+  "uncertainty": "Diffusion LM 在通用文本生成上是否能与 autoregressive LM 竞争（当前 MDLM/SEDM/Plaid 主要在受控任务上有效）；低置信度 token 在代码 / 长文档 / 多跳推理场景的实体召回质量；SMT 在更大主干模型（>1B 参数）上的可扩展性；OpAI-Bench 的操作空间是否覆盖 Cursor/Copilot 类 IDE 共编场景",
+  "core_problem": "当生成式 LM 从 autoregressive 走向 diffusion / masked 范式时，RAG 检索路径如何重新设计——传统'query → 检索 → 拼接上下文'管线在并行去噪生成中失效，需要'中间去噪状态 → 检索 → 影响下一步去噪'的新基础设施",
+  "new_claim_or_method": "离散扩散 LM 在每步并行去噪时会输出多个 tentative token：高置信度的 commit 到输出，低置信度的 discard。论文证明被丢弃的 token 仍是前瞻信号——它们提前暴露实体与主题，可在下一步去噪前用于检索外部证据，从而把'去噪副产品'升级为'检索查询入口'。这是首次系统化把扩散去噪轨迹与 RAG 检索耦合的工作。",
+  "research_position": "source_paper：首次系统化把扩散 LM 去噪过程与检索增强耦合；与 MDLM / SEDM / Plaid / DiffuSeq 等扩散 LM 工作以及 RAG / Self-RAG / FLARE 等 autoregressive 检索增强工作形成范式对照",
+  "long_tail_value": "即使 Diffusion LM 短期不替代 autoregressive LM，'去噪轨迹作为检索信号源'这一思路可外推到：(1) Masked LM 的中间填充状态；(2) Speculative Decoding 的 draft token；(3) 多智能体协作中的'草稿共享'。它揭示了'并行生成范式'与'增量检索'的结构相似性，是未来 RAG 基础设施的设计资产。",
+  "one_line_insight": "当生成从串行（autoregressive）走向并行（diffusion），检索也必须从'单次查询'走向'沿生成轨迹的增量查询'——这是从'检索增强生成'到'生成驱动检索'的范式翻转",
+  "today_action": "今天完成 Self-Augmenting Retrieval 摘要 + 实验设计精读；列出你当前 RAG 管线的'检索触发点'清单，评估如果切换到扩散/并行生成时哪些触发点会失效",
+  "next_action": "更新趋势页（Diffusion LM × RAG、非 BPTT 长上下文训练、AI 文本检测共编评测三个方向），把 Self-Augmenting Retrieval / SMT / OpAI-Bench 沉淀为可调用研究资产，建立'并行生成范式'与'检测对抗'长尾库类别",
+  "deep_dive_markdown": "- **一句话本质：** 把离散扩散 LM 去噪的'副产品'（低置信度丢弃 token）重新定义为前瞻检索信号，从'检索增强生成'翻转为'生成驱动检索'。\n\n- **底层问题：** 传统 RAG 假设'用户 query → 检索 → 拼接到 prompt → autoregressive 生成'——单次查询、查询与生成分离。但离散扩散 LM 是并行去噪：每步对全部 masked 位置同时预测，高置信度的 commit、低置信度的 discard，多步迭代。这种生成范式下：(1) 没有清晰的'用户 query'时刻；(2) 检索需要嵌入到每步去噪循环里；(3) 检索内容需要影响下一步去噪而非下一步 token。传统 RAG 管线在这种范式下根本失效。\n\n- **新命题 / 新方法 / 新证据：** 论文证明扩散 LM 在早期去噪步丢弃的低置信度 token 仍能提前暴露最终生成内容的实体与主题（前瞻信号）。基于此设计 self-augmenting retrieval：每步去噪后，对 discard 的 token 子集做实体抽取与检索，把检索结果作为下一步去噪的额外条件。论文给出对比实验证明该方法在事实性 / 实体召回上显著优于'一次性检索 + 扩散生成'基线。\n\n- **研究位置：** 源头论文，Diffusion LM × RAG 的范式定型工作。与 MDLM / SEDM / Plaid（扩散 LM 主干）、Self-RAG / FLARE / Active Retrieval（autoregressive 主动检索）形成两个方向的交叉。下游可能衍生：(1) 扩散 LM 专用检索器架构；(2) 去噪步级的 KV-cache / 检索缓存；(3) 并行生成的检索调度器。\n\n- **工程可验证性：** 暂缺代码链接（待核验），但方法描述清晰。最小验证路径：(a) 用 SEDM 或 Plaid 作为扩散 LM 主干；(b) 在 TriviaQA / NaturalQuestions / HotpotQA 上对比'一次性 RAG vs step-wise self-augmenting retrieval'；(c) 监控指标：事实准确率、检索调用次数、端到端延迟。\n\n- **趋势关联：** 与 SMT（无递归 RNN 训练）、OpAI-Bench（共编 AI 检测）构成今日三大趋势：(1) 生成范式从串行走向并行；(2) 训练范式从 BPTT 走向监督替代；(3) 评测范式从'最终输出'走向'过程级'。Self-Augmenting Retrieving 是与 RAG / 检索基础设施最直接相关的方向。\n\n- **长尾价值：** '去噪副产品作为信号源'这一模式可外推：(1) Speculative Decoding 的 draft token 作为前瞻检索信号；(2) 多智能体协作中的'草稿共享'；(3) 任何并行生成范式的中间状态检索。是 2026-2028 检索基础设施的设计资产。\n\n- **启发：** 当生成从串行走向并行，检索必须从'单次查询'走向'沿生成轨迹的增量查询'。这是 RAG 工程的范式翻转——查询不再是用户输入，而是生成过程的副产品。\n\n- **行动建议：** 今天读完 Self-Augmenting Retrieval 全文 + 对比实验，列出你当前 RAG 管线的'检索触发点'清单（query-time / chunk-time / generation-time），评估如果切换到扩散/并行生成时哪些触发点会失效；下一步在 TriviaQA 上做最小复现。",
+  "insights_markdown": "### 系统设计启发\n- 当生成从串行（autoregressive）走向并行（diffusion / masked），检索必须从'单次查询'走向'沿生成轨迹的增量查询'。这是 RAG 架构的范式翻转——查询不再是用户输入而是生成过程的副产品。\n- SMT 揭示了训练架构中的相似翻转：信用分配不必沿时间反向传播，可以通过监督目标显式注入——把'隐式学习'转化为'显式教学'。\n\n### Agent 工程启发\n- Regret Minimization 的 RP-Regret 揭示多智能体 Agent 评估的关键缺口：当前 AgentBench / WebArena / SWE-Bench 都假设静态环境，但真实部署中对手（用户、其他 Agent、对手模型）会针对你的策略做反事实推理。\n- DNQ 的'solver-in-the-loop'思路可外推到 LLM Agent 训练：把'均衡求解器'替换为'LLM-as-judge'，在轨迹收集 → 评估 → 均衡 → 监督的循环里训练 Agent。\n\n### 研发流程启发\n- OpAI-Bench 揭示 AI 文本检测的真正评测维度不是'最终输出'而是'操作序列'——这与软件测试中的'路径覆盖 vs 分支覆盖'同构：检测器需要看见生成路径，不只是最终结果。\n\n### 评测方法启发\n- Self-Augmenting Retrieval 引入'去噪步级'作为 RAG 评测新维度：每步检索的精度、召回、时延应作为独立指标。\n- OpAI-Bench 引入'操作粒度'作为 AI 检测评测新维度：从单 token / 短语 / 句子 / 段落 / 全文档五级粒度同时评测。\n- RP-Regret 引入'对手自适应度'作为多智能体评测维度：在静态 / 模仿 / 最佳响应 / 反事实推理四类对手下分别报告。\n\n### 平台工程启发\n- 扩散 LM 的 RAG 管线需要新基础设施：去噪步级的检索缓存、并行查询调度器、低置信度 token 流的实体抽取器。这是 vLLM / TensorRT-LLM / SGLang 等推理引擎尚未覆盖的设计点。\n- SMT 的'显式监督目标替代 BPTT'若可规模化，可显著降低长上下文 LM 训练的显存峰值——这是训练平台工程的关键瓶颈。\n\n### 个人学习启发\n- 今日 5 篇都围绕'范式翻转'：Self-Augmenting Retrieval（检索翻转）、SMT（训练翻转）、OpAI-Bench（评测翻转）、RP-Regret（对手建模翻转）、DNQ（求解器翻转）。把'翻转点'作为元主题来读，能在不同子领域间迁移洞察。",
+  "analysis": [
+    {
+      "paper_index": 9,
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "arxiv_id": "2606.06474v1",
+      "url": "http://arxiv.org/abs/2606.06474v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "离散扩散 LM 在每步并行去噪时输出多个 tentative token：高置信度的 commit、低置信度的 discard。论文证明 discard 的 token 仍是前瞻信号，可作为检索查询入口，把'去噪副产品'升级为'检索驱动器'",
+        "key_insight": "扩散 LM 的并行去噪过程天然暴露'中间生成状态'——这些状态在 autoregressive LM 中无法获取，因此扩散 LM 与 RAG 的耦合方式必然不同于传统管线",
+        "mathematical_foundation": "扩散 LM 的去噪概率 p(x_t | x_{t+1}) 对每个 masked 位置独立计算；discard 集合 D_t = {i : p(x_i) < τ}；从 D_t 抽取实体并检索 top-k 邻居文档作为额外条件，影响下一步 p(x_{t-1} | x_t, retrieved)"
+      },
+      "engineering_practice": {
+        "current_limitation": "传统 RAG 管线（query → retrieve → concat → AR generate）假设单次查询；扩散 LM 是并行多步去噪，传统管线根本无法挂载",
+        "proposed_solution": "step-wise self-augmenting retrieval：每步去噪后对 discard token 做检索，把检索结果作为下一步去噪的条件",
+        "integration_path": "可作为 SEDM / Plaid / MDLM 等扩散 LM 的检索插件；与 vLLM / TensorRT-LLM 推理引擎的 KV-cache 类比，需要设计'去噪步级检索缓存'",
+        "performance_gain": "在事实性 / 实体召回任务上显著优于一次性 RAG + 扩散生成基线；具体数值待核验"
+      },
+      "trend": {
+        "macro_trend": "生成范式从串行（autoregressive）走向并行（diffusion / masked）；检索范式从'用户查询驱动'走向'生成过程驱动'",
+        "related_work": "上游：MDLM / SEDM / Plaid / DiffuSeq（扩散 LM 主干）；横向：Self-RAG / FLARE / Active Retrieval（autoregressive 主动检索）；下游：去噪步级检索缓存、并行生成检索调度器",
+        "future_direction": "(1) 扩散 LM 专用检索器架构；(2) 去噪步级的检索缓存与调度；(3) 多跳推理的扩散生成 + 增量检索联合优化"
+      },
+      "insights": {
+        "surprising_finding": "被丢弃的低置信度 token 反而是更早、更丰富的检索信号源——它们提前暴露实体，且天然分布在去噪轨迹的多个时点上",
+        "practical_wisdom": "并行生成范式的检索必须嵌入到生成循环里，而非挂在生成之前——这与 autoregressive LM 的 RAG 架构根本不同",
+        "risk_assessment": "Diffusion LM 在通用文本生成上的竞争力仍未完全确立；低置信度 token 在代码 / 长文档 / 多跳推理上的实体召回质量待验证；检索调用次数可能数倍于传统 RAG，延迟成本需评估"
+      },
+      "action": {
+        "immediate": "读完 Self-Augmenting Retrieval 摘要与实验设计；列出当前 RAG 管线的检索触发点清单",
+        "short_term": "在 TriviaQA / NaturalQuestions 上用 SEDM 或 Plaid 复现 step-wise self-augmenting retrieval，对比一次性 RAG 基线",
+        "long_term": "设计扩散 LM 专用检索缓存与去噪步级检索调度器，作为下一代 RAG 基础设施资产"
+      }
+    },
+    {
+      "paper_index": 7,
+      "title": "Pretraining Recurrent Networks without Recurrence",
+      "arxiv_id": "2606.06479v1",
+      "url": "http://arxiv.org/abs/2606.06479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习：通过显式监督目标训练 RNN 的隐状态，绕开沿时间的梯度回传",
+        "key_insight": "BPTT 的根本问题不是梯度爆炸 / 消失，而是'必须按时间反向'这一约束本身——SMT 通过把信用分配从'隐式梯度'转为'显式监督目标'绕开这个约束",
+        "mathematical_foundation": "把 RNN 训练分解为：'(前向) + (状态监督目标)'，状态监督目标可来自 teacher model / 外部标注 / 自蒸馏；梯度只通过单步前向计算，不沿时间回传"
+      },
+      "engineering_practice": {
+        "current_limitation": "BPTT 在长序列上：必须按时间串行反向传播，无法并行；梯度爆炸/消失；显存随序列长度线性增长",
+        "proposed_solution": "SMT = 单步前向监督训练，绕开时间维度的反向传播",
+        "integration_path": "可作为 Mamba / RWKV / 线性注意力等非 Transformer 长上下文模型的训练替代；与状态空间模型的'并行扫描'训练互补",
+        "performance_gain": "训练显存与序列长度解耦；长程依赖学习显著优于 BPTT，待核验具体数值"
+      },
+      "trend": {
+        "macro_trend": "非 Transformer 长上下文架构（Mamba / RWKV / 线性注意力 / S4）正在挑战 Transformer；这些架构的训练方法也在演化（并行扫描、chunk-wise BPTT、SMT）",
+        "related_work": "上游：Mamba / RWKV / RetNet / S4（架构）；横向：chunk-wise BPTT / truncated BPTT / parallel scan（训练方法）；下游：超长上下文 LM 训练",
+        "future_direction": "(1) SMT 在 >1B 参数 RNN 上的可扩展性；(2) SMT 与 parallel scan 的联合优化；(3) 监督目标的自动生成（teacher model / 自蒸馏 / 外部标注）"
+      },
+      "insights": {
+        "surprising_finding": "BPTT 的根本问题不是数值稳定性，而是'必须按时间反向'这个架构约束本身——绕开它就能解锁更长的上下文训练",
+        "practical_wisdom": "当一种训练方法的根本瓶颈是架构约束（而非数值问题）时，应该寻找'范式替代'而非'数值修补'",
+        "risk_assessment": "SMT 的监督目标来源（teacher model 质量、外部标注成本）是新的工程依赖；在更大主干上的稳定性待验证"
+      },
+      "action": {
+        "immediate": "阅读 SMT 的监督目标设计（teacher / 标注 / 自蒸馏）与对比实验",
+        "short_term": "在 Mamba / RWKV 小模型上复现 SMT，对比 BPTT 在长序列任务上的显存与精度",
+        "long_term": "评估 SMT 在 >1B 参数长上下文模型上的可扩展性，作为训练平台工程的新选项"
+      }
+    },
+    {
+      "paper_index": 5,
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "arxiv_id": "2606.06481v1",
+      "url": "http://arxiv.org/abs/2606.06481v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "AI 文本检测的真正评测维度不是'最终输出'而是'操作序列'：渐进式人-AI 共编工作流（draft → AI revise → human edit → AI polish）下的检测精度",
+        "key_insight": "现有 AI 检测器在共编场景下精度崩塌的根因是：评测时只看到最终输出，看不到 AI 介入的操作序列——把'序列信号'还给检测器是关键",
+        "mathematical_foundation": "操作空间 O = {insert AI, replace with AI, polish by AI, ...}；评测粒度 G = {token, phrase, sentence, paragraph, document}；指标：每粒度上的 precision/recall + 操作序列的可识别性"
+      },
+      "engineering_practice": {
+        "current_limitation": "OpenAI Detector 已下线；GPTZero / Originality.ai / Turnitin 在共编场景下精度大幅下降；现有 benchmark 只评测最终输出",
+        "proposed_solution": "OpAI-Bench：操作引导 + 多粒度 + 渐进共编的 AI 检测 benchmark",
+        "integration_path": "可直接用于 Notion AI / Grammarly / Google Docs AI / Cursor / Copilot 类写作 / 代码助手产品的合规与风控评估；可作为企业内容审核系统的评测套件",
+        "performance_gain": "揭示现有检测器在共编下的精度崩塌幅度（具体数值待核验）；为下一代检测器提供训练信号"
+      },
+      "trend": {
+        "macro_trend": "写作助手产品化（Notion AI / Grammarly / Google Docs AI）使'纯人类文本'几乎消失；AI 检测必须从'二分类'走向'过程级'",
+        "related_work": "上游：M4 / HC3 / MAGE（AI 检测 benchmark）；横向：DeepMind / OpenAI / Turnitin 的检测产品；下游：写作助手的合规与风控",
+        "future_direction": "(1) 操作序列恢复（从最终输出反推 AI 介入位置）；(2) 多模态检测（文本 + 编辑日志）；(3) 共编场景下的检测器训练"
+      },
+      "insights": {
+        "surprising_finding": "把'操作序列'还给检测器后，检测精度显著提升——这说明现有检测器的失败更多是评测缺陷而非模型缺陷",
+        "practical_wisdom": "评测方法的代差会伪装成模型能力的代差：当评测只看最终输出时，无法区分'检测器无能'与'评测器无知'",
+        "risk_assessment": "操作空间的覆盖度（是否包括 IDE 类共编如 Cursor）待核验；隐私问题（编辑日志收集）是产品落地的政策障碍"
+      },
+      "action": {
+        "immediate": "阅读 OpAI-Bench 的操作空间设计与多粒度评测协议",
+        "short_term": "用 OpAI-Bench 评估你当前使用的 AI 检测方案（GPTZero / Originality / 自研）在共编下的精度崩塌幅度",
+        "long_term": "把'操作序列恢复'纳入下一代 AI 检测系统的设计目标，与写作助手产品的合规与风控对齐"
+      }
+    },
+    {
+      "paper_index": 4,
+      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+      "arxiv_id": "2606.06486v1",
+      "url": "http://arxiv.org/abs/2606.06486v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "在重复博弈中研究对自适应对手的后悔最小化；引入 Repeated Policy Regret (RP-Regret) 度量所有玩家都反事实推理时的累积效用差",
+        "key_insight": "标准 external regret 假设对手策略不变，但真实多智能体场景中对手会针对你的策略做反事实推理——RP-Regret 显式建模这种'我改变策略对手也改变'的二阶效应",
+        "mathematical_foundation": "RP-Regret = max_{π'} E[u(π', σ_{-i}(π'))] - E[u(π, σ_{-i}(π))]，其中 σ_{-i}(π) 表示对手对策略 π 的最佳响应"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有 LLM agent benchmark（AgentBench / WebArena / SWE-Bench）假设静态环境，对手不会针对 agent 策略做反事实推理",
+        "proposed_solution": "RP-Regret 作为多智能体 LLM agent 的新评估基线，覆盖谈判 / 竞价 / 安全对抗场景",
+        "integration_path": "可作为多智能体 RL 训练框架（OpenAI Gym / PettingZoo / EPICLES）的评估插件；与 LLM 谈判 / 自动定价 / 广告竞价产品对接",
+        "performance_gain": "在自适应对手下，标准 regret 最小化算法显著劣于 RP-Regret 最小化算法（具体数值待核验）"
+      },
+      "trend": {
+        "macro_trend": "LLM agent 从单智能体走向多智能体（AutoGen / CrewAI / MetaGPT）；评估必须从'静态任务'走向'对手自适应'",
+        "related_work": "上游：CFR / ICFR / Oswald 时间衰减 regret（博弈论）；横向：AgentBench / WebArena / SWE-Bench（agent benchmark）；下游：LLM 谈判 / 自动定价 / 安全对抗",
+        "future_direction": "(1) RP-Regret 在 LLM 谈判 benchmark 上的对照实验；(2) 把 RP-Regret 作为 RLHF 的对抗训练信号；(3) 反事实推理的可识别性"
+      },
+      "insights": {
+        "surprising_finding": "标准 external regret 在自适应对手下可能为 0 但实际收益远低于最优——这暴露了'后悔'这个核心概念在多智能体下的根本模糊性",
+        "practical_wisdom": "评估多智能体 agent 时，必须先明确'对手是否针对你做了反事实推理'——这是评估框架的隐式假设，但很少被显式声明",
+        "risk_assessment": "RP-Regret 的计算需要建模对手的最佳响应，在连续动作空间下不可解；LLM 场景下的对手建模仍是开放问题"
+      },
+      "action": {
+        "immediate": "阅读 RP-Regret 的数学定义与对比实验",
+        "short_term": "在 PettingZoo 简单博弈上复现 RP-Regret 评估，对比 external regret",
+        "long_term": "把 RP-Regret 引入 LLM 谈判 / 自动定价 benchmark，作为多智能体 agent 评估的新基线"
+      }
+    },
+    {
+      "paper_index": 6,
+      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
+      "arxiv_id": "2606.06480v1",
+      "url": "http://arxiv.org/abs/2606.06480v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06480v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "solver-in-the-loop 均衡监督框架：在轨迹收集 → critic 支付估计 → 均衡求解 → 监督训练的循环中训练多人部分可观测博弈 agent",
+        "key_insight": "把'均衡求解器'（如 LP / QRE）嵌入训练循环，让 agent 在每轮迭代中都被'均衡解'监督，而非只在最终评估时被均衡指标衡量",
+        "mathematical_foundation": "DNQ 损失 = TD 损失 + 均衡监督损失 + 策略熵正则；均衡求解器输入为 critic 估计的支付矩阵，输出为混合策略均衡"
+      },
+      "engineering_practice": {
+        "current_limitation": "NFSP / PSRO 系列在多人部分可观测博弈上训练不稳定，均衡收敛慢",
+        "proposed_solution": "DNQ = solver-in-the-loop + critic-based payoff estimation + equilibrium supervision",
+        "integration_path": "可接入 PettingZoo / OpenSpiel 多智能体 RL 训练框架；下游应用：拍卖、资源分配、安全竞争、网络博弈",
+        "performance_gain": "在多人部分可观测博弈上比 NFSP / PSRO 收敛更快、均衡更稳定（具体数值待核验）"
+      },
+      "trend": {
+        "macro_trend": "多智能体 RL 训练栈演化：从 NFSP / PSRO 走向 solver-in-the-loop / 对抗生成 / LLM-as-player",
+        "related_work": "上游：DQN / NFSP / PSRO / Deep CFR；横向：OpenSpiel / PettingZoo；下游：拍卖、广告、安全博弈",
+        "future_direction": "(1) DNQ 在 LLM-as-player 场景的应用；(2) 把均衡求解器替换为 LLM-as-judge；(3) 大规模多人博弈的可扩展性"
+      },
+      "insights": {
+        "surprising_finding": "把求解器嵌入训练循环而非只用于评估，能让 agent 在训练过程中持续被'均衡信号'约束——这与 PRM 在 RLHF 中的角色相似",
+        "practical_wisdom": "训练多智能体 agent 时，外部监督信号（求解器 / judge / reward model）应在训练循环里而非只在评估时",
+        "risk_assessment": "均衡求解器在大规模博弈上计算不可行；critic 支付估计的误差会放大均衡监督的偏差"
+      },
+      "action": {
+        "immediate": "阅读 DNQ 的 solver-in-the-loop 设计与对照实验",
+        "short_term": "在 OpenSpiel 简单多人博弈上复现 DNQ，对比 NFSP 收敛速度",
+        "long_term": "把 DNQ 思路迁移到 LLM 多智能体训练，把均衡求解器替换为 LLM-as-judge"
+      }
+    }
+  ]
+}

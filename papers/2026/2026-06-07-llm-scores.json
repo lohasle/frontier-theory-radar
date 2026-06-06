@@ -1,0 +1,126 @@
+{
+  "date": "2026-06-07",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-07T04:33:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分；优先选取昨日未覆盖的新论文以避免重复",
+  "selection_note": "今日 arXiv 抓取的 10 篇中有 5 篇与昨日重叠（TailLoR/HANDOFF/Code2LoRA/TempoVLA/RREDCoT）。本报告聚焦 5 篇昨日未深挖的新论文：Self-Augmenting Retrieval for Diffusion LMs、Pretraining RNNs without Recurrence、OpAI-Bench、Regret Minimization with Adaptive Opponents、DNQ。",
+  "by_url": {
+    "http://arxiv.org/abs/2606.06474v1": {
+      "score": 84,
+      "value_type": "trend",
+      "reason": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队加持。直接价值在于：当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，这与传统 autoregressive LM 的 RAG 管线根本不同，需要新基础设施。",
+      "matched_topics": ["rag-knowledge", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.06479v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'。MIT Isola 团队。对长上下文 LM 训练（Mamba/RWKV/线性注意力）有方向性启发：不依赖梯度沿时间回传也能学到长程依赖，可能解锁更长上下文窗口的高效训练。",
+      "matched_topics": ["context-engineering", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.06481v1": {
+      "score": 76,
+      "value_type": "immediate",
+      "reason": "OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI revise → human edit → AI polish）——这正是 Notion AI / Grammarly / Google Docs AI / Cursor 写作侧的真实使用形态。当前 AI 文本检测器在共编场景下精度崩塌已是产业共识（OpenAI Detector 已下线、GPTZero 在共编下精度大幅下降）。benchmark 直接对应产品评测缺口，immediate 价值明确。",
+      "matched_topics": ["llm-evaluation", "security-governance"]
+    },
+    "http://arxiv.org/abs/2606.06486v1": {
+      "score": 71,
+      "value_type": "trend",
+      "reason": "引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external regret，建模'所有玩家都在反事实推理'的多智能体场景。MIT Ozdaglar/Zhang 团队。理论价值高但工程应用间接：可服务于 LLM agent 多方谈判、自动定价、广告竞价、安全对抗场景的评估基线，但当前 LLM agent benchmark（如 AgentBench/WebArena）尚未引入 RP-Regret。",
+      "matched_topics": ["ai-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.06480v1": {
+      "score": 67,
+      "value_type": "trend",
+      "reason": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NFSP / PSRO 系列，工程突破性中等；更适合作为多智能体 RL 训练栈的方法资产保存。",
+      "matched_topics": ["ai-agent"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 9,
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "arxiv_id": "2606.06474v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 7
+      },
+      "weighted_total": 8.4,
+      "confidence": "medium",
+      "one_line": "把离散扩散 LM 去噪过程中'低置信度丢弃的 token'重新定义为 RAG 的前瞻检索信号，激活'中间去噪状态 → 检索'新管线",
+      "decision": "strong_accept",
+      "reasoning": "Diffusion LM × RAG 的首次明确交叉。方法新颖（去噪副产品变主动检索入口）、作者团队强（Weinberger/Cornell）、趋势相关性高（Diffusion LM 与 RAG 都是 2026 高活跃方向）。最大不确定性是 Diffusion LM 本身尚未规模化产品化，短期需要观测 Masked LM / Plaid / SEDM 是否走向生产。"
+    },
+    {
+      "paper_index": 7,
+      "title": "Pretraining Recurrent Networks without Recurrence",
+      "arxiv_id": "2606.06479v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 9,
+        "evidence_strength": 6,
+        "trend_relevance": 8,
+        "actionability": 6
+      },
+      "weighted_total": 7.8,
+      "confidence": "medium",
+      "one_line": "Supervised Memory Training 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播，对长上下文 LM 训练有方向性启发",
+      "decision": "strong_accept",
+      "reasoning": "Isola (MIT) 团队。理论新颖度高（绕开 BPTT 而非修补 BPTT），对长上下文 LM 训练栈有方向性影响——与 Mamba/RWKV/线性注意力构成'非 Transformer 长上下文'族谱。但当前证据强度受限于实验规模，工程可验证性需要等待更大主干模型上的复现。"
+    },
+    {
+      "paper_index": 5,
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "arxiv_id": "2606.06481v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 8,
+        "trend_relevance": 8,
+        "actionability": 8
+      },
+      "weighted_total": 7.6,
+      "confidence": "medium",
+      "one_line": "首个'操作引导'AI 文本检测 benchmark，建模渐进式人-AI 共编工作流，直接对应 Notion AI/Grammarly/Google Docs AI 的真实评测缺口",
+      "decision": "strong_accept",
+      "reasoning": "immediate 价值明确——OpenAI Detector 下线、GPTZero 在共编下精度崩塌已是产业共识，benchmark 直接补全产品评测缺口。证据强度高（benchmark + 多粒度检测器对比），可直接用于企业写作助手产品的合规与风控评估。"
+    },
+    {
+      "paper_index": 4,
+      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+      "arxiv_id": "2606.06486v1",
+      "scores": {
+        "engineering_value": 6,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 7,
+        "actionability": 5
+      },
+      "weighted_total": 7.1,
+      "confidence": "medium",
+      "one_line": "引入 Repeated Policy Regret 度量'所有玩家都反事实推理'的多智能体重复博弈，区别于标准 external regret",
+      "decision": "accept",
+      "reasoning": "MIT Ozdaglar/Zhang 团队，理论强。直接价值在于为多智能体 LLM agent 提供新的评估基线（谈判/竞价/对抗），但当前 LLM agent benchmark 尚未引入 RP-Regret，落地需要等基准代码与对照实验发布。"
+    },
+    {
+      "paper_index": 6,
+      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
+      "arxiv_id": "2606.06480v1",
+      "scores": {
+        "engineering_value": 6,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 6,
+        "actionability": 5
+      },
+      "weighted_total": 6.7,
+      "confidence": "medium",
+      "one_line": "solver-in-the-loop 均衡监督框架，在轨迹收集 → critic 支付估计 → 均衡求解 → 监督训练的循环中训练多人部分可观测博弈 agent",
+      "decision": "accept",
+      "reasoning": "对拍卖/资源分配/安全竞争有方法论价值，但相对已有 NFSP / PSRO 系列突破中等。更适合作为多智能体 RL 训练栈的方法资产保存，等待被具体场景调用。"
+    }
+  ]
+}

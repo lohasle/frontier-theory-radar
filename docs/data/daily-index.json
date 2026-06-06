@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-06T04:33:31.479389",
+  "updated_at": "2026-06-07T04:33:35.851378",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-07",
+      "title": "论文价值发现日报 - 2026-06-07",
+      "deep_dive_title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "deep_dive_url": "http://arxiv.org/abs/2606.06474v1",
+      "decision": "重点学习",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "daily_action": "今天完成 Self-Augmenting Retrieval 摘要 + 实验设计精读；列出你当前 RAG 管线的'检索触发点'清单，评估如果切换到扩散/并行生成时哪些触发点会失效",
+      "max_uncertainty": "Diffusion LM 在通用文本生成上是否能与 autoregressive LM 竞争（当前 MDLM/SEDM/Plaid 主要在受控任务上有效）；低置信度 token 在代码 / 长文档 / 多跳推理场景的实体召回质量；SMT 在更大主干模型（>1B 参数）上的可扩展性；OpAI-Bench 的操作空间是否覆盖 Cursor/Copilot 类 IDE 共编场景",
+      "one_line_judgement": "把离散扩散 LM 去噪过程中'低置信度被丢弃的 token'重新定义为 RAG 的前瞻检索信号——副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队。当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，需要新的检索基础设施。",
+      "path": "daily-detail.html?date=2026-06-07"
+    },
     {
       "date": "2026-06-06",
       "title": "论文价值发现日报 - 2026-06-06",
@@ -378,19 +391,6 @@
       "max_uncertainty": "LongSeeker 的完整实验结果需确认（摘要截断）；线性联想记忆容量结果的工程适用边界（实际 RAG 向量库的分布假设是否满足）",
       "one_line_judgement": "直接解决长时序 Agent 的上下文爆炸问题——随着推理、工具调用、观察信息的积累，naive 上下文会迅速超限。Context-ReAct 框架按当前任务相关性动态维护不同粒度的轨迹片段（全保留→摘要→丢弃），是 Agent 记忆管理的关键基础设施。弹性上下文编排可迁移到所有长任务 Agent 场景。",
       "path": "daily-detail.html?date=2026-05-08"
-    },
-    {
-      "date": "2026-05-07",
-      "title": "论文价值发现日报 - 2026-05-07",
-      "deep_dive_title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
-      "deep_dive_url": "http://arxiv.org/abs/2605.02888v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "今天完成 SpecKV 摘要精读，profile 当前推理服务的 γ 设定差异，评估集成 SpecKV 控制器的最小实验方案",
-      "max_uncertainty": "SpecKV 开源状态待核验；MLP 控制器在新模型架构（非 LLaMA 系列）上的泛化能力未验证",
-      "one_line_judgement": "直接解决 LLM 部署最核心的推理延迟瓶颈，用轻量 MLP 自适应选择推测解码长度，在压缩模型上实现 56% 加速且开销仅 0.34ms/step。实验覆盖 5112 条记录、统计显著 p<0.001，工程集成路径清晰——任何使用推测解码的框架均可直接接入。",
-      "path": "daily-detail.html?date=2026-05-07"
     }
   ]
 }

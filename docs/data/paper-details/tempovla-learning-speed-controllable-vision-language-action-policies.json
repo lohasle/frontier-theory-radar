@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-06",
-  "first_deep_dive_daily": "2026-06-06",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-06-07",
+  "first_deep_dive_daily": "2026-06-07",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 6.2,
@@ -30,13 +30,13 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 70.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得先保存：TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增…",
-  "one_line_essence": "TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增广与速度 token 调控，把 VLA 从'单速策略'升级为'风险感知变速策略'。对具身产品化（家庭/工业机器人执行效率与安全性平衡）有直接价值，但短期内更偏研究资产与原型。",
+  "score": 36.6,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：Multimodal Agent：Robot manipulation alternates between low-risk transi…",
+  "one_line_essence": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增广与速度 token 调控，把 VLA 从'单速策略'升级为'风险感知变速策略'。对具身产品化（家庭/工业机器人执行效率与安全性平衡）有直接价值，但短期内更偏研究资产与原型。",
-  "research_position": "long_tail_insight",
+  "new_claim_or_method": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
+  "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
+    "status": "noise",
     "related_trends": [
       "agentic-world-modeling"
     ],
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "TempoVLA 提出 VLA 策略的速度可控训练（transit 阶段加速 / contact 阶段减速），通过动作幅度阈值的双模式数据增广与速度 token 调控，把 VLA 从'单速策略",
+    "why_save": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -78,7 +78,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-06-27"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -103,12 +103,8 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
-    ],
-    "ignore_reason": ""
+    "long_tail_actions": [],
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -121,7 +117,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
-  "daily_path": "daily-detail.html?date=2026-06-06",
+  "daily_path": "daily-detail.html?date=2026-06-07",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

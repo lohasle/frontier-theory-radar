@@ -15,10 +15,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-06",
-  "first_deep_dive_daily": "2026-06-06",
-  "value_type": "immediate",
-  "value_type_label": "即时价值",
+  "first_seen_date": "2026-06-07",
+  "first_deep_dive_daily": "2026-06-07",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 6.2,
@@ -29,12 +29,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 86.0,
-  "decision": "重点学习",
-  "one_line_judgement": "今天值得试：Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero infere…",
-  "one_line_essence": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提下注入仓级知识；这是企业内部代码助手（Cursor / Copilot / Codex 私有部署）长期面对的核心痛点：仓级上下文如何不挤占长上下文窗口。论文定位 cs.SE+cs.AI+cs.CL 跨三类，工程落点明确：可作为静态索引服务或 CI hook 持续生成 LoRA。",
+  "score": 39.8,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
+  "one_line_essence": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提下注入仓级知识；这是企业内部代码助手（Cursor / Copilot / Codex 私有部署）长期面对的核心痛点：仓级上下文如何不挤占长上下文窗口。论文定位 cs.",
+  "new_claim_or_method": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -48,9 +48,8 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "noise",
     "related_trends": [
-      "coding-agent",
       "context-engineering"
     ],
     "evidence": [
@@ -61,7 +60,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Code2LoRA 用超网络为代码 LM 生成仓级 LoRA 适配器，把'每仓一次微调'升级为'按需生成适配器'，在 zero inference-time token overhead 前提",
+    "why_save": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
     "future_trigger": [
       "待更多证据"
     ],
@@ -101,14 +100,10 @@
     ]
   },
   "actions": {
-    "immediate_actions": [
-      "今天读摘要与方法",
-      "今天试最小实验",
-      "一周内沉淀为 Skill / Checklist"
-    ],
+    "immediate_actions": [],
     "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -121,9 +116,8 @@
     }
   ],
   "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-  "daily_path": "daily-detail.html?date=2026-06-06",
+  "daily_path": "daily-detail.html?date=2026-06-07",
   "trend_paths": [
-    "trend-detail.html?id=coding-agent",
     "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",

@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-06",
-  "first_deep_dive_daily": "2026-06-06",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-06-07",
+  "first_deep_dive_daily": "2026-06-07",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 75.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space comma…",
-  "one_line_essence": "HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space command）蒸馏到单一 humanoid 全身控制器，让上游规划器无需输出密集运动参考即可驱动操作技能。这是具身 Agent 'planner ⇄ controller' 接口标准化的关键一步，对应趋势：把任务级指令与运动级执行解耦，是 Humanoid / VLA / 整机系统进入产品的必经路径。",
+  "score": 34.0,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：AI Agent：For a humanoid robot to be deployed in the real world, the ch…",
+  "one_line_essence": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space command）蒸馏到单一 humanoid 全身控制器，让上游规划器无需输出密集运动参考即可驱动操作技能。这是具身 Agent 'planner ⇄ controller' 接口标准化的关键一步，对应趋势：把任务级指令与运动级执",
+  "new_claim_or_method": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "noise",
     "related_trends": [
       "agentic-world-modeling"
     ],
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "HANDOFF 通过'distilled complementary teachers'将任务空间命令接口（task-space command）蒸馏到单一 humanoid 全身控制器，让上",
+    "why_save": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,13 +102,9 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
-    ],
+    "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -121,7 +117,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
-  "daily_path": "daily-detail.html?date=2026-06-06",
+  "daily_path": "daily-detail.html?date=2026-06-07",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

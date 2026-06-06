@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-06",
-  "first_deep_dive_daily": "2026-06-06",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-06-07",
+  "first_deep_dive_daily": "2026-06-07",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 80.0,
-  "decision": "重点学习",
-  "one_line_judgement": "值得继续观察：TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方…",
-  "one_line_essence": "TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方向，显著降低连续学习中的灾难性遗忘。这是 PEFT 与 Continual Learning 两个高活跃方向的交集，与 2025 年 PiSSA、MiLoRA、AdaLoRA 一脉相承，对'增量训练 / 持续微调'类工程链路（RLHF rollouts、A/B 模型分支、个性化适配器）有直接趋势价值。",
+  "score": 33.5,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：RAG / 知识系统：Parameter-efficient finetuning methods based on spectral de…",
+  "one_line_essence": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方向，显著降低连续学习中的灾难性遗忘。这是 PEFT 与 Continual Learning 两个高活跃方向的交集，与 2025 年 PiSSA、MiLoRA、AdaLoRA 一脉相承，对'增量训练 / 持续微调'类工程",
+  "new_claim_or_method": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,9 +49,9 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "noise",
     "related_trends": [
-      "agentic-world-modeling"
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "TailLoR 在 LoRA 谱分解基础上引入'soft spectral penalty'压制主成分方向的更新，把微调能力路由到长尾奇异方向，显著降低连续学习中的灾难性遗忘。这是 PEFT ",
+    "why_save": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,13 +102,9 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
-    ],
+    "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -121,9 +117,9 @@
     }
   ],
   "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
-  "daily_path": "daily-detail.html?date=2026-06-06",
+  "daily_path": "daily-detail.html?date=2026-06-07",
   "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
