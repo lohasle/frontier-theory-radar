@@ -1,6 +1,278 @@
 {
-  "updated_at": "2026-06-07T04:33:36.650109",
+  "updated_at": "2026-06-08T04:33:37.865451",
   "dailies": {
+    "2026-06-08": {
+      "date": "2026-06-08",
+      "title": "论文价值发现日报 - 2026-06-08",
+      "deep_dive_id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+      "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "重点学习",
+      "daily_action": "今天完成 Code2LoRA 全文精读 + 与现有 RAG 管线的对比清单；评估 hypernetwork 生成的 LoRA 适配器能否在你当前编程 Agent 产品里替代或补充仓库 RAG",
+      "score": 86.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
+      "max_uncertainty": "Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性",
+      "conclusion_lines": [
+        "今天最值得看的是《Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：今天完成 Code2LoRA 全文精读 + 与现有 RAG 管线的对比清单；评估 hypernetwork 生成的 LoRA 适配器能否在你当前编程 Agent 产品里替代或补充仓库 RAG。",
+        "最大不确定性：Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 82.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 76.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        }
+      ],
+      "deep_dive": {
+        "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+        "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+        "authors": [
+          "Liliana Hotsko",
+          "Yinxi Li",
+          "Yuntian Deng",
+          "Pengyu Nie"
+        ],
+        "source": "arXiv",
+        "published": "2026-06-04",
+        "url": "http://arxiv.org/abs/2606.06492v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.06492v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-06-08",
+        "first_deep_dive_daily": "2026-06-08",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 6.2,
+          "evidence": 4.5,
+          "engineering_testability": 4.05,
+          "trend_signal": 3.5,
+          "long_tail_potential": 3.5,
+          "actionability": 5.0,
+          "noise_risk": 1.2
+        },
+        "score": 86.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
+        "one_line_essence": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoR",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "coding-agent",
+            "context-engineering"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2606.06492v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2606.06492v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+        "daily_path": "daily-detail.html?date=2026-06-08",
+        "trend_paths": [
+          "trend-detail.html?id=coding-agent",
+          "trend-detail.html?id=context-engineering"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06492v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06492v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-06-08</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2606.06492v1\" target=\"_blank\" rel=\"noopener noreferrer\">Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 今天完成 Code2LoRA 全文精读 + 与现有 RAG 管线的对比清单；评估 hypernetwork 生成的 LoRA 适配器能否在你当前编程 Agent 产品里替代或补充仓库 RAG</li>\n<li><strong>分数：</strong> 86.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2606.06492v1\" target=\"_blank\" rel=\"noopener noreferrer\">Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</a>。</li>\n<li><strong>为什么值得看：</strong> 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/RAG 增强'重构为'hypernetwork 推理时一次性生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + 软件工程三者首次明确耦合。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值（immediate）。编程 Agent 产品的仓库理解模块可直接实验复现，无需等待上游基础设施成熟。</li>\n<li><strong>今天该做什么：</strong> 先读摘要与 hypernetwork 架构设计，判断'仓库 → LoRA 适配器'在你当前的编程 Agent / IDE 产品里能否替代或补充现有 RAG 管线。</li>\n<li><strong>最大不确定性：</strong> Hypernetwork 本身的训练成本（需要多少仓库做训练集？）、跨语言/跨框架的泛化能力、对大型 monorepo 的可扩展性。代码链接待核验。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.06492v1\" target=\"_blank\" rel=\"noopener noreferrer\">Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution</a></td><td>coding-agent / rag-knowledge</td><td>即时价值</td><td>86.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.06494v1\" target=\"_blank\" rel=\"noopener noreferrer\">TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning</a></td><td>inference-serving</td><td>趋势价值</td><td>82.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.06475v1\" target=\"_blank\" rel=\"noopener noreferrer\">RREDCoT: Segment-Level Reward Redistribution for Reasoning Models</a></td><td>llm-evaluation / inference-serving</td><td>趋势价值</td><td>80.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.06491v1\" target=\"_blank\" rel=\"noopener noreferrer\">TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies</a></td><td>multimodal-agent / ai-agent</td><td>趋势价值</td><td>76.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.06493v1\" target=\"_blank\" rel=\"noopener noreferrer\">HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers</a></td><td>multimodal-agent / ai-agent</td><td>趋势价值</td><td>73.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 把'全局/单次'的知识与控制注入替换为'局部/条件化/阶段化'的注入——适配器、奖励、速度、命令都在从'全局静态'走向'条件动态'。</li>\n</ul>\n<ul>\n<li><strong>底层问题：</strong> 当 LM 走向 Agent 形态，知识与控制的注入必须随上下文（仓库/任务/段/阶段）变化——但传统范式（全局 RAG / 全量微调 / 最终奖励 / 固定速度 / 密集参考）都是'一刀切'的。这种'一刀切'在 Agent 多任务/多用户/多阶段场景下根本失效：(1) 编程 Agent 需要仓库专属知识，但每仓库微调太贵；(2) 连续学习 Agent 不能让新任务破坏主干；(3) 推理 Agent 的最终奖励信号太稀疏，token-level 又太密；(4) 机器人 Agent 的不同阶段需要不同速度；(5) 人形 Agent 的规划-控制接口太密集难以从语义合成。</li>\n</ul>\n<ul>\n<li><strong>新命题 / 新方法 / 新证据：</strong></li>\n</ul>\n<p>  - <strong>Code2LoRA：</strong> 用 hypernetwork 接收仓库表征（AST/依赖图/embedding），一次性生成仓库专属 LoRA 适配器权重。零推理 token 开销，且 hypernetwork 对仓库演化（commit）鲁棒——只需重生成适配器而非重新训练。</p>\n<p>  - <strong>TailLoR：</strong> 把 LoRA 的 ΔW = BA 分解为对 U Σ V^T 中 Σ 的更新：保留 U/V 冻结，只学 ΔΣ；施加软谱惩罚 λ·||ΔΣ · diag(top-k σ)||² 抑制沿主奇异方向的更新，路由适配到长尾谱。</p>\n<p>  - <strong>RREDCoT：</strong> 把 GRPO 的最终奖励 R 沿 CoT 段落 [s_1, ..., s_n] 重新分配：r_i = R · α_i，其中 α_i 由段重要性估计器（基于注意力/梯度/LLM-judge）给出。等价于把 MC 信用分配的方差从 O(1) 降到 O(1/n)。</p>\n<p>  - <strong>TempoVLA：</strong> 在 VLA 训练时把'目标速度'作为额外条件变量；观察动作幅值 ||a|| 天然预测精度需求——transit 阶段 ||a|| 大可加速，contact 阶段 ||a|| 小需减速。</p>\n<p>  - <strong>HANDOFF：</strong> 用三个互补教师（手臂操作/下肢移动/全身协调）分别蒸馏，最终 WBC 接收紧凑任务空间命令（如目标位姿/接触点）而非密集运动学参考。</p>\n<ul>\n<li><strong>研究位置：</strong></li>\n</ul>\n<p>  - Code2LoRA：Hypernetwork × LoRA × SE 的源头工作之一，与 RepoCoder / RepoHyper / CodePlan 等 RAG 方案形成范式对照</p>\n<p>  - TailLoR：谱保护 PEFT 在连续学习上的细化，与 O-LoRA / InfLoRA / SVD-based PEFT 形成方法序列</p>\n<p>  - RREDCoT：GRPO × 段级信用分配的源头工作，与 PRM / Step-level DPO / VinePPO 形成方法序列</p>\n<p>  - TempoVLA：VLA × 速度控制的源头工作，与 RT-2 / OpenVLA / π0 形成基础模型序列</p>\n<p>  - HANDOFF：人形 × 任务空间接口的工程化方案，与 OmniH2O / HumanPlus / H2O 形成方法序列</p>\n<ul>\n<li><strong>工程可验证性：</strong></li>\n</ul>\n<p>  - Code2LoRA：代码链接待核验。最小验证路径：(a) 用 CodeLlama / StarCoder / Qwen2.5-Coder 作为主干；(b) 在 SWE-Bench / RepoBench 上对比 RAG vs hypernetwork-LoRA；(c) 监控指标：仓库相关任务精度、适配器生成延迟、commit 后精度衰减。</p>\n<p>  - TailLoR：代码链接待核验。最小验证路径：(a) 在 LLaMA-3-8B 上做 5-20 任务连续学习；(b) 对比 LoRA / O-LoRA / TailLoR 的 forgetting 率；(c) 监控指标：每任务平均精度、前向迁移、backward transfer。</p>\n<p>  - RREDCoT：代码链接待核验。最小验证路径：(a) 在 Qwen2.5-Math / DeepSeek-R1-Distill 上做 GRPO vs RREDCoT 对照；(b) 监控指标：MATH/GSM8K 精度、训练稳定性（梯度方差）、奖励方差。</p>\n<ul>\n<li><strong>趋势关联：</strong> 五篇共同构成'条件化注入'主题——Code2LoRA（仓库条件适配器）、TailLoR（谱条件更新）、RREDCoT（段条件奖励）、TempoVLA（阶段条件速度）、HANDOFF（任务条件接口）。这是 Agent 时代训练-推理基础设施的设计资产。</li>\n</ul>\n<ul>\n<li><strong>长尾价值：</strong> '条件化注入'模式可外推到：(1) 用户/会话条件 LoRA（每用户生成专属适配器，零隐私泄露）；(2) 推理阶段条件速度（LM 的'快慢思考'调度）；(3) 轮级/工具调用级信用分配（多轮 Agent 的 PRM）；(4) MoE 的专家选择保护主义（不让新任务破坏已激活专家）；(5) 多机器人协作的阶段条件角色分配。</li>\n</ul>\n<ul>\n<li><strong>启发：</strong> 当知识与控制注入从'全局'走向'条件'，Agent 的训练-推理栈需要新基础设施：适配器生成器、谱保护器、段级信用分配器、速度控制器、任务空间接口。每一类都是 2026-2028 的新工程方向。</li>\n</ul>\n<ul>\n<li><strong>行动建议：</strong> 今天读完 Code2LoRA 全文 + 对比实验，列出你当前编程 Agent 产品的'仓库理解'路径清单（RAG / 长上下文 / per-repo 微调），评估 hypernetwork-LoRA 能否替代或补充；下一步在 SWE-Bench 子集上做最小复现。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2606.06491v1\" target=\"_blank\" rel=\"noopener noreferrer\">TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这是 VLA 走向真实部署的关键缺口——现有 VLA 只继承训练 demo 的固定速度。对 Figure/1X/Physical Intelligence/银河通用等具身智能产品的部署速度-精度权衡有直接价值。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-06-29</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.06493v1\" target=\"_blank\" rel=\"noopener noreferrer\">HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦设计有方法论价值。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-06-29</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2606.06480v1\" target=\"_blank\" rel=\"noopener noreferrer\">DNQ: Deep Nash Q-Network for Partially Observable n-Player Games</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.06481v1\" target=\"_blank\" rel=\"noopener noreferrer\">Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.06474v1\" target=\"_blank\" rel=\"noopener noreferrer\">Self-Augmenting Retrieval for Diffusion Language Models</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>系统设计启发</h4>\n<ul>\n<li>知识注入正在从'加载更多上下文'（RAG/长上下文）走向'按条件生成更精准的局部结构'（适配器/奖励/速度/命令）。这是 Agent 时代训练-推理栈的范式翻转——上下文是静态资源，适配器是动态结构。</li>\n<li>TailLoR 的'保护主奇异方向'揭示了连续学习的几何本质：保留主干 = 保留表征的主成分几何；遗忘 = 主成分几何被新任务扭曲。</li>\n</ul>\n<h4>Agent 工程启发</h4>\n<ul>\n<li>Code2LoRA 直接对应编程 Agent 产品的仓库理解模块：当 Cursor/Copilot/Devin 走向 per-user/per-repo 个性化时，hypernetwork 生成的 LoRA 适配器是比 RAG 更高效、比 per-repo 微调更便宜的中间路径。</li>\n<li>RREDCoT 揭示推理 Agent 训练的关键瓶颈：GRPO 的 MC 信用分配在长 CoT 上方差爆炸——段级再分配是把'奖励稀疏性'转化为'奖励密度'的工程杠杆。</li>\n<li>HANDOFF 的'互补教师蒸馏'可外推到 LLM Agent：分别用'工具调用教师'/'规划教师'/'反思教师'蒸馏，再合并为单一 Agent。</li>\n</ul>\n<h4>研发流程启发</h4>\n<ul>\n<li>TempoVLA 的速度可控性把'推理时延'从固定值变成可调度变量——这与 LLM 推理的 speculative decoding / early-exit 同构：都是把'速度'从训练时固定变成推理时可控。</li>\n</ul>\n<h4>评测方法启发</h4>\n<ul>\n<li>Code2LoRA 应引入'仓库演化鲁棒性'评测维度：在 commit 后多久适配器失效？重生成延迟是多少？</li>\n<li>TailLoR 应引入'谱保护度'评测维度：主奇异方向的扰动幅度（Frobenius norm of ΔΣ projected on top-k σ）。</li>\n<li>RREDCoT 应引入'段级奖励方差'评测维度：α_i 的分布熵、不同段切分策略的方差减少率。</li>\n<li>TempoVLA 应引入'速度-精度 Pareto'评测维度：在不同速度条件下的成功率曲线。</li>\n</ul>\n<h4>平台工程启发</h4>\n<ul>\n<li>Code2LoRA 的 hypernetwork 推理需要新基础设施：仓库编码器（AST/依赖图→embedding）、适配器生成器（embedding→LoRA 权重）、适配器缓存与生命周期管理（commit 后失效）。这是 vLLM/TensorRT-LLM/SGLang 等推理引擎尚未覆盖的设计点。</li>\n<li>TailLoR 的 SVD 预计算对超大模型有工程门槛：SVD on >10B 矩阵的成本、U/V 的存储与冻结。</li>\n<li>RREDCoT 的段级再分配需要'段重要性估计器'作为新组件，与 PRM 同构但更轻量（不需要外部标注）。</li>\n</ul>\n<h4>个人学习启发</h4>\n<ul>\n<li>今日五篇都围绕'条件化注入'：Code2LoRA（仓库条件）、TailLoR（谱条件）、RREDCoT（段条件）、TempoVLA（阶段条件）、HANDOFF（任务条件）。把'条件'作为元主题来读，能在编程/连续学习/推理/机器人/人形五个子领域间迁移洞察——这是 2026 年 Agent 基础设施的共同范式。</li>\n</ul>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2606.06492v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2606.06492v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。</li>\n<li><strong>最大不确定性：</strong> Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性</li>\n<li><strong>下一步动作：</strong> 更新趋势页（条件化适配器生成、谱保护 PEFT、段级 RL 信用分配、VLA 速度控制四个方向），把 Code2LoRA / TailLoR / RREDCoT / TempoVLA / HANDOFF 沉淀为可调用研究资产，建立'条件化注入'长尾库类别</li>\n</ul>\n<p>> 生成时间：2026-06-08T04:33:32.910643</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
     "2026-06-07": {
       "date": "2026-06-07",
       "title": "论文价值发现日报 - 2026-06-07",
@@ -10,9 +282,9 @@
       "value_type_label": "趋势价值",
       "decision": "重点学习",
       "daily_action": "今天完成 Self-Augmenting Retrieval 摘要 + 实验设计精读；列出你当前 RAG 管线的'检索触发点'清单，评估如果切换到扩散/并行生成时哪些触发点会失效",
-      "score": 84.0,
-      "trend_stage": "emerging",
-      "one_line_judgement": "值得继续观察：Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩…",
+      "score": 33.5,
+      "trend_stage": "noise",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Discrete diffusion language models generate text by iterati…",
       "max_uncertainty": "Diffusion LM 在通用文本生成上是否能与 autoregressive LM 竞争（当前 MDLM/SEDM/Plaid 主要在受控任务上有效）；低置信度 token 在代码 / 长文档 / 多跳推理场景的实体召回质量；SMT 在更大主干模型（>1B 参数）上的可扩展性；OpAI-Bench 的操作空间是否覆盖 Cursor/Copilot 类 IDE 共编场景",
       "conclusion_lines": [
         "今天最值得看的是《Self-Augmenting Retrieval for Diffusion Language Models》。",
@@ -22,38 +294,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -61,30 +346,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -105,10 +377,10 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-06-07",
-        "first_deep_dive_daily": "2026-06-07",
-        "value_type": "trend",
-        "value_type_label": "趋势价值",
+        "first_seen_date": "2026-06-08",
+        "first_deep_dive_daily": "2026-06-08",
+        "value_type": "ignore",
+        "value_type_label": "暂时忽略",
         "value_scores": {
           "novelty": 4.8,
           "relevance": 5.0,
@@ -119,12 +391,12 @@
           "actionability": 3.8,
           "noise_risk": 1.2
         },
-        "score": 84.0,
-        "decision": "重点学习",
-        "one_line_judgement": "值得继续观察：Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩…",
-        "one_line_essence": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队加持。直接价值在于：当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，这与传统 autoregressive LM 的 RAG 管线根本不同，需要新基础设施。",
+        "score": 33.5,
+        "decision": "暂时忽略",
+        "one_line_judgement": "当前可忽略：RAG / 知识系统：Discrete diffusion language models generate text by iterati…",
+        "one_line_essence": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队加持。直接价值在于：当 Masked LM / Diffusion LM ",
+        "new_claim_or_method": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
         "research_position": "source_paper",
         "engineering_testability": {
           "has_code": false,
@@ -138,7 +410,7 @@
           ]
         },
         "trend_relation": {
-          "status": "emerging",
+          "status": "noise",
           "related_trends": [
             "context-engineering"
           ],
@@ -150,9 +422,9 @@
           ]
         },
         "long_tail": {
-          "why_save": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusi",
+          "why_save": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
           "future_trigger": [
-            "出现多篇跟进论文、开源项目和工程博客共振"
+            "待更多证据"
           ],
           "possible_use_cases": [
             "Prompt 设计",
@@ -191,13 +463,9 @@
         },
         "actions": {
           "immediate_actions": [],
-          "trend_actions": [
-            "纳入趋势雷达",
-            "观察代码 / benchmark / 工程博客",
-            "7-30 天复盘"
-          ],
+          "trend_actions": [],
           "long_tail_actions": [],
-          "ignore_reason": ""
+          "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
         },
         "references": [
           {
@@ -210,7 +478,7 @@
           }
         ],
         "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
-        "daily_path": "daily-detail.html?date=2026-06-07",
+        "daily_path": "daily-detail.html?date=2026-06-08",
         "trend_paths": [
           "trend-detail.html?id=context-engineering"
         ],
@@ -281,9 +549,9 @@
       "value_type_label": "即时价值",
       "decision": "重点学习",
       "daily_action": "今天完成 Code2LoRA 摘要精读 + 超网络设计精读；评估当前代码助手（如 Continue / Cursor / 私有 Codex 部署）的仓级知识策略，列出'仓级 RAG vs 仓级 LoRA vs 长上下文'的成本-延迟-效果三维对比表",
-      "score": 39.8,
-      "trend_stage": "noise",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
+      "score": 86.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
       "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
       "conclusion_lines": [
         "今天最值得看的是《Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution》。",
@@ -293,38 +561,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -332,30 +613,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -375,10 +643,10 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-06-07",
-        "first_deep_dive_daily": "2026-06-07",
-        "value_type": "ignore",
-        "value_type_label": "暂时忽略",
+        "first_seen_date": "2026-06-08",
+        "first_deep_dive_daily": "2026-06-08",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
         "value_scores": {
           "novelty": 4.8,
           "relevance": 6.2,
@@ -389,12 +657,12 @@
           "actionability": 5.0,
           "noise_risk": 1.2
         },
-        "score": 39.8,
-        "decision": "暂时忽略",
-        "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
-        "one_line_essence": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+        "score": 86.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
+        "one_line_essence": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+        "new_claim_or_method": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoR",
         "research_position": "source_paper",
         "engineering_testability": {
           "has_code": false,
@@ -408,8 +676,9 @@
           ]
         },
         "trend_relation": {
-          "status": "noise",
+          "status": "emerging",
           "related_trends": [
+            "coding-agent",
             "context-engineering"
           ],
           "evidence": [
@@ -420,7 +689,7 @@
           ]
         },
         "long_tail": {
-          "why_save": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+          "why_save": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开",
           "future_trigger": [
             "待更多证据"
           ],
@@ -460,10 +729,14 @@
           ]
         },
         "actions": {
-          "immediate_actions": [],
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
           "trend_actions": [],
           "long_tail_actions": [],
-          "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+          "ignore_reason": ""
         },
         "references": [
           {
@@ -476,8 +749,9 @@
           }
         ],
         "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-        "daily_path": "daily-detail.html?date=2026-06-07",
+        "daily_path": "daily-detail.html?date=2026-06-08",
         "trend_paths": [
+          "trend-detail.html?id=coding-agent",
           "trend-detail.html?id=context-engineering"
         ],
         "long_tail_path": "long-tail.html",
@@ -1588,38 +1862,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -1627,30 +1914,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -1823,38 +2097,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -1862,30 +2149,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -6518,38 +6792,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -6557,30 +6844,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -6753,38 +7027,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -6792,30 +7079,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -8700,38 +8974,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -8739,30 +9026,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -8968,38 +9242,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -9007,30 +9294,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -9660,38 +9934,51 @@
       ],
       "candidate_papers": [
         {
-          "id": "self-augmenting-retrieval-for-diffusion-language-models",
-          "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-          "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+          "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+          "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+          "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
           "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 84.0,
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "pretraining-recurrent-networks-without-recurrence",
-          "title": "Pretraining Recurrent Networks without Recurrence",
-          "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+          "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+          "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+          "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
-          "decision": "轻量试点",
+          "score": 82.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-          "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-          "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+          "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+          "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+          "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+          "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+          "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
           "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
@@ -9699,30 +9986,17 @@
           "worth_deep_dive": true
         },
         {
-          "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-          "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-          "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+          "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+          "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+          "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 71.0,
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-          "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 67.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         }
       ],
       "deep_dive": {

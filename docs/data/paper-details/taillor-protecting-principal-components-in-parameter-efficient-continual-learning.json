@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-07",
-  "first_deep_dive_daily": "2026-06-07",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-06-08",
+  "first_deep_dive_daily": "2026-06-08",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 33.5,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：RAG / 知识系统：Parameter-efficient finetuning methods based on spectral de…",
-  "one_line_essence": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+  "score": 82.0,
+  "decision": "重点学习",
+  "one_line_judgement": "值得继续观察：TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩…",
+  "one_line_essence": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 PEFT × 连续学习 × 谱分解三个方向的精细化推进——核心命题是'不要碰主干'的保护主义 PEFT。与 2026 年持续学习中 catastrophic forgetting 的工程刚需对齐。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+  "new_claim_or_method": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 PEFT × 连续学习 × 谱分解三个方向的精细化推进——核心命题是'不要碰主干'的保护主义 PEFT。与 2026 年持续学习中 catastrophic forget",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,10 +49,8 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [
-      "context-engineering"
-    ],
+    "status": "emerging",
+    "related_trends": [],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -61,9 +59,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+    "why_save": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 P",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,9 +100,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -117,10 +119,8 @@
     }
   ],
   "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
-  "daily_path": "daily-detail.html?date=2026-06-07",
-  "trend_paths": [
-    "trend-detail.html?id=context-engineering"
-  ],
+  "daily_path": "daily-detail.html?date=2026-06-08",
+  "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

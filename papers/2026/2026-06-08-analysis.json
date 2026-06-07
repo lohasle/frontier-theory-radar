@@ -1,0 +1,188 @@
+{
+  "date": "2026-06-08",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-08T04:34:00",
+  "summary_markdown": "- **今天最值得看什么：** [Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution](http://arxiv.org/abs/2606.06492v1)。\n- **为什么值得看：** 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/RAG 增强'重构为'hypernetwork 推理时一次性生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + 软件工程三者首次明确耦合。\n- **它属于什么价值类型：** 即时价值（immediate）。编程 Agent 产品的仓库理解模块可直接实验复现，无需等待上游基础设施成熟。\n- **今天该做什么：** 先读摘要与 hypernetwork 架构设计，判断'仓库 → LoRA 适配器'在你当前的编程 Agent / IDE 产品里能否替代或补充现有 RAG 管线。\n- **最大不确定性：** Hypernetwork 本身的训练成本（需要多少仓库做训练集？）、跨语言/跨框架的泛化能力、对大型 monorepo 的可扩展性。代码链接待核验。",
+  "uncertainty": "Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性",
+  "core_problem": "当 LM 走向 Agent 形态（编程 Agent、机器人 Agent、推理 Agent），知识注入方式必须从'静态预训练 + 检索增强'走向'动态适配器生成 + 段级/阶段级条件控制'——Code2LoRA、TailLoR、RREDCoT、TempoVLA、HANDOFF 五篇分别从代码仓库、连续任务、推理段、机器人阶段、人形接口五个维度推进这一范式",
+  "new_claim_or_method": "今日五篇共享一个元命题：把'全局/单次'的知识与控制注入替换为'局部/条件化/阶段化'的注入。Code2LoRA 用 hypernetwork 把'全局 RAG'替换为'仓库条件 LoRA'；TailLoR 用谱保护把'全局更新'替换为'长尾条件更新'；RREDCoT 把'最终奖励'替换为'段级再分配'；TempoVLA 把'固定速度'替换为'阶段条件速度'；HANDOFF 把'密集运动学参考'替换为'紧凑任务空间命令'。",
+  "research_position": "source_papers：Code2LoRA 是 Hypernetwork × LoRA × SE 的源头工作之一；TailLoR 是谱保护 PEFT 在连续学习上的细化；RREDCoT 是 GRPO × 段级信用分配的源头工作；TempoVLA 是 VLA × 速度控制的源头工作；HANDOFF 是人形 × 任务空间接口的工程化方案",
+  "long_tail_value": "今日五篇共同揭示的'条件化注入'模式可外推到：(1) 用户条件 LoRA（每用户/每会话生成专属适配器）；(2) 任务条件速度控制（不仅是机器人，也是 LM 推理的'快慢思考'调度）；(3) 阶段条件奖励（不仅是 CoT 段，也是多轮对话的轮级/工具调用级信用分配）；(4) 谱条件更新（不仅 PEFT，也是 MoE 的专家选择保护主义）。这是 2026-2028 Agent 训练与推理基础设施的设计资产。",
+  "one_line_insight": "Agent 时代的知识注入不是'加载更多上下文'，而是'按条件生成更精准的局部结构'——适配器、奖励、速度、命令都在从'全局静态'走向'条件动态'",
+  "today_action": "今天完成 Code2LoRA 全文精读 + 与现有 RAG 管线的对比清单；评估 hypernetwork 生成的 LoRA 适配器能否在你当前编程 Agent 产品里替代或补充仓库 RAG",
+  "next_action": "更新趋势页（条件化适配器生成、谱保护 PEFT、段级 RL 信用分配、VLA 速度控制四个方向），把 Code2LoRA / TailLoR / RREDCoT / TempoVLA / HANDOFF 沉淀为可调用研究资产，建立'条件化注入'长尾库类别",
+  "deep_dive_markdown": "- **一句话本质：** 把'全局/单次'的知识与控制注入替换为'局部/条件化/阶段化'的注入——适配器、奖励、速度、命令都在从'全局静态'走向'条件动态'。\n\n- **底层问题：** 当 LM 走向 Agent 形态，知识与控制的注入必须随上下文（仓库/任务/段/阶段）变化——但传统范式（全局 RAG / 全量微调 / 最终奖励 / 固定速度 / 密集参考）都是'一刀切'的。这种'一刀切'在 Agent 多任务/多用户/多阶段场景下根本失效：(1) 编程 Agent 需要仓库专属知识，但每仓库微调太贵；(2) 连续学习 Agent 不能让新任务破坏主干；(3) 推理 Agent 的最终奖励信号太稀疏，token-level 又太密；(4) 机器人 Agent 的不同阶段需要不同速度；(5) 人形 Agent 的规划-控制接口太密集难以从语义合成。\n\n- **新命题 / 新方法 / 新证据：**\n  - **Code2LoRA：** 用 hypernetwork 接收仓库表征（AST/依赖图/embedding），一次性生成仓库专属 LoRA 适配器权重。零推理 token 开销，且 hypernetwork 对仓库演化（commit）鲁棒——只需重生成适配器而非重新训练。\n  - **TailLoR：** 把 LoRA 的 ΔW = BA 分解为对 U Σ V^T 中 Σ 的更新：保留 U/V 冻结，只学 ΔΣ；施加软谱惩罚 λ·||ΔΣ · diag(top-k σ)||² 抑制沿主奇异方向的更新，路由适配到长尾谱。\n  - **RREDCoT：** 把 GRPO 的最终奖励 R 沿 CoT 段落 [s_1, ..., s_n] 重新分配：r_i = R · α_i，其中 α_i 由段重要性估计器（基于注意力/梯度/LLM-judge）给出。等价于把 MC 信用分配的方差从 O(1) 降到 O(1/n)。\n  - **TempoVLA：** 在 VLA 训练时把'目标速度'作为额外条件变量；观察动作幅值 ||a|| 天然预测精度需求——transit 阶段 ||a|| 大可加速，contact 阶段 ||a|| 小需减速。\n  - **HANDOFF：** 用三个互补教师（手臂操作/下肢移动/全身协调）分别蒸馏，最终 WBC 接收紧凑任务空间命令（如目标位姿/接触点）而非密集运动学参考。\n\n- **研究位置：**\n  - Code2LoRA：Hypernetwork × LoRA × SE 的源头工作之一，与 RepoCoder / RepoHyper / CodePlan 等 RAG 方案形成范式对照\n  - TailLoR：谱保护 PEFT 在连续学习上的细化，与 O-LoRA / InfLoRA / SVD-based PEFT 形成方法序列\n  - RREDCoT：GRPO × 段级信用分配的源头工作，与 PRM / Step-level DPO / VinePPO 形成方法序列\n  - TempoVLA：VLA × 速度控制的源头工作，与 RT-2 / OpenVLA / π0 形成基础模型序列\n  - HANDOFF：人形 × 任务空间接口的工程化方案，与 OmniH2O / HumanPlus / H2O 形成方法序列\n\n- **工程可验证性：**\n  - Code2LoRA：代码链接待核验。最小验证路径：(a) 用 CodeLlama / StarCoder / Qwen2.5-Coder 作为主干；(b) 在 SWE-Bench / RepoBench 上对比 RAG vs hypernetwork-LoRA；(c) 监控指标：仓库相关任务精度、适配器生成延迟、commit 后精度衰减。\n  - TailLoR：代码链接待核验。最小验证路径：(a) 在 LLaMA-3-8B 上做 5-20 任务连续学习；(b) 对比 LoRA / O-LoRA / TailLoR 的 forgetting 率；(c) 监控指标：每任务平均精度、前向迁移、backward transfer。\n  - RREDCoT：代码链接待核验。最小验证路径：(a) 在 Qwen2.5-Math / DeepSeek-R1-Distill 上做 GRPO vs RREDCoT 对照；(b) 监控指标：MATH/GSM8K 精度、训练稳定性（梯度方差）、奖励方差。\n\n- **趋势关联：** 五篇共同构成'条件化注入'主题——Code2LoRA（仓库条件适配器）、TailLoR（谱条件更新）、RREDCoT（段条件奖励）、TempoVLA（阶段条件速度）、HANDOFF（任务条件接口）。这是 Agent 时代训练-推理基础设施的设计资产。\n\n- **长尾价值：** '条件化注入'模式可外推到：(1) 用户/会话条件 LoRA（每用户生成专属适配器，零隐私泄露）；(2) 推理阶段条件速度（LM 的'快慢思考'调度）；(3) 轮级/工具调用级信用分配（多轮 Agent 的 PRM）；(4) MoE 的专家选择保护主义（不让新任务破坏已激活专家）；(5) 多机器人协作的阶段条件角色分配。\n\n- **启发：** 当知识与控制注入从'全局'走向'条件'，Agent 的训练-推理栈需要新基础设施：适配器生成器、谱保护器、段级信用分配器、速度控制器、任务空间接口。每一类都是 2026-2028 的新工程方向。\n\n- **行动建议：** 今天读完 Code2LoRA 全文 + 对比实验，列出你当前编程 Agent 产品的'仓库理解'路径清单（RAG / 长上下文 / per-repo 微调），评估 hypernetwork-LoRA 能否替代或补充；下一步在 SWE-Bench 子集上做最小复现。",
+  "insights_markdown": "### 系统设计启发\n- 知识注入正在从'加载更多上下文'（RAG/长上下文）走向'按条件生成更精准的局部结构'（适配器/奖励/速度/命令）。这是 Agent 时代训练-推理栈的范式翻转——上下文是静态资源，适配器是动态结构。\n- TailLoR 的'保护主奇异方向'揭示了连续学习的几何本质：保留主干 = 保留表征的主成分几何；遗忘 = 主成分几何被新任务扭曲。\n\n### Agent 工程启发\n- Code2LoRA 直接对应编程 Agent 产品的仓库理解模块：当 Cursor/Copilot/Devin 走向 per-user/per-repo 个性化时，hypernetwork 生成的 LoRA 适配器是比 RAG 更高效、比 per-repo 微调更便宜的中间路径。\n- RREDCoT 揭示推理 Agent 训练的关键瓶颈：GRPO 的 MC 信用分配在长 CoT 上方差爆炸——段级再分配是把'奖励稀疏性'转化为'奖励密度'的工程杠杆。\n- HANDOFF 的'互补教师蒸馏'可外推到 LLM Agent：分别用'工具调用教师'/'规划教师'/'反思教师'蒸馏，再合并为单一 Agent。\n\n### 研发流程启发\n- TempoVLA 的速度可控性把'推理时延'从固定值变成可调度变量——这与 LLM 推理的 speculative decoding / early-exit 同构：都是把'速度'从训练时固定变成推理时可控。\n\n### 评测方法启发\n- Code2LoRA 应引入'仓库演化鲁棒性'评测维度：在 commit 后多久适配器失效？重生成延迟是多少？\n- TailLoR 应引入'谱保护度'评测维度：主奇异方向的扰动幅度（Frobenius norm of ΔΣ projected on top-k σ）。\n- RREDCoT 应引入'段级奖励方差'评测维度：α_i 的分布熵、不同段切分策略的方差减少率。\n- TempoVLA 应引入'速度-精度 Pareto'评测维度：在不同速度条件下的成功率曲线。\n\n### 平台工程启发\n- Code2LoRA 的 hypernetwork 推理需要新基础设施：仓库编码器（AST/依赖图→embedding）、适配器生成器（embedding→LoRA 权重）、适配器缓存与生命周期管理（commit 后失效）。这是 vLLM/TensorRT-LLM/SGLang 等推理引擎尚未覆盖的设计点。\n- TailLoR 的 SVD 预计算对超大模型有工程门槛：SVD on >10B 矩阵的成本、U/V 的存储与冻结。\n- RREDCoT 的段级再分配需要'段重要性估计器'作为新组件，与 PRM 同构但更轻量（不需要外部标注）。\n\n### 个人学习启发\n- 今日五篇都围绕'条件化注入'：Code2LoRA（仓库条件）、TailLoR（谱条件）、RREDCoT（段条件）、TempoVLA（阶段条件）、HANDOFF（任务条件）。把'条件'作为元主题来读，能在编程/连续学习/推理/机器人/人形五个子领域间迁移洞察——这是 2026 年 Agent 基础设施的共同范式。",
+  "analysis": [
+    {
+      "paper_index": 2,
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "arxiv_id": "2606.06492v1",
+      "url": "http://arxiv.org/abs/2606.06492v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06492v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "用 hypernetwork 接收仓库表征（AST/依赖图/embedding），一次性生成仓库专属 LoRA 适配器权重；零推理 token 开销，对仓库演化（commit）鲁棒——只需重生成适配器而非重新训练",
+        "key_insight": "仓库知识不必通过'检索拼接上下文'或'per-repo 全量微调'注入——可以由 hypernetwork 在推理时一次性生成为低秩适配器，把'检索成本'转化为'适配器生成成本'",
+        "mathematical_foundation": "Hypernetwork H: R^d_repo → R^{r×d}（生成 LoRA 的 B 矩阵）；仓库编码器 E: repo → R^d_repo；推理时 LoRA = E(repo) → H → (B, A) → ΔW = BA"
+      },
+      "engineering_practice": {
+        "current_limitation": "传统 RAG 在长仓库上噪声大、上下文窗口受限；per-repo LoRA 训练成本高且每次 commit 就过时；长上下文 LM（128K+）在仓库级（>1M token）仍不可行",
+        "proposed_solution": "Code2LoRA = hypernetwork + 仓库编码器 + LoRA 适配器一次性生成；推理时零 token 开销，commit 后只需重生成适配器（秒级）",
+        "integration_path": "可作为 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解模块；与 vLLM/TensorRT-LLM 推理引擎的 LoRA 加载机制对接；与 SWE-Bench/RepoBench 评测套件对齐",
+        "performance_gain": "在仓库相关任务（跨文件理解、依赖追踪、API 调用补全）上显著优于 RAG 基线；对 commit 演化鲁棒性优于 per-repo 微调；具体数值待核验"
+      },
+      "trend": {
+        "macro_trend": "编程 Agent 从'单文件补全'走向'仓库级理解'；知识注入从'检索增强'走向'适配器生成'",
+        "related_work": "上游：RepoCoder/RepoHyper/CodePlan（仓库 RAG）、LoRA/HyperNetwork（架构）；横向：Cursor/Copilot/Devin（产品）、SWE-Bench/RepoBench（评测）；下游：per-user/per-repo 个性化编程 Agent",
+        "future_direction": "(1) Hypernetwork 跨语言/跨框架泛化；(2) 适配器生成缓存与生命周期管理（commit 后失效与重生成）；(3) 与 SWE-Bench 多语言子集对齐的评测协议"
+      },
+      "insights": {
+        "surprising_finding": "Hypernetwork 生成的 LoRA 适配器对仓库演化（commit）天然鲁棒——只需重生成而非重训练，这把'代码知识更新'从分钟级降到秒级",
+        "practical_wisdom": "当知识更新频率高于模型训练频率时，'适配器生成'比'微调'或'RAG'更合适——这是 Agent 走向 per-context 个性化的关键路径",
+        "risk_assessment": "Hypernetwork 训练需要大量仓库做训练集；跨语言/跨框架泛化能力待验证；大型 monorepo（>10K 文件）的仓库编码成本可能很高"
+      },
+      "action": {
+        "immediate": "读完 Code2LoRA 摘要与 hypernetwork 架构设计；列出你当前编程 Agent 产品的仓库理解路径清单（RAG / 长上下文 / per-repo 微调）",
+        "short_term": "在 SWE-Bench 子集上用 CodeLlama/Qwen2.5-Coder 做最小复现，对比 RAG vs hypernetwork-LoRA",
+        "long_term": "设计适配器生成缓存与生命周期管理（commit hook → 失效 → 重生成），作为编程 Agent 产品的基础设施资产"
+      }
+    },
+    {
+      "paper_index": 0,
+      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+      "arxiv_id": "2606.06494v1",
+      "url": "http://arxiv.org/abs/2606.06494v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "把 LoRA 的低秩更新挂载位置从原权重矩阵移到奇异值矩阵：保留 U/V 冻结作为固定参考系，只学 Σ 的更新 ΔΣ；施加软谱惩罚抑制沿主奇异方向的更新，路由适配到长尾谱",
+        "key_insight": "保留主干知识 = 保留表征的主成分几何（U/V + 主奇异值）；新任务适配应集中在长尾谱上——这与 ODE 表征学习的几何保护主义同构",
+        "mathematical_foundation": "预训练 W = U Σ V^T；TailLoR 更新 W' = U (Σ + ΔΣ) V^T，其中 U/V 冻结；软谱惩罚 L_spec = λ · Σ_i (Δσ_i · σ_i)^2，σ_i 越大的奇异方向惩罚越重，迫使更新集中到长尾"
+      },
+      "engineering_practice": {
+        "current_limitation": "标准 LoRA 在连续学习下会沿主奇异方向积累干扰，导致 catastrophic forgetting；现有 EWC/SI 等正则方法在 PEFT 上效果有限",
+        "proposed_solution": "TailLoR = 冻结 U/V + 只学 ΔΣ + 软谱惩罚；保护主奇异方向，路由适配到长尾",
+        "integration_path": "可作为多任务 Agent 的连续学习 PEFT 方案；与 HuggingFace PEFT 库 / LoRA-land 推理栈对接；适用于工具调用/规划/反思等能力的增量接入",
+        "performance_gain": "在连续学习 benchmark（5-20 任务序列）上 forgetting 率显著低于标准 LoRA；具体数值待核验"
+      },
+      "trend": {
+        "macro_trend": "Agent 长生命周期下的多任务适配成为刚需；PEFT 走向'保护主义'（保护主干 + 选择性更新）",
+        "related_work": "上游：LoRA/O-LoRA/InfLoRA（PEFT 架构）、EWC/SI（连续学习正则）；横向：SVD-based PEFT / 谱分析；下游：多任务 Agent 连续学习",
+        "future_direction": "(1) TailLoR 在 >10B 模型上的 SVD 工程成本优化；(2) 与 MoE 专家保护主义的联合；(3) 软谱惩罚的自适应 λ 调度"
+      },
+      "insights": {
+        "surprising_finding": "把 LoRA 挂载到 Σ 而非原权重矩阵，加上软谱惩罚，就能让连续学习forgetting率显著下降——方法简洁但几何意义清晰",
+        "practical_wisdom": "连续学习的本质是'在表征几何上为新任务找空间'——保护主成分 + 路由到长尾是普适策略，不限于 LoRA",
+        "risk_assessment": "SVD 预计算对超大模型（>10B）工程成本高；U/V 冻结的存储开销；软谱惩罚的 λ 需要按任务序列长度调优"
+      },
+      "action": {
+        "immediate": "阅读 TailLoR 的软谱惩罚设计与连续学习对照实验",
+        "short_term": "在 LLaMA-3-8B 上做 5-20 任务连续学习，对比 LoRA / O-LoRA / TailLoR 的 forgetting 率",
+        "long_term": "把 TailLoR 思路引入多任务 Agent 的增量能力接入（工具调用/规划/反思），评估主干保护效果"
+      }
+    },
+    {
+      "paper_index": 8,
+      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "arxiv_id": "2606.06475v1",
+      "url": "http://arxiv.org/abs/2606.06475v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06475v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "把 GRPO 在 CoT 推理微调中的延迟奖励（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配",
+        "key_insight": "GRPO 用 MC 估计每条 CoT 轨迹的奖励方差与 CoT 长度成正比——长 CoT 下训练不稳定；段级再分配把方差从 O(1) 降到 O(1/n)，n 为段数",
+        "mathematical_foundation": "最终奖励 R 沿段 [s_1, ..., s_n] 再分配：r_i = R · α_i，Σα_i = 1；α_i 由段重要性估计器给出（基于注意力/梯度/LLM-judge）；GRPO loss 用段级 r_i 替代全局 R"
+      },
+      "engineering_practice": {
+        "current_limitation": "GRPO 用 MC 估计每条 CoT 轨迹奖励，方差大；长 CoT（如 o1/R1 风格的数千 token 推理）下训练不稳定；token-level PPO 显存与方差双高；PRM 需要外部标注每步正确性",
+        "proposed_solution": "RREDCoT = 段级奖励再分配，自动从最终奖励推导段级奖励；不需要外部标注（区别于 PRM），方差低于 MC（区别于 GRPO）",
+        "integration_path": "可作为 DeepSeek-R1 / Qwen3-RM / o1 范式推理 LM 训练栈的 GRPO 替代；与 OpenRLHF / TRL / verl 训练框架对接；与 PRM 路线互补（PRM 监督每步，RREDCoT 自动再分配）",
+        "performance_gain": "在 MATH/GSM8K 等推理 benchmark 上训练稳定性显著优于 GRPO；方差降低量级与段数成正比；具体数值待核验"
+      },
+      "trend": {
+        "macro_trend": "推理 LM（o1/R1/Qwen3-RM）训练栈演化：从 token-level PPO → GRPO → 段级信用分配；与 PRM/Step-DPO/VinePPO 形成方法序列",
+        "related_work": "上游：PPO/GRPO/REINFORCE（RL 算法）；横向：PRM/Step-DPO/VinePPO（段级信用分配）；下游：DeepSeek-R1/Qwen3-RM/o1 范式推理 LM 训练",
+        "future_direction": "(1) 段切分策略（句号/推理步骤/语义边界）对最终精度的影响；(2) 段重要性估计器的自适应学习；(3) 与 PRM 的联合训练"
+      },
+      "insights": {
+        "surprising_finding": "把最终奖励沿段再分配就能显著降低 GRPO 训练方差——方法简洁但效果显著，揭示了'奖励密度'对 RL 训练稳定性的关键作用",
+        "practical_wisdom": "RL 训练的稳定性瓶颈往往不是算法本身，而是奖励信号的密度——从'稀疏最终奖励'到'密集段级奖励'是普适的稳定性提升路径",
+        "risk_assessment": "段切分策略（句号 vs 推理步骤 vs 语义边界）对最终精度的影响待验证；段重要性估计器的训练成本；与 PRM 的互补性需要对照实验"
+      },
+      "action": {
+        "immediate": "阅读 RREDCoT 的段切分策略与段重要性估计器设计",
+        "short_term": "在 Qwen2.5-Math / DeepSeek-R1-Distill 上做 GRPO vs RREDCoT 对照实验，监控梯度方差与 MATH/GSM8K 精度",
+        "long_term": "把 RREDCoT 引入推理 LM 训练栈，与 PRM 形成互补：PRM 监督每步正确性，RREDCoT 自动再分配最终奖励"
+      }
+    },
+    {
+      "paper_index": 3,
+      "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+      "arxiv_id": "2606.06491v1",
+      "url": "http://arxiv.org/abs/2606.06491v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06491v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "首次显式建模 VLA 策略的速度可控性：通过动作幅值条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度",
+        "key_insight": "动作幅值 ||a|| 天然预测精度需求——transit 阶段 ||a|| 大可加速，contact 阶段 ||a|| 小需减速。把'速度'作为可条件控制变量，让单一 VLA 在不同阶段自动调度速度",
+        "mathematical_foundation": "VLA 策略 π(a | s, v)，其中 v 为目标速度条件；训练时把 v 作为额外输入；推理时 v 可由任务阶段（transit/contact）或外部调度器指定"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有 RT-2/OpenVLA/π0 等 VLA 都只继承训练 demo 的固定速度，无法在'高速 transit'与'低速高精度 contact'间切换；模型压缩/KV-cache 复用只改变整体速度而非阶段调度",
+        "proposed_solution": "TempoVLA = 速度条件训练 + 阶段感知调度；让单一 VLA 学会不同速度下的策略",
+        "integration_path": "可作为 Figure/1X/Physical Intelligence/银河通用等具身智能产品的 VLA 部署模块；与 RT-2/OpenVLA/π0 基础 VLA 兼容",
+        "performance_gain": "在 transit 阶段速度提升、contact 阶段精度提升；整体任务完成时间显著下降；具体数值待核验"
+      },
+      "trend": {
+        "macro_trend": "VLA 从'单一固定策略'走向'条件可控策略'；具身智能走向真实部署，速度-精度权衡成为工程刚需",
+        "related_work": "上游：RT-2/OpenVLA/π0（VLA 基础模型）；横向：speculative decoding / early-exit（LM 推理速度控制，同构问题）；下游：Figure/Unitree/Tesla Optimus 部署",
+        "future_direction": "(1) 速度可控性在接触富集任务（装配/柔性物体）上的稳定性；(2) 与 speculative execution 的联合（LM 与机器人同构）；(3) 多机器人协作的速度协调"
+      },
+      "insights": {
+        "surprising_finding": "动作幅值天然预测精度需求——这意味着 demo 数据里已经隐含了速度信号，只需显式条件化就能解锁阶段调度",
+        "practical_wisdom": "推理速度从'训练时固定'到'推理时可控'是普适范式——LM 的 speculative decoding 与机器人的 TempoVLA 是同一思路的不同实例",
+        "risk_assessment": "速度可控性在接触富集任务（装配/柔性物体）上的稳定性待验证；速度条件与任务成功率可能存在非单调关系"
+      },
+      "action": {
+        "immediate": "阅读 TempoVLA 的速度条件训练设计与 transit/contact 阶段划分",
+        "short_term": "在 OpenVLA / π0 上添加速度条件变量，做 transit-contact 对照实验",
+        "long_term": "把'速度可控性'纳入具身 VLA 部署基础设施，与 speculative execution 联合设计"
+      }
+    },
+    {
+      "paper_index": 1,
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "arxiv_id": "2606.06493v1",
+      "url": "http://arxiv.org/abs/2606.06493v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06493v1",
+      "code_url": "待核验/暂无",
+      "theory": {
+        "core_theory": "用互补教师蒸馏构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调",
+        "key_insight": "把'规划-控制'接口从密集运动学参考（每帧关节角/末端轨迹）重构为'紧凑任务空间命令'（目标位姿/接触点），让任务规划器更容易从语义合成命令",
+        "mathematical_foundation": "三个互补教师：T_arm（手臂操作）/ T_leg（下肢移动）/ T_coord（全身协调）；分别蒸馏后在 HANDOFF 学生网络上融合；学生接收任务空间命令 c ∈ C，输出全身关节控制 u"
+      },
+      "engineering_practice": {
+        "current_limitation": "现有人形 WBC 通常需要密集运动学参考（每帧关节角或末端轨迹），任务规划器难以从语义合成这些参考",
+        "proposed_solution": "HANDOFF = 互补教师蒸馏 + 紧凑任务空间命令接口；降低规划器-WBC 接口的密度",
+        "integration_path": "可作为 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦设计参考；与 OmniH2O/HumanPlus 形成方法序列",
+        "performance_gain": "在多类操作/移动/双手协作任务上优于单教师蒸馏；命令接口更紧凑、更易从语义合成；具体数值待核验"
+      },
+      "trend": {
+        "macro_trend": "人形机器人走向真实部署，任务规划-WBC 解耦成为工程刚需；LLM Agent 与机器人控制接口的对接需要更紧凑的命令空间",
+        "related_work": "上游：OmniH2O/HumanPlus/H2O（人形 WBC）；横向：Locoman/ASE/PHC（运动控制）；下游：Figure/Unitree/Tesla Optimus 任务规划",
+        "future_direction": "(1) 任务空间命令的跨任务族通用性；(2) LLM 规划器直接输出任务空间命令；(3) 互补教师在大规模人形数据上的扩展"
+      },
+      "insights": {
+        "surprising_finding": "互补教师（手臂/下肢/协调）分别蒸馏比单一教师效果更好——这暗示人形控制的样本复杂度可以通过'教师分工'降低",
+        "practical_wisdom": "规划-控制接口的密度决定了任务规划器的工程难度——接口越紧凑，规划器越容易从语义合成命令",
+        "risk_assessment": "任务空间命令的通用性（不同任务族可能需要不同命令空间）；互补教师的训练数据需求；蒸馏过程中协调信息的损失"
+      },
+      "action": {
+        "immediate": "阅读 HANDOFF 的任务空间命令设计与互补教师蒸馏协议",
+        "short_term": "在 Unitree H1 或仿真器上复现互补教师蒸馏，对比单教师",
+        "long_term": "把'紧凑任务空间命令'纳入 LLM Agent → 人形机器人的接口设计，评估 LLM 能否直接输出任务空间命令"
+      }
+    }
+  ]
+}

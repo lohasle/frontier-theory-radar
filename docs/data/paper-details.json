@@ -1,310 +1,44 @@
 {
-  "updated_at": "2026-06-07T04:33:36.146115",
+  "updated_at": "2026-06-08T04:33:37.359676",
   "papers": {
-    "self-augmenting-retrieval-for-diffusion-language-models": {
-      "id": "self-augmenting-retrieval-for-diffusion-language-models",
-      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+    "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution": {
+      "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
       "authors": [
-        "Paul Jünger",
-        "Justin Lovelace",
-        "Linxi Zhao",
-        "Dongyoung Go",
-        "Kilian Q. Weinberger"
+        "Liliana Hotsko",
+        "Yinxi Li",
+        "Yuntian Deng",
+        "Pengyu Nie"
       ],
       "source": "arXiv",
       "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06474v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
+      "url": "http://arxiv.org/abs/2606.06492v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06492v1",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 1.2
-      },
-      "score": 84.0,
-      "decision": "重点学习",
-      "one_line_judgement": "值得继续观察：Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩…",
-      "one_line_essence": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队加持。直接价值在于：当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，这与传统 autoregressive LM 的 RAG 管线根本不同，需要新基础设施。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队加持。直接价值在于：当 Masked LM / Diffusion LM ",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "context-engineering"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusi",
-        "future_trigger": [
-          "出现多篇跟进论文、开源项目和工程博客共振"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [
-          "纳入趋势雷达",
-          "观察代码 / benchmark / 工程博客",
-          "7-30 天复盘"
-        ],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06474v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06474v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
-      "daily_path": "daily-detail.html?date=2026-06-07",
-      "trend_paths": [
-        "trend-detail.html?id=context-engineering"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "pretraining-recurrent-networks-without-recurrence": {
-      "id": "pretraining-recurrent-networks-without-recurrence",
-      "title": "Pretraining Recurrent Networks without Recurrence",
-      "authors": [
-        "Akarsh Kumar",
-        "Phillip Isola"
-      ],
-      "source": "arXiv",
-      "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06479v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 1.2
-      },
-      "score": 78.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是…",
-      "one_line_essence": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'。MIT Isola 团队。对长上下文 LM 训练（Mamba/RWKV/线性注意力）有方向性启发：不依赖梯度沿时间回传也能学到长程依赖，可能解锁更长上下文窗口的高效训练。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'。MIT Isola 团队。对长上下文 LM 训练（Mamba/RWKV/线性注意力）有方向性启发：不依赖梯度沿时间回传也能学到长程依赖，可能解锁更长上下文窗口的高效训",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "context-engineering"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'",
-        "future_trigger": [
-          "出现多篇跟进论文、开源项目和工程博客共振"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [
-          "纳入趋势雷达",
-          "观察代码 / benchmark / 工程博客",
-          "7-30 天复盘"
-        ],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06479v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06479v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
-      "daily_path": "daily-detail.html?date=2026-06-07",
-      "trend_paths": [
-        "trend-detail.html?id=context-engineering"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection": {
-      "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-      "authors": [
-        "Sondos Mahmoud Bsharat",
-        "Jiacheng Liu",
-        "Xiaohan Zhao",
-        "Tianjun Yao",
-        "Xinyi Shang"
-      ],
-      "source": "arXiv",
-      "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06481v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "value_scores": {
         "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.95,
+        "relevance": 6.2,
+        "evidence": 4.5,
         "engineering_testability": 4.05,
-        "trend_signal": 5.45,
+        "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 76.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "今天值得试：OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI r…",
-      "one_line_essence": "OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI revise → human edit → AI polish）——这正是 Notion AI / Grammarly / Google Docs AI / Cursor 写作侧的真实使用形态。当前 AI 文本检测器在共编场景下精度崩塌已是产业共识（OpenAI Detector 已下线、GPTZero 在共编下精度大幅下降）。benchmark 直接对应产品评测缺口，immediate 价值明确。",
+      "score": 86.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
+      "one_line_essence": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI revise → human edit → AI polish）——这正是 Notion AI / Grammarly / Google Docs AI / Cursor 写作侧的真实使用形态。当前 AI 文本检测器在共编",
-      "research_position": "benchmark",
+      "new_claim_or_method": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoR",
+      "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
         "has_benchmark": false,
@@ -319,7 +53,8 @@
       "trend_relation": {
         "status": "emerging",
         "related_trends": [
-          "coding-agent"
+          "coding-agent",
+          "context-engineering"
         ],
         "evidence": [
           "论文主题匹配固定研究方向"
@@ -329,7 +64,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI revise → human edit → AI po",
+        "why_save": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开",
         "future_trigger": [
           "待更多证据"
         ],
@@ -381,17 +116,18 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06481v1"
+          "url": "http://arxiv.org/abs/2606.06492v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06481v1"
+          "url": "https://arxiv.org/pdf/2606.06492v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-      "daily_path": "daily-detail.html?date=2026-06-07",
+      "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+      "daily_path": "daily-detail.html?date=2026-06-08",
       "trend_paths": [
-        "trend-detail.html?id=coding-agent"
+        "trend-detail.html?id=coding-agent",
+        "trend-detail.html?id=context-engineering"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -400,25 +136,155 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "regret-minimization-with-adaptive-opponents-in-repeated-games": {
-      "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+    "taillor-protecting-principal-components-in-parameter-efficient-continual-learning": {
+      "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
       "authors": [
-        "Mingyang Liu",
-        "Asuman Ozdaglar",
-        "Tiancheng Yu",
-        "Kaiqing Zhang"
+        "Marius Dragoi",
+        "Ioana Pintilie",
+        "Alexandra Dragomir",
+        "Antonio Barbalau",
+        "Florin Brad"
       ],
       "source": "arXiv",
       "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06486v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
+      "url": "http://arxiv.org/abs/2606.06494v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 82.0,
+      "decision": "重点学习",
+      "one_line_judgement": "值得继续观察：TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩…",
+      "one_line_essence": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 PEFT × 连续学习 × 谱分解三个方向的精细化推进——核心命题是'不要碰主干'的保护主义 PEFT。与 2026 年持续学习中 catastrophic forgetting 的工程刚需对齐。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 PEFT × 连续学习 × 谱分解三个方向的精细化推进——核心命题是'不要碰主干'的保护主义 PEFT。与 2026 年持续学习中 catastrophic forget",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 P",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06494v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06494v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+      "daily_path": "daily-detail.html?date=2026-06-08",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "rredcot-segment-level-reward-redistribution-for-reasoning-models": {
+      "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "authors": [
+        "Mykyta Ielanskyi",
+        "Kajetan Schweighofer",
+        "Lukas Aichberger",
+        "Sepp Hochreiter"
+      ],
+      "source": "arXiv",
+      "published": "2026-06-04",
+      "url": "http://arxiv.org/abs/2606.06475v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06475v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -431,12 +297,12 @@
         "actionability": 3.8,
         "noise_risk": 2.4
       },
-      "score": 71.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external …",
-      "one_line_essence": "引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external regret，建模'所有玩家都在反事实推理'的多智能体场景。MIT Ozdaglar/Zhang 团队。理论价值高但工程应用间接：可服务于 LLM agent 多方谈判、自动定价、广告竞价、安全对抗场景的评估基线，但当前 LLM agent benchmark（如 AgentBench/WebArena）尚未引入 RP-Regret。",
+      "score": 80.0,
+      "decision": "重点学习",
+      "one_line_judgement": "值得继续观察：RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把…",
+      "one_line_essence": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 RL 中的 credit assignment。Hochreiter 团队加持。对当前 RLHF/GRPO 训练栈（DeepSeek-R1、Qwen3-RM、OpenAI o1 范式）有直接方法论价值，是从 token-level PPO 到 segment-level 信用分配的中间路径。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external regret，建模'所有玩家都在反事实推理'的多智能体场景。MIT Ozdaglar/Zhang 团队。理论价值高但工程应用间接：可服务于 LLM agent 多方谈判、自动定价、广告竞价、安全对抗场景的评估基线，但当前",
+      "new_claim_or_method": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 RL 中的 credit assignment。Hochreiter 团队加持。对当前 RLHF/GRPO 训练栈（DeepSeek-R1、Qwen3-RM、OpenAI",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -452,7 +318,6 @@
       "trend_relation": {
         "status": "emerging",
         "related_trends": [
-          "agentic-world-modeling",
           "coding-agent"
         ],
         "evidence": [
@@ -463,7 +328,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external regret，建模'所有玩家都在反事实推理'的多智能",
+        "why_save": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 R",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -515,280 +380,17 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06486v1"
+          "url": "http://arxiv.org/abs/2606.06475v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06486v1"
+          "url": "https://arxiv.org/pdf/2606.06475v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
-      "daily_path": "daily-detail.html?date=2026-06-07",
+      "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
+      "daily_path": "daily-detail.html?date=2026-06-08",
       "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=coding-agent"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "dnq-deep-nash-q-network-for-partially-observable-n-player-games": {
-      "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-      "authors": [
-        "Qintong Xie",
-        "Edward Koh",
-        "Xavier Cadet",
-        "Peter Chin"
-      ],
-      "source": "arXiv",
-      "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06480v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06480v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 6.2,
-        "evidence": 4.5,
-        "engineering_testability": 4.6,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 67.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、…",
-      "one_line_essence": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NFSP / PSRO 系列，工程突破性中等；更适合作为多智能体 RL 训练栈的方法资产保存。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NFSP / PSRO 系列，工程突破性中等；更适合作为多智能体 RL 训练栈的方法资产保存。",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "agentic-world-modeling"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NF",
-        "future_trigger": [
-          "出现多篇跟进论文、开源项目和工程博客共振"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [
-          "纳入趋势雷达",
-          "观察代码 / benchmark / 工程博客",
-          "7-30 天复盘"
-        ],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06480v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06480v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-      "daily_path": "daily-detail.html?date=2026-06-07",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution": {
-      "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-      "authors": [
-        "Liliana Hotsko",
-        "Yinxi Li",
-        "Yuntian Deng",
-        "Pengyu Nie"
-      ],
-      "source": "arXiv",
-      "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06492v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06492v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 6.2,
-        "evidence": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 39.8,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
-      "one_line_essence": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "context-engineering"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06492v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06492v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-      "daily_path": "daily-detail.html?date=2026-06-07",
-      "trend_paths": [
-        "trend-detail.html?id=context-engineering"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -815,10 +417,10 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
       "value_scores": {
         "novelty": 4.8,
         "relevance": 6.2,
@@ -829,12 +431,12 @@
         "actionability": 3.8,
         "noise_risk": 1.2
       },
-      "score": 36.6,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：Multimodal Agent：Robot manipulation alternates between low-risk transi…",
-      "one_line_essence": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
+      "score": 76.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险…",
+      "one_line_essence": "TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这是 VLA 走向真实部署的关键缺口——现有 VLA 只继承训练 demo 的固定速度。对 Figure/1X/Physical Intelligence/银河通用等具身智能产品的部署速度-精度权衡有直接价值。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
+      "new_claim_or_method": "TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这是 VLA 走向真实部署的关键缺口——现有 VLA 只继承训练 demo 的固定速度。对 Figure/1X/Physical Intelligence/银河通用等具身",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -848,7 +450,7 @@
         ]
       },
       "trend_relation": {
-        "status": "noise",
+        "status": "emerging",
         "related_trends": [
           "agentic-world-modeling"
         ],
@@ -860,9 +462,9 @@
         ]
       },
       "long_tail": {
-        "why_save": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
+        "why_save": "TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这",
         "future_trigger": [
-          "待更多证据"
+          "出现多篇跟进论文、开源项目和工程博客共振"
         ],
         "possible_use_cases": [
           "Prompt 设计",
@@ -901,9 +503,13 @@
       },
       "actions": {
         "immediate_actions": [],
-        "trend_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
         "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+        "ignore_reason": ""
       },
       "references": [
         {
@@ -916,7 +522,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
-      "daily_path": "daily-detail.html?date=2026-06-07",
+      "daily_path": "daily-detail.html?date=2026-06-08",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
       ],
@@ -945,10 +551,10 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
       "value_scores": {
         "novelty": 4.8,
         "relevance": 5.0,
@@ -959,12 +565,145 @@
         "actionability": 3.8,
         "noise_risk": 1.2
       },
-      "score": 34.0,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：AI Agent：For a humanoid robot to be deployed in the real world, the ch…",
-      "one_line_essence": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+      "score": 73.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC …",
+      "one_line_essence": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦设计有方法论价值。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+      "new_claim_or_method": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06493v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06493v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+      "daily_path": "daily-detail.html?date=2026-06-08",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "dnq-deep-nash-q-network-for-partially-observable-n-player-games": {
+      "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
+      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
+      "authors": [
+        "Qintong Xie",
+        "Edward Koh",
+        "Xavier Cadet",
+        "Peter Chin"
+      ],
+      "source": "arXiv",
+      "published": "2026-06-04",
+      "url": "http://arxiv.org/abs/2606.06480v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06480v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 6.2,
+        "evidence": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 40.4,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：AI Agent：Many real-world competitive systems require multiple decision…",
+      "one_line_essence": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -990,7 +729,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+        "why_save": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
         "future_trigger": [
           "待更多证据"
         ],
@@ -1038,15 +777,15 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06493v1"
+          "url": "http://arxiv.org/abs/2606.06480v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06493v1"
+          "url": "https://arxiv.org/pdf/2606.06480v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
-      "daily_path": "daily-detail.html?date=2026-06-07",
+      "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
+      "daily_path": "daily-detail.html?date=2026-06-08",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
       ],
@@ -1057,26 +796,156 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "taillor-protecting-principal-components-in-parameter-efficient-continual-learning": {
-      "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
-      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+    "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection": {
+      "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
       "authors": [
-        "Marius Dragoi",
-        "Ioana Pintilie",
-        "Alexandra Dragomir",
-        "Antonio Barbalau",
-        "Florin Brad"
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu",
+        "Xiaohan Zhao",
+        "Tianjun Yao",
+        "Xinyi Shang"
       ],
       "source": "arXiv",
       "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06494v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
+      "url": "http://arxiv.org/abs/2606.06481v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 39.8,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：LLM 评测：As AI writing assistants become increasingly integrated into re…",
+      "one_line_essence": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06481v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06481v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+      "daily_path": "daily-detail.html?date=2026-06-08",
+      "trend_paths": [
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "self-augmenting-retrieval-for-diffusion-language-models": {
+      "id": "self-augmenting-retrieval-for-diffusion-language-models",
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "authors": [
+        "Paul Jünger",
+        "Justin Lovelace",
+        "Linxi Zhao",
+        "Dongyoung Go",
+        "Kilian Q. Weinberger"
+      ],
+      "source": "arXiv",
+      "published": "2026-06-04",
+      "url": "http://arxiv.org/abs/2606.06474v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1091,10 +960,10 @@
       },
       "score": 33.5,
       "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Parameter-efficient finetuning methods based on spectral de…",
-      "one_line_essence": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Discrete diffusion language models generate text by iterati…",
+      "one_line_essence": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+      "new_claim_or_method": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -1120,7 +989,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+        "why_save": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
         "future_trigger": [
           "待更多证据"
         ],
@@ -1168,15 +1037,15 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06494v1"
+          "url": "http://arxiv.org/abs/2606.06474v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06494v1"
+          "url": "https://arxiv.org/pdf/2606.06474v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
-      "daily_path": "daily-detail.html?date=2026-06-07",
+      "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+      "daily_path": "daily-detail.html?date=2026-06-08",
       "trend_paths": [
         "trend-detail.html?id=context-engineering"
       ],
@@ -1187,25 +1056,152 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "rredcot-segment-level-reward-redistribution-for-reasoning-models": {
-      "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
-      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+    "pretraining-recurrent-networks-without-recurrence": {
+      "id": "pretraining-recurrent-networks-without-recurrence",
+      "title": "Pretraining Recurrent Networks without Recurrence",
       "authors": [
-        "Mykyta Ielanskyi",
-        "Kajetan Schweighofer",
-        "Lukas Aichberger",
-        "Sepp Hochreiter"
+        "Akarsh Kumar",
+        "Phillip Isola"
       ],
       "source": "arXiv",
       "published": "2026-06-04",
-      "url": "http://arxiv.org/abs/2606.06475v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06475v1",
+      "url": "http://arxiv.org/abs/2606.06479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 33.2,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：Context Engineering：Training recurrent neural networks (RNNs) requires…",
+      "one_line_essence": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across l",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06479v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06479v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+      "daily_path": "daily-detail.html?date=2026-06-08",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "regret-minimization-with-adaptive-opponents-in-repeated-games": {
+      "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
+      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+      "authors": [
+        "Mingyang Liu",
+        "Asuman Ozdaglar",
+        "Tiancheng Yu",
+        "Kaiqing Zhang"
+      ],
+      "source": "arXiv",
+      "published": "2026-06-04",
+      "url": "http://arxiv.org/abs/2606.06486v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1220,10 +1216,10 @@
       },
       "score": 28.5,
       "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：前沿论文：Recent advancements in reasoning language models have been driven…",
-      "one_line_essence": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+      "one_line_judgement": "当前可忽略：前沿论文：In this paper, we study regret minimization in repeated games wit…",
+      "one_line_essence": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+      "new_claim_or_method": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -1247,7 +1243,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+        "why_save": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
         "future_trigger": [
           "待更多证据"
         ],
@@ -1295,15 +1291,15 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06475v1"
+          "url": "http://arxiv.org/abs/2606.06486v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06475v1"
+          "url": "https://arxiv.org/pdf/2606.06486v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
-      "daily_path": "daily-detail.html?date=2026-06-07",
+      "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+      "daily_path": "daily-detail.html?date=2026-06-08",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {

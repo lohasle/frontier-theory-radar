@@ -15,10 +15,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-07",
-  "first_deep_dive_daily": "2026-06-07",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-06-08",
+  "first_deep_dive_daily": "2026-06-08",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
@@ -29,12 +29,12 @@
     "actionability": 3.8,
     "noise_risk": 2.4
   },
-  "score": 28.5,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：前沿论文：Recent advancements in reasoning language models have been driven…",
-  "one_line_essence": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+  "score": 80.0,
+  "decision": "重点学习",
+  "one_line_judgement": "值得继续观察：RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把…",
+  "one_line_essence": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 RL 中的 credit assignment。Hochreiter 团队加持。对当前 RLHF/GRPO 训练栈（DeepSeek-R1、Qwen3-RM、OpenAI o1 范式）有直接方法论价值，是从 token-level PPO 到 segment-level 信用分配的中间路径。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+  "new_claim_or_method": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 RL 中的 credit assignment。Hochreiter 团队加持。对当前 RLHF/GRPO 训练栈（DeepSeek-R1、Qwen3-RM、OpenAI",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -48,8 +48,10 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [],
+    "status": "emerging",
+    "related_trends": [
+      "coding-agent"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -58,9 +60,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+    "why_save": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 R",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -99,9 +101,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -114,8 +120,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
-  "daily_path": "daily-detail.html?date=2026-06-07",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-06-08",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

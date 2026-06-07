@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-07",
-  "first_deep_dive_daily": "2026-06-07",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-06-08",
+  "first_deep_dive_daily": "2026-06-08",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 34.0,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：AI Agent：For a humanoid robot to be deployed in the real world, the ch…",
-  "one_line_essence": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+  "score": 73.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC …",
+  "one_line_essence": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦设计有方法论价值。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+  "new_claim_or_method": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [
       "agentic-world-modeling"
     ],
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+    "why_save": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,9 +102,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -117,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
-  "daily_path": "daily-detail.html?date=2026-06-07",
+  "daily_path": "daily-detail.html?date=2026-06-08",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

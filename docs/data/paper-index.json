@@ -1,386 +1,7 @@
 {
-  "updated_at": "2026-06-07T04:33:35.853473",
+  "updated_at": "2026-06-08T04:33:35.772002",
   "total": 279,
   "papers": [
-    {
-      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-      "authors": [
-        "Paul Jünger",
-        "Justin Lovelace",
-        "Linxi Zhao",
-        "Dongyoung Go",
-        "Kilian Q. Weinberger"
-      ],
-      "published": "2026-06-04",
-      "updated": "2026-06-04",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06474v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Discrete diffusion language models generate text by iteratively denoising an entire response in parallel. At each step, they predict tentative tokens for every masked position, committing the confident predictions to the output and discarding the unconfident ones. We show that the discarded tokens are in fact a useful lookahead signal for retrieval-augmented generation: even low-confidence tokens often surface salient entities early in the denoising trajectory, enabling retrieval of stronger evi",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "keywords": [
-        "benchmark",
-        "RAG"
-      ],
-      "score": 84.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06474v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06474v1"
-        }
-      ],
-      "llm_reason": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队加持。直接价值在于：当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，这与传统 autoregressive LM 的 RAG 管线根本不同，需要新基础设施。",
-      "id": "self-augmenting-retrieval-for-diffusion-language-models",
-      "value_type": "trend",
-      "matched_topics": [
-        "rag-knowledge",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
-      "one_line_judgement": "值得继续观察：Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Self-Augmenting Retrieval 把离散扩散 LM 的'低置信度丢弃 token'重新定义为 RAG 的前瞻检索信号——扩散去噪的副产品变成主动检索入口。这是 Diffusi",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models"
-    },
-    {
-      "title": "Pretraining Recurrent Networks without Recurrence",
-      "authors": [
-        "Akarsh Kumar",
-        "Phillip Isola"
-      ],
-      "published": "2026-06-04",
-      "updated": "2026-06-04",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06479v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Training recurrent neural networks (RNNs) requires assigning credit across long sequences of computations. Standard backpropagation through time (BPTT) addresses this problem poorly: it is sequential in time, limiting parallelism, and suffers from vanishing or exploding gradients, making long-range associations difficult to learn. We propose Supervised Memory Training (SMT), a method for training nonlinear RNNs that sidesteps recurrent credit propagation entirely by reducing RNN training to supe",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "keywords": [
-        "memory"
-      ],
-      "score": 78.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06479v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06479v1"
-        }
-      ],
-      "llm_reason": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'。MIT Isola 团队。对长上下文 LM 训练（Mamba/RWKV/线性注意力）有方向性启发：不依赖梯度沿时间回传也能学到长程依赖，可能解锁更长上下文窗口的高效训练。",
-      "id": "pretraining-recurrent-networks-without-recurrence",
-      "value_type": "trend",
-      "matched_topics": [
-        "context-engineering",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 4.0,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
-      "one_line_judgement": "值得继续观察：Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence"
-    },
-    {
-      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-      "authors": [
-        "Sondos Mahmoud Bsharat",
-        "Jiacheng Liu",
-        "Xiaohan Zhao",
-        "Tianjun Yao",
-        "Xinyi Shang"
-      ],
-      "published": "2026-06-04",
-      "updated": "2026-06-04",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06481v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from progressive human-AI co-editing. However, existing AI-text detection benchmarks largely focus on final outputs and provide limited understanding of how AI authorship signals emerge, accumulate, or disappear throughout the revision process. We introduce OpAI-Bench, an operation-guided benchmark for study",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "keywords": [
-        "evaluation",
-        "benchmark",
-        "RAG"
-      ],
-      "score": 76.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06481v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06481v1"
-        }
-      ],
-      "llm_reason": "OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI revise → human edit → AI polish）——这正是 Notion AI / Grammarly / Google Docs AI / Cursor 写作侧的真实使用形态。当前 AI 文本检测器在共编场景下精度崩塌已是产业共识（OpenAI Detector 已下线、GPTZero 在共编下精度大幅下降）。benchmark 直接对应产品评测缺口，immediate 价值明确。",
-      "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-      "value_type": "immediate",
-      "matched_topics": [
-        "llm-evaluation",
-        "security-governance"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.05,
-        "trend_signal": 5.45,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
-      "one_line_judgement": "今天值得试：OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI r…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "OpAI-Bench 是首个'操作引导'的 AI 文本检测 benchmark，明确建模渐进式人-AI 共编工作流（draft → AI revise → human edit → AI po",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection"
-    },
-    {
-      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-      "authors": [
-        "Mingyang Liu",
-        "Asuman Ozdaglar",
-        "Tiancheng Yu",
-        "Kaiqing Zhang"
-      ],
-      "published": "2026-06-04",
-      "updated": "2026-06-04",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06486v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "In this paper, we study regret minimization in repeated games with \\emph{adaptive} opponents who can respond based on histories of play. The standard metric of \\emph{external regret} in online learning is known to fail to capture such adaptivity. To account for players' counterfactual reasoning, we introduce {\\tt Repeated Policy Regret (RP-Regret)}, a game-theoretic metric that measures the difference between the \\emph{realized} and the \\emph{best-in-hindsight} accumulated utility when all playe",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.GT"
-      ],
-      "keywords": [],
-      "score": 71.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06486v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06486v1"
-        }
-      ],
-      "llm_reason": "引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external regret，建模'所有玩家都在反事实推理'的多智能体场景。MIT Ozdaglar/Zhang 团队。理论价值高但工程应用间接：可服务于 LLM agent 多方谈判、自动定价、广告竞价、安全对抗场景的评估基线，但当前 LLM agent benchmark（如 AgentBench/WebArena）尚未引入 RP-Regret。",
-      "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-      "value_type": "trend",
-      "matched_topics": [
-        "ai-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
-      "one_line_judgement": "值得继续观察：引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external …",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "引入 Repeated Policy Regret (RP-Regret) 度量自适应对手下的重复博弈后悔——区别于标准 external regret，建模'所有玩家都在反事实推理'的多智能",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games"
-    },
-    {
-      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-      "authors": [
-        "Qintong Xie",
-        "Edward Koh",
-        "Xavier Cadet",
-        "Peter Chin"
-      ],
-      "published": "2026-06-04",
-      "updated": "2026-06-04",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06480v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06480v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Many real-world competitive systems require multiple decision-makers to act simultaneously under shared constraints, limited information, and repeated interaction, as in auctions, resource allocation, and security competition. We study multi-turn simultaneous bidding as a controlled testbed for such problems and propose DNQ, a solver-in-the-loop equilibrium supervision framework for training bidding agents. DNQ alternates between trajectory collection, critic-based payoff estimation, equilibrium",
-      "categories": [
-        "cs.GT",
-        "cs.LG"
-      ],
-      "keywords": [
-        "agent"
-      ],
-      "score": 67.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06480v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06480v1"
-        }
-      ],
-      "llm_reason": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NFSP / PSRO 系列，工程突破性中等；更适合作为多智能体 RL 训练栈的方法资产保存。",
-      "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-      "value_type": "trend",
-      "matched_topics": [
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.6,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
-      "one_line_judgement": "值得继续观察：DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NF",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games"
-    },
     {
       "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
       "authors": [
@@ -410,8 +31,8 @@
         "RAG",
         "inference"
       ],
-      "score": 39.8,
-      "decision": "暂时忽略",
+      "score": 86.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
@@ -422,9 +43,11 @@
           "url": "https://arxiv.org/pdf/2606.06492v1"
         }
       ],
+      "llm_reason": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。",
       "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-      "value_type": "ignore",
+      "value_type": "immediate",
       "matched_topics": [
+        "coding-agent",
         "rag-knowledge",
         "inference-serving"
       ],
@@ -444,19 +67,165 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：Code language models need repository-level context to resolve imports, APIs, a…",
+      "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+      "long_tail_summary": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开",
       "related_trends": [
+        "coding-agent",
         "context-engineering"
       ],
       "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution"
+    },
+    {
+      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+      "authors": [
+        "Marius Dragoi",
+        "Ioana Pintilie",
+        "Alexandra Dragomir",
+        "Antonio Barbalau",
+        "Florin Brad"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.06494v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Parameter-efficient finetuning methods based on spectral decomposition have enabled progress in Continual Learning. In this paper we introduce TailLoR, which utilizes the singular bases U and V of the pre-trained weights as a fixed reference frame to learn a low-rank update applied to the singular value matrix. A soft spectral penalty discourages updates aligned with dominant singular directions, reducing interference while routing fine-grained adaptation into the highly flexible, long-tail spec",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06494v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06494v1"
+        }
+      ],
+      "llm_reason": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 PEFT × 连续学习 × 谱分解三个方向的精细化推进——核心命题是'不要碰主干'的保护主义 PEFT。与 2026 年持续学习中 catastrophic forgetting 的工程刚需对齐。",
+      "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+      "one_line_judgement": "值得继续观察：TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 P",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning"
+    },
+    {
+      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "authors": [
+        "Mykyta Ielanskyi",
+        "Kajetan Schweighofer",
+        "Lukas Aichberger",
+        "Sepp Hochreiter"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.06475v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06475v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent advancements in reasoning language models have been driven by Reinforcement Learning (RL) fine-tuning. Most often, these rely on the Group Relative Policy Optimization (GRPO) algorithm or modifications thereof to steer the models to produce Chain-of-Thought (CoT) traces. The final answer can only be verified, and the reward assigned, after the CoT trace is complete, making it a delayed reward problem. GRPO and its modifications correspond to Monte Carlo methods in standard RL, which are k",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06475v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06475v1"
+        }
+      ],
+      "llm_reason": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 RL 中的 credit assignment。Hochreiter 团队加持。对当前 RLHF/GRPO 训练栈（DeepSeek-R1、Qwen3-RM、OpenAI o1 范式）有直接方法论价值，是从 token-level PPO 到 segment-level 信用分配的中间路径。",
+      "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Recent advancements in reasoning language models have been driven by Reinforce…",
+      "one_line_judgement": "值得继续观察：RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 R",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models"
     },
     {
       "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
@@ -485,8 +254,8 @@
       "keywords": [
         "multimodal"
       ],
-      "score": 36.6,
-      "decision": "暂时忽略",
+      "score": 76.0,
+      "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
@@ -497,11 +266,12 @@
           "url": "https://arxiv.org/pdf/2606.06491v1"
         }
       ],
+      "llm_reason": "TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这是 VLA 走向真实部署的关键缺口——现有 VLA 只继承训练 demo 的固定速度。对 Figure/1X/Physical Intelligence/银河通用等具身智能产品的部署速度-精度权衡有直接价值。",
       "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
-      "value_type": "ignore",
+      "value_type": "trend",
       "matched_topics": [
         "multimodal-agent",
-        "security-governance"
+        "ai-agent"
       ],
       "score_breakdown": {
         "novelty": 4.8,
@@ -519,15 +289,15 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
+      "trend_status": "emerging",
       "brief_cn": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
-      "one_line_judgement": "当前可忽略：Multimodal Agent：Robot manipulation alternates between low-risk transi…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Multimodal Agent：Robot manipulation alternates between low-risk transit phases that call for fa…",
+      "one_line_judgement": "值得继续观察：TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这",
       "related_trends": [
         "agentic-world-modeling"
       ],
@@ -563,8 +333,8 @@
         "agentic",
         "planning"
       ],
-      "score": 34.0,
-      "decision": "暂时忽略",
+      "score": 73.0,
+      "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
@@ -575,9 +345,11 @@
           "url": "https://arxiv.org/pdf/2606.06493v1"
         }
       ],
+      "llm_reason": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦设计有方法论价值。",
       "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
-      "value_type": "ignore",
+      "value_type": "trend",
       "matched_topics": [
+        "multimodal-agent",
         "ai-agent"
       ],
       "score_breakdown": {
@@ -596,44 +368,198 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
-      "one_line_judgement": "当前可忽略：AI Agent：For a humanoid robot to be deployed in the real world, the ch…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "AI Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：For a humanoid robot to be deployed in the real world, the choice of command s…",
+      "one_line_judgement": "值得继续观察：HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC …",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重",
       "related_trends": [
         "agentic-world-modeling"
       ],
       "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers"
     },
     {
-      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
       "authors": [
-        "Marius Dragoi",
-        "Ioana Pintilie",
-        "Alexandra Dragomir",
-        "Antonio Barbalau",
-        "Florin Brad"
+        "Qintong Xie",
+        "Edward Koh",
+        "Xavier Cadet",
+        "Peter Chin"
       ],
       "published": "2026-06-04",
       "updated": "2026-06-04",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06494v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
+      "url": "http://arxiv.org/abs/2606.06480v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06480v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Parameter-efficient finetuning methods based on spectral decomposition have enabled progress in Continual Learning. In this paper we introduce TailLoR, which utilizes the singular bases U and V of the pre-trained weights as a fixed reference frame to learn a low-rank update applied to the singular value matrix. A soft spectral penalty discourages updates aligned with dominant singular directions, reducing interference while routing fine-grained adaptation into the highly flexible, long-tail spec",
+      "abstract": "Many real-world competitive systems require multiple decision-makers to act simultaneously under shared constraints, limited information, and repeated interaction, as in auctions, resource allocation, and security competition. We study multi-turn simultaneous bidding as a controlled testbed for such problems and propose DNQ, a solver-in-the-loop equilibrium supervision framework for training bidding agents. DNQ alternates between trajectory collection, critic-based payoff estimation, equilibrium",
       "categories": [
+        "cs.GT",
         "cs.LG"
       ],
       "keywords": [
+        "agent"
+      ],
+      "score": 40.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06480v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06480v1"
+        }
+      ],
+      "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
+      "one_line_judgement": "当前可忽略：AI Agent：Many real-world competitive systems require multiple decision…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games"
+    },
+    {
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "authors": [
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu",
+        "Xiaohan Zhao",
+        "Tianjun Yao",
+        "Xinyi Shang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.06481v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from progressive human-AI co-editing. However, existing AI-text detection benchmarks largely focus on final outputs and provide limited understanding of how AI authorship signals emerge, accumulate, or disappear throughout the revision process. We introduce OpAI-Bench, an operation-guided benchmark for study",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 39.8,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06481v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06481v1"
+        }
+      ],
+      "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
+      "one_line_judgement": "当前可忽略：LLM 评测：As AI writing assistants become increasingly integrated into re…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：As AI writing assistants become increasingly integrated into real-world drafti…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection"
+    },
+    {
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "authors": [
+        "Paul Jünger",
+        "Justin Lovelace",
+        "Linxi Zhao",
+        "Dongyoung Go",
+        "Kilian Q. Weinberger"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.06474v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Discrete diffusion language models generate text by iteratively denoising an entire response in parallel. At each step, they predict tentative tokens for every masked position, committing the confident predictions to the output and discarding the unconfident ones. We show that the discarded tokens are in fact a useful lookahead signal for retrieval-augmented generation: even low-confidence tokens often surface salient entities early in the denoising trajectory, enabling retrieval of stronger evi",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark",
         "RAG"
       ],
       "score": 33.5,
@@ -641,14 +567,14 @@
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06494v1"
+          "url": "http://arxiv.org/abs/2606.06474v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06494v1"
+          "url": "https://arxiv.org/pdf/2606.06474v1"
         }
       ],
-      "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+      "id": "self-augmenting-retrieval-for-diffusion-language-models",
       "value_type": "ignore",
       "matched_topics": [
         "rag-knowledge"
@@ -670,41 +596,113 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Parameter-efficient finetuning methods based on spectral de…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
+      "brief_cn": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Discrete diffusion language models generate text by iterati…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Parameter-efficient finetuning methods based on spectral decomposition have en…",
+      "long_tail_summary": "RAG / 知识系统：Discrete diffusion language models generate text by iteratively denoising an e…",
       "related_trends": [
         "context-engineering"
       ],
-      "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning"
+      "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models"
     },
     {
-      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "title": "Pretraining Recurrent Networks without Recurrence",
       "authors": [
-        "Mykyta Ielanskyi",
-        "Kajetan Schweighofer",
-        "Lukas Aichberger",
-        "Sepp Hochreiter"
+        "Akarsh Kumar",
+        "Phillip Isola"
       ],
       "published": "2026-06-04",
       "updated": "2026-06-04",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.06475v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.06475v1",
+      "url": "http://arxiv.org/abs/2606.06479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Recent advancements in reasoning language models have been driven by Reinforcement Learning (RL) fine-tuning. Most often, these rely on the Group Relative Policy Optimization (GRPO) algorithm or modifications thereof to steer the models to produce Chain-of-Thought (CoT) traces. The final answer can only be verified, and the reward assigned, after the CoT trace is complete, making it a delayed reward problem. GRPO and its modifications correspond to Monte Carlo methods in standard RL, which are k",
+      "abstract": "Training recurrent neural networks (RNNs) requires assigning credit across long sequences of computations. Standard backpropagation through time (BPTT) addresses this problem poorly: it is sequential in time, limiting parallelism, and suffers from vanishing or exploding gradients, making long-range associations difficult to learn. We propose Supervised Memory Training (SMT), a method for training nonlinear RNNs that sidesteps recurrent credit propagation entirely by reducing RNN training to supe",
       "categories": [
         "cs.LG",
         "cs.AI"
+      ],
+      "keywords": [
+        "memory"
+      ],
+      "score": 33.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.06479v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.06479v1"
+        }
+      ],
+      "id": "pretraining-recurrent-networks-without-recurrence",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Training recurrent neural networks (RNNs) requires…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across l",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence"
+    },
+    {
+      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+      "authors": [
+        "Mingyang Liu",
+        "Asuman Ozdaglar",
+        "Tiancheng Yu",
+        "Kaiqing Zhang"
+      ],
+      "published": "2026-06-04",
+      "updated": "2026-06-04",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.06486v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In this paper, we study regret minimization in repeated games with \\emph{adaptive} opponents who can respond based on histories of play. The standard metric of \\emph{external regret} in online learning is known to fail to capture such adaptivity. To account for players' counterfactual reasoning, we introduce {\\tt Repeated Policy Regret (RP-Regret)}, a game-theoretic metric that measures the difference between the \\emph{realized} and the \\emph{best-in-hindsight} accumulated utility when all playe",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.GT"
       ],
       "keywords": [],
       "score": 28.5,
@@ -712,14 +710,14 @@
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.06475v1"
+          "url": "http://arxiv.org/abs/2606.06486v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.06475v1"
+          "url": "https://arxiv.org/pdf/2606.06486v1"
         }
       ],
-      "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+      "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -739,16 +737,16 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
-      "one_line_judgement": "当前可忽略：前沿论文：Recent advancements in reasoning language models have been driven…",
-      "first_seen_date": "2026-06-07",
-      "first_deep_dive_daily": "2026-06-07",
+      "brief_cn": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
+      "one_line_judgement": "当前可忽略：前沿论文：In this paper, we study regret minimization in repeated games wit…",
+      "first_seen_date": "2026-06-08",
+      "first_deep_dive_daily": "2026-06-08",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：Recent advancements in reasoning language models have been driven by Reinforce…",
+      "long_tail_summary": "前沿论文：In this paper, we study regret minimization in repeated games with \\emph{adapt…",
       "related_trends": [],
-      "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models"
+      "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games"
     },
     {
       "title": "Can Generalist Agents Automate Data Curation?",

@@ -13,10 +13,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-07",
-  "first_deep_dive_daily": "2026-06-07",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-06-08",
+  "first_deep_dive_daily": "2026-06-08",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -27,12 +27,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 78.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是…",
-  "one_line_essence": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'。MIT Isola 团队。对长上下文 LM 训练（Mamba/RWKV/线性注意力）有方向性启发：不依赖梯度沿时间回传也能学到长程依赖，可能解锁更长上下文窗口的高效训练。",
+  "score": 33.2,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：Context Engineering：Training recurrent neural networks (RNNs) requires…",
+  "one_line_essence": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'。MIT Isola 团队。对长上下文 LM 训练（Mamba/RWKV/线性注意力）有方向性启发：不依赖梯度沿时间回传也能学到长程依赖，可能解锁更长上下文窗口的高效训",
+  "new_claim_or_method": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across lon…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -46,7 +46,7 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "noise",
     "related_trends": [
       "context-engineering"
     ],
@@ -58,9 +58,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "Supervised Memory Training (SMT) 把 RNN 训练从 BPTT 还原为监督学习，绕开循环信用传播——本质上是把'时间维度的信用分配'转化为'显存状态的监督目标'",
+    "why_save": "Context Engineering：Training recurrent neural networks (RNNs) requires assigning credit across l",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -99,13 +99,9 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
-    ],
+    "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -118,7 +114,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
-  "daily_path": "daily-detail.html?date=2026-06-07",
+  "daily_path": "daily-detail.html?date=2026-06-08",
   "trend_paths": [
     "trend-detail.html?id=context-engineering"
   ],

@@ -7,9 +7,9 @@
   "value_type_label": "即时价值",
   "decision": "重点学习",
   "daily_action": "今天完成 Code2LoRA 摘要精读 + 超网络设计精读；评估当前代码助手（如 Continue / Cursor / 私有 Codex 部署）的仓级知识策略，列出'仓级 RAG vs 仓级 LoRA vs 长上下文'的成本-延迟-效果三维对比表",
-  "score": 39.8,
-  "trend_stage": "noise",
-  "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
+  "score": 86.0,
+  "trend_stage": "emerging",
+  "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
   "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
   "conclusion_lines": [
     "今天最值得看的是《Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution》。",
@@ -19,38 +19,51 @@
   ],
   "candidate_papers": [
     {
-      "id": "self-augmenting-retrieval-for-diffusion-language-models",
-      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-      "detail_path": "paper-detail.html?id=self-augmenting-retrieval-for-diffusion-language-models",
+      "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 84.0,
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 86.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "pretraining-recurrent-networks-without-recurrence",
-      "title": "Pretraining Recurrent Networks without Recurrence",
-      "detail_path": "paper-detail.html?id=pretraining-recurrent-networks-without-recurrence",
+      "id": "taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
+      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+      "detail_path": "paper-detail.html?id=taillor-protecting-principal-components-in-parameter-efficient-continual-learning",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 78.0,
-      "decision": "轻量试点",
+      "score": 82.0,
+      "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
-      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-      "detail_path": "paper-detail.html?id=operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection",
+      "id": "rredcot-segment-level-reward-redistribution-for-reasoning-models",
+      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "detail_path": "paper-detail.html?id=rredcot-segment-level-reward-redistribution-for-reasoning-models",
       "direction": "未分类",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 80.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "tempovla-learning-speed-controllable-vision-language-action-policies",
+      "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+      "detail_path": "paper-detail.html?id=tempovla-learning-speed-controllable-vision-language-action-policies",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
       "score": 76.0,
       "decision": "轻量试点",
       "has_code": false,
@@ -58,30 +71,17 @@
       "worth_deep_dive": true
     },
     {
-      "id": "regret-minimization-with-adaptive-opponents-in-repeated-games",
-      "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-      "detail_path": "paper-detail.html?id=regret-minimization-with-adaptive-opponents-in-repeated-games",
+      "id": "handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "detail_path": "paper-detail.html?id=handoff-humanoid-agentic-task-space-whole-body-control-via-distilled-complementary-teachers",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 71.0,
+      "score": 73.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
-    },
-    {
-      "id": "dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-      "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
-      "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-      "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 67.0,
-      "decision": "轻量试点",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": false
     }
   ],
   "deep_dive": {
@@ -101,10 +101,10 @@
     "benchmark_url": "",
     "paperswithcode_url": "",
     "openreview_url": "",
-    "first_seen_date": "2026-06-07",
-    "first_deep_dive_daily": "2026-06-07",
-    "value_type": "ignore",
-    "value_type_label": "暂时忽略",
+    "first_seen_date": "2026-06-08",
+    "first_deep_dive_daily": "2026-06-08",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
     "value_scores": {
       "novelty": 4.8,
       "relevance": 6.2,
@@ -115,12 +115,12 @@
       "actionability": 5.0,
       "noise_risk": 1.2
     },
-    "score": 39.8,
-    "decision": "暂时忽略",
-    "one_line_judgement": "当前可忽略：RAG / 知识系统：Code language models need repository-level context to resol…",
-    "one_line_essence": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+    "score": 86.0,
+    "decision": "重点学习",
+    "one_line_judgement": "今天值得试：Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernet…",
+    "one_line_essence": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。",
     "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-    "new_claim_or_method": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+    "new_claim_or_method": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoR",
     "research_position": "source_paper",
     "engineering_testability": {
       "has_code": false,
@@ -134,8 +134,9 @@
       ]
     },
     "trend_relation": {
-      "status": "noise",
+      "status": "emerging",
       "related_trends": [
+        "coding-agent",
         "context-engineering"
       ],
       "evidence": [
@@ -146,7 +147,7 @@
       ]
     },
     "long_tail": {
-      "why_save": "RAG / 知识系统：Code language models need repository-level context to resolve imports, APIs, a…",
+      "why_save": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开",
       "future_trigger": [
         "待更多证据"
       ],
@@ -186,10 +187,14 @@
       ]
     },
     "actions": {
-      "immediate_actions": [],
+      "immediate_actions": [
+        "今天读摘要与方法",
+        "今天试最小实验",
+        "一周内沉淀为 Skill / Checklist"
+      ],
       "trend_actions": [],
       "long_tail_actions": [],
-      "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      "ignore_reason": ""
     },
     "references": [
       {
@@ -202,8 +207,9 @@
       }
     ],
     "detail_path": "paper-detail.html?id=code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
-    "daily_path": "daily-detail.html?date=2026-06-07",
+    "daily_path": "daily-detail.html?date=2026-06-08",
     "trend_paths": [
+      "trend-detail.html?id=coding-agent",
       "trend-detail.html?id=context-engineering"
     ],
     "long_tail_path": "long-tail.html",

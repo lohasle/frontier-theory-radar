@@ -15,10 +15,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-07",
-  "first_deep_dive_daily": "2026-06-07",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-06-08",
+  "first_deep_dive_daily": "2026-06-08",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 6.2,
@@ -29,12 +29,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 67.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、…",
-  "one_line_essence": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NFSP / PSRO 系列，工程突破性中等；更适合作为多智能体 RL 训练栈的方法资产保存。",
+  "score": 40.4,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：AI Agent：Many real-world competitive systems require multiple decision…",
+  "one_line_essence": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NFSP / PSRO 系列，工程突破性中等；更适合作为多智能体 RL 训练栈的方法资产保存。",
+  "new_claim_or_method": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -48,7 +48,7 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "noise",
     "related_trends": [
       "agentic-world-modeling"
     ],
@@ -60,9 +60,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "DNQ 把'求解器在环的均衡监督'引入多人部分可观测博弈训练：轨迹收集 → critic 估计支付 → 均衡求解 → 监督训练循环。对拍卖、资源分配、安全竞争有直接方法论价值。但相对已有 NF",
+    "why_save": "AI Agent：Many real-world competitive systems require multiple decision-makers to act si…",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -101,13 +101,9 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
-    ],
+    "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -120,7 +116,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=dnq-deep-nash-q-network-for-partially-observable-n-player-games",
-  "daily_path": "daily-detail.html?date=2026-06-07",
+  "daily_path": "daily-detail.html?date=2026-06-08",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

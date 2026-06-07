@@ -1,0 +1,126 @@
+{
+  "date": "2026-06-08",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-08T04:33:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分；优先选取昨日未覆盖的新论文以避免重复",
+  "selection_note": "今日 arXiv 抓取的 10 篇中有 5 篇与昨日重叠（Regret Minimization/OpAI-Bench/DNQ/Pretraining RNNs/Self-Augmenting Retrieval），已在 2026-06-07 报告深挖。本报告聚焦 5 篇昨日未覆盖的新论文：Code2LoRA、TailLoR、RREDCoT、TempoVLA、HANDOFF。",
+  "by_url": {
+    "http://arxiv.org/abs/2606.06492v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "Code2LoRA 用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/检索增强'重构为'hypernetwork 推理时生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + SE 三者首次明确耦合，immediate 价值最高。",
+      "matched_topics": ["coding-agent", "rag-knowledge", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.06494v1": {
+      "score": 82,
+      "value_type": "trend",
+      "reason": "TailLoR 把 LoRA 的低秩更新'挂载位置'从原权重矩阵移到奇异值矩阵：保留 U/V 作为固定参考系，只学 Σ 的更新；并施加软谱惩罚抑制沿主成分方向的更新，路由适配到长尾谱。这是 PEFT × 连续学习 × 谱分解三个方向的精细化推进——核心命题是'不要碰主干'的保护主义 PEFT。与 2026 年持续学习中 catastrophic forgetting 的工程刚需对齐。",
+      "matched_topics": ["inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.06475v1": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "RREDCoT 把 GRPO 在 CoT 推理微调中的延迟奖励问题（Monte Carlo 信用分配方差大）重构为'段级奖励再分配'问题：把最终答案的稀疏奖励沿 CoT 段落重新分配，对应 RL 中的 credit assignment。Hochreiter 团队加持。对当前 RLHF/GRPO 训练栈（DeepSeek-R1、Qwen3-RM、OpenAI o1 范式）有直接方法论价值，是从 token-level PPO 到 segment-level 信用分配的中间路径。",
+      "matched_topics": ["llm-evaluation", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.06491v1": {
+      "score": 76,
+      "value_type": "trend",
+      "reason": "TempoVLA 首次显式建模 VLA 策略的'速度可控性'：观察动作幅值天然预测精度需求，进而通过条件训练实现 transit（高速低风险）与 contact（低速高精度）阶段的速度调度。这是 VLA 走向真实部署的关键缺口——现有 VLA 只继承训练 demo 的固定速度。对 Figure/1X/Physical Intelligence/银河通用等具身智能产品的部署速度-精度权衡有直接价值。",
+      "matched_topics": ["multimodal-agent", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.06493v1": {
+      "score": 73,
+      "value_type": "trend",
+      "reason": "HANDOFF 用'互补教师蒸馏'构建人形机器人全身控制的任务空间接口：高层任务规划器输出紧凑显式指令（如目标位姿/接触点），低层 WBC 负责全身协调。把'规划-控制'接口从密集运动学参考重构为'紧凑任务空间命令'，让任务规划器更容易从语义合成命令。对 Figure/Unitree H1/Tesla Optimus 等人形机器人产品的任务规划-WBC 解耦设计有方法论价值。",
+      "matched_topics": ["multimodal-agent", "ai-agent"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 2,
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "arxiv_id": "2606.06492v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.6,
+      "confidence": "medium",
+      "one_line": "用 hypernetwork 一次性生成仓库专属 LoRA 适配器，零推理 token 开销且对代码演化鲁棒——重构编程 Agent 的仓库理解路径",
+      "decision": "strong_accept",
+      "reasoning": "Hypernetwork + LoRA + SE 三方向首次明确耦合。直接对应 Cursor/Copilot/Devin 的核心痛点：传统 RAG 在长仓库噪声大、per-repo LoRA 训练昂贵且每次 commit 过时。Code2LoRA 把'每仓库微调'替换为'hypernetwork 推理时一次性生成适配器'，对代码演化鲁棒。immediate 价值明确，适合编程 Agent 产品的仓库理解模块直接实验。最大不确定性是 hypernetwork 本身的训练成本与跨语言/跨框架泛化。"
+    },
+    {
+      "paper_index": 0,
+      "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+      "arxiv_id": "2606.06494v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 8.2,
+      "confidence": "medium",
+      "one_line": "把 LoRA 更新挂载到奇异值矩阵而非原权重，并用软谱惩罚抑制沿主成分方向的更新——'保护主义 PEFT'的新范式",
+      "decision": "strong_accept",
+      "reasoning": "PEFT × 连续学习 × 谱分解三方向精细化推进。理论贡献是把'保留主干知识'形式化为'保留主奇异方向'——这与 ODE 表征学习的几何保护主义同构。工程价值在于 agent 长生命周期下的多任务适配：每接入新能力都不破坏主干核心。但需要 SVD 预计算与冻结 U/V 的存储，对超大模型有工程门槛。"
+    },
+    {
+      "paper_index": 8,
+      "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+      "arxiv_id": "2606.06475v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 7
+      },
+      "weighted_total": 8.0,
+      "confidence": "medium",
+      "one_line": "把 GRPO 的延迟奖励沿 CoT 段落重新分配——RL 推理微调栈中 token-level PPO 与最终奖励 MC 之间的中间路径",
+      "decision": "strong_accept",
+      "reasoning": "Hochreiter 团队。直接命中 2026 年推理 LM 训练栈（DeepSeek-R1 / Qwen3 / o1 范式）的核心瓶颈：GRPO 用 MC 估计方差大、token-level PPO 显存与方差双高。RREDCoT 的段级再分配是两者的中间路径，且与 process reward model (PRM) 路线互补——PRM 需要外部标注每步正确性，RREDCoT 自动从最终奖励再分配。短期需要核验段级切分策略（句号/推理步骤/语义边界）对最终精度的影响。"
+    },
+    {
+      "paper_index": 3,
+      "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+      "arxiv_id": "2606.06491v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 7.6,
+      "confidence": "medium",
+      "one_line": "首次显式建模 VLA 策略的速度可控性——通过动作幅值条件训练实现 transit 与 contact 阶段的速度调度",
+      "decision": "accept",
+      "reasoning": "VLA 走向真实部署的关键缺口。现有 RT-2/OpenVLA/π0 等基础 VLA 都只继承训练 demo 的固定速度，无法在'高速 transit'与'低速高精度 contact'间切换。TempoVLA 把'速度'作为可条件控制变量，思路简洁但实用价值高——直接对应 Figure/Physical Intelligence/银河通用等具身产品的速度-精度工程权衡。最大不确定性是速度可控性在接触富集任务（如装配、柔性物体）上的稳定性。"
+    },
+    {
+      "paper_index": 1,
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "arxiv_id": "2606.06493v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 6
+      },
+      "weighted_total": 7.3,
+      "confidence": "medium",
+      "one_line": "用互补教师蒸馏构建人形机器人任务空间接口，把'规划-控制'从密集运动学参考重构为紧凑显式命令",
+      "decision": "accept",
+      "reasoning": "对 Figure/Unitree H1/Tesla Optimus 等人形机器人的任务规划-WBC 解耦设计有方法论价值。互补教师蒸馏（一个教手臂、一个教下肢、一个教协调）是合理的工程策略，能降低单一教师的样本复杂度。但'紧凑任务空间命令'的通用性需要验证——不同任务族（操作/移动/双手协作）的命令空间可能根本不同。"
+    }
+  ]
+}
