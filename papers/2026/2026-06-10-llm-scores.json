@@ -1,0 +1,138 @@
+{
+  "date": "2026-06-10",
+  "generated_at": "2026-06-10T04:30:00+08:00",
+  "model": "glm-5.1",
+  "scoring_criteria": "工程价值 + 证据强度 + 理论深度 + 可操作性",
+  "papers": [
+    {
+      "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
+      "url": "http://arxiv.org/abs/2606.09826v1",
+      "score": 82,
+      "confidence": "high",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "构建了基于UE5的12款游戏统一基准，直接支持VLM agent的多维度评估（首次得分+改进动态），工程落地价值高：游戏引擎基准可复用于实际agent测试流水线。",
+        "evidence_strength": "实证充分——12款游戏、多类agent（商业/开源/专用策略）同台对比，并引入改进动态指标，超越传统单次打分模式。",
+        "theory_depth": "从agent能力评估方法论出发，提出了'改进动态'这一新评估维度，反映了agent学习能力的因果结构。",
+        "trend_alignment": "VLM agent是2026年核心趋势，统一基准填补了社区关键缺口。"
+      }
+    },
+    {
+      "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
+      "url": "http://arxiv.org/abs/2606.09825v1",
+      "score": 78,
+      "confidence": "high",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "提出将已有次优策略嵌入RL训练过程的agency transferring方法，减少从零训练成本，工程可直接嵌入现有RL pipeline。",
+        "evidence_strength": "理论+实验并重，展示了相对baseline的持续改进，但具体领域泛化性需更多实验验证。",
+        "theory_depth": "策略迁移的理论框架有深度，区分了on-policy与off-policy优化的关键差异。",
+        "trend_alignment": "RL训练效率提升是工程界持续痛点，与当前post-training RL for LLMs趋势有间接关联。"
+      }
+    },
+    {
+      "title": "Causally Evaluating the Learnability of Formal Language Tasks",
+      "url": "http://arxiv.org/abs/2606.09822v1",
+      "score": 71,
+      "confidence": "medium",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "通过概率有限自动机生成的形式语言任务，因果地评估LM的学习能力，为'多少数据够学一个任务'提供了方法论工具。",
+        "evidence_strength": "控制实验设计严谨（形式语言消除自然语言噪声），但与实际NLP任务的距离仍需桥接。",
+        "theory_depth": "将因果推断引入LM learnability评估，是理论贡献；但方法论迁移到自然语言仍需验证。",
+        "trend_alignment": "数据效率与scaling laws研究是当前热点，本文提供了更精确的评估框架。"
+      }
+    },
+    {
+      "title": "Rethinking the Divergence Regularization in LLM RL",
+      "url": "http://arxiv.org/abs/2606.09821v1",
+      "score": 88,
+      "confidence": "high",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "直接针对LLM后训练RL的核心问题——PPO/GRPO中ratio-clipping在长尾词汇上的分布偏移问题，提出更好的散度正则化方案，可立即应用于RLHF pipeline。",
+        "evidence_strength": "问题诊断清晰（importance ratio作为分布偏移代理的缺陷），对比了DPPO等最新方法，实验证据充分。",
+        "theory_depth": "深入分析了trust-region在LLM RL中的理论缺陷，提出了分布层面的散度控制方案，理论贡献显著。",
+        "trend_alignment": "LLM后训练RL是2026年最活跃方向之一，本文直击工程痛点（训练稳定性），高优先级。"
+      }
+    },
+    {
+      "title": "PTL-Diffusion: Manifold-Aware Diffusion with Periodic Terminal Laws",
+      "url": "http://arxiv.org/abs/2606.09816v1",
+      "score": 75,
+      "confidence": "medium",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "用周期终端分布替代单一高斯，使扩散模型在低维流形数据上更高效，对图像/视频生成pipeline有改进潜力。",
+        "evidence_strength": "理论推导严谨（流形感知的扩散框架），但实证规模和下游任务覆盖有待扩展。",
+        "theory_depth": "将流形几何显式引入扩散过程的终端分布设计，理论创新度高。",
+        "trend_alignment": "扩散模型仍是生成AI核心基础设施，流形感知设计是提升质量与效率的重要方向。"
+      }
+    },
+    {
+      "title": "Weighted universal approximation of differentiable maps on infinite-dimensional manifolds",
+      "url": "http://arxiv.org/abs/2606.09820v1",
+      "score": 55,
+      "confidence": "medium",
+      "decision": "reject",
+      "rationale": {
+        "engineering_value": "纯理论工作（函数输入神经网络的加权通用逼近定理推广），短期工程影响有限。",
+        "evidence_strength": "数学证明严谨，但缺乏实证。",
+        "theory_depth": "在无穷维流形上建立含导数逼近的UAT，理论深度高但受众极窄。",
+        "trend_alignment": "与当前工程热点（LLM/agent）距离较远，属数学基础研究。"
+      }
+    },
+    {
+      "title": "AHA-WAM: Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
+      "url": "http://arxiv.org/abs/2606.09811v1",
+      "score": 80,
+      "confidence": "high",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "解耦世界预测与动作执行的时序分辨率，减少冗余帧建模，对机器人操控pipeline有直接效率提升。",
+        "evidence_strength": "在机器人操控任务上展示了异步策略优于同步绑定的实证结果。",
+        "theory_depth": "从信息论角度论证了世界-动作解耦的合理性，理论支撑充分。",
+        "trend_alignment": "世界模型+机器人学习是2026年投资热点，异步设计解决了实际计算瓶颈。"
+      }
+    },
+    {
+      "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
+      "url": "http://arxiv.org/abs/2606.09809v1",
+      "score": 68,
+      "confidence": "medium",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "提出评估卡片标准化AI评测报告，解决跨源比较困难，对AI治理和合规有实用价值。",
+        "evidence_strength": "方法论清晰，但缺乏大规模采用验证。",
+        "theory_depth": "评估元数据标准化属于方法论贡献，理论深度适中。",
+        "trend_alignment": "AI评估标准化与监管需求增长一致，但社区采纳速度不确定。"
+      }
+    },
+    {
+      "title": "Topological Neural Operators",
+      "url": "http://arxiv.org/abs/2606.09806v1",
+      "score": 72,
+      "confidence": "medium",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "将神经算子从点/边提升到拓扑域（胞腔复形），通过离散外微积分实现跨维耦合，对PDE求解和科学计算有应用前景。",
+        "evidence_strength": "框架设计清晰，但工程验证规模有限。",
+        "theory_depth": "拓扑+算子学习的交叉创新，理论贡献较高。",
+        "trend_alignment": "AI for Science持续升温，拓扑方法为复杂数据结构提供了新的建模范式。"
+      }
+    },
+    {
+      "title": "Echo-Memory: A Controlled Study of Memory in Action World Models",
+      "url": "http://arxiv.org/abs/2606.09803v1",
+      "score": 79,
+      "confidence": "high",
+      "decision": "accept",
+      "rationale": {
+        "engineering_value": "系统对比世界模型中的记忆机制，解决'相机离开再回来后场景不一致'的核心问题，对视频生成和自动驾驶仿真有直接价值。",
+        "evidence_strength": "受控实验设计优良——解耦了backbone/training/retrieval/evaluation的影响，消融研究充分。",
+        "theory_depth": "记忆机制在世界模型中的因果分析，方法论贡献高于纯工程。",
+        "trend_alignment": "世界模型记忆一致性是当前自动驾驶和视频生成的关键瓶颈。"
+      }
+    }
+  ]
+}

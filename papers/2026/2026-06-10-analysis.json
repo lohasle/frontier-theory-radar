@@ -1,0 +1,127 @@
+{
+  "date": "2026-06-10",
+  "generated_at": "2026-06-10T04:30:00+08:00",
+  "model": "glm-5.1",
+  "top_picks": 5,
+  "analyses": [
+    {
+      "rank": 1,
+      "title": "Rethinking the Divergence Regularization in LLM RL",
+      "url": "http://arxiv.org/abs/2606.09821v1",
+      "score": 88,
+      "chain": {
+        "paper_summary": "重新审视LLM后训练RL中的散度正则化问题，指出PPO/GRPO中的ratio-clipping在长尾词汇分布上无法准确代理分布偏移，提出更优的散度控制方案。",
+        "theory": "信任域方法（trust-region）在LLM RL中的理论基础：importance sampling ratio作为分布偏移代理的缺陷 → 需要直接在分布层面进行散度约束 → 涉及KL/JS等散度在离散大词表空间的行为分析。",
+        "engineering_practice": "可立即应用于RLHF/GRPO训练流水线：替换ratio-clipping为显式散度正则化，减少奖励黑客(reward hacking)和策略坍缩。对post-training infra团队有直接价值。",
+        "trend": "LLM后训练RL是2026年AI工程最大投入方向之一。DeepSeek-R1/OpenAI o系列均依赖RL后训练，散度控制的稳定性直接决定生产质量。",
+        "insight": "工程启示——不应盲目沿用经典RL的clipping技巧，LLM的大词表+长尾分布特性要求重新设计分布约束。这是'从RL理论到LLM工程'的方法论迁移案例。",
+        "action": "1) 在内部RLHF pipeline中对比实验：散度正则化 vs ratio-clipping；2) 监控长尾token的policy drift指标；3) 关注该工作的代码开源进展。"
+      },
+      "missing_links": {
+        "code_url": "待核验/暂无",
+        "openreview_url": "待核验/暂无",
+        "paperswithcode_url": "待核验/暂无"
+      }
+    },
+    {
+      "rank": 2,
+      "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
+      "url": "http://arxiv.org/abs/2606.09826v1",
+      "score": 82,
+      "chain": {
+        "paper_summary": "构建了12款UE5游戏的统一基准，首次引入'改进动态'（improvement dynamics）评估维度，支持商业/开源/专用策略agent同台对比。",
+        "theory": "VLM agent能力评估方法论：从单次得分→多维度评估（首次得分+改进曲线+跨游戏泛化） → 评估维度的因果结构：首次得分反映理解力，改进动态反映学习能力。",
+        "engineering_practice": "UE5基准直接可用于agent能力回归测试；改进动态指标可集成到CI/CD中追踪agent版本迭代质量。对agent框架开发者（LangChain/CrewAI等）有参考价值。",
+        "trend": "VLM agent从原型到生产的转折点需要标准化评估——OmniGameArena填补了'游戏环境中的agent评测'空白。",
+        "insight": "评估方法论创新——'改进动态'指标比单次得分更能反映agent的实际部署价值（部署后能否从交互中持续改进）。",
+        "action": "1) 评估将OmniGameArena纳入内部agent评测套件的可行性；2) 关注benchmark开源和社区采用情况；3) 借鉴'改进动态'指标设计自研agent评估体系。"
+      },
+      "missing_links": {
+        "code_url": "待核验/暂无",
+        "openreview_url": "待核验/暂无",
+        "paperswithcode_url": "待核验/暂无"
+      }
+    },
+    {
+      "rank": 3,
+      "title": "AHA-WAM: Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
+      "url": "http://arxiv.org/abs/2606.09811v1",
+      "score": 80,
+      "chain": {
+        "paper_summary": "提出异步世界-动作模型，解耦世界预测与动作执行的时序分辨率，通过观测引导的上下文路由减少冗余帧建模。",
+        "theory": "世界模型中的时序解耦理论：世界预测（宏观场景理解）和动作执行（细粒度操控）的最优时间尺度不同 → 强制同步绑定导致信息冗余 → 异步解耦后各自以最优频率运行。",
+        "engineering_practice": "对具身智能/机器人操控pipeline有直接优化：减少世界模型的推理频率可降低延迟和计算成本，同时保持动作精度。适用于工业机器人、家庭服务机器人。",
+        "trend": "具身智能+世界模型是2026年融资和工程投入最大的方向之一，计算效率是规模化部署的核心瓶颈。",
+        "insight": "时序解耦是一个通用设计原则——不只限于世界模型，任何'感知-决策'流水线都可考虑异步分层设计。",
+        "action": "1) 在具身智能原型中实验异步世界-动作架构；2) 对比同步vs异步在延迟和精度上的trade-off；3) 关注代码开源后进行复现。"
+      },
+      "missing_links": {
+        "code_url": "待核验/暂无",
+        "openreview_url": "待核验/暂无",
+        "paperswithcode_url": "待核验/暂无"
+      }
+    },
+    {
+      "rank": 4,
+      "title": "Echo-Memory: A Controlled Study of Memory in Action World Models",
+      "url": "http://arxiv.org/abs/2606.09803v1",
+      "score": 79,
+      "chain": {
+        "paper_summary": "在世界模型中进行记忆机制的受控对比研究，解决'相机离开再回来后场景/物体变化'的一致性问题，系统性消融了backbone/training/retrieval/evaluation的影响。",
+        "theory": "世界模型中的记忆理论：短期记忆（当前帧上下文）vs 长期记忆（历史场景缓存） → 记忆检索策略（注意力/检索增强）与生成质量的关系 → 记忆一致性的因果链。",
+        "engineering_practice": "对视频生成（Sora类模型）和自动驾驶仿真有直接价值：场景一致性是用户可感知的质量指标。记忆机制的选型可直接影响生产模型的输出质量。",
+        "trend": "世界模型从演示到生产的转折点——记忆一致性是部署质量的硬约束。",
+        "insight": "受控实验方法论值得借鉴——在系统对比复杂系统组件时，解耦各因素的影响是得出可靠结论的前提。",
+        "action": "1) 审视内部世界模型/视频生成pipeline中的记忆机制；2) 借鉴其受控实验设计做内部消融研究；3) 跟踪该工作的benchmark开源情况。"
+      },
+      "missing_links": {
+        "code_url": "待核验/暂无",
+        "openreview_url": "待核验/暂无",
+        "paperswithcode_url": "待核验/暂无"
+      }
+    },
+    {
+      "rank": 5,
+      "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
+      "url": "http://arxiv.org/abs/2606.09825v1",
+      "score": 78,
+      "chain": {
+        "paper_summary": "提出将已有次优策略（agency）嵌入RL训练的方法，在不重新设计奖励和环境的前提下提升策略性能，同时优于从头训练和原始baseline。",
+        "theory": "策略迁移的理论框架：次优baseline → agency embedding → 保留baseline的优势方向 + RL探索新方向 → 理论保证不低于baseline。核心是策略空间的几何结构分析。",
+        "engineering_practice": "适用于已有规则引擎/启发式策略的工业场景（调度、控制、推荐），可将RL增量式叠加在现有系统上，降低部署风险。",
+        "trend": "RL从实验室到工业的过渡需要解决'冷启动'问题——agency transferring提供了一种低风险迁移路径。",
+        "insight": "工程启示——不一定需要完全替换现有策略，'增量RL增强'可能是更务实的工程路径。",
+        "action": "1) 识别内部可应用agency transferring的场景（调度、控制）；2) 评估baseline embedding对训练效率的实际提升；3) 对比纯RL vs agency-transferred RL的风险/收益。"
+      },
+      "missing_links": {
+        "code_url": "待核验/暂无",
+        "openreview_url": "待核验/暂无",
+        "paperswithcode_url": "待核验/暂无"
+      }
+    }
+  ],
+  "cross_cutting_themes": [
+    {
+      "theme": "RL训练效率与稳定性",
+      "papers": ["Rethinking the Divergence Regularization in LLM RL", "An Agency-Transferring Model-Free Policy Enhancement Technique"],
+      "insight": "RL在LLM后训练和传统控制中的效率/稳定性问题被从不同角度切入：散度正则化解决LLM RL的分布偏移，agency transferring解决传统RL的冷启动。两者共同指向'RL工业化'的核心挑战。"
+    },
+    {
+      "theme": "世界模型的架构创新",
+      "papers": ["AHA-WAM", "Echo-Memory", "PTL-Diffusion"],
+      "insight": "世界模型正经历从'端到端黑箱'到'模块化设计'的转变：异步时序解耦、记忆机制选型、流形感知终端分布——每个子模块都在被独立优化。这预示着世界模型将走向可插拔架构。"
+    },
+    {
+      "theme": "AI评估方法论的成熟化",
+      "papers": ["OmniGameArena", "Evaluation Cards", "Causally Evaluating Learnability"],
+      "insight": "从单指标排名到多维度评估（改进动态、评估卡片、因果learnability），AI评估正在走向'可解释、可比较、可追溯'的成熟阶段。这对AI治理和合规有深远影响。"
+    }
+  ],
+  "daily_action_items": [
+    "在RLHF pipeline中实验散度正则化替换ratio-clipping",
+    "评估OmniGameArena用于内部agent评测的可行性",
+    "审查世界模型pipeline中的记忆机制选型",
+    "关注AHA-WAM和Echo-Memory的代码开源进展",
+    "在具身智能原型中实验异步世界-动作架构"
+  ]
+}
