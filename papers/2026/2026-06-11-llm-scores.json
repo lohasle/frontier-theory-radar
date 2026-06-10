@@ -1,0 +1,98 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T04:31:00+08:00",
+  "model": "glm-5.1",
+  "scoring_criteria": "基于'论文→理论→工程实践→趋势→启发→行动'链路，综合工程落地价值与证据强度打分（1-10）",
+  "scores": [
+    {
+      "rank": 1,
+      "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+      "arxiv_id": "2606.11172v1",
+      "url": "http://arxiv.org/abs/2606.11172v1",
+      "score": 9.0,
+      "confidence": "high",
+      "score_breakdown": {
+        "theoretical_novelty": 8,
+        "engineering_value": 9,
+        "evidence_strength": 9,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "rationale": "直接解决大推理模型部署中的行为不可控问题。从激活探针预测未来行为而非检测已有行为，是方法论的范式转换。提供了test-time steering的实用框架，对生产环境中LLM安全控制具有高工程价值。论文含具体实验对比与消融分析，证据充分。",
+      "key_insight": "传统steering方法检测已生成文本中的行为特征，但这些特征对未来行为预测能力差；训练预测未来行为的探针可显著提升steering质量。",
+      "tags": ["reasoning-models", "activation-steering", "test-time-compute", "LLM-safety"]
+    },
+    {
+      "rank": 2,
+      "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
+      "arxiv_id": "2606.11189v1",
+      "url": "http://arxiv.org/abs/2606.11189v1",
+      "score": 8.5,
+      "confidence": "high",
+      "score_breakdown": {
+        "theoretical_novelty": 9,
+        "engineering_value": 8,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 8
+      },
+      "rationale": "将SFT重新定义为'目标分布设计'而非损失函数选择，这是对现有训练范式的根本性重新审视。直接关联到当前post-training pipeline的核心环节——如何利用预训练模型的知识先验。理论框架统一了多种现有方法（label smoothing, knowledge distillation等），工程上可立即应用到SFT数据构造与训练流程中。",
+      "key_insight": "SFT的目标不应是最大化观测token的似然，而应设计合理的token级目标分布，平衡预训练知识先验与示范数据信号。",
+      "tags": ["SFT", "fine-tuning", "target-distribution", "post-training"]
+    },
+    {
+      "rank": 3,
+      "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+      "arxiv_id": "2606.11182v1",
+      "url": "http://arxiv.org/abs/2606.11182v1",
+      "score": 8.2,
+      "confidence": "medium-high",
+      "score_breakdown": {
+        "theoretical_novelty": 7,
+        "engineering_value": 9,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "rationale": "首个面向多数据集真实任务流的test-time prompt learning框架。解决了现有方法仅适用于单数据集的局限，引入路由机制缓解跨数据集干扰。在Agent工程实践中，这意味着LLM可以在运行时持续自我优化提示策略。高度工程导向，对构建自适应AI Agent系统具有直接参考价值。",
+      "key_insight": "真实世界的Agent任务流是异构多数据集的，需要路由机制隔离不同领域的prompt learning，避免跨域干扰。",
+      "tags": ["test-time-learning", "agent", "prompt-optimization", "self-improving"]
+    },
+    {
+      "rank": 4,
+      "title": "Piper: A Programmable Distributed Training System",
+      "arxiv_id": "2606.11169v1",
+      "url": "http://arxiv.org/abs/2606.11169v1",
+      "score": 8.0,
+      "confidence": "medium-high",
+      "score_breakdown": {
+        "theoretical_novelty": 6,
+        "engineering_value": 10,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 9
+      },
+      "rationale": "直接面向大模型训练基础设施的系统工程工作。可编程的并行策略组合（data/pipeline/expert parallelism + ZeRO），降低了人工设计并行策略的成本。在当前万卡训练时代，这种系统级创新对降低训练成本和提高资源利用率具有重大实际意义。扣分点在于理论创新有限，更偏系统工程。",
+      "key_insight": "将并行策略设计从手工配置转变为可编程抽象，使系统能灵活适配新策略而无需专家手动设计底层执行。",
+      "tags": ["distributed-training", "systems", "parallelism", "infrastructure"]
+    },
+    {
+      "rank": 5,
+      "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
+      "arxiv_id": "2606.11190v1",
+      "url": "http://arxiv.org/abs/2606.11190v1",
+      "score": 7.8,
+      "confidence": "medium",
+      "score_breakdown": {
+        "theoretical_novelty": 9,
+        "engineering_value": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "rationale": "首次系统性地建立跨模态对齐(CA)与跨模态预测(CP)的相图框架，解释了何时该用哪种范式、何时跨模态训练反而有害。对多模态系统选型有理论指导意义。尤其适用于科学领域（生物医学、天体物理）的多模态融合。证据强度基于相图分析，但缺乏大规模真实场景验证。",
+      "key_insight": "多模态学习的两种范式（对齐vs预测）不是可互换的，存在系统性的成功/失败区域，可用相图刻画边界条件。",
+      "tags": ["multimodal", "phase-diagram", "cross-modal", "theory"]
+    }
+  ]
+}

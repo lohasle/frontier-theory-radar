@@ -78,19 +78,19 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-06-11 · Flaws in the LLM Automation Narrative](daily-detail.html?date=2026-06-11) · 暂时忽略 · 暂时忽略
 - [2026-06-10 · Echo-Memory: A Controlled Study of Memory in Action World Models](daily-detail.html?date=2026-06-10) · 暂时忽略 · 暂时忽略
 - [2026-06-09 · MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism](daily-detail.html?date=2026-06-09) · 暂时忽略 · 暂时忽略
 - [2026-06-08 · Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution](daily-detail.html?date=2026-06-08) · 即时价值 · 重点学习
 - [2026-06-07 · Self-Augmenting Retrieval for Diffusion Language Models](daily-detail.html?date=2026-06-07) · 趋势价值 · 重点学习
 - [2026-06-06 · Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution](daily-detail.html?date=2026-06-06) · 即时价值 · 重点学习
 - [2026-06-05 · Can Generalist Agents Automate Data Curation?](daily-detail.html?date=2026-06-05) · 趋势价值 · 重点学习
-- [2026-06-03 · ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents](daily-detail.html?date=2026-06-03) · 暂时忽略 · 暂时忽略
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 122
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 103
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 122
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 126
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 104
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 126
 
 ## 启发沉淀说明
 

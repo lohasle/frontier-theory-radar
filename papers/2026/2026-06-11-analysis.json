@@ -1,0 +1,116 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T04:31:00+08:00",
+  "model": "glm-5.1",
+  "analysis_framework": "论文→理论→工程实践→趋势→启发→行动",
+  "deep_analyses": [
+    {
+      "rank": 1,
+      "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+      "arxiv_id": "2606.11172v1",
+      "url": "http://arxiv.org/abs/2606.11172v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11172v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "chain": {
+        "theory": "推理模型（LRM）在部署时行为不可预测。传统test-time steering通过干预隐藏表示控制输出，但依赖的是对已生成文本中行为的'检测特征'，这些特征对未来行为预测力弱。本文提出训练激活探针（activation probes）直接预测未来行为结果，从而找到更自然的干预目标。",
+        "engineering_practice": "1) 可在模型推理部署层加入probe-based steering模块，实现实时行为调控；2) 适用于安全关键场景（如防止推理链中的有害结论）；3) 不需要修改模型权重，仅推理时介入，部署成本低。",
+        "trend": "test-time compute与reasoning model的结合是2025-2026核心趋势。Steering/控制推理过程而非仅控制最终输出，是LLM安全对齐的下一个前沿。本文正好处于该交叉点。",
+        "insight": "关键洞察是'检测≠预测'——模型内部能识别已经发生的行为，但不能预见即将发生的行为。这个distinction对整个mechanistic interpretability领域有启发。",
+        "action": "1) 复现probe训练流程，验证在中文推理模型上的迁移性；2) 探索将probe集成到RLHF pipeline中作为在线奖励信号；3) 关注后续开源代码与benchmark。"
+      },
+      "risk_level": "low",
+      "limitations": "论文主要在英文推理模型上验证，跨语言泛化性未知；probe训练需要标注行为数据，成本不低。"
+    },
+    {
+      "rank": 2,
+      "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
+      "arxiv_id": "2606.11189v1",
+      "url": "http://arxiv.org/abs/2606.11189v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11189v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "chain": {
+        "theory": "SFT的标准做法是最大化观测token的似然（one-hot目标）。但观测token可能不唯一、含噪声、或与预训练知识不一致。本文将SFT重新框架化为'目标分布设计'问题：不研究损失函数，而是分析损失驱动的token级目标分布，统一解释label smoothing、知识蒸馏、DPO等方法。",
+        "engineering_practice": "1) 指导SFT数据构造：对高置信token强化、低置信token软化；2) 在post-training流水线中引入基于模型先验的自适应目标分布；3) 为不同任务类型（code vs creative writing）设计不同目标分布策略。",
+        "trend": "Post-training（SFT→RLHF→DPO）是当前LLM工程的核心环节。从'如何优化'到'优化目标是什么'的视角转变，代表了该领域的理论深化。",
+        "insight": "预训练模型编码了丰富的知识先验，强制拟合与先验矛盾的one-hot目标可能是次优的。理想的目标分布应在先验与示范信号之间取得平衡。",
+        "action": "1) 在自有SFT pipeline中实验soft target策略，对比one-hot baseline；2) 评估不同温度/平滑系数对下游任务的影响；3) 持续跟踪该团队后续工作。"
+      },
+      "risk_level": "low",
+      "limitations": "理论框架的统一性需要更多实验验证；从理论到具体的目标分布设计方法仍需工程探索。"
+    },
+    {
+      "rank": 3,
+      "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+      "arxiv_id": "2606.11182v1",
+      "url": "http://arxiv.org/abs/2606.11182v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11182v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "chain": {
+        "theory": "现有test-time adaptation方法面向单数据集设计，而真实Agent面对的是异构多源任务流。EEVEE引入路由机制，将不同领域/分布的输入分配到独立的prompt learning子空间，避免跨数据集干扰，实现持续自学习。",
+        "engineering_practice": "1) 可直接应用于LLM Agent的运行时prompt优化；2) 路由器设计可复用于多租户AI系统的个性化prompt管理；3) 适用于客服、代码助手等持续运行的自适应Agent场景。",
+        "trend": "Agent self-improvement是2026年Agent工程的关键方向。从固定prompt到运行时自优化prompt，是从'静态Agent'到'动态Agent'的关键跃迁。",
+        "insight": "跨域干扰是test-time learning在真实场景中的核心挑战，路由机制是解决该问题的工程可行方案。",
+        "action": "1) 在多场景Agent系统中实现路由+独立prompt learning原型；2) 评估路由器的负载均衡与冷启动问题；3) 关注EEVEE在非英语场景的表现。"
+      },
+      "risk_level": "medium",
+      "limitations": "路由器的准确性直接影响效果，错误路由可能导致性能退化；多数据集场景下的持续学习仍有遗忘风险。"
+    },
+    {
+      "rank": 4,
+      "title": "Piper: A Programmable Distributed Training System",
+      "arxiv_id": "2606.11169v1",
+      "url": "http://arxiv.org/abs/2606.11169v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11169v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "chain": {
+        "theory": "大规模模型训练需要组合多种并行策略（data/pipeline/tensor/expert parallelism + ZeRO），但现有系统要么依赖专家手动设计策略（定制化强但不灵活），要么提供通用框架但性能受限。Piper提出可编程抽象，允许用户以高级描述定义并行策略，系统自动映射到底层执行。",
+        "engineering_practice": "1) 直接用于大模型预训练集群的并行策略管理；2) 降低新并行策略的部署门槛，加速基础设施迭代；3) 可与现有训练框架（Megatron, DeepSpeed）集成。",
+        "trend": "万卡训练时代，训练基础设施的灵活性和可编程性成为瓶颈。从手工配置到自动化/可编程并行策略是必然趋势。",
+        "insight": "并行策略不应是固定的工程配置，而应是可编程的'策略函数'——输入模型结构与硬件拓扑，输出最优执行计划。",
+        "action": "1) 评估Piper与自有训练框架的兼容性；2) 在小规模集群上benchmark其策略搜索效率；3) 关注社区对该系统的采用情况。"
+      },
+      "risk_level": "medium",
+      "limitations": "系统级工作依赖具体硬件环境验证；可编程抽象的表达能力上限可能限制复杂策略的表达。"
+    },
+    {
+      "rank": 5,
+      "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
+      "arxiv_id": "2606.11190v1",
+      "url": "http://arxiv.org/abs/2606.11190v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.11190v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "chain": {
+        "theory": "多模态表征学习有两大范式：跨模态对齐(CA)和跨模态预测(CP)。本文首次建立系统性相图，刻画了CA和CP各自的成功区域、失败区域，以及跨模态训练完全无益的边界条件。对异构数据源（如生物医学中的多尺度测量）的范式选择有指导意义。",
+        "engineering_practice": "1) 为多模态系统架构选型提供理论依据（何时用对比学习，何时用生成式方法）；2) 在科学领域多模态融合中，帮助诊断标准方法underperformance的原因；3) 可指导多模态数据采集策略——何时增加模态有意义，何时无意义。",
+        "trend": "多模态融合的理论基础长期滞后于工程实践。相图方法提供了系统性的分析框架，与当前多模态基础模型的快速发展形成互补。",
+        "insight": "跨模态训练并非总是有益——存在模态间信息冗余或冲突的区域，此时单模态反而更优。这挑战了'更多模态=更好性能'的直觉。",
+        "action": "1) 在自有多模态项目中用相图框架诊断现有方法的表现；2) 对比CA/CP在具体业务数据上的效果差异；3) 跟踪该框架在科学领域的后续应用案例。"
+      },
+      "risk_level": "medium",
+      "limitations": "相图的理论分析基于特定假设（如模态间信息结构），在真实复杂场景中的适用性需进一步验证。"
+    }
+  ],
+  "cross_cutting_themes": [
+    {
+      "theme": "Test-time Adaptation & Steering",
+      "papers": ["2606.11172v1", "2606.11182v1", "2606.11189v1"],
+      "summary": "多篇论文指向同一趋势：模型部署后的运行时自适应优化。无论是通过激活探针steering推理行为（#1）、运行时prompt学习（#3）、还是重新设计SFT目标分布（#2），核心思想都是'在推理时而非训练时做更多决策'。"
+    },
+    {
+      "theme": "训练基础设施的可编程性",
+      "papers": ["2606.11169v1"],
+      "summary": "随着模型规模持续增长，训练系统的灵活性和可编程性成为新的工程瓶颈。从手工配置到声明式/可编程策略定义是必然方向。"
+    }
+  ],
+  "daily_highlight": "今日最值得关注的是reasoning model的行为预测与steering工作——它将mechanistic interpretability从'理解模型'推向'控制模型'，对LLM安全部署具有直接工程价值。"
+}

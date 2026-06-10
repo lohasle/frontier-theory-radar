@@ -2,6 +2,6 @@
 
 > 只保留确有趋势价值、值得持续观察的方向。
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 122
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 103
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 122
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 126
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 104
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 126
