@@ -1,0 +1,112 @@
+{
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T04:30:30",
+  "scoring_method": "LLM-inferred from abstract via 论文→理论→工程实践→趋势→启发→行动 framework",
+  "papers": [
+    {
+      "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
+      "arxiv_id": "2606.12412v1",
+      "url": "http://arxiv.org/abs/2606.12412v1",
+      "scores": {
+        "engineering_value": 8,
+        "evidence_strength": 7,
+        "novelty": 8,
+        "practical_impact": 7
+      },
+      "overall_score": 7.5,
+      "decision": "deep_dive",
+      "score_justification": "挑战视觉token'排序-丢弃'范式，提出可恢复路由机制。工程价值高：直接降低VLM推理KV-cache内存和注意力计算开销，适用于生产部署。证据来自对不同深度token重要性动态变化的分析，有方法论创新。理论启发：资源分配不必是单向裁剪，可以是动态重新路由——这一思想可迁移到其他稀疏注意力场景。",
+      "theory_to_action": {
+        "theory": "视觉token重要性随decoder深度动态变化，不可逆丢弃导致信息损失",
+        "engineering_practice": "VLM推理优化：KV-cache显存减少，注意力计算加速",
+        "trend": "稀疏注意力与动态token路由正成为VLM效率研究主流",
+        "insight": "资源压缩不必是'丢弃'，'延迟恢复'可能是更通用的范式",
+        "action": "评估在多模态RAG系统中采用可恢复token路由的可行性与收益"
+      }
+    },
+    {
+      "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
+      "arxiv_id": "2606.12411v1",
+      "url": "http://arxiv.org/abs/2606.12411v1",
+      "scores": {
+        "engineering_value": 9,
+        "evidence_strength": 7,
+        "novelty": 7,
+        "practical_impact": 9
+      },
+      "overall_score": 8.0,
+      "decision": "deep_dive",
+      "score_justification": "解决多轮对话中上下文膨胀的核心工程难题。增量压缩+跨轮记忆共享机制直接作用于当前Agent/Multi-turn Chat系统的生产痛点（token成本、延迟、信息丢失）。分数高是因为工程落地路径清晰：可直接集成到现有对话框架的context manager层。证据来自对长对话信息损失和累积错误的实证分析。",
+      "theory_to_action": {
+        "theory": "上下文压缩在对话动态中具有脆弱性，需要增量更新与跨轮修订",
+        "engineering_practice": "多轮对话Agent中的上下文管理器优化，降低token成本和延迟",
+        "trend": "LLM应用从单轮推理走向长时对话Agent，上下文管理成瓶颈",
+        "insight": "压缩不应是一次性的——对话式场景要求'可修订的增量压缩'",
+        "action": "在Agent框架中引入增量上下文压缩模块，对比现有截断/摘要方案"
+      }
+    },
+    {
+      "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+      "arxiv_id": "2606.12406v1",
+      "url": "http://arxiv.org/abs/2606.12406v1",
+      "scores": {
+        "engineering_value": 8,
+        "evidence_strength": 8,
+        "novelty": 7,
+        "practical_impact": 7
+      },
+      "overall_score": 7.5,
+      "decision": "deep_dive",
+      "score_justification": "仅需10分钟自由运动数据+1分钟训练即可估计外力，无需专用力传感器。工程价值显著：大幅降低接触丰富操作任务硬件门槛。证据充分：与专用传感器对比达到可比精度，且直接改善了策略学习效果。属于具身智能+低成本硬件交叉方向，对机器人落地有实际推动力。",
+      "theory_to_action": {
+        "theory": "外力可通过运动学模型+数据驱动方法从自由运动数据中估计",
+        "engineering_practice": "低成本机械臂的力反馈遥操作和策略学习",
+        "trend": "具身智能从实验室走向低成本硬件部署",
+        "insight": "传感器不是感知的必要条件——软件定义传感器是新范式",
+        "action": "评估NEXT方法在工业协作机器人场景的适用性"
+      }
+    },
+    {
+      "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+      "arxiv_id": "2606.12402v1",
+      "url": "http://arxiv.org/abs/2606.12402v1",
+      "scores": {
+        "engineering_value": 7,
+        "evidence_strength": 7,
+        "novelty": 8,
+        "practical_impact": 7
+      },
+      "overall_score": 7.25,
+      "decision": "deep_dive",
+      "score_justification": "聚焦test-time compute分配的'何时与何地'问题，直接回应当前VLM-as-planner的延迟/成本痛点。理论贡献在于将计算预算从均匀分配转为自适应分配。工程价值体现在使具身Agent可在资源受限场景（边缘设备、实时系统）中部署。证据基于对VLM planner在不同任务阶段计算增益的实证分析。",
+      "theory_to_action": {
+        "theory": "测试时计算在VLM规划器中的收益是不均匀的，需要动态分配",
+        "engineering_practice": "具身Agent在资源受限环境中的高效推理部署",
+        "trend": "从scaling test-time compute到adaptive test-time compute",
+        "insight": "计算预算应像注意力一样被'选择性分配'，而非均匀扩展",
+        "action": "在机器人规划流程中引入自适应compute budget分配策略"
+      }
+    },
+    {
+      "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
+      "arxiv_id": "2606.12400v1",
+      "url": "http://arxiv.org/abs/2606.12400v1",
+      "scores": {
+        "engineering_value": 8,
+        "evidence_strength": 7,
+        "novelty": 8,
+        "practical_impact": 8
+      },
+      "overall_score": 7.75,
+      "decision": "deep_dive",
+      "score_justification": "将上下文蒸馏从单一LoRA适配器推进到可组合的memory atoms，解决了单一适配器对多查询类型效果差的问题。工程价值高：直接改善RAG/长文档问答系统的性能和效率。理论创新在于将文档知识分解为原子化、可查询时动态组合的模块。与Doc-to-LoRA工作一脉相承，有清晰的演进路径。",
+      "theory_to_action": {
+        "theory": "文档知识可被编译为原子化记忆单元，按查询需求动态组合",
+        "engineering_practice": "长文档RAG系统的上下文压缩与高效推理",
+        "trend": "从静态RAG到动态可组合知识检索",
+        "insight": "知识蒸馏不必是'一个文档一个模型'——原子化组合是更灵活的方案",
+        "action": "探索将memory atoms方案集成到企业知识库系统中"
+      }
+    }
+  ]
+}

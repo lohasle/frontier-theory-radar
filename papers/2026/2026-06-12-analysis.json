@@ -1,0 +1,154 @@
+{
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T04:30:30",
+  "analysis_framework": "论文→理论→工程实践→趋势→启发→行动",
+  "deep_dive_papers": [
+    {
+      "rank": 1,
+      "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
+      "arxiv_id": "2606.12411v1",
+      "url": "http://arxiv.org/abs/2606.12411v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12411v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "overall_score": 8.0,
+      "one_line": "多轮对话场景下的增量上下文压缩，解决长对话token膨胀与信息丢失痛点",
+      "theory_background": "当前对话系统的上下文压缩方法缺乏跨轮记忆共享与修订机制，导致信息在长对话中累积丢失。本文重新审视对话动态下的压缩问题，揭示了其脆弱性。",
+      "engineering_practice": "直接优化多轮对话Agent的上下文管理：降低每次推理的token数量，减少API调用成本和延迟，同时保持对话信息完整性。可集成到ChatOps、客服Agent、长程研究助手等场景。",
+      "trend_alignment": "LLM应用正从单轮问答转向长时Agent交互，上下文窗口管理成为系统工程瓶颈。增量压缩是解决这一瓶颈的关键路径。",
+      "key_insight": "压缩不应是一次性操作——对话场景要求'可修订的增量压缩'，这与数据库的MVCC思想有相似之处。",
+      "action_items": [
+        "在Agent框架（如LangChain/CrewAI）中引入增量上下文压缩模块",
+        "对比现有截断/摘要方案与增量压缩在长对话任务上的表现",
+        "关注跨轮记忆一致性评估指标的设计"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
+      "arxiv_id": "2606.12400v1",
+      "url": "http://arxiv.org/abs/2606.12400v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12400v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "overall_score": 7.75,
+      "one_line": "将文档知识编译为可动态组合的原子化记忆单元，超越单一适配器蒸馏",
+      "theory_background": "上下文蒸馏通过将上下文信息压缩进模型参数来降低推理开销，但单一LoRA适配器难以服务多种查询类型。Doc-to-Atom提出将知识分解为可组合的原子化单元。",
+      "engineering_practice": "适用于企业知识库、长文档问答、多任务RAG系统。文档摄入时可预编译为memory atoms，查询时按需组合，避免每次全量检索和重编码。",
+      "trend_alignment": "RAG系统正从静态检索向动态可组合知识管理演进。Memory atoms概念与向量数据库的product quantization有理念相通之处。",
+      "key_insight": "知识蒸馏不一定是'一个文档一个模型'——原子化+动态组合提供了更灵活的方案，类似于软件工程中的组件化思想。",
+      "action_items": [
+        "评估memory atoms在企业知识库系统中替代传统embedding检索的可行性",
+        "对比Doc-to-Atom与Doc-to-LoRA在多查询类型场景的效果差异",
+        "关注原子化粒度对检索精度与组合效率的trade-off"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
+      "arxiv_id": "2606.12412v1",
+      "url": "http://arxiv.org/abs/2606.12412v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12412v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "overall_score": 7.5,
+      "one_line": "VLM视觉token的可恢复路由，挑战'排序-丢弃'范式",
+      "theory_background": "现有视觉token压缩方法基于'评分-保留-丢弃'范式，但token重要性在不同decoder深度会变化。被早期丢弃的token可能在后续层变得关键。",
+      "engineering_practice": "直接降低VLM推理的KV-cache显存占用和注意力计算量，适用于多模态RAG、视觉问答等生产部署场景。可恢复机制保证了精度不下降。",
+      "trend_alignment": "VLM效率优化是当前热门方向，稀疏注意力与动态token路由正在成为主流技术路线。",
+      "key_insight": "资源压缩不必是'丢弃'，'延迟恢复'可能是更通用的范式——这一思想可迁移到其他稀疏化场景（如MoE的expert routing）。",
+      "action_items": [
+        "在多模态RAG系统中评估可恢复token路由的推理加速效果",
+        "对比与ToMe/PruMerge等token合并方法的精度-效率trade-off",
+        "关注路由策略的可解释性"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+      "arxiv_id": "2606.12406v1",
+      "url": "http://arxiv.org/abs/2606.12406v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12406v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "overall_score": 7.5,
+      "one_line": "无需力传感器，10分钟数据+1分钟训练即可估计外力，降低接触操作硬件门槛",
+      "theory_background": "传统力感知依赖昂贵的专用传感器。NEXT方法通过运动学模型+数据驱动方法，从自由运动数据中学习估计外部关节力矩。",
+      "engineering_practice": "使低成本机械臂具备力反馈能力，可应用于遥操作、接触丰富操作、策略学习等场景。训练数据采集简单（10分钟自由运动），部署门槛极低。",
+      "trend_alignment": "具身智能正从实验室走向低成本硬件部署，'软件定义传感器'是降低成本的关键方向。",
+      "key_insight": "感知不一定要加硬件——通过模型学习可以从已有信号中估计缺失感知，这是'软件定义'思想在机器人领域的体现。",
+      "action_items": [
+        "评估NEXT方法在工业协作机器人场景的精度与鲁棒性",
+        "探索与模仿学习/RL策略学习框架的集成方式",
+        "关注方法在不同机械臂型号上的泛化能力"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+      "arxiv_id": "2606.12402v1",
+      "url": "http://arxiv.org/abs/2606.12402v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12402v1",
+      "openreview_url": "待核验/暂无",
+      "code_url": "待核验/暂无",
+      "benchmark_url": "待核验/暂无",
+      "project_url": "待核验/暂无",
+      "overall_score": 7.25,
+      "one_line": "具身规划器中测试时计算的自适应分配，从scaling转向adaptive",
+      "theory_background": "当前VLM-as-planner策略通过扩展测试时计算来提升能力，但计算增益不均匀，导致延迟和成本浪费。本文提出应根据任务阶段动态分配计算预算。",
+      "engineering_practice": "使具身Agent在资源受限环境（边缘设备、实时系统）中可部署，在关键决策点投入更多计算，在简单阶段快速通过。",
+      "trend_alignment": "test-time compute scaling是2025-2026年热门方向，但正从'uniform scaling'走向'adaptive allocation'。",
+      "key_insight": "计算预算应像注意力一样被'选择性分配'——在需要深度推理的节点投入，在常规节点节省。这与人类认知的双系统理论呼应。",
+      "action_items": [
+        "在机器人规划流程中引入自适应compute budget分配策略",
+        "对比均匀scaling与adaptive allocation在任务成功率、延迟、token成本上的差异",
+        "关注分配策略的可学习性（learned vs. heuristic）"
+      ]
+    }
+  ],
+  "other_papers_summary": [
+    {
+      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+      "arxiv_id": "2606.12397v1",
+      "url": "http://arxiv.org/abs/2606.12397v1",
+      "overall_score": 6.5,
+      "brief": "用流形幂迭代重新设计MoE路由器，理论上更优但工程落地尚需验证"
+    },
+    {
+      "title": "System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5",
+      "arxiv_id": "2606.12392v1",
+      "url": "http://arxiv.org/abs/2606.12392v1",
+      "overall_score": 5.0,
+      "brief": "竞赛系统报告，领域较窄（古诗词翻译），工程启发有限"
+    },
+    {
+      "title": "TAHOE: Text-to-SQL with Automated Hint Optimization from Experience",
+      "arxiv_id": "2606.12387v1",
+      "url": "http://arxiv.org/abs/2606.12387v1",
+      "overall_score": 6.5,
+      "brief": "将prompt优化视为数据管理问题，对Text-to-SQL生产化有参考价值"
+    },
+    {
+      "title": "ATLAS: Active Theory Learning for Automated Science",
+      "arxiv_id": "2606.12386v1",
+      "url": "http://arxiv.org/abs/2606.12386v1",
+      "overall_score": 6.0,
+      "brief": "认知科学中的主动学习框架，AI4Science方向，工程迁移性待观察"
+    },
+    {
+      "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
+      "arxiv_id": "2606.12385v1",
+      "url": "http://arxiv.org/abs/2606.12385v1",
+      "overall_score": 6.5,
+      "brief": "LLM供应链审计工具，对模型治理和合规有重要意义"
+    }
+  ]
+}

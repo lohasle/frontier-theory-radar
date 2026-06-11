@@ -1,7 +1,759 @@
 {
-  "updated_at": "2026-06-11T04:32:37.348997",
-  "total": 309,
+  "updated_at": "2026-06-12T04:31:57.277722",
+  "total": 319,
   "papers": [
+    {
+      "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
+      "authors": [
+        "Cheng-Yu Yang",
+        "Shao-Yuan Lo",
+        "Yu-Lun Liu"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12412v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12412v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relev",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "memory",
+        "RAG",
+        "inference"
+      ],
+      "score": 43.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12412v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12412v1"
+        }
+      ],
+      "id": "reroute-don-t-remove-recoverable-visual-token-routing-for-vision-language-models",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Vision-language models (VLMs) project images into hundreds to thousands of vis…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Vision-language models (VLMs) project images into …",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Vision-language models (VLMs) project images into hundreds to thousands of v",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=reroute-don-t-remove-recoverable-visual-token-routing-for-vision-language-models"
+    },
+    {
+      "title": "TAHOE: Text-to-SQL with Automated Hint Optimization from Experience",
+      "authors": [
+        "Zhiyi Chen",
+        "Jie Song",
+        "Peng Li"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12387v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12387v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massive schemas, and evolving user preferences, while supervised fine-tuning is costly and rigid and agentic test-time scaling is expensive. We present Tahoe, a system that treats prompt optimization as a dynamic data management problem. Tahoe uses an error-driven hint learning pipeline across Development",
+      "categories": [
+        "cs.DB",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "RAG",
+        "inference",
+        "planning"
+      ],
+      "score": 42.9,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12387v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12387v1"
+        }
+      ],
+      "id": "tahoe-text-to-sql-with-automated-hint-optimization-from-experience",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.7,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Large Language Models (LLMs) have democratized database access through Text-to…",
+      "one_line_judgement": "当前可忽略：AI Agent：Large Language Models (LLMs) have democratized database acces…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Large Language Models (LLMs) have democratized database access through Text-to…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=tahoe-text-to-sql-with-automated-hint-optimization-from-experience"
+    },
+    {
+      "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
+      "authors": [
+        "Yeongseo Jung",
+        "Jaehyeok Kim",
+        "Eunseo Jung",
+        "Jiachuan Wang",
+        "Yongqi Zhang"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12411v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12411v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficie",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "benchmark",
+        "RAG",
+        "inference"
+      ],
+      "score": 42.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12411v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12411v1"
+        }
+      ],
+      "id": "context-driven-incremental-compression-for-multi-turn-dialogue-generation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Modern conversational agents condition on an ever-growing dialogue history at …",
+      "one_line_judgement": "当前可忽略：AI Agent：Modern conversational agents condition on an ever-growing dia…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Modern conversational agents condition on an ever-growing dialogue history at …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=context-driven-incremental-compression-for-multi-turn-dialogue-generation"
+    },
+    {
+      "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+      "authors": [
+        "Jadelynn Dao",
+        "Milan Ganai",
+        "Yasmina Abukhadra",
+        "Ajay Sridhar",
+        "Mozhgan Nasr Azadani"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12402v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12402v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. ",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "RAG",
+        "multimodal",
+        "planning"
+      ],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12402v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12402v1"
+        }
+      ],
+      "id": "direct-when-and-where-should-you-allocate-test-time-compute-in-embodied-planners",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Vision-Language Models (VLMs) are increasingly deployed as high-level planners…",
+      "one_line_judgement": "当前可忽略：AI Agent：Vision-Language Models (VLMs) are increasingly deployed as hi…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Vision-Language Models (VLMs) are increasingly deployed as high-level planners…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=direct-when-and-where-should-you-allocate-test-time-compute-in-embodied-planners"
+    },
+    {
+      "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
+      "authors": [
+        "Sanjay Adhikesaven",
+        "Haoxiang Sun",
+        "Sewon Min"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12385v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12385v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions. These dependencies are recursive: a model may depend on an upstream artifact whose own dependencies are documented only in separate releases and artifacts. As a result, the full dependency structure is fragmented across heterogeneous public artifacts, with complexity and recursive depth far outpacing humans' ability to trace. We introduce ModSleuth, an",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "evaluation",
+        "RAG"
+      ],
+      "score": 40.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12385v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12385v1"
+        }
+      ],
+      "id": "which-models-are-our-models-built-on-auditing-invisible-dependencies-in-modern-llms",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Modern LLM training pipelines increasingly rely on other models to generate da…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Modern LLM training pipelines increasingly rely on other mo…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Modern LLM training pipelines increasingly rely on other models to generate da…",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=which-models-are-our-models-built-on-auditing-invisible-dependencies-in-modern-llms"
+    },
+    {
+      "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
+      "authors": [
+        "Xingjian Diao",
+        "Wenbo Li",
+        "Yashas Malur Saidutta",
+        "Avinash Amballa",
+        "Lazar Valkov"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12400v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12400v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads ",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "keywords": [
+        "memory",
+        "benchmark",
+        "inference"
+      ],
+      "score": 38.3,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12400v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12400v1"
+        }
+      ],
+      "id": "doc-to-atom-learning-to-compile-and-compose-memory-atoms",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Long input sequences are central to document understanding and multi-step reas…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Long input sequences are central to document under…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Long input sequences are central to document understanding and multi-step re",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=doc-to-atom-learning-to-compile-and-compose-memory-atoms"
+    },
+    {
+      "title": "System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5",
+      "authors": [
+        "Haotao Xie"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12392v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12392v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on precise translation and affective-semantic understanding of classical poetry remains limited. The main challenge is that most studies treat the poetic appreciation task as a general-domain problem, neglecting the distinctive features of poetic appreciation, while high-quality and domain-specific dataset",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "inference"
+      ],
+      "score": 36.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12392v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12392v1"
+        }
+      ],
+      "id": "system-report-for-ccl25-eval-task-5-new-dataset-and-lora-fine-tuned-qwen2-5",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Recently, large language models (LLMs) have achieved promising progress in the…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Recently, large language models (LLMs) have achieved promis…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Recently, large language models (LLMs) have achieved promising progress in the…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=system-report-for-ccl25-eval-task-5-new-dataset-and-lora-fine-tuned-qwen2-5"
+    },
+    {
+      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+      "authors": [
+        "Songhao Wu",
+        "Ang Lv",
+        "Ruobing Xie",
+        "Yankai Lin"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12397v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12397v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to ",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12397v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12397v1"
+        }
+      ],
+      "id": "redesign-mixture-of-experts-routers-with-manifold-power-iteration",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：Router is the cornerstone component to the Mixture-of-Experts models. Serving …",
+      "one_line_judgement": "当前可忽略：推理与服务：Router is the cornerstone component to the Mixture-of-Experts mo…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "推理与服务：Router is the cornerstone component to the Mixture-of-Experts models. Serving …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=redesign-mixture-of-experts-routers-with-manifold-power-iteration"
+    },
+    {
+      "title": "ATLAS: Active Theory Learning for Automated Science",
+      "authors": [
+        "Noémi Éltető",
+        "Nathaniel D. Daw",
+        "Kimberly L. Stachenfeld",
+        "Kevin J. Miller"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12386v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12386v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Advancing scientific understanding through mechanistic modeling requires posing the right experimental questions to yield maximally informative data. To automate this pursuit within cognitive science, we introduce ATLAS (Active Theory Learning for Automated Science), an active learning framework for the data-driven discovery of interpretable behavioral models. ATLAS iterates between generating mechanistic hypotheses--instantiated as a diverse ensemble of sparse neural networks (Disentangled RNNs",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 31.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12386v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12386v1"
+        }
+      ],
+      "id": "atlas-active-theory-learning-for-automated-science",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Advancing scientific understanding through mechanistic modeling requires posin…",
+      "one_line_judgement": "当前可忽略：前沿论文：Advancing scientific understanding through mechanistic modeling r…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Advancing scientific understanding through mechanistic modeling requires posin…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=atlas-active-theory-learning-for-automated-science"
+    },
+    {
+      "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+      "authors": [
+        "Steven Oh",
+        "Jason Jingzhou Liu",
+        "Tony Tao",
+        "Philip Han",
+        "Kenneth Shaw"
+      ],
+      "published": "2026-06-10",
+      "updated": "2026-06-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.12406v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.12406v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates external joint torques without needing any dedicated force sensors. NEXT trains in 1 minute from only 10 minutes of free-motion data, yet achieves estimates comparable to dedicated joint-torque sensors. NEXT enables force-feedback teleoperation on low-cost arms and improves policy le",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "keywords": [],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.12406v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.12406v1"
+        }
+      ],
+      "id": "factr-2-learning-external-force-sensing-for-commodity-robot-arms-improves-policy-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Contact-rich manipulation requires force sensitivity, but many robot arms lack…",
+      "one_line_judgement": "当前可忽略：前沿论文：Contact-rich manipulation requires force sensitivity, but many ro…",
+      "first_seen_date": "2026-06-12",
+      "first_deep_dive_daily": "2026-06-12",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Contact-rich manipulation requires force sensitivity, but many robot arms lack…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=factr-2-learning-external-force-sensing-for-commodity-robot-arms-improves-policy-learning"
+    },
     {
       "title": "Flaws in the LLM Automation Narrative",
       "authors": [
