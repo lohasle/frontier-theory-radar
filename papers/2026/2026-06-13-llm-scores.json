@@ -1,0 +1,125 @@
+{
+  "date": "2026-06-13",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-13T04:31:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "http://arxiv.org/abs/2606.13681v1": {
+      "score": 85,
+      "value_type": "immediate",
+      "reason": "EvoArena 首次系统化评估 LLM Agent 在动态环境中的记忆演化能力，填补了现有 Agent 评估只关注静态场景的空白。环境变化建模为终端、软件、知识库的渐进更新序列，直接对应生产环境中 API 变更、依赖升级、文档更新等真实挑战。对 Agent 记忆管理和自适应性评估有直接工程价值。",
+      "matched_topics": ["ai-agent", "memory", "evaluation"]
+    },
+    "http://arxiv.org/abs/2606.13669v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "Agents-K1 提出端到端知识编排管线，将原始文档转换为 Agent-native 科学知识图谱，包含实体、声明、证据、机制和方法谱系。直接解决当前研究 Agent 将论文简化为摘要和扁平引用边的核心瓶颈。对构建自动化文献综述、科研助手、知识管理系统有即时工程价值。",
+      "matched_topics": ["ai-agent", "knowledge-graph", "multimodal"]
+    },
+    "http://arxiv.org/abs/2606.13663v1": {
+      "score": 82,
+      "value_type": "immediate",
+      "reason": "HyperTool 提出 MCP 风格的统一可执行工具接口，解决 Agent 逐步工具调用中的执行粒度不匹配问题。将局部确定性的工具工作流从模型可见的推理轨迹中折叠，减少上下文消耗并释放模型的高层规划能力。对任何使用工具增强 Agent 的框架（LangChain、AutoGen、MCP 生态）有直接架构意义。",
+      "matched_topics": ["ai-agent", "tool-use", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.13662v1": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "EurekAgent 将自主科学发现的瓶颈从 Agent 工作流设计重新定位为 Agent 环境设计，提出'环境工程'作为核心方法论。这一视角转变对 AI4Science 的工程实践有深远影响——当模型能力持续提升时，如何设计交互接口、资源约束和反馈机制成为关键。提出了新的研究范式但尚需广泛验证。",
+      "matched_topics": ["ai-agent", "evaluation", "ai4science"]
+    },
+    "http://arxiv.org/abs/2606.13680v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "RA-RFT 通过类比推理范式重新定义检索增强——不再基于语义相似性检索，而是基于推理结构的同构性检索。这一范式转变将 RAG 从'找相似文本'提升为'找相似推理模式'，对复杂数学推理、代码生成等需要深层类比的任务有重要价值。但工程复杂度较高，落地需要精细的推理结构提取。",
+      "matched_topics": ["rag-knowledge", "reasoning", "rl-finetuning"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 0,
+      "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+      "arxiv_id": "2606.13681v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.5,
+      "confidence": "high",
+      "one_line": "动态环境 Agent 评估基准，建模终端/软件/知识库的渐进更新，评估 LLM Agent 的记忆演化和自适应能力",
+      "decision": "strong_accept",
+      "reasoning": "现有 Agent 评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 将环境变化系统建模为渐进更新序列，直接评估 Agent 的核心工程能力：记忆时效性检测、知识过期识别、行为自适应调整。评估维度（终端、软件、知识库）精准对应三类生产环境变化源。关键词匹配：agent, memory, evaluation, benchmark, RAG。"
+    },
+    {
+      "paper_index": 6,
+      "title": "Agents-K1: Towards Agent-native Knowledge Orchestration",
+      "arxiv_id": "2606.13669v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "端到端知识编排管线，将原始文档转换为 Agent-native 科学知识图谱（实体、声明、证据、机制、方法谱系）",
+      "decision": "strong_accept",
+      "reasoning": "当前研究 Agent 的核心瓶颈：将论文简化为摘要+扁平引用边，丢失了科学推理所需的实体、因果机制和方法演化信息。Agents-K1 提出完整的文档→知识图谱管线，输出 agent-native 的结构化知识。对自动化文献综述、科研助手、学术知识管理有直接工程价值。端到端管线设计体现了从'检索文档'到'编排知识'的范式升级。关键词匹配：agent, multimodal。"
+    },
+    {
+      "paper_index": 8,
+      "title": "HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents",
+      "arxiv_id": "2606.13663v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 6,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.2,
+      "confidence": "high",
+      "one_line": "MCP 风格的统一可执行工具接口，将确定性的工具工作流从推理轨迹中折叠，解决执行粒度不匹配问题",
+      "decision": "strong_accept",
+      "reasoning": "当前工具增强 Agent 的普遍痛点：每个工具调用、观察、值传递都暴露在推理轨迹中，造成上下文爆炸和模型被迫管理低层数据流。HyperTool 的 MCP 风格接口将局部确定性工作流封装为原子操作，模型只看到高层输入输出。这一设计直接减少上下文消耗、提升推理效率，且与 MCP 生态天然兼容。架构层面的改进，可集成到任何 Agent 框架。关键词匹配：agent, RAG, tool use。"
+    },
+    {
+      "paper_index": 9,
+      "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+      "arxiv_id": "2606.13662v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 8
+      },
+      "weighted_total": 8.0,
+      "confidence": "medium",
+      "one_line": "将自主科学发现的瓶颈从工作流设计重新定位为环境设计，提出'环境工程'作为 AI4Science 的核心方法论",
+      "decision": "accept",
+      "reasoning": "重要视角转变：当 LLM 能力持续提升时，Agent 系统的瓶颈从'如何组织推理步骤'转向'如何设计交互环境'。环境包括资源、约束和接口设计。这一洞察对 AI4Science 工程实践有深远影响——好的环境设计可以让相同模型产出更好的科学发现。但摘要截断，具体环境设计方法和验证结果需完整论文确认。关键词匹配：agent, evaluation。"
+    },
+    {
+      "paper_index": 1,
+      "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
+      "arxiv_id": "2606.13680v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 9,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 6
+      },
+      "weighted_total": 7.8,
+      "confidence": "medium",
+      "one_line": "通过类比推理重新定义检索增强：基于推理结构同构性而非语义相似性检索，结合 RL 微调提升复杂推理",
+      "decision": "accept",
+      "reasoning": "RA-RFT 的核心创新：将 RAG 的检索标准从'文本相似'改为'推理模式同构'。这对于数学推理、代码生成等需要深层类比的任务有重要意义。结合 RL 微调训练模型利用检索到的类比推理结构。但工程复杂度较高：需要提取推理结构、定义同构性度量、设计 RL 奖励信号。理论价值高于即时的工程可用性。关键词匹配：benchmark, RAG。"
+    }
+  ]
+}

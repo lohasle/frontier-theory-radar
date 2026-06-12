@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-12T04:31:57.275544",
+  "updated_at": "2026-06-13T04:33:11.820308",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-13",
+      "title": "论文价值发现日报 - 2026-06-13",
+      "deep_dive_title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+      "deep_dive_url": "http://arxiv.org/abs/2606.13681v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 EvoArena 的环境变化建模，审查当前 Agent 系统的环境变化处理策略；评估 HyperTool 的工具工作流折叠方案",
+      "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认",
+      "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
+      "path": "daily-detail.html?date=2026-06-13"
+    },
     {
       "date": "2026-06-12",
       "title": "论文价值发现日报 - 2026-06-12",
@@ -378,19 +391,6 @@
       "max_uncertainty": "两个评测基准均缺乏公开代码链接；实际记忆系统在这些基准上的改进空间有多大尚待社区验证。",
       "one_line_judgement": "两篇论文分别从'环境经验内化'和'多实体演化推理'两个互补维度填补了Agent长期记忆评测空白，提供了可直接使用的benchmark框架。ToolCUA（GUI-Tool路径编排）和LLM引导查询精炼也具有直接工程可操作性。",
       "path": "daily-detail.html?date=2026-05-14"
-    },
-    {
-      "date": "2026-05-13",
-      "title": "论文价值发现日报 - 2026-05-13",
-      "deep_dive_title": "WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation",
-      "deep_dive_url": "http://arxiv.org/abs/2605.10912v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-13"
     }
   ]
 }
