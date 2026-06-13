@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-13T04:33:11.820308",
+  "updated_at": "2026-06-14T04:32:04.372967",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-14",
+      "title": "论文价值发现日报 - 2026-06-14",
+      "deep_dive_title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+      "deep_dive_url": "http://arxiv.org/abs/2606.13681v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 EvoArena 的环境变化建模；审计当前 Agent 系统的工具接口执行粒度（HyperTool + SpatialClaw 双重启发）",
+      "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认；SpatialClaw 的新接口方案细节和评测结果待完整论文",
+      "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
+      "path": "daily-detail.html?date=2026-06-14"
+    },
     {
       "date": "2026-06-13",
       "title": "论文价值发现日报 - 2026-06-13",
@@ -378,19 +391,6 @@
       "max_uncertainty": "主要不确定性：(1)时序逻辑规格的表达能力上限——能否覆盖所有现实安全策略？(2)在更大规模Agent系统中的延迟表现需进一步验证；(3)对抗性鲁棒性——攻击者是否会针对监控器设计规避策略？(4)自然语言到时序逻辑的自动翻译准确性。",
       "one_line_judgement": "它解决了Agent从实验走向生产的核心瓶颈——运行时安全防护，首次用形式化方法（时序逻辑）实现可验证的安全护栏，94%攻击拦截+97%正常完成率+3ms开销，三个数据点证明了工程可行性。开源代码和benchmark可直接复用。",
       "path": "daily-detail.html?date=2026-05-15"
-    },
-    {
-      "date": "2026-05-14",
-      "title": "论文价值发现日报 - 2026-05-14",
-      "deep_dive_title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
-      "deep_dive_url": "http://arxiv.org/abs/2605.12493v1",
-      "decision": "轻量试点",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读LongMemEval-V2和MEME两个基准，提取评测维度到本地Checklist，评估当前项目中Agent记忆系统的覆盖情况。",
-      "max_uncertainty": "两个评测基准均缺乏公开代码链接；实际记忆系统在这些基准上的改进空间有多大尚待社区验证。",
-      "one_line_judgement": "两篇论文分别从'环境经验内化'和'多实体演化推理'两个互补维度填补了Agent长期记忆评测空白，提供了可直接使用的benchmark框架。ToolCUA（GUI-Tool路径编排）和LLM引导查询精炼也具有直接工程可操作性。",
-      "path": "daily-detail.html?date=2026-05-14"
     }
   ]
 }

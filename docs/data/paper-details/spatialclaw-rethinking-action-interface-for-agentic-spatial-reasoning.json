@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-13",
-  "first_deep_dive_daily": "2026-06-13",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-06-14",
+  "first_deep_dive_daily": "2026-06-14",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 6.2,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 37.8,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：AI Agent：Spatial reasoning, the ability to determine where objects are…",
-  "one_line_essence": "AI Agent：Spatial reasoning, the ability to determine where objects are, how they relate…",
+  "score": 79.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：SpatialClaw 重新审视工具增强 VLM Agent 的动作接口设计——接口如何塑造 Agent 的开放式空间推理能力。现有空间推理…",
+  "one_line_essence": "SpatialClaw 重新审视工具增强 VLM Agent 的动作接口设计——接口如何塑造 Agent 的开放式空间推理能力。现有空间推理工具接口（离散标注 vs 连续查询）限制了 VLM 的三维理解。对多模态 Agent 的接口设计方法论有趋势价值，但摘要截断，具体新接口方案和评测结果需完整论文确认。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "AI Agent：Spatial reasoning, the ability to determine where objects are, how they relate…",
+  "new_claim_or_method": "SpatialClaw 重新审视工具增强 VLM Agent 的动作接口设计——接口如何塑造 Agent 的开放式空间推理能力。现有空间推理工具接口（离散标注 vs 连续查询）限制了 VLM 的三维理解。对多模态 Agent 的接口设计方法论有趋势价值，但摘要截断，具体新接口方案和评测结果需完整论文确认。",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,9 +49,10 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [
-      "agentic-world-modeling"
+      "agentic-world-modeling",
+      "coding-agent"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -61,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "AI Agent：Spatial reasoning, the ability to determine where objects are, how they relate…",
+    "why_save": "SpatialClaw 重新审视工具增强 VLM Agent 的动作接口设计——接口如何塑造 Agent 的开放式空间推理能力。现有空间推理工具接口（离散标注 vs 连续查询）限制了 VLM ",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,9 +103,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -117,9 +122,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=spatialclaw-rethinking-action-interface-for-agentic-spatial-reasoning",
-  "daily_path": "daily-detail.html?date=2026-06-13",
+  "daily_path": "daily-detail.html?date=2026-06-14",
   "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=coding-agent"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
