@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-14T04:32:04.372967",
+  "updated_at": "2026-06-15T04:37:32.707965",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-15",
+      "title": "论文价值发现日报 - 2026-06-15",
+      "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
+      "deep_dive_url": "",
+      "decision": "暂时忽略",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "daily_action": "本日网络不可用，无可执行的学习/验证动作；恢复网络后重跑 2026-06-15 完整流水线覆盖占位。",
+      "max_uncertainty": "环境出站 HTTPS 被完全拦截（多主机 SSL_ERROR_SYSCALL），DNS 正常，疑似出站防火墙/代理策略，恢复时间未知。",
+      "one_line_judgement": "待补充价值判断",
+      "path": "daily-detail.html?date=2026-06-15"
+    },
     {
       "date": "2026-06-14",
       "title": "论文价值发现日报 - 2026-06-14",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-16"
-    },
-    {
-      "date": "2026-05-15",
-      "title": "论文价值发现日报 - 2026-05-15",
-      "deep_dive_title": "SafeAgent: Runtime Guardrails for LLM-Based Agents via Formal Specification Monitoring",
-      "deep_dive_url": "http://arxiv.org/abs/2605.14012v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读SafeAgent的方法部分（NL→LTL翻译机制），评估将时序逻辑监控集成到现有Agent框架的可行性。",
-      "max_uncertainty": "主要不确定性：(1)时序逻辑规格的表达能力上限——能否覆盖所有现实安全策略？(2)在更大规模Agent系统中的延迟表现需进一步验证；(3)对抗性鲁棒性——攻击者是否会针对监控器设计规避策略？(4)自然语言到时序逻辑的自动翻译准确性。",
-      "one_line_judgement": "它解决了Agent从实验走向生产的核心瓶颈——运行时安全防护，首次用形式化方法（时序逻辑）实现可验证的安全护栏，94%攻击拦截+97%正常完成率+3ms开销，三个数据点证明了工程可行性。开源代码和benchmark可直接复用。",
-      "path": "daily-detail.html?date=2026-05-15"
     }
   ]
 }

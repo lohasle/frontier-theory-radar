@@ -1,0 +1,9 @@
+{
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T04:37:03.772496",
+  "model": "glm-5.1",
+  "status": "degraded_network_egress_blocked",
+  "real_papers": 0,
+  "note": "本次运行时环境出站 HTTPS 被完全拦截：对 export.arxiv.org(→Fastly)、github.com、www.google.com 三主机多次重试均返回 SSL_ERROR_SYSCALL（DNS 解析正常，但 TLS 连接被重置；google.com 甚至被解析为伪造地址 2001::1）。fetch_papers.py 未能获取任何真实论文，papers.json 仅含 1 条系统占位记录。为遵守“不编造”原则，本次不进行任何 LLM 价值评分与人工推断，by_url 为空。待网络恢复后重跑本日流水线（fetch→score→generate→update_index→build_pages）即可按日期覆盖本占位。",
+  "by_url": {}
+}

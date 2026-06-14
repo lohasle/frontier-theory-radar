@@ -1,101 +1,69 @@
 {
-  "updated_at": "2026-06-14T04:32:04.367637",
+  "updated_at": "2026-06-15T04:37:32.700510",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-06-14",
-    "title": "论文价值发现日报 - 2026-06-14",
-    "deep_dive_title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
-    "deep_dive_url": "http://arxiv.org/abs/2606.13681v1",
-    "decision": "重点学习",
-    "value_type": "immediate",
-    "value_type_label": "即时价值",
-    "daily_action": "精读 EvoArena 的环境变化建模；审计当前 Agent 系统的工具接口执行粒度（HyperTool + SpatialClaw 双重启发）",
-    "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认；SpatialClaw 的新接口方案细节和评测结果待完整论文",
-    "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
-    "path": "daily-detail.html?date=2026-06-14"
+    "date": "2026-06-15",
+    "title": "论文价值发现日报 - 2026-06-15",
+    "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
+    "deep_dive_url": "",
+    "decision": "暂时忽略",
+    "value_type": "ignore",
+    "value_type_label": "暂时忽略",
+    "daily_action": "本日网络不可用，无可执行的学习/验证动作；恢复网络后重跑 2026-06-15 完整流水线覆盖占位。",
+    "max_uncertainty": "环境出站 HTTPS 被完全拦截（多主机 SSL_ERROR_SYSCALL），DNS 正常，疑似出站防火墙/代理策略，恢复时间未知。",
+    "one_line_judgement": "待补充价值判断",
+    "path": "daily-detail.html?date=2026-06-15"
   },
   "top_paper": {
-    "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
-    "authors": [
-      "Jundong Xu",
-      "Qingchuan Li",
-      "Jiaying Wu",
-      "Yihuai Lan",
-      "Shuyue Stella Li"
-    ],
-    "published": "2026-06-11",
-    "updated": "2026-06-11",
-    "source": "arXiv",
-    "url": "http://arxiv.org/abs/2606.13681v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.13681v1",
+    "title": "[占位] 今日论文抓取失败或无新论文",
+    "authors": [],
+    "published": "2026-06-15",
+    "updated": "2026-06-15",
+    "source": "placeholder",
+    "url": "",
+    "pdf_url": "",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Large language model (LLM) agents have achieved strong performance on a wide range of benchmarks, yet most evaluations assume static environments. In contrast, real-world deployment is inherently dynamic, requiring agents to continually align their knowledge, skills, and behavior with changing environments and updated task conditions. To address this gap, we introduce EvoArena, a benchmark suite that models environment changes as sequences of progressive updates across terminal, software, and so",
-    "categories": [
-      "cs.CL"
-    ],
-    "keywords": [
-      "agent",
-      "memory",
-      "evaluation",
-      "benchmark",
-      "RAG"
-    ],
-    "score": 85.0,
-    "decision": "重点学习",
-    "links": [
-      {
-        "label": "arXiv",
-        "url": "http://arxiv.org/abs/2606.13681v1"
-      },
-      {
-        "label": "PDF",
-        "url": "https://arxiv.org/pdf/2606.13681v1"
-      }
-    ],
-    "llm_reason": "EvoArena 首次系统化评估 LLM Agent 在动态环境中的记忆演化能力，填补了现有 Agent 评估只关注静态场景的空白。环境变化建模为终端、软件、知识库的渐进更新序列，直接对应生产环境中 API 变更、依赖升级、文档更新等真实挑战。对 Agent 记忆管理和自适应性评估有直接工程价值。",
-    "id": "evoarena-tracking-memory-evolution-for-robust-llm-agents-in-dynamic-environments",
-    "value_type": "immediate",
-    "matched_topics": [
-      "ai-agent",
-      "context-engineering",
-      "llm-evaluation"
-    ],
+    "abstract": "论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+    "categories": [],
+    "keywords": [],
+    "score": 28.5,
+    "decision": "暂时忽略",
+    "links": [],
+    "id": "paper",
+    "value_type": "ignore",
+    "matched_topics": [],
     "score_breakdown": {
       "novelty": 4.8,
-      "problem_importance": 7.1,
-      "relevance": 8.6,
-      "evidence_strength": 5.4,
-      "engineering_testability": 4.05,
-      "trend_signal": 6.55,
+      "problem_importance": 4.5,
+      "relevance": 3.8,
+      "evidence_strength": 4.5,
+      "engineering_testability": 3.5,
+      "trend_signal": 3.5,
       "long_tail_potential": 3.5,
-      "asset_convertibility": 5.6,
-      "actionability": 5.0,
-      "noise_risk": 1.2,
-      "weak_evidence_penalty": 4.0,
-      "low_relevance_penalty": 0,
+      "asset_convertibility": 4.0,
+      "actionability": 3.8,
+      "noise_risk": 2.4,
+      "weak_evidence_penalty": 5.0,
+      "low_relevance_penalty": 5.0,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
-    "trend_status": "emerging",
-    "brief_cn": "AI Agent：Large language model (LLM) agents have achieved strong performance on a wide r…",
-    "one_line_judgement": "今天值得试：EvoArena 首次系统化评估 LLM Agent 在动态环境中的记忆演化能力，填补了现有 Agent 评估只关注静态场景的空白。环境变化…",
-    "first_seen_date": "2026-06-14",
-    "first_deep_dive_daily": "2026-06-14",
-    "value_type_label": "即时价值",
-    "trend_stage_label": "萌芽",
+    "trend_status": "noise",
+    "brief_cn": "前沿论文：论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+    "one_line_judgement": "当前可忽略：前沿论文：论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+    "first_seen_date": "2026-06-15",
+    "first_deep_dive_daily": "2026-06-15",
+    "value_type_label": "暂时忽略",
+    "trend_stage_label": "噪声",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "EvoArena 首次系统化评估 LLM Agent 在动态环境中的记忆演化能力，填补了现有 Agent 评估只关注静态场景的空白。环境变化建模为终端、软件、知识库的渐进更新序列，直接对应生产",
-    "related_trends": [
-      "agentic-world-modeling",
-      "context-engineering",
-      "coding-agent"
-    ],
-    "detail_path": "paper-detail.html?id=evoarena-tracking-memory-evolution-for-robust-llm-agents-in-dynamic-environments"
+    "long_tail_summary": "前沿论文：论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+    "related_trends": [],
+    "detail_path": "paper-detail.html?id=paper"
   },
   "paper_count": 329,
   "daily_count": 30,
@@ -108,6 +76,19 @@
     "ignore": 225
   },
   "recent_dailies": [
+    {
+      "date": "2026-06-15",
+      "title": "论文价值发现日报 - 2026-06-15",
+      "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
+      "deep_dive_url": "",
+      "decision": "暂时忽略",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "daily_action": "本日网络不可用，无可执行的学习/验证动作；恢复网络后重跑 2026-06-15 完整流水线覆盖占位。",
+      "max_uncertainty": "环境出站 HTTPS 被完全拦截（多主机 SSL_ERROR_SYSCALL），DNS 正常，疑似出站防火墙/代理策略，恢复时间未知。",
+      "one_line_judgement": "待补充价值判断",
+      "path": "daily-detail.html?date=2026-06-15"
+    },
     {
       "date": "2026-06-14",
       "title": "论文价值发现日报 - 2026-06-14",
@@ -185,22 +166,59 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-06-09"
-    },
-    {
-      "date": "2026-06-08",
-      "title": "论文价值发现日报 - 2026-06-08",
-      "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-      "deep_dive_url": "http://arxiv.org/abs/2606.06492v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "今天完成 Code2LoRA 全文精读 + 与现有 RAG 管线的对比清单；评估 hypernetwork 生成的 LoRA 适配器能否在你当前编程 Agent 产品里替代或补充仓库 RAG",
-      "max_uncertainty": "Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性",
-      "one_line_judgement": "用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/RAG 增强'重构为'hypernetwork 推理时一次性生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + 软件工程三者首次明确耦合。",
-      "path": "daily-detail.html?date=2026-06-08"
     }
   ],
   "top_papers": [
+    {
+      "title": "[占位] 今日论文抓取失败或无新论文",
+      "authors": [],
+      "published": "2026-06-15",
+      "updated": "2026-06-15",
+      "source": "placeholder",
+      "url": "",
+      "pdf_url": "",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+      "categories": [],
+      "keywords": [],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "paper",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+      "one_line_judgement": "当前可忽略：前沿论文：论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+      "first_seen_date": "2026-06-15",
+      "first_deep_dive_daily": "2026-06-15",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：论文抓取失败或无新论文。请检查网络连接和 API 状态。后续运行会替换为真实数据。",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=paper"
+    },
     {
       "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
       "authors": [
@@ -892,73 +910,6 @@
       "long_tail_summary": "前沿论文：Positional encodings (PEs) enhance the power of graph neural networks (GNNs), …",
       "related_trends": [],
       "detail_path": "paper-detail.html?id=understanding-truncated-positional-encodings-for-graph-neural-networks"
-    },
-    {
-      "title": "Influcoder: Distilling Decoders' Gradient Influence Rankings into an Encoder for Data Attribution",
-      "authors": [
-        "Dimitri Kachler",
-        "Damien Sileo",
-        "Pascal Denis"
-      ],
-      "published": "2026-06-11",
-      "updated": "2026-06-11",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.13668v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.13668v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "With the growth of LLMs' (Large Language Models) capabilities, there has been an increasing push to curate high quality datasets by filtering samples in the training data. In general, Data Attribution (DA) methods aim to estimate how individual samples in a training dataset can precondition a model to generate certain outputs. As an example, one might be interested in which samples in the data could be the source of toxic behavior after training the LLM. Many methods quantify this conditioning t",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [
-        "RAG"
-      ],
-      "score": 28.5,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.13668v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.13668v1"
-        }
-      ],
-      "id": "influcoder-distilling-decoders-gradient-influence-rankings-into-an-encoder-for-data-attribution",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：With the growth of LLMs' (Large Language Models) capabilities, there has been …",
-      "one_line_judgement": "当前可忽略：前沿论文：With the growth of LLMs' (Large Language Models) capabilities, th…",
-      "first_seen_date": "2026-06-14",
-      "first_deep_dive_daily": "2026-06-14",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：With the growth of LLMs' (Large Language Models) capabilities, there has been …",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=influcoder-distilling-decoders-gradient-influence-rankings-into-an-encoder-for-data-attribution"
     }
   ],
   "long_tail_highlights": [

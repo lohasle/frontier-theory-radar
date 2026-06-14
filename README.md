@@ -78,13 +78,13 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-06-15 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-06-15) · 暂时忽略 · 暂时忽略
 - [2026-06-14 · EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments](daily-detail.html?date=2026-06-14) · 即时价值 · 重点学习
 - [2026-06-13 · EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments](daily-detail.html?date=2026-06-13) · 即时价值 · 重点学习
 - [2026-06-12 · Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models](daily-detail.html?date=2026-06-12) · 暂时忽略 · 暂时忽略
 - [2026-06-11 · Flaws in the LLM Automation Narrative](daily-detail.html?date=2026-06-11) · 暂时忽略 · 暂时忽略
 - [2026-06-10 · Echo-Memory: A Controlled Study of Memory in Action World Models](daily-detail.html?date=2026-06-10) · 暂时忽略 · 暂时忽略
 - [2026-06-09 · MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism](daily-detail.html?date=2026-06-09) · 暂时忽略 · 暂时忽略
-- [2026-06-08 · Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution](daily-detail.html?date=2026-06-08) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
