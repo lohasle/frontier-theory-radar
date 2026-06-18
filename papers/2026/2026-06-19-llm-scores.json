@@ -1,0 +1,126 @@
+{
+  "date": "2026-06-19",
+  "model": "glm-5.1",
+  "generated_at": "2026-06-19T04:33:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分；分数与理由体现工程价值与证据强度，不只看关键词",
+  "note": "今日 arXiv 抓取 10 篇真实论文。横切主题：从被动消费走向主动生成/执行——编码 Agent 输出可执行代码而非文本（DIA）、主动感知取代被动遍历（OmniAgent）、丰富 rubric/图灵奖励取代稀疏标量奖励（Rubric-Conditioned、Turing-RL）、符号程序取代不透明权重做可解释性（Explaining Attention）。未编造任何代码/benchmark 链接，缺失字段统一标注待核验。",
+  "by_url": {
+    "http://arxiv.org/abs/2606.19319v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "Data Intelligence Agents 将自主编码 Agent（ACA）作为一等执行抽象：三 Agent（Data Interpreter / Schema Creator / Query Generator）直接生成、执行、校验、修复具体代码而非仅输出文本，直接压缩数据owner/engineer/analyst 之间的有损交接。生产数据集成是普遍瓶颈且与 coding-agent、ai-agent 高度契合，落地路径清晰，证据强度取决于完整论文中企业数据集的端到端成功率（摘要截断需确认）。",
+      "matched_topics": ["coding-agent", "ai-agent", "data-engineering"]
+    },
+    "http://arxiv.org/abs/2606.19341v1": {
+      "score": 80,
+      "value_type": "immediate",
+      "reason": "OmniAgent 将长视频理解形式化为 POMDP 的迭代 Observation-Thought-Action 循环，以主动感知替代 watch-it-all 被动遍历，使上下文成本不再随视频时长线性增长。这是 agentic 计算范式向全模态主动感知的延伸，对多模态 Agent 的上下文成本控制有直接工程意义。价值偏即时但全模态融合的具体收益需原文确认。",
+      "matched_topics": ["multimodal-agent", "ai-agent", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.19327v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "Rethinking Reward Supervision 直击推理 LM 后训练两大痛点：蒸馏用的 CoT 标注昂贵且含噪声；RLVR 把评价反馈压缩成稀疏标量。提出 rubric-conditioned self-distillation，把奖励信号从标量升级为结构化 rubric。对 RLHF/RLVR 工程实践有方法论价值，属趋势价值——证据强度取决于完整论文中的消融与跨基准结果（摘要截断需确认）。",
+      "matched_topics": ["llm-evaluation", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.19317v1": {
+      "score": 75,
+      "value_type": "trend",
+      "reason": "Explaining Attention with Program Synthesis 用可执行程序近似 transformer 注意力头行为——计算注意力矩阵后提示预训练 LM 合成等价程序。把机械可解释性从'权重分析'推进到'符号程序逆向'，与 program synthesis、code generation 形成正反馈。属趋势价值，直接工程价值取决于能否规模化到生产规模注意力头且保持程序等价性。",
+      "matched_topics": ["coding-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.19336v1": {
+      "score": 72,
+      "value_type": "trend",
+      "reason": "Learning User Simulators with Turing Rewards 提出 Turing-RL：用图灵测试式判别奖励（模拟用户能否被真人区分）替代单条 ground-truth 似然/相似度奖励训练用户模拟器。对 Agent 训练数据合成、个性化评测有趋势价值——把'图灵可分辨度'作为可优化的奖励信号是新颖贡献。证据强度受限于摘要截断，具体模拟器规模与下游 agent 训练增益需确认。",
+      "matched_topics": ["ai-agent", "llm-evaluation"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 7,
+      "title": "Data Intelligence Agents: Interpreting, Modeling, and Querying Enterprise Data via Autonomous Coding Agents",
+      "arxiv_id": "2606.19319v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 6,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "三 Agent 系统（Data Interpreter / Schema Creator / Query Generator）以自主编码 Agent 为一等执行抽象，直接生成/执行/校验/修复代码完成企业数据集成",
+      "decision": "strong_accept",
+      "reasoning": "生产数据集成长期被 data owner/engineer/analyst 之间的有损人工交接拖慢。DIA 的核心架构选择——让 Agent 输出真实可执行代码而非文本建议——是 coding-agent 落地企业场景的最直接路径。三 Agent 分工对应数据发现→结构化→查询的完整链路，可验证性强。直接工程价值最高。"
+    },
+    {
+      "paper_index": 0,
+      "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
+      "arxiv_id": "2606.19341v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 6,
+        "trend_relevance": 9,
+        "actionability": 8
+      },
+      "weighted_total": 8.0,
+      "confidence": "medium",
+      "one_line": "首个原生全模态 Agent，将长视频理解形式化为 POMDP 迭代 Observation-Thought-Action 循环，主动感知取代被动遍历，上下文成本不再随时长线性增长",
+      "decision": "strong_accept",
+      "reasoning": "长视频理解的被动 watch-it-all 范式使上下文成本随时长爆炸。OmniAgent 用 POMDP 主动感知把'按需观察'变成可推理的动作，这是 agentic 范式向全模态主动感知的关键延伸。对多模态 Agent 的成本控制与 RAG/记忆设计有直接启发。理论深度高（POMDP），但全模态融合的具体收益需原文确认。"
+    },
+    {
+      "paper_index": 5,
+      "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
+      "arxiv_id": "2606.19327v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 7,
+        "evidence_strength": 6,
+        "trend_relevance": 9,
+        "actionability": 7
+      },
+      "weighted_total": 7.8,
+      "confidence": "medium",
+      "one_line": "重设计推理 LM 后训练的奖励监督：rubric-conditioned self-distillation 把奖励从稀疏标量升级为结构化 rubric，缓解蒸馏噪声与 RLVR 信号稀疏",
+      "decision": "accept",
+      "reasoning": "推理 LM 后训练同时受困于蒸馏标注噪声和 RLVR 标量奖励稀疏。Rubric-conditioned 方案让奖励信号携带结构化评判维度，是 reward engineering 的明确趋势。对任何做 RLHF/RLVR 后训练的团队有方法论价值。属趋势价值，证据强度依赖完整消融。"
+    },
+    {
+      "paper_index": 8,
+      "title": "Explaining Attention with Program Synthesis",
+      "arxiv_id": "2606.19317v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 7.5,
+      "confidence": "medium",
+      "one_line": "用可执行程序近似 transformer 注意力头行为——采样注意力矩阵后提示 LM 合成等价程序，把机械可解释性从权重分析推进到符号程序逆向",
+      "decision": "accept",
+      "reasoning": "可解释深度学习长期寻求用人可读符号替换不透明神经计算。本文用 program synthesis 把注意力头逆向为可执行程序，把 program synthesis（生成）与 mechanistic interpretability（解释）统一。属趋势价值，直接工程价值取决于规模化与程序等价性保持。"
+    },
+    {
+      "paper_index": 1,
+      "title": "Learning User Simulators with Turing Rewards",
+      "arxiv_id": "2606.19336v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 7,
+        "evidence_strength": 6,
+        "trend_relevance": 8,
+        "actionability": 7
+      },
+      "weighted_total": 7.2,
+      "confidence": "medium",
+      "one_line": "Turing-RL：用图灵测试式判别奖励（模拟用户能否被真人区分）替代单条 ground-truth 似然训练用户模拟器",
+      "decision": "accept",
+      "reasoning": "用户模拟器是 agent 训练数据合成与个性化评测的关键基础设施。把'图灵可分辨度'转化为可优化奖励是新颖且合理的设计——单条 ground-truth 似然确实无法刻画用户行为分布。对 agent 训练与合成评测有趋势价值，下游 agent 训练增益需原文确认。"
+    }
+  ]
+}

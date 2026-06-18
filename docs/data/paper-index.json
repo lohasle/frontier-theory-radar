@@ -1,7 +1,760 @@
 {
-  "updated_at": "2026-06-15T04:37:32.710830",
-  "total": 329,
+  "updated_at": "2026-06-19T04:34:00.274791",
+  "total": 339,
   "papers": [
+    {
+      "title": "Data Intelligence Agents: Interpreting, Modeling, and Querying Enterprise Data via Autonomous Coding Agents",
+      "authors": [
+        "Anoushka Vyas",
+        "Aarushi Dhanuka",
+        "Sina Khoshfetrat Pakazad",
+        "Henrik Ohlsson"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19319v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19319v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Production data integration is bottlenecked by repeated, lossy handoffs between data owners, engineers, and analysts who must collaboratively discover, structure, and query enterprise data. We present Data Intelligence Agents (DIA), a system of three agents (Data Interpreter, Schema Creator, and Query Generator) that compresses this workflow by treating autonomous coding agents (ACAs) as a first-class abstraction: rather than emitting text, the agents generate, execute, validate, and repair conc",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.DB"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "coding agent",
+        "benchmark"
+      ],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19319v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19319v1"
+        }
+      ],
+      "llm_reason": "Data Intelligence Agents 将自主编码 Agent（ACA）作为一等执行抽象：三 Agent（Data Interpreter / Schema Creator / Query Generator）直接生成、执行、校验、修复具体代码而非仅输出文本，直接压缩数据owner/engineer/analyst 之间的有损交接。生产数据集成是普遍瓶颈且与 coding-agent、ai-agent 高度契合，落地路径清晰，证据强度取决于完整论文中企业数据集的端到端成功率（摘要截断需确认）。",
+      "id": "data-intelligence-agents-interpreting-modeling-and-querying-enterprise-data-via-autonomous-coding-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "coding-agent",
+        "ai-agent",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.15,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：Production data integration is bottlenecked by repeated, lossy handoffs betwee…",
+      "one_line_judgement": "今天值得试：Data Intelligence Agents 将自主编码 Agent（ACA）作为一等执行抽象：三 Agent（Data Interpr…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Data Intelligence Agents 将自主编码 Agent（ACA）作为一等执行抽象：三 Agent（Data Interpreter / Schema Creator / Qu",
+      "related_trends": [
+        "coding-agent",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=data-intelligence-agents-interpreting-modeling-and-querying-enterprise-data-via-autonomous-coding-agents"
+    },
+    {
+      "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
+      "authors": [
+        "Zhenghao Xing",
+        "Ruiyang Xu",
+        "Yuxuan Wang",
+        "Jinzheng He",
+        "Ziyang Ma"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19341v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19341v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. O",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.SD"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "memory",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19341v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19341v1"
+        }
+      ],
+      "llm_reason": "OmniAgent 将长视频理解形式化为 POMDP 的迭代 Observation-Thought-Action 循环，以主动感知替代 watch-it-all 被动遍历，使上下文成本不再随视频时长线性增长。这是 agentic 计算范式向全模态主动感知的延伸，对多模态 Agent 的上下文成本控制有直接工程意义。价值偏即时但全模态融合的具体收益需原文确认。",
+      "id": "native-active-perception-as-reasoning-for-omni-modal-understanding",
+      "value_type": "immediate",
+      "matched_topics": [
+        "multimodal-agent",
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Passive models for long video understanding typically rely on a \"watch-it-all\"…",
+      "one_line_judgement": "今天值得试：OmniAgent 将长视频理解形式化为 POMDP 的迭代 Observation-Thought-Action 循环，以主动感知替代 w…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "OmniAgent 将长视频理解形式化为 POMDP 的迭代 Observation-Thought-Action 循环，以主动感知替代 watch-it-all 被动遍历，使上下文成本不再随",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=native-active-perception-as-reasoning-for-omni-modal-understanding"
+    },
+    {
+      "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
+      "authors": [
+        "Siyi Gu",
+        "Jialin Chen",
+        "Sophia Zhou",
+        "Arman Cohan",
+        "Rex Ying"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19327v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19327v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a s",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19327v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19327v1"
+        }
+      ],
+      "llm_reason": "Rethinking Reward Supervision 直击推理 LM 后训练两大痛点：蒸馏用的 CoT 标注昂贵且含噪声；RLVR 把评价反馈压缩成稀疏标量。提出 rubric-conditioned self-distillation，把奖励信号从标量升级为结构化 rubric。对 RLHF/RLVR 工程实践有方法论价值，属趋势价值——证据强度取决于完整论文中的消融与跨基准结果（摘要截断需确认）。",
+      "id": "rethinking-reward-supervision-rubric-conditioned-self-distillation",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Post-training of reasoning language models is commonly driven by supervised di…",
+      "one_line_judgement": "值得继续观察：Rethinking Reward Supervision 直击推理 LM 后训练两大痛点：蒸馏用的 CoT 标注昂贵且含噪声；RLVR 把…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Rethinking Reward Supervision 直击推理 LM 后训练两大痛点：蒸馏用的 CoT 标注昂贵且含噪声；RLVR 把评价反馈压缩成稀疏标量。提出 rubric-cond",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=rethinking-reward-supervision-rubric-conditioned-self-distillation"
+    },
+    {
+      "title": "Explaining Attention with Program Synthesis",
+      "authors": [
+        "Amiri Hayes",
+        "Belinda Li",
+        "Jacob Andreas"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19317v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19317v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "A longstanding goal of research on interpretable deep learning is to replace opaque neural computations with human-meaningful symbolic descriptions. In this paper, we propose an approach for approximating the behavior of components of deep networks with executable programs. We focus on attention heads in transformer language models. For a given head, we first compute its associated attention matrices on a collection of randomly selected training examples. Next, we prompt a pre-trained language m",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19317v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19317v1"
+        }
+      ],
+      "llm_reason": "Explaining Attention with Program Synthesis 用可执行程序近似 transformer 注意力头行为——计算注意力矩阵后提示预训练 LM 合成等价程序。把机械可解释性从'权重分析'推进到'符号程序逆向'，与 program synthesis、code generation 形成正反馈。属趋势价值，直接工程价值取决于能否规模化到生产规模注意力头且保持程序等价性。",
+      "id": "explaining-attention-with-program-synthesis",
+      "value_type": "trend",
+      "matched_topics": [
+        "coding-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：A longstanding goal of research on interpretable deep learning is to replace o…",
+      "one_line_judgement": "值得继续观察：Explaining Attention with Program Synthesis 用可执行程序近似 transformer 注意力头行…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Explaining Attention with Program Synthesis 用可执行程序近似 transformer 注意力头行为——计算注意力矩阵后提示预训练 LM 合成等价程序",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=explaining-attention-with-program-synthesis"
+    },
+    {
+      "title": "Learning User Simulators with Turing Rewards",
+      "authors": [
+        "Yingshan Susan Wang",
+        "Cedegao E. Zhang",
+        "Linlu Qiu",
+        "Zexue He",
+        "Pengyuan Li"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19336v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19336v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation"
+      ],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19336v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19336v1"
+        }
+      ],
+      "llm_reason": "Learning User Simulators with Turing Rewards 提出 Turing-RL：用图灵测试式判别奖励（模拟用户能否被真人区分）替代单条 ground-truth 似然/相似度奖励训练用户模拟器。对 Agent 训练数据合成、个性化评测有趋势价值——把'图灵可分辨度'作为可优化的奖励信号是新颖贡献。证据强度受限于摘要截断，具体模拟器规模与下游 agent 训练增益需确认。",
+      "id": "learning-user-simulators-with-turing-rewards",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Learning to simulate human users in interactive settings could advance the tra…",
+      "one_line_judgement": "值得继续观察：Learning User Simulators with Turing Rewards 提出 Turing-RL：用图灵测试式判别奖励（模…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Learning User Simulators with Turing Rewards 提出 Turing-RL：用图灵测试式判别奖励（模拟用户能否被真人区分）替代单条 ground-tru",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=learning-user-simulators-with-turing-rewards"
+    },
+    {
+      "title": "Freeing the Law with LOCUS: A Local Ordinance Corpus for the United States",
+      "authors": [
+        "Denis Peskoff",
+        "Joe Barrow",
+        "Christopher Vu",
+        "Diag Davenport"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19334v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19334v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Progress in legal AI increasingly depends on access to authoritative legal text at scale. Yet one of the most consequential layers of American law remains largely absent from existing machine-readable corpora: local ordinances. Local codes govern zoning, housing, business licensing, public health, noise, animal control, and many other domains of everyday regulation, but they are fragmented across vendor platforms designed for human browsing rather than bulk research access. We introduce LOCUS - ",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19334v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19334v1"
+        }
+      ],
+      "id": "freeing-the-law-with-locus-a-local-ordinance-corpus-for-the-united-states",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Progress in legal AI increasingly depends on access to authoritative legal tex…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Progress in legal AI increasingly depends on access to auth…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Progress in legal AI increasingly depends on access to authoritative legal tex…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=freeing-the-law-with-locus-a-local-ordinance-corpus-for-the-united-states"
+    },
+    {
+      "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
+      "authors": [
+        "Mohamed Nabail",
+        "Leo Cheng",
+        "Jingmin Wang",
+        "Nicholas Rhinehart"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19328v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19328v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced P",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "keywords": [
+        "benchmark",
+        "planning"
+      ],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19328v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19328v1"
+        }
+      ],
+      "id": "ubp2-uncertainty-balanced-preference-planning-for-efficient-preference-based-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Preference-based RL provides an approach to learning reward models from pairwi…",
+      "one_line_judgement": "当前可忽略：AI Agent：Preference-based RL provides an approach to learning reward m…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Preference-based RL provides an approach to learning reward models from pairwi…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=ubp2-uncertainty-balanced-preference-planning-for-efficient-preference-based-reinforcement-learning"
+    },
+    {
+      "title": "Reference-Driven Multi-Speaker Audio Scene Generation from In-the-Wild Priors",
+      "authors": [
+        "Michael Finkelson",
+        "Daniel Segal",
+        "Eitan Richardson",
+        "Shahar Armon",
+        "Nani Goldring"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19325v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19325v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Existing multi-speaker dialogue systems bind speakers to utterances through structured supervision: per-turn tags, multi-stream transcriptions, or learnable speaker embeddings. These systems operate within speech-only pipelines that produce clean vocal sequences without the ambient texture of real conversations. We take a different approach. Our method, ScenA, conditions a text-to-audio flow-matching foundation model, pretrained on large-scale in-the-wild data, directly on multiple reference voi",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 31.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19325v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19325v1"
+        }
+      ],
+      "id": "reference-driven-multi-speaker-audio-scene-generation-from-in-the-wild-priors",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Existing multi-speaker dialogue systems bind speakers to utterances through st…",
+      "one_line_judgement": "当前可忽略：前沿论文：Existing multi-speaker dialogue systems bind speakers to utteranc…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Existing multi-speaker dialogue systems bind speakers to utterances through st…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=reference-driven-multi-speaker-audio-scene-generation-from-in-the-wild-priors"
+    },
+    {
+      "title": "The Chandra-Gaia Catalog of Counterparts: Resolving ambiguous Gaia matches to X-ray sources in the Chandra Source Catalog using Machine Learning",
+      "authors": [
+        "V. Samuel Pérez-Díaz",
+        "Vinay L. Kashyap",
+        "Joshua D. Ingram",
+        "David Fouhey",
+        "Juan Rafael Martínez-Galarza"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19329v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19329v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present a framework to cross-match sources from the Chandra Source Catalog (CSC v2.1) with optical sources from Gaia Data Release 3. Unlike purely spatial approaches, we use source properties such as magnitudes, colors, and distances to identify true counterparts, detect chance coincidences, and resolve ambiguities when multiple plausible candidates exist. We define a training set of high-confidence matches using NWAY, a Bayesian cross-matching framework that accounts for positional errors an",
+      "categories": [
+        "astro-ph.IM",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19329v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19329v1"
+        }
+      ],
+      "id": "the-chandra-gaia-catalog-of-counterparts-resolving-ambiguous-gaia-matches-to-x-ray-sources-in-the-chandra-source-catalog-using-machine-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：We present a framework to cross-match sources from the Chandra Source Catalog …",
+      "one_line_judgement": "当前可忽略：前沿论文：We present a framework to cross-match sources from the Chandra So…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：We present a framework to cross-match sources from the Chandra Source Catalog …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=the-chandra-gaia-catalog-of-counterparts-resolving-ambiguous-gaia-matches-to-x-ray-sources-in-the-chandra-source-catalog-using-machine-learning"
+    },
+    {
+      "title": "Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation",
+      "authors": [
+        "Ruida Wang",
+        "Rui Pan",
+        "Pengcheng Wang",
+        "Shizhe Diao",
+        "Tong Zhang"
+      ],
+      "published": "2026-06-17",
+      "updated": "2026-06-17",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.19315v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.19315v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Enhancing the formal math reasoning capabilities of Large Language Models (LLMs) has become a key focus in both mathematical and computer science communities in recent years. While significant progress has been made in using state-of-the-art Auto-Regressive (AR) LLMs for formal theorem proving, these models suffer from inherent limitations. Their next-token prediction generation methods may yield suboptimal performance due to the challenges of long-range coherence and the compounding of errors o",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG",
+        "inference"
+      ],
+      "score": 29.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.19315v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.19315v1"
+        }
+      ],
+      "id": "diffusion-proof-recipe-for-formal-theorem-proving-beyond-auto-regressive-generation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Enhancing the formal math reasoning capabilities of Large Language Models (LLM…",
+      "one_line_judgement": "当前可忽略：前沿论文：Enhancing the formal math reasoning capabilities of Large Languag…",
+      "first_seen_date": "2026-06-19",
+      "first_deep_dive_daily": "2026-06-19",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Enhancing the formal math reasoning capabilities of Large Language Models (LLM…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=diffusion-proof-recipe-for-formal-theorem-proving-beyond-auto-regressive-generation"
+    },
     {
       "title": "[占位] 今日论文抓取失败或无新论文",
       "authors": [],
