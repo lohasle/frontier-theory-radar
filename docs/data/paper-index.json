@@ -1,7 +1,733 @@
 {
-  "updated_at": "2026-06-19T04:34:00.274791",
-  "total": 339,
+  "updated_at": "2026-06-20T04:32:54.811075",
+  "total": 349,
   "papers": [
+    {
+      "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "authors": [
+        "Liang Su"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20537v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20537v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Mainstream LLM serving systems reuse prefix work mainly through paged or radix key-value (KV) caches. This is highly effective for high-throughput, high-concurrency serving, but it manages only one positional fragment of execution state: the KV cache. We study the opposite regime: low-latency, small-batch, on-device physical-AI serving, where interactive LLM agents, speech systems, and robot policies repeatedly branch, reset, interrupt, and re-enter under tight responsiveness budgets. We introdu",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "keywords": [
+        "agent",
+        "RAG"
+      ],
+      "score": 88.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20537v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20537v1"
+        }
+      ],
+      "llm_reason": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/复位/中断/重入。它把‘执行态’从单一 KV 片段扩展为图绑定的可检查点/可恢复状态，是对 prefix-cache 范式的结构性补全，工程迁移路径清晰（checkpoint/restore 接口可对接现有 serving runtime）；代码与 benchmark 链接待核验，但命题与场景证据足以先做最小 PoC。",
+      "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "value_type": "immediate",
+      "matched_topics": [
+        "inference-serving",
+        "ai-agent",
+        "data-engineering",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Mainstream LLM serving systems reuse prefix work mainly through paged or radix…",
+      "one_line_judgement": "今天值得试：Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 A…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving"
+    },
+    {
+      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+      "authors": [
+        "Gina Wong",
+        "Drew Prinster",
+        "Suchi Saria",
+        "Rama Chellappa",
+        "Anqi Liu"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20544v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20544v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Calibration aligns a model's predictive uncertainty with the frequencies of its empirical outcomes and is important for understanding and trusting reported probabilities. Recent work shows that enforcing calibration at the level of individual predictors can improve ensemble accuracy and calibration, with mixture-of-experts (MoE) models showing strong empirical improvements in particular; however, the conditions under which calibration helps MoE are not well understood. In this work, we study how",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20544v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20544v1"
+        }
+      ],
+      "llm_reason": "MoE 已是主流大模型架构，论文聚焦‘分布漂移下 MoE 的校准’这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真。它把校准从整体预测下沉到单个专家，并在 MoE 上观察到精度+校准双提升，能直接转化为专家级校准监控、漂移告警与路由质量评估流程；证据来自系统实验，但代码与 benchmark 暂无，落地前需自建漂移评测集。",
+      "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "value_type": "immediate",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Calibration aligns a model's predictive uncertainty with the frequencies of it…",
+      "one_line_judgement": "今天值得试：MoE 已是主流大模型架构，论文聚焦‘分布漂移下 MoE 的校准’这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真。它把校准从整体…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "MoE 已是主流大模型架构，论文聚焦‘分布漂移下 MoE 的校准’这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真。它把校准从整体预测下沉到单个专家，并在 MoE 上观察到精度+校准",
+      "related_trends": [
+        "coding-agent",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift"
+    },
+    {
+      "title": "Multi-Task Bayesian In-Context Learning",
+      "authors": [
+        "Qingyang Zhu",
+        "Eric Karl Oermann",
+        "Kyunghyun Cho"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20538v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20538v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Bayesian predictive inference provides a principled framework for uncertainty quantification, data efficiency, and robust generalization. However, exact inference is often intractable, and scalable approximations may remain computationally expensive or require restrictive modeling assumptions that degrade predictive performance. Prior-Data Fitted and in-context models have recently emerged as an amortized alternative by learning to map datasets directly to predictive distributions, but existing ",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "inference"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20538v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20538v1"
+        }
+      ],
+      "llm_reason": "多任务贝叶斯 in-context learning 把‘先验数据拟合/摊销推理’从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。属于趋势资产：方法论清晰、有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现。",
+      "id": "multi-task-bayesian-in-context-learning",
+      "value_type": "trend",
+      "matched_topics": [
+        "context-engineering",
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Bayesian predictive inference provides a principled framework for uncertainty …",
+      "one_line_judgement": "值得继续观察：多任务贝叶斯 in-context learning 把‘先验数据拟合/摊销推理’从单任务推广到多任务，延续 TabPFN 类基础模型趋势，…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "多任务贝叶斯 in-context learning 把‘先验数据拟合/摊销推理’从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。属",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=multi-task-bayesian-in-context-learning"
+    },
+    {
+      "title": "How Transparent is DiffusionGemma?",
+      "authors": [
+        "Joshua Engels",
+        "Callum McDougall",
+        "Bilal Chughtai",
+        "Janos Kramar",
+        "Senthoran Rajamanoharan"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20560v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmi",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 74.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20560v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20560v1"
+        }
+      ],
+      "llm_reason": "扩散型 LLM（DiffusionGemma 类）是前沿但尚不成熟，本文最大可复用资产是‘可变透明度 vs 算法透明度’的二分评测框架——它可被迁移到任何连续隐空间模型（latent reasoning、扩散语言模型）的可解释性与对齐审计。工程价值在于框架而非模型本身；当前证据以理论分析为主，缺代码，适合先沉淀为可解释性评测 checklist。",
+      "id": "how-transparent-is-diffusiongemma",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：LLM reasoning transparency is a critical affordance for understanding model de…",
+      "one_line_judgement": "值得继续观察：扩散型 LLM（DiffusionGemma 类）是前沿但尚不成熟，本文最大可复用资产是‘可变透明度 vs 算法透明度’的二分评测框架——它…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "扩散型 LLM（DiffusionGemma 类）是前沿但尚不成熟，本文最大可复用资产是‘可变透明度 vs 算法透明度’的二分评测框架——它可被迁移到任何连续隐空间模型（latent reas",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma"
+    },
+    {
+      "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
+      "authors": [
+        "Przemyslaw Musialski"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20547v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20547v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $ρ(g)$ carrying it. To our knowledge this is the first attention construction whose tokens are bare matrix Lie group elements: their score is the closed-form algebra norm of the relative pose rather than a learned kernel, and it reaches the affine full-frame groups that every irrep- or surjective-exp-based method must exclude. W",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.GR",
+        "cs.RO",
+        "math.DG"
+      ],
+      "keywords": [],
+      "score": 71.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20547v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20547v1"
+        }
+      ],
+      "llm_reason": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
+      "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Context Engineering：We place the attention token on the group: a token is an element $g_i$ of a ma…",
+      "one_line_judgement": "值得先保存：首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups"
+    },
+    {
+      "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
+      "authors": [
+        "Wenhao Chi",
+        "Arkaprava Sinha",
+        "Dominick Reilly",
+        "Hieu Le",
+        "Srijan Das"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20559v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20559v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework th",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 39.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20559v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20559v1"
+        }
+      ],
+      "id": "uniego-proxies-as-mediators-for-unified-egocentric-video-representation-learning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Egocentric video understanding is inherently limited by the…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=uniego-proxies-as-mediators-for-unified-egocentric-video-representation-learning"
+    },
+    {
+      "title": "Predictability as a Fine-Grained Measure for Privacy",
+      "authors": [
+        "Linda Lu",
+        "Karthik Sridharan"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20546v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20546v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. We introduce privacy via predictability, a fine-grained framework that explicitly incorporates the attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. Predictability measures privacy leakage as the incremental gain in a",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 38.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20546v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20546v1"
+        }
+      ],
+      "id": "predictability-as-a-fine-grained-measure-for-privacy",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy"
+    },
+    {
+      "title": "Easy Reads: A Python program for making Scientific Papers on arXiv more Reader Friendly and Accessible",
+      "authors": [
+        "Vishal Verma"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20550v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20550v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Scientific papers are frequently dense and characterized by features such as small fonts and line spacing, double columns of text, and tightly arranged figures. While these features make papers more compact, they can hinder readability, make them less accessible, and can strain the reader. arXiv is a premier open-access repository for scientific papers across different fields and is used extensively by researchers, including those in the physics and astrophysics communities. Easy Reads is an aut",
+      "categories": [
+        "cs.DL",
+        "cs.HC",
+        "cs.IR"
+      ],
+      "keywords": [],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20550v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20550v1"
+        }
+      ],
+      "id": "easy-reads-a-python-program-for-making-scientific-papers-on-arxiv-more-reader-friendly-and-accessible",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Scientific papers are frequently dense and characterized by features such as s…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Scientific papers are frequently dense and characterized by…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：Scientific papers are frequently dense and characterized by features such as s…",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=easy-reads-a-python-program-for-making-scientific-papers-on-arxiv-more-reader-friendly-and-accessible"
+    },
+    {
+      "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+      "authors": [
+        "Ruizhong Qiu",
+        "Yinglong Xia",
+        "Dongqi Fu",
+        "Hanqing Zeng",
+        "Ren Chen"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20554v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20554v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Generative recommendation is an emerging paradigm that has shown promise in industrial recommendation systems, aiming to predict users' next interactions from their historical behaviors. At the core of generative recommendation lies item tokenization, which bridges item semantics and recommendation models. However, existing methods often struggle to effectively organize and inject complex user-behavioral and item-semantic contexts into recommendation models simultaneously. On the one hand, exist",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 30.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20554v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20554v1"
+        }
+      ],
+      "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Generative recommendation is an emerging paradigm that has shown promise in in…",
+      "one_line_judgement": "当前可忽略：前沿论文：Generative recommendation is an emerging paradigm that has shown …",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Generative recommendation is an emerging paradigm that has shown promise in in…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation"
+    },
+    {
+      "title": "Optimal Deterministic Multicalibration and Omniprediction",
+      "authors": [
+        "Georgy Noarov",
+        "Aaron Roth"
+      ],
+      "published": "2026-06-18",
+      "updated": "2026-06-18",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.20557v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20557v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each $g \\in G$. It is a useful property for many downstream applications and is a basic desideratum of trustworthy machine learning. Before this work, all predictors known to attain the minimax-optimal $\\widetilde O(\\varepsilon^{-3})$ sample complexity rate for $\\varepsilon$-multicalibration were random",
+      "categories": [
+        "cs.LG",
+        "math.ST",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 29.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20557v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20557v1"
+        }
+      ],
+      "id": "optimal-deterministic-multicalibration-and-omniprediction",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
+      "one_line_judgement": "当前可忽略：前沿论文：A model is multicalibrated on a collection of group weights $G$ i…",
+      "first_seen_date": "2026-06-20",
+      "first_deep_dive_daily": "2026-06-20",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=optimal-deterministic-multicalibration-and-omniprediction"
+    },
     {
       "title": "Data Intelligence Agents: Interpreting, Modeling, and Querying Enterprise Data via Autonomous Coding Agents",
       "authors": [

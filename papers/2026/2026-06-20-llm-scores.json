@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2606.20537v1": {
+      "score": 88,
+      "value_type": "immediate",
+      "reason": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/复位/中断/重入。它把‘执行态’从单一 KV 片段扩展为图绑定的可检查点/可恢复状态，是对 prefix-cache 范式的结构性补全，工程迁移路径清晰（checkpoint/restore 接口可对接现有 serving runtime）；代码与 benchmark 链接待核验，但命题与场景证据足以先做最小 PoC。",
+      "matched_topics": ["inference-serving", "ai-agent", "data-engineering", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.20544v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "MoE 已是主流大模型架构，论文聚焦‘分布漂移下 MoE 的校准’这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真。它把校准从整体预测下沉到单个专家，并在 MoE 上观察到精度+校准双提升，能直接转化为专家级校准监控、漂移告警与路由质量评估流程；证据来自系统实验，但代码与 benchmark 暂无，落地前需自建漂移评测集。",
+      "matched_topics": ["llm-evaluation", "inference-serving", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.20538v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "多任务贝叶斯 in-context learning 把‘先验数据拟合/摊销推理’从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。属于趋势资产：方法论清晰、有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现。",
+      "matched_topics": ["context-engineering", "llm-evaluation", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.20560v1": {
+      "score": 74,
+      "value_type": "trend",
+      "reason": "扩散型 LLM（DiffusionGemma 类）是前沿但尚不成熟，本文最大可复用资产是‘可变透明度 vs 算法透明度’的二分评测框架——它可被迁移到任何连续隐空间模型（latent reasoning、扩散语言模型）的可解释性与对齐审计。工程价值在于框架而非模型本身；当前证据以理论分析为主，缺代码，适合先沉淀为可解释性评测 checklist。",
+      "matched_topics": ["llm-evaluation", "security-governance", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.20547v1": {
+      "score": 71,
+      "value_type": "long_tail",
+      "reason": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
+      "matched_topics": ["context-engineering"]
+    }
+  }
+}

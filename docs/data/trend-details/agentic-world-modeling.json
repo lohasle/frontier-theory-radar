@@ -4,11 +4,29 @@
   "stage": "上升",
   "updated_at": "2026-04-28",
   "key_insight": "[Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond](https://arxiv.org/abs/2604.22748)",
-  "paper_count": 140,
+  "paper_count": 147,
   "practice_count": 0,
   "path": "trend-detail.html?id=agentic-world-modeling",
   "markdown_path": "trends/agentic-world-modeling.md",
   "related_papers": [
+    {
+      "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 88.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 A…",
+      "source": "arXiv",
+      "published": "2026-06-18",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2606.20537v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20537v1"
+    },
     {
       "id": "can-generalist-agents-automate-data-curation",
       "title": "Can Generalist Agents Automate Data Curation?",
@@ -116,6 +134,24 @@
       "paperswithcode_url": "",
       "url": "http://arxiv.org/abs/2605.14012v1",
       "pdf_url": "https://arxiv.org/pdf/2605.14012v1"
+    },
+    {
+      "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+      "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 84.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：MoE 已是主流大模型架构，论文聚焦‘分布漂移下 MoE 的校准’这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真。它把校准从整体…",
+      "source": "arXiv",
+      "published": "2026-06-18",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2606.20544v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20544v1"
     },
     {
       "id": "data-intelligence-agents-interpreting-modeling-and-querying-enterprise-data-via-autonomous-coding-agents",
@@ -2513,20 +2549,20 @@
     }
   ],
   "value_distribution": {
-    "immediate": 21,
+    "immediate": 23,
     "trend": 20,
     "long_tail": 20,
     "ignore": 78
   },
   "top_paper": {
-    "id": "can-generalist-agents-automate-data-curation",
-    "title": "Can Generalist Agents Automate Data Curation?",
-    "detail_path": "paper-detail.html?id=can-generalist-agents-automate-data-curation",
-    "score": 87.0,
+    "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+    "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+    "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+    "score": 88.0,
     "decision": "重点学习",
-    "value_type": "trend",
-    "value_type_label": "趋势价值",
-    "one_line_judgement": "值得继续观察：直击 AI 开发中最昂贵的人工环节——训练数据策展（data curation）。Curation-Bench 设计精巧：固定模型/训练流程…"
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "one_line_judgement": "今天值得试：Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 A…"
   },
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
