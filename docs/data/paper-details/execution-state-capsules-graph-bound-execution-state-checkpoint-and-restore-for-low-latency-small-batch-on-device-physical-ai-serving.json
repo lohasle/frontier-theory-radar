@@ -12,8 +12,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-20",
-  "first_deep_dive_daily": "2026-06-20",
+  "first_seen_date": "2026-06-21",
+  "first_deep_dive_daily": "2026-06-21",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -26,12 +26,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 88.0,
+  "score": 83.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 A…",
-  "one_line_essence": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/复位/中断/重入。它把‘执行态’从单一 KV 片段扩展为图绑定的可检查点/可恢复状态，是对 prefix-cache 范式的结构性补全，工程迁移路径清晰（checkpoint/restore 接口可对接现有 serving runtime）；代码与 benchmark 链接待核验，但命题与场景证据足以先做最小 PoC。",
+  "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
+  "one_line_essence": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为第二梯队以避免重复，代码与 benchmark 仍待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/复位/中断/重入。它把‘执行态’从单一 KV 片段扩展为图绑定的可检查点/可恢复状态，是对 prefix-cache 范式的结构性补全，工程迁移路径清晰（checkpo",
+  "new_claim_or_method": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -58,7 +58,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/",
+    "why_save": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重",
     "future_trigger": [
       "待更多证据"
     ],
@@ -118,7 +118,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-  "daily_path": "daily-detail.html?date=2026-06-20",
+  "daily_path": "daily-detail.html?date=2026-06-21",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=context-engineering"

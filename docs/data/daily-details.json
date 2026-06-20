@@ -1,26 +1,39 @@
 {
-  "updated_at": "2026-06-20T04:32:55.760907",
+  "updated_at": "2026-06-21T04:33:47.134111",
   "dailies": {
-    "2026-06-20": {
-      "date": "2026-06-20",
-      "title": "论文价值发现日报 - 2026-06-20",
-      "deep_dive_id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-      "deep_dive_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+    "2026-06-21": {
+      "date": "2026-06-21",
+      "title": "论文价值发现日报 - 2026-06-21",
+      "deep_dive_id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+      "deep_dive_title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "decision": "重点学习",
-      "daily_action": "完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。",
-      "score": 88.0,
+      "daily_action": "完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。",
+      "score": 86.0,
       "trend_stage": "emerging",
-      "one_line_judgement": "今天值得试：Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 A…",
-      "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。",
+      "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与…",
+      "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。",
       "conclusion_lines": [
-        "今天最值得看的是《Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving》。",
+        "今天最值得看的是《Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation》。",
         "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
-        "今天建议动作：完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。。",
-        "最大不确定性：外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。。"
+        "今天建议动作：完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。。",
+        "最大不确定性：最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。。"
       ],
       "candidate_papers": [
+        {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
         {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
@@ -28,7 +41,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -41,7 +54,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -54,33 +67,314 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        }
+      ],
+      "deep_dive": {
+        "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+        "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+        "authors": [
+          "Ruizhong Qiu",
+          "Yinglong Xia",
+          "Dongqi Fu",
+          "Hanqing Zeng",
+          "Ren Chen"
+        ],
+        "source": "arXiv",
+        "published": "2026-06-18",
+        "url": "http://arxiv.org/abs/2606.20554v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20554v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-06-21",
+        "first_deep_dive_daily": "2026-06-21",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 3.8,
+          "evidence": 4.5,
+          "engineering_testability": 4.05,
+          "trend_signal": 3.5,
+          "long_tail_potential": 3.5,
+          "actionability": 5.0,
+          "noise_risk": 2.4
+        },
+        "score": 86.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与…",
+        "one_line_essence": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰(可对接现有召回/排序与生成式推荐 pipeline)。代码与 benchmark 链接暂无/待核验，证据以摘要方法描述为主，但工业相关性与可设计最小实验的证据强度足以先做试点。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "context-engineering",
+            "agentic-world-modeling"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2606.20554v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2606.20554v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+        "daily_path": "daily-detail.html?date=2026-06-21",
+        "trend_paths": [
+          "trend-detail.html?id=context-engineering",
+          "trend-detail.html?id=agentic-world-modeling"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [
+        {
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-12"
+        }
+      ],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20554v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20554v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-06-21</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2606.20554v1\" target=\"_blank\" rel=\"noopener noreferrer\">Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。</li>\n<li><strong>分数：</strong> 86.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2606.20554v1\" target=\"_blank\" rel=\"noopener noreferrer\">Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation</a>。</li>\n<li><strong>为什么值得看：</strong> 它直击生成式推荐最受关注的工程核心——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入，且明确面向工业推荐系统，迁移路径清晰，是今日候选中工程价值与场景证据最强的一篇。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值，但需先用最小 PoC 验证『结构化分布式兴趣上下文 + 物品 tokenization』相对基线在召回/NDCG 与上下文注入效率上的增益。</li>\n<li><strong>今天该做什么：</strong> 今日 arXiv 批次(2026-06-18)与 2026-06-20 高度重叠(Execution-State Capsules / Calibrated MoE / Bayesian ICL / DiffusionGemma / Lie 群注意力均再现)，故今日深挖聚焦尚未覆盖的生成式推荐新论文，其余强相关论文列入候选表与长尾库滚动复盘。</li>\n<li><strong>最大不确定性：</strong> 所有候选论文的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述，复现证据不足。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20554v1\" target=\"_blank\" rel=\"noopener noreferrer\">Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation</a></td><td>rag-knowledge / data-engineering</td><td>即时价值</td><td>86.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20537v1\" target=\"_blank\" rel=\"noopener noreferrer\">Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving</a></td><td>inference-serving / ai-agent</td><td>即时价值</td><td>83.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20544v1\" target=\"_blank\" rel=\"noopener noreferrer\">Toward Calibrated Mixture-of-Experts Under Distribution Shift</a></td><td>llm-evaluation / inference-serving</td><td>即时价值</td><td>81.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20538v1\" target=\"_blank\" rel=\"noopener noreferrer\">Multi-Task Bayesian In-Context Learning</a></td><td>context-engineering / llm-evaluation</td><td>趋势价值</td><td>76.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20546v1\" target=\"_blank\" rel=\"noopener noreferrer\">Predictability as a Fine-Grained Measure for Privacy</a></td><td>security-governance / llm-evaluation</td><td>长尾价值</td><td>70.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 它不是再训一个更大的推荐模型，而是回答『生成式推荐里，用户兴趣与物品语义该如何被结构化、token 化后一次性喂给生成模型』这一工程瓶颈。</li>\n<li><strong>底层问题：</strong> 生成式推荐把『预测用户下一次交互』重构成序列生成；物品 tokenization 是连接物品语义与生成模型的桥梁。但现有方法难以同时、有效地把复杂的用户行为上下文与物品语义上下文组织并注入模型——单 token 化语义会丢行为结构，纯行为序列又会丢语义，二者如何联合编码是核心难题。</li>\n<li><strong>理论：</strong> 推荐被重定义为『历史行为 + 物品语义 → 下一物品 token 序列』的生成过程；用户兴趣是分布式的(多个兴趣面/aspect)，需要被结构化为可被生成模型消化的上下文对象，而不是被压扁进单一向量。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 新命题是『分布式用户兴趣上下文需要被显式结构与 token 化后，与物品语义 token 联合注入生成式推荐模型』；方法侧重于同时组织用户-行为与物品-语义上下文的 tokenization/structuring 设计；证据来自面向工业推荐场景的方法描述，外部代码与 benchmark 暂无/待核验。</li>\n<li><strong>研究位置：</strong> 介于方法论文与工业实践之间，落在 TIGER/R-Rec 类语义 ID 与生成式推荐这一上升赛道内，是『上下文工程 + 物品 tokenization』两条线索的交汇。</li>\n<li><strong>工程可验证性：</strong> 可在公开序列推荐数据集上做最小对照：基线(纯行为序列/单一语义 ID) vs. 本文式(结构化分布式兴趣 + 联合物品语义 token)，比较 Recall@k / NDCG@k、上下文注入 token 开销与推理延迟。</li>\n<li><strong>趋势关联：</strong> 与生成式推荐、语义 ID/物品 tokenization、推荐侧 RAG、用户行为序列建模四条趋势交汇，是当前工业推荐最具落地杠杆的方向之一，值得纳入 1-3 个月重点跟踪。</li>\n<li><strong>长尾价值：</strong> 即便短期无开源，『分布式兴趣上下文的结构化 + 联合语义 token』这一思想可沉淀为推荐/agent 历史建模的上下文工程 checklist，跨场景复用。</li>\n<li><strong>启发：</strong> tokenization 不只是『把物品编个号』，而是『把谁(用户兴趣分布) + 什么(物品语义) + 怎么注入(上下文结构)』三件事一次性设计好——这与 Agent 的历史/记忆结构化是同构问题。</li>\n<li><strong>行动建议：</strong> 今天先产出一页『分布式兴趣上下文 + 物品 tokenization』PoC 设计：候选数据集、tokenization 方案、结构化上下文对象、对照基线、评价指标(Recall/NDCG/token 开销/延迟)。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2606.20546v1\" target=\"_blank\" rel=\"noopener noreferrer\">Predictability as a Fine-Grained Measure for Privacy</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值，且为今日新论文。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-12</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.20560v1\" target=\"_blank\" rel=\"noopener noreferrer\">How Transparent is DiffusionGemma?</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是'可变透明度 vs 算法透明度'二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，且本篇与昨日重叠，今日降为长尾保存(可解释性评测 checklist 资产)。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-12</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.20547v1\" target=\"_blank\" rel=\"noopener noreferrer\">The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，且与昨日重叠，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-12</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2606.20550v1\" target=\"_blank\" rel=\"noopener noreferrer\">Easy Reads: A Python program for making Scientific Papers on arXiv more Reader Friendly and Accessible</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发</h4>\n<p>在生成式推荐里，把『分布式用户兴趣』当作一等公民结构化、token 化后与物品语义联合注入，比继续堆大模型更能撬动排序质量——上下文组织本身就是架构问题。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>推荐里的『用户历史 + 物品语义 token』与 Agent 里的『对话/任务历史 + 工具语义 token』是同构问题：都需要把分布式的历史/兴趣结构化后再喂给生成模型，而不是压扁成单向量。</p>\n<h4>对 RAG / 知识系统的启发</h4>\n<p>物品 tokenization 本质是推荐侧的『语义 ID 检索』；结构化分布式兴趣上下文可迁移为 RAG 的多查询/多aspect 上下文组织模板，提升召回相关性。</p>\n<h4>对数据工程的启发</h4>\n<p>分布式用户兴趣需要跨多兴趣面/多行为流的特征组织与实时上下文拼装；推荐侧的数据 pipeline 要能产出『结构化上下文对象』而非仅原始序列。</p>\n<h4>对评测治理的启发</h4>\n<p>生成式推荐的最小评测应同时覆盖排序质量(Recall/NDCG)、上下文 token 开销与推理延迟，并把『是否值得继续投入』本身当作评测对象，与 Calibrated MoE 的专家级校准监控形成互补。</p>\n<h4>对个人学习路径的启发</h4>\n<p>今天阅读顺序建议：先看生成式推荐 tokenization 把握上下文工程，再看 Calibrated MoE 学漂移下校准，最后用可预测性隐私与扩散 LLM 透明度补齐治理与可解释性视角。</p>\n<h4>对未来 6-12 个月技术趋势的启发</h4>\n<p>推荐/Agent 的竞争会从『谁模型更大』转向『谁更会结构化上下文与 token、谁更会在分布漂移下保持校准、谁更敢用新数学结构(Lie 群/贝叶斯 ICL)重塑注意力与不确定性』。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2606.20554v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2606.20554v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰(可对接现有召回/排序与生成式推荐 pipeline)。代码与 benchmark 链接暂无/待核验，证据以摘要方法描述为主，但工业相关性与可设计最小实验的证据强度足以先做试点。</li>\n<li><strong>最大不确定性：</strong> 最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。</li>\n<li><strong>下一步动作：</strong> 若 7-14 天内生成式推荐论文仍无开源代码，则在公开序列推荐数据集上自建 tokenization + 结构化上下文最小验证；同时滚动复盘昨日已覆盖的即时候选，等待代码/benchmark 出现再升级投入。</li>\n</ul>\n<p>> 生成时间：2026-06-21T04:33:45.896366</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
+    "2026-06-20": {
+      "date": "2026-06-20",
+      "title": "论文价值发现日报 - 2026-06-20",
+      "deep_dive_id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "deep_dive_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "重点学习",
+      "daily_action": "完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。",
+      "score": 83.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。",
+      "conclusion_lines": [
+        "今天最值得看的是《Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。。",
+        "最大不确定性：外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 83.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
+          "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+          "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 81.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "multi-task-bayesian-in-context-learning",
+          "title": "Multi-Task Bayesian In-Context Learning",
+          "detail_path": "paper-detail.html?id=multi-task-bayesian-in-context-learning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 76.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -101,8 +395,8 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-06-20",
-        "first_deep_dive_daily": "2026-06-20",
+        "first_seen_date": "2026-06-21",
+        "first_deep_dive_daily": "2026-06-21",
         "value_type": "immediate",
         "value_type_label": "即时价值",
         "value_scores": {
@@ -115,12 +409,12 @@
           "actionability": 5.0,
           "noise_risk": 1.2
         },
-        "score": 88.0,
+        "score": 83.0,
         "decision": "重点学习",
-        "one_line_judgement": "今天值得试：Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 A…",
-        "one_line_essence": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/复位/中断/重入。它把‘执行态’从单一 KV 片段扩展为图绑定的可检查点/可恢复状态，是对 prefix-cache 范式的结构性补全，工程迁移路径清晰（checkpoint/restore 接口可对接现有 serving runtime）；代码与 benchmark 链接待核验，但命题与场景证据足以先做最小 PoC。",
+        "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
+        "one_line_essence": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为第二梯队以避免重复，代码与 benchmark 仍待核验。",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/复位/中断/重入。它把‘执行态’从单一 KV 片段扩展为图绑定的可检查点/可恢复状态，是对 prefix-cache 范式的结构性补全，工程迁移路径清晰（checkpo",
+        "new_claim_or_method": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为",
         "research_position": "source_paper",
         "engineering_testability": {
           "has_code": false,
@@ -147,7 +441,7 @@
           ]
         },
         "long_tail": {
-          "why_save": "Execution-State Capsules 直接对应一类被主流 KV-cache 路由系统忽略的服役场景：低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）频繁分支/",
+          "why_save": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重",
           "future_trigger": [
             "待更多证据"
           ],
@@ -207,7 +501,7 @@
           }
         ],
         "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-        "daily_path": "daily-detail.html?date=2026-06-20",
+        "daily_path": "daily-detail.html?date=2026-06-21",
         "trend_paths": [
           "trend-detail.html?id=agentic-world-modeling",
           "trend-detail.html?id=context-engineering"
@@ -221,10 +515,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -1042,13 +1336,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -1061,7 +1368,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -1074,33 +1381,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -1247,10 +1541,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -2677,13 +2971,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -2696,7 +3003,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -2709,33 +3016,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -2874,10 +3168,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -2965,13 +3259,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -2984,7 +3291,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -2997,33 +3304,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -3167,10 +3461,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -3819,13 +4113,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -3838,7 +4145,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -3851,33 +4158,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -3997,10 +4291,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -4360,13 +4654,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -4379,7 +4686,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -4392,33 +4699,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -4538,10 +4832,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -4616,13 +4910,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -4635,7 +4942,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -4648,33 +4955,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -4814,10 +5108,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -9332,13 +9626,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -9351,7 +9658,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -9364,33 +9671,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -9510,10 +9804,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -9588,13 +9882,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -9607,7 +9914,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -9620,33 +9927,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -9766,10 +10060,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -11556,13 +11850,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -11575,7 +11882,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -11588,33 +11895,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -11754,10 +12048,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -11845,13 +12139,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -11864,7 +12171,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -11877,33 +12184,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -12045,10 +12339,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -12558,13 +12852,26 @@
       ],
       "candidate_papers": [
         {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 88.0,
+          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -12577,7 +12884,7 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 84.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -12590,33 +12897,20 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "how-transparent-is-diffusiongemma",
-          "title": "How Transparent is DiffusionGemma?",
-          "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 74.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
           "direction": "未分类",
           "value_type": "long_tail",
           "value_type_label": "长尾价值",
-          "score": 71.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
@@ -12754,10 +13048,10 @@
       },
       "long_tail_saved": [
         {
-          "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-          "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-          "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开了 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感",
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
