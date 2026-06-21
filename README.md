@@ -78,13 +78,13 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-06-22 · Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](daily-detail.html?date=2026-06-22) · 即时价值 · 重点学习
 - [2026-06-21 · Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation](daily-detail.html?date=2026-06-21) · 即时价值 · 重点学习
 - [2026-06-20 · Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](daily-detail.html?date=2026-06-20) · 即时价值 · 重点学习
 - [2026-06-19 · Data Intelligence Agents: Interpreting, Modeling, and Querying Enterprise Data via Autonomous Coding Agents](daily-detail.html?date=2026-06-19) · 即时价值 · 重点学习
 - [2026-06-15 · [占位] 今日论文抓取失败或无新论文](daily-detail.html?date=2026-06-15) · 暂时忽略 · 暂时忽略
 - [2026-06-14 · EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments](daily-detail.html?date=2026-06-14) · 即时价值 · 重点学习
 - [2026-06-13 · EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments](daily-detail.html?date=2026-06-13) · 即时价值 · 重点学习
-- [2026-06-12 · Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models](daily-detail.html?date=2026-06-12) · 暂时忽略 · 暂时忽略
 
 ## 当前重点趋势索引
 

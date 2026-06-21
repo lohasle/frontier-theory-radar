@@ -1,142 +1,6 @@
 {
-  "updated_at": "2026-06-21T04:33:46.483067",
+  "updated_at": "2026-06-22T04:33:09.264043",
   "papers": {
-    "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation": {
-      "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-      "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
-      "authors": [
-        "Ruizhong Qiu",
-        "Yinglong Xia",
-        "Dongqi Fu",
-        "Hanqing Zeng",
-        "Ren Chen"
-      ],
-      "source": "arXiv",
-      "published": "2026-06-18",
-      "url": "http://arxiv.org/abs/2606.20554v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20554v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 2.4
-      },
-      "score": 86.0,
-      "decision": "重点学习",
-      "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与…",
-      "one_line_essence": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰(可对接现有召回/排序与生成式推荐 pipeline)。代码与 benchmark 链接暂无/待核验，证据以摘要方法描述为主，但工业相关性与可设计最小实验的证据强度足以先做试点。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "context-engineering",
-          "agentic-world-modeling"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [
-          "今天读摘要与方法",
-          "今天试最小实验",
-          "一周内沉淀为 Skill / Checklist"
-        ],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20554v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20554v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-      "daily_path": "daily-detail.html?date=2026-06-21",
-      "trend_paths": [
-        "trend-detail.html?id=context-engineering",
-        "trend-detail.html?id=agentic-world-modeling"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
     "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving": {
       "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
       "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
@@ -151,8 +15,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "value_scores": {
@@ -165,12 +29,12 @@
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 83.0,
+      "score": 87.0,
       "decision": "重点学习",
-      "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
-      "one_line_essence": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为第二梯队以避免重复，代码与 benchmark 仍待核验。",
+      "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
+      "one_line_essence": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为",
+      "new_claim_or_method": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -197,7 +61,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重",
+        "why_save": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分",
         "future_trigger": [
           "待更多证据"
         ],
@@ -257,10 +121,146 @@
         }
       ],
       "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation": {
+      "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+      "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+      "authors": [
+        "Ruizhong Qiu",
+        "Yinglong Xia",
+        "Dongqi Fu",
+        "Hanqing Zeng",
+        "Ren Chen"
+      ],
+      "source": "arXiv",
+      "published": "2026-06-18",
+      "url": "http://arxiv.org/abs/2606.20554v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20554v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 2.4
+      },
+      "score": 86.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与…",
+      "one_line_essence": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选，仅更新跟踪状态。代码与 benchmark 暂无/待核验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "context-engineering",
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20554v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20554v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+      "daily_path": "daily-detail.html?date=2026-06-22",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=agentic-world-modeling"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -287,8 +287,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "value_scores": {
@@ -303,10 +303,10 @@
       },
       "score": 81.0,
       "decision": "重点学习",
-      "one_line_judgement": "今天值得试：MoE 已是主流大模型架构，本文聚焦'分布漂移下 MoE 专家级校准'这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整…",
-      "one_line_essence": "MoE 已是主流大模型架构，本文聚焦'分布漂移下 MoE 专家级校准'这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集；本篇亦与昨日重叠，今日位列第三。",
+      "one_line_judgement": "今天值得试：MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整…",
+      "one_line_essence": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集。与昨日分析一致，今日保持即时候选。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "MoE 已是主流大模型架构，本文聚焦'分布漂移下 MoE 专家级校准'这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集；本篇亦与昨日重叠，今日位列第三。",
+      "new_claim_or_method": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集。与昨日分析一致，今日保持即时候选。",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -333,7 +333,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "MoE 已是主流大模型架构，本文聚焦'分布漂移下 MoE 专家级校准'这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接",
+        "why_save": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接",
         "future_trigger": [
           "待更多证据"
         ],
@@ -393,7 +393,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=coding-agent",
         "trend-detail.html?id=agentic-world-modeling"
@@ -421,8 +421,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -437,10 +437,10 @@
       },
       "score": 76.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：多任务贝叶斯 in-context learning 把'先验数据拟合/摊销推理'从单任务推广到多任务，延续 TabPFN 类基础模型趋势，…",
-      "one_line_essence": "多任务贝叶斯 in-context learning 把'先验数据拟合/摊销推理'从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方法论清晰且有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现；本篇与昨日重叠，保持趋势定位。",
+      "one_line_judgement": "值得继续观察：多任务贝叶斯 in-context learning 把『先验数据拟合/摊销推理』从单任务推广到多任务，延续 TabPFN 类基础模型趋势，…",
+      "one_line_essence": "多任务贝叶斯 in-context learning 把『先验数据拟合/摊销推理』从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方法论清晰且有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "多任务贝叶斯 in-context learning 把'先验数据拟合/摊销推理'从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方法论清晰且有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现；本篇",
+      "new_claim_or_method": "多任务贝叶斯 in-context learning 把『先验数据拟合/摊销推理』从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方法论清晰且有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现。",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -467,7 +467,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "多任务贝叶斯 in-context learning 把'先验数据拟合/摊销推理'从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方",
+        "why_save": "多任务贝叶斯 in-context learning 把『先验数据拟合/摊销推理』从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -527,7 +527,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=multi-task-bayesian-in-context-learning",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=context-engineering",
         "trend-detail.html?id=coding-agent"
@@ -554,8 +554,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -570,10 +570,10 @@
       },
       "score": 70.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得先保存：提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。…",
-      "one_line_essence": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值，且为今日新论文。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
+      "one_line_judgement": "值得先保存：提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。…",
+      "one_line_essence": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值，且为今日新论文。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
+      "new_claim_or_method": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
       "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
@@ -599,7 +599,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+        "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -616,7 +616,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-07-12"
+        "revisit_date": "2026-07-13"
       },
       "insights": {
         "system_design": [
@@ -659,7 +659,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=coding-agent"
       ],
@@ -688,8 +688,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -704,10 +704,10 @@
       },
       "score": 68.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得先保存：扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是'可变透明度 vs 算法透明度'二分评测框架，可迁移到任何连续…",
-      "one_line_essence": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是'可变透明度 vs 算法透明度'二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，且本篇与昨日重叠，今日降为长尾保存(可解释性评测 checklist 资产)。",
+      "one_line_judgement": "值得先保存：扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续…",
+      "one_line_essence": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，适合长尾保存(可解释性评测 checklist 资产)。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是'可变透明度 vs 算法透明度'二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，且本篇与昨日重叠，今日降为长尾保存(可解释性评测 checklist 资产)。",
+      "new_claim_or_method": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，适合长尾保存(可解释性评测 checklist 资产)。",
       "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
@@ -734,7 +734,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是'可变透明度 vs 算法透明度'二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语",
+        "why_save": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -751,7 +751,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-07-12"
+        "revisit_date": "2026-07-13"
       },
       "insights": {
         "system_design": [
@@ -794,7 +794,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=coding-agent",
         "trend-detail.html?id=context-engineering"
@@ -820,8 +820,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -837,9 +837,9 @@
       "score": 66.0,
       "decision": "轻量试点",
       "one_line_judgement": "值得先保存：首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel …",
-      "one_line_essence": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，且与昨日重叠，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
+      "one_line_essence": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，且与昨日重叠，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
+      "new_claim_or_method": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
       "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
@@ -883,7 +883,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-07-12"
+        "revisit_date": "2026-07-13"
       },
       "insights": {
         "system_design": [
@@ -926,7 +926,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=context-engineering",
         "trend-detail.html?id=agentic-world-modeling"
@@ -956,8 +956,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -973,9 +973,9 @@
       "score": 62.0,
       "decision": "持续观察",
       "one_line_judgement": "值得先保存：UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agen…",
-      "one_line_essence": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发，且为今日新论文；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
+      "one_line_essence": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发，且为今日新论文；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
+      "new_claim_or_method": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
       "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
@@ -1001,7 +1001,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发，且为今日新论文；但场景较",
+        "why_save": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -1018,7 +1018,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-07-12"
+        "revisit_date": "2026-07-13"
       },
       "insights": {
         "system_design": [
@@ -1061,7 +1061,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=uniego-proxies-as-mediators-for-unified-egocentric-video-representation-learning",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
       ],
@@ -1087,8 +1087,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -1104,9 +1104,9 @@
       "score": 60.0,
       "decision": "持续观察",
       "one_line_judgement": "值得先保存：首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML…",
-      "one_line_essence": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值，且为今日新论文；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
+      "one_line_essence": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值，且为今日新论文；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
+      "new_claim_or_method": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
       "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
@@ -1132,7 +1132,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值，且为今日新论文；但属纯理论(s",
+        "why_save": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/m",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -1149,7 +1149,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-07-12"
+        "revisit_date": "2026-07-13"
       },
       "insights": {
         "system_design": [
@@ -1192,7 +1192,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=optimal-deterministic-multicalibration-and-omniprediction",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=coding-agent"
       ],
@@ -1217,8 +1217,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-06-21",
-      "first_deep_dive_daily": "2026-06-21",
+      "first_seen_date": "2026-06-22",
+      "first_deep_dive_daily": "2026-06-22",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1234,9 +1234,9 @@
       "score": 32.0,
       "decision": "暂时忽略",
       "one_line_judgement": "当前可忽略：Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低…",
-      "one_line_essence": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达'前沿理论驱动'定位相关性弱。建议保留最小索引即可，不投入。",
+      "one_line_essence": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达『前沿理论驱动』定位相关性弱。建议保留最小索引即可，不投入。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达'前沿理论驱动'定位相关性弱。建议保留最小索引即可，不投入。",
+      "new_claim_or_method": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达『前沿理论驱动』定位相关性弱。建议保留最小索引即可，不投入。",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -1262,7 +1262,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达'前沿理论驱动'定位相关性弱",
+        "why_save": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达『前沿理论驱动』定位相关性弱",
         "future_trigger": [
           "待更多证据"
         ],
@@ -1318,7 +1318,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=easy-reads-a-python-program-for-making-scientific-papers-on-arxiv-more-reader-friendly-and-accessible",
-      "daily_path": "daily-detail.html?date=2026-06-21",
+      "daily_path": "daily-detail.html?date=2026-06-22",
       "trend_paths": [
         "trend-detail.html?id=context-engineering"
       ],

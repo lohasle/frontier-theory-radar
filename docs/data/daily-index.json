@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-21T04:33:46.135149",
+  "updated_at": "2026-06-22T04:33:08.936425",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-22",
+      "title": "论文价值发现日报 - 2026-06-22",
+      "deep_dive_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "deep_dive_url": "http://arxiv.org/abs/2606.20537v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成三件事：起草『端侧 agent 执行态 capsule』最小 PoC 设计(节点/边定义 + 检查点/恢复 API + 评价指标)；把生成式推荐 tokenization(06-21 已深挖)与 Calibrated MoE 列为本周次席试点并标注重叠批次；确认 fetch 源是否卡在分页边界，必要时扩大抓取窗口或补充 OpenReview/HuggingFace 源。",
+      "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述；且同一批次(2026-06-18)已连续第三天出现，需确认是 arXiv 低更新期还是 fetch 分页/窗口配置问题。",
+      "one_line_judgement": "它补全了主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 场景下，交互式 agent、语音系统、机器人策略会反复分支、复位、中断、重入，这些操作需要的是对『完整执行态』而非单一 KV 片段的检查点与恢复。这是今日候选中工程场景证据最强、迁移路径最清晰的一篇(摘要明确列出 agent/speech/robot 多类负载)。",
+      "path": "daily-detail.html?date=2026-06-22"
+    },
     {
       "date": "2026-06-21",
       "title": "论文价值发现日报 - 2026-06-21",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-20"
-    },
-    {
-      "date": "2026-05-19",
-      "title": "论文价值发现日报 - 2026-05-19",
-      "deep_dive_title": "Designing Datacenter Power Delivery Hierarchies for the AI Era",
-      "deep_dive_url": "http://arxiv.org/abs/2605.16255v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成两件事：列出 GPU 集群功率预算与供电层级匹配清单；设计 VLA-AD 蒸馏 PoC 的指标与评估方案。",
-      "max_uncertainty": "最大不确定性是外部可复现资产缺失：代码、benchmark、Papers with Code 链接多数暂无或待核验，当前证据仅基于 arXiv 摘要与论文自述。",
-      "one_line_judgement": "前者直面 AI 集群 1MW/rack 供电设计难题，决策框架可直接用于基础设施规划；后者给出可工程化的 VLA 蒸馏路径，把'大模型→边缘部署'从理想变成可执行 PoC。",
-      "path": "daily-detail.html?date=2026-05-19"
     }
   ]
 }

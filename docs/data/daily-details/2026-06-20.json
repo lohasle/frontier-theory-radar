@@ -7,9 +7,9 @@
   "value_type_label": "即时价值",
   "decision": "重点学习",
   "daily_action": "完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。",
-  "score": 83.0,
+  "score": 87.0,
   "trend_stage": "emerging",
-  "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
+  "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
   "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。",
   "conclusion_lines": [
     "今天最值得看的是《Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving》。",
@@ -19,6 +19,19 @@
   ],
   "candidate_papers": [
     {
+      "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 87.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
       "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
       "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
       "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -26,19 +39,6 @@
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "score": 86.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": true
-    },
-    {
-      "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-      "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-      "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-      "direction": "未分类",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "score": 83.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
@@ -98,8 +98,8 @@
     "benchmark_url": "",
     "paperswithcode_url": "",
     "openreview_url": "",
-    "first_seen_date": "2026-06-21",
-    "first_deep_dive_daily": "2026-06-21",
+    "first_seen_date": "2026-06-22",
+    "first_deep_dive_daily": "2026-06-22",
     "value_type": "immediate",
     "value_type_label": "即时价值",
     "value_scores": {
@@ -112,12 +112,12 @@
       "actionability": 5.0,
       "noise_risk": 1.2
     },
-    "score": 83.0,
+    "score": 87.0,
     "decision": "重点学习",
-    "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
-    "one_line_essence": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为第二梯队以避免重复，代码与 benchmark 仍待核验。",
+    "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
+    "one_line_essence": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。",
     "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-    "new_claim_or_method": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为",
+    "new_claim_or_method": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech",
     "research_position": "source_paper",
     "engineering_testability": {
       "has_code": false,
@@ -144,7 +144,7 @@
       ]
     },
     "long_tail": {
-      "why_save": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重",
+      "why_save": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分",
       "future_trigger": [
         "待更多证据"
       ],
@@ -204,7 +204,7 @@
       }
     ],
     "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-    "daily_path": "daily-detail.html?date=2026-06-21",
+    "daily_path": "daily-detail.html?date=2026-06-22",
     "trend_paths": [
       "trend-detail.html?id=agentic-world-modeling",
       "trend-detail.html?id=context-engineering"
@@ -221,7 +221,7 @@
       "id": "predictability-as-a-fine-grained-measure-for-privacy",
       "title": "Predictability as a Fine-Grained Measure for Privacy",
       "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-      "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+      "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "possible_use_cases": [
         "Prompt 设计",

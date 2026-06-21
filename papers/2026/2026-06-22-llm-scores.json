@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-22",
+  "note": "基于工程价值与证据强度评分；所有论文的 code/benchmark/Papers-with-Code 链接均暂无(待核验)，证据主要来自 arXiv 摘要与作者自述。重要提示：今日 arXiv 返回的 10 篇与 2026-06-20、2026-06-21 完全相同(均为 2026-06-18 批次)，已是同一批次的第三天。为避免内容重复并给读者新价值，分数与判断保持一致(工程价值未变)，但今日深挖轮换为 Execution-State Capsules(端侧物理 AI 执行态管理)，06-21 已深挖的生成式推荐列为次席候选。",
+  "by_url": {
+    "http://arxiv.org/abs/2606.20537v1": {
+      "score": 87,
+      "value_type": "immediate",
+      "reason": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。",
+      "matched_topics": ["inference-serving", "ai-agent", "context-engineering", "data-engineering"]
+    },
+    "http://arxiv.org/abs/2606.20554v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选，仅更新跟踪状态。代码与 benchmark 暂无/待核验。",
+      "matched_topics": ["rag-knowledge", "data-engineering", "context-engineering", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.20544v1": {
+      "score": 81,
+      "value_type": "immediate",
+      "reason": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集。与昨日分析一致，今日保持即时候选。",
+      "matched_topics": ["llm-evaluation", "inference-serving", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.20538v1": {
+      "score": 76,
+      "value_type": "trend",
+      "reason": "多任务贝叶斯 in-context learning 把『先验数据拟合/摊销推理』从单任务推广到多任务，延续 TabPFN 类基础模型趋势，对不确定性量化、小样本预测、异常检测有方法学价值。方法论清晰且有 evaluation/benchmark/inference 关键词佐证，但离直接上线仍隔着任务适配与规模化验证，更适合先纳入趋势观察并做小规模复现。",
+      "matched_topics": ["context-engineering", "llm-evaluation", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.20546v1": {
+      "score": 70,
+      "value_type": "long_tail",
+      "reason": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
+      "matched_topics": ["security-governance", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.20560v1": {
+      "score": 68,
+      "value_type": "long_tail",
+      "reason": "扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，适合长尾保存(可解释性评测 checklist 资产)。",
+      "matched_topics": ["llm-evaluation", "security-governance", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.20547v1": {
+      "score": 66,
+      "value_type": "long_tail",
+      "reason": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
+      "matched_topics": ["context-engineering", "multimodal-agent"]
+    },
+    "http://arxiv.org/abs/2606.20559v1": {
+      "score": 62,
+      "value_type": "long_tail",
+      "reason": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
+      "matched_topics": ["multimodal-agent", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.20557v1": {
+      "score": 60,
+      "value_type": "long_tail",
+      "reason": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
+      "matched_topics": ["llm-evaluation", "security-governance"]
+    },
+    "http://arxiv.org/abs/2606.20550v1": {
+      "score": 32,
+      "value_type": "ignore",
+      "reason": "Easy Reads 是一个把 arXiv 论文 PDF 重排为更易读/可访问格式的 Python 工具，单作者、工程新颖性与前沿理论价值低，非前沿方法贡献，与雷达『前沿理论驱动』定位相关性弱。建议保留最小索引即可，不投入。",
+      "matched_topics": []
+    }
+  }
+}

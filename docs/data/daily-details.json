@@ -1,26 +1,39 @@
 {
-  "updated_at": "2026-06-21T04:33:47.134111",
+  "updated_at": "2026-06-22T04:33:09.919225",
   "dailies": {
-    "2026-06-21": {
-      "date": "2026-06-21",
-      "title": "论文价值发现日报 - 2026-06-21",
-      "deep_dive_id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-      "deep_dive_title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+    "2026-06-22": {
+      "date": "2026-06-22",
+      "title": "论文价值发现日报 - 2026-06-22",
+      "deep_dive_id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "deep_dive_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "decision": "重点学习",
-      "daily_action": "完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。",
-      "score": 86.0,
+      "daily_action": "完成三件事：起草『端侧 agent 执行态 capsule』最小 PoC 设计(节点/边定义 + 检查点/恢复 API + 评价指标)；把生成式推荐 tokenization(06-21 已深挖)与 Calibrated MoE 列为本周次席试点并标注重叠批次；确认 fetch 源是否卡在分页边界，必要时扩大抓取窗口或补充 OpenReview/HuggingFace 源。",
+      "score": 87.0,
       "trend_stage": "emerging",
-      "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与…",
-      "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。",
+      "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
+      "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述；且同一批次(2026-06-18)已连续第三天出现，需确认是 arXiv 低更新期还是 fetch 分页/窗口配置问题。",
       "conclusion_lines": [
-        "今天最值得看的是《Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation》。",
+        "今天最值得看的是《Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving》。",
         "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
-        "今天建议动作：完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。。",
-        "最大不确定性：最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。。"
+        "今天建议动作：完成三件事：起草『端侧 agent 执行态 capsule』最小 PoC 设计(节点/边定义 + 检查点/恢复 API + 评价指标)；把生成式推荐 tokenization(06-21 已深挖)与 Calibrated MoE 列为本周次席试点并标注重叠批次；确认 fetch 源是否卡在分页边界，必要时扩大抓取窗口或补充 OpenReview/HuggingFace 源。。",
+        "最大不确定性：最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述；且同一批次(2026-06-18)已连续第三天出现，需确认是 arXiv 低更新期还是 fetch 分页/窗口配置问题。。"
       ],
       "candidate_papers": [
+        {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
         {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
@@ -35,13 +48,290 @@
           "worth_deep_dive": true
         },
         {
+          "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
+          "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+          "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 81.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "multi-task-bayesian-in-context-learning",
+          "title": "Multi-Task Bayesian In-Context Learning",
+          "detail_path": "paper-detail.html?id=multi-task-bayesian-in-context-learning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 76.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        }
+      ],
+      "deep_dive": {
+        "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+        "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+        "authors": [
+          "Liang Su"
+        ],
+        "source": "arXiv",
+        "published": "2026-06-18",
+        "url": "http://arxiv.org/abs/2606.20537v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20537v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-06-22",
+        "first_deep_dive_daily": "2026-06-22",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 7.4,
+          "evidence": 4.5,
+          "engineering_testability": 4.05,
+          "trend_signal": 3.5,
+          "long_tail_potential": 3.5,
+          "actionability": 5.0,
+          "noise_risk": 1.2
+        },
+        "score": 87.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
+        "one_line_essence": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "agentic-world-modeling",
+            "context-engineering"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2606.20537v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2606.20537v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+        "daily_path": "daily-detail.html?date=2026-06-22",
+        "trend_paths": [
+          "trend-detail.html?id=agentic-world-modeling",
+          "trend-detail.html?id=context-engineering"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [
+        {
+          "id": "predictability-as-a-fine-grained-measure-for-privacy",
+          "title": "Predictability as a Fine-Grained Measure for Privacy",
+          "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-13"
+        }
+      ],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.20537v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.20537v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-06-22</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2606.20537v1\" target=\"_blank\" rel=\"noopener noreferrer\">Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 完成三件事：起草『端侧 agent 执行态 capsule』最小 PoC 设计(节点/边定义 + 检查点/恢复 API + 评价指标)；把生成式推荐 tokenization(06-21 已深挖)与 Calibrated MoE 列为本周次席试点并标注重叠批次；确认 fetch 源是否卡在分页边界，必要时扩大抓取窗口或补充 OpenReview/HuggingFace 源。</li>\n<li><strong>分数：</strong> 87.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2606.20537v1\" target=\"_blank\" rel=\"noopener noreferrer\">Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving</a>。</li>\n<li><strong>为什么值得看：</strong> 它补全了主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 场景下，交互式 agent、语音系统、机器人策略会反复分支、复位、中断、重入，这些操作需要的是对『完整执行态』而非单一 KV 片段的检查点与恢复。这是今日候选中工程场景证据最强、迁移路径最清晰的一篇(摘要明确列出 agent/speech/robot 多类负载)。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值，但需先用最小 PoC 验证『图绑定执行态检查点/恢复』相对纯 KV-cache 基线在分支/复位/重入场景下的延迟与状态一致性收益。</li>\n<li><strong>今天该做什么：</strong> 今日 arXiv 返回的 10 篇与 2026-06-20、2026-06-21 完全相同(均为 2026-06-18 批次，第三天)。06-21 已深挖生成式推荐(20554)，今日轮换深挖同为即时价值但尚未深挖的端侧执行态 serving(20537)，Calibrated MoE 仍为强即时候选。同一批次连续三天出现，说明 arXiv 新论文流处于低更新期，应把精力转向把前三强候选转为最小 PoC 而非继续等待新论文。</li>\n<li><strong>最大不确定性：</strong> 所有候选论文的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述，复现证据不足；且同一批次连续第三天出现，需关注 fetch 源是否卡在分页边界。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20537v1\" target=\"_blank\" rel=\"noopener noreferrer\">Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving</a></td><td>inference-serving / ai-agent</td><td>即时价值</td><td>87.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20554v1\" target=\"_blank\" rel=\"noopener noreferrer\">Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation</a></td><td>rag-knowledge / data-engineering</td><td>即时价值</td><td>86.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20544v1\" target=\"_blank\" rel=\"noopener noreferrer\">Toward Calibrated Mixture-of-Experts Under Distribution Shift</a></td><td>llm-evaluation / inference-serving</td><td>即时价值</td><td>81.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20538v1\" target=\"_blank\" rel=\"noopener noreferrer\">Multi-Task Bayesian In-Context Learning</a></td><td>context-engineering / llm-evaluation</td><td>趋势价值</td><td>76.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.20546v1\" target=\"_blank\" rel=\"noopener noreferrer\">Predictability as a Fine-Grained Measure for Privacy</a></td><td>security-governance / llm-evaluation</td><td>长尾价值</td><td>70.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 它不是再优化高并发 KV-cache，而是回答『当推理负载变成反复分支/复位/中断/重入的 agent 与物理 AI 时，执行态该如何被检查点化与恢复』这一被主流 serving 忽视的工程瓶颈。</li>\n<li><strong>底层问题：</strong> 主流 LLM serving(vLLM、SGLang 等)通过 paged/radix KV-cache 复用前缀，针对的是高吞吐、高并发场景，管理的只是执行态的一个位置片段(KV cache)。但在低延迟、小批量、端侧的物理 AI 场景中——交互式 agent 分支探索、语音系统中断重入、机器人策略复位重规划——执行态远不止 KV，还包含控制流位置、中间寄存器、分支栈、外部工具调用挂起状态等。把整个执行态图绑定后做检查点/恢复，才能支撑这些交互式负载。</li>\n<li><strong>理论：</strong> 执行态被建模为图绑定的『capsule』对象：节点是计算状态的片段(KV、控制流、挂起的工具调用)，边是状态间的依赖与转移关系。检查点/恢复操作在图层面完成，保证分支/复位/重入后的状态一致性与低延迟，而不是每次从头重算或只恢复 KV。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 新命题是『端侧物理 AI serving 的执行态管理需要从单一片段(KV cache)升级为图绑定的可检查点/可恢复状态对象』；方法侧重于 graph-bound execution-state capsule 的设计与低延迟 restore 路径；证据来自面向 agent/speech/robot 多类负载的方法描述，外部代码与 benchmark 暂无/待核验。</li>\n<li><strong>研究位置：</strong> 介于系统论文与工程实践之间，落在『端侧/边缘 LLM serving + agent 运行时』这一上升赛道内，是『推理引擎』与『agent 执行框架』两条线索的交汇点——把 OS 级的进程检查点思想引入 agent 执行态管理。</li>\n<li><strong>工程可验证性：</strong> 可在端侧推理框架上做最小对照：基线(纯 KV-cache prefix 复用) vs. 本文式(图绑定执行态 capsule 检查点/恢复)，在 agent 分支探索、语音中断重入、机器人复位重规划三类微负载上，比较分支/复位延迟、状态恢复正确率与内存占用。</li>\n<li><strong>趋势关联：</strong> 与端侧推理、agent 运行时、物理 AI serving、执行态检查点四条趋势交汇，是『把 agent 当作有完整执行态的对象来管理』这一方向的关键拼图，值得纳入 1-3 个月重点跟踪。</li>\n<li><strong>长尾价值：</strong> 即便短期无开源，『图绑定执行态 capsule』这一抽象可沉淀为 agent/机器人系统的执行态管理 checklist 与架构模式，跨场景复用。</li>\n<li><strong>启发：</strong> 执行态管理不是『保存 KV』，而是『保存 agent 的完整可恢复快照(控制流 + 数据 + 挂起的副作用)』——这与把 agent 当作一等公民的 OS 思想同构，是 agent 从玩具走向可工程化部署的关键一跃。</li>\n<li><strong>行动建议：</strong> 今天先产出一页『端侧 agent 执行态 capsule』PoC 设计：目标负载(agent 分支/语音中断/机器人复位)、执行态图的节点与边定义、检查点/恢复 API、对照基线、评价指标(延迟/正确率/内存)。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2606.20546v1\" target=\"_blank\" rel=\"noopener noreferrer\">Predictability as a Fine-Grained Measure for Privacy</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-13</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.20560v1\" target=\"_blank\" rel=\"noopener noreferrer\">How Transparent is DiffusionGemma?</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续隐空间模型(latent reasoning、扩散语言模型)的可解释性/对齐审计。工程价值在框架而非模型本身；证据以理论分析为主、缺代码，适合长尾保存(可解释性评测 checklist 资产)。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-13</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.20547v1\" target=\"_blank\" rel=\"noopener noreferrer\">The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-13</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2606.20550v1\" target=\"_blank\" rel=\"noopener noreferrer\">Easy Reads: A Python program for making Scientific Papers on arXiv more Reader Friendly and Accessible</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发</h4>\n<p>端侧/物理 AI 的执行态管理需要从『只管 KV cache』升级为『图绑定的完整状态 capsule』——把控制流、数据、挂起的副作用一起检查点化，这是把 agent 从请求-响应模型推进到有状态的执行体模型的关键。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>Agent 的分支探索(树搜索/beam)、中断重入、复位重规划，本质上都需要执行态的快照与回滚；主流 serving 的 prefix 复用只覆盖了其中一种模式。把『执行态 capsule』做成 agent 运行时的一等抽象，能直接降低 agent 的延迟与重算成本。</p>\n<h4>对 RAG / 知识系统的启发</h4>\n<p>RAG pipeline 中检索-生成-工具调用的挂起与恢复，也是执行态管理的一种特例；图绑定 capsule 的思路可迁移为 RAG 多步推理的状态检查点模板。</p>\n<h4>对数据工程的启发</h4>\n<p>端侧物理 AI 的状态管理需要实时维护执行态图的节点/边依赖，这与流处理中的状态后端(state backend)、checkpoint barrier 是同构问题——可借鉴流处理的 exactly-once / 增量检查点思想。</p>\n<h4>对评测治理的启发</h4>\n<p>端侧 serving 的最小评测应同时覆盖分支/复位/重入延迟、状态恢复正确率与内存占用，并把『执行态一致性』本身当作评测对象，与 Calibrated MoE 的专家级校准监控形成互补。</p>\n<h4>对个人学习路径的启发</h4>\n<p>今天阅读顺序建议：先看端侧执行态 capsule 把握 agent 运行时的状态管理，再看生成式推荐 tokenization 学上下文工程(06-21 已读)，最后用 Calibrated MoE 补齐漂移下校准的工程视角。</p>\n<h4>对未来 6-12 个月技术趋势的启发</h4>\n<p>端侧/物理 AI 的竞争会从『谁的模型更小更快』转向『谁更会管理 agent 的完整执行态、谁更会在分支/复位/重入下保持低延迟与一致性』——执行态 capsule 可能成为 agent 运行时的基础设施层。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2606.20537v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2606.20537v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。</li>\n<li><strong>最大不确定性：</strong> 最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述；且同一批次(2026-06-18)已连续第三天出现，需确认是 arXiv 低更新期还是 fetch 分页/窗口配置问题。</li>\n<li><strong>下一步动作：</strong> 若 7-14 天内端侧执行态论文仍无开源代码，则在开源端侧推理框架上自建执行态 capsule 最小验证(分支/复位/重入三类微负载)；同时滚动复盘同一批次的三个即时候选，等待代码/benchmark 出现再升级投入；若 fetch 连续多天返回同一批次，则排查 arXiv API 分页或日期窗口配置。</li>\n</ul>\n<p>> 生成时间：2026-06-22T04:33:05.713940</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
+    "2026-06-21": {
+      "date": "2026-06-21",
+      "title": "论文价值发现日报 - 2026-06-21",
+      "deep_dive_id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+      "deep_dive_title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "重点学习",
+      "daily_action": "完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。",
+      "score": 86.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与…",
+      "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。",
+      "conclusion_lines": [
+        "今天最值得看的是《Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。。",
+        "最大不确定性：最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。。"
+      ],
+      "candidate_papers": [
+        {
           "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
           "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
+          "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 86.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -105,8 +395,8 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-06-21",
-        "first_deep_dive_daily": "2026-06-21",
+        "first_seen_date": "2026-06-22",
+        "first_deep_dive_daily": "2026-06-22",
         "value_type": "immediate",
         "value_type_label": "即时价值",
         "value_scores": {
@@ -121,10 +411,10 @@
         },
         "score": 86.0,
         "decision": "重点学习",
-        "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与…",
-        "one_line_essence": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰(可对接现有召回/排序与生成式推荐 pipeline)。代码与 benchmark 链接暂无/待核验，证据以摘要方法描述为主，但工业相关性与可设计最小实验的证据强度足以先做试点。",
+        "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与…",
+        "one_line_essence": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选，仅更新跟踪状态。代码与 benchmark 暂无/待核验。",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown promise in industrial recommendation systems')，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径",
+        "new_claim_or_method": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选",
         "research_position": "source_paper",
         "engineering_testability": {
           "has_code": false,
@@ -151,7 +441,7 @@
           ]
         },
         "long_tail": {
-          "why_save": "生成式推荐是当前工业推荐系统最被看好的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与'分布式用户兴趣上下文'的组织与注入。它明确面向工业推荐场景(摘要原文 'shown",
+          "why_save": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文",
           "future_trigger": [
             "待更多证据"
           ],
@@ -211,7 +501,7 @@
           }
         ],
         "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-        "daily_path": "daily-detail.html?date=2026-06-21",
+        "daily_path": "daily-detail.html?date=2026-06-22",
         "trend_paths": [
           "trend-detail.html?id=context-engineering",
           "trend-detail.html?id=agentic-world-modeling"
@@ -228,7 +518,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -304,9 +594,9 @@
       "value_type_label": "即时价值",
       "decision": "重点学习",
       "daily_action": "完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。",
-      "score": 83.0,
+      "score": 87.0,
       "trend_stage": "emerging",
-      "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
+      "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
       "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。",
       "conclusion_lines": [
         "今天最值得看的是《Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving》。",
@@ -316,6 +606,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -323,19 +626,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -395,8 +685,8 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-06-21",
-        "first_deep_dive_daily": "2026-06-21",
+        "first_seen_date": "2026-06-22",
+        "first_deep_dive_daily": "2026-06-22",
         "value_type": "immediate",
         "value_type_label": "即时价值",
         "value_scores": {
@@ -409,12 +699,12 @@
           "actionability": 5.0,
           "noise_risk": 1.2
         },
-        "score": 83.0,
+        "score": 87.0,
         "decision": "重点学习",
-        "one_line_judgement": "今天值得试：Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 …",
-        "one_line_essence": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为第二梯队以避免重复，代码与 benchmark 仍待核验。",
+        "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
+        "one_line_essence": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重入的执行态管理，把'执行态'从单一 KV 片段扩展为图绑定可检查点/可恢复状态。工程迁移路径清晰，命题与场景证据充分；但本篇与 2026-06-20 深挖重叠，今日降为",
+        "new_claim_or_method": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech",
         "research_position": "source_paper",
         "engineering_testability": {
           "has_code": false,
@@ -441,7 +731,7 @@
           ]
         },
         "long_tail": {
-          "why_save": "Execution-State Capsules 补全主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支/复位/中断/重",
+          "why_save": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分",
           "future_trigger": [
             "待更多证据"
           ],
@@ -501,7 +791,7 @@
           }
         ],
         "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-        "daily_path": "daily-detail.html?date=2026-06-21",
+        "daily_path": "daily-detail.html?date=2026-06-22",
         "trend_paths": [
           "trend-detail.html?id=agentic-world-modeling",
           "trend-detail.html?id=context-engineering"
@@ -518,7 +808,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -1336,6 +1626,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -1343,19 +1646,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -1544,7 +1834,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -2971,6 +3261,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -2978,19 +3281,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -3171,7 +3461,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -3259,6 +3549,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -3266,19 +3569,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -3464,7 +3754,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -4113,6 +4403,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -4120,19 +4423,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -4294,7 +4584,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -4654,6 +4944,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -4661,19 +4964,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -4835,7 +5125,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -4910,6 +5200,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -4917,19 +5220,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -5111,7 +5401,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -9626,6 +9916,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -9633,19 +9936,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -9807,7 +10097,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -9882,6 +10172,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -9889,19 +10192,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -10063,7 +10353,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -11850,6 +12140,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -11857,19 +12160,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -12051,7 +12341,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -12139,6 +12429,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -12146,19 +12449,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -12342,7 +12632,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
@@ -12852,6 +13142,19 @@
       ],
       "candidate_papers": [
         {
+          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 87.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
           "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
           "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
           "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
@@ -12859,19 +13162,6 @@
           "value_type": "immediate",
           "value_type_label": "即时价值",
           "score": 86.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-          "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 83.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
@@ -13051,7 +13341,7 @@
           "id": "predictability-as-a-fine-grained-measure-for-privacy",
           "title": "Predictability as a Fine-Grained Measure for Privacy",
           "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-          "why_save": "提出以'可预测性'作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+          "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
           "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
           "possible_use_cases": [
             "Prompt 设计",
