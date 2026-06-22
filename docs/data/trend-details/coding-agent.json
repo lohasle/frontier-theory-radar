@@ -4,7 +4,7 @@
   "stage": "主流化",
   "updated_at": "2026-04-28",
   "key_insight": "[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)",
-  "paper_count": 117,
+  "paper_count": 115,
   "practice_count": 0,
   "path": "trend-detail.html?id=coding-agent",
   "markdown_path": "trends/coding-agent.md",
@@ -100,6 +100,24 @@
       "pdf_url": "https://arxiv.org/pdf/2605.14012v1"
     },
     {
+      "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+      "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 84.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种…",
+      "source": "arXiv",
+      "published": "2026-06-18",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2606.20544v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20544v1"
+    },
+    {
       "id": "data-intelligence-agents-interpreting-modeling-and-querying-enterprise-data-via-autonomous-coding-agents",
       "title": "Data Intelligence Agents: Interpreting, Modeling, and Querying Enterprise Data via Autonomous Coding Agents",
       "detail_path": "paper-detail.html?id=data-intelligence-agents-interpreting-modeling-and-querying-enterprise-data-via-autonomous-coding-agents",
@@ -188,24 +206,6 @@
       "paperswithcode_url": "",
       "url": "http://arxiv.org/abs/2604.24710v1",
       "pdf_url": "https://arxiv.org/pdf/2604.24710v1"
-    },
-    {
-      "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
-      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
-      "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "score": 81.0,
-      "decision": "重点学习",
-      "one_line_judgement": "今天值得试：MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整…",
-      "source": "arXiv",
-      "published": "2026-06-18",
-      "brief_cn": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "url": "http://arxiv.org/abs/2606.20544v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20544v1"
     },
     {
       "id": "eurekagent-agent-environment-engineering-is-all-you-need-for-autonomous-scientific-discovery",
@@ -341,7 +341,7 @@
       "value_type_label": "趋势价值",
       "score": 76.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：多任务贝叶斯 in-context learning 把『先验数据拟合/摊销推理』从单任务推广到多任务，延续 TabPFN 类基础模型趋势，…",
+      "one_line_judgement": "值得继续观察：Prior-Data Fitted / in-context foundation 模型把数据集直接映射为预测分布，是表格/小样本场景的效率…",
       "source": "arXiv",
       "published": "2026-06-18",
       "brief_cn": "",
@@ -550,22 +550,22 @@
       "pdf_url": "https://arxiv.org/pdf/2605.07130v1"
     },
     {
-      "id": "predictability-as-a-fine-grained-measure-for-privacy",
-      "title": "Predictability as a Fine-Grained Measure for Privacy",
-      "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
+      "id": "how-transparent-is-diffusiongemma",
+      "title": "How Transparent is DiffusionGemma?",
+      "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
-      "score": 70.0,
+      "score": 71.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得先保存：提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。…",
+      "one_line_judgement": "值得先保存：随着 latent/continuous 推理模型（如 DiffusionGemma 这类扩散式推理）增多，\"连续潜空间里的推理是否更不透明…",
       "source": "arXiv",
       "published": "2026-06-18",
       "brief_cn": "",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
-      "url": "http://arxiv.org/abs/2606.20546v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20546v1"
+      "url": "http://arxiv.org/abs/2606.20560v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20560v1"
     },
     {
       "id": "haas-a-policy-aware-framework-for-adaptive-task-allocation-between-humans-and-artificial-intelligence-systems",
@@ -620,24 +620,6 @@
       "paperswithcode_url": "待核验/暂无",
       "url": "https://arxiv.org/abs/2605.07101v1",
       "pdf_url": "https://arxiv.org/pdf/2605.07101v1"
-    },
-    {
-      "id": "how-transparent-is-diffusiongemma",
-      "title": "How Transparent is DiffusionGemma?",
-      "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 68.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "值得先保存：扩散型 LLM(DiffusionGemma 类)透明度研究，最大可复用资产是『可变透明度 vs 算法透明度』二分评测框架，可迁移到任何连续…",
-      "source": "arXiv",
-      "published": "2026-06-18",
-      "brief_cn": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "url": "http://arxiv.org/abs/2606.20560v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20560v1"
     },
     {
       "id": "stale-can-llm-agents-know-when-their-memories-are-no-longer-valid",
@@ -746,24 +728,6 @@
       "paperswithcode_url": "待核验/暂无",
       "url": "https://arxiv.org/abs/2605.07158v1",
       "pdf_url": "https://arxiv.org/pdf/2605.07158v1"
-    },
-    {
-      "id": "optimal-deterministic-multicalibration-and-omniprediction",
-      "title": "Optimal Deterministic Multicalibration and Omniprediction",
-      "detail_path": "paper-detail.html?id=optimal-deterministic-multicalibration-and-omniprediction",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 60.0,
-      "decision": "持续观察",
-      "one_line_judgement": "值得先保存：首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML…",
-      "source": "arXiv",
-      "published": "2026-06-18",
-      "brief_cn": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "url": "http://arxiv.org/abs/2606.20557v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20557v1"
     },
     {
       "id": "bami-training-free-bias-mitigation-in-gui-grounding",
@@ -2119,7 +2083,7 @@
   "value_distribution": {
     "immediate": 19,
     "trend": 21,
-    "long_tail": 23,
+    "long_tail": 21,
     "ignore": 54
   },
   "top_paper": {

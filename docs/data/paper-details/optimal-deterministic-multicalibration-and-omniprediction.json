@@ -13,10 +13,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
@@ -27,13 +27,13 @@
     "actionability": 5.0,
     "noise_risk": 2.4
   },
-  "score": 60.0,
-  "decision": "持续观察",
-  "one_line_judgement": "值得先保存：首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML…",
-  "one_line_essence": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
+  "score": 29.6,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：前沿论文：A model is multicalibrated on a collection of group weights $G$ i…",
+  "one_line_essence": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/math.ST)，工程转化门槛高，代码/benchmark 暂无，适合作为校准/公平性方向的长期理论种子保存。",
-  "research_position": "long_tail_insight",
+  "new_claim_or_method": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
+  "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -46,10 +46,8 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
-    "related_trends": [
-      "coding-agent"
-    ],
+    "status": "noise",
+    "related_trends": [],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -58,9 +56,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "首个确定性、达到 ε-多重校准 minimax 最优 Õ(ε^-3) 样本复杂度的预测器，并扩展 omniprediction。对可信 ML 校准理论有奠基价值；但属纯理论(stat.ML/m",
+    "why_save": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -75,7 +73,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-07-13"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -100,12 +98,8 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
-    ],
-    "ignore_reason": ""
+    "long_tail_actions": [],
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -118,10 +112,8 @@
     }
   ],
   "detail_path": "paper-detail.html?id=optimal-deterministic-multicalibration-and-omniprediction",
-  "daily_path": "daily-detail.html?date=2026-06-22",
-  "trend_paths": [
-    "trend-detail.html?id=coding-agent"
-  ],
+  "daily_path": "daily-detail.html?date=2026-06-23",
+  "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

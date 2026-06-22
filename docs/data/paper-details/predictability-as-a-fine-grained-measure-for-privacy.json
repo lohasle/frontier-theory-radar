@@ -13,10 +13,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 6.2,
@@ -27,13 +27,13 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 70.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得先保存：提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。…",
-  "one_line_essence": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
+  "score": 38.7,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level…",
+  "one_line_essence": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审计)有框架价值。证据以理论与构造为主，代码/benchmark 暂无，适合长尾保存，待出现开源实现或跟进论文再投入。",
-  "research_position": "long_tail_insight",
+  "new_claim_or_method": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
+  "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -46,9 +46,9 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
+    "status": "noise",
     "related_trends": [
-      "coding-agent"
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -58,9 +58,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "提出以『可预测性』作为差分隐私的细粒度替代：显式建模攻击者核心知识与被泄露数据切片，度量信息增益而非最坏情况，缓解 DP 的隐私-精度代价。对安全与治理(数据发布、特征工程、模型上线前的隐私审",
+    "why_save": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -75,7 +75,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-07-13"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -100,12 +100,8 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
-    ],
-    "ignore_reason": ""
+    "long_tail_actions": [],
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -118,9 +114,9 @@
     }
   ],
   "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy",
-  "daily_path": "daily-detail.html?date=2026-06-22",
+  "daily_path": "daily-detail.html?date=2026-06-23",
   "trend_paths": [
-    "trend-detail.html?id=coding-agent"
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

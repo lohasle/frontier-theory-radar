@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 2.4
   },
-  "score": 81.0,
+  "score": 84.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整…",
-  "one_line_essence": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集。与昨日分析一致，今日保持即时候选。",
+  "one_line_judgement": "今天值得试：MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种…",
+  "one_line_essence": "MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种条件下 per-predictor 校准能改善 MoE 的精度与校准\"，命题贴近生产、可转化为 gating/校准的消融实验；作者来自 Suchi Saria/Rama Chellappa 团队，可信度较高。属于本周即可在自有 MoE 评测集上做最小验证的即时资产，但代码与 benchmark 链接缺失需待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接转化为专家级校准监控、漂移告警与路由质量评估流程。系统性实验佐证，但代码与 benchmark 暂无，落地前需自建漂移评测集。与昨日分析一致，今日保持即时候选。",
+  "new_claim_or_method": "MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种条件下 per-predictor 校准能改善 MoE 的精度与校准\"，命题贴近生产、可转化为 gating/校准的消融实验；作者来自 Suchi Saria/Rama Chellappa 团队，可信度较高。属于本周即可",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -51,8 +51,7 @@
   "trend_relation": {
     "status": "emerging",
     "related_trends": [
-      "coding-agent",
-      "agentic-world-modeling"
+      "coding-agent"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -62,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "MoE 已是主流大模型架构，本文聚焦『分布漂移下 MoE 专家级校准』这一生产刚需——线上数据漂移会导致专家路由失配与置信度失真；把校准从整体预测下沉到单个专家并观察到精度+校准双提升，可直接",
+    "why_save": "MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种条件下 per-predictor 校准能改善 Mo",
     "future_trigger": [
       "待更多证据"
     ],
@@ -122,10 +121,9 @@
     }
   ],
   "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
-  "daily_path": "daily-detail.html?date=2026-06-22",
+  "daily_path": "daily-detail.html?date=2026-06-23",
   "trend_paths": [
-    "trend-detail.html?id=coding-agent",
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=coding-agent"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

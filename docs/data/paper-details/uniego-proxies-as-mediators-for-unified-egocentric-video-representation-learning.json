@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 5.4,
     "relevance": 6.2,
@@ -30,13 +30,13 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 62.0,
-  "decision": "持续观察",
-  "one_line_judgement": "值得先保存：UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agen…",
-  "one_line_essence": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
+  "score": 39.5,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：RAG / 知识系统：Egocentric video understanding is inherently limited by the…",
+  "one_line_essence": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中心视频)，代码/benchmark 暂无，适合长尾观察，等跨视角/多模态 agent 落地信号再评估。",
-  "research_position": "long_tail_insight",
+  "new_claim_or_method": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
+  "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -49,9 +49,9 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
+    "status": "noise",
     "related_trends": [
-      "agentic-world-modeling"
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "UNIEGO 提出层级多教师蒸馏框架，让自我中心视频表征同时吸纳多视角/多模态/基础模型知识，但仍可仅从自我中心视频部署。对多模态 agent 与蒸馏工程有方法学启发；但场景较窄(可穿戴自我中",
+    "why_save": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -78,7 +78,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-07-13"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -103,12 +103,8 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
-    ],
-    "ignore_reason": ""
+    "long_tail_actions": [],
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -121,9 +117,9 @@
     }
   ],
   "detail_path": "paper-detail.html?id=uniego-proxies-as-mediators-for-unified-egocentric-video-representation-learning",
-  "daily_path": "daily-detail.html?date=2026-06-22",
+  "daily_path": "daily-detail.html?date=2026-06-23",
   "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

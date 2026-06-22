@@ -12,10 +12,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 5.4,
     "relevance": 5.0,
@@ -26,13 +26,13 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 66.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得先保存：首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel …",
-  "one_line_essence": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
+  "score": 34.3,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：RAG / 知识系统：We place the attention token on the group: a token is an el…",
+  "one_line_essence": "RAG / 知识系统：We place the attention token on the group: a token is an element $g_i$ of a ma…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知模型有结构性启发；但工程可验证性与即时收益证据不足，代码与外部复现待核验，更适合长尾保存，等几何/机器人任务上出现跟进信号再投入。",
-  "research_position": "long_tail_insight",
+  "new_claim_or_method": "RAG / 知识系统：We place the attention token on the group: a token is an element $g_i$ of a ma…",
+  "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -45,10 +45,9 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
+    "status": "noise",
     "related_trends": [
-      "context-engineering",
-      "agentic-world-modeling"
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -58,9 +57,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "首次提出以矩阵 Lie 群元素本身作为注意力 token、用相对位姿的闭式代数范数作评分的新注意力构造，避开 learned kernel 并可达仿射全标架群。理论新颖度高，对等变性/几何感知",
+    "why_save": "RAG / 知识系统：We place the attention token on the group: a token is an element $g_i$ of a ma…",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -75,7 +74,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-07-13"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -100,12 +99,8 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
-    ],
-    "ignore_reason": ""
+    "long_tail_actions": [],
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -118,10 +113,9 @@
     }
   ],
   "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-  "daily_path": "daily-detail.html?date=2026-06-22",
+  "daily_path": "daily-detail.html?date=2026-06-23",
   "trend_paths": [
-    "trend-detail.html?id=context-engineering",
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

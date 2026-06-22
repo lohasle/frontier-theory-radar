@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
-  "value_type": "immediate",
-  "value_type_label": "即时价值",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
@@ -30,12 +30,12 @@
     "actionability": 5.0,
     "noise_risk": 2.4
   },
-  "score": 86.0,
+  "score": 80.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与…",
-  "one_line_essence": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选，仅更新跟踪状态。代码与 benchmark 暂无/待核验。",
+  "one_line_judgement": "值得继续观察：生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式…",
+  "one_line_essence": "生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式的用户兴趣上下文 tokenization，同时注入行为与语义上下文，命题与召回、排序、长序列行为建模的工程痛点一致，适合作为推荐侧趋势资产纳入观察；证据以方法设计为主，跨场景泛化与复现资产仍待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文与物品语义上下文同时结构化注入推荐模型，命题硬、迁移路径清晰。分数略高于今日深挖对象是因为其工业相关性与场景证据更强；但因 06-21 已做过完整深挖，今日列为次席候选",
+  "new_claim_or_method": "生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式的用户兴趣上下文 tokenization，同时注入行为与语义上下文，命题与召回、排序、长序列行为建模的工程痛点一致，适合作为推荐侧趋势资产纳入观察；证据以方法设计为主，跨场景泛化与复现资产仍待核验。",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -51,8 +51,8 @@
   "trend_relation": {
     "status": "emerging",
     "related_trends": [
-      "context-engineering",
-      "agentic-world-modeling"
+      "agentic-world-modeling",
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -62,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "生成式推荐是当前工业推荐系统最受关注的新兴范式，本文直击其工程核心瓶颈——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入。摘要原文明确面向工业推荐场景，把用户行为上下文",
+    "why_save": "生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式的用户兴趣上下文 tokenization，同时注入",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,12 +102,12 @@
     ]
   },
   "actions": {
-    "immediate_actions": [
-      "今天读摘要与方法",
-      "今天试最小实验",
-      "一周内沉淀为 Skill / Checklist"
+    "immediate_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
     ],
-    "trend_actions": [],
     "long_tail_actions": [],
     "ignore_reason": ""
   },
@@ -122,10 +122,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-  "daily_path": "daily-detail.html?date=2026-06-22",
+  "daily_path": "daily-detail.html?date=2026-06-23",
   "trend_paths": [
-    "trend-detail.html?id=context-engineering",
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

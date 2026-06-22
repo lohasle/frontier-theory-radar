@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2606.20537v1": {
+      "score": 88,
+      "value_type": "immediate",
+      "reason": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）反复 branch/reset/interrupt/re-enter 的真实负载，提出图绑定的执行态检查点与恢复。问题定义与团队做 agent serving 时遇到的会话中断恢复、状态回滚高度同构，是最适合先做 PoC 的工程资产；证据来自系统级方法设计，但代码/benchmark 暂无、待核验。",
+      "matched_topics": ["inference-serving", "ai-agent", "data-engineering"]
+    },
+    "http://arxiv.org/abs/2606.20544v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种条件下 per-predictor 校准能改善 MoE 的精度与校准\"，命题贴近生产、可转化为 gating/校准的消融实验；作者来自 Suchi Saria/Rama Chellappa 团队，可信度较高。属于本周即可在自有 MoE 评测集上做最小验证的即时资产，但代码与 benchmark 链接缺失需待核验。",
+      "matched_topics": ["inference-serving", "security-governance", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.20554v1": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式的用户兴趣上下文 tokenization，同时注入行为与语义上下文，命题与召回、排序、长序列行为建模的工程痛点一致，适合作为推荐侧趋势资产纳入观察；证据以方法设计为主，跨场景泛化与复现资产仍待核验。",
+      "matched_topics": ["data-engineering", "ai-agent", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2606.20538v1": {
+      "score": 76,
+      "value_type": "trend",
+      "reason": "Prior-Data Fitted / in-context foundation 模型把数据集直接映射为预测分布，是表格/小样本场景的效率杠杆；本文补上\"多任务\"与不确定性量化的短板。与团队在做少量标注、强不确定性需求（风控、医疗、A/B 决策）的场景相关，适合作为不确定性量化的趋势观察；但属研究期方法，离生产上线仍隔训练成本与适用边界两层。",
+      "matched_topics": ["llm-evaluation", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2606.20560v1": {
+      "score": 71,
+      "value_type": "long_tail",
+      "reason": "随着 latent/continuous 推理模型（如 DiffusionGemma 这类扩散式推理）增多，\"连续潜空间里的推理是否更不透明\"是可解释性与对齐的真实新问题。文章把透明性拆成 variable transparency 与 algorithmic transparency 两层，为 mechanistic interpretability 与 agent 行为审计提供了新分析框架，值得作为长尾资产保存并纳入可解释性观察线；但短期难直接转化成工程动作，证据与代码暂无。",
+      "matched_topics": ["llm-evaluation", "security-governance"]
+    }
+  }
+}

@@ -12,8 +12,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-22",
-  "first_deep_dive_daily": "2026-06-22",
+  "first_seen_date": "2026-06-23",
+  "first_deep_dive_daily": "2026-06-23",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -26,12 +26,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 87.0,
+  "score": 88.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互…",
-  "one_line_essence": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech/robot 多类负载)，迁移路径清晰(可作为现有推理引擎的执行态管理层叠加)。作为今日深挖对象：它是端侧 agent 与物理 AI serving 的刚需，与雷达 ai-agent/inference-serving 主题强相关，命题更具基础性(agent 运行时状态管理)，故列为本日最高分。代码与 benchmark 暂无/待核验，落地前需自建分支/重入基准。",
+  "one_line_judgement": "今天值得试：这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而…",
+  "one_line_essence": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）反复 branch/reset/interrupt/re-enter 的真实负载，提出图绑定的执行态检查点与恢复。问题定义与团队做 agent serving 时遇到的会话中断恢复、状态回滚高度同构，是最适合先做 PoC 的工程资产；证据来自系统级方法设计，但代码/benchmark 暂无、待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分支/复位/中断/重入的检查点与恢复。它把『执行态』从单一 KV 片段扩展为图绑定的可检查点/可恢复状态对象，命题硬、场景证据充分(摘要明确列举 agent/speech",
+  "new_claim_or_method": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）反复 branch/reset/interrupt/re-enter 的真实负载，提出图绑定的执行态检查点与恢复。问题定义与团队做 agent",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -47,8 +47,7 @@
   "trend_relation": {
     "status": "emerging",
     "related_trends": [
-      "agentic-world-modeling",
-      "context-engineering"
+      "agentic-world-modeling"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -58,7 +57,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Execution-State Capsules 直击主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI(交互式 agent、语音系统、机器人策略)中执行态反复分",
+    "why_save": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 ag",
     "future_trigger": [
       "待更多证据"
     ],
@@ -118,10 +117,9 @@
     }
   ],
   "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-  "daily_path": "daily-detail.html?date=2026-06-22",
+  "daily_path": "daily-detail.html?date=2026-06-23",
   "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling",
-    "trend-detail.html?id=context-engineering"
+    "trend-detail.html?id=agentic-world-modeling"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
