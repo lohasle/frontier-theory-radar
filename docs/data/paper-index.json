@@ -1,7 +1,756 @@
 {
-  "updated_at": "2026-06-23T04:32:50.042563",
-  "total": 349,
+  "updated_at": "2026-06-24T04:33:01.702494",
+  "total": 359,
   "papers": [
+    {
+      "title": "Tapered Language Models",
+      "authors": [
+        "Reza Bayat",
+        "Ali Behrouz",
+        "Aaron Courville"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23670v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23670v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This is a default inherited from the original transformer and largely unchanged since, yet a growing body of evidence suggests that layers contribute non-uniformly to the final output, with later layers refining the residual stream rather than transforming it. We ask whether parameter capacity should ref",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "memory",
+        "benchmark"
+      ],
+      "score": 85.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23670v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23670v1"
+        }
+      ],
+      "llm_reason": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训练/推理成本都成立的结构性杠杆——哪怕只 taper 掉少量冗余层/参数，也能在近乎零质量损失下减少FLOPs与显存。可立即在现有模型上做'逐层重要性探测+渐进剪枝/缩容'最小实验，工程可验证性极高；作者 Behrouz/Courville 来自 MILA，理论可信度强，但代码/benchmark 暂无、待核验。",
+      "id": "tapered-language-models",
+      "value_type": "immediate",
+      "matched_topics": [
+        "inference-serving",
+        "context-engineering",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Modern language models, including transformer, recurrent, and memory-based var…",
+      "one_line_judgement": "今天值得试：直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=tapered-language-models"
+    },
+    {
+      "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
+      "authors": [
+        "Manas Mehta",
+        "Fangcong Yin",
+        "Greg Durrett"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23687v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23687v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encoding",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23687v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23687v1"
+        }
+      ],
+      "llm_reason": "长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized YaRN 把 YaRN 位置外推、随机化位置编码与长度课程结合，命题可直接在自有长上下文模型上做'固定训练长度→外推 2x/4x→测困惑度与长程检索'的最小验证。证据以方法设计+benchmark为主，代码与复现资产暂无、待核验，但方向高度贴合工程现实。",
+      "id": "randomized-yarn-improves-length-generalization-for-long-context-reasoning",
+      "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "inference-serving",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Large language models (LLMs) are typically pretrained on short sequences and t…",
+      "one_line_judgement": "今天值得试：长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized …",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized YaRN 把 YaRN 位置外推、随机化位置编码与长",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=randomized-yarn-improves-length-generalization-for-long-context-reasoning"
+    },
+    {
+      "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
+      "authors": [
+        "Dingzhi Yu",
+        "Hongyi Tao",
+        "Yuanyu Wan",
+        "Luo Luo",
+        "Lijun Zhang"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23676v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23676v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evidence indicates that stochastic gradient noise in LLM pretraining is typically heavy-tailed. Recent work shows that sign-based optimizers such as Lion and Muon achieve sharp heavy-tailed rates, and that AdaGrad can also converge under heavy-tailed noise. However, no rigorous convergence theory for Ada",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC",
+        "stat.ML"
+      ],
+      "keywords": [
+        "memory",
+        "benchmark"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23676v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23676v1"
+        }
+      ],
+      "llm_reason": "AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否有收敛保证？并对照 Lion/Muon(sign-based)、AdaGrad 已有的重尾收敛率。对训练基础设施团队高度相关——它直接影响'AdamW vs Muon/Lion'的选型决策，是当下最活跃的训练侧争论之一。属方向性理论信号而非可立即上线的方案，故归为趋势；但理论框架清晰、来自 Luo Luo/Lijun Zhang 团队，证据强度可信。",
+      "id": "open-problem-is-adamw-effective-under-heavy-tailed-noise",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving",
+        "security-governance",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：AdamW is the de facto optimizer for training large language models (LLMs), yet…",
+      "one_line_judgement": "值得继续观察：AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否有收敛保证？并对照 Lion/Muon(sign-b",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=open-problem-is-adamw-effective-under-heavy-tailed-noise"
+    },
+    {
+      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
+      "authors": [
+        "Cong Han",
+        "Xiaohan Lan",
+        "Haibo Qiu",
+        "Yujie Zhong"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23678v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23678v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature focuses primarily on tool-use within vision-perception tasks. However, such approaches typically rely on predefined heuristics for visual manipulation and are inherently incapable of addressing numerical computation problems due to their exclusive focus on visual operations. This paper empowers MLL",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG",
+        "multimodal"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23678v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23678v1"
+        }
+      ],
+      "llm_reason": "承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视觉操作启发式。这与多模态Agent、tool-use工程链路高度同构(规划→生成代码→执行→回读结果)。适合作为多模态Agent推理架构的趋势观察资产；方法设计完整，但代码/复现入口暂无、待核验，且自适应触发策略的鲁棒性需跨场景验证。",
+      "id": "air-adaptive-interleaved-reasoning-with-code-in-mllms",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "coding-agent",
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Following the paradigm shift initiated by OpenAI o3, interleaved reasoning wit…",
+      "one_line_judgement": "值得继续观察：承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视觉操作启发式。这与多模态Agent、tool-use",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=air-adaptive-interleaved-reasoning-with-code-in-mllms"
+    },
+    {
+      "title": "Can LLMs Reliably Self-Report Adversarial Prefills, and How?",
+      "authors": [
+        "Quang Minh Nguyen",
+        "Uzair Ahmed",
+        "Taegyoon Kim"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23671v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23671v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Prior work shows that large language models (LLMs) exhibit introspective capability on benign tasks. We extend the question to safety contexts and examine how reliably a model can recognize that its own prior response was elicited by an adversarial prefill attack. Across ten open-weight instruction-tuned LLMs (3B to 70B) and four safety benchmarks, no model reliably recognizes its own compromised outputs, with models claiming intent on prefilled responses at an average rate of $27.3\\%$. Introspe",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23671v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23671v1"
+        }
+      ],
+      "llm_reason": "服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 prefill 攻击诱导的'，平均27.3%会把被诱导的回答归因于自身意图。这直接说明'靠模型自省做内容安全审计'这条路不可靠，必须用外部guardrail/审计层。证据强度高(多模型+多benchmark+具体数值)，对线上安全治理有即时指导意义，故虽无代码也给出较高分；归属趋势(安全治理观察线)。",
+      "id": "can-llms-reliably-self-report-adversarial-prefills-and-how",
+      "value_type": "trend",
+      "matched_topics": [
+        "security-governance",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "安全与治理：Prior work shows that large language models (LLMs) exhibit introspective capab…",
+      "one_line_judgement": "值得继续观察：服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 …",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 prefill 攻击诱导的'，平均27.3%会把被诱",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=can-llms-reliably-self-report-adversarial-prefills-and-how"
+    },
+    {
+      "title": "Semantic Browsing: Controllable Diversity for Image Generation",
+      "authors": [
+        "Sara Dorfman",
+        "Maya Vishnevsky",
+        "Omer Dahary",
+        "Or Patashnik",
+        "Daniel Cohen-Or"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23679v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23679v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interpretation. Existing methods to improve diversity produce outputs driven by incidental variations rather than meaningful design choices. This motivates a new variant of the diversity task where structure is enforced on the generated samples. We introduce a method for controlled diversity that enables ",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "RAG"
+      ],
+      "score": 35.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23679v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23679v1"
+        }
+      ],
+      "id": "semantic-browsing-controllable-diversity-for-image-generation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Modern text-to-image models excel in visual fidelity and prompt adherence. How…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Modern text-to-image models excel in visual fideli…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Modern text-to-image models excel in visual fidelity and prompt adherence. H",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=semantic-browsing-controllable-diversity-for-image-generation"
+    },
+    {
+      "title": "AutoDex: An Automated Real-World System for Dexterous Grasping Data Collection",
+      "authors": [
+        "Mingi Choi",
+        "Gunhee Kim",
+        "Jisoo Kim",
+        "Taeksoo Kim",
+        "Taeyun Ha"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23689v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23689v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Learning robust dexterous grasping requires real-world data that records the physical outcomes of grasp attempts. Such data is hard to obtain at scale: teleoperation yields valid physical outcomes but is slow and operator-biased, while simulation-based generation is cheap and scalable but cannot certify contact validity. A natural solution is to generate candidate grasps and verify them on real hardware, but this scales only if the entire collection loop (perception, execution, labeling, and res",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 35.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23689v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23689v1"
+        }
+      ],
+      "id": "autodex-an-automated-real-world-system-for-dexterous-grasping-data-collection",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：Learning robust dexterous grasping requires real-world data that records the p…",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Learning robust dexterous grasping requires real-worl…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：Learning robust dexterous grasping requires real-world data that records the p…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=autodex-an-automated-real-world-system-for-dexterous-grasping-data-collection"
+    },
+    {
+      "title": "Teaching LLMs String Matching, Backtracking, and Error Recovery to Deduce Bases and Truth Tables for the Combinatorially Exploding Bit Manipulation Puzzles",
+      "authors": [
+        "Prateek Agnihotri",
+        "Sanchit Jain",
+        "Prabhat Agnihotri",
+        "Aditya Prasad",
+        "Shubham Jain"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23672v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23672v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "This paper presents our algorithmic innovations for the NVIDIA Nemotron Model Reasoning Challenge, focusing on Bit Manipulation Puzzles. In this task, the objective is to discover a hidden logical rule transforming input binary strings to outputs, then apply it to unseen inputs. Large Language Models (LLMs) notoriously struggle here; traditional methods force them to simulate complex boolean logic and arithmetic, leading to hallucinations. Furthermore, the search space of bitwise operations (com",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23672v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23672v1"
+        }
+      ],
+      "id": "teaching-llms-string-matching-backtracking-and-error-recovery-to-deduce-bases-and-truth-tables-for-the-combinatorially-exploding-bit-manipulation-puzzles",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：This paper presents our algorithmic innovations for the NVIDIA Nemotron Model …",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：This paper presents our algorithmic innovations for the NVI…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "RAG / 知识系统：This paper presents our algorithmic innovations for the NVIDIA Nemotron Model …",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=teaching-llms-string-matching-backtracking-and-error-recovery-to-deduce-bases-and-truth-tables-for-the-combinatorially-exploding-bit-manipulation-puzzles"
+    },
+    {
+      "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
+      "authors": [
+        "Sunil Wanjari",
+        "Manish Thakre",
+        "Aayushi Asole",
+        "Sharwari Raut",
+        "Kwabena Adu-Duodu"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23673v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23673v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focus on individual indicators such as depression or anxiety while providing limited support for comprehensive and explainable decision-making. To address this limitation, this study proposes PsyBridge, a hybrid intelligent decision-support framework designed for multi-dimensional mental health assessme",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 30.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23673v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23673v1"
+        }
+      ],
+      "id": "psybridge-a-hybrid-intelligent-framework-for-multi-dimensional-mental-health-assessment-and-decision-support",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Mental health assessment commonly relies on isolated screening instruments or …",
+      "one_line_judgement": "当前可忽略：前沿论文：Mental health assessment commonly relies on isolated screening in…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Mental health assessment commonly relies on isolated screening instruments or …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=psybridge-a-hybrid-intelligent-framework-for-multi-dimensional-mental-health-assessment-and-decision-support"
+    },
+    {
+      "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+      "authors": [
+        "Sikai Li",
+        "Shuning Li",
+        "Zhenyu Wei",
+        "Yunchao Yao",
+        "Chenran Li"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23680v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23680v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freedom (DoF) end effectors that behave like an open-close grasp primitive. We introduce CoorDex, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation on the move. Starting from simulated",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 29.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23680v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23680v1"
+        }
+      ],
+      "id": "coordex-coordinating-body-and-hand-priors-for-continuous-dexterous-humanoid-loco-manipulation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go process: wal…",
+      "one_line_judgement": "当前可忽略：前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go process: wal…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=coordex-coordinating-body-and-hand-priors-for-continuous-dexterous-humanoid-loco-manipulation"
+    },
     {
       "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
       "authors": [

@@ -19,35 +19,35 @@
   ],
   "candidate_papers": [
     {
-      "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
-      "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-      "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "id": "tapered-language-models",
+      "title": "Tapered Language Models",
+      "detail_path": "paper-detail.html?id=tapered-language-models",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 88.0,
+      "score": 85.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
-      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
-      "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "id": "randomized-yarn-improves-length-generalization-for-long-context-reasoning",
+      "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
+      "detail_path": "paper-detail.html?id=randomized-yarn-improves-length-generalization-for-long-context-reasoning",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 84.0,
+      "score": 82.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-      "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
-      "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
+      "id": "open-problem-is-adamw-effective-under-heavy-tailed-noise",
+      "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
+      "detail_path": "paper-detail.html?id=open-problem-is-adamw-effective-under-heavy-tailed-noise",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
@@ -58,26 +58,26 @@
       "worth_deep_dive": true
     },
     {
-      "id": "multi-task-bayesian-in-context-learning",
-      "title": "Multi-Task Bayesian In-Context Learning",
-      "detail_path": "paper-detail.html?id=multi-task-bayesian-in-context-learning",
+      "id": "air-adaptive-interleaved-reasoning-with-code-in-mllms",
+      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
+      "detail_path": "paper-detail.html?id=air-adaptive-interleaved-reasoning-with-code-in-mllms",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 76.0,
+      "score": 78.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "how-transparent-is-diffusiongemma",
-      "title": "How Transparent is DiffusionGemma?",
-      "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
+      "id": "can-llms-reliably-self-report-adversarial-prefills-and-how",
+      "title": "Can LLMs Reliably Self-Report Adversarial Prefills, and How?",
+      "detail_path": "paper-detail.html?id=can-llms-reliably-self-report-adversarial-prefills-and-how",
       "direction": "未分类",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 71.0,
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 75.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
@@ -220,28 +220,7 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [
-    {
-      "id": "how-transparent-is-diffusiongemma",
-      "title": "How Transparent is DiffusionGemma?",
-      "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma",
-      "why_save": "随着 latent/continuous 推理模型（如 DiffusionGemma 这类扩散式推理）增多，\"连续潜空间里的推理是否更不透明\"是可解释性与对齐的真实新问题。文章把透明性拆成 v",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "possible_use_cases": [
-        "Prompt 设计",
-        "Skill 草案",
-        "评测方法",
-        "架构模式"
-      ],
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist",
-        "评测方法"
-      ],
-      "revisit_date": "2026-07-12"
-    }
-  ],
+  "long_tail_saved": [],
   "ignore_reasons": [
     "暂无明确忽略样本，但忽略标准仍需保留。"
   ],

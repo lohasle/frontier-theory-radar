@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-23T04:32:50.040439",
+  "updated_at": "2026-06-24T04:33:01.699456",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-24",
+      "title": "论文价值发现日报 - 2026-06-24",
+      "deep_dive_title": "Tapered Language Models",
+      "deep_dive_url": "http://arxiv.org/abs/2606.23670v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 Tapered LM 最小实验的指标与对照；设计 Randomized YaRN 长度外推验证计划；把 AdamW 重尾、AIR、对抗自省三篇纳入训练侧与安全侧趋势观察清单。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者可信度，需持续跟踪作者主页与 GitHub。",
+      "one_line_judgement": "它挑战的是 Transformer 自诞生以来几乎没人质疑过的默认设计——'每一层参数均匀分配'。大量证据表明后期层更多在'精炼'而非'变换'残差流，那么容量就该沿深度递减(taper)。这是对所有 LLM 训练与推理成本都成立的结构性优化，不是又一个 trick。",
+      "path": "daily-detail.html?date=2026-06-24"
+    },
     {
       "date": "2026-06-23",
       "title": "论文价值发现日报 - 2026-06-23",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-22"
-    },
-    {
-      "date": "2026-05-21",
-      "title": "论文价值发现日报 - 2026-05-21",
-      "deep_dive_title": "Federated Knowledge Distillation Across Heterogeneous Language Models",
-      "deep_dive_url": "http://arxiv.org/abs/2605.35678v1",
-      "decision": "趋势价值",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "纳入趋势雷达，连续观察 7-30 天。",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-21"
     }
   ]
 }

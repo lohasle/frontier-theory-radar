@@ -1,105 +1,122 @@
 {
-  "updated_at": "2026-06-23T04:32:50.035166",
+  "updated_at": "2026-06-24T04:33:01.691649",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-06-23",
-    "title": "论文价值发现日报 - 2026-06-23",
-    "deep_dive_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-    "deep_dive_url": "http://arxiv.org/abs/2606.20537v1",
+    "date": "2026-06-24",
+    "title": "论文价值发现日报 - 2026-06-24",
+    "deep_dive_title": "Tapered Language Models",
+    "deep_dive_url": "http://arxiv.org/abs/2606.23670v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "完成三件事：列出 Execution-State PoC 指标与对照、设计 MoE 校准最小实验、把 Generative Recommendation tokenization 纳入推荐侧趋势观察清单。",
-    "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验，需持续跟踪作者主页与 GitHub。",
-    "one_line_judgement": "它瞄准的不是已经卷透的高吞吐云端服务，而是\"低延迟、小批量、端侧物理 AI\"反复 branch/reset/interrupt/re-enter 的真实负载——这正是交互式 agent、语音系统、机器人策略上线时最痛的状态管理缺口。",
-    "path": "daily-detail.html?date=2026-06-23"
+    "daily_action": "三件事：列出 Tapered LM 最小实验的指标与对照；设计 Randomized YaRN 长度外推验证计划；把 AdamW 重尾、AIR、对抗自省三篇纳入训练侧与安全侧趋势观察清单。",
+    "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者可信度，需持续跟踪作者主页与 GitHub。",
+    "one_line_judgement": "它挑战的是 Transformer 自诞生以来几乎没人质疑过的默认设计——'每一层参数均匀分配'。大量证据表明后期层更多在'精炼'而非'变换'残差流，那么容量就该沿深度递减(taper)。这是对所有 LLM 训练与推理成本都成立的结构性优化，不是又一个 trick。",
+    "path": "daily-detail.html?date=2026-06-24"
   },
   "top_paper": {
-    "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+    "title": "Tapered Language Models",
     "authors": [
-      "Liang Su"
+      "Reza Bayat",
+      "Ali Behrouz",
+      "Aaron Courville"
     ],
-    "published": "2026-06-18",
-    "updated": "2026-06-18",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
     "source": "arXiv",
-    "url": "http://arxiv.org/abs/2606.20537v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.20537v1",
+    "url": "http://arxiv.org/abs/2606.23670v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.23670v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Mainstream LLM serving systems reuse prefix work mainly through paged or radix key-value (KV) caches. This is highly effective for high-throughput, high-concurrency serving, but it manages only one positional fragment of execution state: the KV cache. We study the opposite regime: low-latency, small-batch, on-device physical-AI serving, where interactive LLM agents, speech systems, and robot policies repeatedly branch, reset, interrupt, and re-enter under tight responsiveness budgets. We introdu",
+    "abstract": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This is a default inherited from the original transformer and largely unchanged since, yet a growing body of evidence suggests that layers contribute non-uniformly to the final output, with later layers refining the residual stream rather than transforming it. We ask whether parameter capacity should ref",
     "categories": [
       "cs.LG",
-      "cs.DC"
+      "cs.AI",
+      "cs.CL"
     ],
     "keywords": [
-      "agent",
-      "RAG"
+      "memory",
+      "benchmark"
     ],
-    "score": 88.0,
+    "score": 85.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2606.20537v1"
+        "url": "http://arxiv.org/abs/2606.23670v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20537v1"
+        "url": "https://arxiv.org/pdf/2606.23670v1"
       }
     ],
-    "llm_reason": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）反复 branch/reset/interrupt/re-enter 的真实负载，提出图绑定的执行态检查点与恢复。问题定义与团队做 agent serving 时遇到的会话中断恢复、状态回滚高度同构，是最适合先做 PoC 的工程资产；证据来自系统级方法设计，但代码/benchmark 暂无、待核验。",
-    "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+    "llm_reason": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训练/推理成本都成立的结构性杠杆——哪怕只 taper 掉少量冗余层/参数，也能在近乎零质量损失下减少FLOPs与显存。可立即在现有模型上做'逐层重要性探测+渐进剪枝/缩容'最小实验，工程可验证性极高；作者 Behrouz/Courville 来自 MILA，理论可信度强，但代码/benchmark 暂无、待核验。",
+    "id": "tapered-language-models",
     "value_type": "immediate",
     "matched_topics": [
       "inference-serving",
-      "ai-agent",
-      "data-engineering"
+      "context-engineering",
+      "llm-evaluation"
     ],
     "score_breakdown": {
       "novelty": 4.8,
-      "problem_importance": 6.45,
-      "relevance": 7.4,
+      "problem_importance": 5.15,
+      "relevance": 5.0,
       "evidence_strength": 4.5,
-      "engineering_testability": 4.05,
-      "trend_signal": 3.5,
+      "engineering_testability": 3.5,
+      "trend_signal": 4.05,
       "long_tail_potential": 3.5,
       "asset_convertibility": 4.8,
-      "actionability": 5.0,
+      "actionability": 3.8,
       "noise_risk": 1.2,
       "weak_evidence_penalty": 5.0,
-      "low_relevance_penalty": 0.8,
+      "low_relevance_penalty": 3.6,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "推理与服务：Mainstream LLM serving systems reuse prefix work mainly through paged or radix…",
-    "one_line_judgement": "今天值得试：这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而…",
-    "first_seen_date": "2026-06-23",
-    "first_deep_dive_daily": "2026-06-23",
+    "brief_cn": "推理与服务：Modern language models, including transformer, recurrent, and memory-based var…",
+    "one_line_judgement": "今天值得试：直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因…",
+    "first_seen_date": "2026-06-24",
+    "first_deep_dive_daily": "2026-06-24",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 ag",
+    "long_tail_summary": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训",
     "related_trends": [
-      "agentic-world-modeling"
+      "context-engineering",
+      "coding-agent"
     ],
-    "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving"
+    "detail_path": "paper-detail.html?id=tapered-language-models"
   },
-  "paper_count": 349,
+  "paper_count": 359,
   "daily_count": 30,
   "trend_count": 3,
   "long_tail_count": 37,
   "value_distribution": {
-    "immediate": 35,
-    "trend": 42,
+    "immediate": 37,
+    "trend": 45,
     "long_tail": 37,
-    "ignore": 235
+    "ignore": 240
   },
   "recent_dailies": [
+    {
+      "date": "2026-06-24",
+      "title": "论文价值发现日报 - 2026-06-24",
+      "deep_dive_title": "Tapered Language Models",
+      "deep_dive_url": "http://arxiv.org/abs/2606.23670v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 Tapered LM 最小实验的指标与对照；设计 Randomized YaRN 长度外推验证计划；把 AdamW 重尾、AIR、对抗自省三篇纳入训练侧与安全侧趋势观察清单。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者可信度，需持续跟踪作者主页与 GitHub。",
+      "one_line_judgement": "它挑战的是 Transformer 自诞生以来几乎没人质疑过的默认设计——'每一层参数均匀分配'。大量证据表明后期层更多在'精炼'而非'变换'残差流，那么容量就该沿深度递减(taper)。这是对所有 LLM 训练与推理成本都成立的结构性优化，不是又一个 trick。",
+      "path": "daily-detail.html?date=2026-06-24"
+    },
     {
       "date": "2026-06-23",
       "title": "论文价值发现日报 - 2026-06-23",
@@ -177,138 +194,206 @@
       "max_uncertainty": "环境出站 HTTPS 被完全拦截（多主机 SSL_ERROR_SYSCALL），DNS 正常，疑似出站防火墙/代理策略，恢复时间未知。",
       "one_line_judgement": "待补充价值判断",
       "path": "daily-detail.html?date=2026-06-15"
-    },
-    {
-      "date": "2026-06-14",
-      "title": "论文价值发现日报 - 2026-06-14",
-      "deep_dive_title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
-      "deep_dive_url": "http://arxiv.org/abs/2606.13681v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读 EvoArena 的环境变化建模；审计当前 Agent 系统的工具接口执行粒度（HyperTool + SpatialClaw 双重启发）",
-      "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认；SpatialClaw 的新接口方案细节和评测结果待完整论文",
-      "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
-      "path": "daily-detail.html?date=2026-06-14"
     }
   ],
   "top_papers": [
     {
-      "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "title": "Tapered Language Models",
       "authors": [
-        "Liang Su"
+        "Reza Bayat",
+        "Ali Behrouz",
+        "Aaron Courville"
       ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20537v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20537v1",
+      "url": "http://arxiv.org/abs/2606.23670v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23670v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Mainstream LLM serving systems reuse prefix work mainly through paged or radix key-value (KV) caches. This is highly effective for high-throughput, high-concurrency serving, but it manages only one positional fragment of execution state: the KV cache. We study the opposite regime: low-latency, small-batch, on-device physical-AI serving, where interactive LLM agents, speech systems, and robot policies repeatedly branch, reset, interrupt, and re-enter under tight responsiveness budgets. We introdu",
+      "abstract": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This is a default inherited from the original transformer and largely unchanged since, yet a growing body of evidence suggests that layers contribute non-uniformly to the final output, with later layers refining the residual stream rather than transforming it. We ask whether parameter capacity should ref",
       "categories": [
         "cs.LG",
-        "cs.DC"
+        "cs.AI",
+        "cs.CL"
       ],
       "keywords": [
-        "agent",
-        "RAG"
+        "memory",
+        "benchmark"
       ],
-      "score": 88.0,
+      "score": 85.0,
       "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20537v1"
+          "url": "http://arxiv.org/abs/2606.23670v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20537v1"
+          "url": "https://arxiv.org/pdf/2606.23670v1"
         }
       ],
-      "llm_reason": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 agent、语音、机器人策略）反复 branch/reset/interrupt/re-enter 的真实负载，提出图绑定的执行态检查点与恢复。问题定义与团队做 agent serving 时遇到的会话中断恢复、状态回滚高度同构，是最适合先做 PoC 的工程资产；证据来自系统级方法设计，但代码/benchmark 暂无、待核验。",
-      "id": "execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving",
+      "llm_reason": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训练/推理成本都成立的结构性杠杆——哪怕只 taper 掉少量冗余层/参数，也能在近乎零质量损失下减少FLOPs与显存。可立即在现有模型上做'逐层重要性探测+渐进剪枝/缩容'最小实验，工程可验证性极高；作者 Behrouz/Courville 来自 MILA，理论可信度强，但代码/benchmark 暂无、待核验。",
+      "id": "tapered-language-models",
       "value_type": "immediate",
       "matched_topics": [
         "inference-serving",
-        "ai-agent",
-        "data-engineering"
+        "context-engineering",
+        "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
         "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.8,
-        "actionability": 5.0,
+        "actionability": 3.8,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 0.8,
+        "low_relevance_penalty": 3.6,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "推理与服务：Mainstream LLM serving systems reuse prefix work mainly through paged or radix…",
-      "one_line_judgement": "今天值得试：这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
+      "brief_cn": "推理与服务：Modern language models, including transformer, recurrent, and memory-based var…",
+      "one_line_judgement": "今天值得试：直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "这篇直击当前 LLM/Agent 服务系统最薄弱的一环：主流前缀复用（paged/radix KV cache）只覆盖高吞吐、高并发场景，而这篇面向低延迟、小批量、端侧物理 AI（交互式 ag",
+      "long_tail_summary": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训",
       "related_trends": [
-        "agentic-world-modeling"
+        "context-engineering",
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physical-ai-serving"
+      "detail_path": "paper-detail.html?id=tapered-language-models"
     },
     {
-      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+      "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
       "authors": [
-        "Gina Wong",
-        "Drew Prinster",
-        "Suchi Saria",
-        "Rama Chellappa",
-        "Anqi Liu"
+        "Manas Mehta",
+        "Fangcong Yin",
+        "Greg Durrett"
       ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20544v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20544v1",
+      "url": "http://arxiv.org/abs/2606.23687v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23687v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Calibration aligns a model's predictive uncertainty with the frequencies of its empirical outcomes and is important for understanding and trusting reported probabilities. Recent work shows that enforcing calibration at the level of individual predictors can improve ensemble accuracy and calibration, with mixture-of-experts (MoE) models showing strong empirical improvements in particular; however, the conditions under which calibration helps MoE are not well understood. In this work, we study how",
+      "abstract": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encoding",
       "categories": [
-        "cs.AI",
-        "cs.LG"
+        "cs.CL"
       ],
       "keywords": [
-        "RAG"
+        "benchmark"
       ],
-      "score": 84.0,
+      "score": 82.0,
       "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20544v1"
+          "url": "http://arxiv.org/abs/2606.23687v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20544v1"
+          "url": "https://arxiv.org/pdf/2606.23687v1"
         }
       ],
-      "llm_reason": "MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种条件下 per-predictor 校准能改善 MoE 的精度与校准\"，命题贴近生产、可转化为 gating/校准的消融实验；作者来自 Suchi Saria/Rama Chellappa 团队，可信度较高。属于本周即可在自有 MoE 评测集上做最小验证的即时资产，但代码与 benchmark 链接缺失需待核验。",
-      "id": "toward-calibrated-mixture-of-experts-under-distribution-shift",
+      "llm_reason": "长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized YaRN 把 YaRN 位置外推、随机化位置编码与长度课程结合，命题可直接在自有长上下文模型上做'固定训练长度→外推 2x/4x→测困惑度与长程检索'的最小验证。证据以方法设计+benchmark为主，代码与复现资产暂无、待核验，但方向高度贴合工程现实。",
+      "id": "randomized-yarn-improves-length-generalization-for-long-context-reasoning",
       "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "inference-serving",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Large language models (LLMs) are typically pretrained on short sequences and t…",
+      "one_line_judgement": "今天值得试：长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized …",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized YaRN 把 YaRN 位置外推、随机化位置编码与长",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=randomized-yarn-improves-length-generalization-for-long-context-reasoning"
+    },
+    {
+      "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
+      "authors": [
+        "Dingzhi Yu",
+        "Hongyi Tao",
+        "Yuanyu Wan",
+        "Luo Luo",
+        "Lijun Zhang"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23676v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23676v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evidence indicates that stochastic gradient noise in LLM pretraining is typically heavy-tailed. Recent work shows that sign-based optimizers such as Lion and Muon achieve sharp heavy-tailed rates, and that AdaGrad can also converge under heavy-tailed noise. However, no rigorous convergence theory for Ada",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC",
+        "stat.ML"
+      ],
+      "keywords": [
+        "memory",
+        "benchmark"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23676v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23676v1"
+        }
+      ],
+      "llm_reason": "AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否有收敛保证？并对照 Lion/Muon(sign-based)、AdaGrad 已有的重尾收敛率。对训练基础设施团队高度相关——它直接影响'AdamW vs Muon/Lion'的选型决策，是当下最活跃的训练侧争论之一。属方向性理论信号而非可立即上线的方案，故归为趋势；但理论框架清晰、来自 Luo Luo/Lijun Zhang 团队，证据强度可信。",
+      "id": "open-problem-is-adamw-effective-under-heavy-tailed-noise",
+      "value_type": "trend",
       "matched_topics": [
         "inference-serving",
         "security-governance",
@@ -327,143 +412,72 @@
         "noise_risk": 2.4,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
+        "engineering_cost_penalty": 4.0,
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "推理与服务：Calibration aligns a model's predictive uncertainty with the frequencies of it…",
-      "one_line_judgement": "今天值得试：MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "MoE 已是主流生产架构（DeepSeek-V3、Mixtral 等），而分布漂移下的校准直接关系线上概率输出的可信度。文章系统研究\"在何种条件下 per-predictor 校准能改善 Mo",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=toward-calibrated-mixture-of-experts-under-distribution-shift"
-    },
-    {
-      "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
-      "authors": [
-        "Ruizhong Qiu",
-        "Yinglong Xia",
-        "Dongqi Fu",
-        "Hanqing Zeng",
-        "Ren Chen"
-      ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20554v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20554v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Generative recommendation is an emerging paradigm that has shown promise in industrial recommendation systems, aiming to predict users' next interactions from their historical behaviors. At the core of generative recommendation lies item tokenization, which bridges item semantics and recommendation models. However, existing methods often struggle to effectively organize and inject complex user-behavioral and item-semantic contexts into recommendation models simultaneously. On the one hand, exist",
-      "categories": [
-        "cs.IR",
-        "cs.AI"
-      ],
-      "keywords": [],
-      "score": 80.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20554v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20554v1"
-        }
-      ],
-      "llm_reason": "生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式的用户兴趣上下文 tokenization，同时注入行为与语义上下文，命题与召回、排序、长序列行为建模的工程痛点一致，适合作为推荐侧趋势资产纳入观察；证据以方法设计为主，跨场景泛化与复现资产仍待核验。",
-      "id": "structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation",
-      "value_type": "trend",
-      "matched_topics": [
-        "data-engineering",
-        "ai-agent",
-        "rag-knowledge"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 5.0,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "数据工程：Generative recommendation is an emerging paradigm that has shown promise in in…",
-      "one_line_judgement": "值得继续观察：生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
+      "brief_cn": "推理与服务：AdamW is the de facto optimizer for training large language models (LLMs), yet…",
+      "one_line_judgement": "值得继续观察：AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "生成式推荐是工业推荐系统正在迁移的新范式，而 item tokenization 是连接物品语义与推荐模型的核心瓶颈。本文提出结构化/分布式的用户兴趣上下文 tokenization，同时注入",
+      "long_tail_summary": "AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否有收敛保证？并对照 Lion/Muon(sign-b",
       "related_trends": [
-        "agentic-world-modeling",
-        "context-engineering"
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=structuring-and-tokenizing-distributed-user-interest-context-for-generative-recommendation"
+      "detail_path": "paper-detail.html?id=open-problem-is-adamw-effective-under-heavy-tailed-noise"
     },
     {
-      "title": "Multi-Task Bayesian In-Context Learning",
+      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
       "authors": [
-        "Qingyang Zhu",
-        "Eric Karl Oermann",
-        "Kyunghyun Cho"
+        "Cong Han",
+        "Xiaohan Lan",
+        "Haibo Qiu",
+        "Yujie Zhong"
       ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20538v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20538v1",
+      "url": "http://arxiv.org/abs/2606.23678v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23678v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Bayesian predictive inference provides a principled framework for uncertainty quantification, data efficiency, and robust generalization. However, exact inference is often intractable, and scalable approximations may remain computationally expensive or require restrictive modeling assumptions that degrade predictive performance. Prior-Data Fitted and in-context models have recently emerged as an amortized alternative by learning to map datasets directly to predictive distributions, but existing ",
+      "abstract": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature focuses primarily on tool-use within vision-perception tasks. However, such approaches typically rely on predefined heuristics for visual manipulation and are inherently incapable of addressing numerical computation problems due to their exclusive focus on visual operations. This paper empowers MLL",
       "categories": [
-        "cs.LG"
+        "cs.CV",
+        "cs.AI"
       ],
       "keywords": [
         "evaluation",
         "benchmark",
-        "inference"
+        "RAG",
+        "multimodal"
       ],
-      "score": 76.0,
+      "score": 78.0,
       "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20538v1"
+          "url": "http://arxiv.org/abs/2606.23678v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20538v1"
+          "url": "https://arxiv.org/pdf/2606.23678v1"
         }
       ],
-      "llm_reason": "Prior-Data Fitted / in-context foundation 模型把数据集直接映射为预测分布，是表格/小样本场景的效率杠杆；本文补上\"多任务\"与不确定性量化的短板。与团队在做少量标注、强不确定性需求（风控、医疗、A/B 决策）的场景相关，适合作为不确定性量化的趋势观察；但属研究期方法，离生产上线仍隔训练成本与适用边界两层。",
-      "id": "multi-task-bayesian-in-context-learning",
+      "llm_reason": "承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视觉操作启发式。这与多模态Agent、tool-use工程链路高度同构(规划→生成代码→执行→回读结果)。适合作为多模态Agent推理架构的趋势观察资产；方法设计完整，但代码/复现入口暂无、待核验，且自适应触发策略的鲁棒性需跨场景验证。",
+      "id": "air-adaptive-interleaved-reasoning-with-code-in-mllms",
       "value_type": "trend",
       "matched_topics": [
-        "llm-evaluation",
-        "context-engineering"
+        "multimodal-agent",
+        "coding-agent",
+        "ai-agent",
+        "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 5.4,
@@ -473,7 +487,82 @@
         "engineering_testability": 4.05,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Following the paradigm shift initiated by OpenAI o3, interleaved reasoning wit…",
+      "one_line_judgement": "值得继续观察：承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视觉操作启发式。这与多模态Agent、tool-use",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=air-adaptive-interleaved-reasoning-with-code-in-mllms"
+    },
+    {
+      "title": "Can LLMs Reliably Self-Report Adversarial Prefills, and How?",
+      "authors": [
+        "Quang Minh Nguyen",
+        "Uzair Ahmed",
+        "Taegyoon Kim"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23671v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23671v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Prior work shows that large language models (LLMs) exhibit introspective capability on benign tasks. We extend the question to safety contexts and examine how reliably a model can recognize that its own prior response was elicited by an adversarial prefill attack. Across ten open-weight instruction-tuned LLMs (3B to 70B) and four safety benchmarks, no model reliably recognizes its own compromised outputs, with models claiming intent on prefilled responses at an average rate of $27.3\\%$. Introspe",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23671v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23671v1"
+        }
+      ],
+      "llm_reason": "服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 prefill 攻击诱导的'，平均27.3%会把被诱导的回答归因于自身意图。这直接说明'靠模型自省做内容安全审计'这条路不可靠，必须用外部guardrail/审计层。证据强度高(多模型+多benchmark+具体数值)，对线上安全治理有即时指导意义，故虽无代码也给出较高分；归属趋势(安全治理观察线)。",
+      "id": "can-llms-reliably-self-report-adversarial-prefills-and-how",
+      "value_type": "trend",
+      "matched_topics": [
+        "security-governance",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
         "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
@@ -482,278 +571,66 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "LLM 评测：Bayesian predictive inference provides a principled framework for uncertainty …",
-      "one_line_judgement": "值得继续观察：Prior-Data Fitted / in-context foundation 模型把数据集直接映射为预测分布，是表格/小样本场景的效率…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
+      "brief_cn": "安全与治理：Prior work shows that large language models (LLMs) exhibit introspective capab…",
+      "one_line_judgement": "值得继续观察：服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 …",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Prior-Data Fitted / in-context foundation 模型把数据集直接映射为预测分布，是表格/小样本场景的效率杠杆；本文补上\"多任务\"与不确定性量化的短板。与团队",
-      "related_trends": [
-        "coding-agent",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=multi-task-bayesian-in-context-learning"
-    },
-    {
-      "title": "How Transparent is DiffusionGemma?",
-      "authors": [
-        "Joshua Engels",
-        "Callum McDougall",
-        "Bilal Chughtai",
-        "Janos Kramar",
-        "Senthoran Rajamanoharan"
-      ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20560v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmi",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "keywords": [],
-      "score": 71.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20560v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20560v1"
-        }
-      ],
-      "llm_reason": "随着 latent/continuous 推理模型（如 DiffusionGemma 这类扩散式推理）增多，\"连续潜空间里的推理是否更不透明\"是可解释性与对齐的真实新问题。文章把透明性拆成 variable transparency 与 algorithmic transparency 两层，为 mechanistic interpretability 与 agent 行为审计提供了新分析框架，值得作为长尾资产保存并纳入可解释性观察线；但短期难直接转化成工程动作，证据与代码暂无。",
-      "id": "how-transparent-is-diffusiongemma",
-      "value_type": "long_tail",
-      "matched_topics": [
-        "llm-evaluation",
-        "security-governance"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "LLM 评测：LLM reasoning transparency is a critical affordance for understanding model de…",
-      "one_line_judgement": "值得先保存：随着 latent/continuous 推理模型（如 DiffusionGemma 这类扩散式推理）增多，\"连续潜空间里的推理是否更不透明…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "随着 latent/continuous 推理模型（如 DiffusionGemma 这类扩散式推理）增多，\"连续潜空间里的推理是否更不透明\"是可解释性与对齐的真实新问题。文章把透明性拆成 v",
+      "long_tail_summary": "服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 prefill 攻击诱导的'，平均27.3%会把被诱",
       "related_trends": [
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=how-transparent-is-diffusiongemma"
+      "detail_path": "paper-detail.html?id=can-llms-reliably-self-report-adversarial-prefills-and-how"
     },
     {
-      "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
+      "title": "Semantic Browsing: Controllable Diversity for Image Generation",
       "authors": [
-        "Wenhao Chi",
-        "Arkaprava Sinha",
-        "Dominick Reilly",
-        "Hieu Le",
-        "Srijan Das"
+        "Sara Dorfman",
+        "Maya Vishnevsky",
+        "Omer Dahary",
+        "Or Patashnik",
+        "Daniel Cohen-Or"
       ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20559v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20559v1",
+      "url": "http://arxiv.org/abs/2606.23679v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23679v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework th",
+      "abstract": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interpretation. Existing methods to improve diversity produce outputs driven by incidental variations rather than meaningful design choices. This motivates a new variant of the diversity task where structure is enforced on the generated samples. We introduce a method for controlled diversity that enables ",
       "categories": [
         "cs.CV",
+        "cs.AI",
+        "cs.GR",
         "cs.LG"
       ],
       "keywords": [
-        "benchmark"
+        "agent",
+        "agentic",
+        "RAG"
       ],
-      "score": 39.5,
+      "score": 35.7,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20559v1"
+          "url": "http://arxiv.org/abs/2606.23679v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20559v1"
+          "url": "https://arxiv.org/pdf/2606.23679v1"
         }
       ],
-      "id": "uniego-proxies-as-mediators-for-unified-egocentric-video-representation-learning",
+      "id": "semantic-browsing-controllable-diversity-for-image-generation",
       "value_type": "ignore",
       "matched_topics": [
-        "rag-knowledge",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Egocentric video understanding is inherently limited by the…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Egocentric video understanding is inherently limited by the narrow perspective…",
-      "related_trends": [
         "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=uniego-proxies-as-mediators-for-unified-egocentric-video-representation-learning"
-    },
-    {
-      "title": "Predictability as a Fine-Grained Measure for Privacy",
-      "authors": [
-        "Linda Lu",
-        "Karthik Sridharan"
-      ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20546v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20546v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. We introduce privacy via predictability, a fine-grained framework that explicitly incorporates the attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. Predictability measures privacy leakage as the incremental gain in a",
-      "categories": [
-        "cs.LG"
-      ],
-      "keywords": [],
-      "score": 38.7,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20546v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20546v1"
-        }
-      ],
-      "id": "predictability-as-a-fine-grained-measure-for-privacy",
-      "value_type": "ignore",
-      "matched_topics": [
-        "rag-knowledge",
-        "security-governance"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Differential privacy (DP) ensures rigorous individual-level privacy guarantees…",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=predictability-as-a-fine-grained-measure-for-privacy"
-    },
-    {
-      "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-      "authors": [
-        "Przemyslaw Musialski"
-      ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20547v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20547v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $ρ(g)$ carrying it. To our knowledge this is the first attention construction whose tokens are bare matrix Lie group elements: their score is the closed-form algebra norm of the relative pose rather than a learned kernel, and it reaches the affine full-frame groups that every irrep- or surjective-exp-based method must exclude. W",
-      "categories": [
-        "cs.LG",
-        "cs.CV",
-        "cs.GR",
-        "cs.RO",
-        "math.DG"
-      ],
-      "keywords": [],
-      "score": 34.3,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20547v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20547v1"
-        }
-      ],
-      "id": "the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups",
-      "value_type": "ignore",
-      "matched_topics": [
-        "rag-knowledge"
       ],
       "score_breakdown": {
         "novelty": 5.4,
@@ -763,7 +640,7 @@
         "engineering_testability": 3.5,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
+        "asset_convertibility": 6.2,
         "actionability": 3.8,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
@@ -772,54 +649,130 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：We place the attention token on the group: a token is an element $g_i$ of a ma…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：We place the attention token on the group: a token is an el…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
+      "brief_cn": "Context Engineering：Modern text-to-image models excel in visual fidelity and prompt adherence. How…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Modern text-to-image models excel in visual fideli…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：We place the attention token on the group: a token is an element $g_i$ of a ma…",
+      "long_tail_summary": "Context Engineering：Modern text-to-image models excel in visual fidelity and prompt adherence. H",
       "related_trends": [
         "context-engineering"
       ],
-      "detail_path": "paper-detail.html?id=the-token-is-a-group-element-on-lie-algebra-attention-over-matrix-lie-groups"
+      "detail_path": "paper-detail.html?id=semantic-browsing-controllable-diversity-for-image-generation"
     },
     {
-      "title": "Easy Reads: A Python program for making Scientific Papers on arXiv more Reader Friendly and Accessible",
+      "title": "AutoDex: An Automated Real-World System for Dexterous Grasping Data Collection",
       "authors": [
-        "Vishal Verma"
+        "Mingi Choi",
+        "Gunhee Kim",
+        "Jisoo Kim",
+        "Taeksoo Kim",
+        "Taeyun Ha"
       ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20550v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20550v1",
+      "url": "http://arxiv.org/abs/2606.23689v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23689v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Scientific papers are frequently dense and characterized by features such as small fonts and line spacing, double columns of text, and tightly arranged figures. While these features make papers more compact, they can hinder readability, make them less accessible, and can strain the reader. arXiv is a premier open-access repository for scientific papers across different fields and is used extensively by researchers, including those in the physics and astrophysics communities. Easy Reads is an aut",
+      "abstract": "Learning robust dexterous grasping requires real-world data that records the physical outcomes of grasp attempts. Such data is hard to obtain at scale: teleoperation yields valid physical outcomes but is slow and operator-biased, while simulation-based generation is cheap and scalable but cannot certify contact validity. A natural solution is to generate candidate grasps and verify them on real hardware, but this scales only if the entire collection loop (perception, execution, labeling, and res",
       "categories": [
-        "cs.DL",
-        "cs.HC",
-        "cs.IR"
+        "cs.RO",
+        "cs.LG"
       ],
       "keywords": [],
+      "score": 35.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23689v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23689v1"
+        }
+      ],
+      "id": "autodex-an-automated-real-world-system-for-dexterous-grasping-data-collection",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：Learning robust dexterous grasping requires real-world data that records the p…",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Learning robust dexterous grasping requires real-worl…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：Learning robust dexterous grasping requires real-world data that records the p…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=autodex-an-automated-real-world-system-for-dexterous-grasping-data-collection"
+    },
+    {
+      "title": "Teaching LLMs String Matching, Backtracking, and Error Recovery to Deduce Bases and Truth Tables for the Combinatorially Exploding Bit Manipulation Puzzles",
+      "authors": [
+        "Prateek Agnihotri",
+        "Sanchit Jain",
+        "Prabhat Agnihotri",
+        "Aditya Prasad",
+        "Shubham Jain"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23672v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23672v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "This paper presents our algorithmic innovations for the NVIDIA Nemotron Model Reasoning Challenge, focusing on Bit Manipulation Puzzles. In this task, the objective is to discover a hidden logical rule transforming input binary strings to outputs, then apply it to unseen inputs. Large Language Models (LLMs) notoriously struggle here; traditional methods force them to simulate complex boolean logic and arithmetic, leading to hallucinations. Furthermore, the search space of bitwise operations (com",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
       "score": 33.5,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20550v1"
+          "url": "http://arxiv.org/abs/2606.23672v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20550v1"
+          "url": "https://arxiv.org/pdf/2606.23672v1"
         }
       ],
-      "id": "easy-reads-a-python-program-for-making-scientific-papers-on-arxiv-more-reader-friendly-and-accessible",
+      "id": "teaching-llms-string-matching-backtracking-and-error-recovery-to-deduce-bases-and-truth-tables-for-the-combinatorially-exploding-bit-manipulation-puzzles",
       "value_type": "ignore",
       "matched_topics": [
         "rag-knowledge"
@@ -841,55 +794,59 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：Scientific papers are frequently dense and characterized by features such as s…",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Scientific papers are frequently dense and characterized by…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
+      "brief_cn": "RAG / 知识系统：This paper presents our algorithmic innovations for the NVIDIA Nemotron Model …",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：This paper presents our algorithmic innovations for the NVI…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：Scientific papers are frequently dense and characterized by features such as s…",
+      "long_tail_summary": "RAG / 知识系统：This paper presents our algorithmic innovations for the NVIDIA Nemotron Model …",
       "related_trends": [
         "context-engineering"
       ],
-      "detail_path": "paper-detail.html?id=easy-reads-a-python-program-for-making-scientific-papers-on-arxiv-more-reader-friendly-and-accessible"
+      "detail_path": "paper-detail.html?id=teaching-llms-string-matching-backtracking-and-error-recovery-to-deduce-bases-and-truth-tables-for-the-combinatorially-exploding-bit-manipulation-puzzles"
     },
     {
-      "title": "Optimal Deterministic Multicalibration and Omniprediction",
+      "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
       "authors": [
-        "Georgy Noarov",
-        "Aaron Roth"
+        "Sunil Wanjari",
+        "Manish Thakre",
+        "Aayushi Asole",
+        "Sharwari Raut",
+        "Kwabena Adu-Duodu"
       ],
-      "published": "2026-06-18",
-      "updated": "2026-06-18",
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.20557v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.20557v1",
+      "url": "http://arxiv.org/abs/2606.23673v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23673v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each $g \\in G$. It is a useful property for many downstream applications and is a basic desideratum of trustworthy machine learning. Before this work, all predictors known to attain the minimax-optimal $\\widetilde O(\\varepsilon^{-3})$ sample complexity rate for $\\varepsilon$-multicalibration were random",
+      "abstract": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focus on individual indicators such as depression or anxiety while providing limited support for comprehensive and explainable decision-making. To address this limitation, this study proposes PsyBridge, a hybrid intelligent decision-support framework designed for multi-dimensional mental health assessme",
       "categories": [
-        "cs.LG",
-        "math.ST",
-        "stat.ML"
+        "cs.AI",
+        "cs.LG"
       ],
-      "keywords": [],
-      "score": 29.6,
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 30.6,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.20557v1"
+          "url": "http://arxiv.org/abs/2606.23673v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.20557v1"
+          "url": "https://arxiv.org/pdf/2606.23673v1"
         }
       ],
-      "id": "optimal-deterministic-multicalibration-and-omniprediction",
+      "id": "psybridge-a-hybrid-intelligent-framework-for-multi-dimensional-mental-health-assessment-and-decision-support",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -897,11 +854,11 @@
         "problem_importance": 4.5,
         "relevance": 3.8,
         "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
+        "engineering_testability": 4.05,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 5.0,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
         "noise_risk": 2.4,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 5.0,
@@ -909,16 +866,85 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
-      "one_line_judgement": "当前可忽略：前沿论文：A model is multicalibrated on a collection of group weights $G$ i…",
-      "first_seen_date": "2026-06-23",
-      "first_deep_dive_daily": "2026-06-23",
+      "brief_cn": "前沿论文：Mental health assessment commonly relies on isolated screening instruments or …",
+      "one_line_judgement": "当前可忽略：前沿论文：Mental health assessment commonly relies on isolated screening in…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：A model is multicalibrated on a collection of group weights $G$ if it is calib…",
+      "long_tail_summary": "前沿论文：Mental health assessment commonly relies on isolated screening instruments or …",
       "related_trends": [],
-      "detail_path": "paper-detail.html?id=optimal-deterministic-multicalibration-and-omniprediction"
+      "detail_path": "paper-detail.html?id=psybridge-a-hybrid-intelligent-framework-for-multi-dimensional-mental-health-assessment-and-decision-support"
+    },
+    {
+      "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+      "authors": [
+        "Sikai Li",
+        "Shuning Li",
+        "Zhenyu Wei",
+        "Yunchao Yao",
+        "Chenran Li"
+      ],
+      "published": "2026-06-22",
+      "updated": "2026-06-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.23680v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.23680v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freedom (DoF) end effectors that behave like an open-close grasp primitive. We introduce CoorDex, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation on the move. Starting from simulated",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 29.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.23680v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.23680v1"
+        }
+      ],
+      "id": "coordex-coordinating-body-and-hand-priors-for-continuous-dexterous-humanoid-loco-manipulation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go process: wal…",
+      "one_line_judgement": "当前可忽略：前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go…",
+      "first_seen_date": "2026-06-24",
+      "first_deep_dive_daily": "2026-06-24",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go process: wal…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=coordex-coordinating-body-and-hand-priors-for-continuous-dexterous-humanoid-loco-manipulation"
     }
   ],
   "long_tail_highlights": [
