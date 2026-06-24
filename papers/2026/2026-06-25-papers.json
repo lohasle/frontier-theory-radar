@@ -1,0 +1,630 @@
+{
+  "date": "2026-06-25",
+  "total": 10,
+  "generated_at": "2026-06-25T04:30:55.289369",
+  "papers": [
+    {
+      "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+      "authors": [
+        "Negin Raoof",
+        "Richard Zhuang",
+        "Marianna Nezhurina",
+        "Etash Guha",
+        "Atula Tejaswi"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24855v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24855v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24855v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24855v1"
+        }
+      ],
+      "llm_reason": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景就崩)。理论上是'数据配比即能力边界'，工程上可直接迁移为'多 benchmark 混合 SFT/RL 配方实验'，今天就能起最小验证。证据以方法+多 benchmark 对照为主，作者为 OpenThoughts 系列延续，方向可信；代码与复现入口暂无/待核验。",
+      "id": "openthoughts-agent-data-recipes-for-agentic-models",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge",
+        "llm-evaluation",
+        "coding-agent",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+      "authors": [
+        "Maggie Wang",
+        "Lars Osterberg",
+        "Stephen Tian",
+        "Ola Shorinwa",
+        "Jiajun Wu"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24884v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unlocks autonomous skill acquisition by rendering VLAs steerable at the primitive-action level (e.g., \"move gripper to the bowl\", \"lift upward\", \"pour the bottle\"). InSight consists of two primary stages: (1) an automated segmentation pipeline that partitions demonstrations into labeled primitives via VL",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 81.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24884v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24884v1"
+        }
+      ],
+      "llm_reason": "VLA(视觉-语言-动作)模型的能力被训练数据里的技能集合封顶，InSight 把它做成'可在原子动作层 steer'——先用 VL 自动把示教切分成带标签的 primitive(move/pour/lift)，再在推理时按指令组合。'技能=可命名、可组合的原子动作'这个抽象对所有 Agent 都成立(不只是机器人)：把长程任务分解为可复用 primitive 库、运行时按目标重组。这是 embodied/具身 Agent 与 skill library/分层规划趋势的核心命题。属方向性趋势而非可立即上线(机器人专属、无代码)，但概念贡献强、来自 Stanford(Wu)团队，证据待核验。",
+      "id": "insight-self-guided-skill-acquisition-via-steerable-vlas",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
+      "authors": [
+        "Haorui Ji",
+        "Weizhe Liu",
+        "Hongdong Li",
+        "Hengkai Guo"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24874v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24874v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Sparse voxel representation has emerged as a scalable foundation for image-to-3D Gaussian Splatting (3DGS) generation, yet current methods struggle to preserve high-frequency visual details of input images due to two structural bottlenecks. First, they adopt discriminative 2D features optimized for semantic abstraction to construct sparse voxel latents, which suppress reconstructive cues and induce a representation bottleneck. Second, in the generation stage, standard diffusion transformers lack",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 71.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24874v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24874v1"
+        }
+      ],
+      "llm_reason": "Image-to-3DGS 生成的两个结构性瓶颈：用判别式 2D 语义特征(擅长抽象)建稀疏体素 latent 会丢重建线索；标准扩散 Transformer 缺高频对齐。FLUX3D 针对'表示瓶颈+扩散对齐'给出方案。3D 资产生成是内容/AIGC 平台的重要趋势线，但与本雷达核心(Agent/推理/平台)相关性偏外围，属可观察的生成侧趋势。方法设计完整，代码/benchmark 暂无、待核验，故给趋势分而非即时分。",
+      "id": "flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+      "authors": [
+        "Guglielmo Beretta",
+        "Tommaso Cesari",
+        "Roberto Colomboni",
+        "Andrea Paudice"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24879v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24879v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We study the last iterate of the stochastic subgradient method for one-dimensional convex Lipschitz objectives. For a fixed horizon $n$, we consider the standard fixed stepsizes $η=Θ(1/\\sqrt n)$. We prove that, for such stepsize policies, under additive i.i.d. subgradient noise with uniformly bounded variance, the last iterate features an optimization error of order $1/\\sqrt n$, thereby removing the extra $(\\log n)$ factor present in existing generic bounds. On the other hand, we show that witho",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 56.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24879v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24879v1"
+        }
+      ],
+      "llm_reason": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下界)，但设定极窄(一维、凸)，与 LLM 训练(高维、非凸、AdamW/Muon)距离大，当下工程可操作性低。价值在于'优化器收敛率'这条长尾观察线——为未来优化器选型提供理论参照，值得保存但暂不投入。",
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
+      "authors": [
+        "Blade Frisch",
+        "Will Wade",
+        "Dylan Gaines",
+        "Michelle Kinsella",
+        "Betts Peters"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24854v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24854v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Artificial intelligence (AI) can enhance what people who use augmentative and alternative communication (AAC) are able to do with their systems. However, evaluating AI-powered AAC interfaces can be difficult. People are intersectional beings and current evaluation metrics can struggle to capture the multifaceted and nuanced desires people may have for their AAC. We explore the complicated nature of six AAC problem spaces, explore how AI might be used in these spaces, and suggest more robust meth",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 49.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24854v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24854v1"
+        }
+      ],
+      "llm_reason": "AAC(辅助与替代通信)界面的 AI 设计与评估方法学，属 HCI 细分领域。核心贡献是'评估指标难以捕捉交叉性人群的多维诉求'这一方法学讨论，与本雷达的 Agent/推理/平台主线相关性低、难以转化为可复用工程资产。建议暂时忽略，保留最小索引。",
+      "id": "it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "World Models in Pieces: Structural Certification for General Agents",
+      "authors": [
+        "Yikai Lu",
+        "Yifei Wu",
+        "Xinyu Lu",
+        "Tongxin Li"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24842v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24842v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In the big-world regime, agents cannot be universally capable and their ability is inevitably specialized across a world model in pieces. Consequently, standard uniform guarantees fail to distinguish between the understanding of critical bottlenecks and irrelevant failures. We first formalize this limitation by proving that general agents are not universal, rendering standard worst-case analysis uninformative. To overcome this, we introduce structural certification, a transition-local framework ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "world model",
+        "planning"
+      ],
+      "score": 40.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24842v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24842v1"
+        }
+      ],
+      "id": "world-models-in-pieces-structural-certification-for-general-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System",
+      "authors": [
+        "Tian Zheng",
+        "Kai-Tai Hsu"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24839v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24839v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Agentic data analysis systems produce rich outputs, including code, numerical results, and verbal diagnostics. This makes them more challenging to evaluate than single-turn LLM responses. It is therefore necessary to distinguish genuine disagreement between an agent's output and a ground-truth answer from grading artifacts. We investigate how reliably automated graders assess such a system and what strategies improve grading quality by applying LAMBDA, a multi-agent data-analysis system, on 153 ",
+      "categories": [
+        "cs.AI",
+        "stat.AP"
+      ],
+      "keywords": [
+        "agent",
+        "agentic"
+      ],
+      "score": 39.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24839v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24839v1"
+        }
+      ],
+      "id": "grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-system",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "IV-CoT: Implicit Visual Chain-of-Thought for Structure-Aware Text-to-Image Generation",
+      "authors": [
+        "Zixuan Li",
+        "Haokun Lin",
+        "Yicheng Xiao",
+        "Zhiwei Li",
+        "Xinyang Song"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24849v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24849v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Unified multi-modal large language models (MLLMs) have achieved strong text-to-image generation quality, but still struggle with structure-aware prompt following, where object counts, spatial relations, attribute bindings, and coarse layouts must be preserved. We attribute this limitation in part to the entanglement of structural planning and appearance rendering within a single conditioning stream. To address this issue, we propose Implicit Visual Chain-of-Thought (IV-CoT), a latent visual reas",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG",
+        "inference",
+        "planning"
+      ],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24849v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24849v1"
+        }
+      ],
+      "id": "iv-cot-implicit-visual-chain-of-thought-for-structure-aware-text-to-image-generation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-trained Language Models",
+      "authors": [
+        "Ahmad Pouramini",
+        "Hesham Faili"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24841v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24841v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study explores the impact of diverse pre-training objectives on the performance of encoder-decoder pre-trained language models across generation and question answering tasks, with a focus on commonsense knowledge retrieval and completion. We highlight the benefits of incorporating multiple objectives during both pre-training and fine-tuning stages. We introduce the Match Task to Objective (MTO) framewor",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24841v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24841v1"
+        }
+      ],
+      "id": "matching-tasks-to-objectives-fine-tuning-and-prompt-tuning-strategies-for-encoder-decoder-pre-trained-language-models",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Real vs. Complex Spectral Bases for Neural Operators: The Role of Green's Function Alignment",
+      "authors": [
+        "Jason Sulskis",
+        "Sathya Ravi"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24851v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24851v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Fourier Neural Operators (FNO) learn solution operators of partial differential equations by parameterizing global convolutions in the complex Fourier domain. For real-valued PDE solutions, the complex FFT carries representational redundancy through conjugate symmetry. We introduce the Hartley Neural Operator (HNO), the exact real-valued mirror of FNO: it replaces the FFT with the purely real Discrete Hartley Transform and learns a single real multiplier per retained spectral mode, with no compl",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24851v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24851v1"
+        }
+      ],
+      "id": "real-vs-complex-spectral-bases-for-neural-operators-the-role-of-green-s-function-alignment",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    }
+  ],
+  "scored_at": "2026-06-25"
+}

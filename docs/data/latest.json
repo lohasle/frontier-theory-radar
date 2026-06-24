@@ -1,109 +1,127 @@
 {
-  "updated_at": "2026-06-24T04:33:01.691649",
+  "updated_at": "2026-06-25T04:33:18.116141",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-06-24",
-    "title": "论文价值发现日报 - 2026-06-24",
-    "deep_dive_title": "Tapered Language Models",
-    "deep_dive_url": "http://arxiv.org/abs/2606.23670v1",
+    "date": "2026-06-25",
+    "title": "论文价值发现日报 - 2026-06-25",
+    "deep_dive_title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+    "deep_dive_url": "http://arxiv.org/abs/2606.24855v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "三件事：列出 Tapered LM 最小实验的指标与对照；设计 Randomized YaRN 长度外推验证计划；把 AdamW 重尾、AIR、对抗自省三篇纳入训练侧与安全侧趋势观察清单。",
-    "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者可信度，需持续跟踪作者主页与 GitHub。",
-    "one_line_judgement": "它挑战的是 Transformer 自诞生以来几乎没人质疑过的默认设计——'每一层参数均匀分配'。大量证据表明后期层更多在'精炼'而非'变换'残差流，那么容量就该沿深度递减(taper)。这是对所有 LLM 训练与推理成本都成立的结构性优化，不是又一个 trick。",
-    "path": "daily-detail.html?date=2026-06-24"
+    "daily_action": "三件事：列出 OT-Agent 跨任务数据配方的最小实验(异质 benchmark 集 + 单任务/多任务对照 + 保持率指标)；把 InSight 的'原子动作分解+运行时 steer'纳入具身 Agent/skill-library 趋势观察清单；把次梯度界、FLUX3D、AAC 三篇存入长尾/忽略索引并标注 revisit 条件。",
+    "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续、InSight 属 Stanford Wu 团队)，需持续跟踪作者主页与 GitHub。",
+    "one_line_judgement": "它回答的是 Agent 工程界最缺公开答案的问题——'拿什么数据、按什么配方，才能训出跨多类任务都不崩的 Agentic 模型'。现有开源努力几乎都只盯单个 benchmark(SWE-Smith/SERA/Nemotron-Terminal)，跨任务泛化是空白；OT-Agent 给出完全开放的数据策展流水线，这恰好是自有 Agent 落地时'单任务过拟合、换场景就退化'的真实痛点。",
+    "path": "daily-detail.html?date=2026-06-25"
   },
   "top_paper": {
-    "title": "Tapered Language Models",
+    "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
     "authors": [
-      "Reza Bayat",
-      "Ali Behrouz",
-      "Aaron Courville"
+      "Negin Raoof",
+      "Richard Zhuang",
+      "Marianna Nezhurina",
+      "Etash Guha",
+      "Atula Tejaswi"
     ],
-    "published": "2026-06-22",
-    "updated": "2026-06-22",
+    "published": "2026-06-23",
+    "updated": "2026-06-23",
     "source": "arXiv",
-    "url": "http://arxiv.org/abs/2606.23670v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.23670v1",
+    "url": "http://arxiv.org/abs/2606.24855v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.24855v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This is a default inherited from the original transformer and largely unchanged since, yet a growing body of evidence suggests that layers contribute non-uniformly to the final output, with later layers refining the residual stream rather than transforming it. We ask whether parameter capacity should ref",
+    "abstract": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct",
     "categories": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CL"
+      "cs.AI"
     ],
     "keywords": [
-      "memory",
-      "benchmark"
+      "agent",
+      "agentic",
+      "benchmark",
+      "RAG"
     ],
-    "score": 85.0,
+    "score": 84.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2606.23670v1"
+        "url": "http://arxiv.org/abs/2606.24855v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2606.23670v1"
+        "url": "https://arxiv.org/pdf/2606.24855v1"
       }
     ],
-    "llm_reason": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训练/推理成本都成立的结构性杠杆——哪怕只 taper 掉少量冗余层/参数，也能在近乎零质量损失下减少FLOPs与显存。可立即在现有模型上做'逐层重要性探测+渐进剪枝/缩容'最小实验，工程可验证性极高；作者 Behrouz/Courville 来自 MILA，理论可信度强，但代码/benchmark 暂无、待核验。",
-    "id": "tapered-language-models",
+    "llm_reason": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景就崩)。理论上是'数据配比即能力边界'，工程上可直接迁移为'多 benchmark 混合 SFT/RL 配方实验'，今天就能起最小验证。证据以方法+多 benchmark 对照为主，作者为 OpenThoughts 系列延续，方向可信；代码与复现入口暂无/待核验。",
+    "id": "openthoughts-agent-data-recipes-for-agentic-models",
     "value_type": "immediate",
     "matched_topics": [
-      "inference-serving",
-      "context-engineering",
-      "llm-evaluation"
+      "ai-agent",
+      "rag-knowledge",
+      "llm-evaluation",
+      "coding-agent",
+      "data-engineering"
     ],
     "score_breakdown": {
       "novelty": 4.8,
-      "problem_importance": 5.15,
-      "relevance": 5.0,
-      "evidence_strength": 4.5,
-      "engineering_testability": 3.5,
-      "trend_signal": 4.05,
+      "problem_importance": 5.8,
+      "relevance": 6.2,
+      "evidence_strength": 4.95,
+      "engineering_testability": 4.05,
+      "trend_signal": 6.0,
       "long_tail_potential": 3.5,
-      "asset_convertibility": 4.8,
+      "asset_convertibility": 5.6,
       "actionability": 3.8,
       "noise_risk": 1.2,
       "weak_evidence_penalty": 5.0,
-      "low_relevance_penalty": 3.6,
+      "low_relevance_penalty": 2.2,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "推理与服务：Modern language models, including transformer, recurrent, and memory-based var…",
-    "one_line_judgement": "今天值得试：直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因…",
-    "first_seen_date": "2026-06-24",
-    "first_deep_dive_daily": "2026-06-24",
+    "brief_cn": "AI Agent：Agentic language models dramatically expand the applications of AI yet little …",
+    "one_line_judgement": "今天值得试：直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SW…",
+    "first_seen_date": "2026-06-25",
+    "first_deep_dive_daily": "2026-06-25",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训",
+    "long_tail_summary": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Term",
     "related_trends": [
+      "agentic-world-modeling",
       "context-engineering",
       "coding-agent"
     ],
-    "detail_path": "paper-detail.html?id=tapered-language-models"
+    "detail_path": "paper-detail.html?id=openthoughts-agent-data-recipes-for-agentic-models"
   },
-  "paper_count": 359,
+  "paper_count": 369,
   "daily_count": 30,
   "trend_count": 3,
-  "long_tail_count": 37,
+  "long_tail_count": 38,
   "value_distribution": {
-    "immediate": 37,
-    "trend": 45,
-    "long_tail": 37,
-    "ignore": 240
+    "immediate": 38,
+    "trend": 47,
+    "long_tail": 38,
+    "ignore": 246
   },
   "recent_dailies": [
+    {
+      "date": "2026-06-25",
+      "title": "论文价值发现日报 - 2026-06-25",
+      "deep_dive_title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+      "deep_dive_url": "http://arxiv.org/abs/2606.24855v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 OT-Agent 跨任务数据配方的最小实验(异质 benchmark 集 + 单任务/多任务对照 + 保持率指标)；把 InSight 的'原子动作分解+运行时 steer'纳入具身 Agent/skill-library 趋势观察清单；把次梯度界、FLUX3D、AAC 三篇存入长尾/忽略索引并标注 revisit 条件。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续、InSight 属 Stanford Wu 团队)，需持续跟踪作者主页与 GitHub。",
+      "one_line_judgement": "它回答的是 Agent 工程界最缺公开答案的问题——'拿什么数据、按什么配方，才能训出跨多类任务都不崩的 Agentic 模型'。现有开源努力几乎都只盯单个 benchmark(SWE-Smith/SERA/Nemotron-Terminal)，跨任务泛化是空白；OT-Agent 给出完全开放的数据策展流水线，这恰好是自有 Agent 落地时'单任务过拟合、换场景就退化'的真实痛点。",
+      "path": "daily-detail.html?date=2026-06-25"
+    },
     {
       "date": "2026-06-24",
       "title": "论文价值发现日报 - 2026-06-24",
@@ -181,463 +199,143 @@
       "max_uncertainty": "DIA 的企业数据集端到端成功率和代码修复回路效率需确认（摘要截断）；OmniAgent 的全模态融合具体收益与 POMDP 求解开销需原文；Rubric-Conditioned 的跨基准消融与通用性需验证；Explaining Attention 的程序等价性在大规模注意力头上能否保持需确认；Turing-RL 的下游 agent 训练增益需原文确认",
       "one_line_judgement": "它把自主编码 Agent（ACA）作为一等执行抽象——三 Agent 直接生成、执行、校验、修复代码，而非仅输出文本建议。生产数据集成被 data owner/engineer/analyst 之间有损人工交接长期拖慢，DIA 给出最直接的落地路径。",
       "path": "daily-detail.html?date=2026-06-19"
-    },
-    {
-      "date": "2026-06-15",
-      "title": "论文价值发现日报 - 2026-06-15",
-      "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
-      "deep_dive_url": "",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "本日网络不可用，无可执行的学习/验证动作；恢复网络后重跑 2026-06-15 完整流水线覆盖占位。",
-      "max_uncertainty": "环境出站 HTTPS 被完全拦截（多主机 SSL_ERROR_SYSCALL），DNS 正常，疑似出站防火墙/代理策略，恢复时间未知。",
-      "one_line_judgement": "待补充价值判断",
-      "path": "daily-detail.html?date=2026-06-15"
     }
   ],
   "top_papers": [
     {
-      "title": "Tapered Language Models",
+      "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
       "authors": [
-        "Reza Bayat",
-        "Ali Behrouz",
-        "Aaron Courville"
+        "Negin Raoof",
+        "Richard Zhuang",
+        "Marianna Nezhurina",
+        "Etash Guha",
+        "Atula Tejaswi"
       ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23670v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23670v1",
+      "url": "http://arxiv.org/abs/2606.24855v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24855v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This is a default inherited from the original transformer and largely unchanged since, yet a growing body of evidence suggests that layers contribute non-uniformly to the final output, with later layers refining the residual stream rather than transforming it. We ask whether parameter capacity should ref",
+      "abstract": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-Terminal typically target a single benchmark, leaving open the question of how to train models that generalize across diverse agentic tasks. The OpenThoughts-Agent (OT-Agent) project addresses this gap with a fully open data curation pipeline for training agentic models. We conduct",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "keywords": [
-        "memory",
-        "benchmark"
-      ],
-      "score": 85.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23670v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23670v1"
-        }
-      ],
-      "llm_reason": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训练/推理成本都成立的结构性杠杆——哪怕只 taper 掉少量冗余层/参数，也能在近乎零质量损失下减少FLOPs与显存。可立即在现有模型上做'逐层重要性探测+渐进剪枝/缩容'最小实验，工程可验证性极高；作者 Behrouz/Courville 来自 MILA，理论可信度强，但代码/benchmark 暂无、待核验。",
-      "id": "tapered-language-models",
-      "value_type": "immediate",
-      "matched_topics": [
-        "inference-serving",
-        "context-engineering",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "推理与服务：Modern language models, including transformer, recurrent, and memory-based var…",
-      "one_line_judgement": "今天值得试：直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "直击Transformer架构最被默认的假设：层数间参数均匀分配。文章指出后期层更多是'精炼'residual stream而非'变换'，因此容量应沿深度渐缩(taper)。这是对所有LLM训",
-      "related_trends": [
-        "context-engineering",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=tapered-language-models"
-    },
-    {
-      "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
-      "authors": [
-        "Manas Mehta",
-        "Fangcong Yin",
-        "Greg Durrett"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23687v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23687v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encoding",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [
-        "benchmark"
-      ],
-      "score": 82.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23687v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23687v1"
-        }
-      ],
-      "llm_reason": "长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized YaRN 把 YaRN 位置外推、随机化位置编码与长度课程结合，命题可直接在自有长上下文模型上做'固定训练长度→外推 2x/4x→测困惑度与长程检索'的最小验证。证据以方法设计+benchmark为主，代码与复现资产暂无、待核验，但方向高度贴合工程现实。",
-      "id": "randomized-yarn-improves-length-generalization-for-long-context-reasoning",
-      "value_type": "immediate",
-      "matched_topics": [
-        "context-engineering",
-        "inference-serving",
-        "rag-knowledge"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.6,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 5.0,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 4.0,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Context Engineering：Large language models (LLMs) are typically pretrained on short sequences and t…",
-      "one_line_judgement": "今天值得试：长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized …",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "长上下文服务是生产核心痛点(RAG、Agent记忆、长文档)，而'训练序列短、推理序列长'的外推失败是真实线上故障源。Randomized YaRN 把 YaRN 位置外推、随机化位置编码与长",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=randomized-yarn-improves-length-generalization-for-long-context-reasoning"
-    },
-    {
-      "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
-      "authors": [
-        "Dingzhi Yu",
-        "Hongyi Tao",
-        "Yuanyu Wan",
-        "Luo Luo",
-        "Lijun Zhang"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23676v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23676v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evidence indicates that stochastic gradient noise in LLM pretraining is typically heavy-tailed. Recent work shows that sign-based optimizers such as Lion and Muon achieve sharp heavy-tailed rates, and that AdaGrad can also converge under heavy-tailed noise. However, no rigorous convergence theory for Ada",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "math.OC",
-        "stat.ML"
-      ],
-      "keywords": [
-        "memory",
-        "benchmark"
-      ],
-      "score": 80.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23676v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23676v1"
-        }
-      ],
-      "llm_reason": "AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否有收敛保证？并对照 Lion/Muon(sign-based)、AdaGrad 已有的重尾收敛率。对训练基础设施团队高度相关——它直接影响'AdamW vs Muon/Lion'的选型决策，是当下最活跃的训练侧争论之一。属方向性理论信号而非可立即上线的方案，故归为趋势；但理论框架清晰、来自 Luo Luo/Lijun Zhang 团队，证据强度可信。",
-      "id": "open-problem-is-adamw-effective-under-heavy-tailed-noise",
-      "value_type": "trend",
-      "matched_topics": [
-        "inference-serving",
-        "security-governance",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 4.0,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "推理与服务：AdamW is the de facto optimizer for training large language models (LLMs), yet…",
-      "one_line_judgement": "值得继续观察：AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "AdamW 是LLM预训练的事实标准优化器，而梯度噪声'重尾'是已知的经验事实。本文把它做成一个严谨的开放问题：AdamW 在重尾噪声下是否有收敛保证？并对照 Lion/Muon(sign-b",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=open-problem-is-adamw-effective-under-heavy-tailed-noise"
-    },
-    {
-      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
-      "authors": [
-        "Cong Han",
-        "Xiaohan Lan",
-        "Haibo Qiu",
-        "Yujie Zhong"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23678v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23678v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature focuses primarily on tool-use within vision-perception tasks. However, such approaches typically rely on predefined heuristics for visual manipulation and are inherently incapable of addressing numerical computation problems due to their exclusive focus on visual operations. This paper empowers MLL",
-      "categories": [
-        "cs.CV",
         "cs.AI"
-      ],
-      "keywords": [
-        "evaluation",
-        "benchmark",
-        "RAG",
-        "multimodal"
-      ],
-      "score": 78.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23678v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23678v1"
-        }
-      ],
-      "llm_reason": "承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视觉操作启发式。这与多模态Agent、tool-use工程链路高度同构(规划→生成代码→执行→回读结果)。适合作为多模态Agent推理架构的趋势观察资产；方法设计完整，但代码/复现入口暂无、待核验，且自适应触发策略的鲁棒性需跨场景验证。",
-      "id": "air-adaptive-interleaved-reasoning-with-code-in-mllms",
-      "value_type": "trend",
-      "matched_topics": [
-        "multimodal-agent",
-        "coding-agent",
-        "ai-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Multimodal Agent：Following the paradigm shift initiated by OpenAI o3, interleaved reasoning wit…",
-      "one_line_judgement": "值得继续观察：承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "承接 OpenAI o3 开启的'交错代码推理'范式，把它从纯视觉感知扩展到数值计算：让MLLM自适应地交错生成代码并执行，而非依赖预定义视觉操作启发式。这与多模态Agent、tool-use",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=air-adaptive-interleaved-reasoning-with-code-in-mllms"
-    },
-    {
-      "title": "Can LLMs Reliably Self-Report Adversarial Prefills, and How?",
-      "authors": [
-        "Quang Minh Nguyen",
-        "Uzair Ahmed",
-        "Taegyoon Kim"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23671v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23671v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Prior work shows that large language models (LLMs) exhibit introspective capability on benign tasks. We extend the question to safety contexts and examine how reliably a model can recognize that its own prior response was elicited by an adversarial prefill attack. Across ten open-weight instruction-tuned LLMs (3B to 70B) and four safety benchmarks, no model reliably recognizes its own compromised outputs, with models claiming intent on prefilled responses at an average rate of $27.3\\%$. Introspe",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [
-        "benchmark",
-        "RAG"
-      ],
-      "score": 75.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23671v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23671v1"
-        }
-      ],
-      "llm_reason": "服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 prefill 攻击诱导的'，平均27.3%会把被诱导的回答归因于自身意图。这直接说明'靠模型自省做内容安全审计'这条路不可靠，必须用外部guardrail/审计层。证据强度高(多模型+多benchmark+具体数值)，对线上安全治理有即时指导意义，故虽无代码也给出较高分；归属趋势(安全治理观察线)。",
-      "id": "can-llms-reliably-self-report-adversarial-prefills-and-how",
-      "value_type": "trend",
-      "matched_topics": [
-        "security-governance",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 5.45,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.6,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "安全与治理：Prior work shows that large language models (LLMs) exhibit introspective capab…",
-      "one_line_judgement": "值得继续观察：服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 …",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "服务安全侧的硬证据型研究：跨10个开源LLM(3B-70B)、4个安全benchmark，发现没有任何模型能可靠自省'自己的回答是被对抗性 prefill 攻击诱导的'，平均27.3%会把被诱",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=can-llms-reliably-self-report-adversarial-prefills-and-how"
-    },
-    {
-      "title": "Semantic Browsing: Controllable Diversity for Image Generation",
-      "authors": [
-        "Sara Dorfman",
-        "Maya Vishnevsky",
-        "Omer Dahary",
-        "Or Patashnik",
-        "Daniel Cohen-Or"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23679v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23679v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interpretation. Existing methods to improve diversity produce outputs driven by incidental variations rather than meaningful design choices. This motivates a new variant of the diversity task where structure is enforced on the generated samples. We introduce a method for controlled diversity that enables ",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.GR",
-        "cs.LG"
       ],
       "keywords": [
         "agent",
         "agentic",
+        "benchmark",
         "RAG"
       ],
-      "score": 35.7,
-      "decision": "暂时忽略",
+      "score": 84.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23679v1"
+          "url": "http://arxiv.org/abs/2606.24855v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23679v1"
+          "url": "https://arxiv.org/pdf/2606.24855v1"
         }
       ],
-      "id": "semantic-browsing-controllable-diversity-for-image-generation",
-      "value_type": "ignore",
+      "llm_reason": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景就崩)。理论上是'数据配比即能力边界'，工程上可直接迁移为'多 benchmark 混合 SFT/RL 配方实验'，今天就能起最小验证。证据以方法+多 benchmark 对照为主，作者为 OpenThoughts 系列延续，方向可信；代码与复现入口暂无/待核验。",
+      "id": "openthoughts-agent-data-recipes-for-agentic-models",
+      "value_type": "immediate",
       "matched_topics": [
-        "context-engineering"
+        "ai-agent",
+        "rag-knowledge",
+        "llm-evaluation",
+        "coding-agent",
+        "data-engineering"
       ],
       "score_breakdown": {
-        "novelty": 5.4,
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Agentic language models dramatically expand the applications of AI yet little …",
+      "one_line_judgement": "今天值得试：直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SW…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Term",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=openthoughts-agent-data-recipes-for-agentic-models"
+    },
+    {
+      "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+      "authors": [
+        "Maggie Wang",
+        "Lars Osterberg",
+        "Stephen Tian",
+        "Ola Shorinwa",
+        "Jiajun Wu"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24884v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unlocks autonomous skill acquisition by rendering VLAs steerable at the primitive-action level (e.g., \"move gripper to the bowl\", \"lift upward\", \"pour the bottle\"). InSight consists of two primary stages: (1) an automated segmentation pipeline that partitions demonstrations into labeled primitives via VL",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 81.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24884v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24884v1"
+        }
+      ],
+      "llm_reason": "VLA(视觉-语言-动作)模型的能力被训练数据里的技能集合封顶，InSight 把它做成'可在原子动作层 steer'——先用 VL 自动把示教切分成带标签的 primitive(move/pour/lift)，再在推理时按指令组合。'技能=可命名、可组合的原子动作'这个抽象对所有 Agent 都成立(不只是机器人)：把长程任务分解为可复用 primitive 库、运行时按目标重组。这是 embodied/具身 Agent 与 skill library/分层规划趋势的核心命题。属方向性趋势而非可立即上线(机器人专属、无代码)，但概念贡献强、来自 Stanford(Wu)团队，证据待核验。",
+      "id": "insight-self-guided-skill-acquisition-via-steerable-vlas",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
         "problem_importance": 5.15,
         "relevance": 5.0,
         "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
+        "engineering_testability": 4.6,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "asset_convertibility": 6.2,
@@ -648,216 +346,75 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "Context Engineering：Modern text-to-image models excel in visual fidelity and prompt adherence. How…",
-      "one_line_judgement": "当前可忽略：Context Engineering：Modern text-to-image models excel in visual fideli…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Context Engineering：Modern text-to-image models excel in visual fidelity and prompt adherence. H",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=semantic-browsing-controllable-diversity-for-image-generation"
-    },
-    {
-      "title": "AutoDex: An Automated Real-World System for Dexterous Grasping Data Collection",
-      "authors": [
-        "Mingi Choi",
-        "Gunhee Kim",
-        "Jisoo Kim",
-        "Taeksoo Kim",
-        "Taeyun Ha"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23689v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23689v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Learning robust dexterous grasping requires real-world data that records the physical outcomes of grasp attempts. Such data is hard to obtain at scale: teleoperation yields valid physical outcomes but is slow and operator-biased, while simulation-based generation is cheap and scalable but cannot certify contact validity. A natural solution is to generate candidate grasps and verify them on real hardware, but this scales only if the entire collection loop (perception, execution, labeling, and res",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "keywords": [],
-      "score": 35.2,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23689v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23689v1"
-        }
-      ],
-      "id": "autodex-an-automated-real-world-system-for-dexterous-grasping-data-collection",
-      "value_type": "ignore",
-      "matched_topics": [
-        "multimodal-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "Multimodal Agent：Learning robust dexterous grasping requires real-world data that records the p…",
-      "one_line_judgement": "当前可忽略：Multimodal Agent：Learning robust dexterous grasping requires real-worl…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Multimodal Agent：Learning robust dexterous grasping requires real-world data that records the p…",
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Vision-language-action (VLA) models can learn manipulation skills from demonst…",
+      "one_line_judgement": "值得继续观察：VLA(视觉-语言-动作)模型的能力被训练数据里的技能集合封顶，InSight 把它做成'可在原子动作层 steer'——先用 VL 自动把…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "VLA(视觉-语言-动作)模型的能力被训练数据里的技能集合封顶，InSight 把它做成'可在原子动作层 steer'——先用 VL 自动把示教切分成带标签的 primitive(move/p",
       "related_trends": [
         "agentic-world-modeling"
       ],
-      "detail_path": "paper-detail.html?id=autodex-an-automated-real-world-system-for-dexterous-grasping-data-collection"
+      "detail_path": "paper-detail.html?id=insight-self-guided-skill-acquisition-via-steerable-vlas"
     },
     {
-      "title": "Teaching LLMs String Matching, Backtracking, and Error Recovery to Deduce Bases and Truth Tables for the Combinatorially Exploding Bit Manipulation Puzzles",
+      "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
       "authors": [
-        "Prateek Agnihotri",
-        "Sanchit Jain",
-        "Prabhat Agnihotri",
-        "Aditya Prasad",
-        "Shubham Jain"
+        "Haorui Ji",
+        "Weizhe Liu",
+        "Hongdong Li",
+        "Hengkai Guo"
       ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23672v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23672v1",
+      "url": "http://arxiv.org/abs/2606.24874v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24874v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "This paper presents our algorithmic innovations for the NVIDIA Nemotron Model Reasoning Challenge, focusing on Bit Manipulation Puzzles. In this task, the objective is to discover a hidden logical rule transforming input binary strings to outputs, then apply it to unseen inputs. Large Language Models (LLMs) notoriously struggle here; traditional methods force them to simulate complex boolean logic and arithmetic, leading to hallucinations. Furthermore, the search space of bitwise operations (com",
+      "abstract": "Sparse voxel representation has emerged as a scalable foundation for image-to-3D Gaussian Splatting (3DGS) generation, yet current methods struggle to preserve high-frequency visual details of input images due to two structural bottlenecks. First, they adopt discriminative 2D features optimized for semantic abstraction to construct sparse voxel latents, which suppress reconstructive cues and induce a representation bottleneck. Second, in the generation stage, standard diffusion transformers lack",
       "categories": [
+        "cs.CV",
         "cs.AI"
       ],
       "keywords": [
-        "RAG"
+        "benchmark",
+        "multimodal"
       ],
-      "score": 33.5,
-      "decision": "暂时忽略",
+      "score": 71.0,
+      "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23672v1"
+          "url": "http://arxiv.org/abs/2606.24874v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23672v1"
+          "url": "https://arxiv.org/pdf/2606.24874v1"
         }
       ],
-      "id": "teaching-llms-string-matching-backtracking-and-error-recovery-to-deduce-bases-and-truth-tables-for-the-combinatorially-exploding-bit-manipulation-puzzles",
-      "value_type": "ignore",
+      "llm_reason": "Image-to-3DGS 生成的两个结构性瓶颈：用判别式 2D 语义特征(擅长抽象)建稀疏体素 latent 会丢重建线索；标准扩散 Transformer 缺高频对齐。FLUX3D 针对'表示瓶颈+扩散对齐'给出方案。3D 资产生成是内容/AIGC 平台的重要趋势线，但与本雷达核心(Agent/推理/平台)相关性偏外围，属可观察的生成侧趋势。方法设计完整，代码/benchmark 暂无、待核验，故给趋势分而非即时分。",
+      "id": "flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation",
+      "value_type": "trend",
       "matched_topics": [
-        "rag-knowledge"
+        "multimodal-agent",
+        "llm-evaluation"
       ],
       "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
+        "novelty": 6.0,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
         "evidence_strength": 4.5,
         "engineering_testability": 3.5,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：This paper presents our algorithmic innovations for the NVIDIA Nemotron Model …",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：This paper presents our algorithmic innovations for the NVI…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RAG / 知识系统：This paper presents our algorithmic innovations for the NVIDIA Nemotron Model …",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=teaching-llms-string-matching-backtracking-and-error-recovery-to-deduce-bases-and-truth-tables-for-the-combinatorially-exploding-bit-manipulation-puzzles"
-    },
-    {
-      "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
-      "authors": [
-        "Sunil Wanjari",
-        "Manish Thakre",
-        "Aayushi Asole",
-        "Sharwari Raut",
-        "Kwabena Adu-Duodu"
-      ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23673v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23673v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focus on individual indicators such as depression or anxiety while providing limited support for comprehensive and explainable decision-making. To address this limitation, this study proposes PsyBridge, a hybrid intelligent decision-support framework designed for multi-dimensional mental health assessme",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "keywords": [
-        "evaluation"
-      ],
-      "score": 30.6,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23673v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23673v1"
-        }
-      ],
-      "id": "psybridge-a-hybrid-intelligent-framework-for-multi-dimensional-mental-health-assessment-and-decision-support",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.4,
+        "asset_convertibility": 4.0,
         "actionability": 3.8,
         "noise_risk": 2.4,
         "weak_evidence_penalty": 5.0,
@@ -865,57 +422,499 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：Mental health assessment commonly relies on isolated screening instruments or …",
-      "one_line_judgement": "当前可忽略：前沿论文：Mental health assessment commonly relies on isolated screening in…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：Mental health assessment commonly relies on isolated screening instruments or …",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=psybridge-a-hybrid-intelligent-framework-for-multi-dimensional-mental-health-assessment-and-decision-support"
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Sparse voxel representation has emerged as a scalable foundation for image-to-…",
+      "one_line_judgement": "值得继续观察：Image-to-3DGS 生成的两个结构性瓶颈：用判别式 2D 语义特征(擅长抽象)建稀疏体素 latent 会丢重建线索；标准扩散 Tr…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Image-to-3DGS 生成的两个结构性瓶颈：用判别式 2D 语义特征(擅长抽象)建稀疏体素 latent 会丢重建线索；标准扩散 Transformer 缺高频对齐。FLUX3D 针对'",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation"
     },
     {
-      "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
       "authors": [
-        "Sikai Li",
-        "Shuning Li",
-        "Zhenyu Wei",
-        "Yunchao Yao",
-        "Chenran Li"
+        "Guglielmo Beretta",
+        "Tommaso Cesari",
+        "Roberto Colomboni",
+        "Andrea Paudice"
       ],
-      "published": "2026-06-22",
-      "updated": "2026-06-22",
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.23680v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.23680v1",
+      "url": "http://arxiv.org/abs/2606.24879v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24879v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freedom (DoF) end effectors that behave like an open-close grasp primitive. We introduce CoorDex, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation on the move. Starting from simulated",
+      "abstract": "We study the last iterate of the stochastic subgradient method for one-dimensional convex Lipschitz objectives. For a fixed horizon $n$, we consider the standard fixed stepsizes $η=Θ(1/\\sqrt n)$. We prove that, for such stepsize policies, under additive i.i.d. subgradient noise with uniformly bounded variance, the last iterate features an optimization error of order $1/\\sqrt n$, thereby removing the extra $(\\log n)$ factor present in existing generic bounds. On the other hand, we show that witho",
       "categories": [
-        "cs.RO",
-        "cs.AI",
+        "math.OC",
         "cs.LG"
       ],
       "keywords": [],
-      "score": 29.2,
+      "score": 56.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24879v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24879v1"
+        }
+      ],
+      "llm_reason": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下界)，但设定极窄(一维、凸)，与 LLM 训练(高维、非凸、AdamW/Muon)距离大，当下工程可操作性低。价值在于'优化器收敛率'这条长尾观察线——为未来优化器选型提供理论参照，值得保存但暂不投入。",
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "推理与服务：We study the last iterate of the stochastic subgradient method for one-dimensi…",
+      "one_line_judgement": "值得先保存：纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method"
+    },
+    {
+      "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
+      "authors": [
+        "Blade Frisch",
+        "Will Wade",
+        "Dylan Gaines",
+        "Michelle Kinsella",
+        "Betts Peters"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24854v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24854v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Artificial intelligence (AI) can enhance what people who use augmentative and alternative communication (AAC) are able to do with their systems. However, evaluating AI-powered AAC interfaces can be difficult. People are intersectional beings and current evaluation metrics can struggle to capture the multifaceted and nuanced desires people may have for their AAC. We explore the complicated nature of six AAC problem spaces, explore how AI might be used in these spaces, and suggest more robust meth",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 49.0,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.23680v1"
+          "url": "http://arxiv.org/abs/2606.24854v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.23680v1"
+          "url": "https://arxiv.org/pdf/2606.24854v1"
         }
       ],
-      "id": "coordex-coordinating-body-and-hand-priors-for-continuous-dexterous-humanoid-loco-manipulation",
+      "llm_reason": "AAC(辅助与替代通信)界面的 AI 设计与评估方法学，属 HCI 细分领域。核心贡献是'评估指标难以捕捉交叉性人群的多维诉求'这一方法学讨论，与本雷达的 Agent/推理/平台主线相关性低、难以转化为可复用工程资产。建议暂时忽略，保留最小索引。",
+      "id": "it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：Artificial intelligence (AI) can enhance what people who use augmentative and …",
+      "one_line_judgement": "当前可忽略：AAC(辅助与替代通信)界面的 AI 设计与评估方法学，属 HCI 细分领域。核心贡献是'评估指标难以捕捉交叉性人群的多维诉求'这一方法学讨…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AAC(辅助与替代通信)界面的 AI 设计与评估方法学，属 HCI 细分领域。核心贡献是'评估指标难以捕捉交叉性人群的多维诉求'这一方法学讨论，与本雷达的 Agent/推理/平台主线相关性低、",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces"
+    },
+    {
+      "title": "World Models in Pieces: Structural Certification for General Agents",
+      "authors": [
+        "Yikai Lu",
+        "Yifei Wu",
+        "Xinyu Lu",
+        "Tongxin Li"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24842v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24842v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In the big-world regime, agents cannot be universally capable and their ability is inevitably specialized across a world model in pieces. Consequently, standard uniform guarantees fail to distinguish between the understanding of critical bottlenecks and irrelevant failures. We first formalize this limitation by proving that general agents are not universal, rendering standard worst-case analysis uninformative. To overcome this, we introduce structural certification, a transition-local framework ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "world model",
+        "planning"
+      ],
+      "score": 40.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24842v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24842v1"
+        }
+      ],
+      "id": "world-models-in-pieces-structural-certification-for-general-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：In the big-world regime, agents cannot be universally capable and their abilit…",
+      "one_line_judgement": "当前可忽略：AI Agent：In the big-world regime, agents cannot be universally capable…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：In the big-world regime, agents cannot be universally capable and their abilit…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=world-models-in-pieces-structural-certification-for-general-agents"
+    },
+    {
+      "title": "Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System",
+      "authors": [
+        "Tian Zheng",
+        "Kai-Tai Hsu"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24839v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24839v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Agentic data analysis systems produce rich outputs, including code, numerical results, and verbal diagnostics. This makes them more challenging to evaluate than single-turn LLM responses. It is therefore necessary to distinguish genuine disagreement between an agent's output and a ground-truth answer from grading artifacts. We investigate how reliably automated graders assess such a system and what strategies improve grading quality by applying LAMBDA, a multi-agent data-analysis system, on 153 ",
+      "categories": [
+        "cs.AI",
+        "stat.AP"
+      ],
+      "keywords": [
+        "agent",
+        "agentic"
+      ],
+      "score": 39.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24839v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24839v1"
+        }
+      ],
+      "id": "grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-system",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Agentic data analysis systems produce rich outputs, including code, numerical …",
+      "one_line_judgement": "当前可忽略：AI Agent：Agentic data analysis systems produce rich outputs, including…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Agentic data analysis systems produce rich outputs, including code, numerical …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=grading-the-grader-lessons-from-evaluating-an-agentic-data-analysis-system"
+    },
+    {
+      "title": "IV-CoT: Implicit Visual Chain-of-Thought for Structure-Aware Text-to-Image Generation",
+      "authors": [
+        "Zixuan Li",
+        "Haokun Lin",
+        "Yicheng Xiao",
+        "Zhiwei Li",
+        "Xinyang Song"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24849v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24849v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Unified multi-modal large language models (MLLMs) have achieved strong text-to-image generation quality, but still struggle with structure-aware prompt following, where object counts, spatial relations, attribute bindings, and coarse layouts must be preserved. We attribute this limitation in part to the entanglement of structural planning and appearance rendering within a single conditioning stream. To address this issue, we propose Implicit Visual Chain-of-Thought (IV-CoT), a latent visual reas",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG",
+        "inference",
+        "planning"
+      ],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24849v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24849v1"
+        }
+      ],
+      "id": "iv-cot-implicit-visual-chain-of-thought-for-structure-aware-text-to-image-generation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Unified multi-modal large language models (MLLMs) have achieved strong text-to…",
+      "one_line_judgement": "当前可忽略：AI Agent：Unified multi-modal large language models (MLLMs) have achiev…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Unified multi-modal large language models (MLLMs) have achieved strong text-to…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=iv-cot-implicit-visual-chain-of-thought-for-structure-aware-text-to-image-generation"
+    },
+    {
+      "title": "Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-trained Language Models",
+      "authors": [
+        "Ahmad Pouramini",
+        "Hesham Faili"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24841v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24841v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study explores the impact of diverse pre-training objectives on the performance of encoder-decoder pre-trained language models across generation and question answering tasks, with a focus on commonsense knowledge retrieval and completion. We highlight the benefits of incorporating multiple objectives during both pre-training and fine-tuning stages. We introduce the Match Task to Objective (MTO) framewor",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24841v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24841v1"
+        }
+      ],
+      "id": "matching-tasks-to-objectives-fine-tuning-and-prompt-tuning-strategies-for-encoder-decoder-pre-trained-language-models",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "Context Engineering：Prompt-based learning has emerged as a dominant paradigm in natural language p…",
+      "one_line_judgement": "当前可忽略：Context Engineering：Prompt-based learning has emerged as a dominant pa…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Context Engineering：Prompt-based learning has emerged as a dominant paradigm in natural language",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=matching-tasks-to-objectives-fine-tuning-and-prompt-tuning-strategies-for-encoder-decoder-pre-trained-language-models"
+    },
+    {
+      "title": "Real vs. Complex Spectral Bases for Neural Operators: The Role of Green's Function Alignment",
+      "authors": [
+        "Jason Sulskis",
+        "Sathya Ravi"
+      ],
+      "published": "2026-06-23",
+      "updated": "2026-06-23",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24851v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.24851v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Fourier Neural Operators (FNO) learn solution operators of partial differential equations by parameterizing global convolutions in the complex Fourier domain. For real-valued PDE solutions, the complex FFT carries representational redundancy through conjugate symmetry. We introduce the Hartley Neural Operator (HNO), the exact real-valued mirror of FNO: it replaces the FFT with the purely real Discrete Hartley Transform and learns a single real multiplier per retained spectral mode, with no compl",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.24851v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.24851v1"
+        }
+      ],
+      "id": "real-vs-complex-spectral-bases-for-neural-operators-the-role-of-green-s-function-alignment",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -923,7 +922,7 @@
         "problem_importance": 4.5,
         "relevance": 3.8,
         "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
+        "engineering_testability": 3.5,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.0,
@@ -935,19 +934,34 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go process: wal…",
-      "one_line_judgement": "当前可忽略：前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go…",
-      "first_seen_date": "2026-06-24",
-      "first_deep_dive_daily": "2026-06-24",
+      "brief_cn": "前沿论文：Fourier Neural Operators (FNO) learn solution operators of partial differentia…",
+      "one_line_judgement": "当前可忽略：前沿论文：Fourier Neural Operators (FNO) learn solution operators of partia…",
+      "first_seen_date": "2026-06-25",
+      "first_deep_dive_daily": "2026-06-25",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "前沿论文：Humanoid loco-manipulation is often simplified into a stop-and-go process: wal…",
+      "long_tail_summary": "前沿论文：Fourier Neural Operators (FNO) learn solution operators of partial differentia…",
       "related_trends": [],
-      "detail_path": "paper-detail.html?id=coordex-coordinating-body-and-hand-priors-for-continuous-dexterous-humanoid-loco-manipulation"
+      "detail_path": "paper-detail.html?id=real-vs-complex-spectral-bases-for-neural-operators-the-role-of-green-s-function-alignment"
     }
   ],
   "long_tail_highlights": [
+    {
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+      "direction": "推理与服务",
+      "long_tail_type": "可迁移方法",
+      "why_save": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-07-16",
+      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method"
+    },
     {
       "id": "how-transparent-is-diffusiongemma",
       "title": "How Transparent is DiffusionGemma?",
@@ -977,21 +991,6 @@
       ],
       "revisit_date": "2026-06-26",
       "detail_path": "paper-detail.html?id=plan-first-judge-later-run-better-a-dmaic-inspired-agentic-system-for-industrial-anomaly-detection"
-    },
-    {
-      "id": "findit-a-format-informed-visual-detection-benchmark-for-generalist-multimodal-llms",
-      "title": "FindIt: A Format-Informed Visual Detection Benchmark for Generalist Multimodal LLMs",
-      "direction": "AI Agent / Context Engineering",
-      "long_tail_type": "工程抽象",
-      "why_save": "AI Agent：Multimodal large language models (MLLMs) are predominantly evaluated on free-f…",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-06-26",
-      "detail_path": "paper-detail.html?id=findit-a-format-informed-visual-detection-benchmark-for-generalist-multimodal-llms"
     }
   ],
   "common_research_path": [

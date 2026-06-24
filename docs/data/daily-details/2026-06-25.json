@@ -1,0 +1,296 @@
+{
+  "date": "2026-06-25",
+  "title": "论文价值发现日报 - 2026-06-25",
+  "deep_dive_id": "openthoughts-agent-data-recipes-for-agentic-models",
+  "deep_dive_title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "decision": "重点学习",
+  "daily_action": "三件事：列出 OT-Agent 跨任务数据配方的最小实验(异质 benchmark 集 + 单任务/多任务对照 + 保持率指标)；把 InSight 的'原子动作分解+运行时 steer'纳入具身 Agent/skill-library 趋势观察清单；把次梯度界、FLUX3D、AAC 三篇存入长尾/忽略索引并标注 revisit 条件。",
+  "score": 84.0,
+  "trend_stage": "emerging",
+  "one_line_judgement": "今天值得试：直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SW…",
+  "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续、InSight 属 Stanford Wu 团队)，需持续跟踪作者主页与 GitHub。",
+  "conclusion_lines": [
+    "今天最值得看的是《OpenThoughts-Agent: Data Recipes for Agentic Models》。",
+    "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+    "今天建议动作：三件事：列出 OT-Agent 跨任务数据配方的最小实验(异质 benchmark 集 + 单任务/多任务对照 + 保持率指标)；把 InSight 的'原子动作分解+运行时 steer'纳入具身 Agent/skill-library 趋势观察清单；把次梯度界、FLUX3D、AAC 三篇存入长尾/忽略索引并标注 revisit 条件。。",
+    "最大不确定性：外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续、InSight 属 Stanford Wu 团队)，需持续跟踪作者主页与 GitHub。。"
+  ],
+  "candidate_papers": [
+    {
+      "id": "openthoughts-agent-data-recipes-for-agentic-models",
+      "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+      "detail_path": "paper-detail.html?id=openthoughts-agent-data-recipes-for-agentic-models",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 84.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "insight-self-guided-skill-acquisition-via-steerable-vlas",
+      "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+      "detail_path": "paper-detail.html?id=insight-self-guided-skill-acquisition-via-steerable-vlas",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 81.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation",
+      "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
+      "detail_path": "paper-detail.html?id=flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 71.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "direction": "未分类",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "score": 56.0,
+      "decision": "持续观察",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
+    },
+    {
+      "id": "it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces",
+      "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
+      "detail_path": "paper-detail.html?id=it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces",
+      "direction": "未分类",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 49.0,
+      "decision": "暂时忽略",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
+    }
+  ],
+  "deep_dive": {
+    "id": "openthoughts-agent-data-recipes-for-agentic-models",
+    "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+    "authors": [
+      "Negin Raoof",
+      "Richard Zhuang",
+      "Marianna Nezhurina",
+      "Etash Guha",
+      "Atula Tejaswi"
+    ],
+    "source": "arXiv",
+    "published": "2026-06-23",
+    "url": "http://arxiv.org/abs/2606.24855v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.24855v1",
+    "code_url": "",
+    "benchmark_url": "",
+    "paperswithcode_url": "",
+    "openreview_url": "",
+    "first_seen_date": "2026-06-25",
+    "first_deep_dive_daily": "2026-06-25",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "value_scores": {
+      "novelty": 4.8,
+      "relevance": 6.2,
+      "evidence": 4.95,
+      "engineering_testability": 4.05,
+      "trend_signal": 6.0,
+      "long_tail_potential": 3.5,
+      "actionability": 3.8,
+      "noise_risk": 1.2
+    },
+    "score": 84.0,
+    "decision": "重点学习",
+    "one_line_judgement": "今天值得试：直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SW…",
+    "one_line_essence": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景就崩)。理论上是'数据配比即能力边界'，工程上可直接迁移为'多 benchmark 混合 SFT/RL 配方实验'，今天就能起最小验证。证据以方法+多 benchmark 对照为主，作者为 OpenThoughts 系列延续，方向可信；代码与复现入口暂无/待核验。",
+    "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+    "new_claim_or_method": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景",
+    "research_position": "benchmark",
+    "engineering_testability": {
+      "has_code": false,
+      "has_benchmark": false,
+      "can_reproduce": false,
+      "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+      "engineering_scenarios": [
+        "AI Agent",
+        "Context Engineering",
+        "评测治理"
+      ]
+    },
+    "trend_relation": {
+      "status": "emerging",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "evidence": [
+        "论文主题匹配固定研究方向"
+      ],
+      "uncertainties": [
+        "是否会出现更多开源实现与生产案例"
+      ]
+    },
+    "long_tail": {
+      "why_save": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Term",
+      "future_trigger": [
+        "待更多证据"
+      ],
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "模板"
+      ],
+      "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+      "revisit_date": ""
+    },
+    "insights": {
+      "system_design": [
+        "先判断价值类型，再决定系统性投入。"
+      ],
+      "agent_engineering": [
+        "为 Agent 建立论文价值路由器。"
+      ],
+      "dev_process": [
+        "论文输出应沉淀为可执行资产。"
+      ],
+      "evaluation": [
+        "同时看方法与证据质量。"
+      ],
+      "platform_engineering": [
+        "长尾资产库可降低重复检索成本。"
+      ],
+      "personal_learning": [
+        "优先读能转化为未来复利的论文。"
+      ]
+    },
+    "actions": {
+      "immediate_actions": [
+        "今天读摘要与方法",
+        "今天试最小实验",
+        "一周内沉淀为 Skill / Checklist"
+      ],
+      "trend_actions": [],
+      "long_tail_actions": [],
+      "ignore_reason": ""
+    },
+    "references": [
+      {
+        "label": "arXiv",
+        "url": "http://arxiv.org/abs/2606.24855v1"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2606.24855v1"
+      }
+    ],
+    "detail_path": "paper-detail.html?id=openthoughts-agent-data-recipes-for-agentic-models",
+    "daily_path": "daily-detail.html?date=2026-06-25",
+    "trend_paths": [
+      "trend-detail.html?id=agentic-world-modeling",
+      "trend-detail.html?id=context-engineering",
+      "trend-detail.html?id=coding-agent"
+    ],
+    "long_tail_path": "long-tail.html",
+    "mermaid": {
+      "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+      "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+      "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+    }
+  },
+  "long_tail_saved": [
+    {
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "why_save": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "评测方法"
+      ],
+      "revisit_date": "2026-07-16"
+    }
+  ],
+  "ignore_reasons": [
+    "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces：新意弱、证据弱或当前相关性有限。"
+  ],
+  "insights": {
+    "system_design": [
+      "先做价值路由，再决定是否深入工程推导。"
+    ],
+    "agent_engineering": [
+      "让 Agent 先判断“今天值不值得试”。"
+    ],
+    "dev_process": [
+      "论文筛选应产出 Prompt / Skill / Checklist。"
+    ],
+    "evaluation": [
+      "把“是否值得投入”也纳入评测流程。"
+    ],
+    "platform_engineering": [
+      "长尾库是低成本知识保留层。"
+    ],
+    "personal_learning": [
+      "优先读可沉淀资产的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "30 分钟学习",
+      "2 小时实践",
+      "1 周研究"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2606.24855v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2606.24855v1"
+    }
+  ],
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  },
+  "raw_markdown_html": "<h2>论文价值发现日报 - 2026-06-25</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2606.24855v1\" target=\"_blank\" rel=\"noopener noreferrer\">OpenThoughts-Agent: Data Recipes for Agentic Models</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 三件事：列出 OT-Agent 跨任务数据配方的最小实验(异质 benchmark 集 + 单任务/多任务对照 + 保持率指标)；把 InSight 的'原子动作分解+运行时 steer'纳入具身 Agent/skill-library 趋势观察清单；把次梯度界、FLUX3D、AAC 三篇存入长尾/忽略索引并标注 revisit 条件。</li>\n<li><strong>分数：</strong> 84.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2606.24855v1\" target=\"_blank\" rel=\"noopener noreferrer\">OpenThoughts-Agent: Data Recipes for Agentic Models</a>。</li>\n<li><strong>为什么值得看：</strong> 它回答的是 Agent 工程界最缺公开答案的问题——'拿什么数据、按什么配方，才能训出跨多类任务都不崩的 Agentic 模型'。现有开源努力几乎都只盯单个 benchmark(SWE-Smith/SERA/Nemotron-Terminal)，跨任务泛化是空白；OT-Agent 给出完全开放的数据策展流水线，这恰好是自有 Agent 落地时'单任务过拟合、换场景就退化'的真实痛点。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值——今天就能把'多 benchmark 混合 SFT/RL 数据配比'拆成一个可量化的最小实验(单任务 vs 多任务混合，测跨域保持率)。</li>\n<li><strong>今天该做什么：</strong> 把五篇分别映射到三条工作线：Agent 训练数据配方实验(OT-Agent)、具身 Agent/skill-library 趋势观察(InSight)、生成侧与理论侧长尾保存(FLUX3D/次梯度界/AAC)。</li>\n<li><strong>最大不确定性：</strong> 五篇的代码、benchmark、Papers with Code、独立复现入口均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续)，需后续 1-4 周持续跟踪作者主页与 GitHub。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.24855v1\" target=\"_blank\" rel=\"noopener noreferrer\">OpenThoughts-Agent: Data Recipes for Agentic Models</a></td><td>ai-agent / rag-knowledge</td><td>即时价值</td><td>84.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.24884v1\" target=\"_blank\" rel=\"noopener noreferrer\">InSight: Self-Guided Skill Acquisition via Steerable VLAs</a></td><td>multimodal-agent / ai-agent</td><td>趋势价值</td><td>81.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.24874v1\" target=\"_blank\" rel=\"noopener noreferrer\">FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation</a></td><td>multimodal-agent / llm-evaluation</td><td>趋势价值</td><td>71.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.24879v1\" target=\"_blank\" rel=\"noopener noreferrer\">New Bounds for the Last Iterate of the Stochastic subGradient Method</a></td><td>inference-serving</td><td>长尾价值</td><td>56.0</td><td>持续观察</td><td>否</td><td>否</td><td>否</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.24854v1\" target=\"_blank\" rel=\"noopener noreferrer\">It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces</a></td><td>llm-evaluation</td><td>暂时忽略</td><td>49.0</td><td>暂时忽略</td><td>否</td><td>否</td><td>否</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 把'训练数据配方'当成 Agentic 模型的第一设计变量——单一 benchmark 训出来的 agent 会在换任务时崩，而系统化的跨任务数据策展才是泛化能力的来源。</li>\n<li><strong>底层问题：</strong> Agentic LM 大幅扩展了 AI 的应用面，但'如何为广泛能力的 agent 策展训练数据'几乎是黑箱。现有开源项目(SWE-Smith 偏软件工程、SERA、Nemotron-Terminal)各自只面向单一 benchmark，于是训练数据与评估数据同构，跨任务泛化无从谈起。</li>\n<li><strong>理论根基：</strong> '数据配比即能力边界'——模型会朝训练分布偏移，若训练任务面窄，泛化能力就被封顶。OT-Agent 把它形式化为'数据 recipe'问题：哪些任务源、多少配比、什么难度分布，才能让 agent 在未见任务上保持能力。</li>\n<li><strong>工程实践映射：</strong> 直接对应三类痛点：(1) Agent 过拟合——单任务 SFT/RL 换场景即退化；(2) 评估污染——训练 benchmark 与评估 benchmark 同源导致虚高；(3) 数据成本——开放 recipe 让团队不必从零摸索。可类比对齐阶段的基础/指令/偏好三段式配比，但这里升级到'多任务 Agent 行为轨迹'的配比。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 新命题是'跨多类 Agentic 任务的泛化可以被一条开放的、可复现的数据 recipe 显著提升'；方法是完全开放的数据策展流水线(data curation pipeline)；证据来自与多个单 benchmark 方案(SWE-Smith 等)的跨任务对照。作者延续 OpenThoughts 系列(此前在推理数据上有较强可信度)。</li>\n<li><strong>研究位置：</strong> 处于'方法+对照实验'阶段，介于配方提出与大规模外部复现之间。它的价值是把'agent 训练数据'这个大家都在做但很少公开方法的问题，提升为'可对标、可复现'的工程维度。</li>\n<li><strong>工程可验证性：</strong> 即使无官方代码，也能自建最小验证：选定 2-3 个异质 agent benchmark(如一个软件工程类、一个工具调用类、一个检索类)，构造'单任务训练'与'多任务混合训练'两组，测各组在留出任务上的保持率，直接量化'数据配方'对泛化的影响。这是本周可落地的实验。</li>\n<li><strong>趋势关联：</strong> 与 ai-agent、rag-knowledge、coding-agent、data-engineering 四条线交汇，是'2026 年重心从训出一个大模型转向训出一个能跨任务泛化的 agent'这条主线的代表，建议纳入未来 1-3 个月的 Agent 训练数据趋势线。</li>\n<li><strong>长尾价值：</strong> 即便具体 recipe 不通用，'跨任务数据配比'这一方法论也会沉淀为 Agent SFT/RL 的 checklist——每次新增任务源时都要问'它会让模型在旧任务上退化多少'。</li>\n<li><strong>启发：</strong> 单任务 SOTA 是陷阱，跨任务保持率才是 agent 可用性的真实指标——评估谁更强时，先看它在'没见过的任务'上的退化幅度。</li>\n<li><strong>行动建议：</strong> 今天先产出一页 OT-Agent 最小实验设计：选定异质 benchmark 集、定义'单任务 vs 多任务混合'对照、指标(各任务成功率+跨域保持率)、失败阈值(混合训练不得让任一主任务成功率下降超过 X%)。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2606.24879v1\" target=\"_blank\" rel=\"noopener noreferrer\">New Bounds for the Last Iterate of the Stochastic subGradient Method</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下界)，但设定极窄(一维、凸)，与 LLM 训练(高维、非凸、AdamW/Muon)距离大，当下工程可操作性低。价值在于'优化器收敛率'这条长尾观察线——为未来优化器选型提供理论参照，值得保存但暂不投入。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-16</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2606.24854v1\" target=\"_blank\" rel=\"noopener noreferrer\">It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.24842v1\" target=\"_blank\" rel=\"noopener noreferrer\">World Models in Pieces: Structural Certification for General Agents</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.24839v1\" target=\"_blank\" rel=\"noopener noreferrer\">Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发</h4>\n<p>把'训练数据配方'当成 Agentic 系统的第一设计变量：与其在单一任务上刷到 SOTA，不如在异质任务集上保证跨域保持率——前者是 demo，后者才是产品。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>InSight 的'把示教切分为带标签 primitive、运行时按指令组合'，是所有 agent(不止机器人)的通用抽象：技能=可命名、可复用、可组合的原子动作。自建 agent 时先建 primitive 库，再做组合调度，比一上来训端到端长程策略更可控。</p>\n<h4>对团队研发流程的启发</h4>\n<p>OT-Agent 说明'agent 训练数据'正在从各家私房菜走向可公开对标的 recipe；研发流程应增加一道'数据配方评审'——每次新增任务源都要测它对旧任务的退化影响。</p>\n<h4>对企业落地的启发</h4>\n<p>评估 agent 强弱时，单任务成功率会骗人；应把'跨任务保持率'(在未见任务上的退化幅度)作为上线门槛指标，避免 demo 过拟合。</p>\n<h4>对个人学习路径的启发</h4>\n<p>今天的阅读顺序建议：先读 OT-Agent 把握'数据配方即能力边界'主线，再读 InSight 学具身 agent 的 primitive 分解，最后扫 FLUX3D 与次梯度界把握生成侧与理论侧长尾。</p>\n<h4>对未来 6-12 个月技术趋势的启发</h4>\n<p>趋势重心会从'谁模型更大'转向'谁更会做跨任务数据配方与自主技能获取'——模型红利见顶后，数据 recipe 与 skill library 是新的增长点。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2606.24855v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2606.24855v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景就崩)。理论上是'数据配比即能力边界'，工程上可直接迁移为'多 benchmark 混合 SFT/RL 配方实验'，今天就能起最小验证。证据以方法+多 benchmark 对照为主，作者为 OpenThoughts 系列延续，方向可信；代码与复现入口暂无/待核验。</li>\n<li><strong>最大不确定性：</strong> 外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续、InSight 属 Stanford Wu 团队)，需持续跟踪作者主页与 GitHub。</li>\n<li><strong>下一步动作：</strong> 若 1-2 周内仍无 OT-Agent 官方代码开源，用自有 agent 框架自建'多任务混合训练'最小验证；7-14 天后复盘 InSight 是否被后续 VLA 工作加强，以及 OT-Agent recipe 是否被独立复现。</li>\n</ul>\n<p>> 生成时间：2026-06-25T04:33:16.572120</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+}

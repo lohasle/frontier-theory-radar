@@ -19,69 +19,69 @@
   ],
   "candidate_papers": [
     {
-      "id": "tapered-language-models",
-      "title": "Tapered Language Models",
-      "detail_path": "paper-detail.html?id=tapered-language-models",
+      "id": "openthoughts-agent-data-recipes-for-agentic-models",
+      "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+      "detail_path": "paper-detail.html?id=openthoughts-agent-data-recipes-for-agentic-models",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 85.0,
+      "score": 84.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "randomized-yarn-improves-length-generalization-for-long-context-reasoning",
-      "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning",
-      "detail_path": "paper-detail.html?id=randomized-yarn-improves-length-generalization-for-long-context-reasoning",
-      "direction": "未分类",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "score": 82.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": true
-    },
-    {
-      "id": "open-problem-is-adamw-effective-under-heavy-tailed-noise",
-      "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
-      "detail_path": "paper-detail.html?id=open-problem-is-adamw-effective-under-heavy-tailed-noise",
+      "id": "insight-self-guided-skill-acquisition-via-steerable-vlas",
+      "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+      "detail_path": "paper-detail.html?id=insight-self-guided-skill-acquisition-via-steerable-vlas",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 80.0,
+      "score": 81.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "air-adaptive-interleaved-reasoning-with-code-in-mllms",
-      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
-      "detail_path": "paper-detail.html?id=air-adaptive-interleaved-reasoning-with-code-in-mllms",
+      "id": "flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation",
+      "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
+      "detail_path": "paper-detail.html?id=flux3d-high-fidelity-3d-gaussian-generation-with-diffusion-aligned-sparse-representation",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 78.0,
+      "score": 71.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "can-llms-reliably-self-report-adversarial-prefills-and-how",
-      "title": "Can LLMs Reliably Self-Report Adversarial Prefills, and How?",
-      "detail_path": "paper-detail.html?id=can-llms-reliably-self-report-adversarial-prefills-and-how",
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 75.0,
-      "decision": "轻量试点",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "score": 56.0,
+      "decision": "持续观察",
       "has_code": false,
       "has_benchmark": false,
-      "worth_deep_dive": true
+      "worth_deep_dive": false
+    },
+    {
+      "id": "it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces",
+      "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
+      "detail_path": "paper-detail.html?id=it-s-complicated-on-the-design-and-evaluation-of-ai-powered-aac-interfaces",
+      "direction": "未分类",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 49.0,
+      "decision": "暂时忽略",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
     }
   ],
   "deep_dive": {
@@ -214,9 +214,30 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [],
+  "long_tail_saved": [
+    {
+      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
+      "why_save": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "评测方法"
+      ],
+      "revisit_date": "2026-07-13"
+    }
+  ],
   "ignore_reasons": [
-    "暂无明确忽略样本，但忽略标准仍需保留。"
+    "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces：新意弱、证据弱或当前相关性有限。"
   ],
   "insights": {
     "system_design": [

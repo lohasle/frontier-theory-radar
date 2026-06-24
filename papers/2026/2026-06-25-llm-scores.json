@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2606.24855v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "直击 Agent 工程最稀缺的公开知识——'用什么训练数据、按什么配方，才能训出跨多类任务泛化的 Agentic 模型'。现有开源努力(SWE-Smith/SERA/Nemotron-Terminal)基本只盯单一 benchmark，本文给出一条完全开放的数据策展流水线并研究跨任务泛化，这恰好是自有 Agent 落地团队天天面对的问题(单任务过拟合、换场景就崩)。理论上是'数据配比即能力边界'，工程上可直接迁移为'多 benchmark 混合 SFT/RL 配方实验'，今天就能起最小验证。证据以方法+多 benchmark 对照为主，作者为 OpenThoughts 系列延续，方向可信；代码与复现入口暂无/待核验。",
+      "matched_topics": ["ai-agent", "rag-knowledge", "llm-evaluation", "coding-agent", "data-engineering"]
+    },
+    "http://arxiv.org/abs/2606.24884v1": {
+      "score": 81,
+      "value_type": "trend",
+      "reason": "VLA(视觉-语言-动作)模型的能力被训练数据里的技能集合封顶，InSight 把它做成'可在原子动作层 steer'——先用 VL 自动把示教切分成带标签的 primitive(move/pour/lift)，再在推理时按指令组合。'技能=可命名、可组合的原子动作'这个抽象对所有 Agent 都成立(不只是机器人)：把长程任务分解为可复用 primitive 库、运行时按目标重组。这是 embodied/具身 Agent 与 skill library/分层规划趋势的核心命题。属方向性趋势而非可立即上线(机器人专属、无代码)，但概念贡献强、来自 Stanford(Wu)团队，证据待核验。",
+      "matched_topics": ["multimodal-agent", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2606.24874v1": {
+      "score": 71,
+      "value_type": "trend",
+      "reason": "Image-to-3DGS 生成的两个结构性瓶颈：用判别式 2D 语义特征(擅长抽象)建稀疏体素 latent 会丢重建线索；标准扩散 Transformer 缺高频对齐。FLUX3D 针对'表示瓶颈+扩散对齐'给出方案。3D 资产生成是内容/AIGC 平台的重要趋势线，但与本雷达核心(Agent/推理/平台)相关性偏外围，属可观察的生成侧趋势。方法设计完整，代码/benchmark 暂无、待核验，故给趋势分而非即时分。",
+      "matched_topics": ["multimodal-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.24879v1": {
+      "score": 56,
+      "value_type": "long_tail",
+      "reason": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下界)，但设定极窄(一维、凸)，与 LLM 训练(高维、非凸、AdamW/Muon)距离大，当下工程可操作性低。价值在于'优化器收敛率'这条长尾观察线——为未来优化器选型提供理论参照，值得保存但暂不投入。",
+      "matched_topics": ["inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.24854v1": {
+      "score": 49,
+      "value_type": "ignore",
+      "reason": "AAC(辅助与替代通信)界面的 AI 设计与评估方法学，属 HCI 细分领域。核心贡献是'评估指标难以捕捉交叉性人群的多维诉求'这一方法学讨论，与本雷达的 Agent/推理/平台主线相关性低、难以转化为可复用工程资产。建议暂时忽略，保留最小索引。",
+      "matched_topics": ["llm-evaluation"]
+    }
+  }
+}
