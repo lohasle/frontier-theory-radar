@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-25T04:33:18.121384",
+  "updated_at": "2026-06-26T04:33:36.657075",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-06-26",
+      "title": "论文价值发现日报 - 2026-06-26",
+      "deep_dive_title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "deep_dive_url": "http://arxiv.org/abs/2606.26080v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 Progress Advantage 最小实验(已有轨迹→提取 advantage→对照步级质量→测下游收益)；把 self-distillation 多样性塌陷、Model Forensics 误报治理纳入后训练/治理观察清单；把 MLLM 顺序敏感与语音 AI 副语言缺失纳入评测可靠性 checklist。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。",
+      "one_line_judgement": "它回答的是 agent 工程界天天踩的坑——'想给 agent 做步级过程奖励(PRM)，但长程交互+不可逆动作+随机环境让人工标注和蒙特卡洛估计都不可规模化'。本文给出一个'免费午餐'：RL 后训练本身已经提供了有效的步级评分信号(Progress Advantage)，不必再单独训奖励模型。这恰好是自有 agent 团队在 RLHF/GRPO 流水线里立刻能验证的变量。理论上是'PRM 的价值不在独立模型而在 advantage 函数重用'，工程上对应'把训练中的 advantage 当步骤质量标签'。",
+      "path": "daily-detail.html?date=2026-06-26"
+    },
     {
       "date": "2026-06-25",
       "title": "论文价值发现日报 - 2026-06-25",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-24"
-    },
-    {
-      "date": "2026-05-23",
-      "title": "论文价值发现日报 - 2026-05-23",
-      "deep_dive_title": "MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems",
-      "deep_dive_url": "http://arxiv.org/abs/2605.22794v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-23"
     }
   ]
 }

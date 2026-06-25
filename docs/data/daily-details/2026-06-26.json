@@ -1,0 +1,273 @@
+{
+  "date": "2026-06-26",
+  "title": "论文价值发现日报 - 2026-06-26",
+  "deep_dive_id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+  "deep_dive_title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "decision": "重点学习",
+  "daily_action": "三件事：列出 Progress Advantage 最小实验(已有轨迹→提取 advantage→对照步级质量→测下游收益)；把 self-distillation 多样性塌陷、Model Forensics 误报治理纳入后训练/治理观察清单；把 MLLM 顺序敏感与语音 AI 副语言缺失纳入评测可靠性 checklist。",
+  "score": 83.0,
+  "trend_stage": "emerging",
+  "one_line_judgement": "今天值得试：直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、…",
+  "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。",
+  "conclusion_lines": [
+    "今天最值得看的是《Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents》。",
+    "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+    "今天建议动作：三件事：列出 Progress Advantage 最小实验(已有轨迹→提取 advantage→对照步级质量→测下游收益)；把 self-distillation 多样性塌陷、Model Forensics 误报治理纳入后训练/治理观察清单；把 MLLM 顺序敏感与语音 AI 副语言缺失纳入评测可靠性 checklist。。",
+    "最大不确定性：外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。。"
+  ],
+  "candidate_papers": [
+    {
+      "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 83.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+      "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+      "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 78.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+      "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
+      "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 76.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+      "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
+      "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 72.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "real-time-voice-ai-hears-but-does-not-listen",
+      "title": "Real-Time Voice AI Hears but Does Not Listen",
+      "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 70.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    }
+  ],
+  "deep_dive": {
+    "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+    "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+    "authors": [
+      "Changdae Oh",
+      "Wendi Li",
+      "Seongheon Park",
+      "Samuel Yeh",
+      "Tanwi Mallick"
+    ],
+    "source": "arXiv",
+    "published": "2026-06-24",
+    "url": "http://arxiv.org/abs/2606.26080v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.26080v1",
+    "code_url": "",
+    "benchmark_url": "",
+    "paperswithcode_url": "",
+    "openreview_url": "",
+    "first_seen_date": "2026-06-26",
+    "first_deep_dive_daily": "2026-06-26",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "value_scores": {
+      "novelty": 4.8,
+      "relevance": 6.2,
+      "evidence": 4.95,
+      "engineering_testability": 3.5,
+      "trend_signal": 4.6,
+      "long_tail_potential": 3.5,
+      "actionability": 5.0,
+      "noise_risk": 1.2
+    },
+    "score": 83.0,
+    "decision": "重点学习",
+    "one_line_judgement": "今天值得试：直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、…",
+    "one_line_essence": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练本身已提供有效的步级评分信号(Progress Advantage)，无需再单独训奖励模型——这是直接可迁移到自有 agent 训练流水线的'免费午餐'。理论上对应'PRM 的价值不在独立模型而在优势函数重用'，工程上对应'把 PPO/GRPO 训练中的 advantage 当作步骤质量标签'，本周即可做最小验证。证据以方法+对照实验为主，作者背景(Oh 等，agent/RL 方向)可信；代码/benchmark 暂无/待核验。",
+    "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+    "new_claim_or_method": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练本身已提供有效的步级评分信号(Progress Advantage)，无需再单独训奖励模型——这是直接可迁移到自有 agent 训练流水线的'免费午餐'。理论上对应'P",
+    "research_position": "source_paper",
+    "engineering_testability": {
+      "has_code": false,
+      "has_benchmark": false,
+      "can_reproduce": false,
+      "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+      "engineering_scenarios": [
+        "AI Agent",
+        "Context Engineering",
+        "评测治理"
+      ]
+    },
+    "trend_relation": {
+      "status": "emerging",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "evidence": [
+        "论文主题匹配固定研究方向"
+      ],
+      "uncertainties": [
+        "是否会出现更多开源实现与生产案例"
+      ]
+    },
+    "long_tail": {
+      "why_save": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练",
+      "future_trigger": [
+        "待更多证据"
+      ],
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "模板"
+      ],
+      "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+      "revisit_date": ""
+    },
+    "insights": {
+      "system_design": [
+        "先判断价值类型，再决定系统性投入。"
+      ],
+      "agent_engineering": [
+        "为 Agent 建立论文价值路由器。"
+      ],
+      "dev_process": [
+        "论文输出应沉淀为可执行资产。"
+      ],
+      "evaluation": [
+        "同时看方法与证据质量。"
+      ],
+      "platform_engineering": [
+        "长尾资产库可降低重复检索成本。"
+      ],
+      "personal_learning": [
+        "优先读能转化为未来复利的论文。"
+      ]
+    },
+    "actions": {
+      "immediate_actions": [
+        "今天读摘要与方法",
+        "今天试最小实验",
+        "一周内沉淀为 Skill / Checklist"
+      ],
+      "trend_actions": [],
+      "long_tail_actions": [],
+      "ignore_reason": ""
+    },
+    "references": [
+      {
+        "label": "arXiv",
+        "url": "http://arxiv.org/abs/2606.26080v1"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2606.26080v1"
+      }
+    ],
+    "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+    "daily_path": "daily-detail.html?date=2026-06-26",
+    "trend_paths": [
+      "trend-detail.html?id=agentic-world-modeling",
+      "trend-detail.html?id=coding-agent"
+    ],
+    "long_tail_path": "long-tail.html",
+    "mermaid": {
+      "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+      "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+      "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+    }
+  },
+  "long_tail_saved": [],
+  "ignore_reasons": [
+    "暂无明确忽略样本，但忽略标准仍需保留。"
+  ],
+  "insights": {
+    "system_design": [
+      "先做价值路由，再决定是否深入工程推导。"
+    ],
+    "agent_engineering": [
+      "让 Agent 先判断“今天值不值得试”。"
+    ],
+    "dev_process": [
+      "论文筛选应产出 Prompt / Skill / Checklist。"
+    ],
+    "evaluation": [
+      "把“是否值得投入”也纳入评测流程。"
+    ],
+    "platform_engineering": [
+      "长尾库是低成本知识保留层。"
+    ],
+    "personal_learning": [
+      "优先读可沉淀资产的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "30 分钟学习",
+      "2 小时实践",
+      "1 周研究"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26080v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2606.26080v1"
+    }
+  ],
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  },
+  "raw_markdown_html": "<h2>论文价值发现日报 - 2026-06-26</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2606.26080v1\" target=\"_blank\" rel=\"noopener noreferrer\">Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 三件事：列出 Progress Advantage 最小实验(已有轨迹→提取 advantage→对照步级质量→测下游收益)；把 self-distillation 多样性塌陷、Model Forensics 误报治理纳入后训练/治理观察清单；把 MLLM 顺序敏感与语音 AI 副语言缺失纳入评测可靠性 checklist。</li>\n<li><strong>分数：</strong> 83.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2606.26080v1\" target=\"_blank\" rel=\"noopener noreferrer\">Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents</a>。</li>\n<li><strong>为什么值得看：</strong> 它回答的是 agent 工程界天天踩的坑——'想给 agent 做步级过程奖励(PRM)，但长程交互+不可逆动作+随机环境让人工标注和蒙特卡洛估计都不可规模化'。本文给出一个'免费午餐'：RL 后训练本身已经提供了有效的步级评分信号(Progress Advantage)，不必再单独训奖励模型。这恰好是自有 agent 团队在 RLHF/GRPO 流水线里立刻能验证的变量。理论上是'PRM 的价值不在独立模型而在 advantage 函数重用'，工程上对应'把训练中的 advantage 当步骤质量标签'。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值——本周即可在自有 agent 框架上做最小实验(同一批训练轨迹，对比用独立 PRM 打分 vs 直接复用 advantage，看步级评分的相关性与下游收益)。</li>\n<li><strong>今天该做什么：</strong> 把五篇分别映射到三条线：agent 训练奖励信号(Progress Advantage)、后训练警示与治理(self-distillation 多样性塌陷 / Model Forensics 误报治理)、评测可靠性(MLLM 顺序敏感 / 语音 AI 副语言缺失)。</li>\n<li><strong>最大不确定性：</strong> 五篇的代码、benchmark、Papers with Code、独立复现入口均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需后续 1-4 周持续跟踪作者主页与 GitHub。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.26080v1\" target=\"_blank\" rel=\"noopener noreferrer\">Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents</a></td><td>ai-agent / llm-evaluation</td><td>即时价值</td><td>83.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.26091v1\" target=\"_blank\" rel=\"noopener noreferrer\">On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity</a></td><td>inference-serving / llm-evaluation</td><td>趋势价值</td><td>78.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.26071v1\" target=\"_blank\" rel=\"noopener noreferrer\">Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment</a></td><td>security-governance / ai-agent</td><td>趋势价值</td><td>76.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.26079v1\" target=\"_blank\" rel=\"noopener noreferrer\">Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models</a></td><td>llm-evaluation / multimodal-agent</td><td>趋势价值</td><td>72.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.26083v1\" target=\"_blank\" rel=\"noopener noreferrer\">Real-Time Voice AI Hears but Does Not Listen</a></td><td>multimodal-agent / security-governance</td><td>趋势价值</td><td>70.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 过程奖励(Process Reward)的真正来源不是'再训一个奖励模型'，而是 RL 后训练里已经算好的优势函数(advantage)——把它作为步级质量信号直接复用，就是被忽视的'免费午餐'。</li>\n<li><strong>底层问题：</strong> 过程奖励模型(PRM)能给 LLM agent 做细粒度、步级评估，但在 agent 场景下构建它几乎不可能：长程交互、不可逆动作(执行了就回不去)、随机环境反馈让'人工标注步级标签'和'蒙特卡洛估计每步价值'都不可规模化。于是 agent 的过程级训练/评估长期缺位。</li>\n<li><strong>理论根基：</strong> 'Progress Advantage'——RL 后训练(PPO/GRPO 等)在每一步都计算了 advantage(该步相对策略基线的改进量)，这个量本身就是对'这一步是否有进展'的隐式步级评分。它无需额外标注、无需额外模型，是训练循环的副产品。把 PRM 的问题从'如何构建标注数据'重构为'如何从已有训练信号里提取步级价值'。</li>\n<li><strong>工程实践映射：</strong> 直接对应三类痛点：(1) agent PRM 太贵——本文说'你已经有了'；(2) advantage 重用——训练完的轨迹里每步的 advantage 可直接当步骤质量标签，用于课程/过滤/排序；(3) 评估复用——无需为评估再跑昂贵的 reward 标注。可类比对齐阶段的'奖励函数即能力边界'，但这里把奖励从'额外资产'变成'训练副产品'。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 新命题是'RL 后训练已提供有效的 agent 步级评分，无需专用奖励模型训练'；方法是直接从训练轨迹的 advantage 导出 Progress Advantage 作为步级信号；证据来自与'独立 PRM 训练/蒙特卡洛估计'的对照(摘要强调后者在 agent 设定下不可规模化)。作者(Oh 等)在 agent/RL 方向有持续工作，方向可信。</li>\n<li><strong>研究位置：</strong> 处于'命题+方法+对照实验'阶段，介于概念确立与大规模外部复现之间。它的价值是把'agent 过程奖励'这个大家想要但做不动的难题，降维成'复用你已经在算的东西'。</li>\n<li><strong>工程可验证性：</strong> 即使无官方代码，也能自建最小验证：在自有 agent 的 RL 训练(或离线轨迹)里，提取每步 advantage 作为步级分数，与'人类步级标注'或'最终成功/失败'对照，看 advantage 能否区分好步/坏步；再用 advantage 做轨迹过滤/课程，看下游成功率是否提升。这是本周可落地的实验。</li>\n<li><strong>趋势关联：</strong> 与 ai-agent、llm-evaluation、data-engineering 三条线交汇，是'2026 年 agent 训练从'重标注'转向'重训练信号重用''这条主线的代表，建议纳入未来 1-3 个月的 Agent 训练奖励趋势线。</li>\n<li><strong>长尾价值：</strong> 即便具体实现不通用，'advantage 即步级奖励'这一视角也会沉淀为 agent RL 的 checklist——每次想做 PRM/步级评估时，先问'我现有的 advantage 是否已经够用'。</li>\n<li><strong>启发：</strong> 最好的奖励模型不是新训的，而是你训练循环里已经在算但被丢弃的那个副产品——先查已有信号，再造新资产。</li>\n<li><strong>行动建议：</strong> 今天先产出一页 Progress Advantage 最小实验设计：选定一批已有 agent 训练轨迹→提取每步 advantage→与成功/失败或人类步级标注对照→看区分度→用 advantage 做轨迹过滤测下游收益。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2606.26094v1\" target=\"_blank\" rel=\"noopener noreferrer\">RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> RevengeBench：从游戏环境中 agent 的行为轨迹反推出可执行代码形式的决策程序，并研究'主动设计受控实验'能把重构提升多少。这是'逆向工程 agent 策略'的可解释性方向，概念新颖(行为→代码的逆问题)。但与 Agent 工程主线的直接转化性偏弱、设定限于游戏环境，价值在于'策略可解释/可审计'这条长尾观察线。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-17</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.26095v1\" target=\"_blank\" rel=\"noopener noreferrer\">Learning Action Priors for Cross-embodiment Robot Manipulation</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> VLA(视觉-语言-动作)模型为机器人操作学习显式动作先验(motion prior)，解决'动作模块从零学物理运动'的问题，面向 cross-embodiment(跨本体)泛化。概念上对应'给 agent 注入先验技能而非全从零学'，可迁移到 skill-library 思路。但属机器人专属、无代码、与本雷达 Agent/推理/平台主线相关性偏外围，价值在于具身 agent 长尾观察线。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-17</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2606.26062v1\" target=\"_blank\" rel=\"noopener noreferrer\">When Certainty Is an Artifact: Keyword Lexicon Blindness and the (Mis)Measurement of Rhetorical Stance</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.26078v1\" target=\"_blank\" rel=\"noopener noreferrer\">A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.26059v1\" target=\"_blank\" rel=\"noopener noreferrer\">A welding penetration prediction model for laser welding process based on self-supervised learning using physics-informed neural networks</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发</h4>\n<p>Progress Advantage 说明'奖励信号'不必是外部注入的资产，它可以是你训练循环里已经在算但被丢弃的副产品——设计训练系统时，先把 advantage/隐式评分这类'免费信号'接入评估与过滤链路，再考虑造新资产。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>自蒸馏多样性塌陷是一记警钟：追求 pass@1 准确率时，rollout 多样性可能同步下降，pass@k 变平。做 agent 训练时要把'多样性保持'当一等指标监控，否则会得到一个'单次准但无法靠多采样兜底'的策略。</p>\n<h4>对安全治理的启发</h4>\n<p>Model Forensics 把'行为可疑 ≠ 对齐失败'这一区分做成协议：上可疑行为报警前，先做思维链读取 + 定向干预，排除困惑/上下文缺失等良性原因，能大幅降低对齐审计的误报与成本。</p>\n<h4>对评测工程的启发</h4>\n<p>MLLM 顺序敏感与语音 AI 副语言缺失共同指向一个评测盲区：现有 benchmark 的'单一标准排序'和'只看词不看声音'会让系统显得比实际更可靠。评测治理应增加'顺序无关性'与'多模态副语言'两道审计。</p>\n<h4>对团队研发流程的启发</h4>\n<p>今天的阅读顺序建议：先读 Progress Advantage 把握'训练信号重用'主线，再读 self-distillation 与 Model Forensics 把握后训练副作用与治理，最后扫 MLLM/语音评测把握评测可靠性缺口。</p>\n<h4>对未来 6-12 个月技术趋势的启发</h4>\n<p>趋势重心会从'谁训出更强模型'转向'谁更会复用训练信号、治理后训练副作用、补齐评测可靠性'——模型红利见顶后，奖励重用与评测治理是新的增长点。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2606.26080v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2606.26080v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练本身已提供有效的步级评分信号(Progress Advantage)，无需再单独训奖励模型——这是直接可迁移到自有 agent 训练流水线的'免费午餐'。理论上对应'PRM 的价值不在独立模型而在优势函数重用'，工程上对应'把 PPO/GRPO 训练中的 advantage 当作步骤质量标签'，本周即可做最小验证。证据以方法+对照实验为主，作者背景(Oh 等，agent/RL 方向)可信；代码/benchmark 暂无/待核验。</li>\n<li><strong>最大不确定性：</strong> 外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。</li>\n<li><strong>下一步动作：</strong> 若 1-2 周内仍无 Progress Advantage 官方代码，用自有 agent 框架的离线轨迹自建'advantage 步级过滤'最小验证；7-14 天后复盘 self-distillation 多样性塌陷是否被后续 RLHF 工作加强，以及 Model Forensics 协议是否被外部复现。</li>\n</ul>\n<p>> 生成时间：2026-06-26T04:33:35.019967</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+}

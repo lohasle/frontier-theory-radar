@@ -1,0 +1,632 @@
+{
+  "date": "2026-06-26",
+  "total": 10,
+  "generated_at": "2026-06-26T04:31:08.235151",
+  "papers": [
+    {
+      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "authors": [
+        "Changdae Oh",
+        "Wendi Li",
+        "Seongheon Park",
+        "Samuel Yeh",
+        "Tanwi Mallick"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26080v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26080v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training a",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 83.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26080v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26080v1"
+        }
+      ],
+      "llm_reason": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练本身已提供有效的步级评分信号(Progress Advantage)，无需再单独训奖励模型——这是直接可迁移到自有 agent 训练流水线的'免费午餐'。理论上对应'PRM 的价值不在独立模型而在优势函数重用'，工程上对应'把 PPO/GRPO 训练中的 advantage 当作步骤质量标签'，本周即可做最小验证。证据以方法+对照实验为主，作者背景(Oh 等，agent/RL 方向)可信；代码/benchmark 暂无/待核验。",
+      "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+      "authors": [
+        "Andrei Liviu Nicolicioiu",
+        "Mohammad Pezeshki",
+        "Aaron Courville"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26091v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26091v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level feedback. We show that this could come at a hidden cost: rollout diversity decreases and pass@k curves flatten (i.e., generating more rollouts fails to improve accuracy). We trace this to compounding biases in the design of self-distillation with sampled demonstrations. The teacher scores each student",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26091v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26091v1"
+        }
+      ],
+      "llm_reason": "揭示 on-policy 自蒸馏的一个隐藏代价：用采样 demo 当 teacher 条件会让 rollout 多样性下降、pass@k 曲线变平(生成更多候选也无法提升准确率)，并追溯到 teacher 打分偏差的累积放大。这对所有做 RLHF/自蒸馏/拒绝采样的工程团队都是直接警示——'准确率涨了但多样性塌了'是真实陷阱。作者来自 MILA(Courville)，方法严谨、实验完整。属趋势性/警示性发现而非立即可上线方案，故给趋势分。代码/benchmark 待核验。",
+      "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
+      "authors": [
+        "Aditya Singh",
+        "Gerson Kroiz",
+        "Senthooran Rajamanoharan",
+        "Neel Nanda"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26071v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26071v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "A central goal of safety research is determining whether a model is misaligned. Prior work has largely focused on detecting concerning behavior. But behavior alone does not establish misalignment: a concerning action can arise from benign causes such as confusion. This motivates model forensics: investigating whether the action was driven by malign intent. In this paper, we propose a baseline protocol for model forensics consisting of two steps, iterated as needed. First, we read the chain of th",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic"
+      ],
+      "score": 76.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26071v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26071v1"
+        }
+      ],
+      "llm_reason": "安全/对齐治理线的强信号：提出 Model Forensics 协议——'行为可疑 ≠ 模型对齐失败'(困惑、上下文缺失等良性原因也会产生)。通过读思维链 + 定向干预两步迭代判断'可疑行为是否源于恶意意图'。作者含 Neel Nanda、Senthooran Rajamanoharan(Google DeepMind mech-interp 核心团队)，可信度高。对治理流程有直接价值(避免误报、降低对齐审计成本)，但属方法论阶段而非可即插即用工具，给趋势分。代码/benchmark 待核验。",
+      "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+      "value_type": "trend",
+      "matched_topics": [
+        "security-governance",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
+      "authors": [
+        "Akshay Paruchuri",
+        "Sanmi Koyejo",
+        "Ehsan Adeli"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26079v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26079v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Standard benchmarks for multimodal large language models (MLLMs) score each item on one canonical ordering and miss whether order-irrelevant shuffling changes the answer, a baseline reliability property called for by emerging AI evaluation guidelines. We introduce Facet-Probe, a five-facet audit (option, evidence-chunk, document-rank, image-set, and mixed-modality ordering) of 18 frontier and open-weight MLLMs. A Bayesian item-response model separates ordering noise from per-facet bias, and a sa",
+      "categories": [
+        "cs.CL",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26079v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26079v1"
+        }
+      ],
+      "llm_reason": "评测可靠性线：提出 Facet-Probe 五维度审计(选项/证据块/文档排序/图片集/混合模态顺序)，发现'同一证据换顺序就换答案'是 18 个前沿 MLLM 的普遍可靠性缺陷，并用贝叶斯 IRT 模型把'顺序噪声'与'维度偏差'分离。这直接挑战现有 benchmark 单一标准排序的打分有效性，对所有做 MLLM 评测/选型的团队都有方法论价值。作者来自 Stanford(Adeli/Koyejo)，方法设计完整。属评测方法论趋势而非即时工程方案，给趋势分。代码/benchmark 待核验。",
+      "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.4,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Real-Time Voice AI Hears but Does Not Listen",
+      "authors": [
+        "Martijn Bartelds",
+        "Federico Bianchi",
+        "James Zou"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26083v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26083v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Speech conveys information through both words and vocal delivery. We evaluate four leading production realtime voice systems-OpenAI's GPT Realtime 2, Google's Gemini 3.1 Flash Live, and Alibaba's Qwen3.5 Omni Plus and Omni Flash-on tasks where the words and the delivery patterns both convey meaningful information. Across three consequential scenarios, all four systems act on the words rather than the voice. They end calls with crying callers who insist nothing is wrong, approve wire transfers au",
+      "categories": [
+        "cs.CL",
+        "eess.AS"
+      ],
+      "keywords": [],
+      "score": 70.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26083v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26083v1"
+        }
+      ],
+      "llm_reason": "多模态/语音 AI 评测 + 安全线：评测四大生产级实时语音系统(GPT Realtime 2 / Gemini 3.1 Flash Live / Qwen3.5 Omni Plus & Flash)，发现它们只听'词'不听'声音'(对哭诉坚持没事的来电者仍挂断、批准语气异常的电汇)——揭示 paralinguistic(副语言)信号在生产级语音 agent 中系统性缺失。这是语音 Agent 上线的真实安全隐患。作者 Federico Bianchi、James Zou(Stanford)，证据扎实(多系统对照)。属生产级评测/安全趋势线，给趋势分。代码/benchmark 待核验。",
+      "id": "real-time-voice-ai-hears-but-does-not-listen",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "security-governance",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments",
+      "authors": [
+        "Babak Rahmani",
+        "Sebastian Dziadzio",
+        "Joschka Strüber",
+        "Sergio Hernández-Gutiérrez",
+        "Matthias Bethge"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26094v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26094v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "For most of scientific history, researchers studying behavior could only infer hidden mechanisms from outward actions: an inverse problem that becomes more tractable when observation is augmented by targeted intervention. We pose a computational analogue: given only behavioral traces of an agent in a game environment, can a learner reconstruct the underlying decision program as executable code, and how much does this reconstruction improve with the ability to design controlled experiments? We in",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark"
+      ],
+      "score": 56.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26094v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26094v1"
+        }
+      ],
+      "llm_reason": "RevengeBench：从游戏环境中 agent 的行为轨迹反推出可执行代码形式的决策程序，并研究'主动设计受控实验'能把重构提升多少。这是'逆向工程 agent 策略'的可解释性方向，概念新颖(行为→代码的逆问题)。但与 Agent 工程主线的直接转化性偏弱、设定限于游戏环境，价值在于'策略可解释/可审计'这条长尾观察线。代码/benchmark 待核验。",
+      "id": "revengebench-reverse-engineering-code-space-policies-from-behavioral-experiments",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
+      "authors": [
+        "Dong Jing",
+        "Tianqi Zhang",
+        "Jiaqi Liu",
+        "Jinman Zhao",
+        "Zelong Sun"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26095v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26095v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in ",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [],
+      "score": 54.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26095v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26095v1"
+        }
+      ],
+      "llm_reason": "VLA(视觉-语言-动作)模型为机器人操作学习显式动作先验(motion prior)，解决'动作模块从零学物理运动'的问题，面向 cross-embodiment(跨本体)泛化。概念上对应'给 agent 注入先验技能而非全从零学'，可迁移到 skill-library 思路。但属机器人专属、无代码、与本雷达 Agent/推理/平台主线相关性偏外围，价值在于具身 agent 长尾观察线。代码/benchmark 待核验。",
+      "id": "learning-action-priors-for-cross-embodiment-robot-manipulation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "When Certainty Is an Artifact: Keyword Lexicon Blindness and the (Mis)Measurement of Rhetorical Stance",
+      "authors": [
+        "Bo Chen"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26062v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26062v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Can a statistically significant, large-effect-size finding in computational social science be entirely an artifact of the measurement instrument? We present a case where the answer appears to be yes. Analyzing 85 interviews across four public intellectuals (2016--2026), we find a robust negative-affect/emphatic-certainty lexical co-occurrence pattern under keyword-based scoring ($r = 0.72$--$0.93$, $p < 0.01$ for all four speakers). Replacing keyword counting with LLM-based zero-shot semantic cl",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 44.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26062v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26062v1"
+        }
+      ],
+      "llm_reason": "计算社会科学的测量方法论案例：关键词词典打分下显著的大效应(r=0.72-0.93)在换成 LLM 零样本语义打分后消失——证明'显著结果可能是测量工具的假象'。方法学上有警示意义，但属 CSS/NLP 评测方法学细分，与本雷达 Agent/推理/平台主线相关性低、难以转化为可复用工程资产，建议忽略并保留最小索引。",
+      "id": "when-certainty-is-an-artifact-keyword-lexicon-blindness-and-the-mis-measurement-of-rhetorical-stance",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding",
+      "authors": [
+        "Sen Li",
+        "Haichao Cui",
+        "Chendong Shao",
+        "Yaqi Wang",
+        "Xinhua Tang"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26078v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26078v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Supervised deep learning has been widely used for weld penetration state classification; however, its performance often degrades significantly under domain shift, such as when transferring models between welding processes with distinct physical mechanisms:for instance, from arc-dominated tungsten inert gas (TIG) welding to keyhole-based laser welding. To overcome this limitation, we propose an unsupervised domain adaptation (UDA) framework integrated with a gradual source domain expansion (GSDE)",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26078v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26078v1"
+        }
+      ],
+      "llm_reason": "焊接熔透状态预测 + 无监督域适应(UDA/GSDE)，从 TIG 迁移到激光焊接。属制造业/焊接工艺细分领域，与本雷达核心方向(大模型/Agent/平台工程)无交集，建议忽略。",
+      "id": "a-cross-process-welding-penetration-status-prediction-algorithm-based-on-unsupervised-domain-adaptation-in-laser-and-tig-welding",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "A welding penetration prediction model for laser welding process based on self-supervised learning using physics-informed neural networks",
+      "authors": [
+        "Sen Li",
+        "Xiaoying Liu",
+        "Xiaojian Xu",
+        "Chendong Shao",
+        "Yaqi Wang"
+      ],
+      "published": "2026-06-24",
+      "updated": "2026-06-24",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.26059v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26059v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The laser welding full-penetration is of critical importance, as it constitutes one of the fundamental factors in achieving defect-free welded joints. Accurate prediction of the penetration state is therefore essential for ensuring weld quality. To this end, this paper introduces SimPhysNet, a novel algorithm that achieves high classification accuracy in laser welding penetration prediction using only a limited number of labelled images. This approach effectively overcomes the limitations of sup",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.26059v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.26059v1"
+        }
+      ],
+      "llm_reason": "基于物理信息神经网络(PINN)的自监督激光焊接熔透预测(SimPhysNet)。同属焊接工艺细分，与雷达核心方向无关，建议忽略。",
+      "id": "a-welding-penetration-prediction-model-for-laser-welding-process-based-on-self-supervised-learning-using-physics-informed-neural-networks",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    }
+  ],
+  "scored_at": "2026-06-26"
+}

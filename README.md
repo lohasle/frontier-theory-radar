@@ -78,18 +78,18 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-06-26 · Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents](daily-detail.html?date=2026-06-26) · 即时价值 · 重点学习
 - [2026-06-25 · OpenThoughts-Agent: Data Recipes for Agentic Models](daily-detail.html?date=2026-06-25) · 即时价值 · 重点学习
 - [2026-06-24 · Tapered Language Models](daily-detail.html?date=2026-06-24) · 即时价值 · 重点学习
 - [2026-06-23 · Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](daily-detail.html?date=2026-06-23) · 即时价值 · 重点学习
 - [2026-06-22 · Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](daily-detail.html?date=2026-06-22) · 即时价值 · 重点学习
 - [2026-06-21 · Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation](daily-detail.html?date=2026-06-21) · 即时价值 · 重点学习
 - [2026-06-20 · Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](daily-detail.html?date=2026-06-20) · 即时价值 · 重点学习
-- [2026-06-19 · Data Intelligence Agents: Interpreting, Modeling, and Querying Enterprise Data via Autonomous Coding Agents](daily-detail.html?date=2026-06-19) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
 - [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 153
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 123
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 129
 - [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 153
 
 ## 启发沉淀说明
