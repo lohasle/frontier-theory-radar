@@ -1,6 +1,279 @@
 {
-  "updated_at": "2026-06-26T04:33:40.546769",
+  "updated_at": "2026-06-27T04:34:00.726861",
   "dailies": {
+    "2026-06-27": {
+      "date": "2026-06-27",
+      "title": "论文价值发现日报 - 2026-06-27",
+      "deep_dive_id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+      "deep_dive_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "重点学习",
+      "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
+      "score": 82.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量…",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。",
+      "conclusion_lines": [
+        "今天最值得看的是《Reinforcement Learning without Ground-Truth Solutions can Improve LLMs》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。。",
+        "最大不确定性：外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 82.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 78.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 74.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 66.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        }
+      ],
+      "deep_dive": {
+        "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+        "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+        "authors": [
+          "Yingyu Lin",
+          "Qiyue Gao",
+          "Nikki Lijing Kuang",
+          "Xunpeng Huang",
+          "Kun Zhou"
+        ],
+        "source": "arXiv",
+        "published": "2026-06-25",
+        "url": "http://arxiv.org/abs/2606.27369v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27369v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-06-27",
+        "first_deep_dive_daily": "2026-06-27",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 3.8,
+          "evidence": 4.5,
+          "engineering_testability": 4.05,
+          "trend_signal": 3.5,
+          "long_tail_potential": 3.5,
+          "actionability": 3.8,
+          "noise_risk": 2.4
+        },
+        "score": 82.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量…",
+        "one_line_essence": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "coding-agent",
+            "context-engineering"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2606.27369v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2606.27369v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+        "daily_path": "daily-detail.html?date=2026-06-27",
+        "trend_paths": [
+          "trend-detail.html?id=coding-agent",
+          "trend-detail.html?id=context-engineering"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27369v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27369v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-06-27</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2606.27369v1\" target=\"_blank\" rel=\"noopener noreferrer\">Reinforcement Learning without Ground-Truth Solutions can Improve LLMs</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。</li>\n<li><strong>分数：</strong> 82.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2606.27369v1\" target=\"_blank\" rel=\"noopener noreferrer\">Reinforcement Learning without Ground-Truth Solutions can Improve LLMs (RiVER)</a>。</li>\n<li><strong>为什么值得看：</strong> 它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值——本周即可在自有 RAG/排序/摘要任务上做最小实验（拿一个已有打分器当 reward，接进 GRPO，看下游指标是否提升）。</li>\n<li><strong>今天该做什么：</strong> 把今日五篇映射到三条线：RL 训练奖励信号扩展（RiVER 把连续执行反馈当奖励）、Agent 工程化（PEEU 小模型 GUI agent 的探索→hindsight 复用）、可靠性与评测（世界模型幻觉可预测/序列概率≠正确性）。另有图像生成能力组合冲突（DanceOPD）作外围趋势。</li>\n<li><strong>最大不确定性：</strong> 今日论文代码、benchmark、Papers with Code、独立复现入口普遍暂无或待核验（MMBench2 除外，随世界模型幻觉论文发布）。当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需后续 1-4 周持续跟踪作者主页与 GitHub。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.27369v1\" target=\"_blank\" rel=\"noopener noreferrer\">Reinforcement Learning without Ground-Truth Solutions can Improve LLMs</a></td><td>llm-evaluation / rag-knowledge</td><td>即时价值</td><td>82.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.27330v1\" target=\"_blank\" rel=\"noopener noreferrer\">Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning</a></td><td>ai-agent / multimodal-agent</td><td>即时价值</td><td>80.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.27326v1\" target=\"_blank\" rel=\"noopener noreferrer\">Hallucination in World Models is Predictable and Preventable</a></td><td>multimodal-agent / llm-evaluation</td><td>趋势价值</td><td>78.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.27359v1\" target=\"_blank\" rel=\"noopener noreferrer\">When are likely answers right? On Sequence Probability and Correctness in LLMs</a></td><td>llm-evaluation / inference-serving</td><td>趋势价值</td><td>74.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2606.27377v1\" target=\"_blank\" rel=\"noopener noreferrer\">DanceOPD: On-Policy Generative Field Distillation</a></td><td>multimodal-agent / inference-serving</td><td>趋势价值</td><td>66.0</td><td>轻量试点</td><td>否</td><td>否</td><td>否</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> '可验证奖励'里的'可验证'不等于'有标准答案'——只要存在一个确定的可执行打分器（连续值也算），RLVR 就能用，于是 RL 的适用面从数学/代码一下子扩展到所有'能打分但没有唯一正解'的任务。</li>\n<li><strong>底层问题：</strong> RLVR 让 LLM 训练摆脱了对人类偏好标注的依赖，用'可验证的奖励'做后训练。但现有 RLVR 几乎只用在答案可二值判定的任务（数学有正解、代码能跑通）。真实世界里大量重要任务（RAG 检索相关性、摘要质量、开放生成、排序）只有打分函数、没有 ground-truth 正解，于是这些任务长期停留在 SFT/DPO，用不上 RLVR 的闭环优势。</li>\n<li><strong>理论根基：</strong> 'RiVER（Ranking-induced VERifiable）框架'——核心是把 reward 的'可验证性'从离散二值（对/错）放宽为'确定性的执行反馈'：只要打分器是确定的（给定输入输出唯一确定一个分数），它就构成可验证信号。在此基础上套 group-relative RL（GRPO 类）：对一个 prompt 采多条 rollout，用连续打分器评分，做组内相对优势更新。理论命题=RLVR 的边界由'是否存在确定性可执行打分'决定，而非'是否存在 ground-truth 答案'。</li>\n<li><strong>工程实践映射：</strong> 直接对应三类痛点：(1) '我有 RAG/排序/摘要的打分器，但没标准答案'——本文说'打分器本身就是合法 reward，直接接 RL'；(2) group-relative 连续奖励——无需二值化、无需人工阈值，把连续分数当组内相对优势；(3) 训练-评估复用——同一个执行打分器既训练又评估，无需为评估再造资产。可类比对齐阶段'奖励函数即能力边界'，但这里把 reward 从'需要构造的资产'变成'你已经在用的打分器'。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 新命题='RLVR 可用于无 ground-truth 的 score-based 任务，只要奖励来自确定性执行反馈'；方法=Ranking-induced VERifiable + 连续值 group-relative RL；证据来自与'依赖 ground-truth 的 RLVR'及'无法规模化的奖励标注'的对照（摘要强调后者在 score-based 设定下不可行）。作者（Lin/Gao/Kuang/Huang/Zhou）在 RAG/对话/RL 方向有持续工作，方向可信。</li>\n<li><strong>研究位置：</strong> 处于'命题+方法+对照实验'阶段，介于概念确立与大规模外部复现之间。它的价值是把'RLVR 只能做数学代码'这个天花板，降维成'任何能打分的任务都能上 RL'。</li>\n<li><strong>工程可验证性：</strong> 即使无官方代码，也能自建最小验证：选定一个你已有打分器的任务（如 RAG 召回相关性打分、摘要 ROUGE/BLEU、排序 NDCG）→把它当连续 reward→接进 GRPO/PPO→对比 SFT/DPO 基线看下游指标是否提升。这是本周可落地的实验，且复现的是'变量'（连续奖励是否比离散/无奖励更好）而非整系统。</li>\n<li><strong>趋势关联：</strong> 与 llm-evaluation、rag-knowledge 两条线交汇，是'2026 年 RLVR 从'窄域可验证（数学/代码）'走向'宽域可执行打分（RAG/摘要/排序/开放生成）''这条主线的代表，建议纳入未来 1-3 个月的 RL 训练奖励扩展趋势线。</li>\n<li><strong>长尾价值：</strong> 即便具体实现不通用，'可验证=确定性执行反馈而非正确答案'这一视角也会沉淀为 RL 训练的 checklist——每次想给一个任务上 RL 时，先问'我有没有一个确定的打分器'，而不是'我有没有标准答案'。</li>\n<li><strong>启发：</strong> 最好的 reward 往往不是新训的奖励模型，而是你评估链路里已经在用、却没接进训练的那个打分函数——先复用已有打分器，再造新奖励资产。</li>\n<li><strong>行动建议：</strong> 今天先产出一页 RiVER 最小实验设计：选一个已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比下游指标。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2606.27347v1\" target=\"_blank\" rel=\"noopener noreferrer\">Mapping Political-Elite Networks in Europe with a Multilingual Joint Entity-Relation Extraction Pipeline</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 LLM 做联合实体-关系抽取的可复用 pipeline'，可迁移到自有知识图谱/情报抽取场景。但属应用型 NLP 流水线、与本雷达 Agent/推理/平台主线相关性外围，价值在于'开源 IE→知识图谱'这条长尾观察线。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-18</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2606.27342v1\" target=\"_blank\" rel=\"noopener noreferrer\">Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/实体解析的团队有方法论参考（低资源学习+领域适应），但与 LLM/Agent 主线相关性偏外围，价值在于数据工程长尾观察。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-18</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2606.27334v1\" target=\"_blank\" rel=\"noopener noreferrer\">Language-Based Digital Twins for Elderly Cognitive Assistance</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.27361v1\" target=\"_blank\" rel=\"noopener noreferrer\">Autoregressive Boltzmann Generators</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2606.27354v1\" target=\"_blank\" rel=\"noopener noreferrer\">Error-Conditioned Neural Solvers</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发</h4>\n<p>RiVER 说明训练系统的 reward 接入层应当设计成'任意确定性打分器即插即用'——不要把 reward 硬编码成二值判定，而是留一个'连续执行反馈'的通用接口，让 RAG/排序/摘要/开放生成这些'能打分没正解'的任务都能挂上 RL 闭环。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>PEEU 的'自主探索+hindsight 经验复用'是一记实用杠杆：小模型 agent 不是靠堆参数追赶商业大模型，而是靠'把走过的轨迹重新当训练信号'——设计 agent 框架时要把'历史轨迹可回放、可重标'作为一等公民。</p>\n<h4>对评测工程的启发</h4>\n<p>世界模型幻觉'可预测可预防'（根因是状态-动作低覆盖区）与序列概率'条件性对齐正确性'共同指向一个评测盲区：模型自身的概率/流畅度不等于可靠性。上线前应加两道审计——'状态-动作覆盖度体检'和'概率-正确性对齐度量化'。</p>\n<h4>对 RL 训练的启发</h4>\n<p>RLVR 的边界正在从'窄域可验证（数学/代码）'走向'宽域可执行打分（RAG/摘要/排序）'。凡是手里有确定性打分器却没有标准答案的任务，都是 RLVR 的下一个候选战场。</p>\n<h4>对团队研发流程的启发</h4>\n<p>今天的阅读顺序建议：先读 RiVER 把握'RL 奖励信号扩展'主线，再读 PEEU 把握 agent 小模型规划增强，最后扫世界模型幻觉与序列概率把握可靠性缺口；DanceOPD 作外围趋势快读。</p>\n<h4>对未来 6-12 个月技术趋势的启发</h4>\n<p>趋势重心会从'谁训出更强模型'转向'谁更会扩展 RL 可验证边界、复用 agent 探索经验、量化模型自评可靠性'——模型红利见顶后，reward 边界扩展与可靠性治理是新的增长点。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2606.27369v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2606.27369v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。</li>\n<li><strong>最大不确定性：</strong> 外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。</li>\n<li><strong>下一步动作：</strong> 若 1-2 周内仍无 RiVER 官方代码，用自有 LLM 训练框架的离线 rollout 自建'连续打分器→GRPO'最小验证；7-14 天后复盘 PEEU 是否被 agent 社区复现、世界模型幻觉覆盖度方法是否被视频生成团队引用。</li>\n</ul>\n<p>> 生成时间：2026-06-27T04:33:55.082097</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
     "2026-06-26": {
       "date": "2026-06-26",
       "title": "论文价值发现日报 - 2026-06-26",
@@ -1150,22 +1423,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -1176,43 +1462,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -1417,22 +1690,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -1443,43 +1729,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -1690,22 +1963,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -1716,43 +2002,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -2687,22 +2960,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -2713,43 +2999,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -4301,22 +4574,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -4327,43 +4613,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -4568,22 +4841,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -4594,43 +4880,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -5401,22 +5674,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -5427,43 +5713,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -5921,22 +6194,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -5947,43 +6233,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -6156,22 +6429,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -6182,43 +6468,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -10851,22 +11124,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -10877,43 +11163,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -11086,22 +11359,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -11112,43 +11398,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -13033,22 +13306,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -13059,43 +13345,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -13301,22 +13574,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -13327,43 +13613,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -13993,22 +14266,35 @@
       ],
       "candidate_papers": [
         {
-          "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+          "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
+          "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+          "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 83.0,
+          "score": 82.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-          "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-          "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
+          "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+          "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "hallucination-in-world-models-is-predictable-and-preventable",
+          "title": "Hallucination in World Models is Predictable and Preventable",
+          "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
@@ -14019,43 +14305,30 @@
           "worth_deep_dive": true
         },
         {
-          "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-          "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-          "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
+          "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+          "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+          "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 76.0,
+          "score": 74.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-          "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-          "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
+          "id": "danceopd-on-policy-generative-field-distillation",
+          "title": "DanceOPD: On-Policy Generative Field Distillation",
+          "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 72.0,
+          "score": 66.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "real-time-voice-ai-hears-but-does-not-listen",
-          "title": "Real-Time Voice AI Hears but Does Not Listen",
-          "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 70.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {

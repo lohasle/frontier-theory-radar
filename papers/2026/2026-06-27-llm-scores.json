@@ -1,0 +1,64 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2606.27369v1": {
+      "score": 82,
+      "value_type": "immediate",
+      "reason": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。",
+      "matched_topics": ["llm-evaluation", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2606.27330v1": {
+      "score": 80,
+      "value_type": "immediate",
+      "reason": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给了两段式解法——自主经验探索（让 agent 先离线探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号）。理论=把'探索得到的历史轨迹'作为可复用训练资产（hindsight relabeling），而非每次从零规划；工程映射=给自有 agent 框架加一个'离线探索→轨迹回放→任务规划'的闭环，用小模型逼近商业大模型的规划能力，直接降本。证据含方法+对照（开源 MLLM vs 商业大模型），关键词覆盖 agent/planning/multimodal；代码/benchmark 待核验。",
+      "matched_topics": ["ai-agent", "multimodal-agent"]
+    },
+    "http://arxiv.org/abs/2606.27326v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "世界模型可靠性 + 评测基准双信号：生成式世界模型 rollout '视觉流畅但偏离真实动力学'的幻觉被定位为集中在'状态-动作空间低覆盖区'，且可用轻量数据信号检测并缓解。配套发布 MMBench2（427 小时、210 任务、带 ground-truth 动作的可视化世界建模基准）。理论命题=幻觉可预测且可预防，根因是数据覆盖而非模型容量；工程映射=给世界模型/视频生成 agent 上线前加一道'状态-动作覆盖度'体检，低覆盖区即幻觉高发区。作者（Hansen/Wang，UCSD 世界模型方向）高度可信，且有 benchmark（MMBench2）。属趋势+评测方法论而非即插即用工具，给趋势分。",
+      "matched_topics": ["multimodal-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2606.27359v1": {
+      "score": 74,
+      "value_type": "trend",
+      "reason": "评测/校准线的根基性问题：解码方法本质都在'把概率质量推向模型更可能的输出'，那'序列概率到底在多大程度对齐正确性'？本文跨解码方法/模型量化这一关系。理论命题=模型自身的序列概率与正确性的对齐是有条件、可量化的，并非普遍成立；工程映射=直接关系到置信度估计、幻觉检测、self-consistency/Best-of-N 的有效性边界——做 agent 输出把关、采样策略、风险阈值时，'概率高≠对'是需要量化的前提。作者（Zenn/Geiping，马里兰）可信，属评测理论趋势而非即时方案，给趋势分。代码/benchmark 待核验。",
+      "matched_topics": ["llm-evaluation", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.27377v1": {
+      "score": 66,
+      "value_type": "trend",
+      "reason": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy 蒸馏在多任务统一中的价值。属 CV/图像生成方向，与雷达 Agent/推理主线相关性中等，但因'多能力统一+on-policy 蒸馏'方法论可外推，给趋势分。代码/benchmark 待核验。",
+      "matched_topics": ["multimodal-agent", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2606.27347v1": {
+      "score": 56,
+      "value_type": "long_tail",
+      "reason": "信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 LLM 做联合实体-关系抽取的可复用 pipeline'，可迁移到自有知识图谱/情报抽取场景。但属应用型 NLP 流水线、与本雷达 Agent/推理/平台主线相关性外围，价值在于'开源 IE→知识图谱'这条长尾观察线。代码/benchmark 待核验。",
+      "matched_topics": ["rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2606.27342v1": {
+      "score": 50,
+      "value_type": "long_tail",
+      "reason": "数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/实体解析的团队有方法论参考（低资源学习+领域适应），但与 LLM/Agent 主线相关性偏外围，价值在于数据工程长尾观察。代码/benchmark 待核验。",
+      "matched_topics": ["data-engineering"]
+    },
+    "http://arxiv.org/abs/2606.27334v1": {
+      "score": 42,
+      "value_type": "ignore",
+      "reason": "应用型 LLM 数字孪生（模拟老年人对话行为以早期识别轻度认知障碍 MCI）。概念上对应'用 LLM 做个性化行为建模'，但属医疗/认知健康应用细分，与雷达核心方向（大模型训练/Agent 工程/平台）无直接交集，难转化为可复用工程资产，建议忽略并保留最小索引。",
+      "matched_topics": []
+    },
+    "http://arxiv.org/abs/2606.27361v1": {
+      "score": 38,
+      "value_type": "ignore",
+      "reason": "自回归玻尔兹曼生成器：用自回归模型替代 normalizing flows 做分子系统热力学平衡采样（含 Yoshua Bengio）。属统计物理/分子模拟细分领域，方法论虽优雅但与雷达 Agent/推理/平台主线无交集，建议忽略。",
+      "matched_topics": []
+    },
+    "http://arxiv.org/abs/2606.27354v1": {
+      "score": 36,
+      "value_type": "ignore",
+      "reason": "误差条件化神经求解器：神经代理模型解 PDE，并通过条件化于残差误差来自我修正约束违反。属科学计算/PDE 求解细分，与雷达核心方向无关，建议忽略。",
+      "matched_topics": []
+    }
+  }
+}

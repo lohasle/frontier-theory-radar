@@ -1,112 +1,121 @@
 {
-  "updated_at": "2026-06-26T04:33:36.650386",
+  "updated_at": "2026-06-27T04:33:56.670659",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-06-26",
-    "title": "论文价值发现日报 - 2026-06-26",
-    "deep_dive_title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-    "deep_dive_url": "http://arxiv.org/abs/2606.26080v1",
+    "date": "2026-06-27",
+    "title": "论文价值发现日报 - 2026-06-27",
+    "deep_dive_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+    "deep_dive_url": "http://arxiv.org/abs/2606.27369v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "三件事：列出 Progress Advantage 最小实验(已有轨迹→提取 advantage→对照步级质量→测下游收益)；把 self-distillation 多样性塌陷、Model Forensics 误报治理纳入后训练/治理观察清单；把 MLLM 顺序敏感与语音 AI 副语言缺失纳入评测可靠性 checklist。",
-    "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。",
-    "one_line_judgement": "它回答的是 agent 工程界天天踩的坑——'想给 agent 做步级过程奖励(PRM)，但长程交互+不可逆动作+随机环境让人工标注和蒙特卡洛估计都不可规模化'。本文给出一个'免费午餐'：RL 后训练本身已经提供了有效的步级评分信号(Progress Advantage)，不必再单独训奖励模型。这恰好是自有 agent 团队在 RLHF/GRPO 流水线里立刻能验证的变量。理论上是'PRM 的价值不在独立模型而在 advantage 函数重用'，工程上对应'把训练中的 advantage 当步骤质量标签'。",
-    "path": "daily-detail.html?date=2026-06-26"
+    "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
+    "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。",
+    "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
+    "path": "daily-detail.html?date=2026-06-27"
   },
   "top_paper": {
-    "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+    "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
     "authors": [
-      "Changdae Oh",
-      "Wendi Li",
-      "Seongheon Park",
-      "Samuel Yeh",
-      "Tanwi Mallick"
+      "Yingyu Lin",
+      "Qiyue Gao",
+      "Nikki Lijing Kuang",
+      "Xunpeng Huang",
+      "Kun Zhou"
     ],
-    "published": "2026-06-24",
-    "updated": "2026-06-24",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
     "source": "arXiv",
-    "url": "http://arxiv.org/abs/2606.26080v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.26080v1",
+    "url": "http://arxiv.org/abs/2606.27369v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.27369v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training a",
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous-valued supervision. When applying group-relative RL to such conti",
     "categories": [
-      "cs.LG",
-      "cs.AI"
+      "cs.LG"
     ],
     "keywords": [
-      "agent",
-      "agentic",
-      "evaluation",
-      "benchmark"
+      "benchmark",
+      "RAG"
     ],
-    "score": 83.0,
+    "score": 82.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2606.26080v1"
+        "url": "http://arxiv.org/abs/2606.27369v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2606.26080v1"
+        "url": "https://arxiv.org/pdf/2606.27369v1"
       }
     ],
-    "llm_reason": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练本身已提供有效的步级评分信号(Progress Advantage)，无需再单独训奖励模型——这是直接可迁移到自有 agent 训练流水线的'免费午餐'。理论上对应'PRM 的价值不在独立模型而在优势函数重用'，工程上对应'把 PPO/GRPO 训练中的 advantage 当作步骤质量标签'，本周即可做最小验证。证据以方法+对照实验为主，作者背景(Oh 等，agent/RL 方向)可信；代码/benchmark 暂无/待核验。",
-    "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+    "llm_reason": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。",
+    "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
     "value_type": "immediate",
     "matched_topics": [
-      "ai-agent",
       "llm-evaluation",
-      "data-engineering"
+      "rag-knowledge"
     ],
     "score_breakdown": {
       "novelty": 4.8,
-      "problem_importance": 5.8,
-      "relevance": 6.2,
-      "evidence_strength": 4.95,
-      "engineering_testability": 3.5,
-      "trend_signal": 4.6,
+      "problem_importance": 4.5,
+      "relevance": 3.8,
+      "evidence_strength": 4.5,
+      "engineering_testability": 4.05,
+      "trend_signal": 3.5,
       "long_tail_potential": 3.5,
-      "asset_convertibility": 4.8,
-      "actionability": 5.0,
-      "noise_risk": 1.2,
-      "weak_evidence_penalty": 4.0,
-      "low_relevance_penalty": 2.2,
+      "asset_convertibility": 5.4,
+      "actionability": 3.8,
+      "noise_risk": 2.4,
+      "weak_evidence_penalty": 5.0,
+      "low_relevance_penalty": 5.0,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "AI Agent：Process reward models enable fine-grained, step-level evaluation of LLMs, yet …",
-    "one_line_judgement": "今天值得试：直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、…",
-    "first_seen_date": "2026-06-26",
-    "first_deep_dive_daily": "2026-06-26",
+    "brief_cn": "LLM 评测：Reinforcement learning with verifiable rewards (RLVR) for training LLMs typica…",
+    "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量…",
+    "first_seen_date": "2026-06-27",
+    "first_deep_dive_daily": "2026-06-27",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练",
+    "long_tail_summary": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-",
     "related_trends": [
-      "agentic-world-modeling",
-      "coding-agent"
+      "coding-agent",
+      "context-engineering"
     ],
-    "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents"
+    "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms"
   },
-  "paper_count": 379,
+  "paper_count": 389,
   "daily_count": 30,
   "trend_count": 3,
-  "long_tail_count": 40,
+  "long_tail_count": 42,
   "value_distribution": {
-    "immediate": 39,
-    "trend": 51,
-    "long_tail": 40,
-    "ignore": 249
+    "immediate": 41,
+    "trend": 54,
+    "long_tail": 42,
+    "ignore": 252
   },
   "recent_dailies": [
+    {
+      "date": "2026-06-27",
+      "title": "论文价值发现日报 - 2026-06-27",
+      "deep_dive_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+      "deep_dive_url": "http://arxiv.org/abs/2606.27369v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。",
+      "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
+      "path": "daily-detail.html?date=2026-06-27"
+    },
     {
       "date": "2026-06-26",
       "title": "论文价值发现日报 - 2026-06-26",
@@ -184,669 +193,55 @@
       "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。",
       "one_line_judgement": "它直击生成式推荐最受关注的工程核心——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入，且明确面向工业推荐系统，迁移路径清晰，是今日候选中工程价值与场景证据最强的一篇。",
       "path": "daily-detail.html?date=2026-06-21"
-    },
-    {
-      "date": "2026-06-20",
-      "title": "论文价值发现日报 - 2026-06-20",
-      "deep_dive_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-      "deep_dive_url": "http://arxiv.org/abs/2606.20537v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成三件事：起草执行态胶囊 PoC 指标设计、列出 MoE 专家级校准监控的数据漂移实验、把透明度二分框架整理成可解释性评测 checklist。",
-      "max_uncertainty": "外部可复现资产缺失是最大不确定性：代码、benchmark、Papers with Code 与独立复现证据多数暂无或待核验；分数与结论主要依据 arXiv 摘要与作者陈述。",
-      "one_line_judgement": "它补全了主流 KV-cache 服役范式忽略的另一半世界——端侧/物理 AI 中 agent、语音、机器人策略反复分支、复位、中断、重入的执行态管理，工程命题硬且场景明确。",
-      "path": "daily-detail.html?date=2026-06-20"
     }
   ],
   "top_papers": [
     {
-      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
       "authors": [
-        "Changdae Oh",
-        "Wendi Li",
-        "Seongheon Park",
-        "Samuel Yeh",
-        "Tanwi Mallick"
+        "Yingyu Lin",
+        "Qiyue Gao",
+        "Nikki Lijing Kuang",
+        "Xunpeng Huang",
+        "Kun Zhou"
       ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26080v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26080v1",
+      "url": "http://arxiv.org/abs/2606.27369v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27369v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training a",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous-valued supervision. When applying group-relative RL to such conti",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "cs.LG"
       ],
       "keywords": [
-        "agent",
-        "agentic",
-        "evaluation",
-        "benchmark"
+        "benchmark",
+        "RAG"
       ],
-      "score": 83.0,
+      "score": 82.0,
       "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26080v1"
+          "url": "http://arxiv.org/abs/2606.27369v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26080v1"
+          "url": "https://arxiv.org/pdf/2606.27369v1"
         }
       ],
-      "llm_reason": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练本身已提供有效的步级评分信号(Progress Advantage)，无需再单独训奖励模型——这是直接可迁移到自有 agent 训练流水线的'免费午餐'。理论上对应'PRM 的价值不在独立模型而在优势函数重用'，工程上对应'把 PPO/GRPO 训练中的 advantage 当作步骤质量标签'，本周即可做最小验证。证据以方法+对照实验为主，作者背景(Oh 等，agent/RL 方向)可信；代码/benchmark 暂无/待核验。",
-      "id": "neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents",
+      "llm_reason": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。",
+      "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
       "value_type": "immediate",
       "matched_topics": [
-        "ai-agent",
         "llm-evaluation",
-        "data-engineering"
+        "rag-knowledge"
       ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.6,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Process reward models enable fine-grained, step-level evaluation of LLMs, yet …",
-      "one_line_judgement": "今天值得试：直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "直击 Agent 工程最实用的'过程奖励'难题：构建 agent 专用的 process reward model 因长程交互、不可逆动作、随机环境反馈而极难规模化标注。本文证明 RL 后训练",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=neglected-free-lunch-from-post-training-progress-advantage-for-llm-agents"
-    },
-    {
-      "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-      "authors": [
-        "Andrei Liviu Nicolicioiu",
-        "Mohammad Pezeshki",
-        "Aaron Courville"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26091v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26091v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level feedback. We show that this could come at a hidden cost: rollout diversity decreases and pass@k curves flatten (i.e., generating more rollouts fails to improve accuracy). We trace this to compounding biases in the design of self-distillation with sampled demonstrations. The teacher scores each student",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "keywords": [
-        "benchmark",
-        "RAG"
-      ],
-      "score": 78.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26091v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26091v1"
-        }
-      ],
-      "llm_reason": "揭示 on-policy 自蒸馏的一个隐藏代价：用采样 demo 当 teacher 条件会让 rollout 多样性下降、pass@k 曲线变平(生成更多候选也无法提升准确率)，并追溯到 teacher 打分偏差的累积放大。这对所有做 RLHF/自蒸馏/拒绝采样的工程团队都是直接警示——'准确率涨了但多样性塌了'是真实陷阱。作者来自 MILA(Courville)，方法严谨、实验完整。属趋势性/警示性发现而非立即可上线方案，故给趋势分。代码/benchmark 待核验。",
-      "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
-      "value_type": "trend",
-      "matched_topics": [
-        "inference-serving",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "推理与服务：On-policy self-distillation achieves strong pass@1 accuracy by using a single …",
-      "one_line_judgement": "值得继续观察：揭示 on-policy 自蒸馏的一个隐藏代价：用采样 demo 当 teacher 条件会让 rollout 多样性下降、pass@k 曲…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "揭示 on-policy 自蒸馏的一个隐藏代价：用采样 demo 当 teacher 条件会让 rollout 多样性下降、pass@k 曲线变平(生成更多候选也无法提升准确率)，并追溯到 t",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity"
-    },
-    {
-      "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-      "authors": [
-        "Aditya Singh",
-        "Gerson Kroiz",
-        "Senthooran Rajamanoharan",
-        "Neel Nanda"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26071v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26071v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "A central goal of safety research is determining whether a model is misaligned. Prior work has largely focused on detecting concerning behavior. But behavior alone does not establish misalignment: a concerning action can arise from benign causes such as confusion. This motivates model forensics: investigating whether the action was driven by malign intent. In this paper, we propose a baseline protocol for model forensics consisting of two steps, iterated as needed. First, we read the chain of th",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent",
-        "agentic"
-      ],
-      "score": 76.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26071v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26071v1"
-        }
-      ],
-      "llm_reason": "安全/对齐治理线的强信号：提出 Model Forensics 协议——'行为可疑 ≠ 模型对齐失败'(困惑、上下文缺失等良性原因也会产生)。通过读思维链 + 定向干预两步迭代判断'可疑行为是否源于恶意意图'。作者含 Neel Nanda、Senthooran Rajamanoharan(Google DeepMind mech-interp 核心团队)，可信度高。对治理流程有直接价值(避免误报、降低对齐审计成本)，但属方法论阶段而非可即插即用工具，给趋势分。代码/benchmark 待核验。",
-      "id": "model-forensics-investigating-whether-concerning-behavior-reflects-misalignment",
-      "value_type": "trend",
-      "matched_topics": [
-        "security-governance",
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "安全与治理：A central goal of safety research is determining whether a model is misaligned…",
-      "one_line_judgement": "值得继续观察：安全/对齐治理线的强信号：提出 Model Forensics 协议——'行为可疑 ≠ 模型对齐失败'(困惑、上下文缺失等良性原因也会产生)…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "安全/对齐治理线的强信号：提出 Model Forensics 协议——'行为可疑 ≠ 模型对齐失败'(困惑、上下文缺失等良性原因也会产生)。通过读思维链 + 定向干预两步迭代判断'可疑行为是",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=model-forensics-investigating-whether-concerning-behavior-reflects-misalignment"
-    },
-    {
-      "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
-      "authors": [
-        "Akshay Paruchuri",
-        "Sanmi Koyejo",
-        "Ehsan Adeli"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26079v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26079v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Standard benchmarks for multimodal large language models (MLLMs) score each item on one canonical ordering and miss whether order-irrelevant shuffling changes the answer, a baseline reliability property called for by emerging AI evaluation guidelines. We introduce Facet-Probe, a five-facet audit (option, evidence-chunk, document-rank, image-set, and mixed-modality ordering) of 18 frontier and open-weight MLLMs. A Bayesian item-response model separates ordering noise from per-facet bias, and a sa",
-      "categories": [
-        "cs.CL",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "keywords": [
-        "evaluation",
-        "benchmark",
-        "multimodal"
-      ],
-      "score": 72.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26079v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26079v1"
-        }
-      ],
-      "llm_reason": "评测可靠性线：提出 Facet-Probe 五维度审计(选项/证据块/文档排序/图片集/混合模态顺序)，发现'同一证据换顺序就换答案'是 18 个前沿 MLLM 的普遍可靠性缺陷，并用贝叶斯 IRT 模型把'顺序噪声'与'维度偏差'分离。这直接挑战现有 benchmark 单一标准排序的打分有效性，对所有做 MLLM 评测/选型的团队都有方法论价值。作者来自 Stanford(Adeli/Koyejo)，方法设计完整。属评测方法论趋势而非即时工程方案，给趋势分。代码/benchmark 待核验。",
-      "id": "same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models",
-      "value_type": "trend",
-      "matched_topics": [
-        "llm-evaluation",
-        "multimodal-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 5.4,
-        "engineering_testability": 3.5,
-        "trend_signal": 6.0,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.6,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "LLM 评测：Standard benchmarks for multimodal large language models (MLLMs) score each it…",
-      "one_line_judgement": "值得继续观察：评测可靠性线：提出 Facet-Probe 五维度审计(选项/证据块/文档排序/图片集/混合模态顺序)，发现'同一证据换顺序就换答案'是 1…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "评测可靠性线：提出 Facet-Probe 五维度审计(选项/证据块/文档排序/图片集/混合模态顺序)，发现'同一证据换顺序就换答案'是 18 个前沿 MLLM 的普遍可靠性缺陷，并用贝叶斯 ",
-      "related_trends": [
-        "coding-agent",
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=same-evidence-different-answer-auditing-order-sensitivity-in-multimodal-large-language-models"
-    },
-    {
-      "title": "Real-Time Voice AI Hears but Does Not Listen",
-      "authors": [
-        "Martijn Bartelds",
-        "Federico Bianchi",
-        "James Zou"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26083v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26083v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Speech conveys information through both words and vocal delivery. We evaluate four leading production realtime voice systems-OpenAI's GPT Realtime 2, Google's Gemini 3.1 Flash Live, and Alibaba's Qwen3.5 Omni Plus and Omni Flash-on tasks where the words and the delivery patterns both convey meaningful information. Across three consequential scenarios, all four systems act on the words rather than the voice. They end calls with crying callers who insist nothing is wrong, approve wire transfers au",
-      "categories": [
-        "cs.CL",
-        "eess.AS"
-      ],
-      "keywords": [],
-      "score": 70.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26083v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26083v1"
-        }
-      ],
-      "llm_reason": "多模态/语音 AI 评测 + 安全线：评测四大生产级实时语音系统(GPT Realtime 2 / Gemini 3.1 Flash Live / Qwen3.5 Omni Plus & Flash)，发现它们只听'词'不听'声音'(对哭诉坚持没事的来电者仍挂断、批准语气异常的电汇)——揭示 paralinguistic(副语言)信号在生产级语音 agent 中系统性缺失。这是语音 Agent 上线的真实安全隐患。作者 Federico Bianchi、James Zou(Stanford)，证据扎实(多系统对照)。属生产级评测/安全趋势线，给趋势分。代码/benchmark 待核验。",
-      "id": "real-time-voice-ai-hears-but-does-not-listen",
-      "value_type": "trend",
-      "matched_topics": [
-        "multimodal-agent",
-        "security-governance",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.6,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Multimodal Agent：Speech conveys information through both words and vocal delivery. We evaluate …",
-      "one_line_judgement": "值得继续观察：多模态/语音 AI 评测 + 安全线：评测四大生产级实时语音系统(GPT Realtime 2 / Gemini 3.1 Flash Liv…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "多模态/语音 AI 评测 + 安全线：评测四大生产级实时语音系统(GPT Realtime 2 / Gemini 3.1 Flash Live / Qwen3.5 Omni Plus & Fl",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=real-time-voice-ai-hears-but-does-not-listen"
-    },
-    {
-      "title": "RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments",
-      "authors": [
-        "Babak Rahmani",
-        "Sebastian Dziadzio",
-        "Joschka Strüber",
-        "Sergio Hernández-Gutiérrez",
-        "Matthias Bethge"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26094v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26094v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "For most of scientific history, researchers studying behavior could only infer hidden mechanisms from outward actions: an inverse problem that becomes more tractable when observation is augmented by targeted intervention. We pose a computational analogue: given only behavioral traces of an agent in a game environment, can a learner reconstruct the underlying decision program as executable code, and how much does this reconstruction improve with the ability to design controlled experiments? We in",
-      "categories": [
-        "cs.LG"
-      ],
-      "keywords": [
-        "agent",
-        "benchmark"
-      ],
-      "score": 56.0,
-      "decision": "持续观察",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26094v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26094v1"
-        }
-      ],
-      "llm_reason": "RevengeBench：从游戏环境中 agent 的行为轨迹反推出可执行代码形式的决策程序，并研究'主动设计受控实验'能把重构提升多少。这是'逆向工程 agent 策略'的可解释性方向，概念新颖(行为→代码的逆问题)。但与 Agent 工程主线的直接转化性偏弱、设定限于游戏环境，价值在于'策略可解释/可审计'这条长尾观察线。代码/benchmark 待核验。",
-      "id": "revengebench-reverse-engineering-code-space-policies-from-behavioral-experiments",
-      "value_type": "long_tail",
-      "matched_topics": [
-        "ai-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "AI Agent：For most of scientific history, researchers studying behavior could only infer…",
-      "one_line_judgement": "值得先保存：RevengeBench：从游戏环境中 agent 的行为轨迹反推出可执行代码形式的决策程序，并研究'主动设计受控实验'能把重构提升多少。这…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "RevengeBench：从游戏环境中 agent 的行为轨迹反推出可执行代码形式的决策程序，并研究'主动设计受控实验'能把重构提升多少。这是'逆向工程 agent 策略'的可解释性方向，概念",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=revengebench-reverse-engineering-code-space-policies-from-behavioral-experiments"
-    },
-    {
-      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
-      "authors": [
-        "Dong Jing",
-        "Tianqi Zhang",
-        "Jiaqi Liu",
-        "Jinman Zhao",
-        "Zelong Sun"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26095v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26095v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in ",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "keywords": [],
-      "score": 54.0,
-      "decision": "持续观察",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26095v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26095v1"
-        }
-      ],
-      "llm_reason": "VLA(视觉-语言-动作)模型为机器人操作学习显式动作先验(motion prior)，解决'动作模块从零学物理运动'的问题，面向 cross-embodiment(跨本体)泛化。概念上对应'给 agent 注入先验技能而非全从零学'，可迁移到 skill-library 思路。但属机器人专属、无代码、与本雷达 Agent/推理/平台主线相关性偏外围，价值在于具身 agent 长尾观察线。代码/benchmark 待核验。",
-      "id": "learning-action-priors-for-cross-embodiment-robot-manipulation",
-      "value_type": "long_tail",
-      "matched_topics": [
-        "multimodal-agent",
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 4.0,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "Multimodal Agent：Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM…",
-      "one_line_judgement": "值得先保存：VLA(视觉-语言-动作)模型为机器人操作学习显式动作先验(motion prior)，解决'动作模块从零学物理运动'的问题，面向 cros…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "VLA(视觉-语言-动作)模型为机器人操作学习显式动作先验(motion prior)，解决'动作模块从零学物理运动'的问题，面向 cross-embodiment(跨本体)泛化。概念上对应'",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=learning-action-priors-for-cross-embodiment-robot-manipulation"
-    },
-    {
-      "title": "When Certainty Is an Artifact: Keyword Lexicon Blindness and the (Mis)Measurement of Rhetorical Stance",
-      "authors": [
-        "Bo Chen"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26062v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26062v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Can a statistically significant, large-effect-size finding in computational social science be entirely an artifact of the measurement instrument? We present a case where the answer appears to be yes. Analyzing 85 interviews across four public intellectuals (2016--2026), we find a robust negative-affect/emphatic-certainty lexical co-occurrence pattern under keyword-based scoring ($r = 0.72$--$0.93$, $p < 0.01$ for all four speakers). Replacing keyword counting with LLM-based zero-shot semantic cl",
-      "categories": [
-        "cs.CL"
-      ],
-      "keywords": [],
-      "score": 44.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26062v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26062v1"
-        }
-      ],
-      "llm_reason": "计算社会科学的测量方法论案例：关键词词典打分下显著的大效应(r=0.72-0.93)在换成 LLM 零样本语义打分后消失——证明'显著结果可能是测量工具的假象'。方法学上有警示意义，但属 CSS/NLP 评测方法学细分，与本雷达 Agent/推理/平台主线相关性低、难以转化为可复用工程资产，建议忽略并保留最小索引。",
-      "id": "when-certainty-is-an-artifact-keyword-lexicon-blindness-and-the-mis-measurement-of-rhetorical-stance",
-      "value_type": "ignore",
-      "matched_topics": [
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 4.15,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "LLM 评测：Can a statistically significant, large-effect-size finding in computational so…",
-      "one_line_judgement": "当前可忽略：计算社会科学的测量方法论案例：关键词词典打分下显著的大效应(r=0.72-0.93)在换成 LLM 零样本语义打分后消失——证明'显著结果可…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "计算社会科学的测量方法论案例：关键词词典打分下显著的大效应(r=0.72-0.93)在换成 LLM 零样本语义打分后消失——证明'显著结果可能是测量工具的假象'。方法学上有警示意义，但属 CS",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=when-certainty-is-an-artifact-keyword-lexicon-blindness-and-the-mis-measurement-of-rhetorical-stance"
-    },
-    {
-      "title": "A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding",
-      "authors": [
-        "Sen Li",
-        "Haichao Cui",
-        "Chendong Shao",
-        "Yaqi Wang",
-        "Xinhua Tang"
-      ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26078v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26078v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Supervised deep learning has been widely used for weld penetration state classification; however, its performance often degrades significantly under domain shift, such as when transferring models between welding processes with distinct physical mechanisms:for instance, from arc-dominated tungsten inert gas (TIG) welding to keyhole-based laser welding. To overcome this limitation, we propose an unsupervised domain adaptation (UDA) framework integrated with a gradual source domain expansion (GSDE)",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "keywords": [
-        "RAG"
-      ],
-      "score": 30.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26078v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26078v1"
-        }
-      ],
-      "llm_reason": "焊接熔透状态预测 + 无监督域适应(UDA/GSDE)，从 TIG 迁移到激光焊接。属制造业/焊接工艺细分领域，与本雷达核心方向(大模型/Agent/平台工程)无交集，建议忽略。",
-      "id": "a-cross-process-welding-penetration-status-prediction-algorithm-based-on-unsupervised-domain-adaptation-in-laser-and-tig-welding",
-      "value_type": "ignore",
-      "matched_topics": [],
       "score_breakdown": {
         "novelty": 4.8,
         "problem_importance": 4.5,
@@ -863,57 +258,654 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：Supervised deep learning has been widely used for weld penetration state class…",
-      "one_line_judgement": "当前可忽略：焊接熔透状态预测 + 无监督域适应(UDA/GSDE)，从 TIG 迁移到激光焊接。属制造业/焊接工艺细分领域，与本雷达核心方向(大模型/A…",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Reinforcement learning with verifiable rewards (RLVR) for training LLMs typica…",
+      "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "焊接熔透状态预测 + 无监督域适应(UDA/GSDE)，从 TIG 迁移到激光焊接。属制造业/焊接工艺细分领域，与本雷达核心方向(大模型/Agent/平台工程)无交集，建议忽略。",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=a-cross-process-welding-penetration-status-prediction-algorithm-based-on-unsupervised-domain-adaptation-in-laser-and-tig-welding"
+      "long_tail_summary": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms"
     },
     {
-      "title": "A welding penetration prediction model for laser welding process based on self-supervised learning using physics-informed neural networks",
+      "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
       "authors": [
-        "Sen Li",
-        "Xiaoying Liu",
-        "Xiaojian Xu",
-        "Chendong Shao",
-        "Yaqi Wang"
+        "Tianyi Men",
+        "Zhuoran Jin",
+        "Pengfei Cao",
+        "Yubo Chen",
+        "Kang Liu"
       ],
-      "published": "2026-06-24",
-      "updated": "2026-06-24",
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2606.26059v1",
-      "pdf_url": "https://arxiv.org/pdf/2606.26059v1",
+      "url": "http://arxiv.org/abs/2606.27330v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27330v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "The laser welding full-penetration is of critical importance, as it constitutes one of the fundamental factors in achieving defect-free welded joints. Accurate prediction of the penetration state is therefore essential for ensuring weld quality. To this end, this paper introduces SimPhysNet, a novel algorithm that achieves high classification accuracy in laser welding penetration prediction using only a limited number of labelled images. This approach effectively overcomes the limitations of sup",
+      "abstract": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLLMs are cost efficient and privacy preserving compared with commercial large models, they suffer from weak planning and limited cross website generalization. To address these limitations, we introduce the planning experience exploration and utilization (PEEU) method, which autonomously explores envir",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark",
+        "RAG",
+        "multimodal",
+        "planning"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27330v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27330v1"
+        }
+      ],
+      "llm_reason": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给了两段式解法——自主经验探索（让 agent 先离线探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号）。理论=把'探索得到的历史轨迹'作为可复用训练资产（hindsight relabeling），而非每次从零规划；工程映射=给自有 agent 框架加一个'离线探索→轨迹回放→任务规划'的闭环，用小模型逼近商业大模型的规划能力，直接降本。证据含方法+对照（开源 MLLM vs 商业大模型），关键词覆盖 agent/planning/multimodal；代码/benchmark 待核验。",
+      "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Multimodal web agents can assist humans in operating repetitive GUI tasks, whe…",
+      "one_line_judgement": "今天值得试：Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给了两段式解法——自主经验探索（让 a",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning"
+    },
+    {
+      "title": "Hallucination in World Models is Predictable and Preventable",
+      "authors": [
+        "Nicklas Hansen",
+        "Xiaolong Wang"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27326v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27326v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we introduce MMBench2, a 427-hour, 210-task dataset for visual world modeling with ground-truth actions, r",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "keywords": [
+        "world model",
+        "RAG"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27326v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27326v1"
+        }
+      ],
+      "llm_reason": "世界模型可靠性 + 评测基准双信号：生成式世界模型 rollout '视觉流畅但偏离真实动力学'的幻觉被定位为集中在'状态-动作空间低覆盖区'，且可用轻量数据信号检测并缓解。配套发布 MMBench2（427 小时、210 任务、带 ground-truth 动作的可视化世界建模基准）。理论命题=幻觉可预测且可预防，根因是数据覆盖而非模型容量；工程映射=给世界模型/视频生成 agent 上线前加一道'状态-动作覆盖度'体检，低覆盖区即幻觉高发区。作者（Hansen/Wang，UCSD 世界模型方向）高度可信，且有 benchmark（MMBench2）。属趋势+评测方法论而非即插即用工具，给趋势分。",
+      "id": "hallucination-in-world-models-is-predictable-and-preventable",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Modern generative world models render increasingly realistic action-controllab…",
+      "one_line_judgement": "值得继续观察：世界模型可靠性 + 评测基准双信号：生成式世界模型 rollout '视觉流畅但偏离真实动力学'的幻觉被定位为集中在'状态-动作空间低覆盖区…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "世界模型可靠性 + 评测基准双信号：生成式世界模型 rollout '视觉流畅但偏离真实动力学'的幻觉被定位为集中在'状态-动作空间低覆盖区'，且可用轻量数据信号检测并缓解。配套发布 MMBe",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=hallucination-in-world-models-is-predictable-and-preventable"
+    },
+    {
+      "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+      "authors": [
+        "Johannes Zenn",
+        "Jonas Geiping"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27359v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27359v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Many decoding methods for large language models can be understood as shifting probability mass toward outputs that are more likely under the model, either locally at the token level or globally at the sequence level. Therefore, their success depends on a fundamental question: when does sequence probability, that is, the conditional probability of a continuation given a prompt, actually align with correctness? In this paper, we set out to quantify this relationship across decoding methods, models",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 74.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27359v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27359v1"
+        }
+      ],
+      "llm_reason": "评测/校准线的根基性问题：解码方法本质都在'把概率质量推向模型更可能的输出'，那'序列概率到底在多大程度对齐正确性'？本文跨解码方法/模型量化这一关系。理论命题=模型自身的序列概率与正确性的对齐是有条件、可量化的，并非普遍成立；工程映射=直接关系到置信度估计、幻觉检测、self-consistency/Best-of-N 的有效性边界——做 agent 输出把关、采样策略、风险阈值时，'概率高≠对'是需要量化的前提。作者（Zenn/Geiping，马里兰）可信，属评测理论趋势而非即时方案，给趋势分。代码/benchmark 待核验。",
+      "id": "when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Many decoding methods for large language models can be understood as shifting …",
+      "one_line_judgement": "值得继续观察：评测/校准线的根基性问题：解码方法本质都在'把概率质量推向模型更可能的输出'，那'序列概率到底在多大程度对齐正确性'？本文跨解码方法/模型量…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "评测/校准线的根基性问题：解码方法本质都在'把概率质量推向模型更可能的输出'，那'序列概率到底在多大程度对齐正确性'？本文跨解码方法/模型量化这一关系。理论命题=模型自身的序列概率与正确性的对",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=when-are-likely-answers-right-on-sequence-probability-and-correctness-in-llms"
+    },
+    {
+      "title": "DanceOPD: On-Policy Generative Field Distillation",
+      "authors": [
+        "Wei Zhou",
+        "Xiongwei Zhu",
+        "Zelin Xu",
+        "Bo Dong",
+        "Lixue Gong"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27377v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27377v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing. However, these capabilities are rarely naturally aligned and often conflict. For instance, editing tends to degrade T2I performance, while global and local editing interfere with each other. Consequently, effectively composing these capabilities has become a central challenge for image generation model training. To tackle this, we introduce DanceOPD,",
       "categories": [
         "cs.CV",
-        "cs.AI"
+        "cs.CL",
+        "cs.LG"
       ],
       "keywords": [],
-      "score": 30.0,
+      "score": 66.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27377v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27377v1"
+        }
+      ],
+      "llm_reason": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy 蒸馏在多任务统一中的价值。属 CV/图像生成方向，与雷达 Agent/推理主线相关性中等，但因'多能力统一+on-policy 蒸馏'方法论可外推，给趋势分。代码/benchmark 待核验。",
+      "id": "danceopd-on-policy-generative-field-distillation",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Modern image generation demands a single model that unifies diverse capabiliti…",
+      "one_line_judgement": "值得继续观察：图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation"
+    },
+    {
+      "title": "Mapping Political-Elite Networks in Europe with a Multilingual Joint Entity-Relation Extraction Pipeline",
+      "authors": [
+        "Kirill Solovev",
+        "Jana Lasser"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27347v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27347v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Whether political elites organise into rent-seeking coalitions that capture public resources or civic networks that sustain governance is a central question in comparative politics. Yet observing these complex, informal, and adversarial ties at scale has historically required intensive manual coding, while automated text-as-data methods have largely been limited to simple co-occurrence. Recent large language model (LLM) approaches offer a path forward but often rely on proprietary APIs, lack cro",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 56.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27347v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27347v1"
+        }
+      ],
+      "llm_reason": "信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 LLM 做联合实体-关系抽取的可复用 pipeline'，可迁移到自有知识图谱/情报抽取场景。但属应用型 NLP 流水线、与本雷达 Agent/推理/平台主线相关性外围，价值在于'开源 IE→知识图谱'这条长尾观察线。代码/benchmark 待核验。",
+      "id": "mapping-political-elite-networks-in-europe-with-a-multilingual-joint-entity-relation-extraction-pipeline",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "RAG / 知识系统：Whether political elites organise into rent-seeking coalitions that capture pu…",
+      "one_line_judgement": "值得先保存：信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 …",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 LLM 做联合实体-关系抽取的可复用 pipelin",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=mapping-political-elite-networks-in-europe-with-a-multilingual-joint-entity-relation-extraction-pipeline"
+    },
+    {
+      "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+      "authors": [
+        "Nicholas Pulsone",
+        "Gregory Goren",
+        "Roee Shraga"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27342v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27342v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work has incorporated domain information and low-resource learning techniques to better adapt EM systems to realistic settings. While these approaches have demonstrated strong performance, it remains unclear how they behave under varying data constraints and levels of supervision in practice. In this pap",
+      "categories": [
+        "cs.DB",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 50.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27342v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27342v1"
+        }
+      ],
+      "llm_reason": "数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/实体解析的团队有方法论参考（低资源学习+领域适应），但与 LLM/Agent 主线相关性偏外围，价值在于数据工程长尾观察。代码/benchmark 待核验。",
+      "id": "understanding-domain-aware-distribution-alignment-in-budgeted-entity-matching",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "数据工程：Entity Matching (EM) is a core operation in the data integration pipeline, whe…",
+      "one_line_judgement": "值得先保存：数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/实体解析的团队有方法论参考（低资源学习+领域适应），",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=understanding-domain-aware-distribution-alignment-in-budgeted-entity-matching"
+    },
+    {
+      "title": "Language-Based Digital Twins for Elderly Cognitive Assistance",
+      "authors": [
+        "Mohammad Mehdi Hosseini",
+        "Mohammad H. Mahoor",
+        "Hiroko H. Dodge"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27334v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27334v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Digital twins have emerged as a promising paradigm for personalized healthcare, enabling modeling of individual behavior and health trajectories. In cognitive health, early detection of Mild Cognitive Impairment (MCI) remains challenging, where language and conversational patterns serve as non-invasive biomarkers. In this work, we propose a language-based digital twin framework that leverages large language models (LLMs) to mimic the conversational behavior of elderly individuals by incorporatin",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 42.0,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2606.26059v1"
+          "url": "http://arxiv.org/abs/2606.27334v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2606.26059v1"
+          "url": "https://arxiv.org/pdf/2606.27334v1"
         }
       ],
-      "llm_reason": "基于物理信息神经网络(PINN)的自监督激光焊接熔透预测(SimPhysNet)。同属焊接工艺细分，与雷达核心方向无关，建议忽略。",
-      "id": "a-welding-penetration-prediction-model-for-laser-welding-process-based-on-self-supervised-learning-using-physics-informed-neural-networks",
+      "llm_reason": "应用型 LLM 数字孪生（模拟老年人对话行为以早期识别轻度认知障碍 MCI）。概念上对应'用 LLM 做个性化行为建模'，但属医疗/认知健康应用细分，与雷达核心方向（大模型训练/Agent 工程/平台）无直接交集，难转化为可复用工程资产，建议忽略并保留最小索引。",
+      "id": "language-based-digital-twins-for-elderly-cognitive-assistance",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：Digital twins have emerged as a promising paradigm for personalized healthcare…",
+      "one_line_judgement": "当前可忽略：应用型 LLM 数字孪生（模拟老年人对话行为以早期识别轻度认知障碍 MCI）。概念上对应'用 LLM 做个性化行为建模'，但属医疗/认知健康…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "应用型 LLM 数字孪生（模拟老年人对话行为以早期识别轻度认知障碍 MCI）。概念上对应'用 LLM 做个性化行为建模'，但属医疗/认知健康应用细分，与雷达核心方向（大模型训练/Agent 工",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=language-based-digital-twins-for-elderly-cognitive-assistance"
+    },
+    {
+      "title": "Autoregressive Boltzmann Generators",
+      "authors": [
+        "Danyal Rehman",
+        "Charlie B. Tan",
+        "Yoshua Bengio",
+        "Avishek Joey Bose",
+        "Alexander Tong"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27361v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27361v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allow rapid generation of uncorrelated equilibrium samples by combining a generative model with exact likelihoods and an importance sampling correction. However, modern BGs predominantly rely on normalizing flows (NFs), which either suffer from limited expressivity due to strict invertibility constraint",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG",
+        "inference"
+      ],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27361v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27361v1"
+        }
+      ],
+      "llm_reason": "自回归玻尔兹曼生成器：用自回归模型替代 normalizing flows 做分子系统热力学平衡采样（含 Yoshua Bengio）。属统计物理/分子模拟细分领域，方法论虽优雅但与雷达 Agent/推理/平台主线无交集，建议忽略。",
+      "id": "autoregressive-boltzmann-generators",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Efficient sampling of molecular systems at thermodynamic equilibrium is a hall…",
+      "one_line_judgement": "当前可忽略：自回归玻尔兹曼生成器：用自回归模型替代 normalizing flows 做分子系统热力学平衡采样（含 Yoshua Bengio）。属统…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "自回归玻尔兹曼生成器：用自回归模型替代 normalizing flows 做分子系统热力学平衡采样（含 Yoshua Bengio）。属统计物理/分子模拟细分领域，方法论虽优雅但与雷达 Ag",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=autoregressive-boltzmann-generators"
+    },
+    {
+      "title": "Error-Conditioned Neural Solvers",
+      "authors": [
+        "Haina Jiang",
+        "Liam Wang",
+        "Peng-Chen Chen",
+        "Min Seop Kwak",
+        "Seungryong Kim"
+      ],
+      "published": "2026-06-25",
+      "updated": "2026-06-25",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2606.27354v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.27354v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Neural surrogate models offer fast approximate mappings from PDE parameters to solutions, but they typically treat solving as a purely statistical task: once trained, they struggle to correct their own constraint violations and extrapolate beyond the training distribution. Recent hybrid methods promote physical correctness by targeting the PDE residual via gradient descent or Gauss--Newton steps, but inherit the compute cost and instability of the underlying classical optimizers. We show, theore",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "math.NA"
+      ],
+      "keywords": [],
+      "score": 36.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2606.27354v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.27354v1"
+        }
+      ],
+      "llm_reason": "误差条件化神经求解器：神经代理模型解 PDE，并通过条件化于残差误差来自我修正约束违反。属科学计算/PDE 求解细分，与雷达核心方向无关，建议忽略。",
+      "id": "error-conditioned-neural-solvers",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -933,19 +925,49 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "前沿论文：The laser welding full-penetration is of critical importance, as it constitute…",
-      "one_line_judgement": "当前可忽略：基于物理信息神经网络(PINN)的自监督激光焊接熔透预测(SimPhysNet)。同属焊接工艺细分，与雷达核心方向无关，建议忽略。",
-      "first_seen_date": "2026-06-26",
-      "first_deep_dive_daily": "2026-06-26",
+      "brief_cn": "前沿论文：Neural surrogate models offer fast approximate mappings from PDE parameters to…",
+      "one_line_judgement": "当前可忽略：误差条件化神经求解器：神经代理模型解 PDE，并通过条件化于残差误差来自我修正约束违反。属科学计算/PDE 求解细分，与雷达核心方向无关，建…",
+      "first_seen_date": "2026-06-27",
+      "first_deep_dive_daily": "2026-06-27",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "基于物理信息神经网络(PINN)的自监督激光焊接熔透预测(SimPhysNet)。同属焊接工艺细分，与雷达核心方向无关，建议忽略。",
+      "long_tail_summary": "误差条件化神经求解器：神经代理模型解 PDE，并通过条件化于残差误差来自我修正约束违反。属科学计算/PDE 求解细分，与雷达核心方向无关，建议忽略。",
       "related_trends": [],
-      "detail_path": "paper-detail.html?id=a-welding-penetration-prediction-model-for-laser-welding-process-based-on-self-supervised-learning-using-physics-informed-neural-networks"
+      "detail_path": "paper-detail.html?id=error-conditioned-neural-solvers"
     }
   ],
   "long_tail_highlights": [
+    {
+      "id": "mapping-political-elite-networks-in-europe-with-a-multilingual-joint-entity-relation-extraction-pipeline",
+      "title": "Mapping Political-Elite Networks in Europe with a Multilingual Joint Entity-Relation Extraction Pipeline",
+      "direction": "RAG / 知识系统",
+      "long_tail_type": "可迁移方法",
+      "why_save": "信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 LLM 做联合实体-关系抽取的可复用 pipelin",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-07-18",
+      "detail_path": "paper-detail.html?id=mapping-political-elite-networks-in-europe-with-a-multilingual-joint-entity-relation-extraction-pipeline"
+    },
+    {
+      "id": "understanding-domain-aware-distribution-alignment-in-budgeted-entity-matching",
+      "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+      "direction": "数据工程",
+      "long_tail_type": "工程抽象",
+      "why_save": "数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/实体解析的团队有方法论参考（低资源学习+领域适应），",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-07-18",
+      "detail_path": "paper-detail.html?id=understanding-domain-aware-distribution-alignment-in-budgeted-entity-matching"
+    },
     {
       "id": "revengebench-reverse-engineering-code-space-policies-from-behavioral-experiments",
       "title": "RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments",
@@ -960,36 +982,6 @@
       ],
       "revisit_date": "2026-07-17",
       "detail_path": "paper-detail.html?id=revengebench-reverse-engineering-code-space-policies-from-behavioral-experiments"
-    },
-    {
-      "id": "learning-action-priors-for-cross-embodiment-robot-manipulation",
-      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
-      "direction": "Multimodal Agent / AI Agent",
-      "long_tail_type": "工程抽象",
-      "why_save": "VLA(视觉-语言-动作)模型为机器人操作学习显式动作先验(motion prior)，解决'动作模块从零学物理运动'的问题，面向 cross-embodiment(跨本体)泛化。概念上对应'",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-07-17",
-      "detail_path": "paper-detail.html?id=learning-action-priors-for-cross-embodiment-robot-manipulation"
-    },
-    {
-      "id": "new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method",
-      "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
-      "direction": "推理与服务",
-      "long_tail_type": "可迁移方法",
-      "why_save": "纯优化理论：证明一维凸 Lipschitz 目标下随机次梯度法 last-iterate 在 η=Θ(1/√n) 下误差为 O(1/√n)，去掉了既有界的额外 log n 因子。理论严谨(含下",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-07-16",
-      "detail_path": "paper-detail.html?id=new-bounds-for-the-last-iterate-of-the-stochastic-subgradient-method"
     }
   ],
   "common_research_path": [
