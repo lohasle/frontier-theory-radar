@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-06-27T04:33:56.670659",
+  "updated_at": "2026-06-28T04:32:21.703439",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-06-27",
-    "title": "论文价值发现日报 - 2026-06-27",
+    "date": "2026-06-28",
+    "title": "论文价值发现日报 - 2026-06-28",
     "deep_dive_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
     "deep_dive_url": "http://arxiv.org/abs/2606.27369v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
     "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
-    "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。",
-    "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
-    "path": "daily-detail.html?date=2026-06-27"
+    "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。此外今日为周日，arXiv 无新投稿，论文集合与昨日重叠，无法提供新增量信号。",
+    "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值也算）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
+    "path": "daily-detail.html?date=2026-06-28"
   },
   "top_paper": {
     "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
@@ -54,7 +54,7 @@
         "url": "https://arxiv.org/pdf/2606.27369v1"
       }
     ],
-    "llm_reason": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。",
+    "llm_reason": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，于是长期停留在 SFT/DPO。RiVER 把'可验证'从'知道正确答案'重新定义为'存在一个确定性的可执行打分信号（连续值亦可）'，再套 group-relative RL（GRPO 类）直接吃连续奖励。理论命题=RLVR 的边界由'是否存在确定性可执行打分'决定，而非'是否存在 ground-truth 正解'；工程映射=把你已有的任意打分器（检索相关性、摘要 ROUGE、排序 NDCG、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是本周即可在自有 RAG/排序/摘要任务上做最小验证的杠杆。作者（Lin/Gao/Kuang/Huang/Zhou，RAG/对话/RL 方向）可信；代码/benchmark/复现入口暂无/待核验。",
     "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
     "value_type": "immediate",
     "matched_topics": [
@@ -79,13 +79,13 @@
     },
     "trend_status": "emerging",
     "brief_cn": "LLM 评测：Reinforcement learning with verifiable rewards (RLVR) for training LLMs typica…",
-    "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量…",
-    "first_seen_date": "2026-06-27",
-    "first_deep_dive_daily": "2026-06-27",
+    "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量…",
+    "first_seen_date": "2026-06-28",
+    "first_deep_dive_daily": "2026-06-28",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-",
+    "long_tail_summary": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 g",
     "related_trends": [
       "coding-agent",
       "context-engineering"
@@ -103,6 +103,19 @@
     "ignore": 252
   },
   "recent_dailies": [
+    {
+      "date": "2026-06-28",
+      "title": "论文价值发现日报 - 2026-06-28",
+      "deep_dive_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+      "deep_dive_url": "http://arxiv.org/abs/2606.27369v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。此外今日为周日，arXiv 无新投稿，论文集合与昨日重叠，无法提供新增量信号。",
+      "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值也算）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
+      "path": "daily-detail.html?date=2026-06-28"
+    },
     {
       "date": "2026-06-27",
       "title": "论文价值发现日报 - 2026-06-27",
@@ -180,19 +193,6 @@
       "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，分数与结论主要依据 arXiv 摘要与作者陈述；且同一批次(2026-06-18)已连续第三天出现，需确认是 arXiv 低更新期还是 fetch 分页/窗口配置问题。",
       "one_line_judgement": "它补全了主流 KV-cache serving 范式忽略的另一半世界——端侧/物理 AI 场景下，交互式 agent、语音系统、机器人策略会反复分支、复位、中断、重入，这些操作需要的是对『完整执行态』而非单一 KV 片段的检查点与恢复。这是今日候选中工程场景证据最强、迁移路径最清晰的一篇(摘要明确列出 agent/speech/robot 多类负载)。",
       "path": "daily-detail.html?date=2026-06-22"
-    },
-    {
-      "date": "2026-06-21",
-      "title": "论文价值发现日报 - 2026-06-21",
-      "deep_dive_title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
-      "deep_dive_url": "http://arxiv.org/abs/2606.20554v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成三件事：起草『分布式兴趣上下文 + 物品 tokenization』生成式推荐最小 PoC 指标设计；把 Execution-State Capsules / Calibrated MoE 列为本周次席试点并标注与昨日重叠；将可预测性隐私、扩散 LLM 透明度、Lie 群注意力、多任务贝叶斯 ICL 加入趋势/长尾观察清单。",
-      "max_uncertainty": "最大不确定性是外部可复现资产普遍缺失：今日 10 篇的 code / benchmark / Papers with Code / OpenReview 链接均暂无或待核验，且 arXiv 返回批次与 2026-06-20 高度重叠；分数与结论主要依据 arXiv 摘要与作者陈述，需后续多源证据补强。",
-      "one_line_judgement": "它直击生成式推荐最受关注的工程核心——物品 tokenization 与『分布式用户兴趣上下文』的组织与注入，且明确面向工业推荐系统，迁移路径清晰，是今日候选中工程价值与场景证据最强的一篇。",
-      "path": "daily-detail.html?date=2026-06-21"
     }
   ],
   "top_papers": [
@@ -235,7 +235,7 @@
           "url": "https://arxiv.org/pdf/2606.27369v1"
         }
       ],
-      "llm_reason": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-truth，导致这些任务长期用不上 RLVR。RiVER 把'可验证'重新定义为'有确定性执行反馈信号（连续值）'而非'知道正确答案'，用 group-relative RL（GRPO 类）直接吃连续奖励信号。理论命题=RLVR 不需要 ground-truth，只需要一个确定的可执行打分器；工程映射=把你已有的任意打分器（检索相关性、生成质量、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是自有 LLM 团队本周就能在 RAG/排序/摘要任务上做最小验证的'把已有打分函数转成 RL 奖励'。作者（Lin/Huang/Zhou，RAG/对话方向）可信；代码/benchmark/复现入口暂无/待核验。",
+      "llm_reason": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，于是长期停留在 SFT/DPO。RiVER 把'可验证'从'知道正确答案'重新定义为'存在一个确定性的可执行打分信号（连续值亦可）'，再套 group-relative RL（GRPO 类）直接吃连续奖励。理论命题=RLVR 的边界由'是否存在确定性可执行打分'决定，而非'是否存在 ground-truth 正解'；工程映射=把你已有的任意打分器（检索相关性、摘要 ROUGE、排序 NDCG、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是本周即可在自有 RAG/排序/摘要任务上做最小验证的杠杆。作者（Lin/Gao/Kuang/Huang/Zhou，RAG/对话/RL 方向）可信；代码/benchmark/复现入口暂无/待核验。",
       "id": "reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
       "value_type": "immediate",
       "matched_topics": [
@@ -260,13 +260,13 @@
       },
       "trend_status": "emerging",
       "brief_cn": "LLM 评测：Reinforcement learning with verifiable rewards (RLVR) for training LLMs typica…",
-      "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量…",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "直击 LLM 强化学习工程的核心边界：RLVR（可验证奖励 RL）长期依赖'有标准答案的任务'（数学、代码），而开放型任务（RAG 召回质量、摘要、检索排序）只有打分函数、没有 ground-",
+      "long_tail_summary": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 g",
       "related_trends": [
         "coding-agent",
         "context-engineering"
@@ -318,7 +318,7 @@
           "url": "https://arxiv.org/pdf/2606.27330v1"
         }
       ],
-      "llm_reason": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给了两段式解法——自主经验探索（让 agent 先离线探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号）。理论=把'探索得到的历史轨迹'作为可复用训练资产（hindsight relabeling），而非每次从零规划；工程映射=给自有 agent 框架加一个'离线探索→轨迹回放→任务规划'的闭环，用小模型逼近商业大模型的规划能力，直接降本。证据含方法+对照（开源 MLLM vs 商业大模型），关键词覆盖 agent/planning/multimodal；代码/benchmark 待核验。",
+      "llm_reason": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（让 agent 先离线探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号回放重标）。理论命题=把'探索得到的历史轨迹'作为可复用训练资产（hindsight relabeling），而非每次从零规划；工程映射=给自有 agent 框架加一个'离线探索→轨迹回放→任务规划'的闭环，用小模型逼近商业大模型的规划能力，直接降本。证据含方法+对照（开源 MLLM vs 商业大模型），关键词覆盖 agent/planning/multimodal；代码/benchmark 待核验。",
       "id": "empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
       "value_type": "immediate",
       "matched_topics": [
@@ -344,12 +344,12 @@
       "trend_status": "emerging",
       "brief_cn": "AI Agent：Multimodal web agents can assist humans in operating repetitive GUI tasks, whe…",
       "one_line_judgement": "今天值得试：Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给了两段式解法——自主经验探索（让 a",
+      "long_tail_summary": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（让 ag",
       "related_trends": [
         "agentic-world-modeling"
       ],
@@ -419,8 +419,8 @@
       "trend_status": "emerging",
       "brief_cn": "Multimodal Agent：Modern generative world models render increasingly realistic action-controllab…",
       "one_line_judgement": "值得继续观察：世界模型可靠性 + 评测基准双信号：生成式世界模型 rollout '视觉流畅但偏离真实动力学'的幻觉被定位为集中在'状态-动作空间低覆盖区…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -493,8 +493,8 @@
       "trend_status": "emerging",
       "brief_cn": "LLM 评测：Many decoding methods for large language models can be understood as shifting …",
       "one_line_judgement": "值得继续观察：评测/校准线的根基性问题：解码方法本质都在'把概率质量推向模型更可能的输出'，那'序列概率到底在多大程度对齐正确性'？本文跨解码方法/模型量…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -542,7 +542,7 @@
           "url": "https://arxiv.org/pdf/2606.27377v1"
         }
       ],
-      "llm_reason": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy 蒸馏在多任务统一中的价值。属 CV/图像生成方向，与雷达 Agent/推理主线相关性中等，但因'多能力统一+on-policy 蒸馏'方法论可外推，给趋势分。代码/benchmark 待核验。",
+      "llm_reason": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy 蒸馏在多任务统一中的价值。属 CV/图像生成方向，与雷达 Agent/推理主线相关性中等，但因'多能力统一+on-policy 蒸馏'方法论可外推到多任务统一模型训练，给趋势分。代码/benchmark 待核验。",
       "id": "danceopd-on-policy-generative-field-distillation",
       "value_type": "trend",
       "matched_topics": [
@@ -568,8 +568,8 @@
       "trend_status": "emerging",
       "brief_cn": "Multimodal Agent：Modern image generation demands a single model that unifies diverse capabiliti…",
       "one_line_judgement": "值得继续观察：图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -639,8 +639,8 @@
       "trend_status": "long_tail_watch",
       "brief_cn": "RAG / 知识系统：Whether political elites organise into rent-seeking coalitions that capture pu…",
       "one_line_judgement": "值得先保存：信息抽取/知识图谱构建的工程化流水线：多语言联合实体-关系抽取（不依赖专有 API、跨语言），用于政治精英网络映射。方法论价值在于'用开源 …",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
@@ -711,8 +711,8 @@
       "trend_status": "long_tail_watch",
       "brief_cn": "数据工程：Entity Matching (EM) is a core operation in the data integration pipeline, whe…",
       "one_line_judgement": "值得先保存：数据工程线：实体匹配（Entity Matching）在'数据约束变化+监督量变化'下的分布对齐行为分析，属数据集成核心操作。对做数据治理/…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
@@ -781,8 +781,8 @@
       "trend_status": "noise",
       "brief_cn": "RAG / 知识系统：Digital twins have emerged as a promising paradigm for personalized healthcare…",
       "one_line_judgement": "当前可忽略：应用型 LLM 数字孪生（模拟老年人对话行为以早期识别轻度认知障碍 MCI）。概念上对应'用 LLM 做个性化行为建模'，但属医疗/认知健康…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -856,8 +856,8 @@
       "trend_status": "noise",
       "brief_cn": "前沿论文：Efficient sampling of molecular systems at thermodynamic equilibrium is a hall…",
       "one_line_judgement": "当前可忽略：自回归玻尔兹曼生成器：用自回归模型替代 normalizing flows 做分子系统热力学平衡采样（含 Yoshua Bengio）。属统…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -927,8 +927,8 @@
       "trend_status": "noise",
       "brief_cn": "前沿论文：Neural surrogate models offer fast approximate mappings from PDE parameters to…",
       "one_line_judgement": "当前可忽略：误差条件化神经求解器：神经代理模型解 PDE，并通过条件化于残差误差来自我修正约束违反。属科学计算/PDE 求解细分，与雷达核心方向无关，建…",
-      "first_seen_date": "2026-06-27",
-      "first_deep_dive_daily": "2026-06-27",
+      "first_seen_date": "2026-06-28",
+      "first_deep_dive_daily": "2026-06-28",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -950,7 +950,7 @@
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-07-18",
+      "revisit_date": "2026-07-19",
       "detail_path": "paper-detail.html?id=mapping-political-elite-networks-in-europe-with-a-multilingual-joint-entity-relation-extraction-pipeline"
     },
     {
@@ -965,7 +965,7 @@
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-07-18",
+      "revisit_date": "2026-07-19",
       "detail_path": "paper-detail.html?id=understanding-domain-aware-distribution-alignment-in-budgeted-entity-matching"
     },
     {
