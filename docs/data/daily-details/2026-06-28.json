@@ -7,9 +7,9 @@
   "value_type_label": "即时价值",
   "decision": "重点学习",
   "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
-  "score": 82.0,
+  "score": 84.0,
   "trend_stage": "emerging",
-  "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量…",
+  "one_line_judgement": "今天值得试：最强即时信号，且证据强度高于其余即时类论文：RiVER 直击 RLVR（可验证奖励 RL）的应用天花板——过去只能训'有标准答案的任务'（数…",
   "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。此外今日为周日，arXiv 无新投稿，论文集合与昨日重叠，无法提供新增量信号。",
   "conclusion_lines": [
     "今天最值得看的是《Reinforcement Learning without Ground-Truth Solutions can Improve LLMs》。",
@@ -25,7 +25,7 @@
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 82.0,
+      "score": 84.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
@@ -38,7 +38,7 @@
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 80.0,
+      "score": 81.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
@@ -51,8 +51,8 @@
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 78.0,
-      "decision": "轻量试点",
+      "score": 80.0,
+      "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
@@ -64,7 +64,7 @@
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 74.0,
+      "score": 75.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
@@ -77,7 +77,7 @@
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 66.0,
+      "score": 67.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
@@ -102,8 +102,8 @@
     "benchmark_url": "",
     "paperswithcode_url": "",
     "openreview_url": "",
-    "first_seen_date": "2026-06-28",
-    "first_deep_dive_daily": "2026-06-28",
+    "first_seen_date": "2026-06-29",
+    "first_deep_dive_daily": "2026-06-29",
     "value_type": "immediate",
     "value_type_label": "即时价值",
     "value_scores": {
@@ -116,12 +116,12 @@
       "actionability": 3.8,
       "noise_risk": 2.4
     },
-    "score": 82.0,
+    "score": 84.0,
     "decision": "重点学习",
-    "one_line_judgement": "今天值得试：直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量…",
-    "one_line_essence": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，于是长期停留在 SFT/DPO。RiVER 把'可验证'从'知道正确答案'重新定义为'存在一个确定性的可执行打分信号（连续值亦可）'，再套 group-relative RL（GRPO 类）直接吃连续奖励。理论命题=RLVR 的边界由'是否存在确定性可执行打分'决定，而非'是否存在 ground-truth 正解'；工程映射=把你已有的任意打分器（检索相关性、摘要 ROUGE、排序 NDCG、规则评分）直接当 reward 接进 GRPO，无需再构造标准答案。这是本周即可在自有 RAG/排序/摘要任务上做最小验证的杠杆。作者（Lin/Gao/Kuang/Huang/Zhou，RAG/对话/RL 方向）可信；代码/benchmark/复现入口暂无/待核验。",
+    "one_line_judgement": "今天值得试：最强即时信号，且证据强度高于其余即时类论文：RiVER 直击 RLVR（可验证奖励 RL）的应用天花板——过去只能训'有标准答案的任务'（数…",
+    "one_line_essence": "最强即时信号，且证据强度高于其余即时类论文：RiVER 直击 RLVR（可验证奖励 RL）的应用天花板——过去只能训'有标准答案的任务'（数学/代码），而 RAG 召回、摘要、排序、开放生成这类任务只有打分器、没有 ground-truth 正解，长期困在 SFT/DPO。它把'可验证'从'知道正解'重定义为'存在一个确定的可执行打分信号（连续值也算）'，再套 group-relative RL（GRPO 类）直接吃连续奖励。理论命题清晰且可证伪（RLVR 边界由'是否有确定性可执行打分'决定，而非'是否有正解'）；工程映射即插即用（手里已有的检索相关性/ROUGE/NDCG 打分器直接当 reward）。证据来自'有 ground-truth 的 RLVR vs 无 ground-truth 的 score-based RLVR'的对照（摘要指出后者此前不可行），作者（Lin/Gao/Kuang/Huang/Zhou，RAG/对话/RL 方向）可信。唯一减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+。",
     "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-    "new_claim_or_method": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，于是长期停留在 SFT/DPO。RiVER 把'可验证'从'知道正确答案'重新定义为'存在一个确定性的可执行打分信号（连续值亦可）'，再套 gr",
+    "new_claim_or_method": "最强即时信号，且证据强度高于其余即时类论文：RiVER 直击 RLVR（可验证奖励 RL）的应用天花板——过去只能训'有标准答案的任务'（数学/代码），而 RAG 召回、摘要、排序、开放生成这类任务只有打分器、没有 ground-truth 正解，长期困在 SFT/DPO。它把'可验证'从'知道正解'重定义为'存在一个确定的可执行打分信号（连续值也算）'，再",
     "research_position": "source_paper",
     "engineering_testability": {
       "has_code": false,
@@ -148,7 +148,7 @@
       ]
     },
     "long_tail": {
-      "why_save": "直击 LLM 强化学习工程的最大应用天花板：RLVR（可验证奖励 RL）长期只能用于'有标准答案的任务'（数学、代码），而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 g",
+      "why_save": "最强即时信号，且证据强度高于其余即时类论文：RiVER 直击 RLVR（可验证奖励 RL）的应用天花板——过去只能训'有标准答案的任务'（数学/代码），而 RAG 召回、摘要、排序、开放生成这",
       "future_trigger": [
         "待更多证据"
       ],
@@ -208,7 +208,7 @@
       }
     ],
     "detail_path": "paper-detail.html?id=reinforcement-learning-without-ground-truth-solutions-can-improve-llms",
-    "daily_path": "daily-detail.html?date=2026-06-28",
+    "daily_path": "daily-detail.html?date=2026-06-29",
     "trend_paths": [
       "trend-detail.html?id=coding-agent",
       "trend-detail.html?id=context-engineering"

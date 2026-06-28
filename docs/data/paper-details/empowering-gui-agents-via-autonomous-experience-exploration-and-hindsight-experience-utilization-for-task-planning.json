@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-28",
-  "first_deep_dive_daily": "2026-06-28",
+  "first_seen_date": "2026-06-29",
+  "first_deep_dive_daily": "2026-06-29",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 80.0,
+  "score": 81.0,
   "decision": "重点学习",
   "one_line_judgement": "今天值得试：Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛…",
-  "one_line_essence": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（让 agent 先离线探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号回放重标）。理论命题=把'探索得到的历史轨迹'作为可复用训练资产（hindsight relabeling），而非每次从零规划；工程映射=给自有 agent 框架加一个'离线探索→轨迹回放→任务规划'的闭环，用小模型逼近商业大模型的规划能力，直接降本。证据含方法+对照（开源 MLLM vs 商业大模型），关键词覆盖 agent/planning/multimodal；代码/benchmark 待核验。",
+  "one_line_essence": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（离线让 agent 探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号回放重标），用小模型逼近商业大模型的规划能力。理论命题=把'探索得到的历史轨迹'作为可复用训练资产（hindsight relabeling），而非每次从零规划；工程映射=给自有 agent 框架加'离线探索→轨迹回放→任务规划'闭环，直接降本。证据含方法+对照（开源 MLLM vs 商业大模型），关键词覆盖 agent/planning/multimodal；作者（Men/Jin/Cao/Chen/Liu，中科院 agent 方向）可信。减分项同上：代码/benchmark 待核验，方法细节尚需精读全文确认探索与 hindsight 的具体配比。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（让 agent 先离线探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号回放重标）。理论命题=把'探索得到的历史轨迹'作为可复用训练资产（hin",
+  "new_claim_or_method": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（离线让 agent 探索环境积累轨迹）+ 事后经验利用（hindsight，把走过的轨迹重新当训练信号回放重标），用小模型逼近商业大模型的规划能力。理论命题=把'探索得到的历史",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -61,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（让 ag",
+    "why_save": "Agent 工程主线的强即时信号：小模型 MLLM（开源、低成本、隐私友好）做 GUI/Web agent 时'规划弱、跨站点泛化差'是真痛点。PEEU 给两段式解法——自主经验探索（离线让 ",
     "future_trigger": [
       "待更多证据"
     ],
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning",
-  "daily_path": "daily-detail.html?date=2026-06-28",
+  "daily_path": "daily-detail.html?date=2026-06-29",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

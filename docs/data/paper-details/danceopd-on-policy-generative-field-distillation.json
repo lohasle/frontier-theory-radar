@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-06-28",
-  "first_deep_dive_daily": "2026-06-28",
+  "first_seen_date": "2026-06-29",
+  "first_deep_dive_daily": "2026-06-29",
   "value_type": "trend",
   "value_type_label": "趋势价值",
   "value_scores": {
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 66.0,
+  "score": 67.0,
   "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。…",
-  "one_line_essence": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy 蒸馏在多任务统一中的价值。属 CV/图像生成方向，与雷达 Agent/推理主线相关性中等，但因'多能力统一+on-policy 蒸馏'方法论可外推到多任务统一模型训练，给趋势分。代码/benchmark 待核验。",
+  "one_line_judgement": "值得继续观察：图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力拖垮 T2I，局部/全局编辑互斥）。D…",
+  "one_line_essence": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy 蒸馏在多任务统一中的价值。属 CV/图像生成方向，与雷达 Agent/推理主线相关性中等，但'多能力统一+on-policy 蒸馏'方法论可外推到多任务统一模型训练，给趋势分。证据仅摘要级，代码/benchmark 待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy",
+  "new_claim_or_method": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏方案来组合这些能力。理论命题='能力组合'本身是训练目标设计的核心难题，on-policy 蒸馏可缓解冲突；工程映射=多能力统一模型的训练目标设计、on-policy ",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -61,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力会拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸",
+    "why_save": "图像生成模型训练的'能力组合冲突'问题：把 T2I、局部编辑、全局编辑塞进一个模型会互相干扰（编辑能力拖垮 T2I，局部/全局编辑互斥）。DanceOPD 给出 on-policy 生成场蒸馏",
     "future_trigger": [
       "出现多篇跟进论文、开源项目和工程博客共振"
     ],
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=danceopd-on-policy-generative-field-distillation",
-  "daily_path": "daily-detail.html?date=2026-06-28",
+  "daily_path": "daily-detail.html?date=2026-06-29",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],
