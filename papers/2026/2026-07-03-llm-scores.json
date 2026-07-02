@@ -1,0 +1,64 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2607.01224v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "今日最强即时信号：AutoMem 把认知科学中的'元记忆（metamemory）'引入 LLM agent——记忆管理不是系统组件而是可训练技能。核心创新是把文件系统操作提升为与任务动作并列的一等'记忆动作'（create/read/update/delete memory files），让模型自己决定何时编码、何时检索、如何组织知识，并通过训练沿两条轴改进：支撑结构（prompt、file schema、action interface）与学习本身。理论命题清晰且可证伪（'模型能否通过训练学会更好的记忆策略'是可量化变量）；工程映射直接落地——任何构建长程 agent 的团队都可把硬编码的记忆策略（固定 RAG 检索、固定上下文截断）替换为可学习的记忆动作接口。作者（Shengguang Wu、Serena Yeung-Levy 等，斯坦福）在 agent/多智能体方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即使无官方代码也能自建最小验证（给 agent 文件系统记忆动作→在记忆敏感任务上训练→对比固定策略基线）。",
+      "matched_topics": ["ai-agent", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2607.01232v1": {
+      "score": 82,
+      "value_type": "trend",
+      "reason": "RL 后训练效率的重大发现：系统性逐层研究发现 RL 适应并非均匀分布在所有 transformer 层——训练单个层即可匹配全参数 RL 训练的效果。这直接挑战'每层贡献相同'的隐含假设，对降低 RL 后训练成本有直接意义（从全参数更新降到单层更新，显存/计算大幅下降）。理论命题可证伪（'RL 增益集中在特定层'可通过逐层消融验证）；工程映射=在自有 RL 后训练流程中尝试只更新关键层，对比全参数更新的下游指标与训练成本。证据含系统性逐层研究+对照（全参数 vs 单层），方法论严谨。给趋势分而非即时分，因需确认'哪一层'的结论是否跨模型规模/任务泛化，且代码/复现入口暂无（待核验）。",
+      "matched_topics": ["inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.01218v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "Transformer 架构层面的理论假设：当前 Transformer 用同一条前向计算流既预测下一 token 又存储未来预测所需的状态，本文提出'状态-预测分离假设'——把两者拆成两条计算流可以提升语言建模性能。设计了双流 Transformer 变体并在多规模预训练实验中验证一致性优势。理论命题清晰（分离状态存储与预测可改善建模）且可证伪（通过双流 vs 单流对照实验验证）；工程映射=为下一代高效 Transformer 架构提供新设计维度（状态流与预测流解耦），但属架构级创新，距即插即用尚远。作者（Giovanni Monea、Yoav Artzi 等，Cornell NLP 方向）可信。给趋势分，因属预训练架构研究、需大规模验证才能转化为可用基础设施，代码/复现入口待核验。",
+      "matched_topics": ["inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.01213v1": {
+      "score": 76,
+      "value_type": "trend",
+      "reason": "Coding agent 工程化的重要实证研究：定义并系统研究'兼容性救援（compatibility rescue）'任务——LLM agent 能否把因生态漂移（依赖/runtime 演进）而失效的旧仓库适配到现代环境。与 bug 修复不同，起点是'曾经能工作但环境变了'的仓库。RepoRescue 只给 agent 仓库及其失败环境，评估自主修复能力。理论命题可证伪（agent 能否完成整仓库级兼容性适配可通过任务完成率量化）；工程映射=直接对应企业级技术债治理——大量遗留代码因依赖过期而无法运行，agent 自动修复有巨大商业价值。证据含实证研究框架+任务定义，属系统性基准工作。给趋势分，因属评测框架/任务定义阶段、需确认 agent 实际通过率，代码/benchmark 入口待核验。",
+      "matched_topics": ["coding-agent", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2607.01208v1": {
+      "score": 74,
+      "value_type": "trend",
+      "reason": "安全治理线的强信号：LLM 在高风险角色中可能隐蔽地偏好特定实体/品牌/观点，且最危险的偏好只在相关话题上暴露而在其他输入上与基模型完全一致。本文通过'cartridge distillation（卡带蒸馏）'方法检测这类隐蔽偏见——即使偏见通过语义无关数据的上下文蒸馏植入，也能被暴露。理论命题可证伪（隐蔽偏见可通过蒸馏检测暴露，而非仅在特定话题上显性出现）；工程映射=模型供应链安全审计——检测模型是否被供应链中任意环节植入了隐蔽偏见（prompt injection、数据投毒、微调注入）。作者（Azalia Mirhoseini——注意力/MoE 先驱、Amin Karbasi——Yale，强团队）高度可信。给趋势分，因属安全检测方法论、需确认检测的假阳/假阴率，代码/benchmark 待核验。",
+      "matched_topics": ["security-governance", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.01223v1": {
+      "score": 68,
+      "value_type": "trend",
+      "reason": "验证架构的创新视角：Theoria 在形式证明助手（确定性但覆盖窄）与标量 LLM judge（覆盖广但不可审计）之间搭桥——把候选解重写为有类型的推理状态转换序列，每步转换需显式理由支撑。理论命题=验证可以既覆盖广又可审计（通过显式状态转换+理由而非不透明标量分数）；工程映射=agent 输出可信度治理——把'是否信任 agent 答案'从标量分数升级为可审计的推理链。给趋势分而非即时分，因属验证架构设计、需确认其实际覆盖范围与开销，代码/benchmark 待核验。",
+      "matched_topics": ["llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.01211v1": {
+      "score": 64,
+      "value_type": "long_tail",
+      "reason": "评测方法论的长尾价值：审计 GSO/SWE-Perf/SWE-fficiency 等仓库级性能优化基准的可靠性——发现排行榜分数可能混淆运行时不稳定性、特定评分规则和'多少任务已被某公开提交解决'。对依赖这些基准做决策的团队有直接参考价值（理解分数的真实含义），但与核心 Agent/训练主线相关性中等。价值在于'评测有效性审计'这条观察线。代码/benchmark 待核验。",
+      "matched_topics": ["coding-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.01233v1": {
+      "score": 60,
+      "value_type": "long_tail",
+      "reason": "LLM ideation 评测框架：从高质量人类论文反向工程出'可能启发其核心思想的前序工作'，再用此框架量化 LLM 生成的研究想法与人类研究者之间的差距。方法论价值在于'如何系统评估 LLM 创新能力'，对做 AI for Science / 研究辅助的团队有参考。但属评测框架研究、与训练/Agent 工程主线相关性偏外围，价值在于长尾观察线。代码/benchmark 待核验。",
+      "matched_topics": ["llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.01225v1": {
+      "score": 54,
+      "value_type": "long_tail",
+      "reason": "模仿学习的方法论创新：用自然语言作为结构化监督信号替代标量置信度/判别器分数，从次优演示中学习。'语言批评'框架可表达任务进度、失败模式、纠正动作的中间推理。方法论价值在于'用 LLM 的语言理解增强 IL/RL 的监督信号质量'，可迁移到 agent 示范学习场景。但属 RL/IL 理论研究、与雷达核心 Agent 工程主线相关性中等偏外围。代码/benchmark 待核验。",
+      "matched_topics": ["ai-agent"]
+    },
+    "http://arxiv.org/abs/2607.01212v1": {
+      "score": 46,
+      "value_type": "long_tail",
+      "reason": "机器人/VLA 方向的系统研究：首个真实尺度双臂家具组装的 VLA 模型系统研究，含仿真数据生成流水线和 VR 遥操作系统。方法论价值在于长程操作任务的 VLA 训练范式（层级化分解），但属机器人操作细分领域，与雷达 LLM/Agent/推理主线相关性外围。价值在于'VLA 长程任务分解'这条长尾观察线。代码/benchmark 待核验。",
+      "matched_topics": ["multimodal-agent"]
+    }
+  }
+}

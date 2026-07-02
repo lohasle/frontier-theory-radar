@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-06-29T04:32:51.199491",
+  "updated_at": "2026-07-03T04:33:14.469238",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-03",
+      "title": "论文价值发现日报 - 2026-07-03",
+      "deep_dive_title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
+      "deep_dive_url": "http://arxiv.org/abs/2607.01224v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：列出 AutoMem 最小实验（选记忆敏感任务→设计文件系统记忆动作接口→定义记忆有效性训练信号→对比固定策略基线）；把单层 RL 的'RL 增益集中在特定层'纳入自有 RL 后训练成本优化观察清单（尝试只更新关键层对比全参数更新）；把 Distill to Detect 的供应链偏见检测纳入模型上线前安全审计 checklist。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现证据均暂无或待核验（抓取数据中这些 url 字段全为空字符串），当前判断主要基于 arXiv 摘要与作者/机构可信度（AutoMem 属斯坦福 Yeung-Levy 团队、单层 RL 属系统性逐层研究、状态-预测分离属 Cornell Artzi 团队、Distill to Detect 属 Mirhoseini/Karbasi、RepoRescue 属 cs.SE 实证研究）。此外，AutoMem 的训练信号设计细节（如何驱动记忆技能学习）需精读全文确认，单层 RL 的'哪一层最优'结论需确认是否跨模型规模泛化。",
+      "one_line_judgement": "它把认知科学的'元记忆（metamemory）'引入 LLM agent 工程——记忆管理不是固定系统组件，而是可训练技能。核心创新是把文件系统操作提升为与任务动作并列的一等'记忆动作'，让模型自己决定何时编码、何时检索、如何组织知识，并通过训练沿'结构'与'学习'两条轴持续改进。这对所有构建长程 agent（需要持久记忆、跨会话状态、动态知识管理）的团队是即时可验证的杠杆。",
+      "path": "daily-detail.html?date=2026-07-03"
+    },
     {
       "date": "2026-06-29",
       "title": "论文价值发现日报 - 2026-06-29",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-28"
-    },
-    {
-      "date": "2026-05-27",
-      "title": "论文价值发现日报 - 2026-05-27",
-      "deep_dive_title": "RLHF with Constitutional AI Principles for Aligned Generation",
-      "deep_dive_url": "http://arxiv.org/abs/2605.22953v1",
-      "decision": "趋势价值",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "纳入趋势雷达，连续观察 7-30 天。",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-27"
     }
   ]
 }
