@@ -1,0 +1,130 @@
+{
+  "id": "when-should-service-agents-reconsider-difficulty-routed-control-in-customer-service-operations",
+  "title": "When Should Service Agents Reconsider? Difficulty-Routed Control in Customer-Service Operations",
+  "authors": [
+    "Qian Chen, Chengyuan Liu, Xin Yu"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-03",
+  "url": "https://arxiv.org/abs/2607.01426",
+  "pdf_url": "https://arxiv.org/pdf/2607.01426",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-04",
+  "first_deep_dive_daily": "2026-07-04",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 5.0,
+    "evidence": 4.5,
+    "engineering_testability": 3.5,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 3.8,
+    "noise_risk": 1.2
+  },
+  "score": 77.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快…",
+  "one_line_essence": "客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快速低摩擦，又要防止在客户指令、策略约束、企业记录三者冲突时出错。本文提出『难度路由控制』——按请求难度动态调节 agent 的复核/放行阈值。理论命题可证伪：『按难度路由控制比统一阈值更能兼顾速度与正确率』可通过误操作率与处理时延双指标量化。工程映射＝operational agent 的安全控制层——把『何时该让人复核、何时该直接执行』做成难度感知的路由器，而非一刀切的人工审核或全自动放行。给趋势分，因属控制策略设计、需确认难度估计的准确率与误操作权衡；代码/benchmark 待核验。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快速低摩擦，又要防止在客户指令、策略约束、企业记录三者冲突时出错。本文提出『难度路由控制』——按请求难度动态调节 agent 的复核/放行阈值。理论命题可证伪：『按难度路由控制比统一阈值更能兼顾速度与正确率』可通过误操作率",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "agentic-world-modeling"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快速低摩擦，又要防止在客户指令、策略约束、企业记录三者",
+    "future_trigger": [
+      "出现多篇跟进论文、开源项目和工程博客共振"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "https://arxiv.org/abs/2607.01426"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.01426"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=when-should-service-agents-reconsider-difficulty-routed-control-in-customer-service-operations",
+  "daily_path": "daily-detail.html?date=2026-07-04",
+  "trend_paths": [
+    "trend-detail.html?id=agentic-world-modeling"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "date": "2026-07-04",
+  "title": "论文价值发现日报 - 2026-07-04",
+  "deep_dive_id": "procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+  "deep_dive_title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "decision": "重点学习",
+  "daily_action": "三件事：(1) 列出 Procedural Memory Distillation 最小实验（选多 episode agent 任务→设计程序性记忆条目表示与检索接口→定义记忆通道开关与训练信号→对比纯 RLVR verifier 基线）；(2) 把 Clinical Agents 的『41.7% 沉默完成天花板』纳入自有 agent RL 上线前的『反馈通道健康度审计』checklist（上线 RLVR 前先测基准 silent-finish 率）；(3) 把 RLVR-for-Atlassian 的『目标环境内 verifier』模式作为企业 tool-use agent 后训练范式的试点候选。",
+  "score": 87.0,
+  "trend_stage": "emerging",
+  "one_line_judgement": "今天值得试：今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 ep…",
+  "max_uncertainty": "外部可复现资产缺失是最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现证据均暂无或待核验（抓取数据中这些 url 字段全为空字符串）。当前判断主要基于 arXiv 摘要与作者/机构可信度（Procedural Memory Distillation 属 Salesforce AI Research Joty/Yavuz、RLVR-for-Atlassian 与 Clinical Agents 属同一 Atlassian 工作组、Agent4cs 含 Jie M. Zhang 与 Siemens Runkler、Auto-FL-Research 属 NVIDIA MONAI、CreativityNeuro 属 UIUC Varshney）。此外，Procedural Memory Distillation 的记忆表示与压缩方式需精读全文确认；Clinical Agents 的 41.7% 天花板需确认是否跨基准泛化；Wiola『完全原创』的强主张需独立复现验证。另注：今日 arXiv Query API 超时，数据经 RSS 后备获取，论文集为周五（7/3）批次。",
+  "conclusion_lines": [
+    "今天最值得看的是《Procedural Memory Distillation: Online Reflection for Self-Improving Language Models》。",
+    "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+    "今天建议动作：三件事：(1) 列出 Procedural Memory Distillation 最小实验（选多 episode agent 任务→设计程序性记忆条目表示与检索接口→定义记忆通道开关与训练信号→对比纯 RLVR verifier 基线）；(2) 把 Clinical Agents 的『41.7% 沉默完成天花板』纳入自有 agent RL 上线前的『反馈通道健康度审计』checklist（上线 RLVR 前先测基准 silent-finish 率）；(3) 把 RLVR-for-Atlassian 的『目标环境内 verifier』模式作为企业 tool-use agent 后训练范式的试点候选。。",
+    "最大不确定性：外部可复现资产缺失是最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现证据均暂无或待核验（抓取数据中这些 url 字段全为空字符串）。当前判断主要基于 arXiv 摘要与作者/机构可信度（Procedural Memory Distillation 属 Salesforce AI Research Joty/Yavuz、RLVR-for-Atlassian 与 Clinical Agents 属同一 Atlassian 工作组、Agent4cs 含 Jie M. Zhang 与 Siemens Runkler、Auto-FL-Research 属 NVIDIA MONAI、CreativityNeuro 属 UIUC Varshney）。此外，Procedural Memory Distillation 的记忆表示与压缩方式需精读全文确认；Clinical Agents 的 41.7% 天花板需确认是否跨基准泛化；Wiola『完全原创』的强主张需独立复现验证。另注：今日 arXiv Query API 超时，数据经 RSS 后备获取，论文集为周五（7/3）批次。。"
+  ],
+  "candidate_papers": [
+    {
+      "id": "procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+      "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+      "detail_path": "paper-detail.html?id=procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 87.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "beyond-next-token-prediction-an-rlvr-proof-of-concept-for-tool-use-agents-on-atlassian-workflows",
+      "title": "Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows",
+      "detail_path": "paper-detail.html?id=beyond-next-token-prediction-an-rlvr-proof-of-concept-for-tool-use-agents-on-atlassian-workflows",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 83.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "world-feedback-for-clinical-agents-diagnosing-rl-in-fhir-environments",
+      "title": "World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments",
+      "detail_path": "paper-detail.html?id=world-feedback-for-clinical-agents-diagnosing-rl-in-fhir-environments",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 80.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "when-should-service-agents-reconsider-difficulty-routed-control-in-customer-service-operations",
+      "title": "When Should Service Agents Reconsider? Difficulty-Routed Control in Customer-Service Operations",
+      "detail_path": "paper-detail.html?id=when-should-service-agents-reconsider-difficulty-routed-control-in-customer-service-operations",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 77.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "agent4cs-a-multi-agent-system-for-code-summarization-in-large-hierarchical-codebases",
+      "title": "Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases",
+      "detail_path": "paper-detail.html?id=agent4cs-a-multi-agent-system-for-code-summarization-in-large-hierarchical-codebases",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 73.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    }
+  ],
+  "deep_dive": {
+    "id": "procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+    "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+    "authors": [
+      "Ye Liu, Srijan Bansal, Bo Pang, Yang Li, Zeyu Leo Liu, Yifei Ming, Zixuan Ke, Shafiq Joty, Semih Yavuz"
+    ],
+    "source": "arXiv",
+    "published": "2026-07-03",
+    "url": "https://arxiv.org/abs/2607.01480",
+    "pdf_url": "https://arxiv.org/pdf/2607.01480",
+    "code_url": "",
+    "benchmark_url": "",
+    "paperswithcode_url": "",
+    "openreview_url": "",
+    "first_seen_date": "2026-07-04",
+    "first_deep_dive_daily": "2026-07-04",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "value_scores": {
+      "novelty": 4.8,
+      "relevance": 6.2,
+      "evidence": 4.5,
+      "engineering_testability": 3.5,
+      "trend_signal": 4.05,
+      "long_tail_potential": 3.5,
+      "actionability": 3.8,
+      "noise_risk": 1.2
+    },
+    "score": 87.0,
+    "decision": "重点学习",
+    "one_line_judgement": "今天值得试：今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 ep…",
+    "one_line_essence": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLVR/SDPO 每个 rollout 只产生 episode 级标量奖励，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题的解法可复用）被丢弃；本文用在线反思把这些跨 episode 程序性信号蒸馏成可检索、可复用的程序性记忆。理论命题清晰且可证伪——『保留并复用 rollout 程序性信息比纯 episode-local 更新在下游任务上更高效』可通过『记忆通道开关』做对照实验量化。工程映射直接：任何做 agent RL 的团队都可在 verifier 之外加一条『程序性记忆通道』——把成功 rollout 的有效子策略抽象成可检索技能、把反复失败的模式沉淀成回避规则，再在后续 episode 检索复用。作者（Ye Liu、Srijan Bansal、Bo Pang、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即便无官方代码也能自建最小验证（在 RLVR 基线上加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 信号基线）。",
+    "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+    "new_claim_or_method": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLV",
+    "research_position": "source_paper",
+    "engineering_testability": {
+      "has_code": false,
+      "has_benchmark": false,
+      "can_reproduce": false,
+      "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+      "engineering_scenarios": [
+        "AI Agent",
+        "Context Engineering",
+        "评测治理"
+      ]
+    },
+    "trend_relation": {
+      "status": "emerging",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "evidence": [
+        "论文主题匹配固定研究方向"
+      ],
+      "uncertainties": [
+        "是否会出现更多开源实现与生产案例"
+      ]
+    },
+    "long_tail": {
+      "why_save": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序",
+      "future_trigger": [
+        "待更多证据"
+      ],
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "模板"
+      ],
+      "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+      "revisit_date": ""
+    },
+    "insights": {
+      "system_design": [
+        "先判断价值类型，再决定系统性投入。"
+      ],
+      "agent_engineering": [
+        "为 Agent 建立论文价值路由器。"
+      ],
+      "dev_process": [
+        "论文输出应沉淀为可执行资产。"
+      ],
+      "evaluation": [
+        "同时看方法与证据质量。"
+      ],
+      "platform_engineering": [
+        "长尾资产库可降低重复检索成本。"
+      ],
+      "personal_learning": [
+        "优先读能转化为未来复利的论文。"
+      ]
+    },
+    "actions": {
+      "immediate_actions": [
+        "今天读摘要与方法",
+        "今天试最小实验",
+        "一周内沉淀为 Skill / Checklist"
+      ],
+      "trend_actions": [],
+      "long_tail_actions": [],
+      "ignore_reason": ""
+    },
+    "references": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2607.01480"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2607.01480"
+      }
+    ],
+    "detail_path": "paper-detail.html?id=procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+    "daily_path": "daily-detail.html?date=2026-07-04",
+    "trend_paths": [
+      "trend-detail.html?id=agentic-world-modeling",
+      "trend-detail.html?id=context-engineering"
+    ],
+    "long_tail_path": "long-tail.html",
+    "mermaid": {
+      "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+      "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+      "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+    }
+  },
+  "long_tail_saved": [],
+  "ignore_reasons": [
+    "暂无明确忽略样本，但忽略标准仍需保留。"
+  ],
+  "insights": {
+    "system_design": [
+      "先做价值路由，再决定是否深入工程推导。"
+    ],
+    "agent_engineering": [
+      "让 Agent 先判断“今天值不值得试”。"
+    ],
+    "dev_process": [
+      "论文筛选应产出 Prompt / Skill / Checklist。"
+    ],
+    "evaluation": [
+      "把“是否值得投入”也纳入评测流程。"
+    ],
+    "platform_engineering": [
+      "长尾库是低成本知识保留层。"
+    ],
+    "personal_learning": [
+      "优先读可沉淀资产的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "30 分钟学习",
+      "2 小时实践",
+      "1 周研究"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "https://arxiv.org/abs/2607.01480"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.01480"
+    }
+  ],
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  },
+  "raw_markdown_html": "<h2>论文价值发现日报 - 2026-07-04</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"https://arxiv.org/abs/2607.01480\" target=\"_blank\" rel=\"noopener noreferrer\">Procedural Memory Distillation: Online Reflection for Self-Improving Language Models</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 三件事：(1) 列出 Procedural Memory Distillation 最小实验（选多 episode agent 任务→设计程序性记忆条目表示与检索接口→定义记忆通道开关与训练信号→对比纯 RLVR verifier 基线）；(2) 把 Clinical Agents 的『41.7% 沉默完成天花板』纳入自有 agent RL 上线前的『反馈通道健康度审计』checklist（上线 RLVR 前先测基准 silent-finish 率）；(3) 把 RLVR-for-Atlassian 的『目标环境内 verifier』模式作为企业 tool-use agent 后训练范式的试点候选。</li>\n<li><strong>分数：</strong> 87.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"https://arxiv.org/abs/2607.01480\" target=\"_blank\" rel=\"noopener noreferrer\">Procedural Memory Distillation: Online Reflection for Self-Improving Language Models</a>。</li>\n<li><strong>为什么值得看：</strong> 它把 RLVR 的『逐 episode 标量奖励』升级为『跨 episode 的程序性记忆』。RLVR/SDPO 每个 rollout 只产生一个标量信号，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题解法可复用）被白白丢弃；本文用在线反思把这些信号蒸馏成可检索、可复用的程序性记忆。对所有做 agent RL 的团队是即时可验证的杠杆——在 verifier 之外加一条『程序性记忆通道』即可对比基线。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值——本周即可在自有 RLVR 流程上做最小实验（加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 基线）。</li>\n<li><strong>今天该做什么：</strong> 把前五篇映射到两条主线：(1) Agent RL 的反馈与记忆升级——Procedural Memory Distillation 把程序性信号变记忆、RLVR-for-Atlassian 在目标环境内训 tool-use agent、Clinical Agents 诊断出 41.7% 沉默完成天花板使『不作为』成 RL 主导策略；(2) Operational Agent 的控制与协作——难度路由控制决定客服 agent 何时复核、Agent4cs 用多智能体理解层级代码库。另有 coding-agent 自动做 ML 研究（Auto-FL-Research）、推理时发散性权重转向（CreativityNeuro）作观察线。</li>\n<li><strong>数据说明：</strong> 今日北京时间周六凌晨 04:30，arXiv Query API（export.arxiv.org）请求超时，通过 RSS 馈送后备抓取到 10 篇 2026-07-03（周五）批次论文。今日论文高度聚焦『Agent RL 的反馈与记忆』主题——四篇直接涉及 RLVR/agent 训练，共同指向 2026 下半年『从单次 rollout 学习走向跨 episode 程序性记忆累积』的演进。</li>\n<li><strong>最大不确定性：</strong> 今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现入口普遍暂无或待核验（抓取数据中 code_url/benchmark_url/paperswithcode_url 均为空）。当前判断主要基于 arXiv 摘要与作者/机构可信度（Procedural Memory Distillation 属 Salesforce AI Research Joty/Yavuz 团队、Auto-FL-Research 属 NVIDIA MONAI 团队、Agent4cs 含 Jie M. Zhang 与 Siemens Runkler、CreativityNeuro 属 UIUC Varshney），需后续 1-4 周跟踪作者主页与 GitHub。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"https://arxiv.org/abs/2607.01480\" target=\"_blank\" rel=\"noopener noreferrer\">Procedural Memory Distillation: Online Reflection for Self-Improving Language Models</a></td><td>ai-agent / context-engineering</td><td>即时价值</td><td>87.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"https://arxiv.org/abs/2607.01465\" target=\"_blank\" rel=\"noopener noreferrer\">Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows</a></td><td>ai-agent</td><td>即时价值</td><td>83.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"https://arxiv.org/abs/2607.01470\" target=\"_blank\" rel=\"noopener noreferrer\">World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments</a></td><td>ai-agent / llm-evaluation</td><td>趋势价值</td><td>80.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"https://arxiv.org/abs/2607.01426\" target=\"_blank\" rel=\"noopener noreferrer\">When Should Service Agents Reconsider? Difficulty-Routed Control in Customer-Service Operations</a></td><td>ai-agent</td><td>趋势价值</td><td>77.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"https://arxiv.org/abs/2607.01425\" target=\"_blank\" rel=\"noopener noreferrer\">Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases</a></td><td>coding-agent / ai-agent</td><td>趋势价值</td><td>73.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 最好的 agent 学习不是每个 episode 从零开始，而是把 rollout 中的程序性经验沉淀成可复用记忆——RLVR 的奖励只告诉你『这次成功了吗』，程序性记忆蒸馏告诉你『什么样的做法反复奏效』。</li>\n<li><strong>底层问题：</strong> RLVR（含 SDPO 等自蒸馏变体）对每个 rollout 用 verifier 产生一个 episode 级标量信号并据此更新策略，但 rollout 内部远比标量丰富——哪些子步骤是关键、哪种策略跨 episode 反复有效、哪类错误反复出现。这些 cross-episode 程序性信号在 episode-local 更新里被丢弃，导致模型在相关问题上反复试错、无法把『学会的做法』固化为可复用技能。</li>\n<li><strong>理论根基：</strong> 迁移认知科学的程序性记忆（procedural memory，『如何做』的技能记忆，区别于陈述性事实记忆）到 LLM 训练。核心假设：跨 episode 的程序性信息（哪些策略 consistently 奏效）是一种可被提取、压缩、检索并复用的训练信号，且比单纯的 episode 级 verifier 奖励更高效。理论命题可证伪——若加入程序性记忆通道后在下游任务上不优于纯 verifier 基线，则假设被动摇。</li>\n<li><strong>工程实践映射：</strong> 直接对应三类痛点：(1)『我的 RLVR agent 在相似任务上反复犯同样错』——把失败模式沉淀成回避规则；(2)『我不知道怎么让 agent 把一次成功的解法泛化到同类问题』——把成功 rollout 的有效子策略抽象成可检索技能；(3)『我的 verifier 只能给 0/1 奖励，信号太稀疏』——用程序性记忆提供更密集的中间信号。可类比对齐阶段『奖励函数即能力边界』，这里把『记忆复用』从外部 RAG 系统变成训练循环内的一等信号通道。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 新命题＝『跨 episode 程序性记忆蒸馏 > 纯 episode-local RLVR』；方法＝在线反思把 rollout 程序性信息蒸馏为可检索/可复用记忆，并在后续 episode 中检索复用；证据来自与纯 verifier 基线的下游指标对比（摘要描述）。作者（Ye Liu、Bo Pang、Zixuan Ke、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向持续输出，方向高度可信。</li>\n<li><strong>研究位置：</strong> 处于『概念确立＋方法框架＋初步验证』阶段。它提出的是 RLVR 信号增强的新范式，而非即插即用库。距大规模外部复现尚需：明确程序性记忆的表示与压缩方式、检索时机的调度、与现有 RLVR/SDPO 训练栈的集成方案。</li>\n<li><strong>工程可验证性：</strong> 即便无官方代码也能自建最小验证：选一个多 episode 的 agent 任务（如多轮工具调用或累积式推理）→在 RLVR 基线上加『成功 rollout→抽象为程序性记忆条目→后续相关 episode 检索注入』通道→对比纯 verifier 基线的收敛速度与下游指标。本周可落地，复现的是『变量』（程序性记忆通道的有无）而非整系统。</li>\n<li><strong>趋势关联：</strong> 与 ai-agent、context-engineering 两条线深度交汇，并直接关联今日另三篇 RL 论文：RLVR-for-Atlassian（在目标环境内做 RLVR）、Clinical Agents（诊断 RL 反馈通道健康度）、Auto-FL-Research（agent 自动做研究）。共同构成 2026 下半年『Agent RL 从单次奖励走向累积学习』主题。</li>\n<li><strong>长尾价值：</strong> 即便具体实现不通用，『把跨 episode 程序性信号显式蒸馏为可复用记忆』这一视角也会沉淀为 agent 训练 checklist——每次设计 agent RL 时先问『我的训练信号是 episode-local 的还是跨 episode 累积的』。</li>\n<li><strong>启发：</strong> 最强的学习信号往往不在标量奖励里，而在 rollout 的过程结构里——奖励告诉你结果，程序性记忆告诉你做法。把『过程信号』从一次性副产品变成一等训练资源，是 agent 从『每次重来』走向『越用越聪明』的关键。</li>\n<li><strong>行动建议：</strong> 今天产出一页 Procedural Memory Distillation 最小实验设计：选定多 episode agent 任务→设计程序性记忆条目的表示与检索接口→定义『程序性记忆通道』的开关与训练信号→对比纯 RLVR verifier 基线。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"https://arxiv.org/abs/2607.01436\" target=\"_blank\" rel=\"noopener noreferrer\">Discrete Diffusion Language Models for Interactive Radiology Report Drafting</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 非自回归生成范式进入医学领域：扩散语言模型（双向去噪而非从左到右）已接近 AR 生成竞争力，但医学基础模型几乎全是 AR。本文适配 DiffusionGemma-26B（MoE 扩散 LM）并在相同 LoRA 配方下对比其 AR 兄弟 Gemma-4-26B，由 verifier 评分。价值在于『扩散 LM 在领域落地』的可行性信号，但属医学影像报告细分领域、与雷达 LLM/Agent/推理主线相关性外围。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-25</li>\n</ul>\n<h4><a href=\"https://arxiv.org/abs/2607.01306\" target=\"_blank\" rel=\"noopener noreferrer\">PACE: A Neuro-Symbolic Framework for Plausible and Actionable Counterfactual Explanations</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 神经符号 AI 用于反事实解释（XAI）：现有反事实方法生成的『最小输入改动』建议常不现实或不可行，PACE 用神经符号方法结合领域知识与干预约束，生成『合理且可操作』的反事实解释。方法论价值在于『可操作性/可行性约束下的反事实生成』，对可解释性/合规场景有参考；但与雷达 LLM/Agent/训练主线相关性外围。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-25</li>\n</ul>\n<h4><a href=\"https://arxiv.org/abs/2607.01394\" target=\"_blank\" rel=\"noopener noreferrer\">The Wiola Architecture for Efficient Small Language Models</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SRPE、门控跨层注意力 GCLA 等）。架构创新（把位置编码嵌入三维螺旋流形同时承载绝对/相对/层级信号）有想象空间；但『完全原创、无任何结构血缘』是极强主张，缺乏代码/benchmark 佐证、作者团队可信度待核验，复现风险高。存为长尾观察线——若 SRPE/GCLA 被独立复现且在小模型效率基准上验证有效再提升优先级。代码/benchmark 待核验。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-25</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"https://arxiv.org/abs/2607.01394\" target=\"_blank\" rel=\"noopener noreferrer\">The Wiola Architecture for Efficient Small Language Models</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发</h4>\n<p>Procedural Memory Distillation 说明 agent 的训练循环应当内建『过程信号回收通道』——不要只保留 episode 级标量奖励，而要把 rollout 内的程序性信息（有效子策略、反复失败模式）提取成可检索记忆并回流到后续训练。这与『把奖励/验证函数设计成通用可插拔接口』异曲同工：最好的训练架构不是把信号通道固定死，而是留出『过程信号 → 记忆 → 复用』的可学习闭环。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>今日三篇 RL 论文共同揭示 agent RL 的成败首先取决于『反馈通道健康度』：Clinical Agents 发现 41.7% 沉默完成天花板会让 RL 学到『不作为』，Procedural Memory Distillation 指出纯 verifier 奖励信号过稀疏，RLVR-for-Atlassian 强调必须在目标环境内验证。设计 agent 框架时应把『反馈通道审计』作为 RL 训练的一等前置步骤：先测 silent-finish 率、再补过程信号通道、最后在真实环境内验证。</p>\n<h4>对 Operational Agent 控制的启发</h4>\n<p>难度路由控制提醒我们：让 operational agent 全自动执行写操作（退款/取消/改单）是危险的，而让人工审核所有请求又扼杀效率。正确做法是按请求难度动态路由——简单请求直接执行、高冲突风险请求转入人工复核。这是 agent 安全从『一刀切』走向『难度感知』的范式转变。</p>\n<h4>对 Coding Agent 的启发</h4>\n<p>Agent4cs 与 Auto-FL-Research 共同指向 coding agent 的两个扩展方向：(1) 从扁平文本走向层级化多智能体分解（理解大型代码库）；(2) 从写代码扩展到做实验（agent 自动搜索算法配方）。前者提升理解深度，后者扩展应用边界。</p>\n<h4>对评测工程的启发</h4>\n<p>Clinical Agents 的 silent-finish ceiling 是一个被忽视的评测陷阱——agent 在未完成必要动作时静默停止，若基准不惩罚这种行为，RL 会把它学成主导策略。任何 agent 基准在用于 RL 训练前，都应先审计『沉默完成』率并设置相应惩罚。</p>\n<h4>对未来 6-12 个月技术趋势的启发</h4>\n<p>趋势重心从『让 agent RL 学会单次任务』转向『让 agent 跨 episode 累积程序性记忆』——从一次性奖励走向可复用的技能记忆、从 sandbox 验证走向目标环境内验证、从全自动执行走向难度感知的人机协作控制。这是 2026 下半年 agent 从『每次重来』走向『越用越聪明』的核心演进。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"https://arxiv.org/abs/2607.01480\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2607.01480\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLVR/SDPO 每个 rollout 只产生 episode 级标量奖励，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题的解法可复用）被丢弃；本文用在线反思把这些跨 episode 程序性信号蒸馏成可检索、可复用的程序性记忆。理论命题清晰且可证伪——『保留并复用 rollout 程序性信息比纯 episode-local 更新在下游任务上更高效』可通过『记忆通道开关』做对照实验量化。工程映射直接：任何做 agent RL 的团队都可在 verifier 之外加一条『程序性记忆通道』——把成功 rollout 的有效子策略抽象成可检索技能、把反复失败的模式沉淀成回避规则，再在后续 episode 检索复用。作者（Ye Liu、Srijan Bansal、Bo Pang、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即便无官方代码也能自建最小验证（在 RLVR 基线上加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 信号基线）。</li>\n<li><strong>最大不确定性：</strong> 外部可复现资产缺失是最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现证据均暂无或待核验（抓取数据中这些 url 字段全为空字符串）。当前判断主要基于 arXiv 摘要与作者/机构可信度（Procedural Memory Distillation 属 Salesforce AI Research Joty/Yavuz、RLVR-for-Atlassian 与 Clinical Agents 属同一 Atlassian 工作组、Agent4cs 含 Jie M. Zhang 与 Siemens Runkler、Auto-FL-Research 属 NVIDIA MONAI、CreativityNeuro 属 UIUC Varshney）。此外，Procedural Memory Distillation 的记忆表示与压缩方式需精读全文确认；Clinical Agents 的 41.7% 天花板需确认是否跨基准泛化；Wiola『完全原创』的强主张需独立复现验证。另注：今日 arXiv Query API 超时，数据经 RSS 后备获取，论文集为周五（7/3）批次。</li>\n<li><strong>下一步动作：</strong> 若 1-2 周内仍无 Procedural Memory Distillation 官方代码，用自有 RLVR 框架自建『程序性记忆通道→训练→对比基线』最小验证；7-14 天后复盘 Clinical Agents 的 silent-finish ceiling 是否被 RL 训练社区引用与扩展、Agent4cs 是否被 coding agent 团队采纳；持续跟踪 RLVR-for-Atlassian 的企业落地数据（端点命中率/参数完整率提升幅度）。</li>\n</ul>\n<p>> 生成时间：2026-07-04T04:38:49.263172</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+}

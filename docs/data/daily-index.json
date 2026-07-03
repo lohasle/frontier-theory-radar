@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-03T04:33:14.469238",
+  "updated_at": "2026-07-04T04:38:49.517579",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-04",
+      "title": "论文价值发现日报 - 2026-07-04",
+      "deep_dive_title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+      "deep_dive_url": "https://arxiv.org/abs/2607.01480",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "三件事：(1) 列出 Procedural Memory Distillation 最小实验（选多 episode agent 任务→设计程序性记忆条目表示与检索接口→定义记忆通道开关与训练信号→对比纯 RLVR verifier 基线）；(2) 把 Clinical Agents 的『41.7% 沉默完成天花板』纳入自有 agent RL 上线前的『反馈通道健康度审计』checklist（上线 RLVR 前先测基准 silent-finish 率）；(3) 把 RLVR-for-Atlassian 的『目标环境内 verifier』模式作为企业 tool-use agent 后训练范式的试点候选。",
+      "max_uncertainty": "外部可复现资产缺失是最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现证据均暂无或待核验（抓取数据中这些 url 字段全为空字符串）。当前判断主要基于 arXiv 摘要与作者/机构可信度（Procedural Memory Distillation 属 Salesforce AI Research Joty/Yavuz、RLVR-for-Atlassian 与 Clinical Agents 属同一 Atlassian 工作组、Agent4cs 含 Jie M. Zhang 与 Siemens Runkler、Auto-FL-Research 属 NVIDIA MONAI、CreativityNeuro 属 UIUC Varshney）。此外，Procedural Memory Distillation 的记忆表示与压缩方式需精读全文确认；Clinical Agents 的 41.7% 天花板需确认是否跨基准泛化；Wiola『完全原创』的强主张需独立复现验证。另注：今日 arXiv Query API 超时，数据经 RSS 后备获取，论文集为周五（7/3）批次。",
+      "one_line_judgement": "它把 RLVR 的『逐 episode 标量奖励』升级为『跨 episode 的程序性记忆』。RLVR/SDPO 每个 rollout 只产生一个标量信号，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题解法可复用）被白白丢弃；本文用在线反思把这些信号蒸馏成可检索、可复用的程序性记忆。对所有做 agent RL 的团队是即时可验证的杠杆——在 verifier 之外加一条『程序性记忆通道』即可对比基线。",
+      "path": "daily-detail.html?date=2026-07-04"
+    },
     {
       "date": "2026-07-03",
       "title": "论文价值发现日报 - 2026-07-03",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-29"
-    },
-    {
-      "date": "2026-05-28",
-      "title": "论文价值发现日报 - 2026-05-28",
-      "deep_dive_title": "Multi-Agent Orchestration via Hierarchical Task Decomposition",
-      "deep_dive_url": "http://arxiv.org/abs/2605.89118v1",
-      "decision": "趋势价值",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "纳入趋势雷达，连续观察 7-30 天。",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-28"
     }
   ]
 }

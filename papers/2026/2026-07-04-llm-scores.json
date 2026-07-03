@@ -1,0 +1,89 @@
+{
+  "by_url": {
+    "https://arxiv.org/abs/2607.01480": {
+      "score": 87,
+      "value_type": "immediate",
+      "reason": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLVR/SDPO 每个 rollout 只产生 episode 级标量奖励，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题的解法可复用）被丢弃；本文用在线反思把这些跨 episode 程序性信号蒸馏成可检索、可复用的程序性记忆。理论命题清晰且可证伪——『保留并复用 rollout 程序性信息比纯 episode-local 更新在下游任务上更高效』可通过『记忆通道开关』做对照实验量化。工程映射直接：任何做 agent RL 的团队都可在 verifier 之外加一条『程序性记忆通道』——把成功 rollout 的有效子策略抽象成可检索技能、把反复失败的模式沉淀成回避规则，再在后续 episode 检索复用。作者（Ye Liu、Srijan Bansal、Bo Pang、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即便无官方代码也能自建最小验证（在 RLVR 基线上加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 信号基线）。",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01465": {
+      "score": 83,
+      "value_type": "immediate",
+      "reason": "RL 后训练落地企业 SaaS 的关键 PoC：LLM 被训练去预测下一 token 而非『在特定 API 内行动』，这一目标错配在细分企业工作流里表现为沉默失败——漏填必填字段、幻觉工具、读一次就提前停止。本文直接在目标环境内用 RLVR（可验证奖励）缩小 next-token 与 action 之间的差距。理论命题清晰可证伪：『在目标环境内做 RLVR 比纯 SFT/提示更能修复 API 调用级错误』可通过端点命中率、参数完整率、调用顺序正确率量化。工程映射＝企业 tool-use agent 的后训练范式——把『是否命中正确端点＋正确嵌套参数＋正确顺序』做成 verifier，在真实 SaaS 环境内训练而非只靠 sandbox 或提示。证据含 Atlassian 真实工作流的 PoC 与对照。给即时分，因属可直接试点的训练范式；代码/benchmark 入口待核验。",
+      "matched_topics": [
+        "ai-agent"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01470": {
+      "score": 80,
+      "value_type": "trend",
+      "reason": "高证据强度的诊断型研究：审计 MedAgentBench v1/v2 发现 41.7% 的『沉默完成天花板（silent-finish ceiling）』——agent 在未完成必要动作时就静默停止，使『不作为』成为 RL 的主导策略。这对所有做 agent RL 的团队是即时警讯：你的 verifier/奖励通道是否健康，直接决定 RL 学到的是『行动』还是『不行动』。理论命题可证伪——『基准的沉默完成率决定了 RL 能否学到有效行动而非不作为』可通过沉默率与 RL 收益的相关性验证。工程映射＝agent RL 上线前的『反馈通道健康度审计』——上线 RLVR 前先测基准 silent-finish 率并修复，否则会训出『学会不做』的 agent。给趋势分而非即时分，因属强诊断研究、需确认该天花板结论是否跨基准泛化；代码/benchmark 入口待核验。",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01426": {
+      "score": 77,
+      "value_type": "trend",
+      "reason": "客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快速低摩擦，又要防止在客户指令、策略约束、企业记录三者冲突时出错。本文提出『难度路由控制』——按请求难度动态调节 agent 的复核/放行阈值。理论命题可证伪：『按难度路由控制比统一阈值更能兼顾速度与正确率』可通过误操作率与处理时延双指标量化。工程映射＝operational agent 的安全控制层——把『何时该让人复核、何时该直接执行』做成难度感知的路由器，而非一刀切的人工审核或全自动放行。给趋势分，因属控制策略设计、需确认难度估计的准确率与误操作权衡；代码/benchmark 待核验。",
+      "matched_topics": [
+        "ai-agent"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01425": {
+      "score": 73,
+      "value_type": "trend",
+      "reason": "代码理解 agent 的重要工程研究：现有方案（单一 LLM 或 Claude Code 等）把源码当扁平文本，未利用大型仓库的层级结构与依赖关系。Agent4cs 用多智能体框架在层级代码库上做摘要——显式利用 interdependencies 与 hierarchical 信息。理论命题＝层级化多智能体分解比扁平单模型更能理解大型代码库（可通过摘要质量/下游检索命中率验证）。工程映射＝大型遗留代码库的自动文档与理解——把『仓库→子系统→模块→函数』的层级分解交给多 agent 协作处理。作者含 Jie M. Zhang（LLM 测试方向知名）、Thomas Runkler（Siemens），方向可信。给趋势分，因属框架研究、需确认相对单一强模型（如 Claude Code）的实际增益，代码/benchmark 待核验。",
+      "matched_topics": [
+        "coding-agent",
+        "ai-agent"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01366": {
+      "score": 70,
+      "value_type": "trend",
+      "reason": "把 coding-agent 范式从『写代码』扩展到『做 ML 研究』：FL（联邦学习）算法配方搜索（optimizer/聚合规则/本地训练调度/归一化/正则/模型架构）手工探索昂贵且难公平比较，AFR 用受约束的 coding-agent workflow 自动搜索算法配方。理论命题＝『agentic search 能比人工调参/网格搜索更高效地发现有效 FL 配方』（可通过配方搜索的帕累托效率与成本验证）。工程映射＝coding agent 的研究自动化应用——把『LLM-as-experimenter』模式从软件工程迁移到 ML 实验自动化，这是『agent 自主做研究』方向的具体落地。作者（Holger Roth、Ziyue Xu、Chester Chen、Daguang Xu 等，NVIDIA 医学影像/MONAI 团队）在 FL 方向高度可信。给趋势分，因属应用范式、需确认搜索效率是否优于贝叶斯优化等强基线；代码/benchmark 待核验。",
+      "matched_topics": [
+        "ai-agent"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01433": {
+      "score": 66,
+      "value_type": "trend",
+      "reason": "推理时控制的新视角：LLM 在开放问题上倾向生成相似回答（artificial hivemind / mode collapse），本文 CreativityNeuro 用 contrastive weight steering（数据无关的对比式权重转向）增强发散思维。理论命题可证伪：『对比式权重转向能在不损失质量的前提下提升发散性』可通过 DAT（Divergent Association Task）等创造力评估量化。工程映射＝生成多样性的推理时开关——在不微调的情况下，通过权重转向控制模型『发散 vs 收敛』。作者含 Lav R. Varshney（UIUC）、Core Francisco Park、Felix Sosa，方向可信。给趋势分，因属推理时控制研究、需确认转向对事实性/连贯性的副作用；代码/benchmark 待核验。",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01436": {
+      "score": 60,
+      "value_type": "long_tail",
+      "reason": "非自回归生成范式进入医学领域：扩散语言模型（双向去噪而非从左到右）已接近 AR 生成竞争力，但医学基础模型几乎全是 AR。本文适配 DiffusionGemma-26B（MoE 扩散 LM）并在相同 LoRA 配方下对比其 AR 兄弟 Gemma-4-26B，由 verifier 评分。价值在于『扩散 LM 在领域落地』的可行性信号，但属医学影像报告细分领域、与雷达 LLM/Agent/推理主线相关性外围。代码/benchmark 待核验。",
+      "matched_topics": [
+        "inference-serving",
+        "rag-knowledge"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01306": {
+      "score": 55,
+      "value_type": "long_tail",
+      "reason": "神经符号 AI 用于反事实解释（XAI）：现有反事实方法生成的『最小输入改动』建议常不现实或不可行，PACE 用神经符号方法结合领域知识与干预约束，生成『合理且可操作』的反事实解释。方法论价值在于『可操作性/可行性约束下的反事实生成』，对可解释性/合规场景有参考；但与雷达 LLM/Agent/训练主线相关性外围。代码/benchmark 待核验。",
+      "matched_topics": [
+        "llm-evaluation"
+      ]
+    },
+    "https://arxiv.org/abs/2607.01394": {
+      "score": 48,
+      "value_type": "long_tail",
+      "reason": "声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SRPE、门控跨层注意力 GCLA 等）。架构创新（把位置编码嵌入三维螺旋流形同时承载绝对/相对/层级信号）有想象空间；但『完全原创、无任何结构血缘』是极强主张，缺乏代码/benchmark 佐证、作者团队可信度待核验，复现风险高。存为长尾观察线——若 SRPE/GCLA 被独立复现且在小模型效率基准上验证有效再提升优先级。代码/benchmark 待核验。",
+      "matched_topics": [
+        "inference-serving"
+      ]
+    }
+  }
+}

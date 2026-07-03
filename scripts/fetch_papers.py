@@ -27,6 +27,12 @@ PAPERS_DIR = os.path.join(PROJECT_ROOT, "papers")
 # arXiv API 配置
 ARXIV_API_URL = "https://export.arxiv.org/api/query"
 
+# arXiv RSS 后备端点（export.arxiv.org API 不稳定时使用）
+ARXIV_RSS_URL = "https://rss.arxiv.org/rss/{cat}"
+DC_NS = "http://purl.org/dc/elements/1.1/"
+ARXIV_NS = "http://arxiv.org/schemas/atom"
+NS = {"dc": DC_NS, "arxiv": ARXIV_NS}
+
 # 重点分类
 ARXIV_CATEGORIES = [
     "cs.AI", "cs.CL", "cs.LG", "cs.SE", "cs.IR",
@@ -53,7 +59,22 @@ def load_config():
 
 
 def fetch_arxiv_papers(categories, max_results=10):
-    """从 arXiv API 抓取论文"""
+    """从 arXiv API 抓取论文；API 失败时自动回退到 RSS 馈送"""
+    papers = fetch_arxiv_api(categories, max_results)
+    if papers:
+        return papers
+
+    print("[fetch] arXiv API 无结果，尝试 RSS 馈送后备...")
+    rss_papers = fetch_arxiv_rss(categories, max_results)
+    if rss_papers:
+        print(f"[fetch] RSS 后备成功，获取 {len(rss_papers)} 篇论文")
+    else:
+        print("[fetch] RSS 后备也未获取到论文")
+    return rss_papers
+
+
+def fetch_arxiv_api(categories, max_results=10):
+    """从 arXiv Query API 抓取论文（原始实现）"""
     papers = []
 
     # 构建查询 - 按多个分类搜索
@@ -88,12 +109,133 @@ def fetch_arxiv_papers(categories, max_results=10):
                 print(f"[warn] 解析论文条目失败: {e}")
                 continue
 
-        print(f"[fetch] 从 arXiv 获取 {len(papers)} 篇论文")
+        print(f"[fetch] 从 arXiv API 获取 {len(papers)} 篇论文")
 
     except Exception as e:
         print(f"[error] arXiv API 请求失败: {e}")
 
     return papers
+
+
+def fetch_arxiv_rss(categories, max_results=10):
+    """从 arXiv RSS 馈送抓取论文（export.arxiv.org API 不可用时的后备）"""
+    papers = []
+    # RSS 按分类逐个抓取，取前几个高优先级分类
+    for cat in categories[:4]:
+        url = ARXIV_RSS_URL.format(cat=cat)
+        try:
+            print(f"[fetch] 请求 RSS: {cat}")
+            req = urllib.request.Request(url, headers={"User-Agent": "FrontierTheoryRadar/1.0"})
+            with urllib.request.urlopen(req, timeout=25) as resp:
+                data = resp.read().decode("utf-8")
+        except Exception as e:
+            print(f"[warn] RSS {cat} 请求失败: {e}")
+            continue
+
+        try:
+            root = ET.fromstring(data)
+        except Exception as e:
+            print(f"[warn] RSS {cat} 解析失败: {e}")
+            continue
+
+        for item in root.findall(".//item"):
+            paper = parse_arxiv_rss_item(item, cat)
+            if paper:
+                papers.append(paper)
+
+    # 合并去重（按 arxiv id / 标题）
+    seen = set()
+    deduped = []
+    for p in papers:
+        key = (p.get("url") or p["title"].lower().strip()[:80])
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(p)
+
+    return deduped[:max_results] if max_results else deduped
+
+
+def parse_arxiv_rss_item(item, default_cat):
+    """解析单个 RSS item 为统一论文 dict"""
+    title_elem = item.find("title")
+    if title_elem is None or not title_elem.text:
+        return None
+    title = re.sub(r"\s+", " ", title_elem.text.strip())
+
+    link_elem = item.find("link")
+    url = link_elem.text.strip() if link_elem is not None and link_elem.text else ""
+
+    # 解析 description: "arXiv:<id>v<n> Announce Type: new \nAbstract: ..."
+    desc_elem = item.find("description")
+    abstract = ""
+    announce_type = ""
+    arxiv_id = ""
+    if desc_elem is not None and desc_elem.text:
+        desc = desc_elem.text
+        m_id = re.search(r"arXiv:(\d{4}\.\d{4,5})", desc)
+        if m_id:
+            arxiv_id = m_id.group(1)
+        m_type = re.search(r"Announce Type:\s*(\w+)", desc)
+        if m_type:
+            announce_type = m_type.group(1).lower()
+        m_abs = re.search(r"Abstract:\s*(.*)", desc, re.DOTALL)
+        if m_abs:
+            abstract = re.sub(r"\s+", " ", m_abs.group(1).strip())
+
+    # 作者：多个 dc:creator 子元素
+    authors = []
+    for creator in item.findall(f"{{{DC_NS}}}creator"):
+        if creator.text:
+            authors.append(creator.text.strip())
+
+    # 发布日期
+    pub_elem = item.find("pubDate")
+    published = ""
+    if pub_elem is not None and pub_elem.text:
+        try:
+            published = datetime.strptime(pub_elem.text, "%a, %d %b %Y %H:%M:%S %z").strftime("%Y-%m-%d")
+        except Exception:
+            published = pub_elem.text[:10]
+
+    if not arxiv_id and url:
+        m = re.search(r"(\d{4}\.\d{4,5})", url)
+        if m:
+            arxiv_id = m.group(1)
+
+    pdf_url = f"https://arxiv.org/pdf/{arxiv_id}" if arxiv_id else ""
+
+    categories = [c.text.strip() for c in item.findall("category") if c.text]
+    if not categories:
+        categories = [default_cat]
+
+    links = []
+    if url:
+        links.append({"label": "arXiv", "url": url})
+    if pdf_url:
+        links.append({"label": "PDF", "url": pdf_url})
+
+    return {
+        "title": title,
+        "authors": authors[:5],
+        "published": published,
+        "updated": published,
+        "source": "arXiv",
+        "url": url,
+        "pdf_url": pdf_url,
+        "openreview_url": "",
+        "paperswithcode_url": "",
+        "code_url": "",
+        "benchmark_url": "",
+        "project_url": "",
+        "abstract": abstract[:500] if abstract else "",
+        "categories": categories,
+        "keywords": extract_keywords(title, abstract),
+        "announce_type": announce_type,
+        "score": 0,
+        "decision": "pending",
+        "links": links
+    }
 
 
 def parse_arxiv_entry(entry, ns):

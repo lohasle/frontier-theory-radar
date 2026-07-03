@@ -1,0 +1,132 @@
+{
+  "id": "procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+  "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+  "authors": [
+    "Ye Liu, Srijan Bansal, Bo Pang, Yang Li, Zeyu Leo Liu, Yifei Ming, Zixuan Ke, Shafiq Joty, Semih Yavuz"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-03",
+  "url": "https://arxiv.org/abs/2607.01480",
+  "pdf_url": "https://arxiv.org/pdf/2607.01480",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-04",
+  "first_deep_dive_daily": "2026-07-04",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 6.2,
+    "evidence": 4.5,
+    "engineering_testability": 3.5,
+    "trend_signal": 4.05,
+    "long_tail_potential": 3.5,
+    "actionability": 3.8,
+    "noise_risk": 1.2
+  },
+  "score": 87.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 ep…",
+  "one_line_essence": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLVR/SDPO 每个 rollout 只产生 episode 级标量奖励，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题的解法可复用）被丢弃；本文用在线反思把这些跨 episode 程序性信号蒸馏成可检索、可复用的程序性记忆。理论命题清晰且可证伪——『保留并复用 rollout 程序性信息比纯 episode-local 更新在下游任务上更高效』可通过『记忆通道开关』做对照实验量化。工程映射直接：任何做 agent RL 的团队都可在 verifier 之外加一条『程序性记忆通道』——把成功 rollout 的有效子策略抽象成可检索技能、把反复失败的模式沉淀成回避规则，再在后续 episode 检索复用。作者（Ye Liu、Srijan Bansal、Bo Pang、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即便无官方代码也能自建最小验证（在 RLVR 基线上加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 信号基线）。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLV",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "agentic-world-modeling",
+      "context-engineering"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序",
+    "future_trigger": [
+      "待更多证据"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "https://arxiv.org/abs/2607.01480"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.01480"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+  "daily_path": "daily-detail.html?date=2026-07-04",
+  "trend_paths": [
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=context-engineering"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}
