@@ -1,0 +1,655 @@
+{
+  "date": "2026-07-05",
+  "total": 10,
+  "generated_at": "2026-07-05T04:31:12.096500",
+  "papers": [
+    {
+      "title": "Distributed Attacks in Persistent-State AI Control",
+      "authors": [
+        "Josh Hills",
+        "Ida Caspary",
+        "Asa Cooper Stickland"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02514v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterativ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "coding agent",
+        "benchmark"
+      ],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02514v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02514v1"
+        }
+      ],
+      "llm_reason": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
+      "id": "distributed-attacks-in-persistent-state-ai-control",
+      "value_type": "immediate",
+      "matched_topics": [
+        "coding-agent",
+        "security-governance",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Online Safety Monitoring for LLMs",
+      "authors": [
+        "Mona Schirmer",
+        "Metod Jazbec",
+        "Alexander Timans",
+        "Christian Naesseth",
+        "Maja Waldron"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02510v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02510v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with mor",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "stat.AP",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02510v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02510v1"
+        }
+      ],
+      "llm_reason": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服务，且提供统计意义上的风险保证。工程落地门槛极低，证据来自真实红队与推理数据集。",
+      "id": "online-safety-monitoring-for-llms",
+      "value_type": "immediate",
+      "matched_topics": [
+        "security-governance",
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+      "authors": [
+        "Yanjun Zhao",
+        "Ruizhong Qiu",
+        "Tianxin Wei",
+        "Yuanchen Bei",
+        "Zhining Liu"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02509v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02509v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context windows, they often fail to use relevant evidence that is already present in the input, revealing a gap between context access and effective context utilization. In this work, we propose Recursive Evidence Replay as LLM Harness for Long-Context Reasoning (RECONTEXT), a training-free inference metho",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "memory",
+        "RAG",
+        "inference"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02509v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02509v1"
+        }
+      ],
+      "llm_reason": "ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据弥补长上下文 LLM '能访问但不会用'证据的鸿沟。无需训练即可作为现有长上下文管线的 drop-in 增强。长上下文利用率是 2026 年核心工程议题，方法可立即在现有评测上验证收益。",
+      "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
+      "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "authors": [
+        "Wentao Zhang",
+        "Liliana Hotsko",
+        "Woojeong Kim",
+        "Pengyu Nie",
+        "Stuart Shieber"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02512v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02512v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (P",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "memory",
+        "inference"
+      ],
+      "score": 77.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02512v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02512v1"
+        }
+      ],
+      "llm_reason": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针对日志告警、JSON 修复、意图排序等高频模糊任务。属趋势级方向（LLM 行为编译/蒸馏为可部署制品），但成熟度与跨任务泛化需待核验。",
+      "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+      "authors": [
+        "Matteo Boglioni",
+        "Thibault Rousset",
+        "Siva Reddy",
+        "Marius Mosbach",
+        "Verna Dankers"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02513v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02513v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising solution, with state-of-the-art(SOTA) methods often following a localize-first, unlearn-second paradigm that targets specific model parameters. However, existing benchmarks evaluate unlearning solely at the output level, leaving open the question of whether unlearning truly erases knowledge from a model's",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 70.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02513v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02513v1"
+        }
+      ],
+      "llm_reason": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unlearning 成功 ≠ 参数级知识真正擦除。作为评测资产可沉淀到合规审计（PII 移除）清单，但工程即时性弱于前述论文，更偏长尾基准价值。",
+      "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "security-governance",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "Controllable Sim Agents with Behavior Latents",
+      "authors": [
+        "Juanwu Lu",
+        "Junyu Zhu",
+        "Ziran Wang"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02496v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02496v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Realistic traffic simulation requires agents that imitate logged behavior and can also be steered along interpretable axes. Such controllability enables engineers to isolate variables, reproduce specific edge cases, and test autonomous systems without real-world risk. We introduce Controllable Neural Variational Agents (CNeVA), a controllable simulated-agent framework that learns to infer a per-agent Gaussian behavior latent from per-channel discounted returns via a closed-form conjugate variati",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark"
+      ],
+      "score": 43.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02496v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02496v1"
+        }
+      ],
+      "id": "controllable-sim-agents-with-behavior-latents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+      "authors": [
+        "Arman Ghaffarizadeh",
+        "Danyal Mohaddes",
+        "Aliakbar Izadkhah",
+        "Shahriar Noroozizadeh"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02507v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02507v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, without any explicit objective in the prompt, changes what an agent expresses publicly relative to an off-the-record (OTR) channel elicited under the same condition. We introduce a dual-channel debate framework in which agents produce public utterances that enter the shared history alongside OTR resp",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "inference"
+      ],
+      "score": 39.8,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02507v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02507v1"
+        }
+      ],
+      "id": "what-llm-agents-say-when-no-one-is-watching-social-structure-and-latent-objective-emergence-in-multi-agent-debates",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+      "authors": [
+        "Yunhe Li",
+        "Hao Shi",
+        "Wenhao Liu",
+        "Mengzhe Ruan",
+        "Hanxu Hou"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02502v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02502v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "On-policy self-distillation (OPSD) has emerged as a practical method for training large language models (LLMs) to reason, where a single model acts as both the teacher and the student with different levels of information access. However, recent studies have found that the teacher's dense token-level supervision, conditioned on privileged information, can lead to overfitting to in-domain patterns, suppress exploration, and hurt cross-domain generalization, while also introducing a more fundamenta",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 39.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02502v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02502v1"
+        }
+      ],
+      "id": "demopsd-disagreement-modulated-policy-self-distillation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Reasoning LLM Improves Speaker Recognition in Long-form TV Dramas",
+      "authors": [
+        "Yuxuan Li",
+        "Lingxi Xie",
+        "Xinyue Huo",
+        "Jihao Qiu",
+        "Jiacheng Shao"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02504v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02504v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Long-form TV dramas present a formidable challenge for comprehensive video understanding, where deciphering complex storyline often relies on \\textbf{speaker recognition}, the task of accurately attributing each spoken utterance to its respective character. In this paper, we advance this field through two primary contributions. (1) We introduce \\textbf{DramaSR-532K}, a large-scale benchmark comprising 532K annotated dialogue lines across more than 900 unique characters, necessitating the integra",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 36.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02504v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02504v1"
+        }
+      ],
+      "id": "reasoning-llm-improves-speaker-recognition-in-long-form-tv-dramas",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials",
+      "authors": [
+        "Gil Harari",
+        "Yoel Zimmermann",
+        "Ola Tangen Kulseng",
+        "Laura Zichi",
+        "Chuin Wei Tan"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02499v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02499v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Machine learning interatomic potentials (MLIPs) have become a hallmark of AI for scientific simulation. While efforts on new architectures and datasets have led to increasingly accurate and general models, the choice of optimizer for training has largely remained unexplored, defaulting to Adam and its variants in the community. Here, we implement and systematically compare a class of recently proposed matrix-structured optimizers, including Muon, SOAP, and the hybrid SOAP-Muon, for training Nequ",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.chem-ph",
+        "physics.comp-ph"
+      ],
+      "keywords": [],
+      "score": 36.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02499v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02499v1"
+        }
+      ],
+      "id": "beyond-adam-soap-and-muon-for-faster-label-efficient-training-of-machine-learning-interatomic-potentials",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    }
+  ],
+  "scored_at": "2026-07-05"
+}

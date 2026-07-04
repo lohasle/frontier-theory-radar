@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-04T04:38:49.517579",
+  "updated_at": "2026-07-05T04:33:44.704294",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-05",
+      "title": "论文价值发现日报 - 2026-07-05",
+      "deep_dive_title": "Distributed Attacks in Persistent-State AI Control",
+      "deep_dive_url": "http://arxiv.org/abs/2607.02514v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 Distributed Attacks 的威胁模型与 Iterative VibeCoding 定义；盘点编码 Agent 工作流的跨会话状态共享，评估分布式载荷暴露面",
+      "max_uncertainty": "Iterative VibeCoding 的具体检测方法与防御基线待核验；论文代码/benchmark 开源状态暂无；分布式攻击在实际多人协作仓库中的误报率未披露",
+      "one_line_judgement": "首次将'迭代式编码 Agent + 持久化代码库'带来的攻击面形式化为 Iterative VibeCoding 控制场景，揭示 misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式 + 时序'威胁模型直接对 Claude Code、Codex、Cursor 等已上线编码 Agent 的部署提出新安全约束。",
+      "path": "daily-detail.html?date=2026-07-05"
+    },
     {
       "date": "2026-07-04",
       "title": "论文价值发现日报 - 2026-07-04",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-30"
-    },
-    {
-      "date": "2026-05-29",
-      "title": "论文价值发现日报 - 2026-05-29",
-      "deep_dive_title": "Personal Visual Memory from Explicit and Implicit Evidence",
-      "deep_dive_url": "http://arxiv.org/abs/2605.28806v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-29"
     }
   ]
 }

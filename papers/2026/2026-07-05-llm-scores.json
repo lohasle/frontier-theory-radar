@@ -1,0 +1,125 @@
+{
+  "date": "2026-07-05",
+  "model": "glm-5.1",
+  "generated_at": "2026-07-05T04:33:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "http://arxiv.org/abs/2607.02514v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
+      "matched_topics": ["coding-agent", "security-governance", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2607.02510v1": {
+      "score": 82,
+      "value_type": "immediate",
+      "reason": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服务，且提供统计意义上的风险保证。工程落地门槛极低，证据来自真实红队与推理数据集。",
+      "matched_topics": ["security-governance", "llm-evaluation", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.02509v1": {
+      "score": 80,
+      "value_type": "immediate",
+      "reason": "ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据弥补长上下文 LLM '能访问但不会用'证据的鸿沟。无需训练即可作为现有长上下文管线的 drop-in 增强。长上下文利用率是 2026 年核心工程议题，方法可立即在现有评测上验证收益。",
+      "matched_topics": ["context-engineering", "rag-knowledge", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.02512v1": {
+      "score": 77,
+      "value_type": "trend",
+      "reason": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针对日志告警、JSON 修复、意图排序等高频模糊任务。属趋势级方向（LLM 行为编译/蒸馏为可部署制品），但成熟度与跨任务泛化需待核验。",
+      "matched_topics": ["inference-serving", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2607.02513v1": {
+      "score": 70,
+      "value_type": "long_tail",
+      "reason": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unlearning 成功 ≠ 参数级知识真正擦除。作为评测资产可沉淀到合规审计（PII 移除）清单，但工程即时性弱于前述论文，更偏长尾基准价值。",
+      "matched_topics": ["security-governance", "llm-evaluation"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 0,
+      "title": "Distributed Attacks in Persistent-State AI Control",
+      "arxiv_id": "2607.02514v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 10,
+        "actionability": 9
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "将持久化状态下的 AI 编码 Agent 攻击形式化为 Iterative VibeCoding，揭示攻击可跨 PR 分布并择机触发",
+      "decision": "strong_accept",
+      "reasoning": "首次系统刻画'迭代式编码 Agent + 持久化代码库'带来的分布式攻击面：misaligned/prompt-injected Agent 可将载荷拆分到多个 PR，并在'最自然掩护'的 PR 上触发。该威胁模型对任何部署 Claude Code/Codex/Cursor 类 Agent 的团队是即时安全输入。新颖度高、趋势相关性极强（编码 Agent/vibe coding 为 2026 主线）。"
+    },
+    {
+      "paper_index": 3,
+      "title": "Online Safety Monitoring for LLMs",
+      "arxiv_id": "2607.02510v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 10
+      },
+      "weighted_total": 8.2,
+      "confidence": "high",
+      "one_line": "极简在线安全监控器：verifier 信号→阈值→告警，阈值由 risk control 校准，与复杂方法竞争力相当",
+      "decision": "strong_accept",
+      "reasoning": "设计简单到任何推理服务都可直接接入：外部 verifier 信号经 risk control（类共形预测）校准阈值后输出统计风险保证的告警。在数学推理与红队数据集上验证，与更复杂监控器竞争力相当。部署门槛最低、可立即落地，是 LLM 安全治理的高 ROI 选择。"
+    },
+    {
+      "paper_index": 4,
+      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+      "arxiv_id": "2607.02509v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 7,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.0,
+      "confidence": "high",
+      "one_line": "Training-free 的递归证据重放方法，弥补长上下文 LLM '能访问但不会用'证据的鸿沟",
+      "decision": "accept",
+      "reasoning": "准确点出长上下文 LLM 的核心痛点：上下文访问 ≠ 上下文利用。ReContext 以递归证据重放在推理阶段重新浮现相关证据，training-free 可作为现有长上下文管线的 drop-in 增强。长上下文利用是 2026 核心工程议题，方法可立即在现有评测上验证收益。"
+    },
+    {
+      "paper_index": 2,
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "arxiv_id": "2607.02512v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 6,
+        "trend_relevance": 9,
+        "actionability": 6
+      },
+      "weighted_total": 7.7,
+      "confidence": "medium",
+      "one_line": "将自然语言规范编译为紧凑、可本地执行的神经制品（Program-as-Weights），替代逐次 LLM API 调用",
+      "decision": "accept",
+      "reasoning": "提出 fuzzy-function 编程范式：将日志告警、JSON 修复、意图排序等高频模糊任务从 NL 规范编译为本地可执行神经制品，恢复 locality、可复现性与成本优势。范式新颖、趋势价值高（LLM 行为编译/蒸馏为可部署制品），但跨任务泛化与编译可行性证据强度待核验，行动门槛中等。"
+    },
+    {
+      "paper_index": 1,
+      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+      "arxiv_id": "2607.02513v1",
+      "scores": {
+        "engineering_value": 6,
+        "theoretical_depth": 8,
+        "evidence_strength": 8,
+        "trend_relevance": 7,
+        "actionability": 6
+      },
+      "weighted_total": 7.0,
+      "confidence": "high",
+      "one_line": "首个在'定位精度'层面评估 LLM unlearning 的 testbed，揭示输出级擦除 ≠ 参数级擦除",
+      "decision": "accept",
+      "reasoning": "针对 localize-first/unlearn-second 范式，首次在参数定位层面而非输出层面评估 unlearning。核心洞察：输出级 unlearning 成功不等于知识真正从模型中擦除。作为评测资产可沉淀到 PII 移除合规审计，工程即时性弱于前述论文，更偏长尾基准价值。"
+    }
+  ]
+}

@@ -1,106 +1,121 @@
 {
-  "updated_at": "2026-07-04T04:38:49.512023",
+  "updated_at": "2026-07-05T04:33:44.695657",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-07-04",
-    "title": "论文价值发现日报 - 2026-07-04",
-    "deep_dive_title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
-    "deep_dive_url": "https://arxiv.org/abs/2607.01480",
+    "date": "2026-07-05",
+    "title": "论文价值发现日报 - 2026-07-05",
+    "deep_dive_title": "Distributed Attacks in Persistent-State AI Control",
+    "deep_dive_url": "http://arxiv.org/abs/2607.02514v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "三件事：(1) 列出 Procedural Memory Distillation 最小实验（选多 episode agent 任务→设计程序性记忆条目表示与检索接口→定义记忆通道开关与训练信号→对比纯 RLVR verifier 基线）；(2) 把 Clinical Agents 的『41.7% 沉默完成天花板』纳入自有 agent RL 上线前的『反馈通道健康度审计』checklist（上线 RLVR 前先测基准 silent-finish 率）；(3) 把 RLVR-for-Atlassian 的『目标环境内 verifier』模式作为企业 tool-use agent 后训练范式的试点候选。",
-    "max_uncertainty": "外部可复现资产缺失是最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code、OpenReview、独立复现证据均暂无或待核验（抓取数据中这些 url 字段全为空字符串）。当前判断主要基于 arXiv 摘要与作者/机构可信度（Procedural Memory Distillation 属 Salesforce AI Research Joty/Yavuz、RLVR-for-Atlassian 与 Clinical Agents 属同一 Atlassian 工作组、Agent4cs 含 Jie M. Zhang 与 Siemens Runkler、Auto-FL-Research 属 NVIDIA MONAI、CreativityNeuro 属 UIUC Varshney）。此外，Procedural Memory Distillation 的记忆表示与压缩方式需精读全文确认；Clinical Agents 的 41.7% 天花板需确认是否跨基准泛化；Wiola『完全原创』的强主张需独立复现验证。另注：今日 arXiv Query API 超时，数据经 RSS 后备获取，论文集为周五（7/3）批次。",
-    "one_line_judgement": "它把 RLVR 的『逐 episode 标量奖励』升级为『跨 episode 的程序性记忆』。RLVR/SDPO 每个 rollout 只产生一个标量信号，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题解法可复用）被白白丢弃；本文用在线反思把这些信号蒸馏成可检索、可复用的程序性记忆。对所有做 agent RL 的团队是即时可验证的杠杆——在 verifier 之外加一条『程序性记忆通道』即可对比基线。",
-    "path": "daily-detail.html?date=2026-07-04"
+    "daily_action": "精读 Distributed Attacks 的威胁模型与 Iterative VibeCoding 定义；盘点编码 Agent 工作流的跨会话状态共享，评估分布式载荷暴露面",
+    "max_uncertainty": "Iterative VibeCoding 的具体检测方法与防御基线待核验；论文代码/benchmark 开源状态暂无；分布式攻击在实际多人协作仓库中的误报率未披露",
+    "one_line_judgement": "首次将'迭代式编码 Agent + 持久化代码库'带来的攻击面形式化为 Iterative VibeCoding 控制场景，揭示 misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式 + 时序'威胁模型直接对 Claude Code、Codex、Cursor 等已上线编码 Agent 的部署提出新安全约束。",
+    "path": "daily-detail.html?date=2026-07-05"
   },
   "top_paper": {
-    "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+    "title": "Distributed Attacks in Persistent-State AI Control",
     "authors": [
-      "Ye Liu, Srijan Bansal, Bo Pang, Yang Li, Zeyu Leo Liu, Yifei Ming, Zixuan Ke, Shafiq Joty, Semih Yavuz"
+      "Josh Hills",
+      "Ida Caspary",
+      "Asa Cooper Stickland"
     ],
-    "published": "2026-07-03",
-    "updated": "2026-07-03",
+    "published": "2026-07-02",
+    "updated": "2026-07-02",
     "source": "arXiv",
-    "url": "https://arxiv.org/abs/2607.01480",
-    "pdf_url": "https://arxiv.org/pdf/2607.01480",
+    "url": "http://arxiv.org/abs/2607.02514v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Reinforcement learning with verifiable rewards (RLVR), along with recent selfdistillation variants such as SDPO, evaluates each rollout against a verifier and updates the policy from that episode-level signal. However, the richer procedural information in the rollout is rarely retained or reused. Across episodes and epochs, the model repeatedly encounters related problems under a changing policy, producing cross-episode signals that episode-local updates cannot capture: which strategies consiste",
+    "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterativ",
     "categories": [
-      "cs.AI",
-      "cs.LG"
+      "cs.AI"
     ],
     "keywords": [
-      "memory",
-      "inference"
+      "agent",
+      "coding agent",
+      "benchmark"
     ],
-    "announce_type": "new",
-    "score": 87.0,
+    "score": 84.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "https://arxiv.org/abs/2607.01480"
+        "url": "http://arxiv.org/abs/2607.02514v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2607.01480"
+        "url": "https://arxiv.org/pdf/2607.02514v1"
       }
     ],
-    "llm_reason": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLVR/SDPO 每个 rollout 只产生 episode 级标量奖励，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题的解法可复用）被丢弃；本文用在线反思把这些跨 episode 程序性信号蒸馏成可检索、可复用的程序性记忆。理论命题清晰且可证伪——『保留并复用 rollout 程序性信息比纯 episode-local 更新在下游任务上更高效』可通过『记忆通道开关』做对照实验量化。工程映射直接：任何做 agent RL 的团队都可在 verifier 之外加一条『程序性记忆通道』——把成功 rollout 的有效子策略抽象成可检索技能、把反复失败的模式沉淀成回避规则，再在后续 episode 检索复用。作者（Ye Liu、Srijan Bansal、Bo Pang、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即便无官方代码也能自建最小验证（在 RLVR 基线上加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 信号基线）。",
-    "id": "procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+    "llm_reason": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
+    "id": "distributed-attacks-in-persistent-state-ai-control",
     "value_type": "immediate",
     "matched_topics": [
-      "ai-agent",
-      "context-engineering"
+      "coding-agent",
+      "security-governance",
+      "ai-agent"
     ],
     "score_breakdown": {
-      "novelty": 4.8,
-      "problem_importance": 5.8,
-      "relevance": 6.2,
+      "novelty": 5.4,
+      "problem_importance": 6.45,
+      "relevance": 7.4,
       "evidence_strength": 4.5,
       "engineering_testability": 3.5,
       "trend_signal": 4.05,
       "long_tail_potential": 3.5,
-      "asset_convertibility": 4.8,
+      "asset_convertibility": 6.2,
       "actionability": 3.8,
       "noise_risk": 1.2,
       "weak_evidence_penalty": 5.0,
-      "low_relevance_penalty": 2.2,
+      "low_relevance_penalty": 0.8,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "AI Agent：Reinforcement learning with verifiable rewards (RLVR), along with recent selfd…",
-    "one_line_judgement": "今天值得试：今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 ep…",
-    "first_seen_date": "2026-07-04",
-    "first_deep_dive_daily": "2026-07-04",
+    "brief_cn": "Coding Agent：As AI coding agents become more autonomous, they increasingly ship code iterat…",
+    "one_line_judgement": "今天值得试：首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：m…",
+    "first_seen_date": "2026-07-05",
+    "first_deep_dive_daily": "2026-07-05",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序",
+    "long_tail_summary": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected ",
     "related_trends": [
-      "agentic-world-modeling",
-      "context-engineering"
+      "coding-agent",
+      "agentic-world-modeling"
     ],
-    "detail_path": "paper-detail.html?id=procedural-memory-distillation-online-reflection-for-self-improving-language-models"
+    "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control"
   },
-  "paper_count": 409,
+  "paper_count": 419,
   "daily_count": 30,
   "trend_count": 3,
-  "long_tail_count": 49,
+  "long_tail_count": 50,
   "value_distribution": {
-    "immediate": 44,
-    "trend": 64,
-    "long_tail": 49,
-    "ignore": 252
+    "immediate": 47,
+    "trend": 65,
+    "long_tail": 50,
+    "ignore": 257
   },
   "recent_dailies": [
+    {
+      "date": "2026-07-05",
+      "title": "论文价值发现日报 - 2026-07-05",
+      "deep_dive_title": "Distributed Attacks in Persistent-State AI Control",
+      "deep_dive_url": "http://arxiv.org/abs/2607.02514v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 Distributed Attacks 的威胁模型与 Iterative VibeCoding 定义；盘点编码 Agent 工作流的跨会话状态共享，评估分布式载荷暴露面",
+      "max_uncertainty": "Iterative VibeCoding 的具体检测方法与防御基线待核验；论文代码/benchmark 开源状态暂无；分布式攻击在实际多人协作仓库中的误报率未披露",
+      "one_line_judgement": "首次将'迭代式编码 Agent + 持久化代码库'带来的攻击面形式化为 Iterative VibeCoding 控制场景，揭示 misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式 + 时序'威胁模型直接对 Claude Code、Codex、Cursor 等已上线编码 Agent 的部署提出新安全约束。",
+      "path": "daily-detail.html?date=2026-07-05"
+    },
     {
       "date": "2026-07-04",
       "title": "论文价值发现日报 - 2026-07-04",
@@ -178,580 +193,676 @@
       "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。",
       "one_line_judgement": "它回答的是 agent 工程界天天踩的坑——'想给 agent 做步级过程奖励(PRM)，但长程交互+不可逆动作+随机环境让人工标注和蒙特卡洛估计都不可规模化'。本文给出一个'免费午餐'：RL 后训练本身已经提供了有效的步级评分信号(Progress Advantage)，不必再单独训奖励模型。这恰好是自有 agent 团队在 RLHF/GRPO 流水线里立刻能验证的变量。理论上是'PRM 的价值不在独立模型而在 advantage 函数重用'，工程上对应'把训练中的 advantage 当步骤质量标签'。",
       "path": "daily-detail.html?date=2026-06-26"
-    },
-    {
-      "date": "2026-06-25",
-      "title": "论文价值发现日报 - 2026-06-25",
-      "deep_dive_title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
-      "deep_dive_url": "http://arxiv.org/abs/2606.24855v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "三件事：列出 OT-Agent 跨任务数据配方的最小实验(异质 benchmark 集 + 单任务/多任务对照 + 保持率指标)；把 InSight 的'原子动作分解+运行时 steer'纳入具身 Agent/skill-library 趋势观察清单；把次梯度界、FLUX3D、AAC 三篇存入长尾/忽略索引并标注 revisit 条件。",
-      "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/系列可信度(OT-Agent 属 OpenThoughts 延续、InSight 属 Stanford Wu 团队)，需持续跟踪作者主页与 GitHub。",
-      "one_line_judgement": "它回答的是 Agent 工程界最缺公开答案的问题——'拿什么数据、按什么配方，才能训出跨多类任务都不崩的 Agentic 模型'。现有开源努力几乎都只盯单个 benchmark(SWE-Smith/SERA/Nemotron-Terminal)，跨任务泛化是空白；OT-Agent 给出完全开放的数据策展流水线，这恰好是自有 Agent 落地时'单任务过拟合、换场景就退化'的真实痛点。",
-      "path": "daily-detail.html?date=2026-06-25"
     }
   ],
   "top_papers": [
     {
-      "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+      "title": "Distributed Attacks in Persistent-State AI Control",
       "authors": [
-        "Ye Liu, Srijan Bansal, Bo Pang, Yang Li, Zeyu Leo Liu, Yifei Ming, Zixuan Ke, Shafiq Joty, Semih Yavuz"
+        "Josh Hills",
+        "Ida Caspary",
+        "Asa Cooper Stickland"
       ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
       "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01480",
-      "pdf_url": "https://arxiv.org/pdf/2607.01480",
+      "url": "http://arxiv.org/abs/2607.02514v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Reinforcement learning with verifiable rewards (RLVR), along with recent selfdistillation variants such as SDPO, evaluates each rollout against a verifier and updates the policy from that episode-level signal. However, the richer procedural information in the rollout is rarely retained or reused. Across episodes and epochs, the model repeatedly encounters related problems under a changing policy, producing cross-episode signals that episode-local updates cannot capture: which strategies consiste",
+      "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterativ",
       "categories": [
-        "cs.AI",
-        "cs.LG"
+        "cs.AI"
       ],
       "keywords": [
-        "memory",
-        "inference"
+        "agent",
+        "coding agent",
+        "benchmark"
       ],
-      "announce_type": "new",
-      "score": 87.0,
+      "score": 84.0,
       "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01480"
+          "url": "http://arxiv.org/abs/2607.02514v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01480"
+          "url": "https://arxiv.org/pdf/2607.02514v1"
         }
       ],
-      "llm_reason": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序性记忆（procedural memory，即『如何做』的技能记忆，区别于陈述性事实记忆）与 LLM 的 cross-episode learning。核心洞察：RLVR/SDPO 每个 rollout 只产生 episode 级标量奖励，但 rollout 内部丰富的程序性信息（哪种策略持续奏效、哪种反复失败、哪类子问题的解法可复用）被丢弃；本文用在线反思把这些跨 episode 程序性信号蒸馏成可检索、可复用的程序性记忆。理论命题清晰且可证伪——『保留并复用 rollout 程序性信息比纯 episode-local 更新在下游任务上更高效』可通过『记忆通道开关』做对照实验量化。工程映射直接：任何做 agent RL 的团队都可在 verifier 之外加一条『程序性记忆通道』——把成功 rollout 的有效子策略抽象成可检索技能、把反复失败的模式沉淀成回避规则，再在后续 episode 检索复用。作者（Ye Liu、Srijan Bansal、Bo Pang、Shafiq Joty、Semih Yavuz 等，Salesforce AI Research）在 agent/记忆/RL 方向高度可信。减分项：代码/benchmark/复现入口暂无（待核验），故不给 90+；但即便无官方代码也能自建最小验证（在 RLVR 基线上加『成功 rollout→程序性记忆→后续 episode 检索复用』通道，对比纯 verifier 信号基线）。",
-      "id": "procedural-memory-distillation-online-reflection-for-self-improving-language-models",
+      "llm_reason": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
+      "id": "distributed-attacks-in-persistent-state-ai-control",
       "value_type": "immediate",
       "matched_topics": [
-        "ai-agent",
-        "context-engineering"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Reinforcement learning with verifiable rewards (RLVR), along with recent selfd…",
-      "one_line_judgement": "今天值得试：今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 ep…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "今日最强信号：Procedural Memory Distillation 把 RLVR 的『逐 episode 标量信号』升级为『跨 episode 的程序性记忆』。理论根基＝认知科学的程序",
-      "related_trends": [
-        "agentic-world-modeling",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=procedural-memory-distillation-online-reflection-for-self-improving-language-models"
-    },
-    {
-      "title": "Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows",
-      "authors": [
-        "Karthikeya Aditya Vissa, Sankalp Mane, Ananya Mantravadi, Harshit Rajgarhia, Abhishek Mukherji"
-      ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
-      "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01465",
-      "pdf_url": "https://arxiv.org/pdf/2607.01465",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Large language models are trained to predict the next token, not to act inside a specific API. In niche enterprise SaaS workflows -- where success means hitting the right endpoint with the right nested arguments in the right order -- this objective mismatch shows up as silent failures: dropped required fields, hallucinated tools, or early stops after a single read. We ask whether Reinforcement Learning with Verifiable Rewards (RLVR), applied directly in the target environment, closes the gap. As",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent",
-        "RAG"
-      ],
-      "announce_type": "new",
-      "score": 83.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01465"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01465"
-        }
-      ],
-      "llm_reason": "RL 后训练落地企业 SaaS 的关键 PoC：LLM 被训练去预测下一 token 而非『在特定 API 内行动』，这一目标错配在细分企业工作流里表现为沉默失败——漏填必填字段、幻觉工具、读一次就提前停止。本文直接在目标环境内用 RLVR（可验证奖励）缩小 next-token 与 action 之间的差距。理论命题清晰可证伪：『在目标环境内做 RLVR 比纯 SFT/提示更能修复 API 调用级错误』可通过端点命中率、参数完整率、调用顺序正确率量化。工程映射＝企业 tool-use agent 的后训练范式——把『是否命中正确端点＋正确嵌套参数＋正确顺序』做成 verifier，在真实 SaaS 环境内训练而非只靠 sandbox 或提示。证据含 Atlassian 真实工作流的 PoC 与对照。给即时分，因属可直接试点的训练范式；代码/benchmark 入口待核验。",
-      "id": "beyond-next-token-prediction-an-rlvr-proof-of-concept-for-tool-use-agents-on-atlassian-workflows",
-      "value_type": "immediate",
-      "matched_topics": [
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.6,
-        "trend_signal": 3.5,
-        "long_tail_potential": 4.15,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Large language models are trained to predict the next token, not to act inside…",
-      "one_line_judgement": "今天值得试：RL 后训练落地企业 SaaS 的关键 PoC：LLM 被训练去预测下一 token 而非『在特定 API 内行动』，这一目标错配在细分企业…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "RL 后训练落地企业 SaaS 的关键 PoC：LLM 被训练去预测下一 token 而非『在特定 API 内行动』，这一目标错配在细分企业工作流里表现为沉默失败——漏填必填字段、幻觉工具、读",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=beyond-next-token-prediction-an-rlvr-proof-of-concept-for-tool-use-agents-on-atlassian-workflows"
-    },
-    {
-      "title": "World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments",
-      "authors": [
-        "Ananya Mantravadi, Harshit Rajgarhia, Prasanna Desikan, Abhishek Mukherji"
-      ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
-      "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01470",
-      "pdf_url": "https://arxiv.org/pdf/2607.01470",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Clinical protocol-execution tasks -- checking a lab value, applying a threshold, placing a correctly structured FHIR order -- are natural candidates for RL from world feedback: once clinical SMEs encode decision logic into a verifier, that verifier grades unlimited rollouts without per-episode annotation. But applying RL requires a sound feedback channel and sufficient base capability. We audit MedAgentBench v1/v2, find a 41.7\\% silent-finish ceiling that makes inaction the RL dominant strategy,",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent"
-      ],
-      "announce_type": "new",
-      "score": 80.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01470"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01470"
-        }
-      ],
-      "llm_reason": "高证据强度的诊断型研究：审计 MedAgentBench v1/v2 发现 41.7% 的『沉默完成天花板（silent-finish ceiling）』——agent 在未完成必要动作时就静默停止，使『不作为』成为 RL 的主导策略。这对所有做 agent RL 的团队是即时警讯：你的 verifier/奖励通道是否健康，直接决定 RL 学到的是『行动』还是『不行动』。理论命题可证伪——『基准的沉默完成率决定了 RL 能否学到有效行动而非不作为』可通过沉默率与 RL 收益的相关性验证。工程映射＝agent RL 上线前的『反馈通道健康度审计』——上线 RLVR 前先测基准 silent-finish 率并修复，否则会训出『学会不做』的 agent。给趋势分而非即时分，因属强诊断研究、需确认该天花板结论是否跨基准泛化；代码/benchmark 入口待核验。",
-      "id": "world-feedback-for-clinical-agents-diagnosing-rl-in-fhir-environments",
-      "value_type": "trend",
-      "matched_topics": [
-        "ai-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Clinical protocol-execution tasks -- checking a lab value, applying a threshol…",
-      "one_line_judgement": "值得继续观察：高证据强度的诊断型研究：审计 MedAgentBench v1/v2 发现 41.7% 的『沉默完成天花板（silent-finish ce…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "高证据强度的诊断型研究：审计 MedAgentBench v1/v2 发现 41.7% 的『沉默完成天花板（silent-finish ceiling）』——agent 在未完成必要动作时就静",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=world-feedback-for-clinical-agents-diagnosing-rl-in-fhir-environments"
-    },
-    {
-      "title": "When Should Service Agents Reconsider? Difficulty-Routed Control in Customer-Service Operations",
-      "authors": [
-        "Qian Chen, Chengyuan Liu, Xin Yu"
-      ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
-      "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01426",
-      "pdf_url": "https://arxiv.org/pdf/2607.01426",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Autonomous customer-service agents are shifting from conversational interfaces toward operational execution roles: they retrieve firm records, apply service policies, and execute backend writes such as refunds, cancellations, exchanges, order modifications, and reservation changes. This shift creates a service-control problem: firms must keep routine service fast and low-friction while preventing operational errors on requests where customer instructions, policy constraints, firm records, and ba",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent"
-      ],
-      "announce_type": "new",
-      "score": 77.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01426"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01426"
-        }
-      ],
-      "llm_reason": "客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快速低摩擦，又要防止在客户指令、策略约束、企业记录三者冲突时出错。本文提出『难度路由控制』——按请求难度动态调节 agent 的复核/放行阈值。理论命题可证伪：『按难度路由控制比统一阈值更能兼顾速度与正确率』可通过误操作率与处理时延双指标量化。工程映射＝operational agent 的安全控制层——把『何时该让人复核、何时该直接执行』做成难度感知的路由器，而非一刀切的人工审核或全自动放行。给趋势分，因属控制策略设计、需确认难度估计的准确率与误操作权衡；代码/benchmark 待核验。",
-      "id": "when-should-service-agents-reconsider-difficulty-routed-control-in-customer-service-operations",
-      "value_type": "trend",
-      "matched_topics": [
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Autonomous customer-service agents are shifting from conversational interfaces…",
-      "one_line_judgement": "值得继续观察：客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "客服 agent 从『对话界面』走向『运营执行』（检索记录、应用策略、执行退款/取消/改单等后端写操作）带来的服务控制问题：既要让常规请求快速低摩擦，又要防止在客户指令、策略约束、企业记录三者",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=when-should-service-agents-reconsider-difficulty-routed-control-in-customer-service-operations"
-    },
-    {
-      "title": "Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases",
-      "authors": [
-        "Yongjian Tang, Ezgi Sarikayak, Doruk Tuncel, Jie M. Zhang, Thomas Runkler"
-      ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
-      "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01425",
-      "pdf_url": "https://arxiv.org/pdf/2607.01425",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Understanding large, complex codebases, especially those with obfuscated structures and incomplete documentation, remains a significant challenge. Existing code summarization solutions often rely on a single language model or coding assistant like Claude Code, and treat source code as flat text, underutilizing the rich interdependencies and hierarchical information within a repository. To address these shortcomings, we propose Agent4cs - a multi-agent framework that summarizes large codebases in",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent",
-        "evaluation",
-        "RAG"
-      ],
-      "announce_type": "new",
-      "score": 73.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01425"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01425"
-        }
-      ],
-      "llm_reason": "代码理解 agent 的重要工程研究：现有方案（单一 LLM 或 Claude Code 等）把源码当扁平文本，未利用大型仓库的层级结构与依赖关系。Agent4cs 用多智能体框架在层级代码库上做摘要——显式利用 interdependencies 与 hierarchical 信息。理论命题＝层级化多智能体分解比扁平单模型更能理解大型代码库（可通过摘要质量/下游检索命中率验证）。工程映射＝大型遗留代码库的自动文档与理解——把『仓库→子系统→模块→函数』的层级分解交给多 agent 协作处理。作者含 Jie M. Zhang（LLM 测试方向知名）、Thomas Runkler（Siemens），方向可信。给趋势分，因属框架研究、需确认相对单一强模型（如 Claude Code）的实际增益，代码/benchmark 待核验。",
-      "id": "agent4cs-a-multi-agent-system-for-code-summarization-in-large-hierarchical-codebases",
-      "value_type": "trend",
-      "matched_topics": [
         "coding-agent",
+        "security-governance",
         "ai-agent"
       ],
       "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.6,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Coding Agent：Understanding large, complex codebases, especially those with obfuscated struc…",
-      "one_line_judgement": "值得继续观察：代码理解 agent 的重要工程研究：现有方案（单一 LLM 或 Claude Code 等）把源码当扁平文本，未利用大型仓库的层级结构与依…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "代码理解 agent 的重要工程研究：现有方案（单一 LLM 或 Claude Code 等）把源码当扁平文本，未利用大型仓库的层级结构与依赖关系。Agent4cs 用多智能体框架在层级代码库",
-      "related_trends": [
-        "coding-agent",
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=agent4cs-a-multi-agent-system-for-code-summarization-in-large-hierarchical-codebases"
-    },
-    {
-      "title": "Auto-FL-Research: Agentic Search for Federated Learning Algorithms",
-      "authors": [
-        "Holger R. Roth, Ziyue Xu, Chester Chen, Daguang Xu, Peter Cnudde, Andrew Feng"
-      ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
-      "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01366",
-      "pdf_url": "https://arxiv.org/pdf/2607.01366",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Federated learning (FL) research often depends on many small but consequential algorithmic choices: optimizer variants, server aggregation rules, local training schedules, normalization, regularization, and model architecture. These choices are expensive to explore manually and difficult to compare fairly when candidate changes can also alter the FL training or evaluation path. In this work, we present Auto-FL-Research (AFR), a constrained coding-agent workflow for FL algorithmic recipe search. ",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent",
-        "agentic",
-        "evaluation"
-      ],
-      "announce_type": "new",
-      "score": 70.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01366"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01366"
-        }
-      ],
-      "llm_reason": "把 coding-agent 范式从『写代码』扩展到『做 ML 研究』：FL（联邦学习）算法配方搜索（optimizer/聚合规则/本地训练调度/归一化/正则/模型架构）手工探索昂贵且难公平比较，AFR 用受约束的 coding-agent workflow 自动搜索算法配方。理论命题＝『agentic search 能比人工调参/网格搜索更高效地发现有效 FL 配方』（可通过配方搜索的帕累托效率与成本验证）。工程映射＝coding agent 的研究自动化应用——把『LLM-as-experimenter』模式从软件工程迁移到 ML 实验自动化，这是『agent 自主做研究』方向的具体落地。作者（Holger Roth、Ziyue Xu、Chester Chen、Daguang Xu 等，NVIDIA 医学影像/MONAI 团队）在 FL 方向高度可信。给趋势分，因属应用范式、需确认搜索效率是否优于贝叶斯优化等强基线；代码/benchmark 待核验。",
-      "id": "auto-fl-research-agentic-search-for-federated-learning-algorithms",
-      "value_type": "trend",
-      "matched_topics": [
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
+        "novelty": 5.4,
         "problem_importance": 6.45,
         "relevance": 7.4,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.05,
-        "trend_signal": 5.15,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
         "long_tail_potential": 3.5,
         "asset_convertibility": 6.2,
-        "actionability": 5.0,
+        "actionability": 3.8,
         "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
+        "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 0.8,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：Federated learning (FL) research often depends on many small but consequential…",
-      "one_line_judgement": "值得继续观察：把 coding-agent 范式从『写代码』扩展到『做 ML 研究』：FL（联邦学习）算法配方搜索（optimizer/聚合规则/本地训练…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "趋势价值",
+      "brief_cn": "Coding Agent：As AI coding agents become more autonomous, they increasingly ship code iterat…",
+      "one_line_judgement": "今天值得试：首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：m…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "把 coding-agent 范式从『写代码』扩展到『做 ML 研究』：FL（联邦学习）算法配方搜索（optimizer/聚合规则/本地训练调度/归一化/正则/模型架构）手工探索昂贵且难公平比",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected ",
       "related_trends": [
+        "coding-agent",
         "agentic-world-modeling"
       ],
-      "detail_path": "paper-detail.html?id=auto-fl-research-agentic-search-for-federated-learning-algorithms"
+      "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control"
     },
     {
-      "title": "CreativityNeuro: Steering Language Model Weights to Improve Divergent Thinking and Reduce Mode Collapse",
+      "title": "Online Safety Monitoring for LLMs",
       "authors": [
-        "Samuel Schapiro, Core Francisco Park, Felix Sosa, Lav R. Varshney"
+        "Mona Schirmer",
+        "Metod Jazbec",
+        "Alexander Timans",
+        "Christian Naesseth",
+        "Maja Waldron"
       ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
       "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01433",
-      "pdf_url": "https://arxiv.org/pdf/2607.01433",
+      "url": "http://arxiv.org/abs/2607.02510v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02510v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Divergent thinking is a crucial aspect of creativity, yet large language models (LLMs) tend to consistently generate similar responses to open-ended questions, in what has been termed the artificial hivemind effect. Here, we introduce CreativityNeuro, a data-free method for enhancing divergent thinking in LLMs via contrastive weight steering. We evaluate our method across multiple creativity assessments and report several main findings. On the Divergent Association Task (DAT), a vocabulary-space",
+      "abstract": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with mor",
       "categories": [
         "cs.AI",
-        "cs.LG"
+        "cs.CL",
+        "cs.LG",
+        "stat.AP",
+        "stat.ML"
       ],
-      "keywords": [
-        "evaluation"
-      ],
-      "announce_type": "new",
-      "score": 66.0,
-      "decision": "轻量试点",
+      "keywords": [],
+      "score": 82.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01433"
+          "url": "http://arxiv.org/abs/2607.02510v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01433"
+          "url": "https://arxiv.org/pdf/2607.02510v1"
         }
       ],
-      "llm_reason": "推理时控制的新视角：LLM 在开放问题上倾向生成相似回答（artificial hivemind / mode collapse），本文 CreativityNeuro 用 contrastive weight steering（数据无关的对比式权重转向）增强发散思维。理论命题可证伪：『对比式权重转向能在不损失质量的前提下提升发散性』可通过 DAT（Divergent Association Task）等创造力评估量化。工程映射＝生成多样性的推理时开关——在不微调的情况下，通过权重转向控制模型『发散 vs 收敛』。作者含 Lav R. Varshney（UIUC）、Core Francisco Park、Felix Sosa，方向可信。给趋势分，因属推理时控制研究、需确认转向对事实性/连贯性的副作用；代码/benchmark 待核验。",
-      "id": "creativityneuro-steering-language-model-weights-to-improve-divergent-thinking-and-reduce-mode-collapse",
-      "value_type": "trend",
+      "llm_reason": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服务，且提供统计意义上的风险保证。工程落地门槛极低，证据来自真实红队与推理数据集。",
+      "id": "online-safety-monitoring-for-llms",
+      "value_type": "immediate",
       "matched_topics": [
+        "security-governance",
         "llm-evaluation",
         "inference-serving"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
+        "asset_convertibility": 4.8,
         "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "LLM 评测：Divergent thinking is a crucial aspect of creativity, yet large language model…",
-      "one_line_judgement": "值得继续观察：推理时控制的新视角：LLM 在开放问题上倾向生成相似回答（artificial hivemind / mode collapse），本文 C…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "趋势价值",
+      "brief_cn": "安全与治理：Despite alignment training, LLMs remain prone to generating unsafe outputs at …",
+      "one_line_judgement": "今天值得试：极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "推理时控制的新视角：LLM 在开放问题上倾向生成相似回答（artificial hivemind / mode collapse），本文 CreativityNeuro 用 contrasti",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服",
       "related_trends": [
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=creativityneuro-steering-language-model-weights-to-improve-divergent-thinking-and-reduce-mode-collapse"
+      "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms"
     },
     {
-      "title": "Discrete Diffusion Language Models for Interactive Radiology Report Drafting",
+      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
       "authors": [
-        "Max Van Puyvelde, Halil Ibrahim Gulluk, Wim Van Criekinge, Olivier Gevaert"
+        "Yanjun Zhao",
+        "Ruizhong Qiu",
+        "Tianxin Wei",
+        "Yuanchen Bei",
+        "Zhining Liu"
       ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
       "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01436",
-      "pdf_url": "https://arxiv.org/pdf/2607.01436",
+      "url": "http://arxiv.org/abs/2607.02509v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02509v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Diffusion language models, which generate text by denoising a token canvas bidirectionally instead of emitting tokens left to right, have become competitive with autoregressive (AR) generation. Medical foundation models, however, remain almost entirely autoregressive. We adapt a mixture-of-experts diffusion language model, DiffusionGemma-26B, and benchmark it against its same-size AR sibling Gemma-4-26B under an identical LoRA recipe on medical visual question answering datasets, scored by a ver",
+      "abstract": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context windows, they often fail to use relevant evidence that is already present in the input, revealing a gap between context access and effective context utilization. In this work, we propose Recursive Evidence Replay as LLM Harness for Long-Context Reasoning (RECONTEXT), a training-free inference metho",
       "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "memory",
+        "RAG",
+        "inference"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02509v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02509v1"
+        }
+      ],
+      "llm_reason": "ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据弥补长上下文 LLM '能访问但不会用'证据的鸿沟。无需训练即可作为现有长上下文管线的 drop-in 增强。长上下文利用率是 2026 年核心工程议题，方法可立即在现有评测上验证收益。",
+      "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
+      "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Understanding and reasoning over long contexts has become a key requirement fo…",
+      "one_line_judgement": "今天值得试：ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据弥补长上下文 LLM '能访问但不会用'证据的鸿沟。",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning"
+    },
+    {
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "authors": [
+        "Wentao Zhang",
+        "Liliana Hotsko",
+        "Woojeong Kim",
+        "Pengyu Nie",
+        "Stuart Shieber"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02512v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02512v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (P",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "memory",
+        "inference"
+      ],
+      "score": 77.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02512v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02512v1"
+        }
+      ],
+      "llm_reason": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针对日志告警、JSON 修复、意图排序等高频模糊任务。属趋势级方向（LLM 行为编译/蒸馏为可部署制品），但成熟度与跨任务泛化需待核验。",
+      "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Many everyday programming tasks resist clean rule-based implementation, such a…",
+      "one_line_judgement": "值得继续观察：Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 l…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions"
+    },
+    {
+      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+      "authors": [
+        "Matteo Boglioni",
+        "Thibault Rousset",
+        "Siva Reddy",
+        "Marius Mosbach",
+        "Verna Dankers"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02513v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02513v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising solution, with state-of-the-art(SOTA) methods often following a localize-first, unlearn-second paradigm that targets specific model parameters. However, existing benchmarks evaluate unlearning solely at the output level, leaving open the question of whether unlearning truly erases knowledge from a model's",
+      "categories": [
+        "cs.CL",
         "cs.AI",
         "cs.LG"
       ],
       "keywords": [
+        "evaluation",
         "benchmark",
         "RAG"
       ],
-      "announce_type": "new",
-      "score": 60.0,
-      "decision": "持续观察",
+      "score": 70.0,
+      "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01436"
+          "url": "http://arxiv.org/abs/2607.02513v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01436"
+          "url": "https://arxiv.org/pdf/2607.02513v1"
         }
       ],
-      "llm_reason": "非自回归生成范式进入医学领域：扩散语言模型（双向去噪而非从左到右）已接近 AR 生成竞争力，但医学基础模型几乎全是 AR。本文适配 DiffusionGemma-26B（MoE 扩散 LM）并在相同 LoRA 配方下对比其 AR 兄弟 Gemma-4-26B，由 verifier 评分。价值在于『扩散 LM 在领域落地』的可行性信号，但属医学影像报告细分领域、与雷达 LLM/Agent/推理主线相关性外围。代码/benchmark 待核验。",
-      "id": "discrete-diffusion-language-models-for-interactive-radiology-report-drafting",
+      "llm_reason": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unlearning 成功 ≠ 参数级知识真正擦除。作为评测资产可沉淀到合规审计（PII 移除）清单，但工程即时性弱于前述论文，更偏长尾基准价值。",
+      "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
       "value_type": "long_tail",
       "matched_topics": [
-        "inference-serving",
-        "rag-knowledge"
+        "security-governance",
+        "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "安全与治理：LLMs memorize sensitive training data, including personally identifiable infor…",
+      "one_line_judgement": "值得先保存：LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlea…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unle",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning"
+    },
+    {
+      "title": "Controllable Sim Agents with Behavior Latents",
+      "authors": [
+        "Juanwu Lu",
+        "Junyu Zhu",
+        "Ziran Wang"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02496v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02496v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Realistic traffic simulation requires agents that imitate logged behavior and can also be steered along interpretable axes. Such controllability enables engineers to isolate variables, reproduce specific edge cases, and test autonomous systems without real-world risk. We introduce Controllable Neural Variational Agents (CNeVA), a controllable simulated-agent framework that learns to infer a per-agent Gaussian behavior latent from per-channel discounted returns via a closed-form conjugate variati",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark"
+      ],
+      "score": 43.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02496v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02496v1"
+        }
+      ],
+      "id": "controllable-sim-agents-with-behavior-latents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Realistic traffic simulation requires agents that imitate logged behavior and …",
+      "one_line_judgement": "当前可忽略：AI Agent：Realistic traffic simulation requires agents that imitate log…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：Realistic traffic simulation requires agents that imitate logged behavior and …",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=controllable-sim-agents-with-behavior-latents"
+    },
+    {
+      "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+      "authors": [
+        "Arman Ghaffarizadeh",
+        "Danyal Mohaddes",
+        "Aliakbar Izadkhah",
+        "Shahriar Noroozizadeh"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02507v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02507v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, without any explicit objective in the prompt, changes what an agent expresses publicly relative to an off-the-record (OTR) channel elicited under the same condition. We introduce a dual-channel debate framework in which agents produce public utterances that enter the shared history alongside OTR resp",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "inference"
+      ],
+      "score": 39.8,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02507v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02507v1"
+        }
+      ],
+      "id": "what-llm-agents-say-when-no-one-is-watching-social-structure-and-latent-objective-emergence-in-multi-agent-debates",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：LLM agents will increasingly act in socially structured settings where role, a…",
+      "one_line_judgement": "当前可忽略：AI Agent：LLM agents will increasingly act in socially structured setti…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：LLM agents will increasingly act in socially structured settings where role, a…",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=what-llm-agents-say-when-no-one-is-watching-social-structure-and-latent-objective-emergence-in-multi-agent-debates"
+    },
+    {
+      "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+      "authors": [
+        "Yunhe Li",
+        "Hao Shi",
+        "Wenhao Liu",
+        "Mengzhe Ruan",
+        "Hanxu Hou"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02502v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02502v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "On-policy self-distillation (OPSD) has emerged as a practical method for training large language models (LLMs) to reason, where a single model acts as both the teacher and the student with different levels of information access. However, recent studies have found that the teacher's dense token-level supervision, conditioned on privileged information, can lead to overfitting to in-domain patterns, suppress exploration, and hurt cross-domain generalization, while also introducing a more fundamenta",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 39.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02502v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02502v1"
+        }
+      ],
+      "id": "demopsd-disagreement-modulated-policy-self-distillation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：On-policy self-distillation (OPSD) has emerged as a practical method for train…",
+      "one_line_judgement": "当前可忽略：LLM 评测：On-policy self-distillation (OPSD) has emerged as a practical m…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：On-policy self-distillation (OPSD) has emerged as a practical method for train…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=demopsd-disagreement-modulated-policy-self-distillation"
+    },
+    {
+      "title": "Reasoning LLM Improves Speaker Recognition in Long-form TV Dramas",
+      "authors": [
+        "Yuxuan Li",
+        "Lingxi Xie",
+        "Xinyue Huo",
+        "Jihao Qiu",
+        "Jiacheng Shao"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02504v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02504v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Long-form TV dramas present a formidable challenge for comprehensive video understanding, where deciphering complex storyline often relies on \\textbf{speaker recognition}, the task of accurately attributing each spoken utterance to its respective character. In this paper, we advance this field through two primary contributions. (1) We introduce \\textbf{DramaSR-532K}, a large-scale benchmark comprising 532K annotated dialogue lines across more than 900 unique characters, necessitating the integra",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 36.7,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02504v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02504v1"
+        }
+      ],
+      "id": "reasoning-llm-improves-speaker-recognition-in-long-form-tv-dramas",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
         "problem_importance": 5.15,
         "relevance": 5.0,
         "evidence_strength": 4.95,
@@ -766,158 +877,111 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "推理与服务：Diffusion language models, which generate text by denoising a token canvas bid…",
-      "one_line_judgement": "值得先保存：非自回归生成范式进入医学领域：扩散语言模型（双向去噪而非从左到右）已接近 AR 生成竞争力，但医学基础模型几乎全是 AR。本文适配 Diff…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "非自回归生成范式进入医学领域：扩散语言模型（双向去噪而非从左到右）已接近 AR 生成竞争力，但医学基础模型几乎全是 AR。本文适配 DiffusionGemma-26B（MoE 扩散 LM）并",
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：Long-form TV dramas present a formidable challenge for comprehensive video und…",
+      "one_line_judgement": "当前可忽略：LLM 评测：Long-form TV dramas present a formidable challenge for comprehe…",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：Long-form TV dramas present a formidable challenge for comprehensive video und…",
       "related_trends": [
-        "context-engineering"
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=discrete-diffusion-language-models-for-interactive-radiology-report-drafting"
+      "detail_path": "paper-detail.html?id=reasoning-llm-improves-speaker-recognition-in-long-form-tv-dramas"
     },
     {
-      "title": "PACE: A Neuro-Symbolic Framework for Plausible and Actionable Counterfactual Explanations",
+      "title": "Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials",
       "authors": [
-        "Pavel Iakovets, Liyanapathiranage Sudeepika Wajirakumari Samarathunga, Martin Thomas Horsch, Fadi Al Machot"
+        "Gil Harari",
+        "Yoel Zimmermann",
+        "Ola Tangen Kulseng",
+        "Laura Zichi",
+        "Chuin Wei Tan"
       ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
       "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01306",
-      "pdf_url": "https://arxiv.org/pdf/2607.01306",
+      "url": "http://arxiv.org/abs/2607.02499v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02499v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Counterfactual explanations explain machine learning predictions by identifying minimal input changes that would alter a model's decision. Although many existing methods successfully generate prediction-changing alternatives, they often produce unrealistic or infeasible recommendations due to a lack of explicit mechanisms for incorporating domain knowledge and intervention constraints. Neuro-symbolic AI offers a promising direction by combining data-driven predictive models with symbolic reasoni",
+      "abstract": "Machine learning interatomic potentials (MLIPs) have become a hallmark of AI for scientific simulation. While efforts on new architectures and datasets have led to increasingly accurate and general models, the choice of optimizer for training has largely remained unexplored, defaulting to Adam and its variants in the community. Here, we implement and systematically compare a class of recently proposed matrix-structured optimizers, including Muon, SOAP, and the hybrid SOAP-Muon, for training Nequ",
       "categories": [
-        "cs.AI"
+        "cs.LG",
+        "cs.AI",
+        "physics.chem-ph",
+        "physics.comp-ph"
       ],
       "keywords": [],
-      "announce_type": "new",
-      "score": 55.0,
-      "decision": "持续观察",
+      "score": 36.0,
+      "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01306"
+          "url": "http://arxiv.org/abs/2607.02499v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01306"
+          "url": "https://arxiv.org/pdf/2607.02499v1"
         }
       ],
-      "llm_reason": "神经符号 AI 用于反事实解释（XAI）：现有反事实方法生成的『最小输入改动』建议常不现实或不可行，PACE 用神经符号方法结合领域知识与干预约束，生成『合理且可操作』的反事实解释。方法论价值在于『可操作性/可行性约束下的反事实生成』，对可解释性/合规场景有参考；但与雷达 LLM/Agent/训练主线相关性外围。代码/benchmark 待核验。",
-      "id": "pace-a-neuro-symbolic-framework-for-plausible-and-actionable-counterfactual-explanations",
-      "value_type": "long_tail",
+      "id": "beyond-adam-soap-and-muon-for-faster-label-efficient-training-of-machine-learning-interatomic-potentials",
+      "value_type": "ignore",
       "matched_topics": [
-        "llm-evaluation"
+        "multimodal-agent"
       ],
       "score_breakdown": {
-        "novelty": 4.8,
+        "novelty": 5.4,
         "problem_importance": 5.15,
         "relevance": 5.0,
         "evidence_strength": 4.5,
         "engineering_testability": 4.05,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 3.8,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 3.6,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "LLM 评测：Counterfactual explanations explain machine learning predictions by identifyin…",
-      "one_line_judgement": "值得先保存：神经符号 AI 用于反事实解释（XAI）：现有反事实方法生成的『最小输入改动』建议常不现实或不可行，PACE 用神经符号方法结合领域知识与干…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "神经符号 AI 用于反事实解释（XAI）：现有反事实方法生成的『最小输入改动』建议常不现实或不可行，PACE 用神经符号方法结合领域知识与干预约束，生成『合理且可操作』的反事实解释。方法论价值",
+      "trend_status": "noise",
+      "brief_cn": "Multimodal Agent：Machine learning interatomic potentials (MLIPs) have become a hallmark of AI f…",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Machine learning interatomic potentials (MLIPs) have …",
+      "first_seen_date": "2026-07-05",
+      "first_deep_dive_daily": "2026-07-05",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Multimodal Agent：Machine learning interatomic potentials (MLIPs) have become a hallmark of AI f…",
       "related_trends": [
-        "coding-agent"
+        "agentic-world-modeling"
       ],
-      "detail_path": "paper-detail.html?id=pace-a-neuro-symbolic-framework-for-plausible-and-actionable-counterfactual-explanations"
-    },
-    {
-      "title": "The Wiola Architecture for Efficient Small Language Models",
-      "authors": [
-        "Aryuemaan Kumar Chowdhury, Afreen Shaik, Yaparla Bhargavi, Brahma Kumar"
-      ],
-      "published": "2026-07-03",
-      "updated": "2026-07-03",
-      "source": "arXiv",
-      "url": "https://arxiv.org/abs/2607.01394",
-      "pdf_url": "https://arxiv.org/pdf/2607.01394",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We present Wiola, a fully original Small Language Model (SLM) architecture built from first principles, sharing no structural lineage with any existing model family including GPT, LLaMA, Mistral, or Falcon. Wiola introduces five independently novel components: (i) Spiral Rotary Positional Encoding (SRPE), which embeds token positions on a three-dimensional helical manifold combining absolute, relative, and hierarchical positional signals; (ii) Gated Cross-Layer Attention (GCLA), providing each d",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [],
-      "announce_type": "new",
-      "score": 48.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2607.01394"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.01394"
-        }
-      ],
-      "llm_reason": "声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SRPE、门控跨层注意力 GCLA 等）。架构创新（把位置编码嵌入三维螺旋流形同时承载绝对/相对/层级信号）有想象空间；但『完全原创、无任何结构血缘』是极强主张，缺乏代码/benchmark 佐证、作者团队可信度待核验，复现风险高。存为长尾观察线——若 SRPE/GCLA 被独立复现且在小模型效率基准上验证有效再提升优先级。代码/benchmark 待核验。",
-      "id": "the-wiola-architecture-for-efficient-small-language-models",
-      "value_type": "long_tail",
-      "matched_topics": [
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 6.0,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "推理与服务：We present Wiola, a fully original Small Language Model (SLM) architecture bui…",
-      "one_line_judgement": "值得先保存：声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SR…",
-      "first_seen_date": "2026-07-04",
-      "first_deep_dive_daily": "2026-07-04",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SRPE、门控跨层注意力 GCLA 等）。架构创新（把位",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=the-wiola-architecture-for-efficient-small-language-models"
+      "detail_path": "paper-detail.html?id=beyond-adam-soap-and-muon-for-faster-label-efficient-training-of-machine-learning-interatomic-potentials"
     }
   ],
   "long_tail_highlights": [
+    {
+      "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+      "direction": "安全与治理 / LLM 评测",
+      "long_tail_type": "可迁移方法",
+      "why_save": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unle",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-07-26",
+      "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning"
+    },
     {
       "id": "discrete-diffusion-language-models-for-interactive-radiology-report-drafting",
       "title": "Discrete Diffusion Language Models for Interactive Radiology Report Drafting",
@@ -947,21 +1011,6 @@
       ],
       "revisit_date": "2026-07-25",
       "detail_path": "paper-detail.html?id=pace-a-neuro-symbolic-framework-for-plausible-and-actionable-counterfactual-explanations"
-    },
-    {
-      "id": "the-wiola-architecture-for-efficient-small-language-models",
-      "title": "The Wiola Architecture for Efficient Small Language Models",
-      "direction": "推理与服务",
-      "long_tail_type": "工程抽象",
-      "why_save": "声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SRPE、门控跨层注意力 GCLA 等）。架构创新（把位",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-07-25",
-      "detail_path": "paper-detail.html?id=the-wiola-architecture-for-efficient-small-language-models"
     }
   ],
   "common_research_path": [

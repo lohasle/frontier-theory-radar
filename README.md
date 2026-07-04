@@ -78,19 +78,19 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-07-05 · Distributed Attacks in Persistent-State AI Control](daily-detail.html?date=2026-07-05) · 即时价值 · 重点学习
 - [2026-07-04 · Procedural Memory Distillation: Online Reflection for Self-Improving Language Models](daily-detail.html?date=2026-07-04) · 即时价值 · 重点学习
 - [2026-07-03 · AutoMem: Automated Learning of Memory as a Cognitive Skill](daily-detail.html?date=2026-07-03) · 即时价值 · 重点学习
 - [2026-06-29 · Reinforcement Learning without Ground-Truth Solutions can Improve LLMs](daily-detail.html?date=2026-06-29) · 即时价值 · 重点学习
 - [2026-06-28 · Reinforcement Learning without Ground-Truth Solutions can Improve LLMs](daily-detail.html?date=2026-06-28) · 即时价值 · 重点学习
 - [2026-06-27 · Reinforcement Learning without Ground-Truth Solutions can Improve LLMs](daily-detail.html?date=2026-06-27) · 即时价值 · 重点学习
 - [2026-06-26 · Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents](daily-detail.html?date=2026-06-26) · 即时价值 · 重点学习
-- [2026-06-25 · OpenThoughts-Agent: Data Recipes for Agentic Models](daily-detail.html?date=2026-06-25) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 159
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 141
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 159
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 162
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 146
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 162
 
 ## 启发沉淀说明
 
