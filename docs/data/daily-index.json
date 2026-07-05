@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-05T04:33:44.704294",
+  "updated_at": "2026-07-06T04:34:15.436887",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-06",
+      "title": "论文价值发现日报 - 2026-07-06",
+      "deep_dive_title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "deep_dive_url": "http://arxiv.org/abs/2607.02512v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 Program-as-Weights 的编译流程，识别当前管线中最依赖 LLM API 的 1-2 个模糊函数，评估用编译替代的最小验证方案",
+      "max_uncertainty": "Program-as-Weights 的编译成本与制品大小未知（摘要截断）；Online Safety Monitoring 的具体阈值校准方法需完整论文确认；Distributed Attacks 的防御方案可能不完整（偏威胁建模）；ReContext 的基线对比待确认",
+      "one_line_judgement": "它提出一个全新的编程范式——把模糊函数（日志告警、JSON 修复、意图排序等无法用规则干净实现的任务）从'每次调用 LLM API'转变为'一次性编译成可在本地执行的紧凑神经制品'。这同时恢复了局部性、可复现性与低成本，直击当前把一切外包给 LLM API 时的三大痛点。范式级创新，可迁移到边缘部署、确定性管线、成本敏感场景。",
+      "path": "daily-detail.html?date=2026-07-06"
+    },
     {
       "date": "2026-07-05",
       "title": "论文价值发现日报 - 2026-07-05",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-05-31"
-    },
-    {
-      "date": "2026-05-30",
-      "title": "论文价值发现日报 - 2026-05-30",
-      "deep_dive_title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
-      "deep_dive_url": "http://arxiv.org/abs/2605.30329v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-05-30"
     }
   ]
 }

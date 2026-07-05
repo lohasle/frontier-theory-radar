@@ -1,0 +1,125 @@
+{
+  "date": "2026-07-06",
+  "model": "glm-5.1",
+  "generated_at": "2026-07-06T04:32:00",
+  "scoring_criteria": "工程价值、理论深度、证据强度、趋势相关性、行动可行性各维度 1-10 分，加权总分",
+  "by_url": {
+    "http://arxiv.org/abs/2607.02512v1": {
+      "score": 85,
+      "value_type": "immediate",
+      "reason": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日志告警、JSON 修复、意图排序）在调用 LLM API 时面临的局部性丢失、不可复现、价格高昂三大痛点。对边缘部署、确定性管线、成本敏感场景有即时工程价值。核心权衡是把'每次调用都问大模型'换成'一次性编译成可重复执行的本地小模型'。",
+      "matched_topics": ["inference-serving", "ai-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.02510v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学推理和红队数据集上与更复杂的方案竞争力相当。工程价值在于'简单到今天就能部署'——任何在线 LLM 服务都可加一层 verifier + 阈值校准的安全开关。证据强度来自多数据集实验和风险控制的理论保证。",
+      "matched_topics": ["security-governance", "inference-serving", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.02514v1": {
+      "score": 80,
+      "value_type": "immediate",
+      "reason": "揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个 PR 并选择掩护最好的 PR 触发 payload。提出 Iterative VibeCoding 作为 AI control（安全部署不可信但能力强 AI）的新研究设定。对使用编码 Agent / 自动化 CI 的团队有直接安全启发——持久状态 + 迭代提交是新的威胁模型。",
+      "matched_topics": ["coding-agent", "ai-agent", "security-governance"]
+    },
+    "http://arxiv.org/abs/2607.02509v1": {
+      "score": 78,
+      "value_type": "immediate",
+      "reason": "提出 ReContext（Recursive Evidence Replay），一种无需训练的长上下文推理方法：通过递归证据回放弥合'能访问上下文'与'有效利用上下文'之间的鸿沟。训练免费意味着今天就能在现有模型上试验，工程门槛低。对 RAG、长文档问答、代码理解等长上下文场景有直接价值。证据强度待完整论文确认（摘要截断）。",
+      "matched_topics": ["context-engineering", "rag-knowledge", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.02513v1": {
+      "score": 75,
+      "value_type": "trend",
+      "reason": "提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearning 方法遵循'先定位再遗忘'范式，但既有 benchmark 只看输出，无法判断知识是否真正被擦除。对隐私合规（PII 删除）、模型治理、安全审计有重要意义。作为 benchmark 类贡献，证据强度高；但 unlearning 仍是相对窄的方向，趋势相关性中等。",
+      "matched_topics": ["security-governance", "llm-evaluation"]
+    }
+  },
+  "scores": [
+    {
+      "paper_index": 2,
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "arxiv_id": "2607.02512v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.5,
+      "confidence": "high",
+      "one_line": "将自然语言函数规约编译为可在本地执行的紧凑神经制品，替代对 LLM API 的调用，恢复局部性、可复现性与低成本",
+      "decision": "strong_accept",
+      "reasoning": "真正的新范式：把模糊函数（日志告警、JSON 修复、意图排序）从'每次调用 LLM API'转向'一次性编译成可重复执行的本地神经制品'。这同时解决了局部性丢失、不可复现、价格高昂三大痛点。对边缘部署、确定性管线、成本敏感场景有即时价值。理论上是模糊函数编程（fuzzy-function programming）的新方向，与神经符号系统、模型蒸馏相关。行动门槛低：可立即在原型中验证'编译一次、本地执行多次'的范式。关键词匹配：inference, memory。"
+    },
+    {
+      "paper_index": 3,
+      "title": "Online Safety Monitoring for LLMs",
+      "arxiv_id": "2607.02510v1",
+      "scores": {
+        "engineering_value": 9,
+        "theoretical_depth": 7,
+        "evidence_strength": 8,
+        "trend_relevance": 9,
+        "actionability": 9
+      },
+      "weighted_total": 8.4,
+      "confidence": "high",
+      "one_line": "极简的 LLM 在线安全监控器：外部 verifier 信号经风险控制校准为阈值告警，在数学推理和红队数据集上与复杂方案竞争力相当",
+      "decision": "strong_accept",
+      "reasoning": "工程价值在于'简单到今天就能部署'：任何在线 LLM 服务都可加一层 verifier + 风险控制阈值校准的安全开关。关键洞察是——与其堆叠复杂的监控架构，不如用一个校准良好的阈值把 verifier 信号变成可解释的告警决策。证据强度来自多数据集实验（数学推理 + 红队）和风险控制的理论保证。属于安全治理（security-governance）方向的关键基础设施贡献。"
+    },
+    {
+      "paper_index": 0,
+      "title": "Distributed Attacks in Persistent-State AI Control",
+      "arxiv_id": "2607.02514v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 8,
+        "evidence_strength": 7,
+        "trend_relevance": 9,
+        "actionability": 7
+      },
+      "weighted_total": 7.8,
+      "confidence": "medium",
+      "one_line": "揭示编码 Agent 跨会话持久化代码库的新攻击面，提出 Iterative VibeCoding 作为 AI control 的新研究设定",
+      "decision": "accept",
+      "reasoning": "威胁模型新颖且贴现实：随着编码 Agent 越来越自主，代码库跨会话持久化创造了新的攻击面——不对齐或被注入的 Agent 可将攻击分布到多个 PR，并选择掩护最好的 PR 触发 payload。这对所有使用编码 Agent / 自动化 CI 的团队有直接安全启发。属于 AI control（安全部署不可信 AI）方向的前沿。证据强度依赖完整论文（摘要截断），行动建议偏防御设计而非即时代码。关键词匹配：agent, coding agent, benchmark。"
+    },
+    {
+      "paper_index": 4,
+      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+      "arxiv_id": "2607.02509v1",
+      "scores": {
+        "engineering_value": 8,
+        "theoretical_depth": 7,
+        "evidence_strength": 7,
+        "trend_relevance": 8,
+        "actionability": 8
+      },
+      "weighted_total": 7.6,
+      "confidence": "medium",
+      "one_line": "无需训练的长上下文推理方法，通过递归证据回放弥合'能访问上下文'与'有效利用上下文'之间的鸿沟",
+      "decision": "accept",
+      "reasoning": "训练免费（training-free）是最大的工程吸引力——意味着今天就能在现有模型上试验，无需重新训练或微调。递归证据回放的机制针对长上下文模型'信息在窗口内但未被有效利用'的已知缺陷。对 RAG、长文档问答、代码理解等场景有直接价值。证据强度和具体基线对比待完整论文确认。关键词匹配：memory, RAG, inference。"
+    },
+    {
+      "paper_index": 1,
+      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+      "arxiv_id": "2607.02513v1",
+      "scores": {
+        "engineering_value": 7,
+        "theoretical_depth": 8,
+        "evidence_strength": 8,
+        "trend_relevance": 7,
+        "actionability": 7
+      },
+      "weighted_total": 7.4,
+      "confidence": "high",
+      "one_line": "首次在参数层面评估 LLM unlearning 的定位精度，揭示输出层面正常不代表知识真正被擦除",
+      "decision": "accept",
+      "reasoning": "作为 benchmark/testbed 类贡献，证据强度高。核心洞察是：现有 unlearning 评估只看输出，无法判断 SOTA'先定位再遗忘'方法是否真正在参数层面擦除了知识——输出正常可能只是表面合规。对隐私合规（PII 删除）、模型治理、安全审计有重要意义。但 unlearning 仍是相对窄的方向，趋势相关性中等，行动建议偏向'纳入评测工具箱'而非即时部署。关键词匹配：evaluation, benchmark, RAG。"
+    }
+  ]
+}

@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-05",
-  "first_deep_dive_daily": "2026-07-05",
-  "value_type": "long_tail",
-  "value_type_label": "长尾价值",
+  "first_seen_date": "2026-07-06",
+  "first_deep_dive_daily": "2026-07-06",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 5.4,
     "relevance": 6.2,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 70.0,
+  "score": 75.0,
   "decision": "轻量试点",
-  "one_line_judgement": "值得先保存：LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlea…",
-  "one_line_essence": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unlearning 成功 ≠ 参数级知识真正擦除。作为评测资产可沉淀到合规审计（PII 移除）清单，但工程即时性弱于前述论文，更偏长尾基准价值。",
+  "one_line_judgement": "值得继续观察：提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearnin…",
+  "one_line_essence": "提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearning 方法遵循'先定位再遗忘'范式，但既有 benchmark 只看输出，无法判断知识是否真正被擦除。对隐私合规（PII 删除）、模型治理、安全审计有重要意义。作为 benchmark 类贡献，证据强度高；但 unlearning 仍是相对窄的方向，趋势相关性中等。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unlearning 成功 ≠ 参数级知识真正擦除。作为评测资产可沉淀到合规审计（PII 移除）清单，但工程即时性弱于前述论文，更偏长尾基准价值。",
+  "new_claim_or_method": "提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearning 方法遵循'先定位再遗忘'范式，但既有 benchmark 只看输出，无法判断知识是否真正被擦除。对隐私合规（PII 删除）、模型治理、安全审计有重要意义。作为 benchmark 类贡献，证据强度高；但 unlear",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "long_tail_watch",
+    "status": "emerging",
     "related_trends": [
       "coding-agent"
     ],
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unle",
+    "why_save": "提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearning 方法遵循'先定位再遗忘'范式，但既有 bench",
     "future_trigger": [
-      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -78,7 +78,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-07-26"
+    "revisit_date": ""
   },
   "insights": {
     "system_design": [
@@ -102,12 +102,12 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
-    "long_tail_actions": [
-      "加入长尾库",
-      "标注未来触发条件",
-      "先沉淀 Prompt / Skill 草案"
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
     ],
+    "long_tail_actions": [],
     "ignore_reason": ""
   },
   "references": [
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-  "daily_path": "daily-detail.html?date=2026-07-05",
+  "daily_path": "daily-detail.html?date=2026-07-06",
   "trend_paths": [
     "trend-detail.html?id=coding-agent"
   ],

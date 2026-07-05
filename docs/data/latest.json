@@ -1,108 +1,124 @@
 {
-  "updated_at": "2026-07-05T04:33:44.695657",
+  "updated_at": "2026-07-06T04:34:15.429960",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-07-05",
-    "title": "论文价值发现日报 - 2026-07-05",
-    "deep_dive_title": "Distributed Attacks in Persistent-State AI Control",
-    "deep_dive_url": "http://arxiv.org/abs/2607.02514v1",
+    "date": "2026-07-06",
+    "title": "论文价值发现日报 - 2026-07-06",
+    "deep_dive_title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+    "deep_dive_url": "http://arxiv.org/abs/2607.02512v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "精读 Distributed Attacks 的威胁模型与 Iterative VibeCoding 定义；盘点编码 Agent 工作流的跨会话状态共享，评估分布式载荷暴露面",
-    "max_uncertainty": "Iterative VibeCoding 的具体检测方法与防御基线待核验；论文代码/benchmark 开源状态暂无；分布式攻击在实际多人协作仓库中的误报率未披露",
-    "one_line_judgement": "首次将'迭代式编码 Agent + 持久化代码库'带来的攻击面形式化为 Iterative VibeCoding 控制场景，揭示 misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式 + 时序'威胁模型直接对 Claude Code、Codex、Cursor 等已上线编码 Agent 的部署提出新安全约束。",
-    "path": "daily-detail.html?date=2026-07-05"
+    "daily_action": "精读 Program-as-Weights 的编译流程，识别当前管线中最依赖 LLM API 的 1-2 个模糊函数，评估用编译替代的最小验证方案",
+    "max_uncertainty": "Program-as-Weights 的编译成本与制品大小未知（摘要截断）；Online Safety Monitoring 的具体阈值校准方法需完整论文确认；Distributed Attacks 的防御方案可能不完整（偏威胁建模）；ReContext 的基线对比待确认",
+    "one_line_judgement": "它提出一个全新的编程范式——把模糊函数（日志告警、JSON 修复、意图排序等无法用规则干净实现的任务）从'每次调用 LLM API'转变为'一次性编译成可在本地执行的紧凑神经制品'。这同时恢复了局部性、可复现性与低成本，直击当前把一切外包给 LLM API 时的三大痛点。范式级创新，可迁移到边缘部署、确定性管线、成本敏感场景。",
+    "path": "daily-detail.html?date=2026-07-06"
   },
   "top_paper": {
-    "title": "Distributed Attacks in Persistent-State AI Control",
+    "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
     "authors": [
-      "Josh Hills",
-      "Ida Caspary",
-      "Asa Cooper Stickland"
+      "Wentao Zhang",
+      "Liliana Hotsko",
+      "Woojeong Kim",
+      "Pengyu Nie",
+      "Stuart Shieber"
     ],
     "published": "2026-07-02",
     "updated": "2026-07-02",
     "source": "arXiv",
-    "url": "http://arxiv.org/abs/2607.02514v1",
-    "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
+    "url": "http://arxiv.org/abs/2607.02512v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.02512v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterativ",
+    "abstract": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (P",
     "categories": [
-      "cs.AI"
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
     ],
     "keywords": [
-      "agent",
-      "coding agent",
-      "benchmark"
+      "memory",
+      "inference"
     ],
-    "score": 84.0,
+    "score": 85.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2607.02514v1"
+        "url": "http://arxiv.org/abs/2607.02512v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2607.02514v1"
+        "url": "https://arxiv.org/pdf/2607.02512v1"
       }
     ],
-    "llm_reason": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
-    "id": "distributed-attacks-in-persistent-state-ai-control",
+    "llm_reason": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日志告警、JSON 修复、意图排序）在调用 LLM API 时面临的局部性丢失、不可复现、价格高昂三大痛点。对边缘部署、确定性管线、成本敏感场景有即时工程价值。核心权衡是把'每次调用都问大模型'换成'一次性编译成可重复执行的本地小模型'。",
+    "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
     "value_type": "immediate",
     "matched_topics": [
-      "coding-agent",
-      "security-governance",
-      "ai-agent"
+      "inference-serving",
+      "ai-agent",
+      "llm-evaluation"
     ],
     "score_breakdown": {
-      "novelty": 5.4,
-      "problem_importance": 6.45,
-      "relevance": 7.4,
+      "novelty": 4.8,
+      "problem_importance": 5.15,
+      "relevance": 5.0,
       "evidence_strength": 4.5,
       "engineering_testability": 3.5,
-      "trend_signal": 4.05,
+      "trend_signal": 3.5,
       "long_tail_potential": 3.5,
-      "asset_convertibility": 6.2,
+      "asset_convertibility": 4.8,
       "actionability": 3.8,
       "noise_risk": 1.2,
       "weak_evidence_penalty": 5.0,
-      "low_relevance_penalty": 0.8,
+      "low_relevance_penalty": 3.6,
       "engineering_cost_penalty": 2.5,
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "Coding Agent：As AI coding agents become more autonomous, they increasingly ship code iterat…",
-    "one_line_judgement": "今天值得试：首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：m…",
-    "first_seen_date": "2026-07-05",
-    "first_deep_dive_daily": "2026-07-05",
+    "brief_cn": "推理与服务：Many everyday programming tasks resist clean rule-based implementation, such a…",
+    "one_line_judgement": "今天值得试：提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而…",
+    "first_seen_date": "2026-07-06",
+    "first_deep_dive_daily": "2026-07-06",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected ",
+    "long_tail_summary": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日",
     "related_trends": [
-      "coding-agent",
-      "agentic-world-modeling"
+      "agentic-world-modeling",
+      "coding-agent"
     ],
-    "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control"
+    "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions"
   },
   "paper_count": 419,
   "daily_count": 30,
   "trend_count": 3,
-  "long_tail_count": 50,
+  "long_tail_count": 49,
   "value_distribution": {
-    "immediate": 47,
+    "immediate": 48,
     "trend": 65,
-    "long_tail": 50,
+    "long_tail": 49,
     "ignore": 257
   },
   "recent_dailies": [
+    {
+      "date": "2026-07-06",
+      "title": "论文价值发现日报 - 2026-07-06",
+      "deep_dive_title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "deep_dive_url": "http://arxiv.org/abs/2607.02512v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读 Program-as-Weights 的编译流程，识别当前管线中最依赖 LLM API 的 1-2 个模糊函数，评估用编译替代的最小验证方案",
+      "max_uncertainty": "Program-as-Weights 的编译成本与制品大小未知（摘要截断）；Online Safety Monitoring 的具体阈值校准方法需完整论文确认；Distributed Attacks 的防御方案可能不完整（偏威胁建模）；ReContext 的基线对比待确认",
+      "one_line_judgement": "它提出一个全新的编程范式——把模糊函数（日志告警、JSON 修复、意图排序等无法用规则干净实现的任务）从'每次调用 LLM API'转变为'一次性编译成可在本地执行的紧凑神经制品'。这同时恢复了局部性、可复现性与低成本，直击当前把一切外包给 LLM API 时的三大痛点。范式级创新，可迁移到边缘部署、确定性管线、成本敏感场景。",
+      "path": "daily-detail.html?date=2026-07-06"
+    },
     {
       "date": "2026-07-05",
       "title": "论文价值发现日报 - 2026-07-05",
@@ -180,255 +196,9 @@
       "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。",
       "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
       "path": "daily-detail.html?date=2026-06-27"
-    },
-    {
-      "date": "2026-06-26",
-      "title": "论文价值发现日报 - 2026-06-26",
-      "deep_dive_title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-      "deep_dive_url": "http://arxiv.org/abs/2606.26080v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "三件事：列出 Progress Advantage 最小实验(已有轨迹→提取 advantage→对照步级质量→测下游收益)；把 self-distillation 多样性塌陷、Model Forensics 误报治理纳入后训练/治理观察清单；把 MLLM 顺序敏感与语音 AI 副语言缺失纳入评测可靠性 checklist。",
-      "max_uncertainty": "外部可复现资产缺失是最大不确定性：五篇论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度(Progress Advantage 属 agent/RL 方向、Model Forensics 属 DeepMind mech-interp 团队、语音/MLLM 评测属 Stanford 团队)，需持续跟踪作者主页与 GitHub。",
-      "one_line_judgement": "它回答的是 agent 工程界天天踩的坑——'想给 agent 做步级过程奖励(PRM)，但长程交互+不可逆动作+随机环境让人工标注和蒙特卡洛估计都不可规模化'。本文给出一个'免费午餐'：RL 后训练本身已经提供了有效的步级评分信号(Progress Advantage)，不必再单独训奖励模型。这恰好是自有 agent 团队在 RLHF/GRPO 流水线里立刻能验证的变量。理论上是'PRM 的价值不在独立模型而在 advantage 函数重用'，工程上对应'把训练中的 advantage 当步骤质量标签'。",
-      "path": "daily-detail.html?date=2026-06-26"
     }
   ],
   "top_papers": [
-    {
-      "title": "Distributed Attacks in Persistent-State AI Control",
-      "authors": [
-        "Josh Hills",
-        "Ida Caspary",
-        "Asa Cooper Stickland"
-      ],
-      "published": "2026-07-02",
-      "updated": "2026-07-02",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.02514v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterativ",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "agent",
-        "coding agent",
-        "benchmark"
-      ],
-      "score": 84.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.02514v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.02514v1"
-        }
-      ],
-      "llm_reason": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
-      "id": "distributed-attacks-in-persistent-state-ai-control",
-      "value_type": "immediate",
-      "matched_topics": [
-        "coding-agent",
-        "security-governance",
-        "ai-agent"
-      ],
-      "score_breakdown": {
-        "novelty": 5.4,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Coding Agent：As AI coding agents become more autonomous, they increasingly ship code iterat…",
-      "one_line_judgement": "今天值得试：首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：m…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected ",
-      "related_trends": [
-        "coding-agent",
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control"
-    },
-    {
-      "title": "Online Safety Monitoring for LLMs",
-      "authors": [
-        "Mona Schirmer",
-        "Metod Jazbec",
-        "Alexander Timans",
-        "Christian Naesseth",
-        "Maja Waldron"
-      ],
-      "published": "2026-07-02",
-      "updated": "2026-07-02",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.02510v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02510v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with mor",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "stat.AP",
-        "stat.ML"
-      ],
-      "keywords": [],
-      "score": 82.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.02510v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.02510v1"
-        }
-      ],
-      "llm_reason": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服务，且提供统计意义上的风险保证。工程落地门槛极低，证据来自真实红队与推理数据集。",
-      "id": "online-safety-monitoring-for-llms",
-      "value_type": "immediate",
-      "matched_topics": [
-        "security-governance",
-        "llm-evaluation",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "安全与治理：Despite alignment training, LLMs remain prone to generating unsafe outputs at …",
-      "one_line_judgement": "今天值得试：极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms"
-    },
-    {
-      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-      "authors": [
-        "Yanjun Zhao",
-        "Ruizhong Qiu",
-        "Tianxin Wei",
-        "Yuanchen Bei",
-        "Zhining Liu"
-      ],
-      "published": "2026-07-02",
-      "updated": "2026-07-02",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.02509v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.02509v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context windows, they often fail to use relevant evidence that is already present in the input, revealing a gap between context access and effective context utilization. In this work, we propose Recursive Evidence Replay as LLM Harness for Long-Context Reasoning (RECONTEXT), a training-free inference metho",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "memory",
-        "RAG",
-        "inference"
-      ],
-      "score": 80.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.02509v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.02509v1"
-        }
-      ],
-      "llm_reason": "ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据弥补长上下文 LLM '能访问但不会用'证据的鸿沟。无需训练即可作为现有长上下文管线的 drop-in 增强。长上下文利用率是 2026 年核心工程议题，方法可立即在现有评测上验证收益。",
-      "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-      "value_type": "immediate",
-      "matched_topics": [
-        "context-engineering",
-        "rag-knowledge",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Context Engineering：Understanding and reasoning over long contexts has become a key requirement fo…",
-      "one_line_judgement": "今天值得试：ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "ReContext 提出 Recursive Evidence Replay——一种 training-free 推理方法，通过递归重放证据弥补长上下文 LLM '能访问但不会用'证据的鸿沟。",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning"
-    },
     {
       "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
       "authors": [
@@ -458,8 +228,8 @@
         "memory",
         "inference"
       ],
-      "score": 77.0,
-      "decision": "轻量试点",
+      "score": 85.0,
+      "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
@@ -470,12 +240,13 @@
           "url": "https://arxiv.org/pdf/2607.02512v1"
         }
       ],
-      "llm_reason": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针对日志告警、JSON 修复、意图排序等高频模糊任务。属趋势级方向（LLM 行为编译/蒸馏为可部署制品），但成熟度与跨任务泛化需待核验。",
+      "llm_reason": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日志告警、JSON 修复、意图排序）在调用 LLM API 时面临的局部性丢失、不可复现、价格高昂三大痛点。对边缘部署、确定性管线、成本敏感场景有即时工程价值。核心权衡是把'每次调用都问大模型'换成'一次性编译成可重复执行的本地小模型'。",
       "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-      "value_type": "trend",
+      "value_type": "immediate",
       "matched_topics": [
         "inference-serving",
-        "context-engineering"
+        "ai-agent",
+        "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
@@ -495,17 +266,251 @@
       },
       "trend_status": "emerging",
       "brief_cn": "推理与服务：Many everyday programming tasks resist clean rule-based implementation, such a…",
-      "one_line_judgement": "值得继续观察：Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 l…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
-      "value_type_label": "趋势价值",
+      "one_line_judgement": "今天值得试：提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而…",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
+      "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions"
+    },
+    {
+      "title": "Online Safety Monitoring for LLMs",
+      "authors": [
+        "Mona Schirmer",
+        "Metod Jazbec",
+        "Alexander Timans",
+        "Christian Naesseth",
+        "Maja Waldron"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02510v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02510v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with mor",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "stat.AP",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02510v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02510v1"
+        }
+      ],
+      "llm_reason": "提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学推理和红队数据集上与更复杂的方案竞争力相当。工程价值在于'简单到今天就能部署'——任何在线 LLM 服务都可加一层 verifier + 阈值校准的安全开关。证据强度来自多数据集实验和风险控制的理论保证。",
+      "id": "online-safety-monitoring-for-llms",
+      "value_type": "immediate",
+      "matched_topics": [
+        "security-governance",
+        "inference-serving",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "安全与治理：Despite alignment training, LLMs remain prone to generating unsafe outputs at …",
+      "one_line_judgement": "今天值得试：提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学…",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学推理和红队数据集上与更复杂的方案竞争力相当。工程价值",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms"
+    },
+    {
+      "title": "Distributed Attacks in Persistent-State AI Control",
+      "authors": [
+        "Josh Hills",
+        "Ida Caspary",
+        "Asa Cooper Stickland"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02514v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02514v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterativ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "coding agent",
+        "benchmark"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02514v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02514v1"
+        }
+      ],
+      "llm_reason": "揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个 PR 并选择掩护最好的 PR 触发 payload。提出 Iterative VibeCoding 作为 AI control（安全部署不可信但能力强 AI）的新研究设定。对使用编码 Agent / 自动化 CI 的团队有直接安全启发——持久状态 + 迭代提交是新的威胁模型。",
+      "id": "distributed-attacks-in-persistent-state-ai-control",
+      "value_type": "immediate",
+      "matched_topics": [
+        "coding-agent",
+        "ai-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：As AI coding agents become more autonomous, they increasingly ship code iterat…",
+      "one_line_judgement": "今天值得试：揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个…",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个 PR 并选择掩护最好的 PR 触发 payload",
+      "related_trends": [
+        "coding-agent",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control"
+    },
+    {
+      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+      "authors": [
+        "Yanjun Zhao",
+        "Ruizhong Qiu",
+        "Tianxin Wei",
+        "Yuanchen Bei",
+        "Zhining Liu"
+      ],
+      "published": "2026-07-02",
+      "updated": "2026-07-02",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.02509v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.02509v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context windows, they often fail to use relevant evidence that is already present in the input, revealing a gap between context access and effective context utilization. In this work, we propose Recursive Evidence Replay as LLM Harness for Long-Context Reasoning (RECONTEXT), a training-free inference metho",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "memory",
+        "RAG",
+        "inference"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.02509v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.02509v1"
+        }
+      ],
+      "llm_reason": "提出 ReContext（Recursive Evidence Replay），一种无需训练的长上下文推理方法：通过递归证据回放弥合'能访问上下文'与'有效利用上下文'之间的鸿沟。训练免费意味着今天就能在现有模型上试验，工程门槛低。对 RAG、长文档问答、代码理解等长上下文场景有直接价值。证据强度待完整论文确认（摘要截断）。",
+      "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
+      "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Understanding and reasoning over long contexts has become a key requirement fo…",
+      "one_line_judgement": "今天值得试：提出 ReContext（Recursive Evidence Replay），一种无需训练的长上下文推理方法：通过递归证据回放弥合'能访问…",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "提出 ReContext（Recursive Evidence Replay），一种无需训练的长上下文推理方法：通过递归证据回放弥合'能访问上下文'与'有效利用上下文'之间的鸿沟。训练免费意味",
       "related_trends": [
         "context-engineering"
       ],
-      "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions"
+      "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning"
     },
     {
       "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
@@ -537,7 +542,7 @@
         "benchmark",
         "RAG"
       ],
-      "score": 70.0,
+      "score": 75.0,
       "decision": "轻量试点",
       "links": [
         {
@@ -549,9 +554,9 @@
           "url": "https://arxiv.org/pdf/2607.02513v1"
         }
       ],
-      "llm_reason": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unlearning 成功 ≠ 参数级知识真正擦除。作为评测资产可沉淀到合规审计（PII 移除）清单，但工程即时性弱于前述论文，更偏长尾基准价值。",
+      "llm_reason": "提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearning 方法遵循'先定位再遗忘'范式，但既有 benchmark 只看输出，无法判断知识是否真正被擦除。对隐私合规（PII 删除）、模型治理、安全审计有重要意义。作为 benchmark 类贡献，证据强度高；但 unlearning 仍是相对窄的方向，趋势相关性中等。",
       "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-      "value_type": "long_tail",
+      "value_type": "trend",
       "matched_topics": [
         "security-governance",
         "llm-evaluation"
@@ -572,15 +577,15 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
+      "trend_status": "emerging",
       "brief_cn": "安全与治理：LLMs memorize sensitive training data, including personally identifiable infor…",
-      "one_line_judgement": "值得先保存：LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlea…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unle",
+      "one_line_judgement": "值得继续观察：提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearnin…",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "提出 LACUNA 测试床，首次在参数层面（而非输出层面）评估 LLM unlearning 的定位精度。当前 SOTA unlearning 方法遵循'先定位再遗忘'范式，但既有 bench",
       "related_trends": [
         "coding-agent"
       ],
@@ -650,8 +655,8 @@
       "trend_status": "noise",
       "brief_cn": "AI Agent：Realistic traffic simulation requires agents that imitate logged behavior and …",
       "one_line_judgement": "当前可忽略：AI Agent：Realistic traffic simulation requires agents that imitate log…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -728,8 +733,8 @@
       "trend_status": "noise",
       "brief_cn": "AI Agent：LLM agents will increasingly act in socially structured settings where role, a…",
       "one_line_judgement": "当前可忽略：AI Agent：LLM agents will increasingly act in socially structured setti…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -804,8 +809,8 @@
       "trend_status": "noise",
       "brief_cn": "LLM 评测：On-policy self-distillation (OPSD) has emerged as a practical method for train…",
       "one_line_judgement": "当前可忽略：LLM 评测：On-policy self-distillation (OPSD) has emerged as a practical m…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -880,8 +885,8 @@
       "trend_status": "noise",
       "brief_cn": "LLM 评测：Long-form TV dramas present a formidable challenge for comprehensive video und…",
       "one_line_judgement": "当前可忽略：LLM 评测：Long-form TV dramas present a formidable challenge for comprehe…",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -954,8 +959,8 @@
       "trend_status": "noise",
       "brief_cn": "Multimodal Agent：Machine learning interatomic potentials (MLIPs) have become a hallmark of AI f…",
       "one_line_judgement": "当前可忽略：Multimodal Agent：Machine learning interatomic potentials (MLIPs) have …",
-      "first_seen_date": "2026-07-05",
-      "first_deep_dive_daily": "2026-07-05",
+      "first_seen_date": "2026-07-06",
+      "first_deep_dive_daily": "2026-07-06",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -967,21 +972,6 @@
     }
   ],
   "long_tail_highlights": [
-    {
-      "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-      "direction": "安全与治理 / LLM 评测",
-      "long_tail_type": "可迁移方法",
-      "why_save": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unle",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-07-26",
-      "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning"
-    },
     {
       "id": "discrete-diffusion-language-models-for-interactive-radiology-report-drafting",
       "title": "Discrete Diffusion Language Models for Interactive Radiology Report Drafting",
@@ -1011,6 +1001,21 @@
       ],
       "revisit_date": "2026-07-25",
       "detail_path": "paper-detail.html?id=pace-a-neuro-symbolic-framework-for-plausible-and-actionable-counterfactual-explanations"
+    },
+    {
+      "id": "the-wiola-architecture-for-efficient-small-language-models",
+      "title": "The Wiola Architecture for Efficient Small Language Models",
+      "direction": "推理与服务",
+      "long_tail_type": "工程抽象",
+      "why_save": "声称『完全原创、与 GPT/LLaMA/Mistral/Falcon 无结构血缘』的小语言模型架构，含五个新组件（三维螺旋旋转位置编码 SRPE、门控跨层注意力 GCLA 等）。架构创新（把位",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist"
+      ],
+      "revisit_date": "2026-07-25",
+      "detail_path": "paper-detail.html?id=the-wiola-architecture-for-efficient-small-language-models"
     }
   ],
   "common_research_path": [

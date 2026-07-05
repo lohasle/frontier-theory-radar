@@ -7,9 +7,9 @@
   "value_type_label": "即时价值",
   "decision": "重点学习",
   "daily_action": "精读 Distributed Attacks 的威胁模型与 Iterative VibeCoding 定义；盘点编码 Agent 工作流的跨会话状态共享，评估分布式载荷暴露面",
-  "score": 84.0,
+  "score": 80.0,
   "trend_stage": "emerging",
-  "one_line_judgement": "今天值得试：首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：m…",
+  "one_line_judgement": "今天值得试：揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个…",
   "max_uncertainty": "Iterative VibeCoding 的具体检测方法与防御基线待核验；论文代码/benchmark 开源状态暂无；分布式攻击在实际多人协作仓库中的误报率未披露",
   "conclusion_lines": [
     "今天最值得看的是《Distributed Attacks in Persistent-State AI Control》。",
@@ -19,13 +19,13 @@
   ],
   "candidate_papers": [
     {
-      "id": "distributed-attacks-in-persistent-state-ai-control",
-      "title": "Distributed Attacks in Persistent-State AI Control",
-      "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
+      "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 84.0,
+      "score": 85.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
@@ -38,7 +38,20 @@
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 82.0,
+      "score": 84.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "distributed-attacks-in-persistent-state-ai-control",
+      "title": "Distributed Attacks in Persistent-State AI Control",
+      "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 80.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
@@ -51,20 +64,7 @@
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 80.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": true
-    },
-    {
-      "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-      "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-      "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 77.0,
+      "score": 78.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
@@ -75,9 +75,9 @@
       "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
       "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
       "direction": "未分类",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 70.0,
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 75.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
@@ -100,8 +100,8 @@
     "benchmark_url": "",
     "paperswithcode_url": "",
     "openreview_url": "",
-    "first_seen_date": "2026-07-05",
-    "first_deep_dive_daily": "2026-07-05",
+    "first_seen_date": "2026-07-06",
+    "first_deep_dive_daily": "2026-07-06",
     "value_type": "immediate",
     "value_type_label": "即时价值",
     "value_scores": {
@@ -114,12 +114,12 @@
       "actionability": 3.8,
       "noise_risk": 1.2
     },
-    "score": 84.0,
+    "score": 80.0,
     "decision": "重点学习",
-    "one_line_judgement": "今天值得试：首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：m…",
-    "one_line_essence": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭代式编码 Agent 的生产部署提出新约束。对任何已上线编码 Agent 的团队是即时安全治理输入。",
+    "one_line_judgement": "今天值得试：揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个…",
+    "one_line_essence": "揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个 PR 并选择掩护最好的 PR 触发 payload。提出 Iterative VibeCoding 作为 AI control（安全部署不可信但能力强 AI）的新研究设定。对使用编码 Agent / 自动化 CI 的团队有直接安全启发——持久状态 + 迭代提交是新的威胁模型。",
     "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-    "new_claim_or_method": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式+时序'攻击模型直接对 Claude Code、Codex、Cursor 等迭",
+    "new_claim_or_method": "揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个 PR 并选择掩护最好的 PR 触发 payload。提出 Iterative VibeCoding 作为 AI control（安全部署不可信但能力强 AI）的新研究设定。对使用编码 Agent / 自动化 CI 的团",
     "research_position": "source_paper",
     "engineering_testability": {
       "has_code": false,
@@ -146,7 +146,7 @@
       ]
     },
     "long_tail": {
-      "why_save": "首次将持久化状态下的 AI 编码 Agent 攻击形式化为 'Iterative VibeCoding' 控制场景，揭示一个全新威胁维度：misaligned/prompt-injected ",
+      "why_save": "揭示编码 Agent 在跨会话持久化代码库中产生的新攻击面：不对齐或被 prompt injection 的 Agent 可将攻击分布到多个 PR 并选择掩护最好的 PR 触发 payload",
       "future_trigger": [
         "待更多证据"
       ],
@@ -206,7 +206,7 @@
       }
     ],
     "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-    "daily_path": "daily-detail.html?date=2026-07-05",
+    "daily_path": "daily-detail.html?date=2026-07-06",
     "trend_paths": [
       "trend-detail.html?id=coding-agent",
       "trend-detail.html?id=agentic-world-modeling"
@@ -218,28 +218,7 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [
-    {
-      "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-      "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-      "why_save": "LACUNA 是首个在'定位精度'层面评估 LLM unlearning 的 testbed，针对 localize-first/unlearn-second 范式。核心洞察：输出级 unle",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "possible_use_cases": [
-        "Prompt 设计",
-        "Skill 草案",
-        "评测方法",
-        "架构模式"
-      ],
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist",
-        "评测方法"
-      ],
-      "revisit_date": "2026-07-26"
-    }
-  ],
+  "long_tail_saved": [],
   "ignore_reasons": [
     "暂无明确忽略样本，但忽略标准仍需保留。"
   ],

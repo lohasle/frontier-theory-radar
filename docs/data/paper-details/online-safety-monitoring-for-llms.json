@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-05",
-  "first_deep_dive_daily": "2026-07-05",
+  "first_seen_date": "2026-07-06",
+  "first_deep_dive_daily": "2026-07-06",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 82.0,
+  "score": 84.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与…",
-  "one_line_essence": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服务，且提供统计意义上的风险保证。工程落地门槛极低，证据来自真实红队与推理数据集。",
+  "one_line_judgement": "今天值得试：提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学…",
+  "one_line_essence": "提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学推理和红队数据集上与更复杂的方案竞争力相当。工程价值在于'简单到今天就能部署'——任何在线 LLM 服务都可加一层 verifier + 阈值校准的安全开关。证据强度来自多数据集实验和风险控制的理论保证。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服务，且提供统计意义上的风险保证。工程落地门槛极低，证据来自真实红队与推理数据集。",
+  "new_claim_or_method": "提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学推理和红队数据集上与更复杂的方案竞争力相当。工程价值在于'简单到今天就能部署'——任何在线 LLM 服务都可加一层 verifier + 阈值校准的安全开关。证据强度来自多数据集实验和风险控制的理论保证。",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -61,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "极简在线安全监控器：外部 verifier 信号→阈值→告警，阈值由 risk control（类共形预测）校准。在数学推理与红队数据集上与更复杂方法竞争力相当。设计简单到可直接接入任何推理服",
+    "why_save": "提出一个极简的 LLM 在线安全监控器：把外部 verifier 模型的信号经风险控制（risk control）校准为阈值告警决策。在数学推理和红队数据集上与更复杂的方案竞争力相当。工程价值",
     "future_trigger": [
       "待更多证据"
     ],
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-  "daily_path": "daily-detail.html?date=2026-07-05",
+  "daily_path": "daily-detail.html?date=2026-07-06",
   "trend_paths": [
     "trend-detail.html?id=coding-agent"
   ],

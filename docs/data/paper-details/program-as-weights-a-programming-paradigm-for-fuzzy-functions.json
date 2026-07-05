@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-05",
-  "first_deep_dive_daily": "2026-07-05",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-07-06",
+  "first_deep_dive_daily": "2026-07-06",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 77.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 l…",
-  "one_line_essence": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针对日志告警、JSON 修复、意图排序等高频模糊任务。属趋势级方向（LLM 行为编译/蒸馏为可部署制品），但成熟度与跨任务泛化需待核验。",
+  "score": 85.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而…",
+  "one_line_essence": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日志告警、JSON 修复、意图排序）在调用 LLM API 时面临的局部性丢失、不可复现、价格高昂三大痛点。对边缘部署、确定性管线、成本敏感场景有即时工程价值。核心权衡是把'每次调用都问大模型'换成'一次性编译成可重复执行的本地小模型'。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针对日志告警、JSON 修复、意图排序等高频模糊任务。属趋势级方向（LLM 行为编译/蒸馏为可部署制品），但成熟度与跨任务泛化需待核验。",
+  "new_claim_or_method": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日志告警、JSON 修复、意图排序）在调用 LLM API 时面临的局部性丢失、不可复现、价格高昂三大痛点。对边缘部署、确定性管线、成本敏感场景有即时工程价值。核心权衡是",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -51,7 +51,8 @@
   "trend_relation": {
     "status": "emerging",
     "related_trends": [
-      "context-engineering"
+      "agentic-world-modeling",
+      "coding-agent"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -61,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "Program-as-Weights 提出 fuzzy-function 编程范式：将自然语言规范编译为紧凑、可本地执行的神经制品，恢复 locality、可复现性与成本优势。范式新颖度高，针",
+    "why_save": "提出 Program-as-Weights 范式：将自然语言函数规约编译为可在本地执行的紧凑神经制品（neural artifact），从而替代对 LLM API 的调用。直接解决模糊函数（日",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -101,12 +102,12 @@
     ]
   },
   "actions": {
-    "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
     ],
+    "trend_actions": [],
     "long_tail_actions": [],
     "ignore_reason": ""
   },
@@ -121,9 +122,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-  "daily_path": "daily-detail.html?date=2026-07-05",
+  "daily_path": "daily-detail.html?date=2026-07-06",
   "trend_paths": [
-    "trend-detail.html?id=context-engineering"
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=coding-agent"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
