@@ -1,7 +1,739 @@
 {
-  "updated_at": "2026-07-07T04:32:21.537330",
-  "total": 419,
+  "updated_at": "2026-07-10T04:33:29.015164",
+  "total": 429,
   "papers": [
+    {
+      "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+      "authors": [
+        "Yair Feldman",
+        "Linxi Zhao",
+        "Nathan Godey",
+        "Dongyoung Go",
+        "Yilun Hua"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07707v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07707v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches knowledge from the KB as needed. This recently introduced paradigm provides multiple advantages, including knowledge control capabilities that remain beyond conventional LLMs. We propose continuous-query LMLM (CO-LMLM), where the KB pairs continuous keys with textual knowledge values, a significant ",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "memory"
+      ],
+      "score": 76.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07707v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07707v1"
+        }
+      ],
+      "llm_reason": "提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需重训即可更新，直接对齐 Agent 记忆系统与 RAG 演进方向。证据上论文声称有实验验证但暂无公开代码（code_url 为空），工程可验证性依赖后续复现。综合判定为即时价值——架构模式清晰，可立即设计最小验证实验。",
+      "id": "co-lmlm-continuous-query-limited-memory-language-models",
+      "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Limited memory language models (LMLMs) externalize factual knowledge during pr…",
+      "one_line_judgement": "今天值得试：提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需重训即可更新，直接对齐 Agent 记忆系统与 RA",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models"
+    },
+    {
+      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+      "authors": [
+        "Ying Chang",
+        "Jiahang Xu",
+        "Xuan Feng",
+        "Chenyuan Yang",
+        "Peng Cheng"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07702v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07702v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, ",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07702v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07702v1"
+        }
+      ],
+      "llm_reason": "针对 LLM Agent 的反射式优化提出结构化轨迹分析与因果抽取方法，解决执行轨迹冗余、异构、低价值失败过拟合等问题。方法论面向工程实践：可转化为 Agent 自改进流水线的诊断组件。证据强度中等（无公开代码/benchmark），但问题重要性和工程可操作性强，适合做最小试点。",
+      "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：The optimization of long-horizon agents increasingly relies on reflection-base…",
+      "one_line_judgement": "今天值得试：针对 LLM Agent 的反射式优化提出结构化轨迹分析与因果抽取方法，解决执行轨迹冗余、异构、低价值失败过拟合等问题。方法论面向工程实践：…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "针对 LLM Agent 的反射式优化提出结构化轨迹分析与因果抽取方法，解决执行轨迹冗余、异构、低价值失败过拟合等问题。方法论面向工程实践：可转化为 Agent 自改进流水线的诊断组件。证据强",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization"
+    },
+    {
+      "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+      "authors": [
+        "Anna Kuzina",
+        "Paul N. Whatmough",
+        "Babak Ehteshami Bejnordi"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07706v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07706v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The quadratic cost of causal self-attention severely bottlenecks long-context transformer inference. While numerous post hoc linearization pipelines exist, it is difficult to identify which components preserve model quality. This work isolates the effect of state update design in a strict frozen-backbone regime. We show that softmax relies on key-dependent, rank-1 orthogonal projections, elucidating why delta-style networks outperform purely gated accumulation. We identify a potential source of ",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 68.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07706v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07706v1"
+        }
+      ],
+      "llm_reason": "在冻结骨干的严格控制下隔离状态更新设计对注意力线性化的影响，揭示 softmax 依赖键相关的秩1正交投影、delta网络优于纯门控累积等机理。理论贡献扎实，对长上下文推理效率有直接工程意义。但属于分析驱动而非即用型系统，需持续观察是否催生开源实现和 benchmark 收录。",
+      "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：The quadratic cost of causal self-attention severely bottlenecks long-context …",
+      "one_line_judgement": "值得继续观察：在冻结骨干的严格控制下隔离状态更新设计对注意力线性化的影响，揭示 softmax 依赖键相关的秩1正交投影、delta网络优于纯门控累积等机…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "在冻结骨干的严格控制下隔离状态更新设计对注意力线性化的影响，揭示 softmax 依赖键相关的秩1正交投影、delta网络优于纯门控累积等机理。理论贡献扎实，对长上下文推理效率有直接工程意义。",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization"
+    },
+    {
+      "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+      "authors": [
+        "Chen Tang",
+        "Yizhou Wang",
+        "Jianyu Wu",
+        "Lintao Wang",
+        "Shixiang Tang"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07708v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07708v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint ch",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG",
+        "multimodal",
+        "inference"
+      ],
+      "score": 63.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07708v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07708v1"
+        }
+      ],
+      "llm_reason": "将 AI 应用于材料/化学/生物的结构-性质关系推理，结合 RAG、多模态与科学约束。benchmark 与评测框架有资产转化价值，但领域偏科学计算，与通用 Agent/LLM 工程栈的直接相关性中等。适合作为跨领域 RAG 与推理评测的趋势观察对象。",
+      "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+      "value_type": "trend",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "RAG / 知识系统：Structure-property relationships are foundational to biology, chemistry and ma…",
+      "one_line_judgement": "值得继续观察：将 AI 应用于材料/化学/生物的结构-性质关系推理，结合 RAG、多模态与科学约束。benchmark 与评测框架有资产转化价值，但领域偏…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "将 AI 应用于材料/化学/生物的结构-性质关系推理，结合 RAG、多模态与科学约束。benchmark 与评测框架有资产转化价值，但领域偏科学计算，与通用 Agent/LLM 工程栈的直接相",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning"
+    },
+    {
+      "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+      "authors": [
+        "Victor Giannakouris",
+        "Immanuel Trummer"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07696v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07696v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads through query execution and other driver layers that are not designed for bulk columnar analytics. We present Jailbreak, an approach that bypasses the database engine entirely by reading storage files directly and materializing data as in-memory columnar buffers. Jailbreak's key insight is that datab",
+      "categories": [
+        "cs.DB",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "memory",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 58.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07696v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07696v1"
+        }
+      ],
+      "llm_reason": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI Agent 技术栈相关性有限。适合保存为长尾资产——其 Agentic 代码再生成范式可能在其他系统软件领域复用。",
+      "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.6,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：Analytical workloads operating on data stored in external database systems fac…",
+      "one_line_judgement": "值得先保存：Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass"
+    },
+    {
+      "title": "Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety",
+      "authors": [
+        "Yujiao Chen"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07695v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07695v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute the resulting change in collective behavior to that rule. We instantiate the methodology in IABench-CA, a consequence-allocation benchmark spanning 228 contexts, five canonical rules, and seven model populations (33,924 games), with a normative cooperative reference and auto-labelled reasoning traces",
+      "categories": [
+        "cs.AI",
+        "cs.GT",
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 43.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07695v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07695v1"
+        }
+      ],
+      "id": "institutional-red-teaming-deployment-rules-not-just-models-causally-shape-multi-agent-ai-safety",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：We introduce institutional red-teaming, an evaluation methodology for testing …",
+      "one_line_judgement": "当前可忽略：AI Agent：We introduce institutional red-teaming, an evaluation methodo…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：We introduce institutional red-teaming, an evaluation methodology for testing …",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=institutional-red-teaming-deployment-rules-not-just-models-causally-shape-multi-agent-ai-safety"
+    },
+    {
+      "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+      "authors": [
+        "Eric Zhu",
+        "Abhinav Shrivastava",
+        "Soumik Mukhopadhyay"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07693v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07693v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly feedback inefficient, as existing approaches typically require large amounts of human or reward model evaluations. This limitation reduces the practicality of diffusion RLHF in realworld settings where feedback is the primary bottleneck. In this paper, we propose two complementary strategies that subs",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 36.8,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07693v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07693v1"
+        }
+      ],
+      "id": "selective-timestep-weighting-and-advantage-based-replay-for-sample-efficient-diffusion-rlhf",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "LLM 评测：Reinforcement learning from human feedback (RLHF) has emerged as a powerful pa…",
+      "one_line_judgement": "当前可忽略：LLM 评测：Reinforcement learning from human feedback (RLHF) has emerged a…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "LLM 评测：Reinforcement learning from human feedback (RLHF) has emerged as a powerful pa…",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=selective-timestep-weighting-and-advantage-based-replay-for-sample-efficient-diffusion-rlhf"
+    },
+    {
+      "title": "ECGLight: Compute-Light Framework For Paper ECG Digitization and Myocardial Infarction Screening",
+      "authors": [
+        "Shreyasvi Natraj",
+        "Cyrus Achtari",
+        "Felice Gragnano",
+        "Andrea Milzi",
+        "Marco Valgimigli"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07683v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07683v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Electrocardiography (ECG) is one of the most widely used tests for diagnosing cardiovascular disease. Yet several remote clinics still utilize paper ECG printouts for their analysis due to limited connectivity and computational capacity. As a result, vast numbers of physical ECGs obtained in remote areas still remain incapable of being accessed by contemporary artificial-intelligence (AI)-based decision support as they require high computational resources or strong high-speed internet connectivi",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07683v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07683v1"
+        }
+      ],
+      "id": "ecglight-compute-light-framework-for-paper-ecg-digitization-and-myocardial-infarction-screening",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Electrocardiography (ECG) is one of the most widely used tests for diagnosing …",
+      "one_line_judgement": "当前可忽略：前沿论文：Electrocardiography (ECG) is one of the most widely used tests fo…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Electrocardiography (ECG) is one of the most widely used tests for diagnosing …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=ecglight-compute-light-framework-for-paper-ecg-digitization-and-myocardial-infarction-screening"
+    },
+    {
+      "title": "Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization",
+      "authors": [
+        "Xiangming Huang",
+        "Guannan Zhang",
+        "Lu Lu",
+        "Raphaël Pestourie"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07682v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07682v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The inverse design of physical systems governed by partial differential equations is computationally demanding due to the high dimensionality and non-convexity of design spaces. Generative models for inverse design often lack robustness and transferability, whereas evolutionary strategies are robust but struggle in high-dimensional spaces. This paper introduces a Neural Operator-enabled Topology-informed Evolutionary Strategy (NOTES) that integrates dimensionality reduction, representation learn",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07682v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07682v1"
+        }
+      ],
+      "id": "neural-operator-enabled-topology-informed-evolutionary-strategy-for-pde-constrained-optimization",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：The inverse design of physical systems governed by partial differential equati…",
+      "one_line_judgement": "当前可忽略：前沿论文：The inverse design of physical systems governed by partial differ…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：The inverse design of physical systems governed by partial differential equati…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=neural-operator-enabled-topology-informed-evolutionary-strategy-for-pde-constrained-optimization"
+    },
+    {
+      "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
+      "authors": [
+        "Vladislav Beliaev"
+      ],
+      "published": "2026-07-08",
+      "updated": "2026-07-08",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.07690v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07690v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather than to think better, since the trace itself is never graded and no label for good thinking exists. We introduce Agon, which makes two competing models each other's graders. Both attempt the same problem; in alternating roles, one drafts a solution and the other reads it while solving, and each is r",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "inference"
+      ],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07690v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07690v1"
+        }
+      ],
+      "id": "agon-competitive-cross-model-rl-with-implicit-rival-grading-of-reasoning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behin…",
+      "one_line_judgement": "当前可忽略：前沿论文：Reinforcement learning from verifiable rewards (e.g. GRPO) is the…",
+      "first_seen_date": "2026-07-10",
+      "first_deep_dive_daily": "2026-07-10",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behin…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=agon-competitive-cross-model-rl-with-implicit-rival-grading-of-reasoning"
+    },
     {
       "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
       "authors": [

@@ -1,6 +1,298 @@
 {
-  "updated_at": "2026-07-07T04:32:22.643027",
+  "updated_at": "2026-07-10T04:33:31.593278",
   "dailies": {
+    "2026-07-10": {
+      "date": "2026-07-10",
+      "title": "论文价值发现日报 - 2026-07-10",
+      "deep_dive_id": "co-lmlm-continuous-query-limited-memory-language-models",
+      "deep_dive_title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "轻量试点",
+      "daily_action": "完成摘要与方法精读，重点理解连续键的表示方式与查询时机；随后设计一个最小实验：在现有 RAG 管线中模拟'多步连续检索 vs 单次前缀检索'的效果差异。",
+      "score": 76.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需…",
+      "max_uncertainty": "暂无公开代码与 benchmark（code_url/benchmark_url 均为空），实验细节与可复现性待核验；连续键的训练稳定性和推理延迟的实际表现尚不清楚。",
+      "conclusion_lines": [
+        "今天最值得看的是《Co-LMLM: Continuous-Query Limited Memory Language Models》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：完成摘要与方法精读，重点理解连续键的表示方式与查询时机；随后设计一个最小实验：在现有 RAG 管线中模拟'多步连续检索 vs 单次前缀检索'的效果差异。。",
+        "最大不确定性：暂无公开代码与 benchmark（code_url/benchmark_url 均为空），实验细节与可复现性待核验；连续键的训练稳定性和推理延迟的实际表现尚不清楚。。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 76.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 68.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        }
+      ],
+      "deep_dive": {
+        "id": "co-lmlm-continuous-query-limited-memory-language-models",
+        "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+        "authors": [
+          "Yair Feldman",
+          "Linxi Zhao",
+          "Nathan Godey",
+          "Dongyoung Go",
+          "Yilun Hua"
+        ],
+        "source": "arXiv",
+        "published": "2026-07-08",
+        "url": "http://arxiv.org/abs/2607.07707v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07707v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-07-10",
+        "first_deep_dive_daily": "2026-07-10",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 6.2,
+          "evidence": 4.5,
+          "engineering_testability": 3.5,
+          "trend_signal": 4.05,
+          "long_tail_potential": 3.5,
+          "actionability": 3.8,
+          "noise_risk": 1.2
+        },
+        "score": 76.0,
+        "decision": "轻量试点",
+        "one_line_judgement": "今天值得试：提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需…",
+        "one_line_essence": "提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需重训即可更新，直接对齐 Agent 记忆系统与 RAG 演进方向。证据上论文声称有实验验证但暂无公开代码（code_url 为空），工程可验证性依赖后续复现。综合判定为即时价值——架构模式清晰，可立即设计最小验证实验。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需重训即可更新，直接对齐 Agent 记忆系统与 RAG 演进方向。证据上论文声称有实验验证但暂无公开代码（code_url 为空），工程可验证性依赖后续复现。综合判定为即时价值——架构模式清晰，可立即设计最小验证实验。",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "context-engineering"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需重训即可更新，直接对齐 Agent 记忆系统与 RA",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2607.07707v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2607.07707v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
+        "daily_path": "daily-detail.html?date=2026-07-10",
+        "trend_paths": [
+          "trend-detail.html?id=context-engineering"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-31"
+        }
+      ],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.07707v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07707v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-07-10</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2607.07707v1\" target=\"_blank\" rel=\"noopener noreferrer\">Co-LMLM: Continuous-Query Limited Memory Language Models</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 完成摘要与方法精读，重点理解连续键的表示方式与查询时机；随后设计一个最小实验：在现有 RAG 管线中模拟'多步连续检索 vs 单次前缀检索'的效果差异。</li>\n<li><strong>分数：</strong> 76.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2607.07707v1\" target=\"_blank\" rel=\"noopener noreferrer\">Co-LMLM: Continuous-Query Limited Memory Language Models</a>。</li>\n<li><strong>为什么值得看：</strong> 它把知识库检索从'生成前一次拼接'升级为'生成全程连续查询'，直击 LLM 知识可控性、可更新性与检索精度的核心痛点，与 Agent 记忆系统和 RAG 演进高度对齐。</li>\n<li><strong>它属于什么价值类型：</strong> 即时价值——架构模式清晰，可立即设计最小验证实验。</li>\n<li><strong>今天该做什么：</strong> 精读连续键的表示与查询机制，在现有 RAG 管线中模拟多步连续检索 vs 单次检索的差异。</li>\n<li><strong>最大不确定性：</strong> 暂无公开代码与 benchmark，实验可复现性和推理延迟的实际表现待核验。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.07707v1\" target=\"_blank\" rel=\"noopener noreferrer\">Co-LMLM: Continuous-Query Limited Memory Language Models</a></td><td>context-engineering / rag-knowledge</td><td>即时价值</td><td>76.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.07702v1\" target=\"_blank\" rel=\"noopener noreferrer\">From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization</a></td><td>ai-agent</td><td>即时价值</td><td>72.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.07706v1\" target=\"_blank\" rel=\"noopener noreferrer\">The Key to Going Linear: Analysis-Driven Transformer Linearization</a></td><td>inference-serving</td><td>趋势价值</td><td>68.0</td><td>轻量试点</td><td>否</td><td>否</td><td>否</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.07708v1\" target=\"_blank\" rel=\"noopener noreferrer\">Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning</a></td><td>rag-knowledge / llm-evaluation</td><td>趋势价值</td><td>63.0</td><td>持续观察</td><td>否</td><td>否</td><td>否</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.07696v1\" target=\"_blank\" rel=\"noopener noreferrer\">Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass</a></td><td>ai-agent / data-engineering</td><td>长尾价值</td><td>58.0</td><td>持续观察</td><td>否</td><td>否</td><td>否</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<h4>论文→理论→工程实践→趋势→启发→行动</h4>\n<p><strong>论文层面：</strong></p>\n<ul>\n<li>Co-LMLM 在 LMLM（有限记忆语言模型）范式上提出连续查询机制：KB 中连续键配对文本知识值，模型在生成时持续从 KB 检索，而非仅在输入前缀拼接知识。</li>\n</ul>\n<p><strong>理论层面：</strong></p>\n<ul>\n<li>核心理论假设：事实知识不必编码进权重，可外化到结构化 KB；检索的时序粒度（连续 vs 离散）直接影响知识利用的精确度。</li>\n<li>这呼应了 RAG 从'检索增强生成'向'检索交织生成'的范式迁移。</li>\n</ul>\n<p><strong>工程实践层面：</strong></p>\n<ul>\n<li>知识可控：KB 可独立更新、审计、版本管理，无需重新预训练。</li>\n<li>知识控制能力：可细粒度干预模型'知道什么'，超越传统 LLM。</li>\n<li>连续查询机制可直接启发 Agent 记忆层的设计——从'记忆检索 → 行动'两阶段走向'行动中持续调取记忆'。</li>\n</ul>\n<p><strong>趋势层面：</strong></p>\n<ul>\n<li>Memory-augmented LLM、知识外化、可控知识是当前上升方向。</li>\n<li>与 context engineering、long-context 效率优化形成互补：一个走'外部化精准检索'路线，一个走'扩大内部窗口'路线。</li>\n</ul>\n<p><strong>启发层面：</strong></p>\n<ul>\n<li>Agent 的记忆系统不应只在任务开始时检索一次，而应在推理全程根据中间状态持续查询。</li>\n<li>'连续键'概念可迁移到向量数据库设计：不仅存离散 chunk，还存连续表示以提高检索时序精度。</li>\n</ul>\n<p><strong>行动层面：</strong></p>\n<ul>\n<li>30 分钟：精读摘要与方法，记录连续键表示方式和查询触发条件。</li>\n<li>2 小时：在现有 RAG 管线中设计对照实验——多步连续检索 vs 单次前缀检索。</li>\n<li>1 周：若架构可行，提炼为 Agent 记忆层的设计模板并跟踪论文开源进展。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2607.07696v1\" target=\"_blank\" rel=\"noopener noreferrer\">Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI Agent 技术栈相关性有限。适合保存为长尾资产——其 Agentic 代码再生成范式可能在其他系统软件领域复用。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-07-31</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2607.07695v1\" target=\"_blank\" rel=\"noopener noreferrer\">Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.07693v1\" target=\"_blank\" rel=\"noopener noreferrer\">Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.07683v1\" target=\"_blank\" rel=\"noopener noreferrer\">ECGLight: Compute-Light Framework For Paper ECG Digitization and Myocardial Infarction Screening</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>系统设计启发</h4>\n<ul>\n<li>记忆层设计应从'一次性检索'走向'生成全程连续查询'，Co-LMLM 提供了连续键检索的架构参考。</li>\n<li>知识外化（KB）与权重内化并非二选一，而是可组合的混合架构——关键在检索粒度的设计。</li>\n</ul>\n<h4>Agent 工程启发</h4>\n<ul>\n<li>Agent 自改进流水线可借鉴论文 #4（轨迹因果分析）的方法：先诊断执行失败的结构性根因，再做策略优化，避免过拟合低价值失败。</li>\n<li>'连续查询'思路可迁移到 Agent 的工具调用决策——在执行过程中持续检索上下文而非仅在开始时加载。</li>\n</ul>\n<h4>研发流程启发</h4>\n<ul>\n<li>论文筛选的价值路由本身应作为评测对象：今天的 5 篇候选中，Co-LMLM（即时）和轨迹优化（即时）直接可试点，线性化（趋势）需持续观察，结构-性质（趋势）和数据库绕过（长尾）保存即可。</li>\n</ul>\n<h4>评测方法启发</h4>\n<ul>\n<li>结构-性质论文的跨领域 benchmark 设计提醒我们：评测框架本身是可复用资产，即使领域不直接相关。</li>\n</ul>\n<h4>平台工程启发</h4>\n<ul>\n<li>Jailbreak（数据库绕过）展示了 Agentic 代码生成在系统软件中的应用范式，未来可能扩展到基础设施自动化领域。</li>\n</ul>\n<h4>个人学习启发</h4>\n<ul>\n<li>优先投入能直接转化为架构模式或工程模板的论文（如 Co-LMLM 的连续查询），而非仅停留在概念理解。</li>\n</ul>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2607.07707v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2607.07707v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 轻量试点</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> 提出将事实知识外部化到知识库（KB）并用连续键检索的范式，从离散token级检索升级为生成全程的连续查询。工程价值高：知识可控、可审计、无需重训即可更新，直接对齐 Agent 记忆系统与 RAG 演进方向。证据上论文声称有实验验证但暂无公开代码（code_url 为空），工程可验证性依赖后续复现。综合判定为即时价值——架构模式清晰，可立即设计最小验证实验。</li>\n<li><strong>最大不确定性：</strong> 暂无公开代码与 benchmark（code_url/benchmark_url 均为空），实验细节与可复现性待核验；连续键的训练稳定性和推理延迟的实际表现尚不清楚。</li>\n<li><strong>下一步动作：</strong> 跟踪论文是否开源代码、是否被后续工作引用或进入 benchmark；若 7-14 天内出现开源实现，立即安排复现实验并评估纳入 Agent 记忆架构。</li>\n</ul>\n<p>> 生成时间：2026-07-10T04:33:25.295625</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
     "2026-07-07": {
       "date": "2026-07-07",
       "title": "论文价值发现日报 - 2026-07-07",
@@ -295,69 +587,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -496,7 +788,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-27"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -568,69 +881,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -767,7 +1080,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-26"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -1654,69 +1988,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -1855,7 +2189,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-19"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -1927,69 +2282,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -2128,7 +2483,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-18"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -3328,69 +3704,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -3523,7 +3899,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-13"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -3595,69 +3992,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -3796,7 +4193,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-12"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -3868,69 +4286,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -4063,7 +4481,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-11"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -4865,69 +5304,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -5068,7 +5507,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-04"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -6479,69 +6939,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -6674,7 +7134,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-28"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -6746,69 +7227,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -6946,7 +7427,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-27"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -7579,69 +8081,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -7755,7 +8257,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-23"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -8099,69 +8622,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -8275,7 +8798,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-21"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -8334,69 +8878,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -8530,7 +9074,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-20"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -13029,69 +13594,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -13205,7 +13770,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-02"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -13264,69 +13850,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -13440,7 +14026,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-01"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -15211,69 +15818,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -15407,7 +16014,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-25"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -15479,69 +16107,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -15677,7 +16305,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-24"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -16171,69 +16820,69 @@
       ],
       "candidate_papers": [
         {
-          "id": "program-as-weights-a-programming-paradigm-for-fuzzy-functions",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "detail_path": "paper-detail.html?id=program-as-weights-a-programming-paradigm-for-fuzzy-functions",
+          "id": "co-lmlm-continuous-query-limited-memory-language-models",
+          "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+          "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 85.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "online-safety-monitoring-for-llms",
-          "title": "Online Safety Monitoring for LLMs",
-          "detail_path": "paper-detail.html?id=online-safety-monitoring-for-llms",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 84.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "distributed-attacks-in-persistent-state-ai-control",
-          "title": "Distributed Attacks in Persistent-State AI Control",
-          "detail_path": "paper-detail.html?id=distributed-attacks-in-persistent-state-ai-control",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 80.0,
-          "decision": "重点学习",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": true
-        },
-        {
-          "id": "recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
-          "detail_path": "paper-detail.html?id=recontext-recursive-evidence-replay-as-llm-harness-for-long-context-reasoning",
-          "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 78.0,
+          "score": 76.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
-          "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
-          "detail_path": "paper-detail.html?id=lacuna-a-testbed-for-evaluating-localization-precision-for-llm-unlearning",
+          "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+          "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 72.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
+          "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+          "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 75.0,
+          "score": 68.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": true
+          "worth_deep_dive": false
+        },
+        {
+          "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+          "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 63.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 58.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
         }
       ],
       "deep_dive": {
@@ -16365,7 +17014,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+          "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+          "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-21"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],

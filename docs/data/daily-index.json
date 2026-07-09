@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-07T04:32:21.534939",
+  "updated_at": "2026-07-10T04:33:29.012844",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-10",
+      "title": "论文价值发现日报 - 2026-07-10",
+      "deep_dive_title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+      "deep_dive_url": "http://arxiv.org/abs/2607.07707v1",
+      "decision": "轻量试点",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成摘要与方法精读，重点理解连续键的表示方式与查询时机；随后设计一个最小实验：在现有 RAG 管线中模拟'多步连续检索 vs 单次前缀检索'的效果差异。",
+      "max_uncertainty": "暂无公开代码与 benchmark（code_url/benchmark_url 均为空），实验细节与可复现性待核验；连续键的训练稳定性和推理延迟的实际表现尚不清楚。",
+      "one_line_judgement": "它把知识库检索从'生成前一次拼接'升级为'生成全程连续查询'，直击 LLM 知识可控性、可更新性与检索精度的核心痛点，与 Agent 记忆系统和 RAG 演进高度对齐。",
+      "path": "daily-detail.html?date=2026-07-10"
+    },
     {
       "date": "2026-07-07",
       "title": "论文价值发现日报 - 2026-07-07",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-06-02"
-    },
-    {
-      "date": "2026-06-01",
-      "title": "论文价值发现日报 - 2026-06-01",
-      "deep_dive_title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
-      "deep_dive_url": "https://arxiv.org/abs/2605.30329v1",
-      "decision": "持续观察",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-01"
     }
   ]
 }
