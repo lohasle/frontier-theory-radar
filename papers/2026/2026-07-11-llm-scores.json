@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T04:31:00",
+  "model": "glm-5.1",
+  "methodology": "论文→理论→工程实践→趋势→启发→行动 六维推断",
+  "by_url": {
+    "http://arxiv.org/abs/2607.08768v1": {
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "score": 77.0,
+      "value_type": "immediate",
+      "matched_topics": ["ai-agent", "llm-evaluation", "multimodal-agent"],
+      "reason": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agent 架构设计有参考意义。证据上声称有实验验证但暂无公开代码/数据集（code_url/benchmark_url 均为空），可复现性待核验。综合判定为即时价值——评测框架设计可立即借鉴，任务分类法可转化为内部 Agent 测试用例模板。"
+    },
+    "http://arxiv.org/abs/2607.08754v1": {
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "score": 71.0,
+      "value_type": "immediate",
+      "matched_topics": ["inference-serving"],
+      "reason": "提出无需 SVD、无状态、不修改架构的训练时低秩正则化方法（SLORR），直接解决神经网络压缩的核心难题——现代模型对激进低秩分解不友好。工程价值明确：stateless 和无额外可训练参数的设计降低了实现复杂度和显存开销，可在现有训练管线中以正则项形式低成本接入。与 LoRA、量化等压缩技术形成互补。证据上暂无公开代码（code_url 为空），但方法描述清晰、实验声称验证了精度保持，工程可试点。综合判定为即时价值——方法可直接实现最小验证。"
+    },
+    "http://arxiv.org/abs/2607.08763v1": {
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "score": 66.0,
+      "value_type": "trend",
+      "matched_topics": ["multimodal-agent", "llm-evaluation"],
+      "reason": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩展到视觉时序模态，为多模态推理开辟新方向。工程实践层面的价值在于视频生成模型作为推理引擎的范式探索，可能与世界模型和具身智能形成交叉。但当前处于早期研究阶段，推理质量和效率的实验证据尚待核验（无公开代码），距离工程落地较远。综合判定为趋势价值——理论方向值得关注，需持续跟踪开源和后续工作。"
+    },
+    "http://arxiv.org/abs/2607.08758v1": {
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "score": 63.0,
+      "value_type": "trend",
+      "matched_topics": ["llm-evaluation", "rag-knowledge"],
+      "reason": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基因组学概念迁移到科学思想演化分析，提供了结构化的创意继承与重组模型。工程价值中等：benchmark 和 IdeaGene 框架可转化为 AI 辅助科研工具的评测资产，谱系推理方法可启发知识图谱和文献分析系统的设计。但领域偏向科学计量学，与核心 Agent/LLM 工程栈的直接相关性有限。综合判定为趋势价值——框架设计有启发意义，适合作为跨领域 benchmark 观察。"
+    },
+    "http://arxiv.org/abs/2607.08757v1": {
+      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
+      "score": 60.0,
+      "value_type": "trend",
+      "matched_topics": ["inference-serving"],
+      "reason": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（SDE 非爆炸性、各阶矩存在、路径空间全变差接近），对扩散模型训练和采样的工程实践有直接警示意义：仅优化前向 score 精度不足以保证采样质量。证据强度高（严格的数学构造和证明），但属于理论分析而非即用型方法，工程上的可操作性在于提供了新的评估维度。综合判定为趋势价值——理论洞察重要，需在自研扩散模型管线中加入轨迹稳定性检查。"
+    }
+  }
+}

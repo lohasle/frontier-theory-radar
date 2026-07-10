@@ -19,48 +19,48 @@
   ],
   "candidate_papers": [
     {
-      "id": "co-lmlm-continuous-query-limited-memory-language-models",
-      "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
-      "detail_path": "paper-detail.html?id=co-lmlm-continuous-query-limited-memory-language-models",
+      "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 76.0,
+      "score": 77.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
-      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
-      "detail_path": "paper-detail.html?id=from-noisy-traces-to-root-causes-structural-trajectory-analysis-and-causal-extraction-for-agent-optimization",
+      "id": "slorr-simple-and-efficient-in-training-low-rank-regularization",
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "detail_path": "paper-detail.html?id=slorr-simple-and-efficient-in-training-low-rank-regularization",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 72.0,
+      "score": 71.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "the-key-to-going-linear-analysis-driven-transformer-linearization",
-      "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
-      "detail_path": "paper-detail.html?id=the-key-to-going-linear-analysis-driven-transformer-linearization",
+      "id": "opencof-learning-to-reason-through-video-generation",
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 68.0,
+      "score": 66.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": false
     },
     {
-      "id": "accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
-      "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
-      "detail_path": "paper-detail.html?id=accurate-interdisciplinary-and-transparent-structure-property-understanding-with-deep-native-structural-reasoning",
+      "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
@@ -71,13 +71,13 @@
       "worth_deep_dive": false
     },
     {
-      "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
-      "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
-      "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
+      "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
+      "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
       "direction": "未分类",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 58.0,
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 60.0,
       "decision": "持续观察",
       "has_code": false,
       "has_benchmark": false,
@@ -213,28 +213,7 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [
-    {
-      "id": "breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
-      "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
-      "detail_path": "paper-detail.html?id=breaking-database-lock-in-agentic-regeneration-of-high-performance-storage-readers-for-database-bypass",
-      "why_save": "Jailbreak 方法绕过数据库引擎直接读取存储文件生成列式内存缓冲，并展示 Agentic 代码生成在系统软件中的应用。问题具体、思路有趣，但场景较窄（分析型数据库批量读取），与核心 AI",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "possible_use_cases": [
-        "Prompt 设计",
-        "Skill 草案",
-        "评测方法",
-        "架构模式"
-      ],
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist",
-        "评测方法"
-      ],
-      "revisit_date": "2026-05-21"
-    }
-  ],
+  "long_tail_saved": [],
   "ignore_reasons": [
     "暂无明确忽略样本，但忽略标准仍需保留。"
   ],

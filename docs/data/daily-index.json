@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-10T04:33:29.012844",
+  "updated_at": "2026-07-11T04:31:54.818088",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-11",
+      "title": "论文价值发现日报 - 2026-07-11",
+      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
+      "decision": "轻量试点",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。",
+      "max_uncertainty": "暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。",
+      "one_line_judgement": "它直击 Agent 评测的核心痛点——现有 benchmark 依赖沙箱、单轮、能力混合，无法评测真实环境中的主动式 Agent。提出真实环境+多轮交互+能力解耦的三维评测框架，是 Agent 质量保障基础设施的关键拼图。",
+      "path": "daily-detail.html?date=2026-07-11"
+    },
     {
       "date": "2026-07-10",
       "title": "论文价值发现日报 - 2026-07-10",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-06-03"
-    },
-    {
-      "date": "2026-06-02",
-      "title": "论文价值发现日报 - 2026-06-02",
-      "deep_dive_title": "[占位] 今日论文抓取失败或无新论文",
-      "deep_dive_url": "",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-02"
     }
   ]
 }
