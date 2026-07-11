@@ -1,24 +1,24 @@
 {
-  "updated_at": "2026-07-11T04:31:58.376157",
+  "updated_at": "2026-07-12T04:33:27.490057",
   "dailies": {
-    "2026-07-11": {
-      "date": "2026-07-11",
-      "title": "论文价值发现日报 - 2026-07-11",
+    "2026-07-12": {
+      "date": "2026-07-12",
+      "title": "论文价值发现日报 - 2026-07-12",
       "deep_dive_id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
       "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "decision": "轻量试点",
-      "daily_action": "精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。",
-      "score": 77.0,
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "decision": "重点学习",
+      "daily_action": "① 把 UniClawBench 的能力正交轴思路套到本团队 Agent eval 上做重构草案；② 在一条 SFT 流水线插入 SLORR 做最小 A/B；③ 给 RAG 语料预处理加一个 kNN 图社区发现的中间步骤。",
+      "score": 81.0,
       "trend_stage": "emerging",
-      "one_line_judgement": "今天值得试：针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评…",
-      "max_uncertainty": "暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。",
+      "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
+      "max_uncertainty": "主要不确定性：(1) 五篇均为 2026-07-09 新发，代码/数据集链接均暂缺（待核验），可复现性未验证；(2) UniClawBench 与 AUTOPILOT-VQA 的数据集规模与标注协议未明，将决定基准可信度；(3) SLORR 缺数十亿参数尺度证据，泛化性待验证；(4) fetch 阶段部分论文 keywords 被误标（如把理论论文标为 RAG），已手动修正分类。",
       "conclusion_lines": [
         "今天最值得看的是《UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks》。",
-        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
-        "今天建议动作：精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。。",
-        "最大不确定性：暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。。"
+        "它属于趋势价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：① 把 UniClawBench 的能力正交轴思路套到本团队 Agent eval 上做重构草案；② 在一条 SFT 流水线插入 SLORR 做最小 A/B；③ 给 RAG 语料预处理加一个 kNN 图社区发现的中间步骤。。",
+        "最大不确定性：主要不确定性：(1) 五篇均为 2026-07-09 新发，代码/数据集链接均暂缺（待核验），可复现性未验证；(2) UniClawBench 与 AUTOPILOT-VQA 的数据集规模与标注协议未明，将决定基准可信度；(3) SLORR 缺数十亿参数尺度证据，泛化性待验证；(4) fetch 阶段部分论文 keywords 被误标（如把理论论文标为 RAG），已手动修正分类。。"
       ],
       "candidate_papers": [
         {
@@ -26,10 +26,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -41,24 +41,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -67,24 +54,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -105,10 +105,10 @@
         "benchmark_url": "",
         "paperswithcode_url": "",
         "openreview_url": "",
-        "first_seen_date": "2026-07-11",
-        "first_deep_dive_daily": "2026-07-11",
-        "value_type": "immediate",
-        "value_type_label": "即时价值",
+        "first_seen_date": "2026-07-12",
+        "first_deep_dive_daily": "2026-07-12",
+        "value_type": "trend",
+        "value_type_label": "趋势价值",
         "value_scores": {
           "novelty": 4.8,
           "relevance": 7.4,
@@ -119,12 +119,12 @@
           "actionability": 5.0,
           "noise_risk": 1.2
         },
-        "score": 77.0,
-        "decision": "轻量试点",
-        "one_line_judgement": "今天值得试：针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评…",
-        "one_line_essence": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agent 架构设计有参考意义。证据上声称有实验验证但暂无公开代码/数据集（code_url/benchmark_url 均为空），可复现性待核验。综合判定为即时价值——评测框架设计可立即借鉴，任务分类法可转化为内部 Agent 测试用例模板。",
+        "score": 81.0,
+        "decision": "重点学习",
+        "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
+        "one_line_essence": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复现。属强趋势信号——主动式 Agent 评测正成为独立赛道，纳入趋势雷达连续观察。",
         "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-        "new_claim_or_method": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agen",
+        "new_claim_or_method": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复",
         "research_position": "benchmark",
         "engineering_testability": {
           "has_code": false,
@@ -151,9 +151,9 @@
           ]
         },
         "long_tail": {
-          "why_save": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当",
+          "why_save": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘",
           "future_trigger": [
-            "待更多证据"
+            "出现多篇跟进论文、开源项目和工程博客共振"
           ],
           "possible_use_cases": [
             "Prompt 设计",
@@ -191,12 +191,12 @@
           ]
         },
         "actions": {
-          "immediate_actions": [
-            "今天读摘要与方法",
-            "今天试最小实验",
-            "一周内沉淀为 Skill / Checklist"
+          "immediate_actions": [],
+          "trend_actions": [
+            "纳入趋势雷达",
+            "观察代码 / benchmark / 工程博客",
+            "7-30 天复盘"
           ],
-          "trend_actions": [],
           "long_tail_actions": [],
           "ignore_reason": ""
         },
@@ -211,7 +211,7 @@
           }
         ],
         "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
-        "daily_path": "daily-detail.html?date=2026-07-11",
+        "daily_path": "daily-detail.html?date=2026-07-12",
         "trend_paths": [
           "trend-detail.html?id=agentic-world-modeling",
           "trend-detail.html?id=coding-agent"
@@ -223,7 +223,322 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-08-02"
+        }
+      ],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "设置观察问题",
+          "周期复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08768v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08768v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-07-12</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2607.08768v1\" target=\"_blank\" rel=\"noopener noreferrer\">UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks</a></li>\n<li><strong>价值类型：</strong> 趋势价值</li>\n<li><strong>今日建议动作：</strong> ① 把 UniClawBench 的能力正交轴思路套到本团队 Agent eval 上做重构草案；② 在一条 SFT 流水线插入 SLORR 做最小 A/B；③ 给 RAG 语料预处理加一个 kNN 图社区发现的中间步骤。</li>\n<li><strong>分数：</strong> 81.0</li>\n<li><strong>趋势阶段：</strong> 上升</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> <a href=\"http://arxiv.org/abs/2607.08768v1\" target=\"_blank\" rel=\"noopener noreferrer\">UniClawBench</a>——主动式真实任务 Agent 的通用评测基准。</li>\n<li><strong>为什么值得看：</strong> 它直击 Agent 工程最大评测缺口，把评测从‘单能力点的聚合分数’重构为‘按能力正交分解的任务分类法’，让失败可被归因；对任何自研 Agent 团队都是可立刻对照的评测骨架。</li>\n<li><strong>它属于什么价值类型：</strong> 趋势价值（主动式 Agent 评测正成为独立赛道，需连续观察）。</li>\n<li><strong>今天该做什么：</strong> 先读其任务分类法设计，随后把自家 Agent eval 拆成能力正交轴做草案；并行在一条 SFT 流水线上最小试点 <a href=\"http://arxiv.org/abs/2607.08754v1\" target=\"_blank\" rel=\"noopener noreferrer\">SLORR</a>。</li>\n<li><strong>最大不确定性：</strong> 五篇均为新发，代码/数据集链接暂缺（待核验），UniClawBench 数据集规模与标注协议将决定基准可信度。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.08768v1\" target=\"_blank\" rel=\"noopener noreferrer\">UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks</a></td><td>ai-agent / llm-evaluation</td><td>趋势价值</td><td>81.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.08754v1\" target=\"_blank\" rel=\"noopener noreferrer\">SLORR: Simple and Efficient In-Training Low-Rank Regularization</a></td><td>inference-serving</td><td>即时价值</td><td>80.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.08758v1\" target=\"_blank\" rel=\"noopener noreferrer\">Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation</a></td><td>ai-agent / rag-knowledge</td><td>趋势价值</td><td>74.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.08745v1\" target=\"_blank\" rel=\"noopener noreferrer\">AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding</a></td><td>multimodal-agent / llm-evaluation</td><td>趋势价值</td><td>73.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.08746v1\" target=\"_blank\" rel=\"noopener noreferrer\">Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph</a></td><td>data-engineering / rag-knowledge</td><td>长尾价值</td><td>70.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 主动式 Agent 的评测应该让模型在某个能力轴上‘暴露失败’，而不是在总榜上‘拿高分’。</li>\n<li><strong>底层问题：</strong> 沙箱环境 + 单轮评测 + 场景混合分类，三者叠加让真实 Agent 的失败无法被定位到具体短板。</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 按‘能力正交轴’（规划/工具使用/多轮状态/环境感知/错误恢复）而非‘场景类别’组织任务分类法，使评测从聚合分数升级为可诊断剖面。</li>\n<li><strong>研究位置：</strong> 处于主动式 Agent 评测赛道 GAIA→WebArena→OSWorld 之后的‘新一代框架/分类法’阶段，尚未到大规模复现。</li>\n<li><strong>工程可验证性：</strong> 分类法思路可立刻在内部 eval 上验证（无需等开源）；完整基准复现需待数据集/代码开放（待核验）。</li>\n<li><strong>趋势关联：</strong> 评测范式正从‘端到端榜单’迁移到‘可诊断的能力剖面’，纳入趋势雷达连续观察。</li>\n<li><strong>长尾价值：</strong> 即使完整基准不开放，‘能力正交分解’这一评测设计模式也能长期复用为内部 eval 模板。</li>\n<li><strong>启发：</strong> 一个让 Agent 涨分的基准可能是有害的——真正有用的基准应该暴露失败、支持归因。</li>\n<li><strong>行动建议：</strong> 把本团队 Agent eval 重构为能力正交轴并记录每轴失败模式；待开源后用 UniClawBench 任务子集做内部对照；为每个能力轴建最小回归测试。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2607.08746v1\" target=\"_blank\" rel=\"noopener noreferrer\">Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> 指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensemaking），非大规模受控实验；作者含可视化领域资深研究者。属高资产转化率的长尾保存——即使短期不火，作为‘数据探索工具箱’可长期复用。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-08-02</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2607.08741v1\" target=\"_blank\" rel=\"noopener noreferrer\">ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.08756v1\" target=\"_blank\" rel=\"noopener noreferrer\">MulTTiPop: A Multitrack Transcription Dataset for Pop Music</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.08748v1\" target=\"_blank\" rel=\"noopener noreferrer\">Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>系统设计启发</h4>\n<ul>\n<li>评测系统设计的第一目标应从‘分数’转为‘可诊断性’：把能力正交切分，让失败可被归因到具体轴。</li>\n<li>把管线中间产物（如降维的 kNN 图）当作一等数据资产，而非丢弃的副产品。</li>\n</ul>\n<h4>Agent 工程启发</h4>\n<ul>\n<li>Agent 的真实瓶颈（多轮状态泄漏、工具误用、错误恢复）只有在多轮+跨环境评测里才会暴露，沙箱单轮评测会系统性掩盖它们。</li>\n<li>研究型 Agent 可升级为‘谱系约束生成’：每条建议带可溯源的思想血缘标签。</li>\n</ul>\n<h4>研发流程启发</h4>\n<ul>\n<li>把‘是否值得继续投入’本身作为评测对象；用能力剖面而非总分决定优先级。</li>\n<li>train-to-compress：把压缩/部署意图前移到训练阶段，而非训练后被动压缩。</li>\n</ul>\n<h4>评测方法启发</h4>\n<ul>\n<li>高风险子能力（事故推理、对抗、罕见事件）应从总榜切出做专项基准——平均分高在安全攸关场景毫无意义。</li>\n<li>用 kNN 图中心性做评测集分层抽样，比纯随机更能覆盖长尾。</li>\n</ul>\n<h4>平台工程启发</h4>\n<ul>\n<li>低秩正则化这类‘无 SVD、无状态、不改架构’的训练期增强，是最容易在现有平台上即插即用的成本优化。</li>\n<li>数据预处理管线应保留可复用的图中间表示，供社区发现/去重/巡检复用。</li>\n</ul>\n<h4>个人学习启发</h4>\n<ul>\n<li>优先读能形成‘评测设计模式’或‘部署可操作资产’的论文，而不是只追热点名词。</li>\n<li>警惕关键词误标：fetch 阶段把纯理论论文标为 RAG 是常见噪声，需按摘要实质重新分类。</li>\n</ul>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>纳入趋势雷达：</strong> 记录为需要连续观察的方向。</li>\n<li><strong>设置观察问题：</strong> 它是否会出现代码、benchmark、工程博客或多篇跟进论文？</li>\n<li><strong>连续观察周期：</strong> 7-30 天滚动复盘一次。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2607.08768v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2607.08768v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 趋势价值</li>\n<li><strong>原因：</strong> UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复现。属强趋势信号——主动式 Agent 评测正成为独立赛道，纳入趋势雷达连续观察。</li>\n<li><strong>最大不确定性：</strong> 主要不确定性：(1) 五篇均为 2026-07-09 新发，代码/数据集链接均暂缺（待核验），可复现性未验证；(2) UniClawBench 与 AUTOPILOT-VQA 的数据集规模与标注协议未明，将决定基准可信度；(3) SLORR 缺数十亿参数尺度证据，泛化性待验证；(4) fetch 阶段部分论文 keywords 被误标（如把理论论文标为 RAG），已手动修正分类。</li>\n<li><strong>下一步动作：</strong> 1) 持续跟踪今日五篇的代码/数据集开放（待核验），开源后立即做可复现性核验；2) 把‘能力正交轴评测’与‘train-to-compress’分别沉淀为 Skill/Checklist；3) 在趋势雷达页更新主动式 Agent 评测与训练期压缩两个观察条目。</li>\n</ul>\n<p>> 生成时间：2026-07-12T04:33:26.059731</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
+    "2026-07-11": {
+      "date": "2026-07-11",
+      "title": "论文价值发现日报 - 2026-07-11",
+      "deep_dive_id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "轻量试点",
+      "daily_action": "精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。",
+      "score": 81.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
+      "max_uncertainty": "暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。",
+      "conclusion_lines": [
+        "今天最值得看的是《UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。。",
+        "最大不确定性：暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+          "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+          "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "slorr-simple-and-efficient-in-training-low-rank-regularization",
+          "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+          "detail_path": "paper-detail.html?id=slorr-simple-and-efficient-in-training-low-rank-regularization",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 80.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
+          "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+          "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 74.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        }
+      ],
+      "deep_dive": {
+        "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+        "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+        "authors": [
+          "Zhekai Chen",
+          "Chengqi Duan",
+          "Kaiyue Sun",
+          "Bohao Li",
+          "Yuqing Wang"
+        ],
+        "source": "arXiv",
+        "published": "2026-07-09",
+        "url": "http://arxiv.org/abs/2607.08768v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08768v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-07-12",
+        "first_deep_dive_daily": "2026-07-12",
+        "value_type": "trend",
+        "value_type_label": "趋势价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 7.4,
+          "evidence": 5.4,
+          "engineering_testability": 4.05,
+          "trend_signal": 6.0,
+          "long_tail_potential": 3.5,
+          "actionability": 5.0,
+          "noise_risk": 1.2
+        },
+        "score": 81.0,
+        "decision": "重点学习",
+        "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
+        "one_line_essence": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复现。属强趋势信号——主动式 Agent 评测正成为独立赛道，纳入趋势雷达连续观察。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复",
+        "research_position": "benchmark",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "agentic-world-modeling",
+            "coding-agent"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘",
+          "future_trigger": [
+            "出现多篇跟进论文、开源项目和工程博客共振"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [],
+          "trend_actions": [
+            "纳入趋势雷达",
+            "观察代码 / benchmark / 工程博客",
+            "7-30 天复盘"
+          ],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2607.08768v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2607.08768v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+        "daily_path": "daily-detail.html?date=2026-07-12",
+        "trend_paths": [
+          "trend-detail.html?id=agentic-world-modeling",
+          "trend-detail.html?id=coding-agent"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-08-01"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -864,10 +1179,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -879,24 +1194,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -905,24 +1207,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -1061,7 +1376,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-27"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -1137,10 +1473,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -1152,24 +1488,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -1178,24 +1501,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -1332,7 +1668,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-26"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -2223,10 +2580,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -2238,24 +2595,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -2264,24 +2608,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -2420,7 +2777,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-19"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -2496,10 +2874,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -2511,24 +2889,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -2537,24 +2902,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -2693,7 +3071,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-18"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -3897,10 +4296,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -3912,24 +4311,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -3938,24 +4324,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -4088,7 +4487,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-13"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -4164,10 +4584,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -4179,24 +4599,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -4205,24 +4612,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -4361,7 +4781,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-12"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -4437,10 +4878,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -4452,24 +4893,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -4478,24 +4906,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -4628,7 +5069,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-11"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -5434,10 +5896,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -5449,24 +5911,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -5475,24 +5924,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -5633,7 +6095,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-07-04"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -7048,10 +7531,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -7063,24 +7546,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -7089,24 +7559,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -7239,7 +7722,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-28"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -7315,10 +7819,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -7330,24 +7834,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -7356,24 +7847,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -7511,7 +8015,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-27"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -8148,10 +8673,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -8163,24 +8688,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -8189,24 +8701,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -8320,7 +8845,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-23"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -8668,10 +9214,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -8683,24 +9229,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -8709,24 +9242,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -8840,7 +9386,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-21"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -8903,10 +9470,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -8918,24 +9485,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -8944,24 +9498,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -9095,7 +9662,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-20"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -13598,10 +14186,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -13613,24 +14201,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -13639,24 +14214,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -13770,7 +14358,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-02"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -13833,10 +14442,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -13848,24 +14457,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -13874,24 +14470,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -14005,7 +14614,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-06-01"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -15780,10 +16410,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -15795,24 +16425,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -15821,24 +16438,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -15972,7 +16602,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-25"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -16048,10 +16699,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -16063,24 +16714,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -16089,24 +16727,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -16242,7 +16893,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-24"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -16740,10 +17412,10 @@
           "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
           "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 77.0,
-          "decision": "轻量试点",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 81.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
@@ -16755,24 +17427,11 @@
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 71.0,
-          "decision": "轻量试点",
+          "score": 80.0,
+          "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
-        },
-        {
-          "id": "opencof-learning-to-reason-through-video-generation",
-          "title": "OpenCoF: Learning to Reason Through Video Generation",
-          "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-          "direction": "未分类",
-          "value_type": "trend",
-          "value_type_label": "趋势价值",
-          "score": 66.0,
-          "decision": "轻量试点",
-          "has_code": false,
-          "has_benchmark": false,
-          "worth_deep_dive": false
         },
         {
           "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
@@ -16781,24 +17440,37 @@
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 74.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
         },
         {
-          "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-          "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-          "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+          "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+          "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+          "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 60.0,
-          "decision": "持续观察",
+          "score": 73.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
-          "worth_deep_dive": false
+          "worth_deep_dive": true
+        },
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "direction": "未分类",
+          "value_type": "long_tail",
+          "value_type_label": "长尾价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
         }
       ],
       "deep_dive": {
@@ -16930,7 +17602,28 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [],
+      "long_tail_saved": [
+        {
+          "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+          "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+          "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "评测方法"
+          ],
+          "revisit_date": "2026-05-21"
+        }
+      ],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],

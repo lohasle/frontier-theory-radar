@@ -12,10 +12,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-11",
-  "first_deep_dive_daily": "2026-07-11",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-07-12",
+  "first_deep_dive_daily": "2026-07-12",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -26,12 +26,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 60.0,
-  "decision": "持续观察",
-  "one_line_judgement": "值得继续观察：通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘…",
-  "one_line_essence": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（SDE 非爆炸性、各阶矩存在、路径空间全变差接近），对扩散模型训练和采样的工程实践有直接警示意义：仅优化前向 score 精度不足以保证采样质量。证据强度高（严格的数学构造和证明），但属于理论分析而非即用型方法，工程上的可操作性在于提供了新的评估维度。综合判定为趋势价值——理论洞察重要，需在自研扩散模型管线中加入轨迹稳定性检查。",
+  "score": 33.5,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：RAG / 知识系统：Score matching controls average error under the forward mar…",
+  "one_line_essence": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（SDE 非爆炸性、各阶矩存在、路径空间全变差接近），对扩散模型训练和采样的工程实践有直接警示意义：仅优化前向 score 精度不足以保证采样质量。证据强度高（严格的数学构",
+  "new_claim_or_method": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -45,8 +45,10 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
-    "related_trends": [],
+    "status": "noise",
+    "related_trends": [
+      "context-engineering"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -55,9 +57,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（S",
+    "why_save": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -96,13 +98,9 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
-    ],
+    "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -115,8 +113,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-  "daily_path": "daily-detail.html?date=2026-07-11",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-07-12",
+  "trend_paths": [
+    "trend-detail.html?id=context-engineering"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

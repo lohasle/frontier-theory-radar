@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-11",
-  "first_deep_dive_daily": "2026-07-11",
-  "value_type": "immediate",
-  "value_type_label": "即时价值",
+  "first_seen_date": "2026-07-12",
+  "first_deep_dive_daily": "2026-07-12",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 7.4,
@@ -30,12 +30,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 77.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "今天值得试：针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评…",
-  "one_line_essence": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agent 架构设计有参考意义。证据上声称有实验验证但暂无公开代码/数据集（code_url/benchmark_url 均为空），可复现性待核验。综合判定为即时价值——评测框架设计可立即借鉴，任务分类法可转化为内部 Agent 测试用例模板。",
+  "score": 81.0,
+  "decision": "重点学习",
+  "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
+  "one_line_essence": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复现。属强趋势信号——主动式 Agent 评测正成为独立赛道，纳入趋势雷达连续观察。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agen",
+  "new_claim_or_method": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -62,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当",
+    "why_save": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,12 +102,12 @@
     ]
   },
   "actions": {
-    "immediate_actions": [
-      "今天读摘要与方法",
-      "今天试最小实验",
-      "一周内沉淀为 Skill / Checklist"
+    "immediate_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
     ],
-    "trend_actions": [],
     "long_tail_actions": [],
     "ignore_reason": ""
   },
@@ -122,7 +122,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
-  "daily_path": "daily-detail.html?date=2026-07-11",
+  "daily_path": "daily-detail.html?date=2026-07-12",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"

@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-11",
-  "first_deep_dive_daily": "2026-07-11",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-07-12",
+  "first_deep_dive_daily": "2026-07-12",
+  "value_type": "ignore",
+  "value_type_label": "暂时忽略",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 2.4
   },
-  "score": 66.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought …",
-  "one_line_essence": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩展到视觉时序模态，为多模态推理开辟新方向。工程实践层面的价值在于视频生成模型作为推理引擎的范式探索，可能与世界模型和具身智能形成交叉。但当前处于早期研究阶段，推理质量和效率的实验证据尚待核验（无公开代码），距离工程落地较远。综合判定为趋势价值——理论方向值得关注，需持续跟踪开源和后续工作。",
+  "score": 28.5,
+  "decision": "暂时忽略",
+  "one_line_judgement": "当前可忽略：前沿论文：Reasoning has become a core capability for large models, especial…",
+  "one_line_essence": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩展到视觉时序模态，为多模态推理开辟新方向。工程实践层面的价值在于视频生成模型作为推理引擎的范式探索，可能与世界模型和具身智能形成交叉。但当前处于早期研究阶段，推理质量和",
+  "new_claim_or_method": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,11 +49,8 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
-    "related_trends": [
-      "agentic-world-modeling",
-      "coding-agent"
-    ],
+    "status": "noise",
+    "related_trends": [],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -62,9 +59,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩",
+    "why_save": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -103,13 +100,9 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
-    ],
+    "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": ""
+    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
   },
   "references": [
     {
@@ -122,11 +115,8 @@
     }
   ],
   "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-  "daily_path": "daily-detail.html?date=2026-07-11",
-  "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling",
-    "trend-detail.html?id=coding-agent"
-  ],
+  "daily_path": "daily-detail.html?date=2026-07-12",
+  "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

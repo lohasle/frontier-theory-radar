@@ -15,10 +15,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-11",
-  "first_deep_dive_daily": "2026-07-11",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-12",
+  "first_deep_dive_daily": "2026-07-12",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
@@ -29,13 +29,13 @@
     "actionability": 5.0,
     "noise_risk": 2.4
   },
-  "score": 31.6,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：前沿论文：While UMAP is widely used for exploring high-dimensional data, ty…",
-  "one_line_essence": "前沿论文：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
+  "score": 70.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得先保存：指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。…",
+  "one_line_essence": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensemaking），非大规模受控实验；作者含可视化领域资深研究者。属高资产转化率的长尾保存——即使短期不火，作为‘数据探索工具箱’可长期复用。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "前沿论文：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
-  "research_position": "source_paper",
+  "new_claim_or_method": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensema",
+  "research_position": "long_tail_insight",
   "engineering_testability": {
     "has_code": false,
     "has_benchmark": false,
@@ -48,8 +48,10 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [],
+    "status": "long_tail_watch",
+    "related_trends": [
+      "context-engineering"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -58,9 +60,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "前沿论文：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
+    "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
     "future_trigger": [
-      "待更多证据"
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -75,7 +77,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": ""
+    "revisit_date": "2026-08-02"
   },
   "insights": {
     "system_design": [
@@ -100,8 +102,12 @@
   "actions": {
     "immediate_actions": [],
     "trend_actions": [],
-    "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
+    ],
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -114,8 +120,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-  "daily_path": "daily-detail.html?date=2026-07-11",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-07-12",
+  "trend_paths": [
+    "trend-detail.html?id=context-engineering"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

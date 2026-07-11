@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-11T04:31:54.818088",
+  "updated_at": "2026-07-12T04:33:26.325821",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-12",
+      "title": "论文价值发现日报 - 2026-07-12",
+      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
+      "decision": "重点学习",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "daily_action": "① 把 UniClawBench 的能力正交轴思路套到本团队 Agent eval 上做重构草案；② 在一条 SFT 流水线插入 SLORR 做最小 A/B；③ 给 RAG 语料预处理加一个 kNN 图社区发现的中间步骤。",
+      "max_uncertainty": "主要不确定性：(1) 五篇均为 2026-07-09 新发，代码/数据集链接均暂缺（待核验），可复现性未验证；(2) UniClawBench 与 AUTOPILOT-VQA 的数据集规模与标注协议未明，将决定基准可信度；(3) SLORR 缺数十亿参数尺度证据，泛化性待验证；(4) fetch 阶段部分论文 keywords 被误标（如把理论论文标为 RAG），已手动修正分类。",
+      "one_line_judgement": "它直击 Agent 工程最大评测缺口，把评测从‘单能力点的聚合分数’重构为‘按能力正交分解的任务分类法’，让失败可被归因；对任何自研 Agent 团队都是可立刻对照的评测骨架。",
+      "path": "daily-detail.html?date=2026-07-12"
+    },
     {
       "date": "2026-07-11",
       "title": "论文价值发现日报 - 2026-07-11",
@@ -378,19 +391,6 @@
       "max_uncertainty": "Curation-Bench 上通用 Agent 的具体表现数据待核验（摘要截断）；APB 在非多模态 Agent 上的适用性待确认；CHARM 框架的检测精度和延迟开销未知",
       "one_line_judgement": "直击 AI 开发中最昂贵的人工环节——训练数据策展。Curation-Bench 首次系统测试通用编程 Agent 能否自动化 propose→implement→evaluate→revise 数据策略闭环，固定模型/训练/评测、仅让 Agent 通过 CLI 自主迭代。如果结论肯定，将推动从人工策展到 Agent 自动策展的范式转变。",
       "path": "daily-detail.html?date=2026-06-05"
-    },
-    {
-      "date": "2026-06-03",
-      "title": "论文价值发现日报 - 2026-06-03",
-      "deep_dive_title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
-      "deep_dive_url": "http://arxiv.org/abs/2606.02568v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-03"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T04:31:57.455160",
+  "updated_at": "2026-07-12T04:33:26.703040",
   "papers": {
     "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks": {
       "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
@@ -19,10 +19,10 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
       "value_scores": {
         "novelty": 4.8,
         "relevance": 7.4,
@@ -33,12 +33,12 @@
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 77.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "今天值得试：针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评…",
-      "one_line_essence": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agent 架构设计有参考意义。证据上声称有实验验证但暂无公开代码/数据集（code_url/benchmark_url 均为空），可复现性待核验。综合判定为即时价值——评测框架设计可立即借鉴，任务分类法可转化为内部 Agent 测试用例模板。",
+      "score": 81.0,
+      "decision": "重点学习",
+      "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
+      "one_line_essence": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复现。属强趋势信号——主动式 Agent 评测正成为独立赛道，纳入趋势雷达连续观察。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当前最稀缺的基础设施之一，真实环境多轮交互的评测设计直接可用于自研 Agent 系统的回归测试和质量门禁。任务分类法将多种模型能力解耦到不同任务类别，方法论上对 Agen",
+      "new_claim_or_method": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复",
       "research_position": "benchmark",
       "engineering_testability": {
         "has_code": false,
@@ -65,9 +65,9 @@
         ]
       },
       "long_tail": {
-        "why_save": "针对主动式 Agent（proactive agents）在真实环境中的评测提出统一基准，解决现有 benchmark 依赖沙箱环境和单轮评测范式的核心痛点。工程价值极高：Agent 评测是当",
+        "why_save": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘",
         "future_trigger": [
-          "待更多证据"
+          "出现多篇跟进论文、开源项目和工程博客共振"
         ],
         "possible_use_cases": [
           "Prompt 设计",
@@ -105,12 +105,12 @@
         ]
       },
       "actions": {
-        "immediate_actions": [
-          "今天读摘要与方法",
-          "今天试最小实验",
-          "一周内沉淀为 Skill / Checklist"
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
         ],
-        "trend_actions": [],
         "long_tail_actions": [],
         "ignore_reason": ""
       },
@@ -125,7 +125,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=coding-agent"
@@ -152,8 +152,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "value_scores": {
@@ -166,12 +166,12 @@
         "actionability": 3.8,
         "noise_risk": 2.4
       },
-      "score": 71.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "今天值得试：提出无需 SVD、无状态、不修改架构的训练时低秩正则化方法（SLORR），直接解决神经网络压缩的核心难题——现代模型对激进低秩分解不友好。工…",
-      "one_line_essence": "提出无需 SVD、无状态、不修改架构的训练时低秩正则化方法（SLORR），直接解决神经网络压缩的核心难题——现代模型对激进低秩分解不友好。工程价值明确：stateless 和无额外可训练参数的设计降低了实现复杂度和显存开销，可在现有训练管线中以正则项形式低成本接入。与 LoRA、量化等压缩技术形成互补。证据上暂无公开代码（code_url 为空），但方法描述清晰、实验声称验证了精度保持，工程可试点。综合判定为即时价值——方法可直接实现最小验证。",
+      "score": 80.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插…",
+      "one_line_essence": "SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插即用’提升模型对低秩分解的友好度，从而降低压缩后的精度损失。对推理成本敏感的部署场景（边缘、高并发）有直接操作价值。证据强度偏中上：方法设计明确且消融了与 SVD 类正则化器的对比，但 2026-07 新发，缺少跨大模型尺度（数十亿以上）验证与开源代码（待核验）。按即时价值试点：可在自有 SFT/预训练流水线做最小插入实验。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "提出无需 SVD、无状态、不修改架构的训练时低秩正则化方法（SLORR），直接解决神经网络压缩的核心难题——现代模型对激进低秩分解不友好。工程价值明确：stateless 和无额外可训练参数的设计降低了实现复杂度和显存开销，可在现有训练管线中以正则项形式低成本接入。与 LoRA、量化等压缩技术形成互补。证据上暂无公开代码（code_url 为空），但方法描述",
+      "new_claim_or_method": "SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插即用’提升模型对低秩分解的友好度，从而降低压缩后的精度损失。对推理成本敏感的部署场景（边缘、高并发）有直接操作价值。证据强度偏中上：方法设计明确且消融了与 SVD 类正则化器的对比，但 2026-07 新发，缺少跨大模型",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -195,7 +195,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "提出无需 SVD、无状态、不修改架构的训练时低秩正则化方法（SLORR），直接解决神经网络压缩的核心难题——现代模型对激进低秩分解不友好。工程价值明确：stateless 和无额外可训练参数的",
+        "why_save": "SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插即用’提升模型对低秩分解的友好度，从而降低压缩后的精",
         "future_trigger": [
           "待更多证据"
         ],
@@ -255,144 +255,8 @@
         }
       ],
       "detail_path": "paper-detail.html?id=slorr-simple-and-efficient-in-training-low-rank-regularization",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "opencof-learning-to-reason-through-video-generation": {
-      "id": "opencof-learning-to-reason-through-video-generation",
-      "title": "OpenCoF: Learning to Reason Through Video Generation",
-      "authors": [
-        "Xinyan Chen",
-        "Ziyu Guo",
-        "Renrui Zhang",
-        "Dongzhi Jiang",
-        "Hongsheng Li"
-      ],
-      "source": "arXiv",
-      "published": "2026-07-09",
-      "url": "http://arxiv.org/abs/2607.08763v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08763v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 2.4
-      },
-      "score": 66.0,
-      "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought …",
-      "one_line_essence": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩展到视觉时序模态，为多模态推理开辟新方向。工程实践层面的价值在于视频生成模型作为推理引擎的范式探索，可能与世界模型和具身智能形成交叉。但当前处于早期研究阶段，推理质量和效率的实验证据尚待核验（无公开代码），距离工程落地较远。综合判定为趋势价值——理论方向值得关注，需持续跟踪开源和后续工作。",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩展到视觉时序模态，为多模态推理开辟新方向。工程实践层面的价值在于视频生成模型作为推理引擎的范式探索，可能与世界模型和具身智能形成交叉。但当前处于早期研究阶段，推理质量和",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "emerging",
-        "related_trends": [
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "提出 Chain-of-Frame (CoF) 推理范式——通过时序连接的视频帧序列展开推理过程，区别于 Chain-of-Thought 的文本推理路径。理论贡献新颖：将推理能力从语言模态扩",
-        "future_trigger": [
-          "出现多篇跟进论文、开源项目和工程博客共振"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [
-          "纳入趋势雷达",
-          "观察代码 / benchmark / 工程博客",
-          "7-30 天复盘"
-        ],
-        "long_tail_actions": [],
-        "ignore_reason": ""
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08763v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08763v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-      "daily_path": "daily-detail.html?date=2026-07-11",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
-      ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
         "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
@@ -418,8 +282,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -432,12 +296,12 @@
         "actionability": 5.0,
         "noise_risk": 1.2
       },
-      "score": 63.0,
-      "decision": "持续观察",
-      "one_line_judgement": "值得继续观察：提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理…",
-      "one_line_essence": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基因组学概念迁移到科学思想演化分析，提供了结构化的创意继承与重组模型。工程价值中等：benchmark 和 IdeaGene 框架可转化为 AI 辅助科研工具的评测资产，谱系推理方法可启发知识图谱和文献分析系统的设计。但领域偏向科学计量学，与核心 Agent/LLM 工程栈的直接相关性有限。综合判定为趋势价值——框架设计有启发意义，适合作为跨领域 benchmark 观察。",
+      "score": 74.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能…",
+      "one_line_essence": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，且与 RAG/知识图谱、研究型 Agent、合成数据构造三条主线相关。证据强度中等：提供基准与框架，但‘思想基因组’的分解粒度本身带有主观性，跨领域泛化待核验。更偏趋势资产——它指向‘AI 科研助手需要理解思想血缘’这一方向，适合沉淀为研究型 Agent 的评测维度。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基因组学概念迁移到科学思想演化分析，提供了结构化的创意继承与重组模型。工程价值中等：benchmark 和 IdeaGene 框架可转化为 AI 辅助科研工具的评测资产，",
+      "new_claim_or_method": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，且与 RAG/知识图谱、研究型 Agent、合成数据构造三条主线相关。证据强度中等：提供基准与框架，但‘思想基因组’的分解粒度本身带有主观性，跨领域泛化待核验。更偏趋势",
       "research_position": "benchmark",
       "engineering_testability": {
         "has_code": false,
@@ -453,8 +317,9 @@
       "trend_relation": {
         "status": "emerging",
         "related_trends": [
-          "coding-agent",
-          "context-engineering"
+          "agentic-world-modeling",
+          "context-engineering",
+          "coding-agent"
         ],
         "evidence": [
           "论文主题匹配固定研究方向"
@@ -464,7 +329,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基",
+        "why_save": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -524,10 +389,11 @@
         }
       ],
       "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [
-        "trend-detail.html?id=coding-agent",
-        "trend-detail.html?id=context-engineering"
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=context-engineering",
+        "trend-detail.html?id=coding-agent"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -536,41 +402,45 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling": {
-      "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
+    "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding": {
+      "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
       "authors": [
-        "Yiwei Zhou"
+        "Siddharth Damodharan",
+        "Radhika Gupta",
+        "Ali Alshami",
+        "Ryan Rabinowitz",
+        "Jugal Kalita"
       ],
       "source": "arXiv",
       "published": "2026-07-09",
-      "url": "http://arxiv.org/abs/2607.08757v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08757v1",
+      "url": "http://arxiv.org/abs/2607.08745v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08745v1",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
         "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
+        "relevance": 6.2,
+        "evidence": 4.95,
         "engineering_testability": 3.5,
-        "trend_signal": 3.5,
+        "trend_signal": 5.45,
         "long_tail_potential": 3.5,
         "actionability": 3.8,
         "noise_risk": 1.2
       },
-      "score": 60.0,
-      "decision": "持续观察",
-      "one_line_judgement": "值得继续观察：通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘…",
-      "one_line_essence": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（SDE 非爆炸性、各阶矩存在、路径空间全变差接近），对扩散模型训练和采样的工程实践有直接警示意义：仅优化前向 score 精度不足以保证采样质量。证据强度高（严格的数学构造和证明），但属于理论分析而非即用型方法，工程上的可操作性在于提供了新的评估维度。综合判定为趋势价值——理论洞察重要，需在自研扩散模型管线中加入轨迹稳定性检查。",
+      "score": 73.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安…",
+      "one_line_essence": "AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安全治理、多模态 Agent 与具身评测的团队是直接可对照的基准思路。证据强度中等：围绕真实行车录像构建事故中心化问答，但规模与标注协议细节、数据集开放性（待核验）将决定其可复现性。作为趋势信号价值高——安全攸关多模态评测正从‘通用能力榜’走向‘高风险子能力专项榜’。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（SDE 非爆炸性、各阶矩存在、路径空间全变差接近），对扩散模型训练和采样的工程实践有直接警示意义：仅优化前向 score 精度不足以保证采样质量。证据强度高（严格的数学构",
-      "research_position": "source_paper",
+      "new_claim_or_method": "AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安全治理、多模态 Agent 与具身评测的团队是直接可对照的基准思路。证据强度中等：围绕真实行车录像构建事故中心化问答，但规模与标注协议细节、数据集开放性（待核验）将决定其可复现性。作为趋势信号价值高——安全攸关多模态评测",
+      "research_position": "benchmark",
       "engineering_testability": {
         "has_code": false,
         "has_benchmark": false,
@@ -584,7 +454,10 @@
       },
       "trend_relation": {
         "status": "emerging",
-        "related_trends": [],
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
         "evidence": [
           "论文主题匹配固定研究方向"
         ],
@@ -593,7 +466,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "通过构造性证明揭示扩散模型的一个根本性理论盲区：前向边缘分布上的 score 误差小，并不能保证逆向采样过程的数值稳定性。构造了一个前向边缘误差任意小但逆向采样轨迹发散的反例。理论贡献扎实（S",
+        "why_save": "AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安全治理、多模态 Agent 与具身评测的团队是直接可",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -645,16 +518,152 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08757v1"
+          "url": "http://arxiv.org/abs/2607.08745v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08757v1"
+          "url": "https://arxiv.org/pdf/2607.08745v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-      "daily_path": "daily-detail.html?date=2026-07-11",
-      "trend_paths": [],
+      "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+      "daily_path": "daily-detail.html?date=2026-07-12",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph": {
+      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+      "authors": [
+        "Duen Horng Chau",
+        "Donghao Ren",
+        "Fred Hohman",
+        "Dominik Moritz"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-09",
+      "url": "http://arxiv.org/abs/2607.08746v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08746v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 2.4
+      },
+      "score": 70.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得先保存：指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。…",
+      "one_line_essence": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensemaking），非大规模受控实验；作者含可视化领域资深研究者。属高资产转化率的长尾保存——即使短期不火，作为‘数据探索工具箱’可长期复用。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensema",
+      "research_position": "long_tail_insight",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "long_tail_watch",
+        "related_trends": [
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+        "future_trigger": [
+          "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": "2026-08-02"
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [
+          "加入长尾库",
+          "标注未来触发条件",
+          "先沉淀 Prompt / Skill 草案"
+        ],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08746v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08746v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+      "daily_path": "daily-detail.html?date=2026-07-12",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering"
+      ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
         "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
@@ -680,8 +689,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -781,141 +790,9 @@
         }
       ],
       "detail_path": "paper-detail.html?id=ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding": {
-      "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
-      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-      "authors": [
-        "Siddharth Damodharan",
-        "Radhika Gupta",
-        "Ali Alshami",
-        "Ryan Rabinowitz",
-        "Jugal Kalita"
-      ],
-      "source": "arXiv",
-      "published": "2026-07-09",
-      "url": "http://arxiv.org/abs/2607.08745v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08745v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 6.2,
-        "evidence": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 5.45,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 1.2
-      },
-      "score": 39.8,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：Multimodal Agent：Recent advances in Vision-Language Models, Large Lang…",
-      "one_line_essence": "Multimodal Agent：Recent advances in Vision-Language Models, Large Language Models, and Multimod…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Multimodal Agent：Recent advances in Vision-Language Models, Large Language Models, and Multimod…",
-      "research_position": "benchmark",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "Multimodal Agent：Recent advances in Vision-Language Models, Large Language Models, and Multimod…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08745v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08745v1"
-        }
-      ],
-      "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
-      "daily_path": "daily-detail.html?date=2026-07-11",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -942,8 +819,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1043,7 +920,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=multtipop-a-multitrack-transcription-dataset-for-pop-music",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [
         "trend-detail.html?id=coding-agent"
       ],
@@ -1070,8 +947,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1171,7 +1048,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=using-ai-based-learning-assistants-in-higher-education-a-large-scale-descriptive-analysis",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [
         "trend-detail.html?id=context-engineering"
       ],
@@ -1182,43 +1059,40 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph": {
-      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+    "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling": {
+      "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
       "authors": [
-        "Duen Horng Chau",
-        "Donghao Ren",
-        "Fred Hohman",
-        "Dominik Moritz"
+        "Yiwei Zhou"
       ],
       "source": "arXiv",
       "published": "2026-07-09",
-      "url": "http://arxiv.org/abs/2607.08746v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08746v1",
+      "url": "http://arxiv.org/abs/2607.08757v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08757v1",
       "code_url": "",
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-11",
-      "first_deep_dive_daily": "2026-07-11",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
         "novelty": 4.8,
-        "relevance": 3.8,
+        "relevance": 5.0,
         "evidence": 4.5,
-        "engineering_testability": 4.05,
+        "engineering_testability": 3.5,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 2.4
+        "actionability": 3.8,
+        "noise_risk": 1.2
       },
-      "score": 31.6,
+      "score": 33.5,
       "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：前沿论文：While UMAP is widely used for exploring high-dimensional data, ty…",
-      "one_line_essence": "前沿论文：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
+      "one_line_judgement": "当前可忽略：RAG / 知识系统：Score matching controls average error under the forward mar…",
+      "one_line_essence": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "前沿论文：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
+      "new_claim_or_method": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -1233,7 +1107,9 @@
       },
       "trend_relation": {
         "status": "noise",
-        "related_trends": [],
+        "related_trends": [
+          "context-engineering"
+        ],
         "evidence": [
           "论文主题匹配固定研究方向"
         ],
@@ -1242,7 +1118,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "前沿论文：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
+        "why_save": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
         "future_trigger": [
           "待更多证据"
         ],
@@ -1290,15 +1166,143 @@
       "references": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08746v1"
+          "url": "http://arxiv.org/abs/2607.08757v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08746v1"
+          "url": "https://arxiv.org/pdf/2607.08757v1"
         }
       ],
-      "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "daily_path": "daily-detail.html?date=2026-07-11",
+      "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+      "daily_path": "daily-detail.html?date=2026-07-12",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "opencof-learning-to-reason-through-video-generation": {
+      "id": "opencof-learning-to-reason-through-video-generation",
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "authors": [
+        "Xinyan Chen",
+        "Ziyu Guo",
+        "Renrui Zhang",
+        "Dongzhi Jiang",
+        "Hongsheng Li"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-09",
+      "url": "http://arxiv.org/abs/2607.08763v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08763v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-12",
+      "first_deep_dive_daily": "2026-07-12",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：前沿论文：Reasoning has become a core capability for large models, especial…",
+      "one_line_essence": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08763v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08763v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
+      "daily_path": "daily-detail.html?date=2026-07-12",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {

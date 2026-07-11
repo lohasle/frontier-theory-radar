@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-11",
-  "first_deep_dive_daily": "2026-07-11",
+  "first_seen_date": "2026-07-12",
+  "first_deep_dive_daily": "2026-07-12",
   "value_type": "trend",
   "value_type_label": "趋势价值",
   "value_scores": {
@@ -30,12 +30,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 63.0,
-  "decision": "持续观察",
-  "one_line_judgement": "值得继续观察：提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理…",
-  "one_line_essence": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基因组学概念迁移到科学思想演化分析，提供了结构化的创意继承与重组模型。工程价值中等：benchmark 和 IdeaGene 框架可转化为 AI 辅助科研工具的评测资产，谱系推理方法可启发知识图谱和文献分析系统的设计。但领域偏向科学计量学，与核心 Agent/LLM 工程栈的直接相关性有限。综合判定为趋势价值——框架设计有启发意义，适合作为跨领域 benchmark 观察。",
+  "score": 74.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能…",
+  "one_line_essence": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，且与 RAG/知识图谱、研究型 Agent、合成数据构造三条主线相关。证据强度中等：提供基准与框架，但‘思想基因组’的分解粒度本身带有主观性，跨领域泛化待核验。更偏趋势资产——它指向‘AI 科研助手需要理解思想血缘’这一方向，适合沉淀为研究型 Agent 的评测维度。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基因组学概念迁移到科学思想演化分析，提供了结构化的创意继承与重组模型。工程价值中等：benchmark 和 IdeaGene 框架可转化为 AI 辅助科研工具的评测资产，",
+  "new_claim_or_method": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，且与 RAG/知识图谱、研究型 Agent、合成数据构造三条主线相关。证据强度中等：提供基准与框架，但‘思想基因组’的分解粒度本身带有主观性，跨领域泛化待核验。更偏趋势",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -51,8 +51,9 @@
   "trend_relation": {
     "status": "emerging",
     "related_trends": [
-      "coding-agent",
-      "context-engineering"
+      "agentic-world-modeling",
+      "context-engineering",
+      "coding-agent"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -62,7 +63,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "提出 IdeaGene 框架和 IG-Bench，将科学论文表示为最小可组合的思想基因组（idea genes），评测 AI 在科学谱系推理和谱系驱动的创意生成上的能力。理论框架新颖：将生物基",
+    "why_save": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，",
     "future_trigger": [
       "出现多篇跟进论文、开源项目和工程博客共振"
     ],
@@ -122,10 +123,11 @@
     }
   ],
   "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-  "daily_path": "daily-detail.html?date=2026-07-11",
+  "daily_path": "daily-detail.html?date=2026-07-12",
   "trend_paths": [
-    "trend-detail.html?id=coding-agent",
-    "trend-detail.html?id=context-engineering"
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=context-engineering",
+    "trend-detail.html?id=coding-agent"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
