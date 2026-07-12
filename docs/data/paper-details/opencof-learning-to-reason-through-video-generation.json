@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 2.4
   },
-  "score": 28.5,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：前沿论文：Reasoning has become a core capability for large models, especial…",
-  "one_line_essence": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
+  "score": 69.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序…",
+  "one_line_essence": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时空序列；工程实践层面，当前更偏探索性，需验证生成视频帧能否真正编码因果推理而非只是视觉插值；趋势层面，多模态推理正从'看图回答'走向'用视觉序列推理'，值得长期跟踪。证据以论文自述为主，无代码，方法新颖但落地路径不清晰，偏向趋势观察而非即时工程。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
+  "new_claim_or_method": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时空序列；工程实践层面，当前更偏探索性，需验证生成视频帧能否真正编码因果推理而非只是视觉插值；趋势层面，多模态推理正从'看图回答'走向'用视觉序列推理'，值得长期跟踪。证",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,8 +49,11 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [],
+    "status": "emerging",
+    "related_trends": [
+      "agentic-world-modeling",
+      "coding-agent"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -59,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "前沿论文：Reasoning has become a core capability for large models, especially when relia…",
+    "why_save": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -100,9 +103,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -115,8 +122,11 @@
     }
   ],
   "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
-  "daily_path": "daily-detail.html?date=2026-07-12",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-07-13",
+  "trend_paths": [
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=coding-agent"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

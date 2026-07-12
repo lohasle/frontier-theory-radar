@@ -1,0 +1,644 @@
+{
+  "date": "2026-07-13",
+  "total": 10,
+  "generated_at": "2026-07-13T04:31:01.419400",
+  "papers": [
+    {
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "authors": [
+        "Zhekai Chen",
+        "Chengqi Duan",
+        "Kaiyue Sun",
+        "Bohao Li",
+        "Yuqing Wang"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08768v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08768v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single-turn evaluation paradigms. Moreover, their scenario-based task taxonomies mix multiple model capabilities within the same task category, making it diff",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 84.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08768v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08768v1"
+        }
+      ],
+      "llm_reason": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将 Agent 能力从'单轮问答'重新定义为'多轮主动任务执行'，提出了按能力而非场景的任务分类法；工程实践层面，该 benchmark 可直接用于评估自家 Agent 产品在真实工具链上的可靠性与鲁棒性；趋势层面，Agent 评测正从静态数据集走向真实环境多轮评估，这是 2026 年确定性方向。证据以论文自述为主，无代码/benchmark 链接待核验，但方法描述清晰，可立即开始对标分析。",
+      "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.05,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "authors": [
+        "David González-Martínez",
+        "Shiwei Liu"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08754v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08754v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-time low-rank regularizers can improve compressibility, but they often require SVDs of large weight matrices, modify the model architecture (introducing additional trainable parameters), or rely on stateful cached quantities. To address these limitations, we introduce SLORR, a simple, stateless, and ",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08754v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08754v1"
+        }
+      ],
+      "llm_reason": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程中自然趋向低秩，无需额外参数；工程实践层面，可直接集成到现有训练 pipeline 中提升模型可压缩性，尤其适合边缘部署场景；趋势层面，模型压缩与高效推理是基础设施瓶颈的持续需求。方法简洁、工程门槛低，但缺少代码链接和外部 benchmark 验证，需自行 PoC 确认精度-压缩 Pareto。",
+      "id": "slorr-simple-and-efficient-in-training-low-rank-regularization",
+      "value_type": "immediate",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
+      "authors": [
+        "Yiwei Zhou"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08757v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08757v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Score matching controls average error under the forward marginals, but a discretized reverse-time sampler evaluates the learned score along its own trajectory. We show that small forward-marginal error does not guarantee numerical stability. We construct a single smooth score field with arbitrarily small forward-marginal $L^2$ error. The learned reverse-time process is nonexplosive, has moments of every order, and can be arbitrarily close to the exact reverse-time process in path-space total var",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.NA",
+        "math.PR"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 73.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08757v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08757v1"
+        }
+      ],
+      "llm_reason": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-based 生成模型的理论保证与工程实践之间的裂缝——训练损失低不等于采样稳定；工程实践层面，这直接影响任何部署扩散模型时采样器选择、步数设置和误差容忍度的决策依据；趋势层面，扩散模型的理论严谨性分析正在增多，预示着该领域从'堆效果'走向'理解边界'。纯理论论文，无代码，但数学证明本身即为强证据，适合纳入推理服务可靠性知识库。",
+      "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+      "authors": [
+        "Kaifeng Zhao",
+        "Mathis Petrovich",
+        "Haotian Zhang",
+        "Tingwu Wang",
+        "Siyu Tang"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08741v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08741v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Generating realistic 3D human motions in real-time within interactive applications is key for animation, simulation, and humanoid robotics. While recent offline motion generation approaches offer precise control via text and kinematic constraints, they lack the inference speed required for interactive settings. Conversely, existing online methods enable real-time synthesis but often sacrifice controllability or struggle with complex text semantics and long-horizon goals due to limited context wi",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "inference"
+      ],
+      "score": 71.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08741v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08741v1"
+        }
+      ],
+      "llm_reason": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的自回归扩散框架；工程实践层面，对动画、仿真和拟人机器人控制有直接应用价值，实时推理是核心卖点；趋势层面，扩散模型从静态生成走向交互式实时生成是一条明确技术线。作者团队有较强背景（ETH 系列），但无代码链接，需核验推理延迟数据。",
+      "id": "ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "authors": [
+        "Xinyan Chen",
+        "Ziyu Guo",
+        "Renrui Zhang",
+        "Dongzhi Jiang",
+        "Hongsheng Li"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08763v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08763v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct from previous Chain-of-Thought (CoT): reasoning can unfold through temporally connected frames, known as Chain-of-Frame (CoF) reasoning. However, existing video generators are primarily trained on general video corpora, still lacking diverse supervision and dedicated designs for CoF reasoning. To add",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 69.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08763v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08763v1"
+        }
+      ],
+      "llm_reason": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时空序列；工程实践层面，当前更偏探索性，需验证生成视频帧能否真正编码因果推理而非只是视觉插值；趋势层面，多模态推理正从'看图回答'走向'用视觉序列推理'，值得长期跟踪。证据以论文自述为主，无代码，方法新颖但落地路径不清晰，偏向趋势观察而非即时工程。",
+      "id": "opencof-learning-to-reason-through-video-generation",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "authors": [
+        "Yifan Zhou",
+        "Qihao Yang",
+        "Yan Li",
+        "Donggang Li",
+        "Xiru Hu"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08758v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08758v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation. IG-Bench is organized around the IdeaGene framework: each paper or proposal is represented as a set of minimal,",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 58.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08758v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08758v1"
+        }
+      ],
+      "llm_reason": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践层面，对自动化文献综述和科研辅助 Agent 有参考价值，但短期内无直接工程产出；长尾层面，其'论文基因组'抽象可沉淀为知识图谱设计方法论。证据为 benchmark 设计自述，泛化到通用工程场景的价值有限。",
+      "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.6,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+      "authors": [
+        "Siddharth Damodharan",
+        "Radhika Gupta",
+        "Ali Alshami",
+        "Ryan Rabinowitz",
+        "Jugal Kalita"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08745v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08745v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reason about safety-critical incidents remains challenging. To address this gap, we present AUTOPILOT-VQA, an incident-centric visual question answering benchmark for dashcam video understanding. The data",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 55.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08745v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08745v1"
+        }
+      ],
+      "llm_reason": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM 在安全关键场景的推理评测框架，可借鉴其事故分类与评测设计。无代码链接，证据以论文自述为主。",
+      "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+      "authors": [
+        "Duen Horng Chau",
+        "Donghao Ren",
+        "Fred Hohman",
+        "Dominik Moritz"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08746v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08746v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "While UMAP is widely used for exploring high-dimensional data, typical workflows focus on its lower-dimensional embedding, largely overlooking the rich k-nearest-neighbor (kNN) graph that UMAP constructs internally. This graph encodes the data manifold in its original high-dimensional space, before the distortion that UMAP's 2D projection introduces. We demonstrate the untapped potential of this internal representation, showing how standard graph algorithms applied to this graph enhance data sen",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.DS",
+        "cs.HC"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 52.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08746v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08746v1"
+        }
+      ],
+      "llm_reason": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen Horng Chau 等），方法描述清晰但无代码，对核心 AI 基础设施工程价值有限。",
+      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis",
+      "authors": [
+        "Kristina Schaaff",
+        "Quintus Stierstorfer",
+        "Valerie Heckel"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08748v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08748v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In this study, we present a large-scale descriptive analysis of the use of an AI-based learning assistant (Syntea) in higher education. Based on objective log data from 77,543 students enrolled in distance studies, we examine usage patterns across gender, age group, study cluster, degree, and study mode. To date, existing research on educational chatbots has largely relied on comparatively small samples and self-reported survey data, while large-scale evidence on actual usage behavior remains li",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "keywords": [],
+      "score": 42.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08748v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08748v1"
+        }
+      ],
+      "llm_reason": "对 AI 学习助手在高等教育中使用的大规模描述性分析。基于 77543 名学生的日志数据，证据规模大但本质是观察性统计而非方法创新。对 AI 工程团队无直接技术产出价值，新意弱、工程可验证性低。",
+      "id": "using-ai-based-learning-assistants-in-higher-education-a-large-scale-descriptive-analysis",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 5.35,
+        "asset_convertibility": 4.8,
+        "actionability": 3.2,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "MulTTiPop: A Multitrack Transcription Dataset for Pop Music",
+      "authors": [
+        "Nathan Pruyne",
+        "Benjamin Stoler",
+        "William Chen",
+        "Chien-yu Huang",
+        "Shinji Watanabe"
+      ],
+      "published": "2026-07-09",
+      "updated": "2026-07-09",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.08756v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08756v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present MulTTiPop, a dataset of pop music segments and their associated multitrack MIDI recordings for the evaluation of automatic music transcription models. MulTTiPop contains 572 segments of popular music totaling 3.5 hours of audio, and contains songs from diverse genres and decades from the 1930s to 2000s. To collect this dataset, we perform metadata-based matching on song segments from the Lakh MIDI and TheoryTab datasets, manually identify an anchor beat between the audio and MIDI, the",
+      "categories": [
+        "cs.SD",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.08756v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.08756v1"
+        }
+      ],
+      "llm_reason": "MulTTiPop 是流行音乐多轨转录数据集。虽然数据集构建工作量扎实（572 段、3.5 小时），但领域极窄（音乐信息检索），与 AI Agent、推理服务、基础设施工程几乎无交集。新意有限、相关性低。",
+      "id": "multtipop-a-multitrack-transcription-dataset-for-pop-music",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    }
+  ],
+  "scored_at": "2026-07-13"
+}

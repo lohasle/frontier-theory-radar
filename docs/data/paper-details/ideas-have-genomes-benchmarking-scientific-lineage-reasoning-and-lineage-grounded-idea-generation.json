@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -30,12 +30,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 74.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能…",
-  "one_line_essence": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，且与 RAG/知识图谱、研究型 Agent、合成数据构造三条主线相关。证据强度中等：提供基准与框架，但‘思想基因组’的分解粒度本身带有主观性，跨领域泛化待核验。更偏趋势资产——它指向‘AI 科研助手需要理解思想血缘’这一方向，适合沉淀为研究型 Agent 的评测维度。",
+  "score": 58.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得先保存：IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene…",
+  "one_line_essence": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践层面，对自动化文献综述和科研辅助 Agent 有参考价值，但短期内无直接工程产出；长尾层面，其'论文基因组'抽象可沉淀为知识图谱设计方法论。证据为 benchmark 设计自述，泛化到通用工程场景的价值有限。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，且与 RAG/知识图谱、研究型 Agent、合成数据构造三条主线相关。证据强度中等：提供基准与框架，但‘思想基因组’的分解粒度本身带有主观性，跨领域泛化待核验。更偏趋势",
+  "new_claim_or_method": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践层面，对自动化文献综述和科研辅助 Agent 有参考价值，但短期内无直接工程产出；长尾层面，其'论文基因组'抽象可沉淀为知识图谱设计方法论。证据为 benchmark ",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -49,11 +49,10 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "long_tail_watch",
     "related_trends": [
-      "agentic-world-modeling",
-      "context-engineering",
-      "coding-agent"
+      "coding-agent",
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -63,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "IdeaGene-Bench 把‘科学思想的遗传结构’变成可评测对象：每篇论文/提案表示为一组最小可继承单元（IdeaGene），评测模型能否沿谱系做推理与受谱系约束的创意生成。理论新颖度高，",
+    "why_save": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -80,7 +79,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": ""
+    "revisit_date": "2026-08-03"
   },
   "insights": {
     "system_design": [
@@ -104,12 +103,12 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
+    "trend_actions": [],
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
     ],
-    "long_tail_actions": [],
     "ignore_reason": ""
   },
   "references": [
@@ -123,11 +122,10 @@
     }
   ],
   "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-  "daily_path": "daily-detail.html?date=2026-07-12",
+  "daily_path": "daily-detail.html?date=2026-07-13",
   "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling",
-    "trend-detail.html?id=context-engineering",
-    "trend-detail.html?id=coding-agent"
+    "trend-detail.html?id=coding-agent",
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

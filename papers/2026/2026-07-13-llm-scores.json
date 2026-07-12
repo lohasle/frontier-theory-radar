@@ -1,0 +1,64 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2607.08768v1": {
+      "score": 84,
+      "value_type": "immediate",
+      "reason": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将 Agent 能力从'单轮问答'重新定义为'多轮主动任务执行'，提出了按能力而非场景的任务分类法；工程实践层面，该 benchmark 可直接用于评估自家 Agent 产品在真实工具链上的可靠性与鲁棒性；趋势层面，Agent 评测正从静态数据集走向真实环境多轮评估，这是 2026 年确定性方向。证据以论文自述为主，无代码/benchmark 链接待核验，但方法描述清晰，可立即开始对标分析。",
+      "matched_topics": ["ai-agent", "llm-evaluation", "multimodal-agent"]
+    },
+    "http://arxiv.org/abs/2607.08754v1": {
+      "score": 80,
+      "value_type": "immediate",
+      "reason": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程中自然趋向低秩，无需额外参数；工程实践层面，可直接集成到现有训练 pipeline 中提升模型可压缩性，尤其适合边缘部署场景；趋势层面，模型压缩与高效推理是基础设施瓶颈的持续需求。方法简洁、工程门槛低，但缺少代码链接和外部 benchmark 验证，需自行 PoC 确认精度-压缩 Pareto。",
+      "matched_topics": ["inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.08757v1": {
+      "score": 73,
+      "value_type": "trend",
+      "reason": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-based 生成模型的理论保证与工程实践之间的裂缝——训练损失低不等于采样稳定；工程实践层面，这直接影响任何部署扩散模型时采样器选择、步数设置和误差容忍度的决策依据；趋势层面，扩散模型的理论严谨性分析正在增多，预示着该领域从'堆效果'走向'理解边界'。纯理论论文，无代码，但数学证明本身即为强证据，适合纳入推理服务可靠性知识库。",
+      "matched_topics": ["inference-serving", "security-governance"]
+    },
+    "http://arxiv.org/abs/2607.08741v1": {
+      "score": 71,
+      "value_type": "trend",
+      "reason": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的自回归扩散框架；工程实践层面，对动画、仿真和拟人机器人控制有直接应用价值，实时推理是核心卖点；趋势层面，扩散模型从静态生成走向交互式实时生成是一条明确技术线。作者团队有较强背景（ETH 系列），但无代码链接，需核验推理延迟数据。",
+      "matched_topics": ["multimodal-agent", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.08763v1": {
+      "score": 69,
+      "value_type": "trend",
+      "reason": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时空序列；工程实践层面，当前更偏探索性，需验证生成视频帧能否真正编码因果推理而非只是视觉插值；趋势层面，多模态推理正从'看图回答'走向'用视觉序列推理'，值得长期跟踪。证据以论文自述为主，无代码，方法新颖但落地路径不清晰，偏向趋势观察而非即时工程。",
+      "matched_topics": ["multimodal-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.08758v1": {
+      "score": 58,
+      "value_type": "long_tail",
+      "reason": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践层面，对自动化文献综述和科研辅助 Agent 有参考价值，但短期内无直接工程产出；长尾层面，其'论文基因组'抽象可沉淀为知识图谱设计方法论。证据为 benchmark 设计自述，泛化到通用工程场景的价值有限。",
+      "matched_topics": ["llm-evaluation", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2607.08745v1": {
+      "score": 55,
+      "value_type": "long_tail",
+      "reason": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM 在安全关键场景的推理评测框架，可借鉴其事故分类与评测设计。无代码链接，证据以论文自述为主。",
+      "matched_topics": ["multimodal-agent", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.08746v1": {
+      "score": 52,
+      "value_type": "long_tail",
+      "reason": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen Horng Chau 等），方法描述清晰但无代码，对核心 AI 基础设施工程价值有限。",
+      "matched_topics": ["data-engineering"]
+    },
+    "http://arxiv.org/abs/2607.08748v1": {
+      "score": 42,
+      "value_type": "ignore",
+      "reason": "对 AI 学习助手在高等教育中使用的大规模描述性分析。基于 77543 名学生的日志数据，证据规模大但本质是观察性统计而非方法创新。对 AI 工程团队无直接技术产出价值，新意弱、工程可验证性低。",
+      "matched_topics": []
+    },
+    "http://arxiv.org/abs/2607.08756v1": {
+      "score": 38,
+      "value_type": "ignore",
+      "reason": "MulTTiPop 是流行音乐多轨转录数据集。虽然数据集构建工作量扎实（572 段、3.5 小时），但领域极窄（音乐信息检索），与 AI Agent、推理服务、基础设施工程几乎无交集。新意有限、相关性低。",
+      "matched_topics": []
+    }
+  }
+}

@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 7.4,
@@ -30,12 +30,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 40.9,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：Multimodal Agent：Generating realistic 3D human motions in real-time wi…",
-  "one_line_essence": "Multimodal Agent：Generating realistic 3D human motions in real-time within interactive applicat…",
+  "score": 71.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成…",
+  "one_line_essence": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的自回归扩散框架；工程实践层面，对动画、仿真和拟人机器人控制有直接应用价值，实时推理是核心卖点；趋势层面，扩散模型从静态生成走向交互式实时生成是一条明确技术线。作者团队有较强背景（ETH 系列），但无代码链接，需核验推理延迟数据。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Multimodal Agent：Generating realistic 3D human motions in real-time within interactive applicat…",
+  "new_claim_or_method": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的自回归扩散框架；工程实践层面，对动画、仿真和拟人机器人控制有直接应用价值，实时推理是核心卖点；趋势层面，扩散模型从静态生成走向交互式实时生成是一条明确技术线。作者团队有",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [
       "agentic-world-modeling"
     ],
@@ -61,9 +61,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "Multimodal Agent：Generating realistic 3D human motions in real-time within interactive applicat…",
+    "why_save": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,9 +102,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -117,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation",
-  "daily_path": "daily-detail.html?date=2026-07-12",
+  "daily_path": "daily-detail.html?date=2026-07-13",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 7.4,
@@ -30,12 +30,12 @@
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 81.0,
+  "score": 84.0,
   "decision": "重点学习",
-  "one_line_judgement": "值得继续观察：UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工…",
-  "one_line_essence": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复现。属强趋势信号——主动式 Agent 评测正成为独立赛道，纳入趋势雷达连续观察。",
+  "one_line_judgement": "今天值得试：UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent …",
+  "one_line_essence": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将 Agent 能力从'单轮问答'重新定义为'多轮主动任务执行'，提出了按能力而非场景的任务分类法；工程实践层面，该 benchmark 可直接用于评估自家 Agent 产品在真实工具链上的可靠性与鲁棒性；趋势层面，Agent 评测正从静态数据集走向真实环境多轮评估，这是 2026 年确定性方向。证据以论文自述为主，无代码/benchmark 链接待核验，但方法描述清晰，可立即开始对标分析。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘按能力正交分解的任务分类法’，对任何自研 Agent 团队都是可立刻对照的评测骨架。证据强度中等：提出新基准并给出任务分类，但代码/数据集链接暂缺（待核验），尚无外部复",
+  "new_claim_or_method": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将 Agent 能力从'单轮问答'重新定义为'多轮主动任务执行'，提出了按能力而非场景的任务分类法；工程实践层面，该 benchmark 可直接用于评估自家 Agent ",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -62,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "UniClawBench 直击当前 Agent 工程最大评测缺口：现有基准普遍依赖沙箱环境与单轮评测，而真实主动式 Agent 是多轮、多工具、跨环境的长程任务。它把评测从‘单能力点’重构为‘",
+    "why_save": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "待更多证据"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -102,12 +102,12 @@
     ]
   },
   "actions": {
-    "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
     ],
+    "trend_actions": [],
     "long_tail_actions": [],
     "ignore_reason": ""
   },
@@ -122,7 +122,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
-  "daily_path": "daily-detail.html?date=2026-07-12",
+  "daily_path": "daily-detail.html?date=2026-07-13",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"

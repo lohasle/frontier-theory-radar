@@ -15,8 +15,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
   "value_type": "long_tail",
   "value_type_label": "长尾价值",
   "value_scores": {
@@ -29,12 +29,12 @@
     "actionability": 5.0,
     "noise_risk": 2.4
   },
-  "score": 70.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得先保存：指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。…",
-  "one_line_essence": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensemaking），非大规模受控实验；作者含可视化领域资深研究者。属高资产转化率的长尾保存——即使短期不火，作为‘数据探索工具箱’可长期复用。",
+  "score": 52.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得先保存：利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与…",
+  "one_line_essence": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen Horng Chau 等），方法描述清晰但无代码，对核心 AI 基础设施工程价值有限。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上可显著增强数据语义构建与异常发现。工程价值在于可复用：RAG 语料聚类、评测集去重/分层、数据质量巡检都能直接套用。证据强度中等偏弱：偏系统化展示与案例（sensema",
+  "new_claim_or_method": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen Horng Chau 等），方法描述清晰但无代码，对核心 AI 基础设施工程价值有限。",
   "research_position": "long_tail_insight",
   "engineering_testability": {
     "has_code": false,
@@ -49,9 +49,7 @@
   },
   "trend_relation": {
     "status": "long_tail_watch",
-    "related_trends": [
-      "context-engineering"
-    ],
+    "related_trends": [],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -60,7 +58,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
+    "why_save": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen",
     "future_trigger": [
       "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
@@ -77,7 +75,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-08-02"
+    "revisit_date": "2026-08-03"
   },
   "insights": {
     "system_design": [
@@ -120,10 +118,8 @@
     }
   ],
   "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-  "daily_path": "daily-detail.html?date=2026-07-12",
-  "trend_paths": [
-    "trend-detail.html?id=context-engineering"
-  ],
+  "daily_path": "daily-detail.html?date=2026-07-13",
+  "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

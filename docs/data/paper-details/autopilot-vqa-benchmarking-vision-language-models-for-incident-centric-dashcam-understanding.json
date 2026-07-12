@@ -16,10 +16,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
-  "value_type": "trend",
-  "value_type_label": "趋势价值",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 6.2,
@@ -30,12 +30,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 73.0,
-  "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安…",
-  "one_line_essence": "AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安全治理、多模态 Agent 与具身评测的团队是直接可对照的基准思路。证据强度中等：围绕真实行车录像构建事故中心化问答，但规模与标注协议细节、数据集开放性（待核验）将决定其可复现性。作为趋势信号价值高——安全攸关多模态评测正从‘通用能力榜’走向‘高风险子能力专项榜’。",
+  "score": 55.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得先保存：AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 …",
+  "one_line_essence": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM 在安全关键场景的推理评测框架，可借鉴其事故分类与评测设计。无代码链接，证据以论文自述为主。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安全治理、多模态 Agent 与具身评测的团队是直接可对照的基准思路。证据强度中等：围绕真实行车录像构建事故中心化问答，但规模与标注协议细节、数据集开放性（待核验）将决定其可复现性。作为趋势信号价值高——安全攸关多模态评测",
+  "new_claim_or_method": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM 在安全关键场景的推理评测框架，可借鉴其事故分类与评测设计。无代码链接，证据以论文自述为主。",
   "research_position": "benchmark",
   "engineering_testability": {
     "has_code": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "emerging",
+    "status": "long_tail_watch",
     "related_trends": [
       "agentic-world-modeling",
       "coding-agent"
@@ -62,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "AUTOPILOT-VQA 把 VLM 评测聚焦到‘安全攸关的事故场景’而非一般场景理解，填补了自动驾驶 VQA 在事故推理上的空白。对做安全治理、多模态 Agent 与具身评测的团队是直接可",
+    "why_save": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM ",
     "future_trigger": [
-      "出现多篇跟进论文、开源项目和工程博客共振"
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -79,7 +79,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": ""
+    "revisit_date": "2026-08-03"
   },
   "insights": {
     "system_design": [
@@ -103,12 +103,12 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [
-      "纳入趋势雷达",
-      "观察代码 / benchmark / 工程博客",
-      "7-30 天复盘"
+    "trend_actions": [],
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
     ],
-    "long_tail_actions": [],
     "ignore_reason": ""
   },
   "references": [
@@ -122,7 +122,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
-  "daily_path": "daily-detail.html?date=2026-07-12",
+  "daily_path": "daily-detail.html?date=2026-07-13",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"

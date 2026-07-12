@@ -12,10 +12,10 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
@@ -26,12 +26,12 @@
     "actionability": 3.8,
     "noise_risk": 1.2
   },
-  "score": 33.5,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：RAG / 知识系统：Score matching controls average error under the forward mar…",
-  "one_line_essence": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
+  "score": 73.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了…",
+  "one_line_essence": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-based 生成模型的理论保证与工程实践之间的裂缝——训练损失低不等于采样稳定；工程实践层面，这直接影响任何部署扩散模型时采样器选择、步数设置和误差容忍度的决策依据；趋势层面，扩散模型的理论严谨性分析正在增多，预示着该领域从'堆效果'走向'理解边界'。纯理论论文，无代码，但数学证明本身即为强证据，适合纳入推理服务可靠性知识库。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
+  "new_claim_or_method": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-based 生成模型的理论保证与工程实践之间的裂缝——训练损失低不等于采样稳定；工程实践层面，这直接影响任何部署扩散模型时采样器选择、步数设置和误差容忍度的决策依据；趋势层面，",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -45,10 +45,8 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [
-      "context-engineering"
-    ],
+    "status": "emerging",
+    "related_trends": [],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -57,9 +55,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "RAG / 知识系统：Score matching controls average error under the forward marginals, but a discr…",
+    "why_save": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-base",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -98,9 +96,13 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
   "references": [
     {
@@ -113,10 +115,8 @@
     }
   ],
   "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
-  "daily_path": "daily-detail.html?date=2026-07-12",
-  "trend_paths": [
-    "trend-detail.html?id=context-engineering"
-  ],
+  "daily_path": "daily-detail.html?date=2026-07-13",
+  "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

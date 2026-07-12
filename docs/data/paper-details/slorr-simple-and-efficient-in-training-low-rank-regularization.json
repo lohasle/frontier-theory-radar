@@ -13,8 +13,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-12",
-  "first_deep_dive_daily": "2026-07-12",
+  "first_seen_date": "2026-07-13",
+  "first_deep_dive_daily": "2026-07-13",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -29,10 +29,10 @@
   },
   "score": 80.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插…",
-  "one_line_essence": "SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插即用’提升模型对低秩分解的友好度，从而降低压缩后的精度损失。对推理成本敏感的部署场景（边缘、高并发）有直接操作价值。证据强度偏中上：方法设计明确且消融了与 SVD 类正则化器的对比，但 2026-07 新发，缺少跨大模型尺度（数十亿以上）验证与开源代码（待核验）。按即时价值试点：可在自有 SFT/预训练流水线做最小插入实验。",
+  "one_line_judgement": "今天值得试：SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态…",
+  "one_line_essence": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程中自然趋向低秩，无需额外参数；工程实践层面，可直接集成到现有训练 pipeline 中提升模型可压缩性，尤其适合边缘部署场景；趋势层面，模型压缩与高效推理是基础设施瓶颈的持续需求。方法简洁、工程门槛低，但缺少代码链接和外部 benchmark 验证，需自行 PoC 确认精度-压缩 Pareto。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插即用’提升模型对低秩分解的友好度，从而降低压缩后的精度损失。对推理成本敏感的部署场景（边缘、高并发）有直接操作价值。证据强度偏中上：方法设计明确且消融了与 SVD 类正则化器的对比，但 2026-07 新发，缺少跨大模型",
+  "new_claim_or_method": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程中自然趋向低秩，无需额外参数；工程实践层面，可直接集成到现有训练 pipeline 中提升模型可压缩性，尤其适合边缘部署场景；趋势层面，模型压缩与高效推理是基础设施瓶颈",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -56,7 +56,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "SLORR 是工程落地性最强的一篇：训练期低秩正则化，无需 SVD、不改架构、不引入额外可训练参数、无状态缓存，直接在现有训练流水线上‘即插即用’提升模型对低秩分解的友好度，从而降低压缩后的精",
+    "why_save": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程",
     "future_trigger": [
       "待更多证据"
     ],
@@ -116,7 +116,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=slorr-simple-and-efficient-in-training-low-rank-regularization",
-  "daily_path": "daily-detail.html?date=2026-07-12",
+  "daily_path": "daily-detail.html?date=2026-07-13",
   "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {

@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-12T04:33:26.325821",
+  "updated_at": "2026-07-13T04:33:02.771528",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-13",
+      "title": "论文价值发现日报 - 2026-07-13",
+      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成两件事：基于 UniClawBench 能力分类法绘制 Agent 能力覆盖矩阵；在现有训练任务上加 SLORR 正则化跑一轮压缩-精度对照实验。",
+      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。",
+      "one_line_judgement": "UniClawBench 将 Agent 能力定义从单轮问答升级为多轮主动执行，直接可用作自家 Agent 产品的对标评测；SLORR 无状态、无额外参数、无需 SVD，可即插即用集成到训练 pipeline，对边缘部署尤其有价值。",
+      "path": "daily-detail.html?date=2026-07-13"
+    },
     {
       "date": "2026-07-12",
       "title": "论文价值发现日报 - 2026-07-12",
@@ -378,19 +391,6 @@
       "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
       "one_line_judgement": "把'每仓一次微调'升级为'按需生成 LoRA 适配器'，零推理 token 开销注入仓级上下文，直接命中企业内部代码助手（Cursor/Copilot/Codex 私有部署）的核心痛点：长上下文窗口不应用于仓级 schema，模型走 RAG 又会拖慢推理。超网络生成的 LoRA 可作为静态索引服务持续维护，与代码仓 CI 解耦。",
       "path": "daily-detail.html?date=2026-06-06"
-    },
-    {
-      "date": "2026-06-05",
-      "title": "论文价值发现日报 - 2026-06-05",
-      "deep_dive_title": "Can Generalist Agents Automate Data Curation?",
-      "deep_dive_url": "https://arxiv.org/abs/2606.04261",
-      "decision": "重点学习",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "精读 Curation-Bench 的 Agent 接口设计，评估数据策展流程中 Agent 自动化的可行性；浏览 APB 的诊断维度设计，对比当前 Agent 评测方法的差距",
-      "max_uncertainty": "Curation-Bench 上通用 Agent 的具体表现数据待核验（摘要截断）；APB 在非多模态 Agent 上的适用性待确认；CHARM 框架的检测精度和延迟开销未知",
-      "one_line_judgement": "直击 AI 开发中最昂贵的人工环节——训练数据策展。Curation-Bench 首次系统测试通用编程 Agent 能否自动化 propose→implement→evaluate→revise 数据策略闭环，固定模型/训练/评测、仅让 Agent 通过 CLI 自主迭代。如果结论肯定，将推动从人工策展到 Agent 自动策展的范式转变。",
-      "path": "daily-detail.html?date=2026-06-05"
     }
   ]
 }

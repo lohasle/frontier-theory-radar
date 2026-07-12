@@ -23,9 +23,9 @@
       "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
       "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 81.0,
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 84.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
@@ -45,22 +45,9 @@
       "worth_deep_dive": true
     },
     {
-      "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
-      "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-      "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 74.0,
-      "decision": "轻量试点",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": true
-    },
-    {
-      "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
-      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-      "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
+      "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
+      "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
@@ -71,17 +58,30 @@
       "worth_deep_dive": true
     },
     {
-      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
-      "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
+      "id": "ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation",
+      "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+      "detail_path": "paper-detail.html?id=ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation",
       "direction": "未分类",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 70.0,
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 71.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
+    },
+    {
+      "id": "opencof-learning-to-reason-through-video-generation",
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 69.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
     }
   ],
   "deep_dive": {
@@ -195,28 +195,7 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [
-    {
-      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
-      "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "why_save": "指出 UMAP 内部构建的 kNN 图被普遍浪费——多数流程只用最终 2D 投影，而 kNN 图保留了高维流形的原始拓扑（投影会引入畸变）。把标准图算法（社区发现、中心性、路径）作用到这张图上",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "possible_use_cases": [
-        "Prompt 设计",
-        "Skill 草案",
-        "评测方法",
-        "架构模式"
-      ],
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist",
-        "评测方法"
-      ],
-      "revisit_date": "2026-06-23"
-    }
-  ],
+  "long_tail_saved": [],
   "ignore_reasons": [
     "暂无明确忽略样本，但忽略标准仍需保留。"
   ],
