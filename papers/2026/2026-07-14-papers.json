@@ -1,0 +1,646 @@
+{
+  "date": "2026-07-14",
+  "total": 10,
+  "generated_at": "2026-07-14T04:31:04.418858",
+  "papers": [
+    {
+      "title": "Scalable Visual Pretraining for Language Intelligence",
+      "authors": [
+        "Yiming Zhang",
+        "Zhonghan Zhao",
+        "Wenwei Zhang",
+        "Haiteng Zhao",
+        "Tianyang Lin"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09657v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09657v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or completely captured by text alone. Yet current pretraining approaches discard these visual cues by converting visually rich sources, such as documents and web pages, into plain text for learning lang",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 83.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09657v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09657v1"
+        }
+      ],
+      "llm_reason": "该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证了'视觉是语言智能的补充信道'——公式排版、图表空间关系、页面结构等携带纯文本无法恢复的语义；工程实践层面，对 RAG 系统、文档智能、多模态知识抽取有直接价值——任何需要从 PDF/网页中精确提取结构化信息的 pipeline 都可受益；趋势层面，多模态预训练正从'图文对齐'走向'文档级视觉语义理解'，这是 2026 年的基础设施方向。作者团队有多模态研究背景（Zhang/Zhao/Lin 系列），但无代码链接，需核验预训练数据规模与下游任务增益。",
+      "id": "scalable-visual-pretraining-for-language-intelligence",
+      "value_type": "immediate",
+      "matched_topics": [
+        "multimodal-agent",
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "authors": [
+        "Shravan Murlidaran",
+        "Miguel P. Eckstein"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09654v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09654v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focused on understanding the model's error types. Here, we introduce the Complex Social Behavior (CSB) dataset, containing 100 images depicting complex social interactions/behaviors. We analyze the progres",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 77.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09654v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09654v1"
+        }
+      ],
+      "llm_reason": "跨越十年评估 VLM 的准确率演进与视觉认知错误类型，引入 Complex Social Behavior (CSB) 数据集（100 张复杂社会交互场景）。论文→理论层面，它从'准确率有多高'转向'错在哪、为什么错'，提供了错误分类学（error taxonomy）而非单一分数；工程实践层面，CSB 数据集和错误分类法可直接用作自家 VLM 产品的回归测试套件，在复杂场景中发现模型盲区；趋势层面，VLM 评测正从简单描述（MS-COCO）走向复杂场景推理与社会行为理解。证据以论文自述 + 新数据集为主，无代码链接，但评测方法论本身有工程迁移价值。",
+      "id": "evolution-of-accuracy-and-visual-cognitive-errors-in-a-decade-of-vision-language-ai-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "authors": [
+        "Katherine Swinea",
+        "Kshitiz Aryal",
+        "Lopamudra Praharaj",
+        "Maanak Gupta"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09653v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09653v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise in penetration testing and Capture-the-Flag (CTF) environments, their application to IoT specific vulnerabilities remains unexplored. This paper presents an autonomous multi-agent framework, referred",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "RAG"
+      ],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09653v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09653v1"
+        }
+      ],
+      "llm_reason": "VEXAIoT 提出一个多 Agent 自主框架，用于 IoT 系统的漏洞发现与利用。论文→理论层面，它将 LLM Agent 从 CTF 玩具场景推进到真实 IoT 安全测试——IoT 硬件约束、过时固件、默认配置等现实复杂性被纳入多 Agent 协作设计；工程实践层面，该框架可改造为内部红队/渗透测试工具，自动化发现 IoT 产品线的已知漏洞模式，直接降低安全测试人力成本；趋势层面，AI 驱动的安全自动化正从概念验证走向垂直领域落地，IoT 是硬件+软件交叉的高价值场景。多 Agent 编排架构（侦察→分析→利用）有通用迁移性，但无代码链接，需自行 PoC 验证 Agent 在真实 IoT 固件上的有效性。",
+      "id": "vexaiot-autonomous-iot-vulnerability-exploitation-using-ai-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+      "authors": [
+        "Federico L. Perlino",
+        "Oliver Hamelijnck",
+        "Adam M. Johansen",
+        "Theodoros Damoulas"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09645v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09645v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions are partially observed across the DAG, with noisy and heterogeneously sampled measurements, posing significant challenges for reconstruction, uncertainty propagation, and inference. To tackle these ch",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "stat.CO",
+        "stat.ME"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09645v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09645v1"
+        }
+      ],
+      "llm_reason": "将深度高斯过程（Deep GP）扩展到有向无环图（DAG）上，解决因果建模、多保真度工程、基因调控网络等场景中的函数组合重构与不确定性传播问题。论文→理论层面，它统一了 DAG 上部分可观测、噪声异构测量下的函数推断与不确定性量化，这在数学上是一个高难度贡献；工程实践层面，对多保真度仿真（如工程仿真管线中粗/细模型的组合优化）、贝叶斯优化中的不确定性传播有直接应用；趋势层面，因果推理与不确定性量化正在与深度学习深度融合。纯理论/方法论文，无代码链接，数学密度高，短期落地需较大工程投入，但理论资产价值强。",
+      "id": "deep-gaussian-processes-on-directed-acyclic-graphs",
+      "value_type": "trend",
+      "matched_topics": [
+        "rag-knowledge",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
+      "authors": [
+        "Mohadeseh Mollapour",
+        "Koorosh Aslansefat",
+        "Zeinab Dehghani",
+        "Bhupesh Kumar Mishra",
+        "Tejal Shah"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09649v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09649v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a model-agnostic perturbation-based auditing framework for evaluating the reliability of concept-based explanations. Rather than replacing SMILE, ConceptSMILE extends its perturbation-based logic from feature- or region-level attribution to the auditing of human-understandable concept explanations. The f",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 70.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09649v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09649v1"
+        }
+      ],
+      "llm_reason": "ConceptSMILE 提出模型无关的扰动式审计框架，评估概念级可解释 AI（Concept-based XAI）输出的可信度。论文→理论层面，它揭示了'概念解释本身也可能不可靠'——概念 Bottleneck 模型可能给出看似合理但实际误导的概念归因；工程实践层面，该框架可用作内部模型审计工具，在部署 XAI 系统前验证其解释的鲁棒性，直接服务合规与可信 AI 需求；趋势层面，XAI 正从'能否解释'走向'解释是否可信'，审计方法论将成为监管要求的前奏。方法模型无关，迁移门槛低，但无代码链接，需核验审计在不同模型族上的泛化性。",
+      "id": "conceptsmile-auditing-the-trustworthiness-of-concept-based-explainable-ai",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "authors": [
+        "Cláudio Lúcio do Val Lopes",
+        "Lucca Machado da Silva"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09641v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09641v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, we propose the Semantic Pareto-DQN, a multi-objective reinforcement learning framework. Our approach synthesizes heterogeneous transaction features into cohesive natural-language narratives, encoded by",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation"
+      ],
+      "score": 64.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09641v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09641v1"
+        }
+      ],
+      "llm_reason": "Semantic Pareto-DQN 用多目标强化学习解决金融反欺诈中的极端类别不平衡问题，将异构交易特征合成为自然语言叙事后编码，并通过 Pareto 前沿平衡拦截率与客户摩擦。论文→理论层面，'语义化叙事编码 + 多目标 RL'是一种新颖的金融序列建模范式，避免了重采样的分布扭曲；工程实践层面，对反欺诈系统的召回-精确率-用户体验三角优化有参考价值，语义编码思路可迁移到其他表格数据的异常检测；趋势层面，RL 在非游戏领域的落地正在加速，金融风控是高价值场景。但领域偏窄，无代码链接，泛化到通用工程场景的价值有限。",
+      "id": "semantic-pareto-dqn-a-multi-objective-reinforcement-learning-framework-for-financial-anomaly-detection",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
+      "authors": [
+        "Xiaokai Bai",
+        "Lianqing Zheng",
+        "Runwei Guan",
+        "Songkai Wang",
+        "Siyuan Cao"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09629v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09629v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor, yet its sparse returns make radar-camera fusion necessary for comprehensive scene understanding. Existing radar-camera methods mainly optimize detection, while dual-task systems usually decode boxes and occupancy with limited interaction. To address this gap and advance radar-based multi-task learn",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 58.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09629v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09629v1"
+        }
+      ],
+      "llm_reason": "4DR360 提出 4D 毫米波雷达-相机融合的联合 3D 检测与占据预测框架，解决稀疏雷达回波下的全场景感知。工程价值集中在自动驾驶感知这一垂直领域，双任务联合推理（检测+占据网格）的架构设计有一定方法论参考价值，可启发多任务模型的状态推理设计。但对通用 AI 基础设施工程的迁移性有限。无代码链接，证据以论文自述为主。",
+      "id": "4dr360-state-reasoning-for-joint-3d-detection-and-occupancy-prediction-in-4d-radar-camera-full-scene-perception",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+      "authors": [
+        "Ren Takahashi",
+        "Emre Yusuf",
+        "Jayabrata Bhaduri"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09662v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09662v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating characteristic curve (AUC) of approximately 0.70 on the DREAM database (Wong et al., 2025, Nature Communications). We introduce PHINN-EEG (Persistent Homology Inspired Neural Network for EEG), the first topological time-series framework for dream mentation analysis. Using sliding-window Takens delay embed",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI",
+        "cs.LG",
+        "eess.SP",
+        "math.AT"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 53.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09662v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09662v1"
+        }
+      ],
+      "llm_reason": "PHINN-EEG 首次将持续同调（Persistent Homology）应用于梦境状态 EEG 的时间序列分析，通过滑动窗口 Takens 嵌入计算动态 Betti 曲线。论文→理论层面，拓扑数据分析（TDA）在脑电信号上的应用有方法论新颖性；工程实践层面，领域极窄（梦境检测），直接工程价值有限，但 TDA 用于一般时间序列异常检测/信号分类的思路可作工具灵感。方法描述清晰但领域迁移成本高，无代码链接。",
+      "id": "phinn-eeg-topological-time-series-analysis-of-dream-state-eeg-dynamic-betti-curves-for-dream-content-classification-and-topology-conditioned-neural-signal-synthesis",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
+      "authors": [
+        "Nirjhar Das",
+        "Md. Al-Mamun Provath"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09623v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09623v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present our submission to the QANTA 2026 shared challenge at the ICML 2026 Workshop on Efficient Multimodal Question Answering (EMM-QA). Quanta evaluates multimodal quizbowl systems that answer pyramid-style questions from incrementally revealed text and accompanying images while operating under realistic efficiency constraints. The challenge consists of two distinct tasks: Tossup questions, which require deciding when to answer under uncertainty, and Bonus questions, which emphasize accurate",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 49.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09623v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09623v1"
+        }
+      ],
+      "llm_reason": "面向 QANTA 2026 竞赛的多模态问答 Agent，核心贡献是置信度校准（决定何时作答）与增量推理。置信度校准与不确定性下的决策时机选择对 Agent 系统有方法论参考价值，但本质是竞赛系统报告，工程泛化性和方法新颖性有限。无代码链接，证据以竞赛成绩和系统描述为主。",
+      "id": "task-specific-multimodal-question-answering-agents-via-confidence-calibration-and-incremental-reasoning-for-qanta-2026",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
+      "authors": [
+        "Chengkai Zhu",
+        "Ziao Tang",
+        "Guocheng Zhen",
+        "Yimeng Cao",
+        "Yusheng Zhao"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09632v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09632v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formalizing its coding theorems requires connecting finite-block protocols, analytic inequalities, and asymptotic limits within a unified machine-checked framework. Existing developments, however, lack a reusable operational layer that defines codes, error criteria, achievable rates, and capacities indepen",
+      "categories": [
+        "quant-ph",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic"
+      ],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09632v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09632v1"
+        }
+      ],
+      "llm_reason": "Lean-QIT 致力于用量子信息理论的 Lean 形式化基础设施（机器检查证明）。领域极窄（量子信息 + 形式化验证），与 AI Agent、推理服务、基础设施工程几乎无交集。学术价值可能很高但工程迁移性极低，无代码/benchmark 资产可验证。",
+      "id": "lean-qit-towards-a-formal-infrastructure-for-quantum-information-theory",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    }
+  ],
+  "scored_at": "2026-07-14"
+}

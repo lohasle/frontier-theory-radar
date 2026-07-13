@@ -1,111 +1,125 @@
 {
-  "updated_at": "2026-07-13T04:33:02.766155",
+  "updated_at": "2026-07-14T04:33:22.448498",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-07-13",
-    "title": "论文价值发现日报 - 2026-07-13",
-    "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-    "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
+    "date": "2026-07-14",
+    "title": "论文价值发现日报 - 2026-07-14",
+    "deep_dive_title": "Scalable Visual Pretraining for Language Intelligence",
+    "deep_dive_url": "http://arxiv.org/abs/2607.09657v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "完成两件事：基于 UniClawBench 能力分类法绘制 Agent 能力覆盖矩阵；在现有训练任务上加 SLORR 正则化跑一轮压缩-精度对照实验。",
-    "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。",
-    "one_line_judgement": "UniClawBench 将 Agent 能力定义从单轮问答升级为多轮主动执行，直接可用作自家 Agent 产品的对标评测；SLORR 无状态、无额外参数、无需 SVD，可即插即用集成到训练 pipeline，对边缘部署尤其有价值。",
-    "path": "daily-detail.html?date=2026-07-13"
+    "daily_action": "完成两件事：审查现有文档智能/RAG pipeline 中的视觉信息丢失环节并形成被丢弃信号清单；用 CSB 数据集对自家 VLM 做一轮复杂场景认知盲区测试。",
+    "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。视觉预训练的数据规模与下游增益数据、VEXAIoT 在真实 IoT 固件上的有效性均为关键未知项。",
+    "one_line_judgement": "视觉预训练论文论证了'纯文本会丢弃不可恢复的语义'——公式排版、图表空间关系被 OCR 管线全部抹掉，而多模态预训练可在源端保留这些信号；VLM 错误演进的十年回溯则提供了从'准不准'到'为什么错'的系统性诊断框架，可立即转化为回归测试套件。",
+    "path": "daily-detail.html?date=2026-07-14"
   },
   "top_paper": {
-    "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+    "title": "Scalable Visual Pretraining for Language Intelligence",
     "authors": [
-      "Zhekai Chen",
-      "Chengqi Duan",
-      "Kaiyue Sun",
-      "Bohao Li",
-      "Yuqing Wang"
+      "Yiming Zhang",
+      "Zhonghan Zhao",
+      "Wenwei Zhang",
+      "Haiteng Zhao",
+      "Tianyang Lin"
     ],
-    "published": "2026-07-09",
-    "updated": "2026-07-09",
+    "published": "2026-07-10",
+    "updated": "2026-07-10",
     "source": "arXiv",
-    "url": "http://arxiv.org/abs/2607.08768v1",
-    "pdf_url": "https://arxiv.org/pdf/2607.08768v1",
+    "url": "http://arxiv.org/abs/2607.09657v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.09657v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single-turn evaluation paradigms. Moreover, their scenario-based task taxonomies mix multiple model capabilities within the same task category, making it diff",
+    "abstract": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or completely captured by text alone. Yet current pretraining approaches discard these visual cues by converting visually rich sources, such as documents and web pages, into plain text for learning lang",
     "categories": [
-      "cs.CL"
+      "cs.CV",
+      "cs.AI",
+      "cs.MM"
     ],
     "keywords": [
-      "agent",
-      "evaluation",
       "benchmark",
-      "multimodal"
+      "RAG"
     ],
-    "score": 84.0,
+    "score": 83.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2607.08768v1"
+        "url": "http://arxiv.org/abs/2607.09657v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2607.08768v1"
+        "url": "https://arxiv.org/pdf/2607.09657v1"
       }
     ],
-    "llm_reason": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将 Agent 能力从'单轮问答'重新定义为'多轮主动任务执行'，提出了按能力而非场景的任务分类法；工程实践层面，该 benchmark 可直接用于评估自家 Agent 产品在真实工具链上的可靠性与鲁棒性；趋势层面，Agent 评测正从静态数据集走向真实环境多轮评估，这是 2026 年确定性方向。证据以论文自述为主，无代码/benchmark 链接待核验，但方法描述清晰，可立即开始对标分析。",
-    "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+    "llm_reason": "该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证了'视觉是语言智能的补充信道'——公式排版、图表空间关系、页面结构等携带纯文本无法恢复的语义；工程实践层面，对 RAG 系统、文档智能、多模态知识抽取有直接价值——任何需要从 PDF/网页中精确提取结构化信息的 pipeline 都可受益；趋势层面，多模态预训练正从'图文对齐'走向'文档级视觉语义理解'，这是 2026 年的基础设施方向。作者团队有多模态研究背景（Zhang/Zhao/Lin 系列），但无代码链接，需核验预训练数据规模与下游任务增益。",
+    "id": "scalable-visual-pretraining-for-language-intelligence",
     "value_type": "immediate",
     "matched_topics": [
-      "ai-agent",
-      "llm-evaluation",
-      "multimodal-agent"
+      "multimodal-agent",
+      "rag-knowledge",
+      "llm-evaluation"
     ],
     "score_breakdown": {
-      "novelty": 4.8,
-      "problem_importance": 6.45,
-      "relevance": 7.4,
-      "evidence_strength": 5.4,
-      "engineering_testability": 4.05,
-      "trend_signal": 6.0,
+      "novelty": 5.4,
+      "problem_importance": 5.15,
+      "relevance": 5.0,
+      "evidence_strength": 4.5,
+      "engineering_testability": 3.5,
+      "trend_signal": 3.5,
       "long_tail_potential": 3.5,
-      "asset_convertibility": 5.6,
-      "actionability": 5.0,
+      "asset_convertibility": 4.8,
+      "actionability": 3.8,
       "noise_risk": 1.2,
-      "weak_evidence_penalty": 4.0,
-      "low_relevance_penalty": 0.8,
-      "engineering_cost_penalty": 2.5,
+      "weak_evidence_penalty": 5.0,
+      "low_relevance_penalty": 3.6,
+      "engineering_cost_penalty": 4.0,
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "AI Agent：The rapid development of large language models and multimodal large language m…",
-    "one_line_judgement": "今天值得试：UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent …",
-    "first_seen_date": "2026-07-13",
-    "first_deep_dive_daily": "2026-07-13",
+    "brief_cn": "Multimodal Agent：The rapid progress of large foundation models has been driven predominantly by…",
+    "one_line_judgement": "今天值得试：该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证…",
+    "first_seen_date": "2026-07-14",
+    "first_deep_dive_daily": "2026-07-14",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将",
+    "long_tail_summary": "该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证了'视觉是语言智能的补充信道'——公式排版、图表空间",
     "related_trends": [
       "agentic-world-modeling",
+      "context-engineering",
       "coding-agent"
     ],
-    "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks"
+    "detail_path": "paper-detail.html?id=scalable-visual-pretraining-for-language-intelligence"
   },
-  "paper_count": 439,
+  "paper_count": 449,
   "daily_count": 30,
   "trend_count": 3,
-  "long_tail_count": 53,
+  "long_tail_count": 56,
   "value_distribution": {
-    "immediate": 52,
-    "trend": 70,
-    "long_tail": 53,
-    "ignore": 264
+    "immediate": 54,
+    "trend": 74,
+    "long_tail": 56,
+    "ignore": 265
   },
   "recent_dailies": [
+    {
+      "date": "2026-07-14",
+      "title": "论文价值发现日报 - 2026-07-14",
+      "deep_dive_title": "Scalable Visual Pretraining for Language Intelligence",
+      "deep_dive_url": "http://arxiv.org/abs/2607.09657v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成两件事：审查现有文档智能/RAG pipeline 中的视觉信息丢失环节并形成被丢弃信号清单；用 CSB 数据集对自家 VLM 做一轮复杂场景认知盲区测试。",
+      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。视觉预训练的数据规模与下游增益数据、VEXAIoT 在真实 IoT 固件上的有效性均为关键未知项。",
+      "one_line_judgement": "视觉预训练论文论证了'纯文本会丢弃不可恢复的语义'——公式排版、图表空间关系被 OCR 管线全部抹掉，而多模态预训练可在源端保留这些信号；VLM 错误演进的十年回溯则提供了从'准不准'到'为什么错'的系统性诊断框架，可立即转化为回归测试套件。",
+      "path": "daily-detail.html?date=2026-07-14"
+    },
     {
       "date": "2026-07-13",
       "title": "论文价值发现日报 - 2026-07-13",
@@ -183,214 +197,288 @@
       "max_uncertainty": "Program-as-Weights 的编译成本与制品大小未知（摘要截断）；Online Safety Monitoring 的具体阈值校准方法需完整论文确认；Distributed Attacks 的防御方案可能不完整（偏威胁建模）；ReContext 的基线对比待确认",
       "one_line_judgement": "它提出一个全新的编程范式——把模糊函数（日志告警、JSON 修复、意图排序等无法用规则干净实现的任务）从'每次调用 LLM API'转变为'一次性编译成可在本地执行的紧凑神经制品'。这同时恢复了局部性、可复现性与低成本，直击当前把一切外包给 LLM API 时的三大痛点。范式级创新，可迁移到边缘部署、确定性管线、成本敏感场景。",
       "path": "daily-detail.html?date=2026-07-06"
-    },
-    {
-      "date": "2026-07-05",
-      "title": "论文价值发现日报 - 2026-07-05",
-      "deep_dive_title": "Distributed Attacks in Persistent-State AI Control",
-      "deep_dive_url": "http://arxiv.org/abs/2607.02514v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读 Distributed Attacks 的威胁模型与 Iterative VibeCoding 定义；盘点编码 Agent 工作流的跨会话状态共享，评估分布式载荷暴露面",
-      "max_uncertainty": "Iterative VibeCoding 的具体检测方法与防御基线待核验；论文代码/benchmark 开源状态暂无；分布式攻击在实际多人协作仓库中的误报率未披露",
-      "one_line_judgement": "首次将'迭代式编码 Agent + 持久化代码库'带来的攻击面形式化为 Iterative VibeCoding 控制场景，揭示 misaligned/prompt-injected Agent 可将攻击载荷分散到多个 PR，并选择'最自然掩护'的 PR 触发。这一'分布式 + 时序'威胁模型直接对 Claude Code、Codex、Cursor 等已上线编码 Agent 的部署提出新安全约束。",
-      "path": "daily-detail.html?date=2026-07-05"
     }
   ],
   "top_papers": [
     {
-      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "title": "Scalable Visual Pretraining for Language Intelligence",
       "authors": [
-        "Zhekai Chen",
-        "Chengqi Duan",
-        "Kaiyue Sun",
-        "Bohao Li",
-        "Yuqing Wang"
+        "Yiming Zhang",
+        "Zhonghan Zhao",
+        "Wenwei Zhang",
+        "Haiteng Zhao",
+        "Tianyang Lin"
       ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08768v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08768v1",
+      "url": "http://arxiv.org/abs/2607.09657v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09657v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single-turn evaluation paradigms. Moreover, their scenario-based task taxonomies mix multiple model capabilities within the same task category, making it diff",
+      "abstract": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or completely captured by text alone. Yet current pretraining approaches discard these visual cues by converting visually rich sources, such as documents and web pages, into plain text for learning lang",
       "categories": [
-        "cs.CL"
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
       ],
       "keywords": [
-        "agent",
-        "evaluation",
         "benchmark",
-        "multimodal"
+        "RAG"
       ],
-      "score": 84.0,
+      "score": 83.0,
       "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08768v1"
+          "url": "http://arxiv.org/abs/2607.09657v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08768v1"
+          "url": "https://arxiv.org/pdf/2607.09657v1"
         }
       ],
-      "llm_reason": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将 Agent 能力从'单轮问答'重新定义为'多轮主动任务执行'，提出了按能力而非场景的任务分类法；工程实践层面，该 benchmark 可直接用于评估自家 Agent 产品在真实工具链上的可靠性与鲁棒性；趋势层面，Agent 评测正从静态数据集走向真实环境多轮评估，这是 2026 年确定性方向。证据以论文自述为主，无代码/benchmark 链接待核验，但方法描述清晰，可立即开始对标分析。",
-      "id": "uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks",
+      "llm_reason": "该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证了'视觉是语言智能的补充信道'——公式排版、图表空间关系、页面结构等携带纯文本无法恢复的语义；工程实践层面，对 RAG 系统、文档智能、多模态知识抽取有直接价值——任何需要从 PDF/网页中精确提取结构化信息的 pipeline 都可受益；趋势层面，多模态预训练正从'图文对齐'走向'文档级视觉语义理解'，这是 2026 年的基础设施方向。作者团队有多模态研究背景（Zhang/Zhao/Lin 系列），但无代码链接，需核验预训练数据规模与下游任务增益。",
+      "id": "scalable-visual-pretraining-for-language-intelligence",
       "value_type": "immediate",
       "matched_topics": [
-        "ai-agent",
+        "multimodal-agent",
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：The rapid progress of large foundation models has been driven predominantly by…",
+      "one_line_judgement": "今天值得试：该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "该论文解决一个核心基础设施级问题：将文档/网页中的图表、公式、版式等视觉信息纳入语言模型预训练，而非丢弃后仅用纯文本。论文→理论层面，它论证了'视觉是语言智能的补充信道'——公式排版、图表空间",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=scalable-visual-pretraining-for-language-intelligence"
+    },
+    {
+      "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+      "authors": [
+        "Shravan Murlidaran",
+        "Miguel P. Eckstein"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09654v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09654v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactions or behaviors, only a handful of non-curated human descriptions as a benchmark, and have not focused on understanding the model's error types. Here, we introduce the Complex Social Behavior (CSB) dataset, containing 100 images depicting complex social interactions/behaviors. We analyze the progres",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 77.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09654v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09654v1"
+        }
+      ],
+      "llm_reason": "跨越十年评估 VLM 的准确率演进与视觉认知错误类型，引入 Complex Social Behavior (CSB) 数据集（100 张复杂社会交互场景）。论文→理论层面，它从'准确率有多高'转向'错在哪、为什么错'，提供了错误分类学（error taxonomy）而非单一分数；工程实践层面，CSB 数据集和错误分类法可直接用作自家 VLM 产品的回归测试套件，在复杂场景中发现模型盲区；趋势层面，VLM 评测正从简单描述（MS-COCO）走向复杂场景推理与社会行为理解。证据以论文自述 + 新数据集为主，无代码链接，但评测方法论本身有工程迁移价值。",
+      "id": "evolution-of-accuracy-and-visual-cognitive-errors-in-a-decade-of-vision-language-ai-models",
+      "value_type": "trend",
+      "matched_topics": [
         "llm-evaluation",
         "multimodal-agent"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
         "evidence_strength": 5.4,
-        "engineering_testability": 4.05,
+        "engineering_testability": 3.5,
         "trend_signal": 6.0,
         "long_tail_potential": 3.5,
         "asset_convertibility": 5.6,
         "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 0.8,
+        "low_relevance_penalty": 2.2,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：The rapid development of large language models and multimodal large language m…",
-      "one_line_judgement": "今天值得试：UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent …",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "即时价值",
+      "brief_cn": "LLM 评测：Vision language models (VLMs) have made remarkable progress in visual reasonin…",
+      "one_line_judgement": "值得继续观察：跨越十年评估 VLM 的准确率演进与视觉认知错误类型，引入 Complex Social Behavior (CSB) 数据集（100 张复…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "UniClawBench 直面当前 Agent 评测的最大缺口：现有 benchmark 依赖沙箱环境和单轮评测范式，无法衡量 Agent 在真实工具环境中的多轮主动行为。论文→理论层面，它将",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "跨越十年评估 VLM 的准确率演进与视觉认知错误类型，引入 Complex Social Behavior (CSB) 数据集（100 张复杂社会交互场景）。论文→理论层面，它从'准确率有多高",
       "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
+        "coding-agent",
+        "agentic-world-modeling"
       ],
-      "detail_path": "paper-detail.html?id=uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-world-tasks"
+      "detail_path": "paper-detail.html?id=evolution-of-accuracy-and-visual-cognitive-errors-in-a-decade-of-vision-language-ai-models"
     },
     {
-      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
       "authors": [
-        "David González-Martínez",
-        "Shiwei Liu"
+        "Katherine Swinea",
+        "Kshitiz Aryal",
+        "Lopamudra Praharaj",
+        "Maanak Gupta"
       ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08754v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08754v1",
+      "url": "http://arxiv.org/abs/2607.09653v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09653v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-time low-rank regularizers can improve compressibility, but they often require SVDs of large weight matrices, modify the model architecture (introducing additional trainable parameters), or rely on stateful cached quantities. To address these limitations, we introduce SLORR, a simple, stateless, and ",
+      "abstract": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testing approaches. While recent adoptions of Large Language Model (LLM) agents have demonstrated promise in penetration testing and Capture-the-Flag (CTF) environments, their application to IoT specific vulnerabilities remains unexplored. This paper presents an autonomous multi-agent framework, referred",
       "categories": [
-        "cs.LG",
+        "cs.CR",
         "cs.AI"
       ],
       "keywords": [
+        "agent",
         "RAG"
       ],
-      "score": 80.0,
-      "decision": "重点学习",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08754v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08754v1"
-        }
-      ],
-      "llm_reason": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程中自然趋向低秩，无需额外参数；工程实践层面，可直接集成到现有训练 pipeline 中提升模型可压缩性，尤其适合边缘部署场景；趋势层面，模型压缩与高效推理是基础设施瓶颈的持续需求。方法简洁、工程门槛低，但缺少代码链接和外部 benchmark 验证，需自行 PoC 确认精度-压缩 Pareto。",
-      "id": "slorr-simple-and-efficient-in-training-low-rank-regularization",
-      "value_type": "immediate",
-      "matched_topics": [
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "推理与服务：Low-rank factorization is widely used to compress neural networks, but modern …",
-      "one_line_judgement": "今天值得试：SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "SLORR 解决了一个高频工程痛点：现有低秩正则化器依赖大矩阵 SVD、修改架构或依赖状态缓存，部署成本高。论文→理论层面，它提出一种无状态、低开销的训练时低秩正则化方法，让权重矩阵在训练过程",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=slorr-simple-and-efficient-in-training-low-rank-regularization"
-    },
-    {
-      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
-      "authors": [
-        "Yiwei Zhou"
-      ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08757v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08757v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Score matching controls average error under the forward marginals, but a discretized reverse-time sampler evaluates the learned score along its own trajectory. We show that small forward-marginal error does not guarantee numerical stability. We construct a single smooth score field with arbitrarily small forward-marginal $L^2$ error. The learned reverse-time process is nonexplosive, has moments of every order, and can be arbitrarily close to the exact reverse-time process in path-space total var",
-      "categories": [
-        "stat.ML",
-        "cs.LG",
-        "math.NA",
-        "math.PR"
-      ],
-      "keywords": [
-        "RAG"
-      ],
-      "score": 73.0,
+      "score": 75.0,
       "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08757v1"
+          "url": "http://arxiv.org/abs/2607.09653v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08757v1"
+          "url": "https://arxiv.org/pdf/2607.09653v1"
         }
       ],
-      "llm_reason": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-based 生成模型的理论保证与工程实践之间的裂缝——训练损失低不等于采样稳定；工程实践层面，这直接影响任何部署扩散模型时采样器选择、步数设置和误差容忍度的决策依据；趋势层面，扩散模型的理论严谨性分析正在增多，预示着该领域从'堆效果'走向'理解边界'。纯理论论文，无代码，但数学证明本身即为强证据，适合纳入推理服务可靠性知识库。",
-      "id": "score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling",
+      "llm_reason": "VEXAIoT 提出一个多 Agent 自主框架，用于 IoT 系统的漏洞发现与利用。论文→理论层面，它将 LLM Agent 从 CTF 玩具场景推进到真实 IoT 安全测试——IoT 硬件约束、过时固件、默认配置等现实复杂性被纳入多 Agent 协作设计；工程实践层面，该框架可改造为内部红队/渗透测试工具，自动化发现 IoT 产品线的已知漏洞模式，直接降低安全测试人力成本；趋势层面，AI 驱动的安全自动化正从概念验证走向垂直领域落地，IoT 是硬件+软件交叉的高价值场景。多 Agent 编排架构（侦察→分析→利用）有通用迁移性，但无代码链接，需自行 PoC 验证 Agent 在真实 IoT 固件上的有效性。",
+      "id": "vexaiot-autonomous-iot-vulnerability-exploitation-using-ai-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Internet of Things (IoT) systems are inherently vulnerable due to constrained …",
+      "one_line_judgement": "今天值得试：VEXAIoT 提出一个多 Agent 自主框架，用于 IoT 系统的漏洞发现与利用。论文→理论层面，它将 LLM Agent 从 CTF …",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "VEXAIoT 提出一个多 Agent 自主框架，用于 IoT 系统的漏洞发现与利用。论文→理论层面，它将 LLM Agent 从 CTF 玩具场景推进到真实 IoT 安全测试——IoT 硬件",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=vexaiot-autonomous-iot-vulnerability-exploitation-using-ai-agents"
+    },
+    {
+      "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+      "authors": [
+        "Federico L. Perlino",
+        "Oliver Hamelijnck",
+        "Adam M. Johansen",
+        "Theodoros Damoulas"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09645v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09645v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions are partially observed across the DAG, with noisy and heterogeneously sampled measurements, posing significant challenges for reconstruction, uncertainty propagation, and inference. To tackle these ch",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "stat.CO",
+        "stat.ME"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09645v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09645v1"
+        }
+      ],
+      "llm_reason": "将深度高斯过程（Deep GP）扩展到有向无环图（DAG）上，解决因果建模、多保真度工程、基因调控网络等场景中的函数组合重构与不确定性传播问题。论文→理论层面，它统一了 DAG 上部分可观测、噪声异构测量下的函数推断与不确定性量化，这在数学上是一个高难度贡献；工程实践层面，对多保真度仿真（如工程仿真管线中粗/细模型的组合优化）、贝叶斯优化中的不确定性传播有直接应用；趋势层面，因果推理与不确定性量化正在与深度学习深度融合。纯理论/方法论文，无代码链接，数学密度高，短期落地需较大工程投入，但理论资产价值强。",
+      "id": "deep-gaussian-processes-on-directed-acyclic-graphs",
       "value_type": "trend",
       "matched_topics": [
-        "inference-serving",
+        "rag-knowledge",
         "security-governance"
       ],
       "score_breakdown": {
@@ -410,374 +498,135 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "推理与服务：Score matching controls average error under the forward marginals, but a discr…",
-      "one_line_judgement": "值得继续观察：该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
+      "brief_cn": "RAG / 知识系统：Many real-world processes can be represented as compositions of functions alon…",
+      "one_line_judgement": "值得继续观察：将深度高斯过程（Deep GP）扩展到有向无环图（DAG）上，解决因果建模、多保真度工程、基因调控网络等场景中的函数组合重构与不确定性传播问…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "该论文从数学上证明了一个反直觉结论：扩散模型中 score matching 在前向边缘分布上的小误差不能保证反向采样的数值稳定性，并构造了反例。论文→理论层面，它揭示了 score-base",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=score-accuracy-along-the-forward-diffusion-does-not-certify-numerical-stability-in-diffusion-sampling"
+      "long_tail_summary": "将深度高斯过程（Deep GP）扩展到有向无环图（DAG）上，解决因果建模、多保真度工程、基因调控网络等场景中的函数组合重构与不确定性传播问题。论文→理论层面，它统一了 DAG 上部分可观测、",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=deep-gaussian-processes-on-directed-acyclic-graphs"
     },
     {
-      "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+      "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
       "authors": [
-        "Kaifeng Zhao",
-        "Mathis Petrovich",
-        "Haotian Zhang",
-        "Tingwu Wang",
-        "Siyu Tang"
+        "Mohadeseh Mollapour",
+        "Koorosh Aslansefat",
+        "Zeinab Dehghani",
+        "Bhupesh Kumar Mishra",
+        "Tejal Shah"
       ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08741v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08741v1",
+      "url": "http://arxiv.org/abs/2607.09649v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09649v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Generating realistic 3D human motions in real-time within interactive applications is key for animation, simulation, and humanoid robotics. While recent offline motion generation approaches offer precise control via text and kinematic constraints, they lack the inference speed required for interactive settings. Conversely, existing online methods enable real-time synthesis but often sacrifice controllability or struggle with complex text semantics and long-horizon goals due to limited context wi",
+      "abstract": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a model-agnostic perturbation-based auditing framework for evaluating the reliability of concept-based explanations. Rather than replacing SMILE, ConceptSMILE extends its perturbation-based logic from feature- or region-level attribution to the auditing of human-understandable concept explanations. The f",
       "categories": [
-        "cs.GR",
-        "cs.CV",
-        "cs.LG",
-        "cs.RO"
+        "cs.AI"
       ],
-      "keywords": [
-        "evaluation",
-        "benchmark",
-        "inference"
-      ],
-      "score": 71.0,
+      "keywords": [],
+      "score": 70.0,
       "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08741v1"
+          "url": "http://arxiv.org/abs/2607.09649v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08741v1"
+          "url": "https://arxiv.org/pdf/2607.09649v1"
         }
       ],
-      "llm_reason": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的自回归扩散框架；工程实践层面，对动画、仿真和拟人机器人控制有直接应用价值，实时推理是核心卖点；趋势层面，扩散模型从静态生成走向交互式实时生成是一条明确技术线。作者团队有较强背景（ETH 系列），但无代码链接，需核验推理延迟数据。",
-      "id": "ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation",
+      "llm_reason": "ConceptSMILE 提出模型无关的扰动式审计框架，评估概念级可解释 AI（Concept-based XAI）输出的可信度。论文→理论层面，它揭示了'概念解释本身也可能不可靠'——概念 Bottleneck 模型可能给出看似合理但实际误导的概念归因；工程实践层面，该框架可用作内部模型审计工具，在部署 XAI 系统前验证其解释的鲁棒性，直接服务合规与可信 AI 需求；趋势层面，XAI 正从'能否解释'走向'解释是否可信'，审计方法论将成为监管要求的前奏。方法模型无关，迁移门槛低，但无代码链接，需核验审计在不同模型族上的泛化性。",
+      "id": "conceptsmile-auditing-the-trustworthiness-of-concept-based-explainable-ai",
       "value_type": "trend",
-      "matched_topics": [
-        "multimodal-agent",
-        "inference-serving"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 6.45,
-        "relevance": 7.4,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 0.8,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Multimodal Agent：Generating realistic 3D human motions in real-time within interactive applicat…",
-      "one_line_judgement": "值得继续观察：ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "ARDY 用自回归扩散模型结合混合表示（连续+离散），解决交互式应用中 3D 人体运动生成的实时性与可控性矛盾。论文→理论层面，它将离线生成的精确控制能力与在线生成的实时性融合，提出混合表示的",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=ardy-autoregressive-diffusion-with-hybrid-representation-for-interactive-human-motion-generation"
-    },
-    {
-      "title": "OpenCoF: Learning to Reason Through Video Generation",
-      "authors": [
-        "Xinyan Chen",
-        "Ziyu Guo",
-        "Renrui Zhang",
-        "Dongzhi Jiang",
-        "Hongsheng Li"
-      ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08763v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08763v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct from previous Chain-of-Thought (CoT): reasoning can unfold through temporally connected frames, known as Chain-of-Frame (CoF) reasoning. However, existing video generators are primarily trained on general video corpora, still lacking diverse supervision and dedicated designs for CoF reasoning. To add",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "keywords": [
-        "benchmark"
-      ],
-      "score": 69.0,
-      "decision": "轻量试点",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08763v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08763v1"
-        }
-      ],
-      "llm_reason": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时空序列；工程实践层面，当前更偏探索性，需验证生成视频帧能否真正编码因果推理而非只是视觉插值；趋势层面，多模态推理正从'看图回答'走向'用视觉序列推理'，值得长期跟踪。证据以论文自述为主，无代码，方法新颖但落地路径不清晰，偏向趋势观察而非即时工程。",
-      "id": "opencof-learning-to-reason-through-video-generation",
-      "value_type": "trend",
-      "matched_topics": [
-        "multimodal-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "emerging",
-      "brief_cn": "Multimodal Agent：Reasoning has become a core capability for large models, especially when relia…",
-      "one_line_judgement": "值得继续观察：OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "OpenCoF 提出通过视频帧序列（Chain-of-Frame）展开推理，开辟了不同于 CoT 的视觉推理路径。论文→理论层面，它假设时序连接的帧可承载逻辑推理过程，将推理从语言序列扩展到时",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=opencof-learning-to-reason-through-video-generation"
-    },
-    {
-      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
-      "authors": [
-        "Yifan Zhou",
-        "Qihao Yang",
-        "Yan Li",
-        "Donggang Li",
-        "Xiru Hu"
-      ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08758v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08758v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation. IG-Bench is organized around the IdeaGene framework: each paper or proposal is represented as a set of minimal,",
-      "categories": [
-        "cs.AI"
-      ],
-      "keywords": [
-        "evaluation",
-        "benchmark"
-      ],
-      "score": 58.0,
-      "decision": "持续观察",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08758v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08758v1"
-        }
-      ],
-      "llm_reason": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践层面，对自动化文献综述和科研辅助 Agent 有参考价值，但短期内无直接工程产出；长尾层面，其'论文基因组'抽象可沉淀为知识图谱设计方法论。证据为 benchmark 设计自述，泛化到通用工程场景的价值有限。",
-      "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-      "value_type": "long_tail",
       "matched_topics": [
         "llm-evaluation",
-        "rag-knowledge"
+        "security-governance"
       ],
       "score_breakdown": {
         "novelty": 4.8,
         "problem_importance": 5.15,
         "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 4.6,
-        "trend_signal": 5.45,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 7.0,
-        "actionability": 5.0,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 3.6,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "LLM 评测：Scientific ideas rarely start from a blank page. They inherit mechanisms, repa…",
-      "one_line_judgement": "值得先保存：IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践",
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Concept-based explainable artificial intelligence (AI) can make model reasonin…",
+      "one_line_judgement": "值得继续观察：ConceptSMILE 提出模型无关的扰动式审计框架，评估概念级可解释 AI（Concept-based XAI）输出的可信度。论文→理论…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "ConceptSMILE 提出模型无关的扰动式审计框架，评估概念级可解释 AI（Concept-based XAI）输出的可信度。论文→理论层面，它揭示了'概念解释本身也可能不可靠'——概念 ",
       "related_trends": [
-        "coding-agent",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation"
-    },
-    {
-      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-      "authors": [
-        "Siddharth Damodharan",
-        "Radhika Gupta",
-        "Ali Alshami",
-        "Ryan Rabinowitz",
-        "Jugal Kalita"
-      ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08745v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08745v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reason about safety-critical incidents remains challenging. To address this gap, we present AUTOPILOT-VQA, an incident-centric visual question answering benchmark for dashcam video understanding. The data",
-      "categories": [
-        "cs.AI",
-        "cs.CV"
-      ],
-      "keywords": [
-        "benchmark",
-        "multimodal"
-      ],
-      "score": 55.0,
-      "decision": "持续观察",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08745v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08745v1"
-        }
-      ],
-      "llm_reason": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM 在安全关键场景的推理评测框架，可借鉴其事故分类与评测设计。无代码链接，证据以论文自述为主。",
-      "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
-      "value_type": "long_tail",
-      "matched_topics": [
-        "multimodal-agent",
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 5.45,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.6,
-        "actionability": 3.8,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "Multimodal Agent：Recent advances in Vision-Language Models, Large Language Models, and Multimod…",
-      "one_line_judgement": "值得先保存：AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 …",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM ",
-      "related_trends": [
-        "agentic-world-modeling",
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding"
+      "detail_path": "paper-detail.html?id=conceptsmile-auditing-the-trustworthiness-of-concept-based-explainable-ai"
     },
     {
-      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
       "authors": [
-        "Duen Horng Chau",
-        "Donghao Ren",
-        "Fred Hohman",
-        "Dominik Moritz"
+        "Cláudio Lúcio do Val Lopes",
+        "Lucca Machado da Silva"
       ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08746v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08746v1",
+      "url": "http://arxiv.org/abs/2607.09641v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09641v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "While UMAP is widely used for exploring high-dimensional data, typical workflows focus on its lower-dimensional embedding, largely overlooking the rich k-nearest-neighbor (kNN) graph that UMAP constructs internally. This graph encodes the data manifold in its original high-dimensional space, before the distortion that UMAP's 2D projection introduces. We demonstrate the untapped potential of this internal representation, showing how standard graph algorithms applied to this graph enhance data sen",
+      "abstract": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, we propose the Semantic Pareto-DQN, a multi-objective reinforcement learning framework. Our approach synthesizes heterogeneous transaction features into cohesive natural-language narratives, encoded by",
       "categories": [
         "cs.LG",
-        "cs.AI",
-        "cs.DS",
-        "cs.HC"
+        "cs.AI"
       ],
       "keywords": [
+        "agent",
         "evaluation"
       ],
-      "score": 52.0,
+      "score": 64.0,
       "decision": "持续观察",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08746v1"
+          "url": "http://arxiv.org/abs/2607.09641v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08746v1"
+          "url": "https://arxiv.org/pdf/2607.09641v1"
         }
       ],
-      "llm_reason": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen Horng Chau 等），方法描述清晰但无代码，对核心 AI 基础设施工程价值有限。",
-      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "value_type": "long_tail",
+      "llm_reason": "Semantic Pareto-DQN 用多目标强化学习解决金融反欺诈中的极端类别不平衡问题，将异构交易特征合成为自然语言叙事后编码，并通过 Pareto 前沿平衡拦截率与客户摩擦。论文→理论层面，'语义化叙事编码 + 多目标 RL'是一种新颖的金融序列建模范式，避免了重采样的分布扭曲；工程实践层面，对反欺诈系统的召回-精确率-用户体验三角优化有参考价值，语义编码思路可迁移到其他表格数据的异常检测；趋势层面，RL 在非游戏领域的落地正在加速，金融风控是高价值场景。但领域偏窄，无代码链接，泛化到通用工程场景的价值有限。",
+      "id": "semantic-pareto-dqn-a-multi-objective-reinforcement-learning-framework-for-financial-anomaly-detection",
+      "value_type": "trend",
       "matched_topics": [
-        "data-engineering"
+        "ai-agent",
+        "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
@@ -788,6 +637,82 @@
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Financial anomaly detection suffers from extreme class imbalance, causing trad…",
+      "one_line_judgement": "值得继续观察：Semantic Pareto-DQN 用多目标强化学习解决金融反欺诈中的极端类别不平衡问题，将异构交易特征合成为自然语言叙事后编码，并通过…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Semantic Pareto-DQN 用多目标强化学习解决金融反欺诈中的极端类别不平衡问题，将异构交易特征合成为自然语言叙事后编码，并通过 Pareto 前沿平衡拦截率与客户摩擦。论文→理论",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=semantic-pareto-dqn-a-multi-objective-reinforcement-learning-framework-for-financial-anomaly-detection"
+    },
+    {
+      "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
+      "authors": [
+        "Xiaokai Bai",
+        "Lianqing Zheng",
+        "Runwei Guan",
+        "Songkai Wang",
+        "Siyuan Cao"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09629v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09629v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor, yet its sparse returns make radar-camera fusion necessary for comprehensive scene understanding. Existing radar-camera methods mainly optimize detection, while dual-task systems usually decode boxes and occupancy with limited interaction. To address this gap and advance radar-based multi-task learn",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 58.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09629v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09629v1"
+        }
+      ],
+      "llm_reason": "4DR360 提出 4D 毫米波雷达-相机融合的联合 3D 检测与占据预测框架，解决稀疏雷达回波下的全场景感知。工程价值集中在自动驾驶感知这一垂直领域，双任务联合推理（检测+占据网格）的架构设计有一定方法论参考价值，可启发多任务模型的状态推理设计。但对通用 AI 基础设施工程的迁移性有限。无代码链接，证据以论文自述为主。",
+      "id": "4dr360-state-reasoning-for-joint-3d-detection-and-occupancy-prediction-in-4d-radar-camera-full-scene-perception",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
         "actionability": 5.0,
         "noise_risk": 2.4,
         "weak_evidence_penalty": 5.0,
@@ -796,68 +721,226 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "long_tail_watch",
-      "brief_cn": "数据工程：While UMAP is widely used for exploring high-dimensional data, typical workflo…",
-      "one_line_judgement": "值得先保存：利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
+      "brief_cn": "Multimodal Agent：Reliable autonomous driving requires full-scene perception that couples foregr…",
+      "one_line_judgement": "值得先保存：4DR360 提出 4D 毫米波雷达-相机融合的联合 3D 检测与占据预测框架，解决稀疏雷达回波下的全场景感知。工程价值集中在自动驾驶感知这…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph"
+      "long_tail_summary": "4DR360 提出 4D 毫米波雷达-相机融合的联合 3D 检测与占据预测框架，解决稀疏雷达回波下的全场景感知。工程价值集中在自动驾驶感知这一垂直领域，双任务联合推理（检测+占据网格）的架构设",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=4dr360-state-reasoning-for-joint-3d-detection-and-occupancy-prediction-in-4d-radar-camera-full-scene-perception"
     },
     {
-      "title": "Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis",
+      "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
       "authors": [
-        "Kristina Schaaff",
-        "Quintus Stierstorfer",
-        "Valerie Heckel"
+        "Ren Takahashi",
+        "Emre Yusuf",
+        "Jayabrata Bhaduri"
       ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08748v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08748v1",
+      "url": "http://arxiv.org/abs/2607.09662v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09662v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "In this study, we present a large-scale descriptive analysis of the use of an AI-based learning assistant (Syntea) in higher education. Based on objective log data from 77,543 students enrolled in distance studies, we examine usage patterns across gender, age group, study cluster, degree, and study mode. To date, existing research on educational chatbots has largely relied on comparatively small samples and self-reported survey data, while large-scale evidence on actual usage behavior remains li",
+      "abstract": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating characteristic curve (AUC) of approximately 0.70 on the DREAM database (Wong et al., 2025, Nature Communications). We introduce PHINN-EEG (Persistent Homology Inspired Neural Network for EEG), the first topological time-series framework for dream mentation analysis. Using sliding-window Takens delay embed",
       "categories": [
+        "q-bio.NC",
         "cs.AI",
-        "cs.HC"
+        "cs.LG",
+        "eess.SP",
+        "math.AT"
       ],
-      "keywords": [],
-      "score": 42.0,
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 53.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09662v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09662v1"
+        }
+      ],
+      "llm_reason": "PHINN-EEG 首次将持续同调（Persistent Homology）应用于梦境状态 EEG 的时间序列分析，通过滑动窗口 Takens 嵌入计算动态 Betti 曲线。论文→理论层面，拓扑数据分析（TDA）在脑电信号上的应用有方法论新颖性；工程实践层面，领域极窄（梦境检测），直接工程价值有限，但 TDA 用于一般时间序列异常检测/信号分类的思路可作工具灵感。方法描述清晰但领域迁移成本高，无代码链接。",
+      "id": "phinn-eeg-topological-time-series-analysis-of-dream-state-eeg-dynamic-betti-curves-for-dream-content-classification-and-topology-conditioned-neural-signal-synthesis",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "推理与服务：Current electroencephalography (EEG)-based dream detection relies on power spe…",
+      "one_line_judgement": "值得先保存：PHINN-EEG 首次将持续同调（Persistent Homology）应用于梦境状态 EEG 的时间序列分析，通过滑动窗口 Taken…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "PHINN-EEG 首次将持续同调（Persistent Homology）应用于梦境状态 EEG 的时间序列分析，通过滑动窗口 Takens 嵌入计算动态 Betti 曲线。论文→理论层面，",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=phinn-eeg-topological-time-series-analysis-of-dream-state-eeg-dynamic-betti-curves-for-dream-content-classification-and-topology-conditioned-neural-signal-synthesis"
+    },
+    {
+      "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
+      "authors": [
+        "Nirjhar Das",
+        "Md. Al-Mamun Provath"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09623v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09623v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present our submission to the QANTA 2026 shared challenge at the ICML 2026 Workshop on Efficient Multimodal Question Answering (EMM-QA). Quanta evaluates multimodal quizbowl systems that answer pyramid-style questions from incrementally revealed text and accompanying images while operating under realistic efficiency constraints. The challenge consists of two distinct tasks: Tossup questions, which require deciding when to answer under uncertainty, and Bonus questions, which emphasize accurate",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark",
+        "multimodal"
+      ],
+      "score": 49.0,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08748v1"
+          "url": "http://arxiv.org/abs/2607.09623v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08748v1"
+          "url": "https://arxiv.org/pdf/2607.09623v1"
         }
       ],
-      "llm_reason": "对 AI 学习助手在高等教育中使用的大规模描述性分析。基于 77543 名学生的日志数据，证据规模大但本质是观察性统计而非方法创新。对 AI 工程团队无直接技术产出价值，新意弱、工程可验证性低。",
-      "id": "using-ai-based-learning-assistants-in-higher-education-a-large-scale-descriptive-analysis",
+      "llm_reason": "面向 QANTA 2026 竞赛的多模态问答 Agent，核心贡献是置信度校准（决定何时作答）与增量推理。置信度校准与不确定性下的决策时机选择对 Agent 系统有方法论参考价值，但本质是竞赛系统报告，工程泛化性和方法新颖性有限。无代码链接，证据以竞赛成绩和系统描述为主。",
+      "id": "task-specific-multimodal-question-answering-agents-via-confidence-calibration-and-incremental-reasoning-for-qanta-2026",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：We present our submission to the QANTA 2026 shared challenge at the ICML 2026 …",
+      "one_line_judgement": "值得先保存：面向 QANTA 2026 竞赛的多模态问答 Agent，核心贡献是置信度校准（决定何时作答）与增量推理。置信度校准与不确定性下的决策时机选…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "面向 QANTA 2026 竞赛的多模态问答 Agent，核心贡献是置信度校准（决定何时作答）与增量推理。置信度校准与不确定性下的决策时机选择对 Agent 系统有方法论参考价值，但本质是竞赛",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=task-specific-multimodal-question-answering-agents-via-confidence-calibration-and-incremental-reasoning-for-qanta-2026"
+    },
+    {
+      "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
+      "authors": [
+        "Chengkai Zhu",
+        "Ziao Tang",
+        "Guocheng Zhen",
+        "Yimeng Cao",
+        "Yusheng Zhao"
+      ],
+      "published": "2026-07-10",
+      "updated": "2026-07-10",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.09632v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.09632v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formalizing its coding theorems requires connecting finite-block protocols, analytic inequalities, and asymptotic limits within a unified machine-checked framework. Existing developments, however, lack a reusable operational layer that defines codes, error criteria, achievable rates, and capacities indepen",
+      "categories": [
+        "quant-ph",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic"
+      ],
+      "score": 38.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.09632v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.09632v1"
+        }
+      ],
+      "llm_reason": "Lean-QIT 致力于用量子信息理论的 Lean 形式化基础设施（机器检查证明）。领域极窄（量子信息 + 形式化验证），与 AI Agent、推理服务、基础设施工程几乎无交集。学术价值可能很高但工程迁移性极低，无代码/benchmark 资产可验证。",
+      "id": "lean-qit-towards-a-formal-infrastructure-for-quantum-information-theory",
       "value_type": "ignore",
       "matched_topics": [
-        "rag-knowledge"
+        "ai-k8s-platform"
       ],
       "score_breakdown": {
         "novelty": 4.8,
         "problem_importance": 5.15,
         "relevance": 5.0,
         "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 5.35,
-        "asset_convertibility": 4.8,
-        "actionability": 3.2,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 3.6,
@@ -865,140 +948,63 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "RAG / 知识系统：In this study, we present a large-scale descriptive analysis of the use of an …",
-      "one_line_judgement": "当前可忽略：对 AI 学习助手在高等教育中使用的大规模描述性分析。基于 77543 名学生的日志数据，证据规模大但本质是观察性统计而非方法创新。对 AI…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
+      "brief_cn": "AI 平台工程：Quantum information theory (QIT) characterizes the capabilities and fundamenta…",
+      "one_line_judgement": "当前可忽略：Lean-QIT 致力于用量子信息理论的 Lean 形式化基础设施（机器检查证明）。领域极窄（量子信息 + 形式化验证），与 AI Agen…",
+      "first_seen_date": "2026-07-14",
+      "first_deep_dive_daily": "2026-07-14",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "对 AI 学习助手在高等教育中使用的大规模描述性分析。基于 77543 名学生的日志数据，证据规模大但本质是观察性统计而非方法创新。对 AI 工程团队无直接技术产出价值，新意弱、工程可验证性低",
-      "related_trends": [
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=using-ai-based-learning-assistants-in-higher-education-a-large-scale-descriptive-analysis"
-    },
-    {
-      "title": "MulTTiPop: A Multitrack Transcription Dataset for Pop Music",
-      "authors": [
-        "Nathan Pruyne",
-        "Benjamin Stoler",
-        "William Chen",
-        "Chien-yu Huang",
-        "Shinji Watanabe"
-      ],
-      "published": "2026-07-09",
-      "updated": "2026-07-09",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.08756v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.08756v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "We present MulTTiPop, a dataset of pop music segments and their associated multitrack MIDI recordings for the evaluation of automatic music transcription models. MulTTiPop contains 572 segments of popular music totaling 3.5 hours of audio, and contains songs from diverse genres and decades from the 1930s to 2000s. To collect this dataset, we perform metadata-based matching on song segments from the Lakh MIDI and TheoryTab datasets, manually identify an anchor beat between the audio and MIDI, the",
-      "categories": [
-        "cs.SD",
-        "cs.LG"
-      ],
-      "keywords": [
-        "evaluation"
-      ],
-      "score": 38.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.08756v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.08756v1"
-        }
-      ],
-      "llm_reason": "MulTTiPop 是流行音乐多轨转录数据集。虽然数据集构建工作量扎实（572 段、3.5 小时），但领域极窄（音乐信息检索），与 AI Agent、推理服务、基础设施工程几乎无交集。新意有限、相关性低。",
-      "id": "multtipop-a-multitrack-transcription-dataset-for-pop-music",
-      "value_type": "ignore",
-      "matched_topics": [
-        "llm-evaluation"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
-        "evidence_strength": 4.95,
-        "engineering_testability": 3.5,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 4.0,
-        "low_relevance_penalty": 3.6,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "LLM 评测：We present MulTTiPop, a dataset of pop music segments and their associated mul…",
-      "one_line_judgement": "当前可忽略：MulTTiPop 是流行音乐多轨转录数据集。虽然数据集构建工作量扎实（572 段、3.5 小时），但领域极窄（音乐信息检索），与 AI A…",
-      "first_seen_date": "2026-07-13",
-      "first_deep_dive_daily": "2026-07-13",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "MulTTiPop 是流行音乐多轨转录数据集。虽然数据集构建工作量扎实（572 段、3.5 小时），但领域极窄（音乐信息检索），与 AI Agent、推理服务、基础设施工程几乎无交集。新意有限",
-      "related_trends": [
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=multtipop-a-multitrack-transcription-dataset-for-pop-music"
+      "long_tail_summary": "Lean-QIT 致力于用量子信息理论的 Lean 形式化基础设施（机器检查证明）。领域极窄（量子信息 + 形式化验证），与 AI Agent、推理服务、基础设施工程几乎无交集。学术价值可能很",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=lean-qit-towards-a-formal-infrastructure-for-quantum-information-theory"
     }
   ],
   "long_tail_highlights": [
     {
-      "id": "ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation",
-      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
-      "direction": "LLM 评测 / RAG / 知识系统",
-      "long_tail_type": "工程抽象",
-      "why_save": "IdeaGene-Bench 将科学论文表示为'基因'集合，评估 AI 能否追踪科学思想的继承、修复与重组。论文→理论层面，IdeaGene 框架提供了一个结构化表征学术谱系的新视角；工程实践",
+      "id": "4dr360-state-reasoning-for-joint-3d-detection-and-occupancy-prediction-in-4d-radar-camera-full-scene-perception",
+      "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
+      "direction": "Multimodal Agent",
+      "long_tail_type": "可迁移方法",
+      "why_save": "4DR360 提出 4D 毫米波雷达-相机融合的联合 3D 检测与占据预测框架，解决稀疏雷达回波下的全场景感知。工程价值集中在自动驾驶感知这一垂直领域，双任务联合推理（检测+占据网格）的架构设",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-03",
-      "detail_path": "paper-detail.html?id=ideas-have-genomes-benchmarking-scientific-lineage-reasoning-and-lineage-grounded-idea-generation"
+      "revisit_date": "2026-08-04",
+      "detail_path": "paper-detail.html?id=4dr360-state-reasoning-for-joint-3d-detection-and-occupancy-prediction-in-4d-radar-camera-full-scene-perception"
     },
     {
-      "id": "autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding",
-      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-      "direction": "Multimodal Agent / LLM 评测",
+      "id": "phinn-eeg-topological-time-series-analysis-of-dream-state-eeg-dynamic-betti-curves-for-dream-content-classification-and-topology-conditioned-neural-signal-synthesis",
+      "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+      "direction": "推理与服务",
       "long_tail_type": "工程抽象",
-      "why_save": "AUTOPILOT-VQA 面向行车记录仪的以事故为中心的视觉问答 benchmark。工程价值集中在自动驾驶安全评测这一垂直场景，对通用 AI 工程团队的迁移性有限；方法论上展示了 VLM ",
+      "why_save": "PHINN-EEG 首次将持续同调（Persistent Homology）应用于梦境状态 EEG 的时间序列分析，通过滑动窗口 Takens 嵌入计算动态 Betti 曲线。论文→理论层面，",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-03",
-      "detail_path": "paper-detail.html?id=autopilot-vqa-benchmarking-vision-language-models-for-incident-centric-dashcam-understanding"
+      "revisit_date": "2026-08-04",
+      "detail_path": "paper-detail.html?id=phinn-eeg-topological-time-series-analysis-of-dream-state-eeg-dynamic-betti-curves-for-dream-content-classification-and-topology-conditioned-neural-signal-synthesis"
     },
     {
-      "id": "dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph",
-      "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
-      "direction": "数据工程",
+      "id": "task-specific-multimodal-question-answering-agents-via-confidence-calibration-and-incremental-reasoning-for-qanta-2026",
+      "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
+      "direction": "AI Agent / LLM 评测",
       "long_tail_type": "工程抽象",
-      "why_save": "利用 UMAP 内部 kNN 图做数据感知，展示了降维算法中间表示的未被开发的潜力。工程价值偏数据探索与可视化工具方向，可作为数据质量分析与异常检测的工具灵感。作者来自知名可视化团队（Duen",
+      "why_save": "面向 QANTA 2026 竞赛的多模态问答 Agent，核心贡献是置信度校准（决定何时作答）与增量推理。置信度校准与不确定性下的决策时机选择对 Agent 系统有方法论参考价值，但本质是竞赛",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-03",
-      "detail_path": "paper-detail.html?id=dimensionality-reduction-meets-network-science-sensemaking-on-umap-s-knn-graph"
+      "revisit_date": "2026-08-04",
+      "detail_path": "paper-detail.html?id=task-specific-multimodal-question-answering-agents-via-confidence-calibration-and-incremental-reasoning-for-qanta-2026"
     }
   ],
   "common_research_path": [

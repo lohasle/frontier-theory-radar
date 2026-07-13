@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-13T04:33:02.771528",
+  "updated_at": "2026-07-14T04:33:22.453921",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-14",
+      "title": "论文价值发现日报 - 2026-07-14",
+      "deep_dive_title": "Scalable Visual Pretraining for Language Intelligence",
+      "deep_dive_url": "http://arxiv.org/abs/2607.09657v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成两件事：审查现有文档智能/RAG pipeline 中的视觉信息丢失环节并形成被丢弃信号清单；用 CSB 数据集对自家 VLM 做一轮复杂场景认知盲区测试。",
+      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。视觉预训练的数据规模与下游增益数据、VEXAIoT 在真实 IoT 固件上的有效性均为关键未知项。",
+      "one_line_judgement": "视觉预训练论文论证了'纯文本会丢弃不可恢复的语义'——公式排版、图表空间关系被 OCR 管线全部抹掉，而多模态预训练可在源端保留这些信号；VLM 错误演进的十年回溯则提供了从'准不准'到'为什么错'的系统性诊断框架，可立即转化为回归测试套件。",
+      "path": "daily-detail.html?date=2026-07-14"
+    },
     {
       "date": "2026-07-13",
       "title": "论文价值发现日报 - 2026-07-13",
@@ -378,19 +391,6 @@
       "max_uncertainty": "Diffusion LM 在通用文本生成上是否能与 autoregressive LM 竞争（当前 MDLM/SEDM/Plaid 主要在受控任务上有效）；低置信度 token 在代码 / 长文档 / 多跳推理场景的实体召回质量；SMT 在更大主干模型（>1B 参数）上的可扩展性；OpAI-Bench 的操作空间是否覆盖 Cursor/Copilot 类 IDE 共编场景",
       "one_line_judgement": "把离散扩散 LM 去噪过程中'低置信度被丢弃的 token'重新定义为 RAG 的前瞻检索信号——副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队。当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，需要新的检索基础设施。",
       "path": "daily-detail.html?date=2026-06-07"
-    },
-    {
-      "date": "2026-06-06",
-      "title": "论文价值发现日报 - 2026-06-06",
-      "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-      "deep_dive_url": "http://arxiv.org/abs/2606.06492v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "今天完成 Code2LoRA 摘要精读 + 超网络设计精读；评估当前代码助手（如 Continue / Cursor / 私有 Codex 部署）的仓级知识策略，列出'仓级 RAG vs 仓级 LoRA vs 长上下文'的成本-延迟-效果三维对比表",
-      "max_uncertainty": "Code2LoRA 的代码与 benchmark 链接待核验；超网络生成的 LoRA 在基础模型家族外（如非论文实验主干）是否仍稳定；TailLoR 谱惩罚系数在不同任务序列长度上的鲁棒性",
-      "one_line_judgement": "把'每仓一次微调'升级为'按需生成 LoRA 适配器'，零推理 token 开销注入仓级上下文，直接命中企业内部代码助手（Cursor/Copilot/Codex 私有部署）的核心痛点：长上下文窗口不应用于仓级 schema，模型走 RAG 又会拖慢推理。超网络生成的 LoRA 可作为静态索引服务持续维护，与代码仓 CI 解耦。",
-      "path": "daily-detail.html?date=2026-06-06"
     }
   ]
 }
