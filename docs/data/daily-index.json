@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-14T04:33:22.453921",
+  "updated_at": "2026-07-17T04:36:22.811643",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-17",
+      "title": "论文价值发现日报 - 2026-07-17",
+      "deep_dive_title": "VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair",
+      "deep_dive_url": "http://arxiv.org/abs/2607.14075v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成两件事：审查现有 coding agent 工具调用层是否支持动态选工具与视觉证据接入，列出可改造的修复场景；对内部 LLM 评测/benchmark 流水线做一轮泄漏审计，标注训练窗越界与检索泄漏点。",
+      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。VisualRepair 区域聚焦在不同 UI 框架上的有效性、Hindcast 的市场覆盖率与统计显著性、MOJO 的预训练数据规模与下游增益幅度均为关键未知项。",
+      "one_line_judgement": "VisualRepair 的两条设计模式——'按场景动态选择工具'与'先视觉定位 ROI 再生成补丁'——可立即可迁移到自家 coding agent 的 GUI 测试与 issue 自动分诊；Hindcast 提醒任何检索增强、时序预测、Agent 决策类系统的评测都必须先做泄漏审计，否则分数不可信。MOJO 则验证了'分词→掩码自监督预训练'范式对神经脉冲等任意模态成立，是跨模态基础模型的方法论模板。",
+      "path": "daily-detail.html?date=2026-07-17"
+    },
     {
       "date": "2026-07-14",
       "title": "论文价值发现日报 - 2026-07-14",
@@ -378,19 +391,6 @@
       "max_uncertainty": "Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性",
       "one_line_judgement": "用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/RAG 增强'重构为'hypernetwork 推理时一次性生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + 软件工程三者首次明确耦合。",
       "path": "daily-detail.html?date=2026-06-08"
-    },
-    {
-      "date": "2026-06-07",
-      "title": "论文价值发现日报 - 2026-06-07",
-      "deep_dive_title": "Self-Augmenting Retrieval for Diffusion Language Models",
-      "deep_dive_url": "http://arxiv.org/abs/2606.06474v1",
-      "decision": "重点学习",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "今天完成 Self-Augmenting Retrieval 摘要 + 实验设计精读；列出你当前 RAG 管线的'检索触发点'清单，评估如果切换到扩散/并行生成时哪些触发点会失效",
-      "max_uncertainty": "Diffusion LM 在通用文本生成上是否能与 autoregressive LM 竞争（当前 MDLM/SEDM/Plaid 主要在受控任务上有效）；低置信度 token 在代码 / 长文档 / 多跳推理场景的实体召回质量；SMT 在更大主干模型（>1B 参数）上的可扩展性；OpAI-Bench 的操作空间是否覆盖 Cursor/Copilot 类 IDE 共编场景",
-      "one_line_judgement": "把离散扩散 LM 去噪过程中'低置信度被丢弃的 token'重新定义为 RAG 的前瞻检索信号——副产品变成主动检索入口。这是 Diffusion LM × RAG 两个活跃方向的首次明确交叉，Cornell Weinberger 团队。当 Masked LM / Diffusion LM 走向产品化时，检索路径不再是'用户 query → 检索'而是'中间去噪状态 → 检索'，需要新的检索基础设施。",
-      "path": "daily-detail.html?date=2026-06-07"
     }
   ]
 }

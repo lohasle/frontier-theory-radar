@@ -1,0 +1,136 @@
+{
+  "id": "visualrepair-dynamic-tool-calling-and-region-focusing-for-visual-software-issue-repair",
+  "title": "VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair",
+  "authors": [
+    "Jingyu Xiao",
+    "Zhongyi Zhang",
+    "Haoran Hou",
+    "Yuxuan Wan",
+    "Yuan Jiang"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-15",
+  "url": "http://arxiv.org/abs/2607.14075v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.14075v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-17",
+  "first_deep_dive_daily": "2026-07-17",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 6.2,
+    "evidence": 4.5,
+    "engineering_testability": 4.6,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 5.0,
+    "noise_risk": 1.2
+  },
+  "score": 81.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（d…",
+  "one_line_essence": "VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（dynamic tool calling）与区域聚焦（region focusing）来定位并修复软件问题。论文→理论层面，它论证了'视觉是代码缺陷的关键证据信道'——bug 复现截图携带堆栈/控件/布局信息，纯文本 issue 描述无法替代；工程实践层面，动态工具调用（按场景选择截屏/裁剪/检索）与区域聚焦（先定位视觉 ROI 再生成补丁）是两条可直接迁移到自家 coding agent 的设计模式，对 GUI 测试自动化、视觉回归、issue 自动分诊 pipeline 有立竿见影的价值；趋势层面，coding agent 正从'纯代码生成'走向'多模态工具增强'，2026 年是 coding-agent 与 multimodal-agent 合流的关键年。证据为框架设计与方法自述，无代码/benchmark 链接可核验，需自行 PoC 验证区域聚焦在不同 UI 框架上的有效性。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（dynamic tool calling）与区域聚焦（region focusing）来定位并修复软件问题。论文→理论层面，它论证了'视觉是代码缺陷的关键证据信道'——bug 复现截图携带堆栈/控件/布局信息，纯文本 is",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "coding-agent",
+      "agentic-world-modeling"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（dynamic tool calling）与区域聚焦（",
+    "future_trigger": [
+      "待更多证据"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14075v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.14075v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=visualrepair-dynamic-tool-calling-and-region-focusing-for-visual-software-issue-repair",
+  "daily_path": "daily-detail.html?date=2026-07-17",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent",
+    "trend-detail.html?id=agentic-world-modeling"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

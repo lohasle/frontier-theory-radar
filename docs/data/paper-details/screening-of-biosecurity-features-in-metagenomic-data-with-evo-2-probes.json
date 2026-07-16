@@ -1,0 +1,134 @@
+{
+  "id": "screening-of-biosecurity-features-in-metagenomic-data-with-evo-2-probes",
+  "title": "Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes",
+  "authors": [
+    "Jeremy Guntoro",
+    "Alexander Dack",
+    "Dylan Danno",
+    "Michaela Jančovičová",
+    "Križan Jurinović"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-15",
+  "url": "http://arxiv.org/abs/2607.14070v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.14070v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-17",
+  "first_deep_dive_daily": "2026-07-17",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
+  "value_scores": {
+    "novelty": 5.4,
+    "relevance": 5.0,
+    "evidence": 4.5,
+    "engineering_testability": 3.5,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 3.8,
+    "noise_risk": 1.2
+  },
+  "score": 60.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得先保存：在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。…",
+  "one_line_essence": "在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。论文→理论层面，它回答了'任务相关信号有多少是线性可读的'这一基础模型评估的经典问题——线性探针就能达到强判别力，说明表征质量高；工程实践层面，探针（probing）方法论可迁移为任意基础模型的表征健康度体检工具：用轻量探针评估各层可线性分离的任务信号，是低成本诊断预训练质量的手段；趋势层面，基因组基础模型（Evo 2）是 AI for Science 的新前沿，但与通用 AI 基础设施工程交集有限。证据为探针实验自述，无代码链接，方法迁移价值大于直接业务价值。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。论文→理论层面，它回答了'任务相关信号有多少是线性可读的'这一基础模型评估的经典问题——线性探针就能达到强判别力，说明表征质量高；工程实践层面，探针（probing）方法论可迁移为任意基础模型的表征健康度体检工具：用轻量",
+  "research_position": "long_tail_insight",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "long_tail_watch",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。论文→理论层面，它回答了'任务相关信号有多少是线性可",
+    "future_trigger": [
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": "2026-08-07"
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [],
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
+    ],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14070v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.14070v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=screening-of-biosecurity-features-in-metagenomic-data-with-evo-2-probes",
+  "daily_path": "daily-detail.html?date=2026-07-17",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

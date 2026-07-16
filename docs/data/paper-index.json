@@ -1,7 +1,748 @@
 {
-  "updated_at": "2026-07-14T04:33:22.456203",
-  "total": 449,
+  "updated_at": "2026-07-17T04:36:22.813982",
+  "total": 459,
   "papers": [
+    {
+      "title": "VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair",
+      "authors": [
+        "Jingyu Xiao",
+        "Zhongyi Zhang",
+        "Haoran Hou",
+        "Yuxuan Wan",
+        "Yuan Jiang"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14075v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14075v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Automated Program Repair (APR) has witnessed significant progress with the advent of Large Language Models (LLMs). However, as modern software systems increasingly expose rich graphical user interfaces, effectively leveraging visual information from bug screenshots has become essential for understanding bugs and generating accurate fixes in multimodal scenarios. Real-world issue reports frequently contain heterogeneous visual attachments including UI screenshots, IDE snapshots, GIFs, and text-ce",
+      "categories": [
+        "cs.SE"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG",
+        "multimodal"
+      ],
+      "score": 81.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14075v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14075v1"
+        }
+      ],
+      "llm_reason": "VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（dynamic tool calling）与区域聚焦（region focusing）来定位并修复软件问题。论文→理论层面，它论证了'视觉是代码缺陷的关键证据信道'——bug 复现截图携带堆栈/控件/布局信息，纯文本 issue 描述无法替代；工程实践层面，动态工具调用（按场景选择截屏/裁剪/检索）与区域聚焦（先定位视觉 ROI 再生成补丁）是两条可直接迁移到自家 coding agent 的设计模式，对 GUI 测试自动化、视觉回归、issue 自动分诊 pipeline 有立竿见影的价值；趋势层面，coding agent 正从'纯代码生成'走向'多模态工具增强'，2026 年是 coding-agent 与 multimodal-agent 合流的关键年。证据为框架设计与方法自述，无代码/benchmark 链接可核验，需自行 PoC 验证区域聚焦在不同 UI 框架上的有效性。",
+      "id": "visualrepair-dynamic-tool-calling-and-region-focusing-for-visual-software-issue-repair",
+      "value_type": "immediate",
+      "matched_topics": [
+        "coding-agent",
+        "multimodal-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：Automated Program Repair (APR) has witnessed significant progress with the adv…",
+      "one_line_judgement": "今天值得试：VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（d…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "VisualRepair 把自动程序修复（APR）从纯代码推进到多模态：用 UI 截图、IDE 快照、GIF 等视觉附件配合动态工具调用（dynamic tool calling）与区域聚焦（",
+      "related_trends": [
+        "coding-agent",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=visualrepair-dynamic-tool-calling-and-region-focusing-for-visual-software-issue-repair"
+    },
+    {
+      "title": "Hindcast: Replaying Prediction Markets to Evaluate LLM Forecasters",
+      "authors": [
+        "Xiao Ye",
+        "Jacob Dineen",
+        "Evan Zhu",
+        "Shijie Lu",
+        "Kevin Song"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14051v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14051v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Forecasters are evaluated by backtesting, which replays resolved questions and grades the probability the system would have assigned before the outcome was known. For LLMs, two channels leak the answer into this test. A model that retrieves can surface reports written after the event, turning forecasting into a lookup, and each new model is trained on data closer to the event, so a question that lay in the future for last year's models sits inside this year's training data. Either way, the test ",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 77.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14051v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14051v1"
+        }
+      ],
+      "llm_reason": "Hindcast 直击 LLM 预测系统评估的致命盲点：数据泄漏。两条泄漏通道——检索增强会让模型读到'事后才有的报告'、新版模型训练数据越界把'未来问题'变成'已知答案'——都会让 backtesting 失真。论文→理论层面，它把'评估 LLM 预测者'转化为'控制信息泄漏的因果推断问题'，提出了 hindcast（重放已结算预测市场）的方法论来重建'事前概率'；工程实践层面，该思路可立即迁移到任何 LLM 评测/benchmark 流水线——在评估检索增强、时序预测、Agent 决策类系统时必须先做泄漏审计，否则分数不可信；趋势层面，LLM forecasting 与可信评测是 2026 年两条上升线，泄漏控制是评测效度的地基。方法描述清晰，但无代码链接，需核验 hindcast 的市场覆盖率与统计显著性。",
+      "id": "hindcast-replaying-prediction-markets-to-evaluate-llm-forecasters",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：Forecasters are evaluated by backtesting, which replays resolved questions and…",
+      "one_line_judgement": "值得继续观察：Hindcast 直击 LLM 预测系统评估的致命盲点：数据泄漏。两条泄漏通道——检索增强会让模型读到'事后才有的报告'、新版模型训练数据越…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Hindcast 直击 LLM 预测系统评估的致命盲点：数据泄漏。两条泄漏通道——检索增强会让模型读到'事后才有的报告'、新版模型训练数据越界把'未来问题'变成'已知答案'——都会让 back",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=hindcast-replaying-prediction-markets-to-evaluate-llm-forecasters"
+    },
+    {
+      "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
+      "authors": [
+        "Hefeng Zhou",
+        "Jinxuan Zhang",
+        "Jiong Lou",
+        "Yuxin Liu",
+        "Chaochao Lu"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14049v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14049v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current interaction approaches typically involve re-generating another response that may make mistakes again, or users laboriously flag the faulty step in follow-up turns that may get responses <You are right, I made a mistake here> followed by similar errors recurring. To address this issue, we propose an effici",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 73.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14049v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14049v1"
+        }
+      ],
+      "llm_reason": "Deep Interaction 针对 CoT 推理模型的痛点：出错后要么重新生成（可能再错），要么人工标注错误步骤（费时且模型常回'我错了'后重蹈覆辙）。论文→理论层面，它提出了推理链中错误步的高效人机交互修复范式，区分'重新生成'与'定位修复'两种纠错模式的理论边界；工程实践层面，对推理 Agent 的交互层设计有直接参考价值——当构建可交互的推理助手（数学/代码/分析 Agent）时，如何设计最小干预的纠错协议、如何在上下文中锚定错误步而不污染推理链，是落地大推理模型的核心工程问题；趋势层面，大推理模型（o1/CoT 类）正从'单次生成'走向'交互式精炼'，交互协议设计是新热点。方法新颖但无代码链接，需核验纠错效率与用户满意度数据。",
+      "id": "deep-interaction-an-efficient-human-ai-interaction-method-for-large-reasoning-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "context-engineering",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced t…",
+      "one_line_judgement": "值得继续观察：Deep Interaction 针对 CoT 推理模型的痛点：出错后要么重新生成（可能再错），要么人工标注错误步骤（费时且模型常回'我错了…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Deep Interaction 针对 CoT 推理模型的痛点：出错后要么重新生成（可能再错），要么人工标注错误步骤（费时且模型常回'我错了'后重蹈覆辙）。论文→理论层面，它提出了推理链中错误",
+      "related_trends": [
+        "context-engineering",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=deep-interaction-an-efficient-human-ai-interaction-method-for-large-reasoning-models"
+    },
+    {
+      "title": "Leveraging unlabelled data for generalizable neural population decoding",
+      "authors": [
+        "Ximeng Mao",
+        "Nanda H. Krishna",
+        "Avery Hee-Woon Ryoo",
+        "Matthew G. Perich",
+        "Guillaume Lajoie"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14086v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14086v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding performance. However, current spike-based models are restricted to supervised learning (SL), limiting training to datasets with paired behavioural labels. To address this limitation, we introduce MOJO (Masked autOencoder-",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 71.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14086v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14086v1"
+        }
+      ],
+      "llm_reason": "MOJO（Masked autoencoder）把 spike 级神经解码从纯监督扩展到自监督预训练，在无行为标签的神经数据上做 masked 重建，再迁移到有标签的脑机接口解码任务。论文→理论层面，它验证了一个可迁移的强假设：'先分词（tokenize）→ 再掩码自监督预训练（masked pretraining）→ 再下游微调'的 foundation-model 范式对任意模态（这里是神经脉冲）都成立，且能跨越会话/被试泛化；工程实践层面，这条 pipeline 模板可迁移到团队自有非文本/非视觉模态（时序信号、日志序列、传感器流）的预训练——只要能定义合理的 token 与掩码策略，就能复用 masked-autoencoder 的工程栈；趋势层面，SSL 预训练正从文本/图像向生物信号、音频等长尾模态渗透，'通用分词+自监督'是跨模态基础模型的方法论核心。证据来自方法设计与跨会话泛化实验自述，无代码链接，需核验预训练数据规模与下游增益幅度。",
+      "id": "leveraging-unlabelled-data-for-generalizable-neural-population-decoding",
+      "value_type": "trend",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "推理与服务：Robust and accurate neural decoders are integral to neurotechnologies such as …",
+      "one_line_judgement": "值得继续观察：MOJO（Masked autoencoder）把 spike 级神经解码从纯监督扩展到自监督预训练，在无行为标签的神经数据上做 maske…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "MOJO（Masked autoencoder）把 spike 级神经解码从纯监督扩展到自监督预训练，在无行为标签的神经数据上做 masked 重建，再迁移到有标签的脑机接口解码任务。论文→理",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=leveraging-unlabelled-data-for-generalizable-neural-population-decoding"
+    },
+    {
+      "title": "Multi-Expert Routing for Multi-Domain Low-Resource OCR: A Manchu Case Study",
+      "authors": [
+        "Zhan Chen",
+        "Jiqiao Ma",
+        "Chih-wen Kuo"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14041v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14041v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Historical Manchu OCR must accommodate various visually distinct writing styles, including regular script, running script, and the semi-cursive chancery hand used in palace memorials, despite limited labeled data. We study a multi-expert system that reuses checkpoints from an iterative fine-tuning process as domain specialists and uses a lightweight page-level image classifier to dispatch pages by visual style. When the checkpoint pool lacks a suitable specialist, we train an additional expert f",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 69.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14041v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14041v1"
+        }
+      ],
+      "llm_reason": "面向低资源满文 OCR 的多专家路由：把迭代微调过程中产生的各 checkpoint 复用为'领域专家'，再用轻量页面级图像分类器按视觉风格（楷书/行书/奏折体）分发页面，专家池不够时再训练新专家。论文→理论层面，它展示了'checkpoint 即专家 + 路由器分发'的 MoE 思想在低资源多域场景的落地，避免了单模型兼顾所有风格的稀释问题；工程实践层面，该架构模式可迁移到任何低资源多域任务（多语言 NLP、多行业文档、多源日志）——把增量训练的副产品（中间 checkpoint）沉淀为专家库而非丢弃，用轻量路由器组合，是高性价比的工程策略；趋势层面，多专家路由/MoE 正从超大模型下沉到中小规模的垂直场景。证据为系统设计与消融自述，无代码链接，需核验路由准确率与专家库扩张策略的稳定性。",
+      "id": "multi-expert-routing-for-multi-domain-low-resource-ocr-a-manchu-case-study",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Historical Manchu OCR must accommodate various visually distinct writing style…",
+      "one_line_judgement": "值得继续观察：面向低资源满文 OCR 的多专家路由：把迭代微调过程中产生的各 checkpoint 复用为'领域专家'，再用轻量页面级图像分类器按视觉风格…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "面向低资源满文 OCR 的多专家路由：把迭代微调过程中产生的各 checkpoint 复用为'领域专家'，再用轻量页面级图像分类器按视觉风格（楷书/行书/奏折体）分发页面，专家池不够时再训练新",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=multi-expert-routing-for-multi-domain-low-resource-ocr-a-manchu-case-study"
+    },
+    {
+      "title": "MetaPerch: Learning from metadata for bioacoustics foundation models",
+      "authors": [
+        "Mustafa Chasmai",
+        "Vincent Dumoulin",
+        "Jenny Hamer"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14072v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14072v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Bioacoustic foundation models rely on large-scale citizen science platforms like Xeno-Canto for geographically and ecologically diverse data. Recent work has shown that supervision alone can produce SotA species detection models when trained on this large-scale data -- however, there remains unutilized potential in the form of recording metadata readily available within these community-driven data hubs. In this work, we explore the use of metadata -- such as location and time -- as auxiliary sup",
+      "categories": [
+        "cs.LG",
+        "cs.SD"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 63.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14072v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14072v1"
+        }
+      ],
+      "llm_reason": "MetaPerch 探索用录音元数据（地点、时间）作为生物声学基础模型的辅助监督信号来提升物种检测。论文→理论层面，它论证了'元数据即弱监督'——时空元数据携带物种分布先验，可补偿声学标签的稀缺；工程实践层面，'把旁路元数据注入为辅助监督'是一个可迁移的工程模式，适用于任何标签稀缺但存在结构化上下文的场景（如带设备号/时间戳的工业时序）；趋势层面，基础模型正从纯内容建模走向'内容+上下文'联合建模。但领域（鸟鸣物种检测）较窄，直接工程价值有限，无代码链接，方法论灵感大于直接复用。",
+      "id": "metaperch-learning-from-metadata-for-bioacoustics-foundation-models",
+      "value_type": "long_tail",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "前沿论文：Bioacoustic foundation models rely on large-scale citizen science platforms li…",
+      "one_line_judgement": "值得先保存：MetaPerch 探索用录音元数据（地点、时间）作为生物声学基础模型的辅助监督信号来提升物种检测。论文→理论层面，它论证了'元数据即弱监督…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "MetaPerch 探索用录音元数据（地点、时间）作为生物声学基础模型的辅助监督信号来提升物种检测。论文→理论层面，它论证了'元数据即弱监督'——时空元数据携带物种分布先验，可补偿声学标签的稀",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=metaperch-learning-from-metadata-for-bioacoustics-foundation-models"
+    },
+    {
+      "title": "Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes",
+      "authors": [
+        "Jeremy Guntoro",
+        "Alexander Dack",
+        "Dylan Danno",
+        "Michaela Jančovičová",
+        "Križan Jurinović"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14070v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14070v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Genomic foundation models such as Evo 2 learn rich sequence representations, but their value for biosecurity screening is largely unexplored. We ask how much biosecurity-relevant signal is linearly accessible in these representations by training minimal linear and attention probes on frozen Evo 2 layer-26 activations, without fine-tuning the underlying model. Across held-out metagenomic test sets, the probes detect antimicrobial resistance (AMR) with strong discrimination: a linear probe reaches",
+      "categories": [
+        "q-bio.GN",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 60.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14070v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14070v1"
+        }
+      ],
+      "llm_reason": "在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。论文→理论层面，它回答了'任务相关信号有多少是线性可读的'这一基础模型评估的经典问题——线性探针就能达到强判别力，说明表征质量高；工程实践层面，探针（probing）方法论可迁移为任意基础模型的表征健康度体检工具：用轻量探针评估各层可线性分离的任务信号，是低成本诊断预训练质量的手段；趋势层面，基因组基础模型（Evo 2）是 AI for Science 的新前沿，但与通用 AI 基础设施工程交集有限。证据为探针实验自述，无代码链接，方法迁移价值大于直接业务价值。",
+      "id": "screening-of-biosecurity-features-in-metagenomic-data-with-evo-2-probes",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：Genomic foundation models such as Evo 2 learn rich sequence representations, b…",
+      "one_line_judgement": "值得先保存：在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "在冻结的 Evo 2 基因组基础模型第 26 层激活上训练最小线性和注意力探针，检测宏基因组数据中的生物安全特征（如抗菌素耐药性 AMR）。论文→理论层面，它回答了'任务相关信号有多少是线性可",
+      "related_trends": [
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=screening-of-biosecurity-features-in-metagenomic-data-with-evo-2-probes"
+    },
+    {
+      "title": "AI-accelerated End-to-End Framework for Rapid Professional Upskilling",
+      "authors": [
+        "Tam Nguyen",
+        "Hung Nguyen",
+        "Robert Ogburn"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14044v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14044v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "By 2030, 59 of every 100 workers will need reskilling or upskilling, yet the average time to close an enterprise skills gap grew from roughly 3 days in 2014 to 36 days in 2018. Most current frameworks accelerate single stages of upskilling programs and generally lack industry validation. We present an end-to-end framework that applies AI acceleration across five stages of knowledge acquisition, content development, content review and verification, teaching, and assessment development; with a str",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "RAG"
+      ],
+      "score": 54.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14044v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14044v1"
+        }
+      ],
+      "llm_reason": "提出跨技能提升五阶段（知识获取、内容开发、内容审查、教学、评估开发）的端到端 AI 加速框架，强调端到端而非单点优化，并声称有行业验证。论文→理论层面较平，主要是流程编排而非新方法；工程实践层面，五阶段 pipeline 的拆解可作 LLM 应用工程化的参考骨架，但缺乏可复现的方法创新；趋势层面属于应用层 RAG/Agent 落地报告。证据以框架描述与经验为主，无代码链接，工程借鉴价值中等、方法新颖性偏弱。",
+      "id": "ai-accelerated-end-to-end-framework-for-rapid-professional-upskilling",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "AI Agent：By 2030, 59 of every 100 workers will need reskilling or upskilling, yet the a…",
+      "one_line_judgement": "值得先保存：提出跨技能提升五阶段（知识获取、内容开发、内容审查、教学、评估开发）的端到端 AI 加速框架，强调端到端而非单点优化，并声称有行业验证。论文…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "提出跨技能提升五阶段（知识获取、内容开发、内容审查、教学、评估开发）的端到端 AI 加速框架，强调端到端而非单点优化，并声称有行业验证。论文→理论层面较平，主要是流程编排而非新方法；工程实践层",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=ai-accelerated-end-to-end-framework-for-rapid-professional-upskilling"
+    },
+    {
+      "title": "Linear Independent Component Analysis via Optimal Transport",
+      "authors": [
+        "Ashutosh Jha",
+        "Michel Besserve",
+        "Simon Buchholz"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14081v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14081v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Because exact negentropy optimization is intractable, they rely on proxy contrast functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose instead to measure non-Gaussianity using the squared Wasse",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 50.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14081v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14081v1"
+        }
+      ],
+      "llm_reason": "用平方 Wasserstein 距离（最优传输）替代经典 ICA 中的代理对比函数（四阶累积量、参数化对数似然）来度量非高斯性，从而恢复独立源。论文→理论层面，将最优传输与独立性/信息论建立联系是一个扎实的数学贡献；工程实践层面，ICA 是成熟预处理工具，OT 度量可能提升鲁棒性，但当前为纯方法/理论论文，落地路径长；趋势层面，最优传输在表征学习中应用增多。数学密度高，无代码链接，理论资产价值强但短期工程迁移成本高。",
+      "id": "linear-independent-component-analysis-via-optimal-transport",
+      "value_type": "long_tail",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "前沿论文：Linear Independent Component Analysis (ICA) recovers jointly independent sourc…",
+      "one_line_judgement": "值得先保存：用平方 Wasserstein 距离（最优传输）替代经典 ICA 中的代理对比函数（四阶累积量、参数化对数似然）来度量非高斯性，从而恢复独立…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "用平方 Wasserstein 距离（最优传输）替代经典 ICA 中的代理对比函数（四阶累积量、参数化对数似然）来度量非高斯性，从而恢复独立源。论文→理论层面，将最优传输与独立性/信息论建立联",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=linear-independent-component-analysis-via-optimal-transport"
+    },
+    {
+      "title": "Earthquaker-AI: A Retrieval-Augmented Generation Framework with Rubric-Based Assessment for Primary School Earthquake Education",
+      "authors": [
+        "Xanthi Kokkinou",
+        "Chaido Mizeli",
+        "Nafsika Koulaxidou",
+        "Marina Delianidi",
+        "Konstantinos Diamantaras"
+      ],
+      "published": "2026-07-15",
+      "updated": "2026-07-15",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.14046v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14046v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "This paper presents Earthquaker-AI, a hybrid educational framework building upon a previously implemented educational robotics project by integrating a conversational AI assistant based on Retrieval-Augmented Generation. It aims to enhance earthquake preparedness and conscious action among primary-school students. The system extends the award-winning STEM project Earthquaker moving from mechanical simulation with Lego WeDo2 to cognitive and metacognitive processing. The robotics component uses L",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "RAG"
+      ],
+      "score": 40.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.14046v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.14046v1"
+        }
+      ],
+      "llm_reason": "Earthquaker-AI 是面向小学地震教育的 RAG 对话助手，延伸自一个获奖 STEM 机器人项目（Lego WeDo2）。应用场景窄（小学科普），方法上无显著创新（标准 RAG + rubric 评估），与 AI Agent、推理服务、基础设施工程几乎无交集。无代码链接，工程迁移性极低。",
+      "id": "earthquaker-ai-a-retrieval-augmented-generation-framework-with-rubric-based-assessment-for-primary-school-earthquake-education",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "RAG / 知识系统：This paper presents Earthquaker-AI, a hybrid educational framework building up…",
+      "one_line_judgement": "当前可忽略：Earthquaker-AI 是面向小学地震教育的 RAG 对话助手，延伸自一个获奖 STEM 机器人项目（Lego WeDo2）。应用场景…",
+      "first_seen_date": "2026-07-17",
+      "first_deep_dive_daily": "2026-07-17",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Earthquaker-AI 是面向小学地震教育的 RAG 对话助手，延伸自一个获奖 STEM 机器人项目（Lego WeDo2）。应用场景窄（小学科普），方法上无显著创新（标准 RAG + ",
+      "related_trends": [
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=earthquaker-ai-a-retrieval-augmented-generation-framework-with-rubric-based-assessment-for-primary-school-earthquake-education"
+    },
     {
       "title": "Scalable Visual Pretraining for Language Intelligence",
       "authors": [
