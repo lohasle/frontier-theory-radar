@@ -1,205 +1,8 @@
 {
-  "updated_at": "2026-07-18T04:33:46.353350",
-  "site_title": "前沿理论驱动技术雷达日报",
-  "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
-  "latest_daily": {
-    "date": "2026-07-18",
-    "title": "论文价值发现日报 - 2026-07-18",
-    "deep_dive_title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-    "deep_dive_url": "http://arxiv.org/abs/2607.15263v1",
-    "decision": "重点学习",
-    "value_type": "immediate",
-    "value_type_label": "即时价值",
-    "daily_action": "完成两件事：给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿）；在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。",
-    "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述。Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
-    "one_line_judgement": "Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测查询成本的成功率不可比、也无法做模型选型；Partition, Prompt, Aggregate 的'划分-提示-聚合'是一个可立即实现的探针模式，把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差即可量化自洽性缺口。RoboTTT 则验证了 TTT（测试时训练）+ 长上下文可在不增推理延迟的前提下扩展到 8K 时间步，'用 cheap in-context update 替代 expensive recompute'是可迁移到任何在线推理服务的设计模式。",
-    "path": "daily-detail.html?date=2026-07-18"
-  },
-  "top_paper": {
-    "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-    "authors": [
-      "Paul Kassianik",
-      "Blaine Nelson",
-      "Yaron Singer"
-    ],
-    "published": "2026-07-16",
-    "updated": "2026-07-16",
-    "source": "arXiv",
-    "url": "http://arxiv.org/abs/2607.15263v1",
-    "pdf_url": "https://arxiv.org/pdf/2607.15263v1",
-    "openreview_url": "",
-    "paperswithcode_url": "",
-    "code_url": "",
-    "benchmark_url": "",
-    "project_url": "",
-    "abstract": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry query, and enrichment request consumes budget. We evaluate language-model security agents through this cost-success lens on offensive Cybench challenges and defensive Splunk BOTS v1 in",
-    "categories": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "keywords": [
-      "agent",
-      "evaluation",
-      "benchmark",
-      "inference",
-      "tool use"
-    ],
-    "score": 82.0,
-    "decision": "重点学习",
-    "links": [
-      {
-        "label": "arXiv",
-        "url": "http://arxiv.org/abs/2607.15263v1"
-      },
-      {
-        "label": "PDF",
-        "url": "https://arxiv.org/pdf/2607.15263v1"
-      }
-    ],
-    "llm_reason": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出成本-成功透镜（cost-success lens）而非单一成功率指标，这同时适用于进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token/工具调用/遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'，成本约束是 Agent 落地的真实瓶颈。证据较强：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御），有跨进攻/防御两侧的对照设计；但无代码/benchmark 仓库链接可核验，成本度量口径（哪些计入成本）需自行对齐。",
-    "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
-    "value_type": "immediate",
-    "matched_topics": [
-      "ai-agent",
-      "llm-evaluation",
-      "security-governance",
-      "inference-serving"
-    ],
-    "score_breakdown": {
-      "novelty": 4.8,
-      "problem_importance": 7.1,
-      "relevance": 8.6,
-      "evidence_strength": 4.95,
-      "engineering_testability": 4.05,
-      "trend_signal": 4.05,
-      "long_tail_potential": 3.5,
-      "asset_convertibility": 4.8,
-      "actionability": 5.0,
-      "noise_risk": 1.2,
-      "weak_evidence_penalty": 4.0,
-      "low_relevance_penalty": 0,
-      "engineering_cost_penalty": 2.5,
-      "reproducibility_risk": 5.0
-    },
-    "trend_status": "emerging",
-    "brief_cn": "AI Agent：Security-agent evaluations commonly measure peak offensive capability under ge…",
-    "one_line_judgement": "今天值得试：Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agen…",
-    "first_seen_date": "2026-07-18",
-    "first_deep_dive_daily": "2026-07-18",
-    "value_type_label": "即时价值",
-    "trend_stage_label": "萌芽",
-    "future_trigger": "待更多证据",
-    "long_tail_summary": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥",
-    "related_trends": [
-      "agentic-world-modeling",
-      "coding-agent"
-    ],
-    "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents"
-  },
-  "paper_count": 469,
-  "daily_count": 30,
-  "trend_count": 3,
-  "long_tail_count": 62,
-  "value_distribution": {
-    "immediate": 56,
-    "trend": 82,
-    "long_tail": 62,
-    "ignore": 269
-  },
-  "recent_dailies": [
-    {
-      "date": "2026-07-18",
-      "title": "论文价值发现日报 - 2026-07-18",
-      "deep_dive_title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-      "deep_dive_url": "http://arxiv.org/abs/2607.15263v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成两件事：给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿）；在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。",
-      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述。Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
-      "one_line_judgement": "Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测查询成本的成功率不可比、也无法做模型选型；Partition, Prompt, Aggregate 的'划分-提示-聚合'是一个可立即实现的探针模式，把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差即可量化自洽性缺口。RoboTTT 则验证了 TTT（测试时训练）+ 长上下文可在不增推理延迟的前提下扩展到 8K 时间步，'用 cheap in-context update 替代 expensive recompute'是可迁移到任何在线推理服务的设计模式。",
-      "path": "daily-detail.html?date=2026-07-18"
-    },
-    {
-      "date": "2026-07-17",
-      "title": "论文价值发现日报 - 2026-07-17",
-      "deep_dive_title": "VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair",
-      "deep_dive_url": "http://arxiv.org/abs/2607.14075v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成两件事：审查现有 coding agent 工具调用层是否支持动态选工具与视觉证据接入，列出可改造的修复场景；对内部 LLM 评测/benchmark 流水线做一轮泄漏审计，标注训练窗越界与检索泄漏点。",
-      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。VisualRepair 区域聚焦在不同 UI 框架上的有效性、Hindcast 的市场覆盖率与统计显著性、MOJO 的预训练数据规模与下游增益幅度均为关键未知项。",
-      "one_line_judgement": "VisualRepair 的两条设计模式——'按场景动态选择工具'与'先视觉定位 ROI 再生成补丁'——可立即可迁移到自家 coding agent 的 GUI 测试与 issue 自动分诊；Hindcast 提醒任何检索增强、时序预测、Agent 决策类系统的评测都必须先做泄漏审计，否则分数不可信。MOJO 则验证了'分词→掩码自监督预训练'范式对神经脉冲等任意模态成立，是跨模态基础模型的方法论模板。",
-      "path": "daily-detail.html?date=2026-07-17"
-    },
-    {
-      "date": "2026-07-14",
-      "title": "论文价值发现日报 - 2026-07-14",
-      "deep_dive_title": "Scalable Visual Pretraining for Language Intelligence",
-      "deep_dive_url": "http://arxiv.org/abs/2607.09657v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成两件事：审查现有文档智能/RAG pipeline 中的视觉信息丢失环节并形成被丢弃信号清单；用 CSB 数据集对自家 VLM 做一轮复杂场景认知盲区测试。",
-      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。视觉预训练的数据规模与下游增益数据、VEXAIoT 在真实 IoT 固件上的有效性均为关键未知项。",
-      "one_line_judgement": "视觉预训练论文论证了'纯文本会丢弃不可恢复的语义'——公式排版、图表空间关系被 OCR 管线全部抹掉，而多模态预训练可在源端保留这些信号；VLM 错误演进的十年回溯则提供了从'准不准'到'为什么错'的系统性诊断框架，可立即转化为回归测试套件。",
-      "path": "daily-detail.html?date=2026-07-14"
-    },
-    {
-      "date": "2026-07-13",
-      "title": "论文价值发现日报 - 2026-07-13",
-      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成两件事：基于 UniClawBench 能力分类法绘制 Agent 能力覆盖矩阵；在现有训练任务上加 SLORR 正则化跑一轮压缩-精度对照实验。",
-      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。",
-      "one_line_judgement": "UniClawBench 将 Agent 能力定义从单轮问答升级为多轮主动执行，直接可用作自家 Agent 产品的对标评测；SLORR 无状态、无额外参数、无需 SVD，可即插即用集成到训练 pipeline，对边缘部署尤其有价值。",
-      "path": "daily-detail.html?date=2026-07-13"
-    },
-    {
-      "date": "2026-07-12",
-      "title": "论文价值发现日报 - 2026-07-12",
-      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
-      "decision": "重点学习",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "daily_action": "① 把 UniClawBench 的能力正交轴思路套到本团队 Agent eval 上做重构草案；② 在一条 SFT 流水线插入 SLORR 做最小 A/B；③ 给 RAG 语料预处理加一个 kNN 图社区发现的中间步骤。",
-      "max_uncertainty": "主要不确定性：(1) 五篇均为 2026-07-09 新发，代码/数据集链接均暂缺（待核验），可复现性未验证；(2) UniClawBench 与 AUTOPILOT-VQA 的数据集规模与标注协议未明，将决定基准可信度；(3) SLORR 缺数十亿参数尺度证据，泛化性待验证；(4) fetch 阶段部分论文 keywords 被误标（如把理论论文标为 RAG），已手动修正分类。",
-      "one_line_judgement": "它直击 Agent 工程最大评测缺口，把评测从‘单能力点的聚合分数’重构为‘按能力正交分解的任务分类法’，让失败可被归因；对任何自研 Agent 团队都是可立刻对照的评测骨架。",
-      "path": "daily-detail.html?date=2026-07-12"
-    },
-    {
-      "date": "2026-07-11",
-      "title": "论文价值发现日报 - 2026-07-11",
-      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
-      "decision": "轻量试点",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。",
-      "max_uncertainty": "暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。",
-      "one_line_judgement": "它直击 Agent 评测的核心痛点——现有 benchmark 依赖沙箱、单轮、能力混合，无法评测真实环境中的主动式 Agent。提出真实环境+多轮交互+能力解耦的三维评测框架，是 Agent 质量保障基础设施的关键拼图。",
-      "path": "daily-detail.html?date=2026-07-11"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "论文价值发现日报 - 2026-07-10",
-      "deep_dive_title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
-      "deep_dive_url": "http://arxiv.org/abs/2607.07707v1",
-      "decision": "轻量试点",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成摘要与方法精读，重点理解连续键的表示方式与查询时机；随后设计一个最小实验：在现有 RAG 管线中模拟'多步连续检索 vs 单次前缀检索'的效果差异。",
-      "max_uncertainty": "暂无公开代码与 benchmark（code_url/benchmark_url 均为空），实验细节与可复现性待核验；连续键的训练稳定性和推理延迟的实际表现尚不清楚。",
-      "one_line_judgement": "它把知识库检索从'生成前一次拼接'升级为'生成全程连续查询'，直击 LLM 知识可控性、可更新性与检索精度的核心痛点，与 Agent 记忆系统和 RAG 演进高度对齐。",
-      "path": "daily-detail.html?date=2026-07-10"
-    }
-  ],
-  "top_papers": [
+  "date": "2026-07-18",
+  "total": 10,
+  "generated_at": "2026-07-18T04:31:04.889676",
+  "papers": [
     {
       "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
       "authors": [
@@ -266,20 +69,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Security-agent evaluations commonly measure peak offensive capability under ge…",
-      "one_line_judgement": "今天值得试：Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agen…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "即时价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥",
-      "related_trends": [
-        "agentic-world-modeling",
-        "coding-agent"
-      ],
-      "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents"
+      "trend_status": "emerging"
     },
     {
       "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
@@ -342,20 +132,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "LLM 评测：In-context learning is commonly interpreted as a form of conditional inference…",
-      "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满",
-      "related_trends": [
-        "coding-agent",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=partition-prompt-aggregate-statistical-self-consistency-in-language-models"
+      "trend_status": "emerging"
     },
     {
       "title": "RoboTTT: Context Scaling for Robot Policies",
@@ -421,20 +198,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "Multimodal Agent：Recent robot foundation models operate with single-step or short-history visuo…",
-      "one_line_judgement": "值得继续观察：RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 …",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级），且不增加",
-      "related_trends": [
-        "agentic-world-modeling",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=robottt-context-scaling-for-robot-policies"
+      "trend_status": "emerging"
     },
     {
       "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
@@ -496,17 +260,7 @@
         "engineering_cost_penalty": 4.0,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "安全与治理：Poisoning pretraining data can introduce harmful behaviors to LMs that are dif…",
-      "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（作者 G…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlb",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=pretraining-data-can-be-poisoned-through-computational-propaganda"
+      "trend_status": "emerging"
     },
     {
       "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
@@ -573,20 +327,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "AI Agent：Recent advances in Tool-Integrated Large Language Models have made web search …",
-      "one_line_judgement": "值得继续观察：SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循",
-      "related_trends": [
-        "agentic-world-modeling",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration"
+      "trend_status": "emerging"
     },
     {
       "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
@@ -649,19 +390,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "Multimodal Agent：We present SceneBind, an omni-modal representation of realistic scenes with jo…",
-      "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language"
+      "trend_status": "long_tail_watch"
     },
     {
       "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
@@ -726,19 +455,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "long_tail_watch",
-      "brief_cn": "Multimodal Agent：Online novel view synthesis from multi-view streaming videos faces a fundament…",
-      "one_line_judgement": "值得先保存：Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "长尾价值",
-      "trend_stage_label": "长尾观察",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=online-neural-space-time-memory-for-dynamic-novel-view-synthesis"
+      "trend_status": "long_tail_watch"
     },
     {
       "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
@@ -801,17 +518,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "推理与服务：MeanFlow generators achieve fast few-step sampling by predicting average veloc…",
-      "one_line_judgement": "当前可忽略：MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区间平均速度'的少步采样生成器上做偏好/任务对齐。论文",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=meanflownft-bringing-forward-process-rl-to-average-velocity-generators"
+      "trend_status": "noise"
     },
     {
       "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
@@ -876,19 +583,7 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "AI Agent：Editing the figures in a research paper is a routine and time-consuming part o…",
-      "one_line_judgement": "当前可忽略：SciDiagramEdit 学习按自然语言指令编辑科研论文中的科学示意图（重标组件、重排版面、改样式）。论文→理论层面把'科学图编辑'建模…",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "SciDiagramEdit 学习按自然语言指令编辑科研论文中的科学示意图（重标组件、重排版面、改样式）。论文→理论层面把'科学图编辑'建模为密集信息图（schematic/plot/phot",
-      "related_trends": [
-        "agentic-world-modeling"
-      ],
-      "detail_path": "paper-detail.html?id=scidiagramedit-learning-to-edit-scientific-diagrams-from-paper-revisions"
+      "trend_status": "noise"
     },
     {
       "title": "Decoding Market Emotion from Blockchain Activity: A Data-Driven Sentiment Classifier",
@@ -949,72 +644,8 @@
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：The growing use of Bitcoin as a decentralized digital asset and investment too…",
-      "one_line_judgement": "当前可忽略：Decoding Market Emotion from Blockchain Activity 用链上数据 + 比特币历史价格 + 每日 …",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Decoding Market Emotion from Blockchain Activity 用链上数据 + 比特币历史价格 + 每日 Twitter 情绪分类来解释（而非预测）比特币市场",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=decoding-market-emotion-from-blockchain-activity-a-data-driven-sentiment-classifier"
+      "trend_status": "noise"
     }
   ],
-  "long_tail_highlights": [
-    {
-      "id": "scenebind-binding-what-and-where-across-vision-audio-and-language",
-      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
-      "direction": "Multimodal Agent",
-      "long_tail_type": "工程抽象",
-      "why_save": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-08-08",
-      "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language"
-    },
-    {
-      "id": "online-neural-space-time-memory-for-dynamic-novel-view-synthesis",
-      "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
-      "direction": "Multimodal Agent / 推理与服务",
-      "long_tail_type": "工程抽象",
-      "why_save": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-08-08",
-      "detail_path": "paper-detail.html?id=online-neural-space-time-memory-for-dynamic-novel-view-synthesis"
-    },
-    {
-      "id": "metaperch-learning-from-metadata-for-bioacoustics-foundation-models",
-      "title": "MetaPerch: Learning from metadata for bioacoustics foundation models",
-      "direction": "未分类",
-      "long_tail_type": "工程抽象",
-      "why_save": "MetaPerch 探索用录音元数据（地点、时间）作为生物声学基础模型的辅助监督信号来提升物种检测。论文→理论层面，它论证了'元数据即弱监督'——时空元数据携带物种分布先验，可补偿声学标签的稀",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist"
-      ],
-      "revisit_date": "2026-08-07",
-      "detail_path": "paper-detail.html?id=metaperch-learning-from-metadata-for-bioacoustics-foundation-models"
-    }
-  ],
-  "common_research_path": [
-    "论文",
-    "理论",
-    "工程实践",
-    "趋势",
-    "启发",
-    "行动"
-  ]
+  "scored_at": "2026-07-18"
 }

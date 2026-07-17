@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-17T04:36:22.811643",
+  "updated_at": "2026-07-18T04:33:46.358768",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-18",
+      "title": "论文价值发现日报 - 2026-07-18",
+      "deep_dive_title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+      "deep_dive_url": "http://arxiv.org/abs/2607.15263v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成两件事：给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿）；在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。",
+      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述。Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
+      "one_line_judgement": "Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测查询成本的成功率不可比、也无法做模型选型；Partition, Prompt, Aggregate 的'划分-提示-聚合'是一个可立即实现的探针模式，把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差即可量化自洽性缺口。RoboTTT 则验证了 TTT（测试时训练）+ 长上下文可在不增推理延迟的前提下扩展到 8K 时间步，'用 cheap in-context update 替代 expensive recompute'是可迁移到任何在线推理服务的设计模式。",
+      "path": "daily-detail.html?date=2026-07-18"
+    },
     {
       "date": "2026-07-17",
       "title": "论文价值发现日报 - 2026-07-17",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-06-09"
-    },
-    {
-      "date": "2026-06-08",
-      "title": "论文价值发现日报 - 2026-06-08",
-      "deep_dive_title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-      "deep_dive_url": "http://arxiv.org/abs/2606.06492v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "今天完成 Code2LoRA 全文精读 + 与现有 RAG 管线的对比清单；评估 hypernetwork 生成的 LoRA 适配器能否在你当前编程 Agent 产品里替代或补充仓库 RAG",
-      "max_uncertainty": "Code2LoRA 的 hypernetwork 训练成本与跨仓库/跨语言泛化能力待核验；TailLoR 的 SVD 预计算与 U/V 冻结对超大模型（>10B）的工程门槛；RREDCoT 的段级切分策略（句号/推理步骤/语义边界）对最终精度的影响；TempoVLA 在接触富集任务（装配/柔性物体）上的速度-精度可控性稳定性；HANDOFF 任务空间命令的跨任务族通用性",
-      "one_line_judgement": "用 hypernetwork 一次性生成仓库专属 LoRA 适配器——把'每仓库微调/RAG 增强'重构为'hypernetwork 推理时一次性生成适配器'，零推理 token 开销且对代码演化鲁棒。直接对应 Cursor/Copilot/Devin 等编程 Agent 产品的仓库理解痛点：传统 RAG 在长仓库上噪声大、per-repo LoRA 训练成本高且每次 commit 就过时。Hypernetwork + LoRA + 软件工程三者首次明确耦合。",
-      "path": "daily-detail.html?date=2026-06-08"
     }
   ]
 }

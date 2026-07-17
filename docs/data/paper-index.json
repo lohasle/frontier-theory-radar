@@ -1,7 +1,768 @@
 {
-  "updated_at": "2026-07-17T04:36:22.813982",
-  "total": 459,
+  "updated_at": "2026-07-18T04:33:46.361165",
+  "total": 469,
   "papers": [
+    {
+      "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+      "authors": [
+        "Paul Kassianik",
+        "Blaine Nelson",
+        "Yaron Singer"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15263v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15263v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry query, and enrichment request consumes budget. We evaluate language-model security agents through this cost-success lens on offensive Cybench challenges and defensive Splunk BOTS v1 in",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark",
+        "inference",
+        "tool use"
+      ],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15263v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15263v1"
+        }
+      ],
+      "llm_reason": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出成本-成功透镜（cost-success lens）而非单一成功率指标，这同时适用于进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token/工具调用/遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'，成本约束是 Agent 落地的真实瓶颈。证据较强：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御），有跨进攻/防御两侧的对照设计；但无代码/benchmark 仓库链接可核验，成本度量口径（哪些计入成本）需自行对齐。",
+      "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "security-governance",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Security-agent evaluations commonly measure peak offensive capability under ge…",
+      "one_line_judgement": "今天值得试：Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agen…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents"
+    },
+    {
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "authors": [
+        "Patrik Wolf",
+        "Thomas Kleine Buening",
+        "Andreas Krause",
+        "Celestine Mendler-Dünner"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15277v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15277v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In t",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "evaluation",
+        "inference"
+      ],
+      "score": 80.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15277v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15277v1"
+        }
+      ],
+      "llm_reason": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满足概率基本恒等式，尤其是全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被全概率公式检验的命题，直接关系到校准、不确定性量化、集成/自洽性投票等所有基于 LLM 概率输出的方法是否站得住脚；工程实践层面，'划分-提示-聚合'是一个可立即实现的探针（probe）模式——把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差，即可量化自洽性缺口，可嵌入内部模型评测流水线作为校准/可靠性诊断项；趋势层面，LLM 概率校准与可信推断是 2026 年评测方法论的核心线之一。证据为方法设计与概率恒等式检验自述，属理论/实验型论文，无代码链接，需核验在哪些模型规模/任务上违反最严重以及偏差幅度。",
+      "id": "partition-prompt-aggregate-statistical-self-consistency-in-language-models",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "LLM 评测：In-context learning is commonly interpreted as a form of conditional inference…",
+      "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满",
+      "related_trends": [
+        "coding-agent",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=partition-prompt-aggregate-statistical-self-consistency-in-language-models"
+    },
+    {
+      "title": "RoboTTT: Context Scaling for Robot Policies",
+      "authors": [
+        "Yunfan Jiang",
+        "Yevgen Chebotar",
+        "Ruijie Zheng",
+        "Fengyuan Hu",
+        "Yunhao Ge"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15275v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15275v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturb",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15275v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15275v1"
+        }
+      ],
+      "llm_reason": "RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级），且不增加推理延迟；在此上下文长度下解锁了一次性从人类视频做上下文内模仿、在线策略改进、对扰动的鲁棒性。论文→理论层面，它验证了'把上下文当作隐式记忆、用 TTT 在线更新'的范式可跨模态扩展到长时序具身控制，回答了'长上下文 + 在线适应能否替代显式重训练'；工程实践层面，'在不增推理延迟的前提下扩展有效上下文'这一工程约束对任何在线推理服务（不止机器人）都有参考价值——TTT 式的'用 cheap in-context update 替代 expensive recompute'是一种可迁移的推理服务设计模式；趋势层面，TTT 是 2026 年明确上升线，从语言模型到视觉再到具身智能持续渗透，'上下文即记忆'正在统一多条 AI 系统设计线。证据为方法、训练 recipe 与新能力自述，工程指标（延迟不增）是关键卖点但无代码链接可复现，需核验 8K 上下文的显存/算力代价与延迟测量的口径。",
+      "id": "robottt-context-scaling-for-robot-policies",
+      "value_type": "trend",
+      "matched_topics": [
+        "multimodal-agent",
+        "inference-serving",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Recent robot foundation models operate with single-step or short-history visuo…",
+      "one_line_judgement": "值得继续观察：RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 …",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级），且不增加",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=robottt-context-scaling-for-robot-policies"
+    },
+    {
+      "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
+      "authors": [
+        "Victoria Graf",
+        "Hannaneh Hajishirzi",
+        "Noah A. Smith",
+        "David Kohlbrenner",
+        "Kyle Lo"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15267v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15267v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Poisoning pretraining data can introduce harmful behaviors to LMs that are difficult to detect and mitigate. Prior work on poisoning pretraining data has largely exploited established data sources such as Wikipedia, which do not represent the large scale and heterogeneity typical of pretraining corpora, and has ignored the interaction between poisoned data and data curation pipelines. We demonstrate that poisoning attacks on pretraining data are feasible beyond this limited setting through an ex",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 75.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15267v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15267v1"
+        }
+      ],
+      "llm_reason": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真实设定，展示投毒在受限设定之外仍可行。论文→理论层面，它把'投毒攻击'与'数据清洗 pipeline'耦合起来建模——攻击者不仅要注入毒数据，还要绕过去重/过滤/质量筛选，这把数据供应链安全上升为系统工程问题而非单点威胁；工程实践层面，对任何自建预训练/继续预训练流水线都有立即可执行的启发：必须在数据采集→清洗→配比的全链路做投毒审计，把'清洗 pipeline 的绕过路径'当作一等威胁面来建模，而不能只看单一来源；趋势层面，数据供应链治理（provenance、清洗鲁棒性、投毒检测）是 2026 年可信基础模型的地基性议题。证据为攻击方法与可扩展性论证自述，作者信誉强、动机可信，但无代码/数据集链接可核验，投毒成功率、清洗 pipeline 的具体类型与检测难度为关键未知项。",
+      "id": "pretraining-data-can-be-poisoned-through-computational-propaganda",
+      "value_type": "trend",
+      "matched_topics": [
+        "security-governance",
+        "data-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "安全与治理：Poisoning pretraining data can introduce harmful behaviors to LMs that are dif…",
+      "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（作者 G…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlb",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=pretraining-data-can-be-poisoned-through-computational-propaganda"
+    },
+    {
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "authors": [
+        "Yuyao Zhang",
+        "Junjie Gao",
+        "Zhengxian Wu",
+        "Jiaming Fan",
+        "Jin Zhang"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15257v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15257v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current single- and multi-agent systems can become trapped in repetitive loops, wasting search budgets and ultimately compromising the quality and completeness of the final output. We introduce SearchOS, a system-level multi-age",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "RAG"
+      ],
+      "score": 72.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15257v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15257v1"
+        }
+      ],
+      "llm_reason": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯的单次检索质量问题，提出系统级多 Agent 编排（SearchOS）来显式管理进度状态；工程实践层面，对任何自建 RAG/搜索 Agent 都有直接可借鉴的设计点——必须显式维护'已尝试查询/已获得证据/未解决子问题'的进度状态机，并设计循环检测与策略切换（换查询/换工具/换 Agent 角色）的逃逸机制，否则会在生产环境里烧预算；趋势层面，长程多步 Agent 的'状态/记忆管理 + 循环鲁棒性'是 2026 年 Agent 工程化的核心难点之一。证据为系统设计与对照实验自述，无代码链接可核验，循环逃逸策略的有效性与搜索预算节省幅度需自行验证。",
+      "id": "searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge",
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Recent advances in Tool-Integrated Large Language Models have made web search …",
+      "one_line_judgement": "值得继续观察：SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循",
+      "related_trends": [
+        "agentic-world-modeling",
+        "context-engineering"
+      ],
+      "detail_path": "paper-detail.html?id=searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration"
+    },
+    {
+      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+      "authors": [
+        "Mingfei Chen",
+        "Zijun Cui",
+        "Ruoke Zhang",
+        "Hyeonggon Ryu",
+        "Eli Shlizerman"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15265v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15265v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instance-level semantics (i.e., what is present), but often lack explicit spatial structure (i.e., where it is). SceneBind addresses this gap by representing each scene as a semantic-spatial entity, combining a global semantic embedding with object-centric semantic-spatial slots. This representation explic",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "keywords": [],
+      "score": 60.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15265v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15265v1"
+        }
+      ],
+      "llm_reason": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent 的表示设计模式——当多模态系统需要回答'在哪里'而非只是'是什么'时可作参考；趋势层面，全模态 + 空间感知是具身/世界模型的基础设施方向。但论文偏表示学习，落地路径长，无代码链接，方法迁移价值大于直接业务价值。",
+      "id": "scenebind-binding-what-and-where-across-vision-audio-and-language",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：We present SceneBind, an omni-modal representation of realistic scenes with jo…",
+      "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language"
+    },
+    {
+      "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
+      "authors": [
+        "Baback Elmieh",
+        "Lynn Tsai",
+        "Zeman Li",
+        "Srinivas Kaza",
+        "Tiancheng Sun"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15271v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15271v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Online novel view synthesis from multi-view streaming videos faces a fundamental trade-off: maintaining a persistent, long-horizon memory to reconstruct temporarily occluded regions while operating under strict real-time constraints. While Test-Time Training (TTT) offers a powerful memory mechanism, standard models mandate gradient-based memory updates at every frame to adapt to the changing motion in dynamic scenes. The computational cost of heavy memory updates precludes real-time application ",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "keywords": [
+        "memory"
+      ],
+      "score": 57.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15271v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15271v1"
+        }
+      ],
+      "llm_reason": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→理论层面，它指出标准 TTT 要求每帧做梯度更新以适应动态场景，算力开销使其无法实时，并提出条件化/稀疏化的记忆更新策略来兼顾两者；工程实践层面，'何时触发记忆更新（事件驱动而非每帧）'是 TTT 类系统走向实时化的通用工程问题，可迁移到任何 TTT/在线适应系统；趋势层面，TTT 向实时/流式场景下沉是趋势延伸。但领域（动态新视角合成）较窄，与通用 AI 基础设施工程交集有限，无代码链接，方法论启发大于直接复用。",
+      "id": "online-neural-space-time-memory-for-dynamic-novel-view-synthesis",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：Online novel view synthesis from multi-view streaming videos faces a fundament…",
+      "one_line_judgement": "值得先保存：Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=online-neural-space-time-memory-for-dynamic-novel-view-synthesis"
+    },
+    {
+      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
+      "authors": [
+        "Yushi Huang",
+        "Xiangxin Zhou",
+        "Jun Zhang",
+        "Liefeng Bo",
+        "Tianyu Pang"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15273v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15273v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow rema",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 47.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15273v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15273v1"
+        }
+      ],
+      "llm_reason": "MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区间平均速度'的少步采样生成器上做偏好/任务对齐。论文→理论层面是把前向过程 RL 与平均速度生成器桥接，属生成模型方法细分；工程实践层面，与团队主线（Agent/评测/推理服务/数据治理）几乎无交集，MeanFlow 与 DiffusionNFT 都是较窄的生成模型子方向；趋势层面属生成式 RL 对齐的长尾分支。方法密度高、领域窄，无代码链接，短期工程迁移价值低。",
+      "id": "meanflownft-bringing-forward-process-rl-to-average-velocity-generators",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "推理与服务：MeanFlow generators achieve fast few-step sampling by predicting average veloc…",
+      "one_line_judgement": "当前可忽略：MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区间平均速度'的少步采样生成器上做偏好/任务对齐。论文",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=meanflownft-bringing-forward-process-rl-to-average-velocity-generators"
+    },
+    {
+      "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
+      "authors": [
+        "Yasheng Sun",
+        "Zezi Zeng",
+        "Yifan Yang",
+        "Chong Luo",
+        "Wenyi Wang"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15272v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15272v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, however, is challenging, because a scientific figure is a dense infographic in which heterogeneous visual elements such as schematics, plots, photos, captions, and arrows are composed under a tight visual grammar to advan",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "benchmark"
+      ],
+      "score": 45.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15272v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15272v1"
+        }
+      ],
+      "llm_reason": "SciDiagramEdit 学习按自然语言指令编辑科研论文中的科学示意图（重标组件、重排版面、改样式）。论文→理论层面把'科学图编辑'建模为密集信息图（schematic/plot/photo/caption/arrow 在严格视觉语法下组合）下的指令式编辑任务；工程实践层面，属文档/图形编辑的垂直应用，与 Agent/推理服务/基础设施工程主线交集很小；趋势层面属多模态文档处理的应用层落地。无代码链接，应用场景窄，工程迁移性低。",
+      "id": "scidiagramedit-learning-to-edit-scientific-diagrams-from-paper-revisions",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：Editing the figures in a research paper is a routine and time-consuming part o…",
+      "one_line_judgement": "当前可忽略：SciDiagramEdit 学习按自然语言指令编辑科研论文中的科学示意图（重标组件、重排版面、改样式）。论文→理论层面把'科学图编辑'建模…",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "SciDiagramEdit 学习按自然语言指令编辑科研论文中的科学示意图（重标组件、重排版面、改样式）。论文→理论层面把'科学图编辑'建模为密集信息图（schematic/plot/phot",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=scidiagramedit-learning-to-edit-scientific-diagrams-from-paper-revisions"
+    },
+    {
+      "title": "Decoding Market Emotion from Blockchain Activity: A Data-Driven Sentiment Classifier",
+      "authors": [
+        "Arthur G. Bubolz",
+        "Abreu Quevedo",
+        "Giancarlo Lucca",
+        "Rafael A. Berri",
+        "Eduardo Borges"
+      ],
+      "published": "2026-07-16",
+      "updated": "2026-07-16",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15258v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15258v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The growing use of Bitcoin as a decentralized digital asset and investment tool has sparked strong interest in understanding its market behavior. This study presents a new approach to analyze Bitcoin market sentiment by combining on-chain and financial data with social media posts. Unlike models that aim to predict prices, this work focuses on explaining market sentiment using blockchain transactions, historical price data of Bitcoin, and daily Twitter sentiment classifications. The method merge",
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 40.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.15258v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.15258v1"
+        }
+      ],
+      "llm_reason": "Decoding Market Emotion from Blockchain Activity 用链上数据 + 比特币历史价格 + 每日 Twitter 情绪分类来解释（而非预测）比特币市场情绪。论文→理论层面是数据融合的情绪分类，无显著方法创新；工程实践层面，领域（加密货币市场情绪）与本技术雷达主线（前沿理论驱动的基础设施/Agent/评测）几乎无交集，标注的 'RAG' 关键词系误标；趋势层面属金融 NLP 的长尾应用。无代码链接，与团队关注方向不匹配，工程迁移价值极低。",
+      "id": "decoding-market-emotion-from-blockchain-activity-a-data-driven-sentiment-classifier",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 1.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：The growing use of Bitcoin as a decentralized digital asset and investment too…",
+      "one_line_judgement": "当前可忽略：Decoding Market Emotion from Blockchain Activity 用链上数据 + 比特币历史价格 + 每日 …",
+      "first_seen_date": "2026-07-18",
+      "first_deep_dive_daily": "2026-07-18",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Decoding Market Emotion from Blockchain Activity 用链上数据 + 比特币历史价格 + 每日 Twitter 情绪分类来解释（而非预测）比特币市场",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=decoding-market-emotion-from-blockchain-activity-a-data-driven-sentiment-classifier"
+    },
     {
       "title": "VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair",
       "authors": [

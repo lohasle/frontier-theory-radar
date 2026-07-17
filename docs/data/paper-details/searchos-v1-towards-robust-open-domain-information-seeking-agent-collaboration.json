@@ -1,0 +1,136 @@
+{
+  "id": "searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
+  "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+  "authors": [
+    "Yuyao Zhang",
+    "Junjie Gao",
+    "Zhengxian Wu",
+    "Jiaming Fan",
+    "Jin Zhang"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-16",
+  "url": "http://arxiv.org/abs/2607.15257v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.15257v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-18",
+  "first_deep_dive_daily": "2026-07-18",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 6.2,
+    "evidence": 4.5,
+    "engineering_testability": 4.6,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 5.0,
+    "noise_risk": 1.2
+  },
+  "score": 72.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿…",
+  "one_line_essence": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯的单次检索质量问题，提出系统级多 Agent 编排（SearchOS）来显式管理进度状态；工程实践层面，对任何自建 RAG/搜索 Agent 都有直接可借鉴的设计点——必须显式维护'已尝试查询/已获得证据/未解决子问题'的进度状态机，并设计循环检测与策略切换（换查询/换工具/换 Agent 角色）的逃逸机制，否则会在生产环境里烧预算；趋势层面，长程多步 Agent 的'状态/记忆管理 + 循环鲁棒性'是 2026 年 Agent 工程化的核心难点之一。证据为系统设计与对照实验自述，无代码链接可核验，循环逃逸策略的有效性与搜索预算节省幅度需自行验证。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯的单次检索质量问题，提出系统级多 Ag",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "agentic-world-modeling",
+      "context-engineering"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循",
+    "future_trigger": [
+      "出现多篇跟进论文、开源项目和工程博客共振"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15257v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.15257v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
+  "daily_path": "daily-detail.html?date=2026-07-18",
+  "trend_paths": [
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=context-engineering"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}
