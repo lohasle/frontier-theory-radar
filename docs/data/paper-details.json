@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T04:33:48.147483",
+  "updated_at": "2026-07-19T04:38:03.721061",
   "papers": {
     "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents": {
       "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
@@ -17,8 +17,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "immediate",
       "value_type_label": "即时价值",
       "value_scores": {
@@ -33,10 +33,10 @@
       },
       "score": 82.0,
       "decision": "重点学习",
-      "one_line_judgement": "今天值得试：Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agen…",
-      "one_line_essence": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出成本-成功透镜（cost-success lens）而非单一成功率指标，这同时适用于进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token/工具调用/遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'，成本约束是 Agent 落地的真实瓶颈。证据较强：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御），有跨进攻/防御两侧的对照设计；但无代码/benchmark 仓库链接可核验，成本度量口径（哪些计入成本）需自行对齐。",
+      "one_line_judgement": "今天值得试：Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽…",
+      "one_line_essence": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-19 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出成本-成功透镜（cost-success lens）而非单一成功",
+      "new_claim_or_method": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-suc",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -63,7 +63,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥",
+        "why_save": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但",
         "future_trigger": [
           "待更多证据"
         ],
@@ -123,7 +123,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=coding-agent"
@@ -152,8 +152,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -168,10 +168,10 @@
       },
       "score": 80.0,
       "decision": "重点学习",
-      "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设…",
-      "one_line_essence": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满足概率基本恒等式，尤其是全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被全概率公式检验的命题，直接关系到校准、不确定性量化、集成/自洽性投票等所有基于 LLM 概率输出的方法是否站得住脚；工程实践层面，'划分-提示-聚合'是一个可立即实现的探针（probe）模式——把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差，即可量化自洽性缺口，可嵌入内部模型评测流水线作为校准/可靠性诊断项；趋势层面，LLM 概率校准与可信推断是 2026 年评测方法论的核心线之一。证据为方法设计与概率恒等式检验自述，属理论/实验型论文，无代码链接，需核验在哪些模型规模/任务上违反最严重以及偏差幅度。",
+      "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner…",
+      "one_line_essence": "Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner，ETH 强组合）有理论分量：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布估计，则应满足全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被概率恒等式检验的命题，直接关系到校准、不确定性量化、自洽性投票等所有基于 LLM 概率输出的方法是否站得住脚；工程实践层面，'划分-提示-聚合'是一个可立即实现的探针（probe）模式——把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差，即可量化自洽性缺口，可嵌入内部模型评测流水线作为校准/可靠性诊断项；趋势层面，LLM 概率校准与可信推断是 2026 年评测方法论的核心线之一。证据为方法设计与概率恒等式检验自述，属理论/实验型论文，方法抽象度高、可独立复现探针。短板：无代码链接，需核验在哪些模型规模/任务上违反最严重以及偏差幅度。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满足概率基本恒等式，尤其是全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被全概率公",
+      "new_claim_or_method": "Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner，ETH 强组合）有理论分量：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布估计，则应满足全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -198,7 +198,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满",
+        "why_save": "Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner，ETH 强组合）有理论分量：它把'上下文学习即条件",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -258,7 +258,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=partition-prompt-aggregate-statistical-self-consistency-in-language-models",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=coding-agent",
         "trend-detail.html?id=context-engineering"
@@ -288,8 +288,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -304,10 +304,10 @@
       },
       "score": 78.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 …",
-      "one_line_essence": "RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级），且不增加推理延迟；在此上下文长度下解锁了一次性从人类视频做上下文内模仿、在线策略改进、对扰动的鲁棒性。论文→理论层面，它验证了'把上下文当作隐式记忆、用 TTT 在线更新'的范式可跨模态扩展到长时序具身控制，回答了'长上下文 + 在线适应能否替代显式重训练'；工程实践层面，'在不增推理延迟的前提下扩展有效上下文'这一工程约束对任何在线推理服务（不止机器人）都有参考价值——TTT 式的'用 cheap in-context update 替代 expensive recompute'是一种可迁移的推理服务设计模式；趋势层面，TTT 是 2026 年明确上升线，从语言模型到视觉再到具身智能持续渗透，'上下文即记忆'正在统一多条 AI 系统设计线。证据为方法、训练 recipe 与新能力自述，工程指标（延迟不增）是关键卖点但无代码链接可复现，需核验 8K 上下文的显存/算力代价与延迟测量的口径。",
+      "one_line_judgement": "值得继续观察：RoboTTT（Jiang/Chebotar 等）把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运…",
+      "one_line_essence": "RoboTTT（Jiang/Chebotar 等）把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级）且不增加推理延迟；在此上下文长度下解锁一次性从人类视频做上下文内模仿、在线策略改进、对扰动的鲁棒性。论文→理论层面，它验证了'把上下文当作隐式记忆、用 TTT 在线更新'的范式可跨模态扩展到长时序具身控制；工程实践层面，'在不增推理延迟的前提下扩展有效上下文'这一工程约束对任何在线推理服务（不止机器人）都有参考价值——TTT 式的'用 cheap in-context update 替代 expensive recompute'是一种可迁移的推理服务设计模式；趋势层面，TTT 是 2026 年明确上升线，从语言模型到视觉再到具身智能持续渗透。证据为方法、训练 recipe 与新能力自述，工程指标（延迟不增）是关键卖点。短板：无代码链接可复现，8K 上下文的显存/算力代价与延迟测量口径需自行核验。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级），且不增加推理延迟；在此上下文长度下解锁了一次性从人类视频做上下文内模仿、在线策略改进、对扰动的鲁棒性。论文→理论层面，它验证了'把上下文当作隐式记忆、用 TTT 在线更新'的范",
+      "new_claim_or_method": "RoboTTT（Jiang/Chebotar 等）把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级）且不增加推理延迟；在此上下文长度下解锁一次性从人类视频做上下文内模仿、在线策略改进、对扰动的鲁棒性。论文→理论层面，它验证了'把上下文当作隐式记",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -334,7 +334,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "RoboTTT 把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 SOTA 高三个数量级），且不增加",
+        "why_save": "RoboTTT（Jiang/Chebotar 等）把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运动上下文从'单步/短历史'扩展到 8K 时间步（比 ",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -394,7 +394,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=robottt-context-scaling-for-robot-policies",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=context-engineering"
@@ -424,8 +424,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -440,10 +440,10 @@
       },
       "score": 75.0,
       "decision": "轻量试点",
-      "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（作者 G…",
-      "one_line_essence": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真实设定，展示投毒在受限设定之外仍可行。论文→理论层面，它把'投毒攻击'与'数据清洗 pipeline'耦合起来建模——攻击者不仅要注入毒数据，还要绕过去重/过滤/质量筛选，这把数据供应链安全上升为系统工程问题而非单点威胁；工程实践层面，对任何自建预训练/继续预训练流水线都有立即可执行的启发：必须在数据采集→清洗→配比的全链路做投毒审计，把'清洗 pipeline 的绕过路径'当作一等威胁面来建模，而不能只看单一来源；趋势层面，数据供应链治理（provenance、清洗鲁棒性、投毒检测）是 2026 年可信基础模型的地基性议题。证据为攻击方法与可扩展性论证自述，作者信誉强、动机可信，但无代码/数据集链接可核验，投毒成功率、清洗 pipeline 的具体类型与检测难度为关键未知项。",
+      "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（Graf…",
+      "one_line_essence": "Pretraining Data Can Be Poisoned through Computational Propaganda（Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真实设定。论文→理论层面，它把'投毒攻击'与'数据清洗 pipeline'耦合建模——攻击者不仅要注入毒数据，还要绕过去重/过滤/质量筛选，这把数据供应链安全上升为系统工程问题；工程实践层面，对任何自建预训练/继续预训练流水线都有立即可执行的启发：必须在数据采集→清洗→配比的全链路做投毒审计，把'清洗 pipeline 的绕过路径'当作一等威胁面来建模；趋势层面，数据供应链治理（provenance、清洗鲁棒性、投毒检测）是 2026 年可信基础模型的地基性议题。证据为攻击方法与可扩展性论证自述，作者信誉强、动机可信。短板：无代码/数据集链接可核验，投毒成功率、清洗 pipeline 的具体类型与检测难度为关键未知项。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用",
+      "new_claim_or_method": "Pretraining Data Can Be Poisoned through Computational Propaganda（Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -467,7 +467,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlb",
+        "why_save": "Pretraining Data Can Be Poisoned through Computational Propaganda（Graf/Hajishirzi/Smith/Kohlbren",
         "future_trigger": [
           "出现多篇跟进论文、开源项目和工程博客共振"
         ],
@@ -527,7 +527,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=pretraining-data-can-be-poisoned-through-computational-propaganda",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -554,8 +554,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "trend",
       "value_type_label": "趋势价值",
       "value_scores": {
@@ -571,9 +571,9 @@
       "score": 72.0,
       "decision": "轻量试点",
       "one_line_judgement": "值得继续观察：SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿…",
-      "one_line_essence": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯的单次检索质量问题，提出系统级多 Agent 编排（SearchOS）来显式管理进度状态；工程实践层面，对任何自建 RAG/搜索 Agent 都有直接可借鉴的设计点——必须显式维护'已尝试查询/已获得证据/未解决子问题'的进度状态机，并设计循环检测与策略切换（换查询/换工具/换 Agent 角色）的逃逸机制，否则会在生产环境里烧预算；趋势层面，长程多步 Agent 的'状态/记忆管理 + 循环鲁棒性'是 2026 年 Agent 工程化的核心难点之一。证据为系统设计与对照实验自述，无代码链接可核验，循环逃逸策略的有效性与搜索预算节省幅度需自行验证。",
+      "one_line_essence": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯单次检索质量问题，提出系统级多 Agent 编排（SearchOS）来显式管理进度状态；工程实践层面，对任何自建 RAG/搜索 Agent 都有直接可借鉴的设计点——必须显式维护'已尝试查询/已获得证据/未解决子问题'的进度状态机，并设计循环检测与策略切换（换查询/换工具/换 Agent 角色）的逃逸机制；趋势层面，长程多步 Agent 的'状态/记忆管理 + 循环鲁棒性'是 2026 年 Agent 工程化的核心难点之一。证据为系统设计与对照实验自述。短板：无代码链接可核验，循环逃逸策略的有效性与搜索预算节省幅度需自行验证。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯的单次检索质量问题，提出系统级多 Ag",
+      "new_claim_or_method": "SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿不到有用证据时，单/多 Agent 系统会陷入重复循环，浪费搜索预算并损害最终输出质量。论文→理论层面，它把'搜索 Agent 失败'重构为'系统级进度追踪与循环逃逸'问题，而非单纯单次检索质量问题，提出系统级多 Age",
       "research_position": "source_paper",
       "engineering_testability": {
         "has_code": false,
@@ -660,7 +660,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=context-engineering"
@@ -690,8 +690,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -706,10 +706,10 @@
       },
       "score": 60.0,
       "decision": "持续观察",
-      "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语…",
-      "one_line_essence": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent 的表示设计模式——当多模态系统需要回答'在哪里'而非只是'是什么'时可作参考；趋势层面，全模态 + 空间感知是具身/世界模型的基础设施方向。但论文偏表示学习，落地路径长，无代码链接，方法迁移价值大于直接业务价值。",
+      "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入…",
+      "one_line_essence": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent 的表示设计模式——当多模态系统需要回答'在哪里'而非只是'是什么'时可作参考；趋势层面，全模态 + 空间感知是具身/世界模型的基础设施方向。偏表示学习，落地路径长，无代码链接，方法迁移价值大于直接业务价值，故归为长尾保存。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Age",
+      "new_claim_or_method": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent ",
       "research_position": "long_tail_insight",
       "engineering_testability": {
         "has_code": false,
@@ -735,7 +735,7 @@
         ]
       },
       "long_tail": {
-        "why_save": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理",
+        "why_save": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面",
         "future_trigger": [
           "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
         ],
@@ -752,7 +752,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-08-08"
+        "revisit_date": "2026-08-09"
       },
       "insights": {
         "system_design": [
@@ -795,7 +795,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
       ],
@@ -824,8 +824,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "long_tail",
       "value_type_label": "长尾价值",
       "value_scores": {
@@ -841,7 +841,7 @@
       "score": 57.0,
       "decision": "持续观察",
       "one_line_judgement": "值得先保存：Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需…",
-      "one_line_essence": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→理论层面，它指出标准 TTT 要求每帧做梯度更新以适应动态场景，算力开销使其无法实时，并提出条件化/稀疏化的记忆更新策略来兼顾两者；工程实践层面，'何时触发记忆更新（事件驱动而非每帧）'是 TTT 类系统走向实时化的通用工程问题，可迁移到任何 TTT/在线适应系统；趋势层面，TTT 向实时/流式场景下沉是趋势延伸。但领域（动态新视角合成）较窄，与通用 AI 基础设施工程交集有限，无代码链接，方法论启发大于直接复用。",
+      "one_line_essence": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→理论层面，它指出标准 TTT 要求每帧做梯度更新以适应动态场景，算力开销使其无法实时，并提出条件化/稀疏化的记忆更新策略来兼顾两者；工程实践层面，'何时触发记忆更新（事件驱动而非每帧）'是 TTT 类系统走向实时化的通用工程问题，可迁移到任何 TTT/在线适应系统；趋势层面，TTT 向实时/流式场景下沉是趋势延伸。领域（动态新视角合成）较窄，与通用 AI 基础设施工程交集有限，无代码链接，方法论启发大于直接复用，归为长尾。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
       "new_claim_or_method": "Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→理论层面，它指出标准 TTT 要求每帧做梯度更新以适应动态场景，算力开销使其无法实时，并提出条件化/稀疏化的记忆更新策略来兼顾两者；工程实践层面，'何时触发记忆更新（事",
       "research_position": "long_tail_insight",
@@ -886,7 +886,7 @@
           "模板"
         ],
         "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": "2026-08-08"
+        "revisit_date": "2026-08-09"
       },
       "insights": {
         "system_design": [
@@ -929,7 +929,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=online-neural-space-time-memory-for-dynamic-novel-view-synthesis",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
       ],
@@ -958,8 +958,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -975,7 +975,7 @@
       "score": 47.0,
       "decision": "暂时忽略",
       "one_line_judgement": "当前可忽略：MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区…",
-      "one_line_essence": "MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区间平均速度'的少步采样生成器上做偏好/任务对齐。论文→理论层面是把前向过程 RL 与平均速度生成器桥接，属生成模型方法细分；工程实践层面，与团队主线（Agent/评测/推理服务/数据治理）几乎无交集，MeanFlow 与 DiffusionNFT 都是较窄的生成模型子方向；趋势层面属生成式 RL 对齐的长尾分支。方法密度高、领域窄，无代码链接，短期工程迁移价值低。",
+      "one_line_essence": "MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区间平均速度'的少步采样生成器上做偏好/任务对齐。论文→理论层面是把前向过程 RL 与平均速度生成器桥接，属生成模型方法细分；工程实践层面，与团队主线（Agent/评测/推理服务/数据治理）几乎无交集，MeanFlow 与 DiffusionNFT 都是较窄的生成模型子方向（标注的 'RAG' 关键词系误标）；趋势层面属生成式 RL 对齐的长尾分支。方法密度高、领域窄，无代码链接，短期工程迁移价值低。",
       "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
       "new_claim_or_method": "MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区间平均速度'的少步采样生成器上做偏好/任务对齐。论文→理论层面是把前向过程 RL 与平均速度生成器桥接，属生成模型方法细分；工程实践层面，与团队主线（Agent/评测/推理服务/数据治理）几乎无交集，MeanFlow 与",
       "research_position": "source_paper",
@@ -1057,7 +1057,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=meanflownft-bringing-forward-process-rl-to-average-velocity-generators",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -1084,8 +1084,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1185,7 +1185,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=scidiagramedit-learning-to-edit-scientific-diagrams-from-paper-revisions",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling"
       ],
@@ -1214,8 +1214,8 @@
       "benchmark_url": "",
       "paperswithcode_url": "",
       "openreview_url": "",
-      "first_seen_date": "2026-07-18",
-      "first_deep_dive_daily": "2026-07-18",
+      "first_seen_date": "2026-07-19",
+      "first_deep_dive_daily": "2026-07-19",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
       "value_scores": {
@@ -1313,7 +1313,7 @@
         }
       ],
       "detail_path": "paper-detail.html?id=decoding-market-emotion-from-blockchain-activity-a-data-driven-sentiment-classifier",
-      "daily_path": "daily-detail.html?date=2026-07-18",
+      "daily_path": "daily-detail.html?date=2026-07-19",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {

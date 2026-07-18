@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-18",
-  "first_deep_dive_daily": "2026-07-18",
+  "first_seen_date": "2026-07-19",
+  "first_deep_dive_daily": "2026-07-19",
   "value_type": "trend",
   "value_type_label": "趋势价值",
   "value_scores": {
@@ -32,10 +32,10 @@
   },
   "score": 75.0,
   "decision": "轻量试点",
-  "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（作者 G…",
-  "one_line_essence": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真实设定，展示投毒在受限设定之外仍可行。论文→理论层面，它把'投毒攻击'与'数据清洗 pipeline'耦合起来建模——攻击者不仅要注入毒数据，还要绕过去重/过滤/质量筛选，这把数据供应链安全上升为系统工程问题而非单点威胁；工程实践层面，对任何自建预训练/继续预训练流水线都有立即可执行的启发：必须在数据采集→清洗→配比的全链路做投毒审计，把'清洗 pipeline 的绕过路径'当作一等威胁面来建模，而不能只看单一来源；趋势层面，数据供应链治理（provenance、清洗鲁棒性、投毒检测）是 2026 年可信基础模型的地基性议题。证据为攻击方法与可扩展性论证自述，作者信誉强、动机可信，但无代码/数据集链接可核验，投毒成功率、清洗 pipeline 的具体类型与检测难度为关键未知项。",
+  "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（Graf…",
+  "one_line_essence": "Pretraining Data Can Be Poisoned through Computational Propaganda（Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真实设定。论文→理论层面，它把'投毒攻击'与'数据清洗 pipeline'耦合建模——攻击者不仅要注入毒数据，还要绕过去重/过滤/质量筛选，这把数据供应链安全上升为系统工程问题；工程实践层面，对任何自建预训练/继续预训练流水线都有立即可执行的启发：必须在数据采集→清洗→配比的全链路做投毒审计，把'清洗 pipeline 的绕过路径'当作一等威胁面来建模；趋势层面，数据供应链治理（provenance、清洗鲁棒性、投毒检测）是 2026 年可信基础模型的地基性议题。证据为攻击方法与可扩展性论证自述，作者信誉强、动机可信。短板：无代码/数据集链接可核验，投毒成功率、清洗 pipeline 的具体类型与检测难度为关键未知项。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用",
+  "new_claim_or_method": "Pretraining Data Can Be Poisoned through Computational Propaganda（Graf/Hajishirzi/Smith/Kohlbrenner/Lo，AI2/UW 强组合）把预训练数据投毒研究从'已建立的数据源（如 Wikipedia）'推进到'大规模、异质、与数据清洗 pipeline 相互作用'的真",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -59,7 +59,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Pretraining Data Can Be Poisoned through Computational Propaganda（作者 Graf/Hajishirzi/Smith/Kohlb",
+    "why_save": "Pretraining Data Can Be Poisoned through Computational Propaganda（Graf/Hajishirzi/Smith/Kohlbren",
     "future_trigger": [
       "出现多篇跟进论文、开源项目和工程博客共振"
     ],
@@ -119,7 +119,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=pretraining-data-can-be-poisoned-through-computational-propaganda",
-  "daily_path": "daily-detail.html?date=2026-07-18",
+  "daily_path": "daily-detail.html?date=2026-07-19",
   "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {

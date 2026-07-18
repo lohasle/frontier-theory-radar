@@ -15,8 +15,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-18",
-  "first_deep_dive_daily": "2026-07-18",
+  "first_seen_date": "2026-07-19",
+  "first_deep_dive_daily": "2026-07-19",
   "value_type": "trend",
   "value_type_label": "趋势价值",
   "value_scores": {
@@ -31,10 +31,10 @@
   },
   "score": 80.0,
   "decision": "重点学习",
-  "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设…",
-  "one_line_essence": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满足概率基本恒等式，尤其是全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被全概率公式检验的命题，直接关系到校准、不确定性量化、集成/自洽性投票等所有基于 LLM 概率输出的方法是否站得住脚；工程实践层面，'划分-提示-聚合'是一个可立即实现的探针（probe）模式——把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差，即可量化自洽性缺口，可嵌入内部模型评测流水线作为校准/可靠性诊断项；趋势层面，LLM 概率校准与可信推断是 2026 年评测方法论的核心线之一。证据为方法设计与概率恒等式检验自述，属理论/实验型论文，无代码链接，需核验在哪些模型规模/任务上违反最严重以及偏差幅度。",
+  "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner…",
+  "one_line_essence": "Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner，ETH 强组合）有理论分量：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布估计，则应满足全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被概率恒等式检验的命题，直接关系到校准、不确定性量化、自洽性投票等所有基于 LLM 概率输出的方法是否站得住脚；工程实践层面，'划分-提示-聚合'是一个可立即实现的探针（probe）模式——把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差，即可量化自洽性缺口，可嵌入内部模型评测流水线作为校准/可靠性诊断项；趋势层面，LLM 概率校准与可信推断是 2026 年评测方法论的核心线之一。证据为方法设计与概率恒等式检验自述，属理论/实验型论文，方法抽象度高、可独立复现探针。短板：无代码链接，需核验在哪些模型规模/任务上违反最严重以及偏差幅度。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满足概率基本恒等式，尤其是全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层面，它把'LLM 是否是自洽的概率估计器'转化为可被全概率公",
+  "new_claim_or_method": "Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner，ETH 强组合）有理论分量：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布估计，则应满足全概率公式（先验加权的条件分布在任意合法划分上聚合应等于总体边缘分布）。论文→理论层",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -61,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Partition, Prompt, Aggregate 是一篇有理论分量的评测论文：它把'上下文学习即条件推断'这一常见解读当成可证伪假设来检验——若 LLM 输出真是条件分布的估计，则应满",
+    "why_save": "Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner，ETH 强组合）有理论分量：它把'上下文学习即条件",
     "future_trigger": [
       "出现多篇跟进论文、开源项目和工程博客共振"
     ],
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=partition-prompt-aggregate-statistical-self-consistency-in-language-models",
-  "daily_path": "daily-detail.html?date=2026-07-18",
+  "daily_path": "daily-detail.html?date=2026-07-19",
   "trend_paths": [
     "trend-detail.html?id=coding-agent",
     "trend-detail.html?id=context-engineering"

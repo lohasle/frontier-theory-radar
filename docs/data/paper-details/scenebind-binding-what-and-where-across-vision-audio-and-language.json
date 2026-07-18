@@ -16,8 +16,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-18",
-  "first_deep_dive_daily": "2026-07-18",
+  "first_seen_date": "2026-07-19",
+  "first_deep_dive_daily": "2026-07-19",
   "value_type": "long_tail",
   "value_type_label": "长尾价值",
   "value_scores": {
@@ -32,10 +32,10 @@
   },
   "score": 60.0,
   "decision": "持续观察",
-  "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语…",
-  "one_line_essence": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent 的表示设计模式——当多模态系统需要回答'在哪里'而非只是'是什么'时可作参考；趋势层面，全模态 + 空间感知是具身/世界模型的基础设施方向。但论文偏表示学习，落地路径长，无代码链接，方法迁移价值大于直接业务价值。",
+  "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入…",
+  "one_line_essence": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent 的表示设计模式——当多模态系统需要回答'在哪里'而非只是'是什么'时可作参考；趋势层面，全模态 + 空间感知是具身/世界模型的基础设施方向。偏表示学习，落地路径长，无代码链接，方法迁移价值大于直接业务价值，故归为长尾保存。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Age",
+  "new_claim_or_method": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent ",
   "research_position": "long_tail_insight",
   "engineering_testability": {
     "has_code": false,
@@ -61,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定到一起：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理",
+    "why_save": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面",
     "future_trigger": [
       "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
     ],
@@ -78,7 +78,7 @@
       "模板"
     ],
     "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-    "revisit_date": "2026-08-08"
+    "revisit_date": "2026-08-09"
   },
   "insights": {
     "system_design": [
@@ -121,7 +121,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language",
-  "daily_path": "daily-detail.html?date=2026-07-18",
+  "daily_path": "daily-detail.html?date=2026-07-19",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling"
   ],

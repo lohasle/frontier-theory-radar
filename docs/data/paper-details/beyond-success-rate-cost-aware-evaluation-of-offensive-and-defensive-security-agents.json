@@ -14,8 +14,8 @@
   "benchmark_url": "",
   "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-18",
-  "first_deep_dive_daily": "2026-07-18",
+  "first_seen_date": "2026-07-19",
+  "first_deep_dive_daily": "2026-07-19",
   "value_type": "immediate",
   "value_type_label": "即时价值",
   "value_scores": {
@@ -30,10 +30,10 @@
   },
   "score": 82.0,
   "decision": "重点学习",
-  "one_line_judgement": "今天值得试：Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agen…",
-  "one_line_essence": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出成本-成功透镜（cost-success lens）而非单一成功率指标，这同时适用于进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token/工具调用/遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'，成本约束是 Agent 落地的真实瓶颈。证据较强：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御），有跨进攻/防御两侧的对照设计；但无代码/benchmark 仓库链接可核验，成本度量口径（哪些计入成本）需自行对齐。",
+  "one_line_judgement": "今天值得试：Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽…",
+  "one_line_essence": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-19 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出成本-成功透镜（cost-success lens）而非单一成功",
+  "new_claim_or_method": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-suc",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -60,7 +60,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "Beyond Success Rate 直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'来度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥",
+    "why_save": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但",
     "future_trigger": [
       "待更多证据"
     ],
@@ -120,7 +120,7 @@
     }
   ],
   "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
-  "daily_path": "daily-detail.html?date=2026-07-18",
+  "daily_path": "daily-detail.html?date=2026-07-19",
   "trend_paths": [
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"
