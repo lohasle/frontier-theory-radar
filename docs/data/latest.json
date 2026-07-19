@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-07-19T04:38:00.664576",
+  "updated_at": "2026-07-20T04:34:00.146367",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-07-19",
-    "title": "论文价值发现日报 - 2026-07-19",
+    "date": "2026-07-20",
+    "title": "论文价值发现日报 - 2026-07-20",
     "deep_dive_title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
     "deep_dive_url": "http://arxiv.org/abs/2607.15263v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "分两步：(1) 数据侧——确认本批与 07-16/07-17/07-18 完全相同（10 篇标题集合相等），在日报顶部明确标注'arXiv 最新批次仍为 2026-07-16，连续 3 天无新论文'；(2) 论文侧（沿用未完成的最高优先级行动）——给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。",
-    "max_uncertainty": "最大不确定性是'数据新鲜度'：本批与 07-16/07-17/07-18 完全相同（10 篇标题集合相等），意味着要么 arXiv 这几日确无新提交、要么 fetch_papers.py 的抓取口径未按日期收敛——后者是工程缺陷，必须修复。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-19 未更新），证据仅基于 arXiv 摘要与论文自述；Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
-    "one_line_judgement": "Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测查询成本的成功率不可比、也无法做模型选型；Partition, Prompt, Aggregate 的'划分-提示-聚合'是一个可立即实现的探针模式，把同一问题按子群体划分、分别条件化提示、再聚合，对比与直接边缘估计的偏差即可量化自洽性缺口。RoboTTT 则验证了 TTT + 长上下文可在不增推理延迟的前提下扩展到 8K 时间步。",
-    "path": "daily-detail.html?date=2026-07-19"
+    "daily_action": "分两步：(1) 雷达工程——在日报顶部明确标注'arXiv 最新批次仍为 2026-07-16，连续第 3 天（07-18/07-19/07-20）无新论文'；本周内落地 fetch_papers.py 的 submittedDate 过滤 + 跨日去重（已连续 2 份日报推荐未执行，需升级为一等任务）。(2) 论文工程——给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。两者都应在下一份日报前有可验证进展。",
+    "max_uncertainty": "最大不确定性是'数据新鲜度'：本批与 07-18/07-19 完全相同（已逐条核验 URL 集合相等，全部 published 2026-07-16），可能原因有二——(a) arXiv 在 cs.AI/CL/LG/SE/IR 这几日确无新提交（周末/静默期）；(b) 抓取口径缺陷（不按日期过滤、不跨日去重）放大了静默。无论哪种，落地 submittedDate 过滤+去重都能让雷达分辨'真静默'与'假日报'，这是当前最高优先级的工程修复。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-20 未更新），证据仅基于 arXiv 摘要与论文自述；Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
+    "one_line_judgement": "雷达侧：连续 3 天'假日报'正在消耗注意力预算，必须把抓取改为增量收敛（按 submittedDate 过滤 + 跨日去重），让'今日是否真有新论文'成为一等信号；论文侧：Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测成本的成功率不可比；Partition, Prompt, Aggregate 的'划分-提示-聚合'是可立即实现的概率自洽性探针。",
+    "path": "daily-detail.html?date=2026-07-20"
   },
   "top_paper": {
     "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
@@ -56,7 +56,7 @@
         "url": "https://arxiv.org/pdf/2607.15263v1"
       }
     ],
-    "llm_reason": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-19 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。",
+    "llm_reason": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-20 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。注：本批论文与 07-18/07-19 完全相同（均 published 2026-07-16），即连续第 3 天无新论文，分数保持一致属诚实反映。",
     "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
     "value_type": "immediate",
     "matched_topics": [
@@ -84,8 +84,8 @@
     "trend_status": "emerging",
     "brief_cn": "AI Agent：Security-agent evaluations commonly measure peak offensive capability under ge…",
     "one_line_judgement": "今天值得试：Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽…",
-    "first_seen_date": "2026-07-19",
-    "first_deep_dive_daily": "2026-07-19",
+    "first_seen_date": "2026-07-20",
+    "first_deep_dive_daily": "2026-07-20",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
@@ -107,6 +107,19 @@
     "ignore": 269
   },
   "recent_dailies": [
+    {
+      "date": "2026-07-20",
+      "title": "论文价值发现日报 - 2026-07-20",
+      "deep_dive_title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+      "deep_dive_url": "http://arxiv.org/abs/2607.15263v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "分两步：(1) 雷达工程——在日报顶部明确标注'arXiv 最新批次仍为 2026-07-16，连续第 3 天（07-18/07-19/07-20）无新论文'；本周内落地 fetch_papers.py 的 submittedDate 过滤 + 跨日去重（已连续 2 份日报推荐未执行，需升级为一等任务）。(2) 论文工程——给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。两者都应在下一份日报前有可验证进展。",
+      "max_uncertainty": "最大不确定性是'数据新鲜度'：本批与 07-18/07-19 完全相同（已逐条核验 URL 集合相等，全部 published 2026-07-16），可能原因有二——(a) arXiv 在 cs.AI/CL/LG/SE/IR 这几日确无新提交（周末/静默期）；(b) 抓取口径缺陷（不按日期过滤、不跨日去重）放大了静默。无论哪种，落地 submittedDate 过滤+去重都能让雷达分辨'真静默'与'假日报'，这是当前最高优先级的工程修复。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-20 未更新），证据仅基于 arXiv 摘要与论文自述；Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
+      "one_line_judgement": "雷达侧：连续 3 天'假日报'正在消耗注意力预算，必须把抓取改为增量收敛（按 submittedDate 过滤 + 跨日去重），让'今日是否真有新论文'成为一等信号；论文侧：Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测成本的成功率不可比；Partition, Prompt, Aggregate 的'划分-提示-聚合'是可立即实现的概率自洽性探针。",
+      "path": "daily-detail.html?date=2026-07-20"
+    },
     {
       "date": "2026-07-19",
       "title": "论文价值发现日报 - 2026-07-19",
@@ -184,19 +197,6 @@
       "max_uncertainty": "主要不确定性：(1) 五篇均为 2026-07-09 新发，代码/数据集链接均暂缺（待核验），可复现性未验证；(2) UniClawBench 与 AUTOPILOT-VQA 的数据集规模与标注协议未明，将决定基准可信度；(3) SLORR 缺数十亿参数尺度证据，泛化性待验证；(4) fetch 阶段部分论文 keywords 被误标（如把理论论文标为 RAG），已手动修正分类。",
       "one_line_judgement": "它直击 Agent 工程最大评测缺口，把评测从‘单能力点的聚合分数’重构为‘按能力正交分解的任务分类法’，让失败可被归因；对任何自研 Agent 团队都是可立刻对照的评测骨架。",
       "path": "daily-detail.html?date=2026-07-12"
-    },
-    {
-      "date": "2026-07-11",
-      "title": "论文价值发现日报 - 2026-07-11",
-      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
-      "decision": "轻量试点",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读论文的评测框架设计和任务分类法，提取'能力解耦'的分类维度；将 UniClawBench 的任务分类思路映射到自研 Agent 系统的测试用例结构中，设计一个最小评测原型——选择 2-3 个真实工具（如文件系统操作、API 调用），构建多轮交互测试场景。",
-      "max_uncertainty": "暂无公开代码和数据集（code_url/benchmark_url 均为空），真实环境评测的可复现性和安全性约束（如何安全地在真实工具上评测 Agent）的细节不明。任务分类法是否经过充分的跨模型验证、以及评测成本（真实环境部署的工程开销）是否可控，均待核验。",
-      "one_line_judgement": "它直击 Agent 评测的核心痛点——现有 benchmark 依赖沙箱、单轮、能力混合，无法评测真实环境中的主动式 Agent。提出真实环境+多轮交互+能力解耦的三维评测框架，是 Agent 质量保障基础设施的关键拼图。",
-      "path": "daily-detail.html?date=2026-07-11"
     }
   ],
   "top_papers": [
@@ -241,7 +241,7 @@
           "url": "https://arxiv.org/pdf/2607.15263v1"
         }
       ],
-      "llm_reason": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-19 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。",
+      "llm_reason": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-20 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。注：本批论文与 07-18/07-19 完全相同（均 published 2026-07-16），即连续第 3 天无新论文，分数保持一致属诚实反映。",
       "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
       "value_type": "immediate",
       "matched_topics": [
@@ -269,8 +269,8 @@
       "trend_status": "emerging",
       "brief_cn": "AI Agent：Security-agent evaluations commonly measure peak offensive capability under ge…",
       "one_line_judgement": "今天值得试：Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
@@ -345,8 +345,8 @@
       "trend_status": "emerging",
       "brief_cn": "LLM 评测：In-context learning is commonly interpreted as a form of conditional inference…",
       "one_line_judgement": "值得继续观察：Partition, Prompt, Aggregate（Wolf/Kleine Buening/Krause/Mendler-Dünner…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -424,8 +424,8 @@
       "trend_status": "emerging",
       "brief_cn": "Multimodal Agent：Recent robot foundation models operate with single-step or short-history visuo…",
       "one_line_judgement": "值得继续观察：RoboTTT（Jiang/Chebotar 等）把 Test-Time Training（TTT）从语言/视觉迁移到机器人策略，并将视觉运…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -499,8 +499,8 @@
       "trend_status": "emerging",
       "brief_cn": "安全与治理：Poisoning pretraining data can introduce harmful behaviors to LMs that are dif…",
       "one_line_judgement": "值得继续观察：Pretraining Data Can Be Poisoned through Computational Propaganda（Graf…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -576,8 +576,8 @@
       "trend_status": "emerging",
       "brief_cn": "AI Agent：Recent advances in Tool-Integrated Large Language Models have made web search …",
       "one_line_judgement": "值得继续观察：SearchOS-V1 针对工具集成 LLM 信息检索 Agent 的通病：随着交互历史增长，Agent 越来越难追踪任务进度，当某次搜索拿…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
@@ -652,8 +652,8 @@
       "trend_status": "long_tail_watch",
       "brief_cn": "Multimodal Agent：We present SceneBind, an omni-modal representation of realistic scenes with jo…",
       "one_line_judgement": "值得先保存：SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
@@ -729,8 +729,8 @@
       "trend_status": "long_tail_watch",
       "brief_cn": "Multimodal Agent：Online novel view synthesis from multi-view streaming videos faces a fundament…",
       "one_line_judgement": "值得先保存：Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
@@ -804,8 +804,8 @@
       "trend_status": "noise",
       "brief_cn": "推理与服务：MeanFlow generators achieve fast few-step sampling by predicting average veloc…",
       "one_line_judgement": "当前可忽略：MeanFlowNFT 把 DiffusionNFT 的前向过程 RL 框架（无需逆向轨迹或似然估计）迁移到 MeanFlow 这类'预测区…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -879,8 +879,8 @@
       "trend_status": "noise",
       "brief_cn": "AI Agent：Editing the figures in a research paper is a routine and time-consuming part o…",
       "one_line_judgement": "当前可忽略：SciDiagramEdit 学习按自然语言指令编辑科研论文中的科学示意图（重标组件、重排版面、改样式）。论文→理论层面把'科学图编辑'建模…",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -952,8 +952,8 @@
       "trend_status": "noise",
       "brief_cn": "前沿论文：The growing use of Bitcoin as a decentralized digital asset and investment too…",
       "one_line_judgement": "当前可忽略：Decoding Market Emotion from Blockchain Activity 用链上数据 + 比特币历史价格 + 每日 …",
-      "first_seen_date": "2026-07-19",
-      "first_deep_dive_daily": "2026-07-19",
+      "first_seen_date": "2026-07-20",
+      "first_deep_dive_daily": "2026-07-20",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
@@ -975,7 +975,7 @@
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-09",
+      "revisit_date": "2026-08-10",
       "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language"
     },
     {
@@ -990,7 +990,7 @@
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-09",
+      "revisit_date": "2026-08-10",
       "detail_path": "paper-detail.html?id=online-neural-space-time-memory-for-dynamic-novel-view-synthesis"
     },
     {

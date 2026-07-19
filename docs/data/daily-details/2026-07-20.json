@@ -1,0 +1,271 @@
+{
+  "date": "2026-07-20",
+  "title": "论文价值发现日报 - 2026-07-20",
+  "deep_dive_id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+  "deep_dive_title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "decision": "重点学习",
+  "daily_action": "分两步：(1) 雷达工程——在日报顶部明确标注'arXiv 最新批次仍为 2026-07-16，连续第 3 天（07-18/07-19/07-20）无新论文'；本周内落地 fetch_papers.py 的 submittedDate 过滤 + 跨日去重（已连续 2 份日报推荐未执行，需升级为一等任务）。(2) 论文工程——给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。两者都应在下一份日报前有可验证进展。",
+  "score": 82.0,
+  "trend_stage": "emerging",
+  "one_line_judgement": "今天值得试：Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽…",
+  "max_uncertainty": "最大不确定性是'数据新鲜度'：本批与 07-18/07-19 完全相同（已逐条核验 URL 集合相等，全部 published 2026-07-16），可能原因有二——(a) arXiv 在 cs.AI/CL/LG/SE/IR 这几日确无新提交（周末/静默期）；(b) 抓取口径缺陷（不按日期过滤、不跨日去重）放大了静默。无论哪种，落地 submittedDate 过滤+去重都能让雷达分辨'真静默'与'假日报'，这是当前最高优先级的工程修复。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-20 未更新），证据仅基于 arXiv 摘要与论文自述；Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。",
+  "conclusion_lines": [
+    "今天最值得看的是《Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents》。",
+    "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+    "今天建议动作：分两步：(1) 雷达工程——在日报顶部明确标注'arXiv 最新批次仍为 2026-07-16，连续第 3 天（07-18/07-19/07-20）无新论文'；本周内落地 fetch_papers.py 的 submittedDate 过滤 + 跨日去重（已连续 2 份日报推荐未执行，需升级为一等任务）。(2) 论文工程——给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。两者都应在下一份日报前有可验证进展。。",
+    "最大不确定性：最大不确定性是'数据新鲜度'：本批与 07-18/07-19 完全相同（已逐条核验 URL 集合相等，全部 published 2026-07-16），可能原因有二——(a) arXiv 在 cs.AI/CL/LG/SE/IR 这几日确无新提交（周末/静默期）；(b) 抓取口径缺陷（不按日期过滤、不跨日去重）放大了静默。无论哪种，落地 submittedDate 过滤+去重都能让雷达分辨'真静默'与'假日报'，这是当前最高优先级的工程修复。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-20 未更新），证据仅基于 arXiv 摘要与论文自述；Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。。"
+  ],
+  "candidate_papers": [
+    {
+      "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+      "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+      "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 82.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "partition-prompt-aggregate-statistical-self-consistency-in-language-models",
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "detail_path": "paper-detail.html?id=partition-prompt-aggregate-statistical-self-consistency-in-language-models",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 80.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "robottt-context-scaling-for-robot-policies",
+      "title": "RoboTTT: Context Scaling for Robot Policies",
+      "detail_path": "paper-detail.html?id=robottt-context-scaling-for-robot-policies",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 78.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "pretraining-data-can-be-poisoned-through-computational-propaganda",
+      "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
+      "detail_path": "paper-detail.html?id=pretraining-data-can-be-poisoned-through-computational-propaganda",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 75.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "detail_path": "paper-detail.html?id=searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
+      "direction": "未分类",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 72.0,
+      "decision": "轻量试点",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    }
+  ],
+  "deep_dive": {
+    "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+    "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+    "authors": [
+      "Paul Kassianik",
+      "Blaine Nelson",
+      "Yaron Singer"
+    ],
+    "source": "arXiv",
+    "published": "2026-07-16",
+    "url": "http://arxiv.org/abs/2607.15263v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.15263v1",
+    "code_url": "",
+    "benchmark_url": "",
+    "paperswithcode_url": "",
+    "openreview_url": "",
+    "first_seen_date": "2026-07-20",
+    "first_deep_dive_daily": "2026-07-20",
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "value_scores": {
+      "novelty": 4.8,
+      "relevance": 8.6,
+      "evidence": 4.95,
+      "engineering_testability": 4.05,
+      "trend_signal": 4.05,
+      "long_tail_potential": 3.5,
+      "actionability": 5.0,
+      "noise_risk": 1.2
+    },
+    "score": 82.0,
+    "decision": "重点学习",
+    "one_line_judgement": "今天值得试：Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽…",
+    "one_line_essence": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-20 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。注：本批论文与 07-18/07-19 完全相同（均 published 2026-07-16），即连续第 3 天无新论文，分数保持一致属诚实反映。",
+    "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+    "new_claim_or_method": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-suc",
+    "research_position": "source_paper",
+    "engineering_testability": {
+      "has_code": false,
+      "has_benchmark": false,
+      "can_reproduce": false,
+      "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+      "engineering_scenarios": [
+        "AI Agent",
+        "Context Engineering",
+        "评测治理"
+      ]
+    },
+    "trend_relation": {
+      "status": "emerging",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "evidence": [
+        "论文主题匹配固定研究方向"
+      ],
+      "uncertainties": [
+        "是否会出现更多开源实现与生产案例"
+      ]
+    },
+    "long_tail": {
+      "why_save": "Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但",
+      "future_trigger": [
+        "待更多证据"
+      ],
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "模板"
+      ],
+      "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+      "revisit_date": ""
+    },
+    "insights": {
+      "system_design": [
+        "先判断价值类型，再决定系统性投入。"
+      ],
+      "agent_engineering": [
+        "为 Agent 建立论文价值路由器。"
+      ],
+      "dev_process": [
+        "论文输出应沉淀为可执行资产。"
+      ],
+      "evaluation": [
+        "同时看方法与证据质量。"
+      ],
+      "platform_engineering": [
+        "长尾资产库可降低重复检索成本。"
+      ],
+      "personal_learning": [
+        "优先读能转化为未来复利的论文。"
+      ]
+    },
+    "actions": {
+      "immediate_actions": [
+        "今天读摘要与方法",
+        "今天试最小实验",
+        "一周内沉淀为 Skill / Checklist"
+      ],
+      "trend_actions": [],
+      "long_tail_actions": [],
+      "ignore_reason": ""
+    },
+    "references": [
+      {
+        "label": "arXiv",
+        "url": "http://arxiv.org/abs/2607.15263v1"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15263v1"
+      }
+    ],
+    "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+    "daily_path": "daily-detail.html?date=2026-07-20",
+    "trend_paths": [
+      "trend-detail.html?id=agentic-world-modeling",
+      "trend-detail.html?id=coding-agent"
+    ],
+    "long_tail_path": "long-tail.html",
+    "mermaid": {
+      "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+      "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+      "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+    }
+  },
+  "long_tail_saved": [],
+  "ignore_reasons": [
+    "暂无明确忽略样本，但忽略标准仍需保留。"
+  ],
+  "insights": {
+    "system_design": [
+      "先做价值路由，再决定是否深入工程推导。"
+    ],
+    "agent_engineering": [
+      "让 Agent 先判断“今天值不值得试”。"
+    ],
+    "dev_process": [
+      "论文筛选应产出 Prompt / Skill / Checklist。"
+    ],
+    "evaluation": [
+      "把“是否值得投入”也纳入评测流程。"
+    ],
+    "platform_engineering": [
+      "长尾库是低成本知识保留层。"
+    ],
+    "personal_learning": [
+      "优先读可沉淀资产的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "30 分钟学习",
+      "2 小时实践",
+      "1 周研究"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.15263v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.15263v1"
+    }
+  ],
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  },
+  "raw_markdown_html": "<h2>论文价值发现日报 - 2026-07-20</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2607.15263v1\" target=\"_blank\" rel=\"noopener noreferrer\">Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 分两步：(1) 雷达工程——在日报顶部明确标注'arXiv 最新批次仍为 2026-07-16，连续第 3 天（07-18/07-19/07-20）无新论文'；本周内落地 fetch_papers.py 的 submittedDate 过滤 + 跨日去重（已连续 2 份日报推荐未执行，需升级为一等任务）。(2) 论文工程——给内部 Agent 评测/benchmark 流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检，标记自洽性缺口最大的子群体。两者都应在下一份日报前有可验证进展。</li>\n<li><strong>分数：</strong> 82.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> 首要信号是雷达工程层面的，而非论文层面的——arXiv 最新提交日仍停留在 2026-07-16，本批 10 篇论文与 07-18、07-19 连续第 3 天完全相同（已逐条核验 URL 集合相等），说明 `fetch_papers.py` 的'取最新 10 篇但不按 submittedDate 过滤、不与历史去重'缺陷仍未修复。论文层面，本批顶信号仍是 <a href=\"http://arxiv.org/abs/2607.15263v1\" target=\"_blank\" rel=\"noopener noreferrer\">Beyond Success Rate</a>（成本-成功联合度量：Cybench 进攻 + Splunk BOTS 防御）与 <a href=\"http://arxiv.org/abs/2607.15277v1\" target=\"_blank\" rel=\"noopener noreferrer\">Partition, Prompt, Aggregate</a>（用全概率公式可证伪地检验 LLM 是否是自洽的概率估计器）。</li>\n<li><strong>为什么值得看：</strong> 雷达侧：连续 3 天'假日报'正在消耗注意力预算，必须把抓取改为增量收敛（按 submittedDate 过滤 + 跨日去重），让'今日是否真有新论文'成为一等信号；论文侧：Beyond Success Rate 的成本-成功透镜可立即嵌入任何 Agent benchmark 流水线——不报告 token/工具调用/遥测成本的成功率不可比；Partition, Prompt, Aggregate 的'划分-提示-聚合'是可立即实现的概率自洽性探针。</li>\n<li><strong>它属于什么价值类型：</strong> Beyond Success Rate 为即时价值（immediate，双 benchmark 证据 + 直接迁移路径）；Partition, Prompt, Aggregate 与 RoboTTT 为趋势价值（trend）；Pretraining Data Poisoning 为趋势价值（可信预训练地基）；SearchOS-V1 为趋势价值（Agent 循环鲁棒性）。</li>\n<li><strong>今天该做什么：</strong> (1) 雷达工程——本周内必须落地 `fetch_papers.py` 的 submittedDate 过滤 + 跨日去重（已连续 2 份日报推荐未执行）；在修复前，日报顶部明确标注'连续第 3 天无新论文'。(2) 论文工程——沿用未完成的最高优先级动作：给内部 Agent 评测流水线加'成本维度'（token/工具调用/遥测查询计数 + 成本-成功帕累托前沿），并在主力模型上用'划分-提示-聚合'探针跑一次概率自洽性体检。</li>\n<li><strong>最大不确定性：</strong> 最大的系统性不确定性是'数据新鲜度'——本批与 07-18/07-19 完全相同（已核验），可能原因有二：(a) arXiv 在 cs.AI/CL/LG/SE/IR 这几日确无新提交（周末/静默期）；(b) 抓取口径缺陷放大了静默。无论哪种，把过滤+去重落地都能让雷达分辨'真静默'与'假日报'。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-20 未更新），证据仅基于 arXiv 摘要与论文自述。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.15263v1\" target=\"_blank\" rel=\"noopener noreferrer\">Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents</a></td><td>ai-agent / llm-evaluation</td><td>即时价值</td><td>82.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.15277v1\" target=\"_blank\" rel=\"noopener noreferrer\">Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models</a></td><td>llm-evaluation / context-engineering</td><td>趋势价值</td><td>80.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.15275v1\" target=\"_blank\" rel=\"noopener noreferrer\">RoboTTT: Context Scaling for Robot Policies</a></td><td>multimodal-agent / inference-serving</td><td>趋势价值</td><td>78.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.15267v1\" target=\"_blank\" rel=\"noopener noreferrer\">Pretraining Data Can Be Poisoned through Computational Propaganda</a></td><td>security-governance / data-engineering</td><td>趋势价值</td><td>75.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.15257v1\" target=\"_blank\" rel=\"noopener noreferrer\">SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration</a></td><td>ai-agent / rag-knowledge</td><td>趋势价值</td><td>72.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 今天最重要的信号是元信号——arXiv 批次连续第 3 天（07-18/07-19/07-20）零变化，雷达必须从'每日重复深挖同一批'切换为'按日期增量收敛 + 对无新论文日明确报警 + 把工程动作推进到落地'。论文层面，本批最强信号仍是'评测维度扩张'（Beyond Success Rate 的成本-成功、Partition/Prompt/Aggregate 的概率自洽性）与'测试时计算扩张'（RoboTTT 的 8K 上下文 TTT）两条线并行，辅以预训练数据供应链安全（Pretraining Poisoning）与搜索 Agent 循环鲁棒性（SearchOS-V1）。</li>\n<li><strong>底层问题：</strong> (1) 雷达工程问题（最高优先级，已悬置 2 天）：抓取脚本 sortBy=submittedDate 取最新 10 篇但不按日期过滤、不与历史去重，导致同一批论文被反复评分，掩盖了'今日是否真有新论文'这一最关键信号，且让'已推荐的工程动作'反复空转；(2) 当安全 Agent 用'宽松推理预算下的峰值成功率'度量时，能力评估如何失真？把每步推理/工具调用/遥测查询计入成本后，进攻与防御 Agent 的排名是否重排？(3) 当把 LLM 输出当作条件分布估计时，它是否满足全概率公式？若系统性违反，校准/不确定性/自洽性投票的地基是否动摇？(4) TTT 能否在不增推理延迟的前提下把有效上下文扩展三个数量级？(5) 投毒与清洗 pipeline 耦合时，数据供应链安全面如何建模？(6) 搜索 Agent 拿不到有用证据时，如何用系统级进度状态机逃逸循环？</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 本批（与 07-18/07-19 相同，无新增论文、无新增代码资产）最强信号是五类方向同时出现：成本-成功视角的 Agent 评测（Beyond Success Rate：进攻 Cybench + 防御 Splunk BOTS 双 benchmark）、LLM 概率估计的自洽性可证伪检验（Partition, Prompt, Aggregate：全概率公式下的划分-提示-聚合探针）、TTT 长上下文扩展（RoboTTT：8K 时间步、延迟不增）、预训练数据投毒与清洗 pipeline 耦合建模（Pretraining Poisoning：AI2/UW）、系统级多 Agent 搜索进度管理与循环逃逸（SearchOS-V1）。元层新信号：连续 3 天无新论文已从'偶发'变成'需工程介入的系统行为'。</li>\n<li><strong>研究位置：</strong> 整体处于早期信号期且连续 3 天无新增证据/无新代码资产：Beyond Success Rate 有双 benchmark 证据与清晰工程映射路径，落地性最强（immediate）；Partition, Prompt, Aggregate 方法论与概率检验设计扎实但需核验违反幅度；RoboTTT 工程指标（延迟不增）是卖点但 8K 上下文显存/算力代价待复现；Pretraining Poisoning 作者信誉强、动机可信但投毒成功率待验；SearchOS-V1 架构清晰但循环逃逸策略有效性待验。五篇均无代码链接可核验。截至今日仍未出现新的代码/benchmark 资产，趋势线维持上一日判断。</li>\n<li><strong>工程可验证性：</strong> Beyond Success Rate 可立即在自有 Agent 评测流水线上加成本维度并画帕累托前沿；Partition, Prompt, Aggregate 可在主力模型上实现'划分-提示-聚合'探针做概率自洽性体检（最小实现：按子群体分桶→分别条件化提示→聚合对比边缘估计）；RoboTTT 可在自有在线推理服务上对照'每帧全量更新 vs 事件驱动 TTT 更新'的延迟/质量权衡；Pretraining Poisoning 可对自建预训练流水线做一轮投毒审计；SearchOS-V1 可在搜索 Agent 上加显式进度状态机与循环检测做逃逸效率对照。均需自行搭建验证环境。</li>\n<li><strong>趋势关联：</strong> Beyond Success Rate→cost-aware-agent-eval + agent-benchmark-validity；Partition, Prompt, Aggregate→llm-probability-coherence + calibration；RoboTTT→test-time-training + long-context-as-memory；Pretraining Poisoning→data-supply-chain-security + pretraining-trust；SearchOS-V1→agent-loop-robustness + agentic-search。系统性雷达工程线：fetch-date-filtering + cross-day-dedup（已连续 2 份日报推荐未落地，需升级为一等工程任务）。</li>\n<li><strong>长尾价值：</strong> Partition, Prompt, Aggregate 的'划分-提示-聚合'探针可沉淀为 LLM 可靠性/校准诊断的方法论资产；RoboTTT 的'cheap in-context update 替代 expensive recompute'可作在线推理服务设计模式库的一条；Pretraining Poisoning 的'清洗 pipeline 绕过路径建模'可作数据供应链威胁模型模板。三者即使短期不落地也有方法论复用价值。</li>\n<li><strong>启发：</strong> 今天最该做的不是再深挖同一批论文，而是先修雷达+把已推荐的论文工程动作推进到落地。雷达侧：让抓取层区分'最新 N 篇'与'今日新提交'，让'无新论文'成为可被显式报告的状态。论文侧：优先解决'Agent 评测为什么不报告成本就不可比'和'LLM 作为概率估计器是否自洽'两个评测地基问题。</li>\n<li><strong>行动建议：</strong> 雷达工程（本周必做）：落地 fetch_papers.py 的 submittedDate 过滤 + 跨日去重，过滤后为空则输出'今日无新论文'占位。论文工程（沿用未完成项）：给 Agent 评测流水线加成本维度（帕累托前沿）；在主力模型上跑'划分-提示-聚合'自洽性体检。两者都应在下一份日报前有可验证进展。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2607.15265v1\" target=\"_blank\" rel=\"noopener noreferrer\">SceneBind: Binding What and Where Across Vision, Audio and Language</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面，它指出当前全模态编码器擅长实例语义却缺乏显式空间结构，并用'语义-空间实体'补齐；工程实践层面，'把语义嵌入与空间槽绑定'是可迁移到多模态 RAG/具身 Agent 的表示设计模式——当多模态系统需要回答'在哪里'而非只是'是什么'时可作参考；趋势层面，全模态 + 空间感知是具身/世界模型的基础设施方向。偏表示学习，落地路径长，无代码链接，方法迁移价值大于直接业务价值，故归为长尾保存。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-08-10</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2607.15271v1\" target=\"_blank\" rel=\"noopener noreferrer\">Online Neural Space Time Memory for Dynamic Novel View Synthesis</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> Online Neural Space Time Memory 用在线神经时空记忆做多视角流视频的新视角合成，核心矛盾是'为重建被遮挡区域需要长程持久记忆'与'严格实时约束'之间的权衡。论文→理论层面，它指出标准 TTT 要求每帧做梯度更新以适应动态场景，算力开销使其无法实时，并提出条件化/稀疏化的记忆更新策略来兼顾两者；工程实践层面，'何时触发记忆更新（事件驱动而非每帧）'是 TTT 类系统走向实时化的通用工程问题，可迁移到任何 TTT/在线适应系统；趋势层面，TTT 向实时/流式场景下沉是趋势延伸。领域（动态新视角合成）较窄，与通用 AI 基础设施工程交集有限，无代码链接，方法论启发大于直接复用，归为长尾。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-08-10</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2607.15273v1\" target=\"_blank\" rel=\"noopener noreferrer\">MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.15272v1\" target=\"_blank\" rel=\"noopener noreferrer\">SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.15258v1\" target=\"_blank\" rel=\"noopener noreferrer\">Decoding Market Emotion from Blockchain Activity: A Data-Driven Sentiment Classifier</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对系统设计的启发（含雷达自身）</h4>\n<p>今天最重要的系统设计启发仍是雷达自身，但紧迫度已升级：抓取层连续 3 天（07-18/07-19/07-20）用 sortBy=submittedDate 取最新 10 篇而不按日期过滤，在 arXiv 静默期产生'数据未变但日报假装更新'的系统性失真。正确做法是抓取后按 submittedDate 过滤 + 跨日去重，让'无新论文'成为可被显式报告的状态，而非用旧批次填满版面。此事已悬置 2 份日报，今日为最后预警，下一周期应作为一等工程任务。</p>\n<h4>对 Agent 评测系统的启发</h4>\n<p>Agent 评测系统必须把'成本'列为一等指标。Beyond Success Rate 揭示：只看成功率会让'靠堆推理步与工具调用换成功'的 Agent 虚高，模型选型因此失真。设计任何 Agent benchmark 时，应默认同时记录 token、工具调用次数、遥测/富化查询数，并输出成本-成功帕累托前沿。</p>\n<h4>对 AI Agent 工程化的启发</h4>\n<p>SearchOS-V1 揭示搜索 Agent 的核心失败模式不是单次检索质量，而是'进度状态丢失导致的重复循环'。长程 Agent 必须显式维护'已尝试查询/已获得证据/未解决子问题'的进度状态机，并设计循环检测与策略切换的逃逸机制。</p>\n<h4>对模型评测的启发</h4>\n<p>Partition, Prompt, Aggregate 是理论警示钟：我们常默认 LLM 输出是合理的概率估计，但若它系统性违反全概率公式，那么所有基于 LLM 概率的校准、不确定性量化、自洽性投票、集成方法都建立在松软地基上。'划分-提示-聚合'应成为模型评测流水线的一项标配可靠性诊断。</p>\n<h4>对推理服务的启发</h4>\n<p>RoboTTT 的'在不增推理延迟的前提下扩展有效上下文三个数量级'是强工程信号：'用 cheap in-context update 替代 expensive recompute'是可迁移到任何在线推理服务的设计模式。</p>\n<h4>对可信 AI 的启发</h4>\n<p>Pretraining Poisoning 把投毒从'单一来源注入'升级为'与清洗 pipeline 耦合的系统工程威胁'。数据供应链治理应成为基础模型团队的一等工程议题。</p>\n<h4>对个人学习路径的启发</h4>\n<p>因批次连续 3 天未变，已读过的论文不必重读，应把时间转去做工程动作（加成本维度、跑自洽性体检、修抓取脚本）。未读过的阅读顺序：先 Beyond Success Rate（最 immediate），再 Partition, Prompt, Aggregate（理论最深），然后 RoboTTT、Pretraining Poisoning、SearchOS-V1。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2607.15263v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2607.15263v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> Beyond Success Rate（Kassianik/Nelson/Singer）直击安全 Agent 评测的系统性盲点：业界惯用'宽松推理预算下的峰值成功率'度量攻击型 Agent，但真实运维里每一步推理、每一次工具调用、每一条遥测/富化查询都吃预算。论文→理论层面，它把'Agent 能力评测'重构为'成本-成功联合度量'问题，提出 cost-success lens 取代单一成功率指标，同时覆盖进攻（Cybench CTF）与防御（Splunk BOTS v1）两侧；工程实践层面，该框架可立即迁移到任何 Agent benchmark 流水线——必须在报告成功率的同时报告 token / 工具调用 / 遥测查询的成本分布与帕累托前沿，否则分数不可比、也无法做模型选型；趋势层面，2026 年 Agent 评测正从'峰值能力'走向'单位成本能力（capability per dollar）'。证据较强且工程映射路径最清晰：覆盖两个公开 benchmark（Cybench 进攻 + Splunk BOTS 防御）并做跨进攻/防御对照设计。短板：代码 / benchmark 仓库链接仍为空（截至 2026-07-20 未出现新开源资产），成本度量口径（哪些计入成本）需自行对齐。在今日数据中它仍是落地性最强的一篇，故维持即时价值。注：本批论文与 07-18/07-19 完全相同（均 published 2026-07-16），即连续第 3 天无新论文，分数保持一致属诚实反映。</li>\n<li><strong>最大不确定性：</strong> 最大不确定性是'数据新鲜度'：本批与 07-18/07-19 完全相同（已逐条核验 URL 集合相等，全部 published 2026-07-16），可能原因有二——(a) arXiv 在 cs.AI/CL/LG/SE/IR 这几日确无新提交（周末/静默期）；(b) 抓取口径缺陷（不按日期过滤、不跨日去重）放大了静默。无论哪种，落地 submittedDate 过滤+去重都能让雷达分辨'真静默'与'假日报'，这是当前最高优先级的工程修复。论文级不确定性：前五篇的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-20 未更新），证据仅基于 arXiv 摘要与论文自述；Beyond Success Rate 的成本度量口径（哪些计入成本）、Partition/Prompt/Aggregate 在哪些模型规模与任务上违反全概率公式最严重及偏差幅度、RoboTTT 的 8K 上下文显存/算力代价与延迟测量口径、Pretraining Poisoning 的投毒成功率与清洗 pipeline 具体类型、SearchOS 的循环逃逸策略有效性与搜索预算节省幅度均为关键未知项。</li>\n<li><strong>下一步动作：</strong> (1) 本周内修改 fetch_papers.py：抓取后按 submittedDate 仅保留最近 3 天新提交的论文，并与 papers/ 下已有论文按 arxiv id/title 去重；若过滤后为空，日报输出'今日无新论文'占位，不重复深挖（此项已连续 2 份日报推荐，今日为最后预警）。(2) 给内部 Agent 评测流水线加成本维度并产出成本-成功帕累托前沿。(3) 在主力模型上实现'划分-提示-聚合'最小探针，跑概率自洽性体检。(4) 对自建预训练/继续预训练流水线做一轮投毒审计。(5) 在搜索 Agent 上加显式进度状态机与循环检测做逃逸效率最小 PoC。(6) 14 天后复盘成本维度与自洽性体检结果。</li>\n</ul>\n<p>> 生成时间：2026-07-20T04:33:56.232738</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+}

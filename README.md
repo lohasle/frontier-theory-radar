@@ -78,13 +78,13 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-07-20 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-20) · 即时价值 · 重点学习
 - [2026-07-19 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-19) · 即时价值 · 重点学习
 - [2026-07-18 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-18) · 即时价值 · 重点学习
 - [2026-07-17 · VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair](daily-detail.html?date=2026-07-17) · 即时价值 · 重点学习
 - [2026-07-14 · Scalable Visual Pretraining for Language Intelligence](daily-detail.html?date=2026-07-14) · 即时价值 · 重点学习
 - [2026-07-13 · UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](daily-detail.html?date=2026-07-13) · 即时价值 · 重点学习
 - [2026-07-12 · UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](daily-detail.html?date=2026-07-12) · 趋势价值 · 重点学习
-- [2026-07-11 · UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](daily-detail.html?date=2026-07-11) · 即时价值 · 轻量试点
 
 ## 当前重点趋势索引
 
