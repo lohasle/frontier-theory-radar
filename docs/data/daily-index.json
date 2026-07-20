@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-20T04:34:00.151905",
+  "updated_at": "2026-07-21T04:39:33.700199",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-21",
+      "title": "论文价值发现日报 - 2026-07-21",
+      "deep_dive_title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "deep_dive_url": "http://arxiv.org/abs/2607.16184v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "分两步：(1) 论文工程（最高优先级）——在自有 MoE 推理服务上评估 PagedWeight 思路：对冷门专家做低精度量化、把回收显存分配给 KV cache 池，测吞吐/并发/最大上下文的变化，画权重精度 vs KV cache 容量的帕累托曲线；同时在 Agentic RL 后训练流水线上跑 Muon（仅 2D 隐藏权重）vs AdamW 单种子对照，验证成功率是否复现论文的 +88% 量级。(2) 雷达工程——数据新鲜度今日已恢复，但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，建议本周内落地以防下一个静默期再次产生'假日报'。",
+      "max_uncertainty": "前 5 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-21 未更新），证据仅基于 arXiv 摘要与论文自述。PagedWeight 的量化精度损失阈值、量化/反量化的运行时开销、与具体 MoE 模型的吞吐提升幅度为关键未知项；Muon/Agentic-RL 仅为单种子、0.5B 小模型实验，多种子方差与能否外推到更大模型/其他 Agent 基准为关键未知项；ActiveVision 的任务集规模、与现有 benchmark 的区分度、人类基线表现为关键未知项；CAV CVE 的评测样本规模与结构化输出 schema 复杂度为关键未知项。元层不确定性：数据新鲜度今日恢复，但无法排除下一个静默期再次出现'假日报'，故 submittedDate 过滤 + 去重仍应作为防御性工程修复落地。",
+      "one_line_judgement": "PagedWeight 直击 MoE 服务最痛的显存墙——在 KV-cache 密集场景下权重与 KV cache 争抢显存，'把冷门专家动态降精度、省下的显存还给 KV cache 池'是任何 MoE 推理框架立即可借鉴的调度思路；Muon 论文则回答了一个高度实操的训练工程问题——RL 后训练阶段优化器该怎么选，并给出具体数字与对照。",
+      "path": "daily-detail.html?date=2026-07-21"
+    },
     {
       "date": "2026-07-20",
       "title": "论文价值发现日报 - 2026-07-20",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-06-12"
-    },
-    {
-      "date": "2026-06-11",
-      "title": "论文价值发现日报 - 2026-06-11",
-      "deep_dive_title": "Flaws in the LLM Automation Narrative",
-      "deep_dive_url": "http://arxiv.org/abs/2606.11166v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-11"
     }
   ]
 }

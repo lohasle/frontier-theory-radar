@@ -1,0 +1,133 @@
+{
+  "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+  "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+  "authors": [
+    "Yuchen Yang",
+    "Yifan Zhao",
+    "Anisha Dasgupta",
+    "Sasa Misailovic"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-17",
+  "url": "http://arxiv.org/abs/2607.16184v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.16184v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-21",
+  "first_deep_dive_daily": "2026-07-21",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "value_scores": {
+    "novelty": 5.4,
+    "relevance": 7.4,
+    "evidence": 4.5,
+    "engineering_testability": 3.5,
+    "trend_signal": 4.05,
+    "long_tail_potential": 3.5,
+    "actionability": 3.8,
+    "noise_risk": 1.2
+  },
+  "score": 82.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最…",
+  "one_line_essence": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家权重与不断增长的 KV cache 争抢 GPU 显存。论文→理论层面，它把'权重精度'从静态超参重构为运行时可调的资源杠杆——按需动态量化专家权重、用省下的显存换更大的 KV cache 窗口，实质是用'精度换容量'的帕累托调度；工程实践层面，该方法可直接嵌入任何 vLLM/SGLang 类 MoE 推理框架：在长上下文/高并发场景下，默认让冷门专家走低精度、热门专家走高精度，并把回收的显存还给 KV cache 池，从而在不加 GPU 的前提下提升可服务并发数与最大上下文长度；趋势层面，2026 年 MoE 已成主流架构（DeepSeek/Mixtral/Qwen-MoE），但'显存墙'取代'算力墙'成为服务瓶颈，精度-显存动态权衡是明确上升线。证据为方法设计与系统抽象自述（质量感知量化），工程目标（权重精度 vs KV cache 大小的平衡）清晰可验证。短板：无代码/benchmark 链接（待核验），动态量化的精度损失阈值、量化/反量化的运行时开销、与具体 MoE 模型的吞吐提升幅度均为关键待验项。在今日数据中落地性最强，故评为即时价值。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家权重与不断增长的 KV cache 争抢 GPU 显存。论文→理论层面，它把'权重精度'从静态超参重构为运行时可调的资源杠杆——按需动态量化专家权重、用省下的显存换更大",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "context-engineering"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家",
+    "future_trigger": [
+      "待更多证据"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.16184v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.16184v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+  "daily_path": "daily-detail.html?date=2026-07-21",
+  "trend_paths": [
+    "trend-detail.html?id=context-engineering"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

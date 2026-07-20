@@ -19,9 +19,9 @@
   ],
   "candidate_papers": [
     {
-      "id": "beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
-      "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-      "detail_path": "paper-detail.html?id=beyond-success-rate-cost-aware-evaluation-of-offensive-and-defensive-security-agents",
+      "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
@@ -32,56 +32,56 @@
       "worth_deep_dive": true
     },
     {
-      "id": "partition-prompt-aggregate-statistical-self-consistency-in-language-models",
-      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
-      "detail_path": "paper-detail.html?id=partition-prompt-aggregate-statistical-self-consistency-in-language-models",
+      "id": "when-does-muon-help-agentic-reinforcement-learning",
+      "title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 80.0,
-      "decision": "重点学习",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": true
-    },
-    {
-      "id": "robottt-context-scaling-for-robot-policies",
-      "title": "RoboTTT: Context Scaling for Robot Policies",
-      "detail_path": "paper-detail.html?id=robottt-context-scaling-for-robot-policies",
-      "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 78.0,
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 79.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "pretraining-data-can-be-poisoned-through-computational-propaganda",
-      "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
-      "detail_path": "paper-detail.html?id=pretraining-data-can-be-poisoned-through-computational-propaganda",
+      "id": "an-exam-for-active-observers",
+      "title": "An Exam for Active Observers",
+      "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 75.0,
+      "score": 74.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
-      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
-      "detail_path": "paper-detail.html?id=searchos-v1-towards-robust-open-domain-information-seeking-agent-collaboration",
+      "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 72.0,
-      "decision": "轻量试点",
+      "score": 63.0,
+      "decision": "持续观察",
       "has_code": false,
       "has_benchmark": false,
-      "worth_deep_dive": true
+      "worth_deep_dive": false
+    },
+    {
+      "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+      "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+      "direction": "未分类",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "score": 54.0,
+      "decision": "持续观察",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
     }
   ],
   "deep_dive": {
@@ -214,7 +214,28 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [],
+  "long_tail_saved": [
+    {
+      "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+      "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+      "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "评测方法"
+      ],
+      "revisit_date": "2026-07-11"
+    }
+  ],
   "ignore_reasons": [
     "暂无明确忽略样本，但忽略标准仍需保留。"
   ],

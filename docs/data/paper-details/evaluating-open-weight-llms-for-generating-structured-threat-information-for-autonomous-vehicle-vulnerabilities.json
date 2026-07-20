@@ -1,0 +1,133 @@
+{
+  "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+  "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+  "authors": [
+    "Md Erfan",
+    "Ahmed Ryan",
+    "Md Kamal Hossain Chowdhury",
+    "Md Rayhanur Rahman"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-17",
+  "url": "http://arxiv.org/abs/2607.16175v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.16175v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-21",
+  "first_deep_dive_daily": "2026-07-21",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 5.0,
+    "evidence": 4.5,
+    "engineering_testability": 4.05,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 5.0,
+    "noise_risk": 1.2
+  },
+  "score": 63.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得继续观察：Evaluating Open-Weight LLMs for Generating Structured Threat Informati…",
+  "one_line_essence": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities（Erfan/Ryan/Chowdhury/Rahman）把 LLM 应用于一个具体且高价值的工程场景：把网联自动驾驶车辆（CAV）的 CVE 纯文本漏洞描述，自动转换为结构化威胁信息（受影响资产、弱点类型、攻击向量），供安全从业者直接消费。论文→理论层面，它是'LLM 做信息抽取/结构化'在安全领域的落地，核心问题是开源权重 LLM 能否可靠地从非结构化 CVE 文本生成准确的结构化威胁情报；工程实践层面，对任何用 LLM 做文档→结构化数据转换的 pipeline 都有参考（不止安全领域）：需评估不同开源模型的抽取准确率、幻觉率、对模糊描述的鲁棒性；趋势层面，LLM 驱动的安全运营自动化（威胁情报结构化、漏洞分类）是 2026 年安全治理的上升应用线。证据为评测实验自述（多个开源权重模型对比）。短板：无代码链接（待核验），评测的 CVE 样本规模、结构化输出的 schema 复杂度、与人工标注的一致性指标为待验项，且标注的 'agent' 关键词系泛化误标。归为趋势价值。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities（Erfan/Ryan/Chowdhury/Rahman）把 LLM 应用于一个具体且高价值的工程场景：把网联自动驾驶车辆（CAV）的 C",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle ",
+    "future_trigger": [
+      "出现多篇跟进论文、开源项目和工程博客共振"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.16175v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.16175v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+  "daily_path": "daily-detail.html?date=2026-07-21",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}
