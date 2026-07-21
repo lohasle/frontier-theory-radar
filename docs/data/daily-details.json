@@ -1,6 +1,279 @@
 {
-  "updated_at": "2026-07-21T04:39:34.973554",
+  "updated_at": "2026-07-22T04:34:05.735874",
   "dailies": {
+    "2026-07-22": {
+      "date": "2026-07-22",
+      "title": "论文价值发现日报 - 2026-07-22",
+      "deep_dive_id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+      "deep_dive_title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "decision": "重点学习",
+      "daily_action": "分两步：(1) 论文工程（最高优先级）——在自有 coding agent（SWE-agent/OpenHands/Aider 类）上评估 SWE-Pruner Pro 思路：选取 Agent 的某一 Transformer 层，训练轻量 head 读取 token 级隐层激活输出保留/剪枝概率，对 tool output 做注入前过滤，测 resolve rate 与 token 成本/延迟的变化。如果无自有训练环境，先做'离线分析'：收集 Agent 处理 SWE-bench 任务时的隐层激活与最终保留/剪除的 token 标签，验证隐层激活与剪枝决策的相关性。(2) 理论吸收——把 Vector Search as NN Matching 的因果视角转化为 RAG 检索质量评测的新维度草案：定义'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比），并列出实现该指标的最低成本路径。",
+      "score": 81.0,
+      "trend_stage": "emerging",
+      "one_line_judgement": "今天值得试：SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 c…",
+      "max_uncertainty": "今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未更新），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本、剪枝决策的精度-召回权衡、与不同基础模型（开源/闭源）的兼容性、对最终 resolve rate 的影响幅度为关键未知项；Patch Policy 的具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、真实机器人迁移鲁棒性为关键未知项；Vector Search as NN Matching 的理论框架在工程 RAG 中的可操作化路径、embedding 空间因果假设的可验证性为关键未知项；EoBs 测试的 LLM 范围与类型学维度完备性为关键未知项。元层不确定性：数据新鲜度已连续 2 天正常（07-21/07-22 均为 07-20 新批次），但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，下一个 arXiv 静默期仍可能复发。",
+      "conclusion_lines": [
+        "今天最值得看的是《SWE-Pruner Pro: The Coder LLM Already Knows What to Prune》。",
+        "它属于即时价值，因为同时具备较高的相关性与研究资产价值。",
+        "今天建议动作：分两步：(1) 论文工程（最高优先级）——在自有 coding agent（SWE-agent/OpenHands/Aider 类）上评估 SWE-Pruner Pro 思路：选取 Agent 的某一 Transformer 层，训练轻量 head 读取 token 级隐层激活输出保留/剪枝概率，对 tool output 做注入前过滤，测 resolve rate 与 token 成本/延迟的变化。如果无自有训练环境，先做'离线分析'：收集 Agent 处理 SWE-bench 任务时的隐层激活与最终保留/剪除的 token 标签，验证隐层激活与剪枝决策的相关性。(2) 理论吸收——把 Vector Search as NN Matching 的因果视角转化为 RAG 检索质量评测的新维度草案：定义'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比），并列出实现该指标的最低成本路径。。",
+        "最大不确定性：今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未更新），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本、剪枝决策的精度-召回权衡、与不同基础模型（开源/闭源）的兼容性、对最终 resolve rate 的影响幅度为关键未知项；Patch Policy 的具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、真实机器人迁移鲁棒性为关键未知项；Vector Search as NN Matching 的理论框架在工程 RAG 中的可操作化路径、embedding 空间因果假设的可验证性为关键未知项；EoBs 测试的 LLM 范围与类型学维度完备性为关键未知项。元层不确定性：数据新鲜度已连续 2 天正常（07-21/07-22 均为 07-20 新批次），但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，下一个 arXiv 静默期仍可能复发。。"
+      ],
+      "candidate_papers": [
+        {
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "direction": "未分类",
+          "value_type": "immediate",
+          "value_type_label": "即时价值",
+          "score": 81.0,
+          "decision": "重点学习",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 70.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": true
+        },
+        {
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 68.0,
+          "decision": "轻量试点",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        },
+        {
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "direction": "未分类",
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
+          "decision": "持续观察",
+          "has_code": false,
+          "has_benchmark": false,
+          "worth_deep_dive": false
+        }
+      ],
+      "deep_dive": {
+        "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+        "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+        "authors": [
+          "Yuhang Wang",
+          "Yuling Shi",
+          "Shaoqiu Zhang",
+          "Jialiang Liang",
+          "Shilin He"
+        ],
+        "source": "arXiv",
+        "published": "2026-07-20",
+        "url": "http://arxiv.org/abs/2607.18213v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.18213v1",
+        "code_url": "",
+        "benchmark_url": "",
+        "paperswithcode_url": "",
+        "openreview_url": "",
+        "first_seen_date": "2026-07-22",
+        "first_deep_dive_daily": "2026-07-22",
+        "value_type": "immediate",
+        "value_type_label": "即时价值",
+        "value_scores": {
+          "novelty": 4.8,
+          "relevance": 7.4,
+          "evidence": 4.5,
+          "engineering_testability": 4.05,
+          "trend_signal": 4.05,
+          "long_tail_potential": 3.5,
+          "actionability": 5.0,
+          "noise_risk": 1.2
+        },
+        "score": 81.0,
+        "decision": "重点学习",
+        "one_line_judgement": "今天值得试：SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 c…",
+        "one_line_essence": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench 类任务时，工具输出（文件浏览、搜索结果、测试日志）会快速膨胀上下文窗口，现有方法（如 SWE-Pruner）需挂载一个独立的代码分类器来判断哪些片段该保留，带来额外模型开销与维护成本。论文→理论层面，它提出一个关键洞察：'Agent 自身在阅读工具输出时已经编码了内部表征来指示代码上下文的相关性'——也就是说，判别'什么该剪'的信息已经存在于 Agent 的隐层激活中，不需要外部分类器。这把'上下文剪枝'从'外挂判别器'重构为'内生注意力路由'，实质是用模型已有的语义理解能力替代额外的标注/训练管线；工程实践层面，该方法可直接嵌入任何基于 LLM 的 coding agent 框架（SWE-agent/OpenHands/Aider 类）：在 Agent 的 Transformer 层上挂一个轻量 head，读取隐层激活输出 token 级别的保留/剪枝决策，在 tool output 注入主上下文前先做一次内省式过滤，从而在不加第二个模型的前提下压缩有效上下文、降低推理延迟与 token 成本；趋势层面，2026 年 coding agent 已成主力应用（SWE-bench 评测白热化），但'长上下文成本'正成为规模化瓶颈，'让 Agent 自省式管理上下文'是明确上升线。证据为方法设计与实验自述（在 SWE-bench 上验证），工程目标（内省式剪枝 vs 外挂分类器）清晰可验证。短板：无代码/benchmark 链接（待核验），轻量 head 的训练成本、剪枝决策的精度-召回权衡、与不同基础模型的兼容性、对最终 resolve rate 的影响幅度均为关键待验项。在今日数据中对编码 Agent 工程落地性最强，故评为即时价值。",
+        "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+        "new_claim_or_method": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench 类任务时，工具输出（文件浏览、搜索结果、测试日志）会快速膨胀上下文窗口，现有方法（如 SWE-Pruner）需挂载一个独立的代码分类器来判断哪些片段该保留，带来额外模型",
+        "research_position": "source_paper",
+        "engineering_testability": {
+          "has_code": false,
+          "has_benchmark": false,
+          "can_reproduce": false,
+          "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+          "engineering_scenarios": [
+            "AI Agent",
+            "Context Engineering",
+            "评测治理"
+          ]
+        },
+        "trend_relation": {
+          "status": "emerging",
+          "related_trends": [
+            "coding-agent",
+            "context-engineering"
+          ],
+          "evidence": [
+            "论文主题匹配固定研究方向"
+          ],
+          "uncertainties": [
+            "是否会出现更多开源实现与生产案例"
+          ]
+        },
+        "long_tail": {
+          "why_save": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench ",
+          "future_trigger": [
+            "待更多证据"
+          ],
+          "possible_use_cases": [
+            "Prompt 设计",
+            "Skill 草案",
+            "评测方法",
+            "架构模式"
+          ],
+          "reusable_assets": [
+            "Prompt",
+            "Skill",
+            "Checklist",
+            "模板"
+          ],
+          "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+          "revisit_date": ""
+        },
+        "insights": {
+          "system_design": [
+            "先判断价值类型，再决定系统性投入。"
+          ],
+          "agent_engineering": [
+            "为 Agent 建立论文价值路由器。"
+          ],
+          "dev_process": [
+            "论文输出应沉淀为可执行资产。"
+          ],
+          "evaluation": [
+            "同时看方法与证据质量。"
+          ],
+          "platform_engineering": [
+            "长尾资产库可降低重复检索成本。"
+          ],
+          "personal_learning": [
+            "优先读能转化为未来复利的论文。"
+          ]
+        },
+        "actions": {
+          "immediate_actions": [
+            "今天读摘要与方法",
+            "今天试最小实验",
+            "一周内沉淀为 Skill / Checklist"
+          ],
+          "trend_actions": [],
+          "long_tail_actions": [],
+          "ignore_reason": ""
+        },
+        "references": [
+          {
+            "label": "arXiv",
+            "url": "http://arxiv.org/abs/2607.18213v1"
+          },
+          {
+            "label": "PDF",
+            "url": "https://arxiv.org/pdf/2607.18213v1"
+          }
+        ],
+        "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+        "daily_path": "daily-detail.html?date=2026-07-22",
+        "trend_paths": [
+          "trend-detail.html?id=coding-agent",
+          "trend-detail.html?id=context-engineering"
+        ],
+        "long_tail_path": "long-tail.html",
+        "mermaid": {
+          "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+          "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+          "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+        }
+      },
+      "long_tail_saved": [],
+      "ignore_reasons": [
+        "暂无明确忽略样本，但忽略标准仍需保留。"
+      ],
+      "insights": {
+        "system_design": [
+          "先做价值路由，再决定是否深入工程推导。"
+        ],
+        "agent_engineering": [
+          "让 Agent 先判断“今天值不值得试”。"
+        ],
+        "dev_process": [
+          "论文筛选应产出 Prompt / Skill / Checklist。"
+        ],
+        "evaluation": [
+          "把“是否值得投入”也纳入评测流程。"
+        ],
+        "platform_engineering": [
+          "长尾库是低成本知识保留层。"
+        ],
+        "personal_learning": [
+          "优先读可沉淀资产的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "30 分钟学习",
+          "2 小时实践",
+          "1 周研究"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.18213v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.18213v1"
+        }
+      ],
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      },
+      "raw_markdown_html": "<h2>论文价值发现日报 - 2026-07-22</h2>\n<p>> 从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。</p>\n<p>> ⚠️ <strong>注意：这是初始化样例，后续运行会替换为真实数据。</strong></p>\n<h3>1. 标题区</h3>\n<ul>\n<li><strong>今日最值得关注论文：</strong> <a href=\"http://arxiv.org/abs/2607.18213v1\" target=\"_blank\" rel=\"noopener noreferrer\">SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</a></li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>今日建议动作：</strong> 分两步：(1) 论文工程（最高优先级）——在自有 coding agent（SWE-agent/OpenHands/Aider 类）上评估 SWE-Pruner Pro 思路：选取 Agent 的某一 Transformer 层，训练轻量 head 读取 token 级隐层激活输出保留/剪枝概率，对 tool output 做注入前过滤，测 resolve rate 与 token 成本/延迟的变化。如果无自有训练环境，先做'离线分析'：收集 Agent 处理 SWE-bench 任务时的隐层激活与最终保留/剪除的 token 标签，验证隐层激活与剪枝决策的相关性。(2) 理论吸收——把 Vector Search as NN Matching 的因果视角转化为 RAG 检索质量评测的新维度草案：定义'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比），并列出实现该指标的最低成本路径。</li>\n<li><strong>分数：</strong> 81.0</li>\n<li><strong>趋势阶段：</strong> 萌芽</li>\n</ul>\n<h3>2. 先说结论</h3>\n<ul>\n<li><strong>今天最值得看什么：</strong> 顶信号是 <a href=\"http://arxiv.org/abs/2607.18213v1\" target=\"_blank\" rel=\"noopener noreferrer\">SWE-Pruner Pro</a>（编码 Agent 内省式上下文剪枝：不外挂分类器，直接用 Agent 自身隐层激活判别工具输出中哪些代码上下文该保留/剪枝）与 <a href=\"http://arxiv.org/abs/2607.18236v1\" target=\"_blank\" rel=\"noopener noreferrer\">Patch Policy</a>（LeCun 参与，在密集 ViT patch 特征上直接做机器人策略学习，兼顾空间粒度与推理效率）。理论侧最强信号是 <a href=\"http://arxiv.org/abs/2607.18225v1\" target=\"_blank\" rel=\"noopener noreferrer\">Vector Search As Nearest Neighbor Matching</a>，它用因果推断的势结果框架严格刻画 RAG 的动作选择机制，把'向量检索'等价为'因果最近邻匹配'。</li>\n<li><strong>为什么值得看：</strong> SWE-Pruner Pro 直击 coding agent 规模化最痛的上下文成本问题——它的核心洞察是'Agent 自己已经知道什么该剪'，只需在隐层挂一个轻量 head 做内省式过滤，就能在不增加第二个模型的前提下压缩有效上下文、降延迟、降 token 成本。这是任何运行 SWE-agent/OpenHands/Aider 类系统的人都可借鉴的工程模式。Vector Search as NN Matching 则为 RAG 系统引入了因果视角：检索到的'邻居'在什么条件下才是有效的反事实证据？</li>\n<li><strong>它属于什么价值类型：</strong> SWE-Pruner Pro 为即时价值（immediate，落地路径清晰）；Patch Policy 与 Vector Search as NN Matching 为趋势价值（trend）；EoBs LLM 评测与多维视觉相似性度量为趋势价值（评测方法论上升线）。</li>\n<li><strong>今天该做什么：</strong> (1) 论文工程——评估 SWE-Pruner Pro 的'内省式剪枝'思路能否集成到自有 coding agent：在 Agent 的 Transformer 层挂轻量 head 读取隐层激活，对 tool output 做 token 级保留/剪枝，测 resolve rate 与 token 成本的变化。(2) 理论吸收——把 RAG-as-causal-matching 的因果视角转化为 RAG 检索质量的新评测维度（检索邻居的因果可比性）。</li>\n<li><strong>最大不确定性：</strong> 今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未出现开源资产），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本与精度-召回权衡、Patch Policy 的模型规模与推理延迟、Vector Search as NN Matching 的理论框架工程化路径均为关键待验项。</li>\n</ul>\n<h3>3. 今日候选论文表</h3>\n<div class=\"table-wrapper\"><table><tbody>\n<tr><td>论文标题</td><td>方向</td><td>价值类型</td><td>分数</td><td>判断</td><td>是否有代码</td><td>是否有 Benchmark</td><td>是否值得深挖</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.18213v1\" target=\"_blank\" rel=\"noopener noreferrer\">SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</a></td><td>coding-agent / context-engineering</td><td>即时价值</td><td>81.0</td><td>重点学习</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.18236v1\" target=\"_blank\" rel=\"noopener noreferrer\">Patch Policy: Efficient Embodied Control via Dense Visual Representations</a></td><td>multimodal-agent / inference-serving</td><td>趋势价值</td><td>73.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.18225v1\" target=\"_blank\" rel=\"noopener noreferrer\">Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference</a></td><td>rag-knowledge / llm-evaluation</td><td>趋势价值</td><td>70.0</td><td>轻量试点</td><td>否</td><td>否</td><td>是</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.18232v1\" target=\"_blank\" rel=\"noopener noreferrer\">It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief</a></td><td>llm-evaluation / security-governance</td><td>趋势价值</td><td>68.0</td><td>轻量试点</td><td>否</td><td>否</td><td>否</td></tr>\n<tr><td><a href=\"http://arxiv.org/abs/2607.18237v1\" target=\"_blank\" rel=\"noopener noreferrer\">The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric</a></td><td>llm-evaluation / multimodal-agent</td><td>趋势价值</td><td>64.0</td><td>持续观察</td><td>否</td><td>否</td><td>否</td></tr>\n</tbody></table></div>\n<h3>4. 今日深挖论文</h3>\n<ul>\n<li><strong>一句话本质：</strong> 今天最重要的信号是编码 Agent 的上下文管理正从'外挂判别器'转向'内生注意力路由'——SWE-Pruner Pro 证明 Agent 自身的隐层激活已经编码了'哪些代码上下文该保留'的判别信息，只需一个轻量 head 就能提取并应用，无需额外分类器。辅以 RAG 与因果推断的理论桥接（向量检索 = 因果最近邻匹配）、具身控制的高效密集表征（Patch Policy, LeCun）。</li>\n<li><strong>底层问题：</strong> (1) 编码 Agent 在处理 SWE-bench 类任务时，长上下文如何在不牺牲 resolve rate 的前提下被高效压缩？能否用模型自身的语义理解替代外挂剪枝器？(2) RAG 系统中，向量检索到的'邻居'在什么因果条件下才能作为有效的反事实证据？检索相似度与因果可比性之间是什么关系？(3) 机器人学习中，如何在使用预训练 ViT 密集特征的同时保持策略推理效率？(4) LLM 对用户信念的语言形式偏差（预设/证据标记/语气）如何系统化评测与防御？</li>\n<li><strong>新命题 / 新方法 / 新证据：</strong> 本批最强信号是四类方向同时出现：编码 Agent 内省式上下文剪枝（SWE-Pruner Pro：用 Agent 自身隐层激活替代外挂代码分类器，token 级保留/剪枝决策）、RAG 的因果推断形式化（Vector Search as NN Matching：向量检索 ≡ 势结果框架下的最近邻匹配，一步法与两步法）、具身控制的轻量密集表征策略（Patch Policy：直接在 patch 特征上做策略学习，LeCun 参与）、LLM 信念更新的语言类型学评测（EoBs：不同语言形式对 LLM 说服力的系统差异）。辅以多维条件化视觉感知度量（Many Senses of Visual Similarity：文本提示条件化的多维度相似性）、自动发现系统的统计严谨性批评（No Universally Superior Harness）、逻辑推理的 soft-prefix 脆弱性探针。</li>\n<li><strong>研究位置：</strong> SWE-Pruner Pro 处于方法设计→工程集成期，工程目标清晰（内省式剪枝 vs 外挂分类器）但无开源代码验证（immediate，待落地验证）；Patch Policy 处于方法验证期，密集表征思路新颖但效率-性能权衡待量化（trend）；Vector Search as NN Matching 处于理论框架期，数学严格但工程可操作化需转化（trend）；EoBs 处于 benchmark 定义期，语言类型学方法论清晰但测试范围待核验（trend）；多维视觉相似性度量处于数据集+方法期（trend）；其余 5 篇为方法论长尾或垂直领域噪声。截至今日全部 10 篇无代码资产可核验。</li>\n<li><strong>工程可验证性：</strong> SWE-Pruner Pro 可立即在自有 coding agent 上做原型：在 Agent 的某一 Transformer 层上训练轻量线性/small MLP head，读取 token 级隐层激活输出保留/剪枝概率，对 tool output（文件内容、搜索结果、测试日志）做注入前过滤，测 resolve rate 与 token 成本变化；Vector Search as NN Matching 的因果视角可启发在 RAG 评测中增加'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比）；Patch Policy 的密集 patch 思路可启发在多模态空间推理任务上对比全局 token vs patch 特征的信息保留差异。均需自行搭建验证环境。</li>\n<li><strong>趋势关联：</strong> SWE-Pruner Pro→coding-agent-introspective-context-pruning + agent-self-attention-routing；Patch Policy→embodied-efficient-dense-representation + lightweight-vla；Vector Search as NN Matching→rag-causal-validity + retrieval-as-counterfactual-evidence；EoBs→llm-linguistic-bias-evaluation + belief-update-robustness；Many Senses→multidimensional-perceptual-metric。另维持 radar-engineering（fetch-date-filtering + cross-day-dedup）观察线——前 3 天暴露的抓取缺陷虽已恢复但底层修复仍建议落地。</li>\n</ul>\n<h3>5. 今日长尾保存</h3>\n<h4><a href=\"http://arxiv.org/abs/2607.18235v1\" target=\"_blank\" rel=\"noopener noreferrer\">Automated Discovery Has No Universally Superior Harness</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发现系统（OpenEvolve、TTT-Discover 等）提出方法论批评：这些系统本质上是多种设计选择（档案、父代选择、探索策略、预算分配）的组合配方，但由于发现运行昂贵且内在随机，现有比较往往用太少独立试验无法区分真实改进与运行间方差。论文→理论层面，它把'自动化发现的评测方法论'本身作为研究对象，强调统计严谨性（需要足够独立试验、方差分解）才能区分方法论改进与噪声；工程实践层面，对任何做 ML 系统评测（不止自动发现）的团队有方法论启发：当系统运行昂贵且随机时，应做足够的独立重复实验并报告方差/置信区间，而非依赖单次运行的'改进'；趋势层面，ML 评测的方法论严谨性正受到更多审视。证据为系统性方差分析框架。短板：无代码链接（待核验），具体方差分析结果、推荐的试验数量、对现有 harness 的排名修正幅度为待验项。方法论启发价值大于直接复用，归为长尾保存。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-08-12</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2607.18228v1\" target=\"_blank\" rel=\"noopener noreferrer\">Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理 benchmark 上预置不透明的连续向量前缀，保持模型参数不变，观察哪些前缀能诱导错误判断以及其效果如何泛化。论文→理论层面，它把'学习的上下文压力能否覆盖正确逻辑判断'作为探针，揭示 LLM 逻辑推理的脆弱性——不透明的连续向量可以系统性地翻转模型在形式逻辑任务上的正确性；工程实践层面，对 LLM 可靠性/安全测试有参考：soft prefix 攻击是一种白盒威胁模型（需要访问模型梯度），但它揭示的'逻辑判断可被学习的上下文压力操纵'这一现象对理解 LLM 的推理鲁棒性有诊断价值；趋势层面，LLM 推理鲁棒性探针是安全评测的细分方向。证据为受控实验设计。短板：无代码链接（待核验），soft prefix 的构造方法、攻击成功率、在更大模型上的效果、防御策略为待验项。方法论启发有价值但偏研究探索，归为长尾保存。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-08-12</li>\n</ul>\n<h4><a href=\"http://arxiv.org/abs/2607.18230v1\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs</a></h4>\n<ul>\n<li><strong>为什么现在不火也值得保存：</strong> Simple Domain Generalization for Pixel-Level Image Tampering Detection（Tang/Shang/Cui/Bsharat/Liu）研究现代 VLM（ChatGPT/Gemini/Qwen-Image 等）生成图像的像素级篡改检测，目标是让检测模型在跨 VLM 生成分布和分布外迁移下保持鲁棒。论文→理论层面，它把'AI 生成图像检测'从二分类问题推进到域泛化问题——不同 VLM 生成的篡改痕迹分布不同，检测器需要在未见过的 VLM 上保持泛化；工程实践层面，对内容安全/审核 pipeline 有参考：若需要检测 AI 生成/编辑图像，应评估检测器的跨模型泛化能力而非只在单一生成器上测试；趋势层面，AI 内容溯源与检测是安全治理的持续方向。证据为域泛化实验设计。短板：无代码链接（待核验），具体的域泛化方法、测试的 VLM 范围、跨模型检测准确率为待验项。标注的 'RAG' 关键词系误标。领域（CV 安全）与团队主线交集有限，归为长尾保存。</li>\n<li><strong>未来触发条件：</strong> 出现开源实现 / 被高质量论文引用 / 进入 benchmark。</li>\n<li><strong>可能应用场景：</strong> Prompt 设计、Agent workflow、评测治理、系统设计。</li>\n<li><strong>可沉淀资产：</strong> Prompt / Skill / Checklist / 架构模式 / 评测方法。</li>\n<li><strong>建议复盘时间：</strong> 2026-08-12</li>\n</ul>\n<h3>6. 今日忽略理由</h3>\n<ul>\n<li><a href=\"http://arxiv.org/abs/2607.18226v1\" target=\"_blank\" rel=\"noopener noreferrer\">Causal Discovery on Irregular Time Series</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n<li><a href=\"http://arxiv.org/abs/2607.18218v1\" target=\"_blank\" rel=\"noopener noreferrer\">GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis</a>：新意弱 / 证据弱 / 当前相关性有限。</li>\n</ul>\n<h3>7. 启发</h3>\n<h4>对编码 Agent 工程的启发</h4>\n<p>SWE-Pruner Pro 揭示了一个被忽视的工程洞察：'Agent 自己已经知道什么该剪'。现有上下文管理（SWE-Pruner 等）外挂独立分类器来判断代码上下文相关性，但这等于让'第二个模型'去理解'第一个模型'已经理解的东西。内省式剪枝——直接从 Agent 隐层激活提取保留/剪枝信号——是更自然的架构：判别信息已在模型内部，只需一个轻量 head 来读取和应用。这种'用模型自身能力替代外挂组件'的模式可迁移到更多 Agent 工程场景（如自省式路由、自省式工具选择）。</p>\n<h4>对 RAG 系统设计的启发</h4>\n<p>Vector Search as NN Matching 把 RAG 从工程启发式提升为有因果识别假设的统计方法。核心启示：检索到的'邻居'向量相似度高，不等于它们在因果意义上是有效的反事实证据。RAG 系统的检索质量评估不应只看向量相似度排名，还应引入'因果可比性'维度——检索到的样本在协变量分布上是否与当前查询可比？这为 RAG 的幻觉率问题提供了因果层面的解释路径。</p>\n<h4>对具身 Agent 的启发</h4>\n<p>Patch Policy 指出预训练 ViT 的密集 patch 特征在机器人策略中被系统性低效利用：要么压缩为全局 token（丢空间细节），要么从头训练（浪费预训练）。在密集 patch 特征上直接做策略学习是一种'保留信息粒度 + 利用预训练'的中间路线。对任何需要空间推理的多模态 Agent，应评估'全局表征 vs 密集表征'在自有任务上的信息保留-效率权衡。</p>\n<h4>对 LLM 安全评测的启发</h4>\n<p>EoBs 揭示 LLM 的信念更新行为存在系统的语言形式偏差：不同语言形式（预设 vs 显式断言、强 vs 弱确定性标记、不同语气）对 LLM 的说服力不同。这意味着 LLM 在预设句式下可能更容易接受错误信念——这是一种语言形式的 prompt injection。Agent 安全测试应覆盖语言学类型学维度，而非只测对抗样本。</p>\n<h4>对评测方法论的启发</h4>\n<p>Automated Discovery Has No Universally Superior Harness 提醒：当系统运行昂贵且内在随机时，'单次运行的改进'可能是噪声。ML 系统评测应做足够的独立重复实验并报告方差/置信区间。多维视觉相似性度量则启示：单一标量评估指标会掩盖多维度差异，应考虑条件化、多维度的评估框架。</p>\n<h4>对个人学习路径的启发</h4>\n<p>本批为新论文（2026-07-20 发布），值得精读。阅读顺序：先 SWE-Pruner Pro（最 immediate，编码 Agent 工程）、再 Vector Search as NN Matching（理论深读，RAG 因果视角）、然后 Patch Policy（具身高效表征）、EoBs（安全评测方法论）、最后按兴趣浏览多维视觉相似性与自动发现统计批评。其余 2 篇为垂直领域噪声，可跳过。</p>\n<h3>8. 行动建议</h3>\n<ul>\n<li><strong>30 分钟学习任务：</strong> 读摘要、方法、实验设定，记下 3 个可验证假设。</li>\n<li><strong>2 小时实践任务：</strong> 做最小实验、Prompt 试验或评测脚本草图。</li>\n<li><strong>1 周研究任务：</strong> 沉淀为 Prompt / Skill / Checklist / 模板，并跟踪复现结果。</li>\n</ul>\n<h3>9. 引用与延伸阅读</h3>\n<ul>\n<li><strong>arXiv：</strong> <a href=\"http://arxiv.org/abs/2607.18213v1\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv</a></li>\n<li><strong>PDF：</strong> <a href=\"https://arxiv.org/pdf/2607.18213v1\" target=\"_blank\" rel=\"noopener noreferrer\">PDF</a></li>\n<li><strong>OpenReview：</strong> 暂无</li>\n<li><strong>Code：</strong> 暂无</li>\n<li><strong>Benchmark：</strong> 暂无</li>\n<li><strong>Papers with Code：</strong> 暂无</li>\n</ul>\n<h3>10. 最终结论</h3>\n<ul>\n<li><strong>结论：</strong> 重点学习</li>\n<li><strong>价值类型：</strong> 即时价值</li>\n<li><strong>原因：</strong> SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench 类任务时，工具输出（文件浏览、搜索结果、测试日志）会快速膨胀上下文窗口，现有方法（如 SWE-Pruner）需挂载一个独立的代码分类器来判断哪些片段该保留，带来额外模型开销与维护成本。论文→理论层面，它提出一个关键洞察：'Agent 自身在阅读工具输出时已经编码了内部表征来指示代码上下文的相关性'——也就是说，判别'什么该剪'的信息已经存在于 Agent 的隐层激活中，不需要外部分类器。这把'上下文剪枝'从'外挂判别器'重构为'内生注意力路由'，实质是用模型已有的语义理解能力替代额外的标注/训练管线；工程实践层面，该方法可直接嵌入任何基于 LLM 的 coding agent 框架（SWE-agent/OpenHands/Aider 类）：在 Agent 的 Transformer 层上挂一个轻量 head，读取隐层激活输出 token 级别的保留/剪枝决策，在 tool output 注入主上下文前先做一次内省式过滤，从而在不加第二个模型的前提下压缩有效上下文、降低推理延迟与 token 成本；趋势层面，2026 年 coding agent 已成主力应用（SWE-bench 评测白热化），但'长上下文成本'正成为规模化瓶颈，'让 Agent 自省式管理上下文'是明确上升线。证据为方法设计与实验自述（在 SWE-bench 上验证），工程目标（内省式剪枝 vs 外挂分类器）清晰可验证。短板：无代码/benchmark 链接（待核验），轻量 head 的训练成本、剪枝决策的精度-召回权衡、与不同基础模型的兼容性、对最终 resolve rate 的影响幅度均为关键待验项。在今日数据中对编码 Agent 工程落地性最强，故评为即时价值。</li>\n<li><strong>最大不确定性：</strong> 今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未更新），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本、剪枝决策的精度-召回权衡、与不同基础模型（开源/闭源）的兼容性、对最终 resolve rate 的影响幅度为关键未知项；Patch Policy 的具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、真实机器人迁移鲁棒性为关键未知项；Vector Search as NN Matching 的理论框架在工程 RAG 中的可操作化路径、embedding 空间因果假设的可验证性为关键未知项；EoBs 测试的 LLM 范围与类型学维度完备性为关键未知项。元层不确定性：数据新鲜度已连续 2 天正常（07-21/07-22 均为 07-20 新批次），但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，下一个 arXiv 静默期仍可能复发。</li>\n<li><strong>下一步动作：</strong> (1) 本周内完成 SWE-Pruner Pro 内省式剪枝的最小原型验证（离线相关性分析优先，在线原型其次）。(2) 起草 RAG 检索因果可比性评测指标草案，待 Vector Search as NN Matching 开源后细化。(3) 关注 Patch Policy 是否开源代码与 benchmark，若开源则评估密集 patch 特征在自有多模态任务上的信息保留-效率权衡。(4) 在 LLM 安全测试中增加 EoBs 语言形式偏差维度（测试 Agent 在预设/证据标记/不同语气下信念更新的一致性）。(5) 维持 radar-engineering（fetch-date-filtering + cross-day-dedup）防御性改进线。(6) 14 天后复盘 SWE-Pruner Pro 原型结果与 RAG 因果可比性指标草案。</li>\n</ul>\n<p>> 生成时间：2026-07-22T04:34:04.181903</p>\n<p>> 数据来源：arXiv API + 固定源配置</p>\n<p>> 状态：Hermes 推理增强</p>"
+    },
     "2026-07-21": {
       "date": "2026-07-21",
       "title": "论文价值发现日报 - 2026-07-21",
@@ -584,65 +857,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -783,28 +1056,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-08-09"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -876,65 +1128,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -1075,28 +1327,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-08-08"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -1989,65 +2220,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -2190,28 +2421,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-08-02"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -2283,65 +2493,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -2484,28 +2694,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-08-01"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -3142,65 +3331,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -3343,28 +3532,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-27"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -3436,65 +3604,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -3635,28 +3803,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-26"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -4543,65 +4690,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -4744,28 +4891,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-19"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -4837,65 +4963,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -5038,28 +5164,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-18"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -6259,65 +6364,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -6454,28 +6559,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-13"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -6547,65 +6631,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -6748,28 +6832,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-12"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -6841,65 +6904,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -7036,28 +7099,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-11"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -7859,65 +7901,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -8062,28 +8104,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-07-04"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -9494,65 +9515,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -9689,28 +9710,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-28"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -9782,65 +9782,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -9982,28 +9982,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-27"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -10636,65 +10615,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -10812,28 +10791,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-23"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -11177,65 +11135,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -11353,28 +11311,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-21"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -11433,65 +11370,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -11629,28 +11566,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-20"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -16149,65 +16065,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -16325,28 +16241,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-02"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -16405,65 +16300,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -16581,28 +16476,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-06-01"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -18373,65 +18247,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -18569,28 +18443,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-05-25"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -18662,65 +18515,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -18860,28 +18713,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-05-24"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],
@@ -19375,65 +19207,65 @@
       ],
       "candidate_papers": [
         {
-          "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
-          "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-          "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+          "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+          "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+          "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
           "direction": "未分类",
           "value_type": "immediate",
           "value_type_label": "即时价值",
-          "score": 82.0,
+          "score": 81.0,
           "decision": "重点学习",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "when-does-muon-help-agentic-reinforcement-learning",
-          "title": "When Does Muon Help Agentic Reinforcement Learning?",
-          "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning",
+          "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+          "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+          "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
           "direction": "未分类",
-          "value_type": "immediate",
-          "value_type_label": "即时价值",
-          "score": 79.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 73.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "an-exam-for-active-observers",
-          "title": "An Exam for Active Observers",
-          "detail_path": "paper-detail.html?id=an-exam-for-active-observers",
+          "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+          "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+          "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 74.0,
+          "score": 70.0,
           "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": true
         },
         {
-          "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-          "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-          "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
+          "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+          "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+          "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
           "direction": "未分类",
           "value_type": "trend",
           "value_type_label": "趋势价值",
-          "score": 63.0,
-          "decision": "持续观察",
+          "score": 68.0,
+          "decision": "轻量试点",
           "has_code": false,
           "has_benchmark": false,
           "worth_deep_dive": false
         },
         {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+          "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+          "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+          "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
           "direction": "未分类",
-          "value_type": "long_tail",
-          "value_type_label": "长尾价值",
-          "score": 54.0,
+          "value_type": "trend",
+          "value_type_label": "趋势价值",
+          "score": 64.0,
           "decision": "持续观察",
           "has_code": false,
           "has_benchmark": false,
@@ -19569,28 +19401,7 @@
           "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
         }
       },
-      "long_tail_saved": [
-        {
-          "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-          "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-          "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
-          "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-          "possible_use_cases": [
-            "Prompt 设计",
-            "Skill 草案",
-            "评测方法",
-            "架构模式"
-          ],
-          "reusable_assets": [
-            "Prompt",
-            "Skill",
-            "Checklist",
-            "评测方法"
-          ],
-          "revisit_date": "2026-05-21"
-        }
-      ],
+      "long_tail_saved": [],
       "ignore_reasons": [
         "暂无明确忽略样本，但忽略标准仍需保留。"
       ],

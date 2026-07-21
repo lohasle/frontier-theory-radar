@@ -1,0 +1,134 @@
+{
+  "id": "automated-discovery-has-no-universally-superior-harness",
+  "title": "Automated Discovery Has No Universally Superior Harness",
+  "authors": [
+    "Akshat Gupta",
+    "Jermaine Lei",
+    "Alexander Lu",
+    "Gopala Anumanchipalli",
+    "Leshem Choshen"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-20",
+  "url": "http://arxiv.org/abs/2607.18235v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.18235v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-22",
+  "first_deep_dive_daily": "2026-07-22",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 3.8,
+    "evidence": 4.5,
+    "engineering_testability": 4.05,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 5.0,
+    "noise_risk": 2.4
+  },
+  "score": 58.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得先保存：Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/A…",
+  "one_line_essence": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发现系统（OpenEvolve、TTT-Discover 等）提出方法论批评：这些系统本质上是多种设计选择（档案、父代选择、探索策略、预算分配）的组合配方，但由于发现运行昂贵且内在随机，现有比较往往用太少独立试验无法区分真实改进与运行间方差。论文→理论层面，它把'自动化发现的评测方法论'本身作为研究对象，强调统计严谨性（需要足够独立试验、方差分解）才能区分方法论改进与噪声；工程实践层面，对任何做 ML 系统评测（不止自动发现）的团队有方法论启发：当系统运行昂贵且随机时，应做足够的独立重复实验并报告方差/置信区间，而非依赖单次运行的'改进'；趋势层面，ML 评测的方法论严谨性正受到更多审视。证据为系统性方差分析框架。短板：无代码链接（待核验），具体方差分析结果、推荐的试验数量、对现有 harness 的排名修正幅度为待验项。方法论启发价值大于直接复用，归为长尾保存。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发现系统（OpenEvolve、TTT-Discover 等）提出方法论批评：这些系统本质上是多种设计选择（档案、父代选择、探索策略、预算分配）的组合配方，但由于发现运行",
+  "research_position": "long_tail_insight",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "long_tail_watch",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发",
+    "future_trigger": [
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": "2026-08-12"
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [],
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
+    ],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.18235v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.18235v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=automated-discovery-has-no-universally-superior-harness",
+  "daily_path": "daily-detail.html?date=2026-07-22",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

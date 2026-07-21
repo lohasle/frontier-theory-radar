@@ -1,0 +1,133 @@
+{
+  "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+  "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+  "authors": [
+    "Kevin Du",
+    "Clara Kümpel",
+    "Michelle Wastl",
+    "Alex Warstadt"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-20",
+  "url": "http://arxiv.org/abs/2607.18232v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.18232v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-22",
+  "first_deep_dive_daily": "2026-07-22",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 5.0,
+    "evidence": 4.5,
+    "engineering_testability": 4.05,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 5.0,
+    "noise_risk": 1.2
+  },
+  "score": 68.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统…",
+  "one_line_essence": "It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统化评测 LLM 对'用户信念表达'（Expressions of Belief, EoBs）的响应行为——用户用预设、证据标记、确定性标记、不同语气等语言形式向 LLM 表达信念时，LLM 何时该接受、何时该坚持自己的先验知识。论文→理论层面，它把'LLM 是否被用户说服'从二元问题重构为语言学类型学问题：不同语言形式（预设 vs 显式断言、强确定性 vs 弱确定性、正式 vs 非正式语气）对 LLM 的说服力不同，这意味着 LLM 的信念更新行为存在系统的语言形式偏差；工程实践层面，对任何构建对话 Agent / 助手的团队有直接安全启示：应测试系统在不同语言形式的用户信念输入下是否表现一致——如果 Agent 在预设句式下更容易接受错误信念（相当于一种语言形式的 prompt injection），这是一个安全漏洞；趋势层面，LLM 对齐/鲁棒性评测正从'对抗样本'走向'语言学系统偏差'，2026 年是细粒度对齐评测方法论上升期。证据为评测类型学设计与 benchmark 构建。短板：无代码链接（待核验），测试的 LLM 范围、类型学维度的完备性、人类基线表现为待验项。方法论价值高且安全相关，评为趋势价值。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统化评测 LLM 对'用户信念表达'（Expressions of Belief, EoBs）的响应行为——用户用预设、证据标记、确定性标记、不同语气等语言形式向 LLM 表达信念时，LLM 何时该接受、何时该坚持自己的先",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统化评测 LLM 对'用户信念表达'（Expressi",
+    "future_trigger": [
+      "出现多篇跟进论文、开源项目和工程博客共振"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.18232v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.18232v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+  "daily_path": "daily-detail.html?date=2026-07-22",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

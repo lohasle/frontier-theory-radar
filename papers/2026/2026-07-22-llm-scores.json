@@ -1,0 +1,64 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2607.18213v1": {
+      "score": 81,
+      "value_type": "immediate",
+      "reason": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench 类任务时，工具输出（文件浏览、搜索结果、测试日志）会快速膨胀上下文窗口，现有方法（如 SWE-Pruner）需挂载一个独立的代码分类器来判断哪些片段该保留，带来额外模型开销与维护成本。论文→理论层面，它提出一个关键洞察：'Agent 自身在阅读工具输出时已经编码了内部表征来指示代码上下文的相关性'——也就是说，判别'什么该剪'的信息已经存在于 Agent 的隐层激活中，不需要外部分类器。这把'上下文剪枝'从'外挂判别器'重构为'内生注意力路由'，实质是用模型已有的语义理解能力替代额外的标注/训练管线；工程实践层面，该方法可直接嵌入任何基于 LLM 的 coding agent 框架（SWE-agent/OpenHands/Aider 类）：在 Agent 的 Transformer 层上挂一个轻量 head，读取隐层激活输出 token 级别的保留/剪枝决策，在 tool output 注入主上下文前先做一次内省式过滤，从而在不加第二个模型的前提下压缩有效上下文、降低推理延迟与 token 成本；趋势层面，2026 年 coding agent 已成主力应用（SWE-bench 评测白热化），但'长上下文成本'正成为规模化瓶颈，'让 Agent 自省式管理上下文'是明确上升线。证据为方法设计与实验自述（在 SWE-bench 上验证），工程目标（内省式剪枝 vs 外挂分类器）清晰可验证。短板：无代码/benchmark 链接（待核验），轻量 head 的训练成本、剪枝决策的精度-召回权衡、与不同基础模型的兼容性、对最终 resolve rate 的影响幅度均为关键待验项。在今日数据中对编码 Agent 工程落地性最强，故评为即时价值。",
+      "matched_topics": ["coding-agent", "context-engineering", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.18236v1": {
+      "score": 73,
+      "value_type": "trend",
+      "reason": "Patch Policy（Zhou/Cui/Langford/Tan/LeCun，含 Yann LeCun）指出机器人学习中长期被忽视的工程矛盾：预训练 ViT 的密集 patch 特征功能强大却在 robot policy 中被低效利用——现代 robot policy 要么把每帧观测压缩成单个全局 token（丢失空间细节），要么从头训练视觉骨干（浪费大规模预训练收益），而使用密集 patch 特征的方案（如大型 VLA 模型）又过重过慢。论文→理论层面，它提出在密集 patch 特征上直接做策略学习（而非先压缩再决策），把'保留空间粒度'与'保持推理效率'同时作为设计目标；工程实践层面，对任何做具身 Agent / 多模态推理的团队有参考：若需要让 Agent 基于视觉做空间决策（不只是'看到了什么'而是'在哪里'），应评估密集 patch 特征 vs 全局 token 在自有任务上的信息保留-效率权衡；趋势层面，2026 年具身智能/VLA 模型是明确上升方向，但'重 VLA vs 轻 policy'的效率矛盾仍未解决，Patch Policy 代表'轻量化密集表征'的探索线。证据为方法设计自述。短板：无代码/benchmark 链接（待核验），具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、迁移到真实机器人的鲁棒性为待验项。方法论价值高但需等待资产开源验证，评为趋势价值。",
+      "matched_topics": ["multimodal-agent", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.18225v1": {
+      "score": 70,
+      "value_type": "trend",
+      "reason": "Vector Search As Nearest Neighbor Matching（Kato/Kato）在 RAG 与因果推断之间建立了一个理论桥梁：它把 RAG 的'向量检索 + 生成器估计'形式化为潜在结果框架下的策略学习问题，证明 RAG 中的 action-specific 向量搜索等价于因果推断中的最近邻匹配。论文→理论层面，这是首次用因果推断的势结果框架严格刻画 RAG 的动作选择机制，把'检索增强'从工程启发式提升为有识别假设的统计方法——检索到的'邻居'在什么条件下可以作为有效的反事实证据？这直接关联到 RAG 系统中检索质量与生成可靠性的因果关系；工程实践层面，对任何构建 RAG 系统的团队有方法论启发：检索结果的相关性不应只看向量相似度，还应考虑'检索邻居作为因果证据的有效性'（即检索到的样本是否在因果意义上与当前查询可比），这为 RAG 的检索质量评估提供了因果视角的新指标；趋势层面，RAG 工程化正从'能检索'走向'检索结果的因果有效性'，2026 年是 RAG 可靠性方法论深化的关键期。证据为理论框架推导（一步法与两步法），数学严格性高。短板：无代码链接（待核验），理论框架在工程 RAG 系统中的可操作化路径、embedding 空间的因果假设可验证性、与现有 RAG 评测方法的对比为待验项。理论贡献突出但工程落地需转化，评为趋势价值。",
+      "matched_topics": ["rag-knowledge", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.18232v1": {
+      "score": 68,
+      "value_type": "trend",
+      "reason": "It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统化评测 LLM 对'用户信念表达'（Expressions of Belief, EoBs）的响应行为——用户用预设、证据标记、确定性标记、不同语气等语言形式向 LLM 表达信念时，LLM 何时该接受、何时该坚持自己的先验知识。论文→理论层面，它把'LLM 是否被用户说服'从二元问题重构为语言学类型学问题：不同语言形式（预设 vs 显式断言、强确定性 vs 弱确定性、正式 vs 非正式语气）对 LLM 的说服力不同，这意味着 LLM 的信念更新行为存在系统的语言形式偏差；工程实践层面，对任何构建对话 Agent / 助手的团队有直接安全启示：应测试系统在不同语言形式的用户信念输入下是否表现一致——如果 Agent 在预设句式下更容易接受错误信念（相当于一种语言形式的 prompt injection），这是一个安全漏洞；趋势层面，LLM 对齐/鲁棒性评测正从'对抗样本'走向'语言学系统偏差'，2026 年是细粒度对齐评测方法论上升期。证据为评测类型学设计与 benchmark 构建。短板：无代码链接（待核验），测试的 LLM 范围、类型学维度的完备性、人类基线表现为待验项。方法论价值高且安全相关，评为趋势价值。",
+      "matched_topics": ["llm-evaluation", "security-governance"]
+    },
+    "http://arxiv.org/abs/2607.18237v1": {
+      "score": 64,
+      "value_type": "trend",
+      "reason": "The Many Senses of Visual Similarity（Wang/Nitzan/Hertzmann/Zhu/Shechtman，Adobe/CMU 顶级视觉团队）指出人类视觉相似性判断是上下文相关的——两张图可能在形状上相似但在颜色上截然不同——但现有感知相似性度量把所有维度坍缩为单一标量，无法按特定维度条件化。论文→理论层面，它引入了一个大规模人类相似性判断数据集（图像三元组，跨多个自由形式的语义维度标注），并提出文本提示条件化的感知度量方法，把'相似性'从标量重构为多维度、可条件化的向量；工程实践层面，对任何做图像生成/编辑质量评测或视觉检索的团队有参考：评估指标不应只用单一 LPIPS/FID，应考虑多维度相似性（形状/颜色/纹理/语义可分离条件化）；趋势层面，多模态评估正从'单一标量'走向'多维条件化度量'，是评测方法论精细化方向。证据为大规模数据集与基准测试。短板：无代码/benchmark 链接（待核验），数据集规模、文本提示的条件化粒度、与现有度量的区分度为待验项。标注的 'RAG' 关键词系误标。方法论价值高但领域偏 CV 评测，评为趋势价值。",
+      "matched_topics": ["llm-evaluation", "multimodal-agent"]
+    },
+    "http://arxiv.org/abs/2607.18235v1": {
+      "score": 58,
+      "value_type": "long_tail",
+      "reason": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发现系统（OpenEvolve、TTT-Discover 等）提出方法论批评：这些系统本质上是多种设计选择（档案、父代选择、探索策略、预算分配）的组合配方，但由于发现运行昂贵且内在随机，现有比较往往用太少独立试验无法区分真实改进与运行间方差。论文→理论层面，它把'自动化发现的评测方法论'本身作为研究对象，强调统计严谨性（需要足够独立试验、方差分解）才能区分方法论改进与噪声；工程实践层面，对任何做 ML 系统评测（不止自动发现）的团队有方法论启发：当系统运行昂贵且随机时，应做足够的独立重复实验并报告方差/置信区间，而非依赖单次运行的'改进'；趋势层面，ML 评测的方法论严谨性正受到更多审视。证据为系统性方差分析框架。短板：无代码链接（待核验），具体方差分析结果、推荐的试验数量、对现有 harness 的排名修正幅度为待验项。方法论启发价值大于直接复用，归为长尾保存。",
+      "matched_topics": ["llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.18228v1": {
+      "score": 55,
+      "value_type": "long_tail",
+      "reason": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理 benchmark 上预置不透明的连续向量前缀，保持模型参数不变，观察哪些前缀能诱导错误判断以及其效果如何泛化。论文→理论层面，它把'学习的上下文压力能否覆盖正确逻辑判断'作为探针，揭示 LLM 逻辑推理的脆弱性——不透明的连续向量可以系统性地翻转模型在形式逻辑任务上的正确性；工程实践层面，对 LLM 可靠性/安全测试有参考：soft prefix 攻击是一种白盒威胁模型（需要访问模型梯度），但它揭示的'逻辑判断可被学习的上下文压力操纵'这一现象对理解 LLM 的推理鲁棒性有诊断价值；趋势层面，LLM 推理鲁棒性探针是安全评测的细分方向。证据为受控实验设计。短板：无代码链接（待核验），soft prefix 的构造方法、攻击成功率、在更大模型上的效果、防御策略为待验项。方法论启发有价值但偏研究探索，归为长尾保存。",
+      "matched_topics": ["llm-evaluation", "security-governance"]
+    },
+    "http://arxiv.org/abs/2607.18230v1": {
+      "score": 53,
+      "value_type": "long_tail",
+      "reason": "Simple Domain Generalization for Pixel-Level Image Tampering Detection（Tang/Shang/Cui/Bsharat/Liu）研究现代 VLM（ChatGPT/Gemini/Qwen-Image 等）生成图像的像素级篡改检测，目标是让检测模型在跨 VLM 生成分布和分布外迁移下保持鲁棒。论文→理论层面，它把'AI 生成图像检测'从二分类问题推进到域泛化问题——不同 VLM 生成的篡改痕迹分布不同，检测器需要在未见过的 VLM 上保持泛化；工程实践层面，对内容安全/审核 pipeline 有参考：若需要检测 AI 生成/编辑图像，应评估检测器的跨模型泛化能力而非只在单一生成器上测试；趋势层面，AI 内容溯源与检测是安全治理的持续方向。证据为域泛化实验设计。短板：无代码链接（待核验），具体的域泛化方法、测试的 VLM 范围、跨模型检测准确率为待验项。标注的 'RAG' 关键词系误标。领域（CV 安全）与团队主线交集有限，归为长尾保存。",
+      "matched_topics": ["security-governance"]
+    },
+    "http://arxiv.org/abs/2607.18226v1": {
+      "score": 45,
+      "value_type": "ignore",
+      "reason": "Causal Discovery on Irregular Time Series（Penim/Pereira/Bono/Ferreira/Figueiredo）将 PCMCI+ 因果发现方法扩展到不规则采样时间序列。论文→理论层面是把条件独立性检验框架从规则离散滞后推广到连续时间/不规则采样设定，属统计因果推断的方法论改进；工程实践层面，领域（因果发现/时间序列统计）与团队 Agent/推理服务/基础设施主线交集有限，方法虽严谨但迁移路径不清晰；趋势层面属因果发现方法论的细分长尾。无代码链接，工程迁移价值低，归为忽略。",
+      "matched_topics": []
+    },
+    "http://arxiv.org/abs/2607.18218v1": {
+      "score": 42,
+      "value_type": "ignore",
+      "reason": "GigaPath-Flash and GigaTIME-Flash（Usuyama/Valanarasu/Yao/Xu/Bagga）提出高效的病理学基础模型，用于全切片图像和肿瘤微环境分析。论文→理论层面是计算病理学的高效基础模型设计（更轻量的 tile 级 + slide 纯架构），属医疗 AI 的垂直应用；工程实践层面，领域（数字病理/癌症诊断）与团队 Agent/推理服务/基础设施/评测主线完全无交集，标注的 'memory/RAG' 关键词系误标；趋势层面属医疗 AI 基础模型的垂直方向。无代码链接，工程迁移价值极低，归为忽略。",
+      "matched_topics": []
+    }
+  }
+}

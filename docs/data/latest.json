@@ -1,75 +1,80 @@
 {
-  "updated_at": "2026-07-21T04:39:33.694757",
+  "updated_at": "2026-07-22T04:34:04.451336",
   "site_title": "前沿理论驱动技术雷达日报",
   "site_subtitle": "从论文出发，快速判断即时价值、趋势价值和长尾价值，沉淀可复用研究资产。",
   "latest_daily": {
-    "date": "2026-07-21",
-    "title": "论文价值发现日报 - 2026-07-21",
-    "deep_dive_title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-    "deep_dive_url": "http://arxiv.org/abs/2607.16184v1",
+    "date": "2026-07-22",
+    "title": "论文价值发现日报 - 2026-07-22",
+    "deep_dive_title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+    "deep_dive_url": "http://arxiv.org/abs/2607.18213v1",
     "decision": "重点学习",
     "value_type": "immediate",
     "value_type_label": "即时价值",
-    "daily_action": "分两步：(1) 论文工程（最高优先级）——在自有 MoE 推理服务上评估 PagedWeight 思路：对冷门专家做低精度量化、把回收显存分配给 KV cache 池，测吞吐/并发/最大上下文的变化，画权重精度 vs KV cache 容量的帕累托曲线；同时在 Agentic RL 后训练流水线上跑 Muon（仅 2D 隐藏权重）vs AdamW 单种子对照，验证成功率是否复现论文的 +88% 量级。(2) 雷达工程——数据新鲜度今日已恢复，但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，建议本周内落地以防下一个静默期再次产生'假日报'。",
-    "max_uncertainty": "前 5 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-21 未更新），证据仅基于 arXiv 摘要与论文自述。PagedWeight 的量化精度损失阈值、量化/反量化的运行时开销、与具体 MoE 模型的吞吐提升幅度为关键未知项；Muon/Agentic-RL 仅为单种子、0.5B 小模型实验，多种子方差与能否外推到更大模型/其他 Agent 基准为关键未知项；ActiveVision 的任务集规模、与现有 benchmark 的区分度、人类基线表现为关键未知项；CAV CVE 的评测样本规模与结构化输出 schema 复杂度为关键未知项。元层不确定性：数据新鲜度今日恢复，但无法排除下一个静默期再次出现'假日报'，故 submittedDate 过滤 + 去重仍应作为防御性工程修复落地。",
-    "one_line_judgement": "PagedWeight 直击 MoE 服务最痛的显存墙——在 KV-cache 密集场景下权重与 KV cache 争抢显存，'把冷门专家动态降精度、省下的显存还给 KV cache 池'是任何 MoE 推理框架立即可借鉴的调度思路；Muon 论文则回答了一个高度实操的训练工程问题——RL 后训练阶段优化器该怎么选，并给出具体数字与对照。",
-    "path": "daily-detail.html?date=2026-07-21"
+    "daily_action": "分两步：(1) 论文工程（最高优先级）——在自有 coding agent（SWE-agent/OpenHands/Aider 类）上评估 SWE-Pruner Pro 思路：选取 Agent 的某一 Transformer 层，训练轻量 head 读取 token 级隐层激活输出保留/剪枝概率，对 tool output 做注入前过滤，测 resolve rate 与 token 成本/延迟的变化。如果无自有训练环境，先做'离线分析'：收集 Agent 处理 SWE-bench 任务时的隐层激活与最终保留/剪除的 token 标签，验证隐层激活与剪枝决策的相关性。(2) 理论吸收——把 Vector Search as NN Matching 的因果视角转化为 RAG 检索质量评测的新维度草案：定义'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比），并列出实现该指标的最低成本路径。",
+    "max_uncertainty": "今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未更新），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本、剪枝决策的精度-召回权衡、与不同基础模型（开源/闭源）的兼容性、对最终 resolve rate 的影响幅度为关键未知项；Patch Policy 的具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、真实机器人迁移鲁棒性为关键未知项；Vector Search as NN Matching 的理论框架在工程 RAG 中的可操作化路径、embedding 空间因果假设的可验证性为关键未知项；EoBs 测试的 LLM 范围与类型学维度完备性为关键未知项。元层不确定性：数据新鲜度已连续 2 天正常（07-21/07-22 均为 07-20 新批次），但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，下一个 arXiv 静默期仍可能复发。",
+    "one_line_judgement": "SWE-Pruner Pro 直击 coding agent 规模化最痛的上下文成本问题——它的核心洞察是'Agent 自己已经知道什么该剪'，只需在隐层挂一个轻量 head 做内省式过滤，就能在不增加第二个模型的前提下压缩有效上下文、降延迟、降 token 成本。这是任何运行 SWE-agent/OpenHands/Aider 类系统的人都可借鉴的工程模式。Vector Search as NN Matching 则为 RAG 系统引入了因果视角：检索到的'邻居'在什么条件下才是有效的反事实证据？",
+    "path": "daily-detail.html?date=2026-07-22"
   },
   "top_paper": {
-    "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+    "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
     "authors": [
-      "Yuchen Yang",
-      "Yifan Zhao",
-      "Anisha Dasgupta",
-      "Sasa Misailovic"
+      "Yuhang Wang",
+      "Yuling Shi",
+      "Shaoqiu Zhang",
+      "Jialiang Liang",
+      "Shilin He"
     ],
-    "published": "2026-07-17",
-    "updated": "2026-07-17",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
     "source": "arXiv",
-    "url": "http://arxiv.org/abs/2607.16184v1",
-    "pdf_url": "https://arxiv.org/pdf/2607.16184v1",
+    "url": "http://arxiv.org/abs/2607.18213v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.18213v1",
     "openreview_url": "",
     "paperswithcode_url": "",
     "code_url": "",
     "benchmark_url": "",
     "project_url": "",
-    "abstract": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We propose PagedWeight, a novel management method for MoE LLM serving that dynamically quantizes MoE model's weights at runtime and balances expert-weight precision with the KV cache sizes. PagedWeight exposes and effectiv",
+    "abstract": "Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicating the relevance of code context when reading tool output. Based on this finding, we propose SWE-Pruner Pro, which prunes tool outputs directly inside the agent. Concretely, a small head turns the agent's own internal rep",
     "categories": [
-      "cs.LG"
+      "cs.CL",
+      "cs.SE"
     ],
     "keywords": [
-      "memory"
+      "agent",
+      "coding agent",
+      "benchmark",
+      "inference"
     ],
-    "score": 82.0,
+    "score": 81.0,
     "decision": "重点学习",
     "links": [
       {
         "label": "arXiv",
-        "url": "http://arxiv.org/abs/2607.16184v1"
+        "url": "http://arxiv.org/abs/2607.18213v1"
       },
       {
         "label": "PDF",
-        "url": "https://arxiv.org/pdf/2607.16184v1"
+        "url": "https://arxiv.org/pdf/2607.18213v1"
       }
     ],
-    "llm_reason": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家权重与不断增长的 KV cache 争抢 GPU 显存。论文→理论层面，它把'权重精度'从静态超参重构为运行时可调的资源杠杆——按需动态量化专家权重、用省下的显存换更大的 KV cache 窗口，实质是用'精度换容量'的帕累托调度；工程实践层面，该方法可直接嵌入任何 vLLM/SGLang 类 MoE 推理框架：在长上下文/高并发场景下，默认让冷门专家走低精度、热门专家走高精度，并把回收的显存还给 KV cache 池，从而在不加 GPU 的前提下提升可服务并发数与最大上下文长度；趋势层面，2026 年 MoE 已成主流架构（DeepSeek/Mixtral/Qwen-MoE），但'显存墙'取代'算力墙'成为服务瓶颈，精度-显存动态权衡是明确上升线。证据为方法设计与系统抽象自述（质量感知量化），工程目标（权重精度 vs KV cache 大小的平衡）清晰可验证。短板：无代码/benchmark 链接（待核验），动态量化的精度损失阈值、量化/反量化的运行时开销、与具体 MoE 模型的吞吐提升幅度均为关键待验项。在今日数据中落地性最强，故评为即时价值。",
-    "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+    "llm_reason": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench 类任务时，工具输出（文件浏览、搜索结果、测试日志）会快速膨胀上下文窗口，现有方法（如 SWE-Pruner）需挂载一个独立的代码分类器来判断哪些片段该保留，带来额外模型开销与维护成本。论文→理论层面，它提出一个关键洞察：'Agent 自身在阅读工具输出时已经编码了内部表征来指示代码上下文的相关性'——也就是说，判别'什么该剪'的信息已经存在于 Agent 的隐层激活中，不需要外部分类器。这把'上下文剪枝'从'外挂判别器'重构为'内生注意力路由'，实质是用模型已有的语义理解能力替代额外的标注/训练管线；工程实践层面，该方法可直接嵌入任何基于 LLM 的 coding agent 框架（SWE-agent/OpenHands/Aider 类）：在 Agent 的 Transformer 层上挂一个轻量 head，读取隐层激活输出 token 级别的保留/剪枝决策，在 tool output 注入主上下文前先做一次内省式过滤，从而在不加第二个模型的前提下压缩有效上下文、降低推理延迟与 token 成本；趋势层面，2026 年 coding agent 已成主力应用（SWE-bench 评测白热化），但'长上下文成本'正成为规模化瓶颈，'让 Agent 自省式管理上下文'是明确上升线。证据为方法设计与实验自述（在 SWE-bench 上验证），工程目标（内省式剪枝 vs 外挂分类器）清晰可验证。短板：无代码/benchmark 链接（待核验），轻量 head 的训练成本、剪枝决策的精度-召回权衡、与不同基础模型的兼容性、对最终 resolve rate 的影响幅度均为关键待验项。在今日数据中对编码 Agent 工程落地性最强，故评为即时价值。",
+    "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
     "value_type": "immediate",
     "matched_topics": [
-      "inference-serving",
-      "ai-k8s-platform",
-      "context-engineering"
+      "coding-agent",
+      "context-engineering",
+      "inference-serving"
     ],
     "score_breakdown": {
-      "novelty": 5.4,
+      "novelty": 4.8,
       "problem_importance": 6.45,
       "relevance": 7.4,
       "evidence_strength": 4.5,
-      "engineering_testability": 3.5,
+      "engineering_testability": 4.05,
       "trend_signal": 4.05,
       "long_tail_potential": 3.5,
       "asset_convertibility": 4.8,
-      "actionability": 3.8,
+      "actionability": 5.0,
       "noise_risk": 1.2,
       "weak_evidence_penalty": 5.0,
       "low_relevance_penalty": 0.8,
@@ -77,30 +82,44 @@
       "reproducibility_risk": 5.0
     },
     "trend_status": "emerging",
-    "brief_cn": "推理与服务：Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), o…",
-    "one_line_judgement": "今天值得试：PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最…",
-    "first_seen_date": "2026-07-21",
-    "first_deep_dive_daily": "2026-07-21",
+    "brief_cn": "Coding Agent：Pruning long context for coding agents has been a vital technology for efficie…",
+    "one_line_judgement": "今天值得试：SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 c…",
+    "first_seen_date": "2026-07-22",
+    "first_deep_dive_daily": "2026-07-22",
     "value_type_label": "即时价值",
     "trend_stage_label": "萌芽",
     "future_trigger": "待更多证据",
-    "long_tail_summary": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家",
+    "long_tail_summary": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench ",
     "related_trends": [
+      "coding-agent",
       "context-engineering"
     ],
-    "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization"
+    "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune"
   },
-  "paper_count": 479,
+  "paper_count": 489,
   "daily_count": 30,
   "trend_count": 3,
-  "long_tail_count": 64,
+  "long_tail_count": 67,
   "value_distribution": {
-    "immediate": 58,
-    "trend": 84,
-    "long_tail": 64,
-    "ignore": 273
+    "immediate": 59,
+    "trend": 88,
+    "long_tail": 67,
+    "ignore": 275
   },
   "recent_dailies": [
+    {
+      "date": "2026-07-22",
+      "title": "论文价值发现日报 - 2026-07-22",
+      "deep_dive_title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "deep_dive_url": "http://arxiv.org/abs/2607.18213v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "分两步：(1) 论文工程（最高优先级）——在自有 coding agent（SWE-agent/OpenHands/Aider 类）上评估 SWE-Pruner Pro 思路：选取 Agent 的某一 Transformer 层，训练轻量 head 读取 token 级隐层激活输出保留/剪枝概率，对 tool output 做注入前过滤，测 resolve rate 与 token 成本/延迟的变化。如果无自有训练环境，先做'离线分析'：收集 Agent 处理 SWE-bench 任务时的隐层激活与最终保留/剪除的 token 标签，验证隐层激活与剪枝决策的相关性。(2) 理论吸收——把 Vector Search as NN Matching 的因果视角转化为 RAG 检索质量评测的新维度草案：定义'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比），并列出实现该指标的最低成本路径。",
+      "max_uncertainty": "今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未更新），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本、剪枝决策的精度-召回权衡、与不同基础模型（开源/闭源）的兼容性、对最终 resolve rate 的影响幅度为关键未知项；Patch Policy 的具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、真实机器人迁移鲁棒性为关键未知项；Vector Search as NN Matching 的理论框架在工程 RAG 中的可操作化路径、embedding 空间因果假设的可验证性为关键未知项；EoBs 测试的 LLM 范围与类型学维度完备性为关键未知项。元层不确定性：数据新鲜度已连续 2 天正常（07-21/07-22 均为 07-20 新批次），但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，下一个 arXiv 静默期仍可能复发。",
+      "one_line_judgement": "SWE-Pruner Pro 直击 coding agent 规模化最痛的上下文成本问题——它的核心洞察是'Agent 自己已经知道什么该剪'，只需在隐层挂一个轻量 head 做内省式过滤，就能在不增加第二个模型的前提下压缩有效上下文、降延迟、降 token 成本。这是任何运行 SWE-agent/OpenHands/Aider 类系统的人都可借鉴的工程模式。Vector Search as NN Matching 则为 RAG 系统引入了因果视角：检索到的'邻居'在什么条件下才是有效的反事实证据？",
+      "path": "daily-detail.html?date=2026-07-22"
+    },
     {
       "date": "2026-07-21",
       "title": "论文价值发现日报 - 2026-07-21",
@@ -178,77 +197,69 @@
       "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。视觉预训练的数据规模与下游增益数据、VEXAIoT 在真实 IoT 固件上的有效性均为关键未知项。",
       "one_line_judgement": "视觉预训练论文论证了'纯文本会丢弃不可恢复的语义'——公式排版、图表空间关系被 OCR 管线全部抹掉，而多模态预训练可在源端保留这些信号；VLM 错误演进的十年回溯则提供了从'准不准'到'为什么错'的系统性诊断框架，可立即转化为回归测试套件。",
       "path": "daily-detail.html?date=2026-07-14"
-    },
-    {
-      "date": "2026-07-13",
-      "title": "论文价值发现日报 - 2026-07-13",
-      "deep_dive_title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
-      "deep_dive_url": "http://arxiv.org/abs/2607.08768v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "完成两件事：基于 UniClawBench 能力分类法绘制 Agent 能力覆盖矩阵；在现有训练任务上加 SLORR 正则化跑一轮压缩-精度对照实验。",
-      "max_uncertainty": "最大不确定性是外部可复现资产缺失：今日前五篇论文的代码、benchmark、Papers with Code 链接均为空，当前证据仅基于 arXiv 摘要与论文自述，需后续核验。",
-      "one_line_judgement": "UniClawBench 将 Agent 能力定义从单轮问答升级为多轮主动执行，直接可用作自家 Agent 产品的对标评测；SLORR 无状态、无额外参数、无需 SVD，可即插即用集成到训练 pipeline，对边缘部署尤其有价值。",
-      "path": "daily-detail.html?date=2026-07-13"
     }
   ],
   "top_papers": [
     {
-      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
       "authors": [
-        "Yuchen Yang",
-        "Yifan Zhao",
-        "Anisha Dasgupta",
-        "Sasa Misailovic"
+        "Yuhang Wang",
+        "Yuling Shi",
+        "Shaoqiu Zhang",
+        "Jialiang Liang",
+        "Shilin He"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16184v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16184v1",
+      "url": "http://arxiv.org/abs/2607.18213v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18213v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We propose PagedWeight, a novel management method for MoE LLM serving that dynamically quantizes MoE model's weights at runtime and balances expert-weight precision with the KV cache sizes. PagedWeight exposes and effectiv",
+      "abstract": "Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicating the relevance of code context when reading tool output. Based on this finding, we propose SWE-Pruner Pro, which prunes tool outputs directly inside the agent. Concretely, a small head turns the agent's own internal rep",
       "categories": [
-        "cs.LG"
+        "cs.CL",
+        "cs.SE"
       ],
       "keywords": [
-        "memory"
+        "agent",
+        "coding agent",
+        "benchmark",
+        "inference"
       ],
-      "score": 82.0,
+      "score": 81.0,
       "decision": "重点学习",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16184v1"
+          "url": "http://arxiv.org/abs/2607.18213v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16184v1"
+          "url": "https://arxiv.org/pdf/2607.18213v1"
         }
       ],
-      "llm_reason": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家权重与不断增长的 KV cache 争抢 GPU 显存。论文→理论层面，它把'权重精度'从静态超参重构为运行时可调的资源杠杆——按需动态量化专家权重、用省下的显存换更大的 KV cache 窗口，实质是用'精度换容量'的帕累托调度；工程实践层面，该方法可直接嵌入任何 vLLM/SGLang 类 MoE 推理框架：在长上下文/高并发场景下，默认让冷门专家走低精度、热门专家走高精度，并把回收的显存还给 KV cache 池，从而在不加 GPU 的前提下提升可服务并发数与最大上下文长度；趋势层面，2026 年 MoE 已成主流架构（DeepSeek/Mixtral/Qwen-MoE），但'显存墙'取代'算力墙'成为服务瓶颈，精度-显存动态权衡是明确上升线。证据为方法设计与系统抽象自述（质量感知量化），工程目标（权重精度 vs KV cache 大小的平衡）清晰可验证。短板：无代码/benchmark 链接（待核验），动态量化的精度损失阈值、量化/反量化的运行时开销、与具体 MoE 模型的吞吐提升幅度均为关键待验项。在今日数据中落地性最强，故评为即时价值。",
-      "id": "pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization",
+      "llm_reason": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench 类任务时，工具输出（文件浏览、搜索结果、测试日志）会快速膨胀上下文窗口，现有方法（如 SWE-Pruner）需挂载一个独立的代码分类器来判断哪些片段该保留，带来额外模型开销与维护成本。论文→理论层面，它提出一个关键洞察：'Agent 自身在阅读工具输出时已经编码了内部表征来指示代码上下文的相关性'——也就是说，判别'什么该剪'的信息已经存在于 Agent 的隐层激活中，不需要外部分类器。这把'上下文剪枝'从'外挂判别器'重构为'内生注意力路由'，实质是用模型已有的语义理解能力替代额外的标注/训练管线；工程实践层面，该方法可直接嵌入任何基于 LLM 的 coding agent 框架（SWE-agent/OpenHands/Aider 类）：在 Agent 的 Transformer 层上挂一个轻量 head，读取隐层激活输出 token 级别的保留/剪枝决策，在 tool output 注入主上下文前先做一次内省式过滤，从而在不加第二个模型的前提下压缩有效上下文、降低推理延迟与 token 成本；趋势层面，2026 年 coding agent 已成主力应用（SWE-bench 评测白热化），但'长上下文成本'正成为规模化瓶颈，'让 Agent 自省式管理上下文'是明确上升线。证据为方法设计与实验自述（在 SWE-bench 上验证），工程目标（内省式剪枝 vs 外挂分类器）清晰可验证。短板：无代码/benchmark 链接（待核验），轻量 head 的训练成本、剪枝决策的精度-召回权衡、与不同基础模型的兼容性、对最终 resolve rate 的影响幅度均为关键待验项。在今日数据中对编码 Agent 工程落地性最强，故评为即时价值。",
+      "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
       "value_type": "immediate",
       "matched_topics": [
-        "inference-serving",
-        "ai-k8s-platform",
-        "context-engineering"
+        "coding-agent",
+        "context-engineering",
+        "inference-serving"
       ],
       "score_breakdown": {
-        "novelty": 5.4,
+        "novelty": 4.8,
         "problem_importance": 6.45,
         "relevance": 7.4,
         "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
+        "engineering_testability": 4.05,
         "trend_signal": 4.05,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.8,
-        "actionability": 3.8,
+        "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 0.8,
@@ -256,76 +267,229 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "推理与服务：Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), o…",
-      "one_line_judgement": "今天值得试：PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
+      "brief_cn": "Coding Agent：Pruning long context for coding agents has been a vital technology for efficie…",
+      "one_line_judgement": "今天值得试：SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 c…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
       "value_type_label": "即时价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "PagedWeight（Yang/Zhao/Dasgupta/Misailovic，UIUC 量化/系统组）直击 MoE LLM 推理服务最痛的内存矛盾：在 KV-cache 密集场景下，专家",
+      "long_tail_summary": "SWE-Pruner Pro（Wang/Shi/Zhang/Liang/He）直击编码 Agent 工程中最痛的上下文管理矛盾：长上下文 coding agent 在处理 SWE-bench ",
       "related_trends": [
+        "coding-agent",
         "context-engineering"
       ],
-      "detail_path": "paper-detail.html?id=pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantization"
+      "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune"
     },
     {
-      "title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
       "authors": [
-        "Kai Ruan",
-        "Jinghao Lin",
-        "Zihe Huang",
-        "Ziqi Zhou",
-        "Qianshan Wei"
+        "Gaoyue Zhou",
+        "Zichen Jeff Cui",
+        "Ada Langford",
+        "Bowen Tan",
+        "Yann LeCun"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16169v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16169v1",
+      "url": "http://arxiv.org/abs/2607.18236v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18236v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The",
+      "abstract": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and sl",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "cs.RO",
+        "cs.LG"
       ],
       "keywords": [
-        "agent",
-        "agentic"
+        "RAG",
+        "inference"
       ],
-      "score": 79.0,
+      "score": 73.0,
       "decision": "轻量试点",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16169v1"
+          "url": "http://arxiv.org/abs/2607.18236v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16169v1"
+          "url": "https://arxiv.org/pdf/2607.18236v1"
         }
       ],
-      "llm_reason": "When Does Muon Help Agentic RL?（Ruan/Lin/Huang/Zhou/Wei）回答了一个高度实操的问题：在稀疏奖励的 Agentic RL 后训练中，Muon 优化器相比 AdamW 到底有没有用？论文→理论层面，它把'Muon vs AdamW'的争论从'预训练阶段（Muon 已证明有竞争力）'推进到'后训练/RL 阶段（尚不清晰）'，并给出有对照的实证——在 ALFWorld 上用 Qwen2.5-0.5B-Instruct + GiGPO，仅对隐藏权重矩阵施用 Muon 使验证成功率从 0.290 提升到 0.546（+88%），而高学习率 AdamW 对照组训练后成功率为零；工程实践层面，这对任何做 Agent RL 后训练的团队都是即插即用的实验线索：可立即在自有的 RLHF/Agentic RL 流水线上对照 Muon（仅 2D 权重）vs AdamW，验证收益是否可复现、是否随模型规模保持；趋势层面，优化器选择是 RL 后训练工程化的基础杠杆，且'仅对特定权重矩阵用 Muon'这种选择性策略本身是一种可迁移的训练工程模式。证据为单种子对照实验、具体数字、具体模型/基准，透明度高（虽为单种子，需多种子确认）。短板：无代码链接（待核验），0.5B 规模的结论能否外推到更大模型、多种子方差、其他 Agent 基准上的表现均为关键待验项。落地路径清晰且证据具体，评为即时价值。",
-      "id": "when-does-muon-help-agentic-reinforcement-learning",
-      "value_type": "immediate",
+      "llm_reason": "Patch Policy（Zhou/Cui/Langford/Tan/LeCun，含 Yann LeCun）指出机器人学习中长期被忽视的工程矛盾：预训练 ViT 的密集 patch 特征功能强大却在 robot policy 中被低效利用——现代 robot policy 要么把每帧观测压缩成单个全局 token（丢失空间细节），要么从头训练视觉骨干（浪费大规模预训练收益），而使用密集 patch 特征的方案（如大型 VLA 模型）又过重过慢。论文→理论层面，它提出在密集 patch 特征上直接做策略学习（而非先压缩再决策），把'保留空间粒度'与'保持推理效率'同时作为设计目标；工程实践层面，对任何做具身 Agent / 多模态推理的团队有参考：若需要让 Agent 基于视觉做空间决策（不只是'看到了什么'而是'在哪里'），应评估密集 patch 特征 vs 全局 token 在自有任务上的信息保留-效率权衡；趋势层面，2026 年具身智能/VLA 模型是明确上升方向，但'重 VLA vs 轻 policy'的效率矛盾仍未解决，Patch Policy 代表'轻量化密集表征'的探索线。证据为方法设计自述。短板：无代码/benchmark 链接（待核验），具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、迁移到真实机器人的鲁棒性为待验项。方法论价值高但需等待资产开源验证，评为趋势价值。",
+      "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
+      "value_type": "trend",
       "matched_topics": [
-        "ai-agent",
+        "multimodal-agent",
         "inference-serving"
       ],
       "score_breakdown": {
         "novelty": 4.8,
         "problem_importance": 5.15,
         "relevance": 5.0,
-        "evidence_strength": 4.95,
+        "evidence_strength": 4.5,
         "engineering_testability": 3.5,
-        "trend_signal": 4.05,
+        "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.8,
         "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Multimodal Agent：Pretrained dense visual features from Vision Transformers (ViTs) are powerful …",
+      "one_line_judgement": "值得继续观察：Patch Policy（Zhou/Cui/Langford/Tan/LeCun，含 Yann LeCun）指出机器人学习中长期被忽视的工程…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Patch Policy（Zhou/Cui/Langford/Tan/LeCun，含 Yann LeCun）指出机器人学习中长期被忽视的工程矛盾：预训练 ViT 的密集 patch 特征功能强",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations"
+    },
+    {
+      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+      "authors": [
+        "Masahiro Kato",
+        "Taka Kato"
+      ],
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.18225v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18225v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the generator estimates conditional expected outcomes or their contrasts, and a plug-in rule selects an action. This formulation connects action-specific vector search with nearest-neighbor matching in causal ",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "keywords": [
+        "RAG",
+        "inference"
+      ],
+      "score": 70.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.18225v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.18225v1"
+        }
+      ],
+      "llm_reason": "Vector Search As Nearest Neighbor Matching（Kato/Kato）在 RAG 与因果推断之间建立了一个理论桥梁：它把 RAG 的'向量检索 + 生成器估计'形式化为潜在结果框架下的策略学习问题，证明 RAG 中的 action-specific 向量搜索等价于因果推断中的最近邻匹配。论文→理论层面，这是首次用因果推断的势结果框架严格刻画 RAG 的动作选择机制，把'检索增强'从工程启发式提升为有识别假设的统计方法——检索到的'邻居'在什么条件下可以作为有效的反事实证据？这直接关联到 RAG 系统中检索质量与生成可靠性的因果关系；工程实践层面，对任何构建 RAG 系统的团队有方法论启发：检索结果的相关性不应只看向量相似度，还应考虑'检索邻居作为因果证据的有效性'（即检索到的样本是否在因果意义上与当前查询可比），这为 RAG 的检索质量评估提供了因果视角的新指标；趋势层面，RAG 工程化正从'能检索'走向'检索结果的因果有效性'，2026 年是 RAG 可靠性方法论深化的关键期。证据为理论框架推导（一步法与两步法），数学严格性高。短板：无代码链接（待核验），理论框架在工程 RAG 系统中的可操作化路径、embedding 空间的因果假设可验证性、与现有 RAG 评测方法的对比为待验项。理论贡献突出但工程落地需转化，评为趋势价值。",
+      "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+      "value_type": "trend",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "RAG / 知识系统：We propose one-step and two-step methods for policy learning with retrieval-au…",
+      "one_line_judgement": "值得继续观察：Vector Search As Nearest Neighbor Matching（Kato/Kato）在 RAG 与因果推断之间建立了一…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "Vector Search As Nearest Neighbor Matching（Kato/Kato）在 RAG 与因果推断之间建立了一个理论桥梁：它把 RAG 的'向量检索 + 生成器估",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference"
+    },
+    {
+      "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+      "authors": [
+        "Kevin Du",
+        "Clara Kümpel",
+        "Michelle Wastl",
+        "Alex Warstadt"
+      ],
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.18232v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18232v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Users frequently express their beliefs to large language models (LLMs). In some situations, the LLM should accept these contextual beliefs as true. In others, they should stick to their prior knowledge. Notably, users' expressions of belief (EoBs) can take linguistically diverse forms - using presuppositions, evidential and certainty markers, or varied tones - each of which may have a different persuasiveness over the LLMs. We introduce a typology to systematically evaluate how different EoBs af",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 68.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.18232v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.18232v1"
+        }
+      ],
+      "llm_reason": "It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统化评测 LLM 对'用户信念表达'（Expressions of Belief, EoBs）的响应行为——用户用预设、证据标记、确定性标记、不同语气等语言形式向 LLM 表达信念时，LLM 何时该接受、何时该坚持自己的先验知识。论文→理论层面，它把'LLM 是否被用户说服'从二元问题重构为语言学类型学问题：不同语言形式（预设 vs 显式断言、强确定性 vs 弱确定性、正式 vs 非正式语气）对 LLM 的说服力不同，这意味着 LLM 的信念更新行为存在系统的语言形式偏差；工程实践层面，对任何构建对话 Agent / 助手的团队有直接安全启示：应测试系统在不同语言形式的用户信念输入下是否表现一致——如果 Agent 在预设句式下更容易接受错误信念（相当于一种语言形式的 prompt injection），这是一个安全漏洞；趋势层面，LLM 对齐/鲁棒性评测正从'对抗样本'走向'语言学系统偏差'，2026 年是细粒度对齐评测方法论上升期。证据为评测类型学设计与 benchmark 构建。短板：无代码链接（待核验），测试的 LLM 范围、类型学维度的完备性、人类基线表现为待验项。方法论价值高且安全相关，评为趋势价值。",
+      "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 3.6,
@@ -333,64 +497,62 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "AI Agent：Muon is competitive with AdamW in large-scale pre-training, but its value for …",
-      "one_line_judgement": "今天值得试：When Does Muon Help Agentic RL?（Ruan/Lin/Huang/Zhou/Wei）回答了一个高度实操的问题：在…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
-      "value_type_label": "即时价值",
+      "brief_cn": "LLM 评测：Users frequently express their beliefs to large language models (LLMs). In som…",
+      "one_line_judgement": "值得继续观察：It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
+      "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "When Does Muon Help Agentic RL?（Ruan/Lin/Huang/Zhou/Wei）回答了一个高度实操的问题：在稀疏奖励的 Agentic RL 后训练中，Muon",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "It's Not What You Say, It's How You Say It（Du/Kümpel/Wastl/Warstadt）系统化评测 LLM 对'用户信念表达'（Expressi",
       "related_trends": [
-        "agentic-world-modeling"
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=when-does-muon-help-agentic-reinforcement-learning"
+      "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief"
     },
     {
-      "title": "An Exam for Active Observers",
+      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
       "authors": [
-        "Jiarui Zhang",
-        "Muzi Tao",
-        "Shangshang Wang",
-        "Ollie Liu",
-        "Xuezhe Ma"
+        "Sheng-Yu Wang",
+        "Yotam Nitzan",
+        "Aaron Hertzmann",
+        "Jun-Yan Zhu",
+        "Eli Shechtman"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16165v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16165v1",
+      "url": "http://arxiv.org/abs/2607.18237v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18237v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active observation is essential for a wide range of tasks. Whether today's multimodal large language models (MLLMs) exercise active observation is an empirical question that current vision-language benchmarks do not answer. We introduce ActiveVision, a benchmark that makes active observation measurable for ML",
+      "abstract": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspects. To bridge this gap, we introduce a large-scale dataset of human similarity judgments over image triplets, where each triplet is annotated across multiple, free-form semantic aspects of similarity. Benchmarking a broa",
       "categories": [
         "cs.CV",
-        "cs.AI",
-        "cs.CL",
         "cs.LG"
       ],
       "keywords": [
+        "evaluation",
         "benchmark",
-        "RAG",
-        "multimodal"
+        "RAG"
       ],
-      "score": 74.0,
-      "decision": "轻量试点",
+      "score": 64.0,
+      "decision": "持续观察",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16165v1"
+          "url": "http://arxiv.org/abs/2607.18237v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16165v1"
+          "url": "https://arxiv.org/pdf/2607.18237v1"
         }
       ],
-      "llm_reason": "An Exam for Active Observers / ActiveVision（Zhang/Tao/Wang/Liu/Ma，USC）指出当前多模态大模型（MLLM）评测的根本盲点：人类视觉是闭环的——注视方向由中间假设持续引导，而非单次快照；现有视觉-语言 benchmark 无法测量 MLLM 是否真正'主动观察'。论文→理论层面，它把'主动观察'从认知科学命题转化为可度量的 benchmark 维度，填补'静态单帧理解'与'闭环多步感知'之间的评测空白；工程实践层面，对自建多模态 Agent 评测流水线有直接参考：应检查系统是否在'需要主动调整观察（多帧/多区域聚焦）才能解决的任务'上失败，而当前依赖单帧快照的评测会掩盖这类缺陷；趋势层面，多模态评测正从'被动识别'走向'主动感知/闭环交互'，2026 年是关键方法论转型期。证据为 benchmark 设计自述，方法论清晰。短板：无代码/benchmark 链接（待核验），任务集规模、与现有 benchmark 的区分度、人类基线表现均为待验项。方法论价值高但需等待资产开源验证，评为趋势价值。",
-      "id": "an-exam-for-active-observers",
+      "llm_reason": "The Many Senses of Visual Similarity（Wang/Nitzan/Hertzmann/Zhu/Shechtman，Adobe/CMU 顶级视觉团队）指出人类视觉相似性判断是上下文相关的——两张图可能在形状上相似但在颜色上截然不同——但现有感知相似性度量把所有维度坍缩为单一标量，无法按特定维度条件化。论文→理论层面，它引入了一个大规模人类相似性判断数据集（图像三元组，跨多个自由形式的语义维度标注），并提出文本提示条件化的感知度量方法，把'相似性'从标量重构为多维度、可条件化的向量；工程实践层面，对任何做图像生成/编辑质量评测或视觉检索的团队有参考：评估指标不应只用单一 LPIPS/FID，应考虑多维度相似性（形状/颜色/纹理/语义可分离条件化）；趋势层面，多模态评估正从'单一标量'走向'多维条件化度量'，是评测方法论精细化方向。证据为大规模数据集与基准测试。短板：无代码/benchmark 链接（待核验），数据集规模、文本提示的条件化粒度、与现有度量的区分度为待验项。标注的 'RAG' 关键词系误标。方法论价值高但领域偏 CV 评测，评为趋势价值。",
+      "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
       "value_type": "trend",
       "matched_topics": [
         "llm-evaluation",
@@ -400,12 +562,12 @@
         "novelty": 4.8,
         "problem_importance": 5.8,
         "relevance": 6.2,
-        "evidence_strength": 5.4,
+        "evidence_strength": 4.95,
         "engineering_testability": 3.5,
         "trend_signal": 5.45,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 5.6,
-        "actionability": 3.8,
+        "asset_convertibility": 7.0,
+        "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 2.2,
@@ -413,149 +575,144 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "emerging",
-      "brief_cn": "LLM 评测：Human vision is a closed loop: gaze is continuously redirected by intermediate…",
-      "one_line_judgement": "值得继续观察：An Exam for Active Observers / ActiveVision（Zhang/Tao/Wang/Liu/Ma，USC）…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
+      "brief_cn": "LLM 评测：Human visual similarity judgments are context-dependent. For example, two imag…",
+      "one_line_judgement": "值得继续观察：The Many Senses of Visual Similarity（Wang/Nitzan/Hertzmann/Zhu/Shechtm…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
       "value_type_label": "趋势价值",
       "trend_stage_label": "萌芽",
       "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "An Exam for Active Observers / ActiveVision（Zhang/Tao/Wang/Liu/Ma，USC）指出当前多模态大模型（MLLM）评测的根本盲点：人类",
+      "long_tail_summary": "The Many Senses of Visual Similarity（Wang/Nitzan/Hertzmann/Zhu/Shechtman，Adobe/CMU 顶级视觉团队）指出人类视觉",
       "related_trends": [
         "coding-agent",
         "agentic-world-modeling"
       ],
-      "detail_path": "paper-detail.html?id=an-exam-for-active-observers"
+      "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric"
     },
     {
-      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "title": "Automated Discovery Has No Universally Superior Harness",
       "authors": [
-        "Md Erfan",
-        "Ahmed Ryan",
-        "Md Kamal Hossain Chowdhury",
-        "Md Rayhanur Rahman"
+        "Akshat Gupta",
+        "Jermaine Lei",
+        "Alexander Lu",
+        "Gopala Anumanchipalli",
+        "Leshem Choshen"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16175v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16175v1",
+      "url": "http://arxiv.org/abs/2607.18235v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18235v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses,",
+      "abstract": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recipe. Because discovery runs are expensive and inherently stochastic, existing harnesses are often compared using too few independent trials to distinguish key methodological improvements from run-to-run variance. We system",
       "categories": [
-        "cs.CR",
+        "cs.CL",
         "cs.AI"
       ],
-      "keywords": [
-        "agent"
-      ],
-      "score": 63.0,
+      "keywords": [],
+      "score": 58.0,
       "decision": "持续观察",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16175v1"
+          "url": "http://arxiv.org/abs/2607.18235v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16175v1"
+          "url": "https://arxiv.org/pdf/2607.18235v1"
         }
       ],
-      "llm_reason": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities（Erfan/Ryan/Chowdhury/Rahman）把 LLM 应用于一个具体且高价值的工程场景：把网联自动驾驶车辆（CAV）的 CVE 纯文本漏洞描述，自动转换为结构化威胁信息（受影响资产、弱点类型、攻击向量），供安全从业者直接消费。论文→理论层面，它是'LLM 做信息抽取/结构化'在安全领域的落地，核心问题是开源权重 LLM 能否可靠地从非结构化 CVE 文本生成准确的结构化威胁情报；工程实践层面，对任何用 LLM 做文档→结构化数据转换的 pipeline 都有参考（不止安全领域）：需评估不同开源模型的抽取准确率、幻觉率、对模糊描述的鲁棒性；趋势层面，LLM 驱动的安全运营自动化（威胁情报结构化、漏洞分类）是 2026 年安全治理的上升应用线。证据为评测实验自述（多个开源权重模型对比）。短板：无代码链接（待核验），评测的 CVE 样本规模、结构化输出的 schema 复杂度、与人工标注的一致性指标为待验项，且标注的 'agent' 关键词系泛化误标。归为趋势价值。",
-      "id": "evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities",
-      "value_type": "trend",
+      "llm_reason": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发现系统（OpenEvolve、TTT-Discover 等）提出方法论批评：这些系统本质上是多种设计选择（档案、父代选择、探索策略、预算分配）的组合配方，但由于发现运行昂贵且内在随机，现有比较往往用太少独立试验无法区分真实改进与运行间方差。论文→理论层面，它把'自动化发现的评测方法论'本身作为研究对象，强调统计严谨性（需要足够独立试验、方差分解）才能区分方法论改进与噪声；工程实践层面，对任何做 ML 系统评测（不止自动发现）的团队有方法论启发：当系统运行昂贵且随机时，应做足够的独立重复实验并报告方差/置信区间，而非依赖单次运行的'改进'；趋势层面，ML 评测的方法论严谨性正受到更多审视。证据为系统性方差分析框架。短板：无代码链接（待核验），具体方差分析结果、推荐的试验数量、对现有 harness 的排名修正幅度为待验项。方法论启发价值大于直接复用，归为长尾保存。",
+      "id": "automated-discovery-has-no-universally-superior-harness",
+      "value_type": "long_tail",
       "matched_topics": [
-        "security-governance",
         "llm-evaluation"
       ],
       "score_breakdown": {
         "novelty": 4.8,
-        "problem_importance": 5.15,
-        "relevance": 5.0,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
         "evidence_strength": 4.5,
         "engineering_testability": 4.05,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
+        "asset_convertibility": 4.0,
         "actionability": 5.0,
-        "noise_risk": 1.2,
+        "noise_risk": 2.4,
         "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 3.6,
+        "low_relevance_penalty": 5.0,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
-      "trend_status": "emerging",
-      "brief_cn": "安全与治理：Connected and Autonomous Vehicles (CAVs) rely on interconnected software and h…",
-      "one_line_judgement": "值得继续观察：Evaluating Open-Weight LLMs for Generating Structured Threat Informati…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
-      "value_type_label": "趋势价值",
-      "trend_stage_label": "萌芽",
-      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
-      "long_tail_summary": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle ",
+      "trend_status": "long_tail_watch",
+      "brief_cn": "LLM 评测：Autonomous discovery systems such as OpenEvolve and TTT-Discover are often use…",
+      "one_line_judgement": "值得先保存：Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/A…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发",
       "related_trends": [
         "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=evaluating-open-weight-llms-for-generating-structured-threat-information-for-autonomous-vehicle-vulnerabilities"
+      "detail_path": "paper-detail.html?id=automated-discovery-has-no-universally-superior-harness"
     },
     {
-      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+      "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
       "authors": [
-        "Matteo Tomasetto",
-        "Nicolò Botteghi",
-        "Gabriele Bruni",
-        "Andrea Manzoni"
+        "Brian K Chen"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16177v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16177v1",
+      "url": "http://arxiv.org/abs/2607.18228v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18228v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, w",
+      "abstract": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque continuous vectors, so we characterize them through the behavior they induce across controlled variations in logical form and interface. By studying which prefixes succeed and how their effects generalize, we characterize how learned contextual pressure can override correct judgments and expose lim",
       "categories": [
-        "cs.LG",
-        "math.OC"
+        "cs.AI",
+        "cs.CL"
       ],
       "keywords": [
-        "agent",
-        "RAG"
+        "benchmark"
       ],
-      "score": 54.0,
+      "score": 55.0,
       "decision": "持续观察",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16177v1"
+          "url": "http://arxiv.org/abs/2607.18228v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16177v1"
+          "url": "https://arxiv.org/pdf/2607.18228v1"
         }
       ],
-      "llm_reason": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力系统实时控制时的样本效率瓶颈，用物理先验（系统方程/守恒律）增强 RL 来压缩探索空间。论文→理论层面，它把'物理先验作为 RL 的归纳偏置'形式化，用已知动力学结构约束策略搜索，减少高维空间中的探索-利用困境；工程实践层面，'用领域先验约束学习'这一模式可迁移到任何样本昂贵的 RL 场景（不止控制），例如用业务约束引导 Agent 探索；趋势层面，physics-informed ML 与 RL 的融合是控制/仿真领域的稳定方向。领域（动力系统控制）与团队 Agent/推理/基础设施主线交集有限，方法论启发大于直接复用，无代码链接，归为长尾保存。",
-      "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
+      "llm_reason": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理 benchmark 上预置不透明的连续向量前缀，保持模型参数不变，观察哪些前缀能诱导错误判断以及其效果如何泛化。论文→理论层面，它把'学习的上下文压力能否覆盖正确逻辑判断'作为探针，揭示 LLM 逻辑推理的脆弱性——不透明的连续向量可以系统性地翻转模型在形式逻辑任务上的正确性；工程实践层面，对 LLM 可靠性/安全测试有参考：soft prefix 攻击是一种白盒威胁模型（需要访问模型梯度），但它揭示的'逻辑判断可被学习的上下文压力操纵'这一现象对理解 LLM 的推理鲁棒性有诊断价值；趋势层面，LLM 推理鲁棒性探针是安全评测的细分方向。证据为受控实验设计。短板：无代码链接（待核验），soft prefix 的构造方法、攻击成功率、在更大模型上的效果、防御策略为待验项。方法论启发有价值但偏研究探索，归为长尾保存。",
+      "id": "logical-judgments-under-pressure-diagnosing-syllogistic-stability-with-learned-soft-prefixes",
       "value_type": "long_tail",
       "matched_topics": [
-        "ai-agent"
+        "llm-evaluation",
+        "security-governance"
       ],
       "score_breakdown": {
         "novelty": 4.8,
         "problem_importance": 5.15,
         "relevance": 5.0,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
         "long_tail_potential": 3.5,
-        "asset_convertibility": 4.8,
+        "asset_convertibility": 5.6,
         "actionability": 5.0,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
@@ -564,69 +721,68 @@
         "reproducibility_risk": 5.0
       },
       "trend_status": "long_tail_watch",
-      "brief_cn": "AI Agent：Reinforcement learning (RL) has recently emerged as a promising feedback contr…",
-      "one_line_judgement": "值得先保存：Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/B…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
+      "brief_cn": "LLM 评测：To test how correct logical judgments respond to learned context, we prepend a…",
+      "one_line_judgement": "值得先保存：Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 …",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
+      "long_tail_summary": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理",
       "related_trends": [
-        "agentic-world-modeling"
+        "coding-agent"
       ],
-      "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems"
+      "detail_path": "paper-detail.html?id=logical-judgments-under-pressure-diagnosing-syllogistic-stability-with-learned-soft-prefixes"
     },
     {
-      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+      "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
       "authors": [
-        "Owen Lockwood",
-        "Jérémy Béjanin",
-        "Joost Bus",
-        "Christopher Chamberland",
-        "Patrick Huembeli"
+        "Yi Tang",
+        "Xinyi Shang",
+        "Jiacheng Cui",
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16183v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16183v1",
+      "url": "http://arxiv.org/abs/2607.18230v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18230v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from ba",
+      "abstract": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level image tampering detection in modern VLMs like ChatGPT, Gemini, Qwen-Image, etc., aiming to learn tampering localization models that remain robust across diverse VLM-generated manipulation distributions.",
       "categories": [
-        "cs.LG",
-        "cs.ET",
-        "physics.app-ph"
+        "cs.CV",
+        "cs.AI"
       ],
       "keywords": [
         "RAG"
       ],
-      "score": 50.0,
+      "score": 53.0,
       "decision": "持续观察",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16183v1"
+          "url": "http://arxiv.org/abs/2607.18230v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16183v1"
+          "url": "https://arxiv.org/pdf/2607.18230v1"
         }
       ],
-      "llm_reason": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing（Lockwood/Béjanin/Bus/Chamberland/Huembeli）提出用热力学计算栈（基于 Langevin 动力学的随机模拟物理硬件）来应对 ML 工作负载不断攀升的能耗与延迟。论文→理论层面，它探索用物理随机过程原生做采样/优化（绕过冯·诺依曼瓶颈），是'用物理原生计算替代数字模拟'的前沿方向；工程实践层面，当前属硬件蓝图阶段，离软件工程团队直接可用还很远，但作为'未来推理硬件'的长期信号值得知晓——若热力学采样硬件成熟，可能从底层改变概率推理/扩散采样的成本结构；趋势层面，非传统计算（光子/热力学/模拟）是 AI 硬件的长线赌注。纯理论蓝图、无代码、落地时间表不确定，标注的 'RAG' 关键词系误标，归为长尾观察。",
-      "id": "a-blueprint-for-equilibrium-based-differentiable-continuous-variable-thermodynamic-computing",
+      "llm_reason": "Simple Domain Generalization for Pixel-Level Image Tampering Detection（Tang/Shang/Cui/Bsharat/Liu）研究现代 VLM（ChatGPT/Gemini/Qwen-Image 等）生成图像的像素级篡改检测，目标是让检测模型在跨 VLM 生成分布和分布外迁移下保持鲁棒。论文→理论层面，它把'AI 生成图像检测'从二分类问题推进到域泛化问题——不同 VLM 生成的篡改痕迹分布不同，检测器需要在未见过的 VLM 上保持泛化；工程实践层面，对内容安全/审核 pipeline 有参考：若需要检测 AI 生成/编辑图像，应评估检测器的跨模型泛化能力而非只在单一生成器上测试；趋势层面，AI 内容溯源与检测是安全治理的持续方向。证据为域泛化实验设计。短板：无代码链接（待核验），具体的域泛化方法、测试的 VLM 范围、跨模型检测准确率为待验项。标注的 'RAG' 关键词系误标。领域（CV 安全）与团队主线交集有限，归为长尾保存。",
+      "id": "simple-domain-generalization-for-strong-pixel-level-image-tampering-detection-in-modern-vlms",
       "value_type": "long_tail",
       "matched_topics": [
-        "inference-serving"
+        "security-governance"
       ],
       "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 5.8,
-        "relevance": 6.2,
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
         "evidence_strength": 4.5,
         "engineering_testability": 3.5,
         "trend_signal": 3.5,
@@ -635,64 +791,133 @@
         "actionability": 3.8,
         "noise_risk": 1.2,
         "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 2.2,
+        "low_relevance_penalty": 3.6,
         "engineering_cost_penalty": 2.5,
         "reproducibility_risk": 5.0
       },
       "trend_status": "long_tail_watch",
-      "brief_cn": "推理与服务：To address the escalating energy and latency demands of machine-learning workl…",
-      "one_line_judgement": "值得先保存：A Blueprint for Equilibrium-Based Differentiable Continuous-Variable T…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
+      "brief_cn": "安全与治理：Modern vision-language models (VLMs) have significantly improved image generat…",
+      "one_line_judgement": "值得先保存：Simple Domain Generalization for Pixel-Level Image Tampering Detection…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
       "value_type_label": "长尾价值",
       "trend_stage_label": "长尾观察",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "long_tail_summary": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing（Loc",
+      "long_tail_summary": "Simple Domain Generalization for Pixel-Level Image Tampering Detection（Tang/Shang/Cui/Bsharat/Li",
       "related_trends": [],
-      "detail_path": "paper-detail.html?id=a-blueprint-for-equilibrium-based-differentiable-continuous-variable-thermodynamic-computing"
+      "detail_path": "paper-detail.html?id=simple-domain-generalization-for-strong-pixel-level-image-tampering-detection-in-modern-vlms"
     },
     {
-      "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
+      "title": "Causal Discovery on Irregular Time Series",
       "authors": [
-        "Gabriel Samberg",
-        "YoonHaeng Hur",
-        "Yuehaw Khoo",
-        "Nir Sharon"
+        "Martim Penim",
+        "Ricardo Ribeiro Pereira",
+        "Jacopo Bono",
+        "Hugo Ferreira",
+        "Mário A. T. Figueiredo"
       ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
       "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16178v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16178v1",
+      "url": "http://arxiv.org/abs/2607.18226v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18226v1",
       "openreview_url": "",
       "paperswithcode_url": "",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as individual points are often interchangeable within a coherent region, finding a robust region-to-region alignment is more desirable than establishing a precise point-to-point correspondence. To this end, we propose a novel approach for cluster-aware matching based on Laplacian Optimal Transport (La",
+      "abstract": "Causal discovery methods have shown strong performance in temporal systems, but they typically rely on regular and discrete lag structures, limiting their applicability to regularly sampled data. However, many real-world tasks require dealing with irregularly sampled streams of events, such as sensor streams, healthcare data, and financial transactions. In this work, we propose an extension of PCMCI+, a state-of-the-art method for causal discovery on regular multivariate time series, to allow fo",
       "categories": [
-        "stat.ML",
         "cs.LG",
-        "math.NA",
         "stat.ME"
       ],
-      "keywords": [
-        "RAG"
-      ],
-      "score": 44.0,
+      "keywords": [],
+      "score": 45.0,
       "decision": "暂时忽略",
       "links": [
         {
           "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16178v1"
+          "url": "http://arxiv.org/abs/2607.18226v1"
         },
         {
           "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16178v1"
+          "url": "https://arxiv.org/pdf/2607.18226v1"
         }
       ],
-      "llm_reason": "Cluster-Aware Matching via Laplacian Optimal Transport（Samberg/Hur/Khoo/Sharon）提出用拉普拉斯最优传输做'区域到区域'的鲁棒匹配，而非逐点对应。论文→理论层面是用谱图/OT 工具解决点云匹配中的簇结构对齐，属应用数学方法；工程实践层面，与团队主线（Agent/推理服务/基础设施/评测）几乎无交集，标注的 'RAG' 关键词系误标；趋势层面属 OT 应用数学的长尾分支。方法密度高、领域窄，无代码链接，短期工程迁移价值低。",
-      "id": "cluster-aware-matching-via-laplacian-optimal-transport",
+      "llm_reason": "Causal Discovery on Irregular Time Series（Penim/Pereira/Bono/Ferreira/Figueiredo）将 PCMCI+ 因果发现方法扩展到不规则采样时间序列。论文→理论层面是把条件独立性检验框架从规则离散滞后推广到连续时间/不规则采样设定，属统计因果推断的方法论改进；工程实践层面，领域（因果发现/时间序列统计）与团队 Agent/推理服务/基础设施主线交集有限，方法虽严谨但迁移路径不清晰；趋势层面属因果发现方法论的细分长尾。无代码链接，工程迁移价值低，归为忽略。",
+      "id": "causal-discovery-on-irregular-time-series",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Causal discovery methods have shown strong performance in temporal systems, bu…",
+      "one_line_judgement": "当前可忽略：Causal Discovery on Irregular Time Series（Penim/Pereira/Bono/Ferreira/…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "Causal Discovery on Irregular Time Series（Penim/Pereira/Bono/Ferreira/Figueiredo）将 PCMCI+ 因果发现方法",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=causal-discovery-on-irregular-time-series"
+    },
+    {
+      "title": "GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis",
+      "authors": [
+        "Naoto Usuyama",
+        "Jeya Maria Jose Valanarasu",
+        "Sicong Yao",
+        "Hanwen Xu",
+        "Jaspreet Bagga"
+      ],
+      "published": "2026-07-20",
+      "updated": "2026-07-20",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.18218v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18218v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Foundation models have emerged as a driving force in computational pathology, with the potential to transform cancer diagnosis, prognosis, and treatment selection by learning transferable representations from large-scale histopathology data. A growing landscape of pathology foundation models now spans diverse data sources, architectures, and downstream applications. However, most pretrained models operate only at the image-tile level, use restrictive licenses, and remain computationally expensiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "memory",
+        "RAG"
+      ],
+      "score": 42.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.18218v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.18218v1"
+        }
+      ],
+      "llm_reason": "GigaPath-Flash and GigaTIME-Flash（Usuyama/Valanarasu/Yao/Xu/Bagga）提出高效的病理学基础模型，用于全切片图像和肿瘤微环境分析。论文→理论层面是计算病理学的高效基础模型设计（更轻量的 tile 级 + slide 纯架构），属医疗 AI 的垂直应用；工程实践层面，领域（数字病理/癌症诊断）与团队 Agent/推理服务/基础设施/评测主线完全无交集，标注的 'memory/RAG' 关键词系误标；趋势层面属医疗 AI 基础模型的垂直方向。无代码链接，工程迁移价值极低，归为忽略。",
+      "id": "gigapath-flash-and-gigatime-flash-efficient-pathology-foundation-models-for-whole-slide-and-tumor-microenvironment-analysis",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -708,287 +933,67 @@
         "noise_risk": 2.4,
         "weak_evidence_penalty": 5.0,
         "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
+        "engineering_cost_penalty": 4.0,
         "reproducibility_risk": 5.0
       },
       "trend_status": "noise",
-      "brief_cn": "前沿论文：In many applications of matching, the point clouds to be matched are not merel…",
-      "one_line_judgement": "当前可忽略：Cluster-Aware Matching via Laplacian Optimal Transport（Samberg/Hur/Kho…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
+      "brief_cn": "前沿论文：Foundation models have emerged as a driving force in computational pathology, …",
+      "one_line_judgement": "当前可忽略：GigaPath-Flash and GigaTIME-Flash（Usuyama/Valanarasu/Yao/Xu/Bagga）提出高效…",
+      "first_seen_date": "2026-07-22",
+      "first_deep_dive_daily": "2026-07-22",
       "value_type_label": "暂时忽略",
       "trend_stage_label": "噪声",
       "future_trigger": "待更多证据",
-      "long_tail_summary": "Cluster-Aware Matching via Laplacian Optimal Transport（Samberg/Hur/Khoo/Sharon）提出用拉普拉斯最优传输做'区域到区",
+      "long_tail_summary": "GigaPath-Flash and GigaTIME-Flash（Usuyama/Valanarasu/Yao/Xu/Bagga）提出高效的病理学基础模型，用于全切片图像和肿瘤微环境分析。论",
       "related_trends": [],
-      "detail_path": "paper-detail.html?id=cluster-aware-matching-via-laplacian-optimal-transport"
-    },
-    {
-      "title": "Behaviour-Conditioned Neural Processes for Adaptive Residential Short-Term Load Forecasting",
-      "authors": [
-        "Ramin Soleimani",
-        "Andrea Visentin",
-        "Dirk Pesch"
-      ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16168v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16168v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Residential short-term load forecasting (STLF) is challenging because household demand is heterogeneous, temporally variable, and shaped by diverse behavioural routines. This work investigates whether inferred behavioural structure can be embedded within the forecasting mechanism of a Neural Process-based probabilistic model, rather than used only as an external grouping signal, for context-conditioned residential STLF. We propose a behaviour-conditioned Attentive Neural Process framework that t",
-      "categories": [
-        "cs.LG"
-      ],
-      "keywords": [
-        "RAG"
-      ],
-      "score": 42.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16168v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16168v1"
-        }
-      ],
-      "llm_reason": "Behaviour-Conditioned Neural Processes for Residential Short-Term Load Forecasting（Soleimani/Visentin/Pesch）用行为条件化的注意力神经过程做居民短期用电负荷的概率预测。论文→理论层面是把行为结构嵌入神经过程的条件化机制，属时序概率模型应用；工程实践层面，领域（智能电网/负荷预测）与本技术雷达主线几乎无交集，标注的 'RAG' 关键词系误标；趋势层面属能源 ML 的垂直应用。无代码链接，工程迁移价值极低。",
-      "id": "behaviour-conditioned-neural-processes-for-adaptive-residential-short-term-load-forecasting",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.05,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 5.4,
-        "actionability": 5.0,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：Residential short-term load forecasting (STLF) is challenging because househol…",
-      "one_line_judgement": "当前可忽略：Behaviour-Conditioned Neural Processes for Residential Short-Term Load…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Behaviour-Conditioned Neural Processes for Residential Short-Term Load Forecasting（Soleimani/Vis",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=behaviour-conditioned-neural-processes-for-adaptive-residential-short-term-load-forecasting"
-    },
-    {
-      "title": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment",
-      "authors": [
-        "Tam Bang",
-        "Hussam Abubakr",
-        "Emiliano de la Garza Villarreal",
-        "Truc Phuong Nguyen",
-        "Austin Harris"
-      ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16156v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16156v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of multi-agent interactions demands continuous, real-time monitoring systems capable of anticipating conflicts before they escalate into crashes. We present PRISA, a modular infrastructure LiDAR framework leveraging privacy-preserving, low-light-robust roadside sensors for long-term traffic observation ",
-      "categories": [
-        "cs.LG",
-        "eess.SY"
-      ],
-      "keywords": [
-        "agent",
-        "evaluation",
-        "RAG"
-      ],
-      "score": 42.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16156v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16156v1"
-        }
-      ],
-      "llm_reason": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment（Bang/Abubakr/de la Garza Villarreal/Nguyen/Harris）用路侧 LiDAR 做交叉路口安全的实时多智能体交互监控。论文→理论层面是多智能体交通场景的感知-预测框架，属自动驾驶基础设施应用；工程实践层面，领域（交通感知/道路安全）与团队 Agent/推理/基础设施主线无直接交集，标注的 'agent/evaluation/RAG' 关键词均系泛化误标；趋势层面属智慧交通的垂直应用。无代码链接，工程迁移价值低。",
-      "id": "prisa-proactive-infrastructure-lidar-framework-for-intersection-safety-assessment",
-      "value_type": "ignore",
-      "matched_topics": [
-        "ai-agent",
-        "rag-knowledge",
-        "inference-serving",
-        "ai-k8s-platform",
-        "data-engineering",
-        "security-governance"
-      ],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 8.4,
-        "relevance": 10,
-        "evidence_strength": 4.5,
-        "engineering_testability": 4.6,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 6.2,
-        "actionability": 5.0,
-        "noise_risk": 1.2,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "AI Agent：Urban intersections are among the most hazardous locations in road networks, p…",
-      "one_line_judgement": "当前可忽略：PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safet…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment（Bang/Abubakr/",
-      "related_trends": [
-        "agentic-world-modeling",
-        "context-engineering"
-      ],
-      "detail_path": "paper-detail.html?id=prisa-proactive-infrastructure-lidar-framework-for-intersection-safety-assessment"
-    },
-    {
-      "title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
-      "authors": [
-        "Midori Kato",
-        "Kevin A. Urquía-Calderón",
-        "Inar Timiryasov",
-        "Oleg Ruchayskiy"
-      ],
-      "published": "2026-07-17",
-      "updated": "2026-07-17",
-      "source": "arXiv",
-      "url": "http://arxiv.org/abs/2607.16144v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16144v1",
-      "openreview_url": "",
-      "paperswithcode_url": "",
-      "code_url": "",
-      "benchmark_url": "",
-      "project_url": "",
-      "abstract": "In this work we demonstrate that a single transformer-based generative model can capture Standard Model structure spanning five decades of invariant mass, from the sub-GeV regime to the TeV continuum, a range that no single Monte Carlo sample covers. To achieve this we design \\textsc{ShellFlow}, a Riemannian conditional flow matching model that, given the recorded event composition, generates each particle on its on-shell manifold. Its only physics priors are the on-shell condition and the invar",
-      "categories": [
-        "hep-ph",
-        "cs.LG",
-        "hep-ex"
-      ],
-      "keywords": [],
-      "score": 40.0,
-      "decision": "暂时忽略",
-      "links": [
-        {
-          "label": "arXiv",
-          "url": "http://arxiv.org/abs/2607.16144v1"
-        },
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/pdf/2607.16144v1"
-        }
-      ],
-      "llm_reason": "Learning Standard Model structure from LHC data with Riemannian flow matching（Kato/Urquía-Calderón/Timiryasov/Ruchayskiy）用基于 Transformer 的黎曼流匹配生成模型（ShellFlow），从 LHC 数据中学习跨越五个数量级不变质量的标准模型结构。论文→理论层面是用条件流匹配在 on-shell 流形上做粒子物理生成建模，属物理+生成模型交叉；工程实践层面，领域（粒子物理/高能物理）与团队基础设施/Agent/评测主线完全无交集；趋势层面属科学 ML 的长尾应用。方法虽精巧但领域极窄，无代码链接，工程迁移价值极低。",
-      "id": "learning-standard-model-structure-from-lhc-data-with-riemannian-flow-matching",
-      "value_type": "ignore",
-      "matched_topics": [],
-      "score_breakdown": {
-        "novelty": 4.8,
-        "problem_importance": 4.5,
-        "relevance": 3.8,
-        "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "asset_convertibility": 4.0,
-        "actionability": 3.8,
-        "noise_risk": 2.4,
-        "weak_evidence_penalty": 5.0,
-        "low_relevance_penalty": 5.0,
-        "engineering_cost_penalty": 2.5,
-        "reproducibility_risk": 5.0
-      },
-      "trend_status": "noise",
-      "brief_cn": "前沿论文：In this work we demonstrate that a single transformer-based generative model c…",
-      "one_line_judgement": "当前可忽略：Learning Standard Model structure from LHC data with Riemannian flow m…",
-      "first_seen_date": "2026-07-21",
-      "first_deep_dive_daily": "2026-07-21",
-      "value_type_label": "暂时忽略",
-      "trend_stage_label": "噪声",
-      "future_trigger": "待更多证据",
-      "long_tail_summary": "Learning Standard Model structure from LHC data with Riemannian flow matching（Kato/Urquía-Calder",
-      "related_trends": [],
-      "detail_path": "paper-detail.html?id=learning-standard-model-structure-from-lhc-data-with-riemannian-flow-matching"
+      "detail_path": "paper-detail.html?id=gigapath-flash-and-gigatime-flash-efficient-pathology-foundation-models-for-whole-slide-and-tumor-microenvironment-analysis"
     }
   ],
   "long_tail_highlights": [
     {
-      "id": "physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems",
-      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-      "direction": "AI Agent",
-      "long_tail_type": "工程抽象",
-      "why_save": "Physics-enhanced RL for real-time optimal control（Tomasetto/Bottegni/Bruni/Manzoni）针对 RL 用于非线性动力",
+      "id": "automated-discovery-has-no-universally-superior-harness",
+      "title": "Automated Discovery Has No Universally Superior Harness",
+      "direction": "LLM 评测",
+      "long_tail_type": "可迁移方法",
+      "why_save": "Automated Discovery Has No Universally Superior Harness（Gupta/Lei/Lu/Anumanchipalli/Choshen）对自主发",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-11",
-      "detail_path": "paper-detail.html?id=physics-enhanced-reinforcement-learning-for-real-time-optimal-control-of-dynamical-systems"
+      "revisit_date": "2026-08-12",
+      "detail_path": "paper-detail.html?id=automated-discovery-has-no-universally-superior-harness"
     },
     {
-      "id": "a-blueprint-for-equilibrium-based-differentiable-continuous-variable-thermodynamic-computing",
-      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
-      "direction": "推理与服务",
+      "id": "logical-judgments-under-pressure-diagnosing-syllogistic-stability-with-learned-soft-prefixes",
+      "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+      "direction": "LLM 评测 / 安全与治理",
       "long_tail_type": "工程抽象",
-      "why_save": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing（Loc",
+      "why_save": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-11",
-      "detail_path": "paper-detail.html?id=a-blueprint-for-equilibrium-based-differentiable-continuous-variable-thermodynamic-computing"
+      "revisit_date": "2026-08-12",
+      "detail_path": "paper-detail.html?id=logical-judgments-under-pressure-diagnosing-syllogistic-stability-with-learned-soft-prefixes"
     },
     {
-      "id": "scenebind-binding-what-and-where-across-vision-audio-and-language",
-      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
-      "direction": "Multimodal Agent",
+      "id": "simple-domain-generalization-for-strong-pixel-level-image-tampering-detection-in-modern-vlms",
+      "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+      "direction": "安全与治理",
       "long_tail_type": "工程抽象",
-      "why_save": "SceneBind 提出全模态（视觉/音频/语言）场景表示，把实例级语义（what）与显式 3D 空间结构（where）绑定：用全局语义嵌入 + 物体中心的语义-空间槽表示场景。论文→理论层面",
+      "why_save": "Simple Domain Generalization for Pixel-Level Image Tampering Detection（Tang/Shang/Cui/Bsharat/Li",
       "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
       "reusable_assets": [
         "Prompt",
         "Skill",
         "Checklist"
       ],
-      "revisit_date": "2026-08-10",
-      "detail_path": "paper-detail.html?id=scenebind-binding-what-and-where-across-vision-audio-and-language"
+      "revisit_date": "2026-08-12",
+      "detail_path": "paper-detail.html?id=simple-domain-generalization-for-strong-pixel-level-image-tampering-detection-in-modern-vlms"
     }
   ],
   "common_research_path": [

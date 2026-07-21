@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-21T04:39:33.700199",
+  "updated_at": "2026-07-22T04:34:04.456879",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-22",
+      "title": "论文价值发现日报 - 2026-07-22",
+      "deep_dive_title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "deep_dive_url": "http://arxiv.org/abs/2607.18213v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "分两步：(1) 论文工程（最高优先级）——在自有 coding agent（SWE-agent/OpenHands/Aider 类）上评估 SWE-Pruner Pro 思路：选取 Agent 的某一 Transformer 层，训练轻量 head 读取 token 级隐层激活输出保留/剪枝概率，对 tool output 做注入前过滤，测 resolve rate 与 token 成本/延迟的变化。如果无自有训练环境，先做'离线分析'：收集 Agent 处理 SWE-bench 任务时的隐层激活与最终保留/剪除的 token 标签，验证隐层激活与剪枝决策的相关性。(2) 理论吸收——把 Vector Search as NN Matching 的因果视角转化为 RAG 检索质量评测的新维度草案：定义'检索邻居因果可比性'指标（检索到的样本在协变量分布上是否与查询可比），并列出实现该指标的最低成本路径。",
+      "max_uncertainty": "今日 10 篇论文的代码、benchmark、Papers with Code 链接均为空（截至 2026-07-22 未更新），证据仅基于 arXiv 摘要与论文自述。SWE-Pruner Pro 的轻量 head 训练成本、剪枝决策的精度-召回权衡、与不同基础模型（开源/闭源）的兼容性、对最终 resolve rate 的影响幅度为关键未知项；Patch Policy 的具体模型规模、推理延迟、与大型 VLA 的性能-效率对比、真实机器人迁移鲁棒性为关键未知项；Vector Search as NN Matching 的理论框架在工程 RAG 中的可操作化路径、embedding 空间因果假设的可验证性为关键未知项；EoBs 测试的 LLM 范围与类型学维度完备性为关键未知项。元层不确定性：数据新鲜度已连续 2 天正常（07-21/07-22 均为 07-20 新批次），但 fetch_papers.py 的 submittedDate 过滤 + 跨日去重缺陷仍未修复，下一个 arXiv 静默期仍可能复发。",
+      "one_line_judgement": "SWE-Pruner Pro 直击 coding agent 规模化最痛的上下文成本问题——它的核心洞察是'Agent 自己已经知道什么该剪'，只需在隐层挂一个轻量 head 做内省式过滤，就能在不增加第二个模型的前提下压缩有效上下文、降延迟、降 token 成本。这是任何运行 SWE-agent/OpenHands/Aider 类系统的人都可借鉴的工程模式。Vector Search as NN Matching 则为 RAG 系统引入了因果视角：检索到的'邻居'在什么条件下才是有效的反事实证据？",
+      "path": "daily-detail.html?date=2026-07-22"
+    },
     {
       "date": "2026-07-21",
       "title": "论文价值发现日报 - 2026-07-21",
@@ -378,19 +391,6 @@
       "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认",
       "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
       "path": "daily-detail.html?date=2026-06-13"
-    },
-    {
-      "date": "2026-06-12",
-      "title": "论文价值发现日报 - 2026-06-12",
-      "deep_dive_title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
-      "deep_dive_url": "http://arxiv.org/abs/2606.12412v1",
-      "decision": "暂时忽略",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "daily_action": "完成摘要精读与最小实验设计",
-      "max_uncertainty": "缺少多源工程证据",
-      "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
-      "path": "daily-detail.html?date=2026-06-12"
     }
   ]
 }

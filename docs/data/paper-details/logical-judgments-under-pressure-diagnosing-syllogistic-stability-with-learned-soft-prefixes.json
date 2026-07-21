@@ -1,0 +1,130 @@
+{
+  "id": "logical-judgments-under-pressure-diagnosing-syllogistic-stability-with-learned-soft-prefixes",
+  "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+  "authors": [
+    "Brian K Chen"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-20",
+  "url": "http://arxiv.org/abs/2607.18228v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.18228v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-22",
+  "first_deep_dive_daily": "2026-07-22",
+  "value_type": "long_tail",
+  "value_type_label": "长尾价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 5.0,
+    "evidence": 4.95,
+    "engineering_testability": 3.5,
+    "trend_signal": 5.45,
+    "long_tail_potential": 3.5,
+    "actionability": 5.0,
+    "noise_risk": 1.2
+  },
+  "score": 55.0,
+  "decision": "持续观察",
+  "one_line_judgement": "值得先保存：Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 …",
+  "one_line_essence": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理 benchmark 上预置不透明的连续向量前缀，保持模型参数不变，观察哪些前缀能诱导错误判断以及其效果如何泛化。论文→理论层面，它把'学习的上下文压力能否覆盖正确逻辑判断'作为探针，揭示 LLM 逻辑推理的脆弱性——不透明的连续向量可以系统性地翻转模型在形式逻辑任务上的正确性；工程实践层面，对 LLM 可靠性/安全测试有参考：soft prefix 攻击是一种白盒威胁模型（需要访问模型梯度），但它揭示的'逻辑判断可被学习的上下文压力操纵'这一现象对理解 LLM 的推理鲁棒性有诊断价值；趋势层面，LLM 推理鲁棒性探针是安全评测的细分方向。证据为受控实验设计。短板：无代码链接（待核验），soft prefix 的构造方法、攻击成功率、在更大模型上的效果、防御策略为待验项。方法论启发有价值但偏研究探索，归为长尾保存。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理 benchmark 上预置不透明的连续向量前缀，保持模型参数不变，观察哪些前缀能诱导错误判断以及其效果如何泛化。论文→理论层面，它把'学习的上下文压力能否覆盖正确逻辑",
+  "research_position": "benchmark",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "long_tail_watch",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "Logical Judgments Under Pressure（Brian K Chen）用学习到的软前缀（soft prefix）测试 LLM 逻辑推理的稳定性：在一个标注精确的三段论推理",
+    "future_trigger": [
+      "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": "2026-08-12"
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [],
+    "trend_actions": [],
+    "long_tail_actions": [
+      "加入长尾库",
+      "标注未来触发条件",
+      "先沉淀 Prompt / Skill 草案"
+    ],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.18228v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.18228v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=logical-judgments-under-pressure-diagnosing-syllogistic-stability-with-learned-soft-prefixes",
+  "daily_path": "daily-detail.html?date=2026-07-22",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}
