@@ -19,65 +19,65 @@
   ],
   "candidate_papers": [
     {
-      "id": "swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
-      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
-      "detail_path": "paper-detail.html?id=swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+      "id": "copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
+      "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+      "detail_path": "paper-detail.html?id=copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
       "direction": "未分类",
       "value_type": "immediate",
       "value_type_label": "即时价值",
-      "score": 81.0,
+      "score": 88.0,
       "decision": "重点学习",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "patch-policy-efficient-embodied-control-via-dense-visual-representations",
-      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
-      "detail_path": "paper-detail.html?id=patch-policy-efficient-embodied-control-via-dense-visual-representations",
+      "id": "coderescue-budget-calibrated-recovery-routing-for-coding-agents",
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+      "detail_path": "paper-detail.html?id=coderescue-budget-calibrated-recovery-routing-for-coding-agents",
+      "direction": "未分类",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 86.0,
+      "decision": "重点学习",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": true
+    },
+    {
+      "id": "agents-in-the-wild-where-research-meets-deployment",
+      "title": "Agents in the Wild: Where Research Meets Deployment",
+      "detail_path": "paper-detail.html?id=agents-in-the-wild-where-research-meets-deployment",
       "direction": "未分类",
       "value_type": "trend",
       "value_type_label": "趋势价值",
-      "score": 73.0,
+      "score": 78.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": true
     },
     {
-      "id": "vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
-      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
-      "detail_path": "paper-detail.html?id=vector-search-as-nearest-neighbor-matching-rag-based-policy-learning-in-causal-inference",
+      "id": "appearance-pointers-multimodal-region-control-of-diffusion-transformers",
+      "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+      "detail_path": "paper-detail.html?id=appearance-pointers-multimodal-region-control-of-diffusion-transformers",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 70.0,
-      "decision": "轻量试点",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": true
-    },
-    {
-      "id": "it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
-      "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
-      "detail_path": "paper-detail.html?id=it-s-not-what-you-say-it-s-how-you-say-it-evaluating-llm-responses-to-expressions-of-belief",
-      "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 68.0,
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "score": 65.0,
       "decision": "轻量试点",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": false
     },
     {
-      "id": "the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
-      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
-      "detail_path": "paper-detail.html?id=the-many-senses-of-visual-similarity-a-text-prompted-image-perceptual-metric",
+      "id": "1-lipschitz-neural-networks-on-hadamard-manifolds",
+      "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
+      "detail_path": "paper-detail.html?id=1-lipschitz-neural-networks-on-hadamard-manifolds",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 64.0,
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "score": 54.0,
       "decision": "持续观察",
       "has_code": false,
       "has_benchmark": false,
@@ -220,7 +220,48 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [],
+  "long_tail_saved": [
+    {
+      "id": "appearance-pointers-multimodal-region-control-of-diffusion-transformers",
+      "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+      "detail_path": "paper-detail.html?id=appearance-pointers-multimodal-region-control-of-diffusion-transformers",
+      "why_save": "Appearance Pointers 为 Diffusion Transformer 提供了紧凑的区域级外观控制 token，解决了文生图中文本提示难以精确指定材质/身份/空间排布的痛点。方",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "评测方法"
+      ],
+      "revisit_date": "2026-07-19"
+    },
+    {
+      "id": "1-lipschitz-neural-networks-on-hadamard-manifolds",
+      "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
+      "detail_path": "paper-detail.html?id=1-lipschitz-neural-networks-on-hadamard-manifolds",
+      "why_save": "在 Hadamard 流形上构造 1-Lipschitz 神经网络（Busemann 函数 + 梯度下降型层），为非欧数据（如图嵌入、层次结构）提供可证明的鲁棒性与稳定性保证。理论贡献扎实，但",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "评测方法"
+      ],
+      "revisit_date": "2026-07-19"
+    }
+  ],
   "ignore_reasons": [
     "暂无明确忽略样本，但忽略标准仍需保留。"
   ],

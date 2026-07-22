@@ -78,19 +78,19 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-07-23 · Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning](daily-detail.html?date=2026-07-23) · 即时价值 · 重点学习
 - [2026-07-22 · SWE-Pruner Pro: The Coder LLM Already Knows What to Prune](daily-detail.html?date=2026-07-22) · 即时价值 · 重点学习
 - [2026-07-21 · PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](daily-detail.html?date=2026-07-21) · 即时价值 · 重点学习
 - [2026-07-20 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-20) · 即时价值 · 重点学习
 - [2026-07-19 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-19) · 即时价值 · 重点学习
 - [2026-07-18 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-18) · 即时价值 · 重点学习
 - [2026-07-17 · VisualRepair: Dynamic Tool Calling and Region Focusing for Visual Software Issue Repair](daily-detail.html?date=2026-07-17) · 即时价值 · 重点学习
-- [2026-07-14 · Scalable Visual Pretraining for Language Intelligence](daily-detail.html?date=2026-07-14) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
-- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 178
-- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 173
-- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 178
+- [Agentic World Modeling](trend-detail.html?id=agentic-world-modeling) · 上升 · 关联论文 179
+- [Coding Agent](trend-detail.html?id=coding-agent) · 主流化 · 关联论文 176
+- [Context Engineering](trend-detail.html?id=context-engineering) · 上升 · 关联论文 179
 
 ## 启发沉淀说明
 

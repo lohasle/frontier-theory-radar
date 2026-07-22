@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-22T04:34:04.456879",
+  "updated_at": "2026-07-23T04:34:48.894532",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-23",
+      "title": "论文价值发现日报 - 2026-07-23",
+      "deep_dive_title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+      "deep_dive_url": "http://arxiv.org/abs/2607.19345v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成三件事：在长文档 QA 集上加输入复制率检测验证失败模式、列出 CodeRescue 路由策略的最小 A/B 实验设计、把 Agents in the Wild 的部署挑战整理成 agent 上线 checklist 初稿。",
+      "max_uncertainty": "全部 5 篇论文的代码、benchmark、Papers with Code、OpenReview 链接均暂无；当前评分与分析基于 arXiv 摘要自述，论文正文的实验规模、基线对比与统计显著性尚待核验。",
+      "one_line_judgement": "它首次把'长上下文推理中模型反复复制输入而不真正解题'定义为一个可量化失败模式，并给出 RL 级别的系统性修正方案，直击 RAG、长文档问答、代码库理解等高频场景的工程痛点。",
+      "path": "daily-detail.html?date=2026-07-23"
+    },
     {
       "date": "2026-07-22",
       "title": "论文价值发现日报 - 2026-07-22",
@@ -378,19 +391,6 @@
       "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认；SpatialClaw 的新接口方案细节和评测结果待完整论文",
       "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
       "path": "daily-detail.html?date=2026-06-14"
-    },
-    {
-      "date": "2026-06-13",
-      "title": "论文价值发现日报 - 2026-06-13",
-      "deep_dive_title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
-      "deep_dive_url": "http://arxiv.org/abs/2606.13681v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读 EvoArena 的环境变化建模，审查当前 Agent 系统的环境变化处理策略；评估 HyperTool 的工具工作流折叠方案",
-      "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认",
-      "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
-      "path": "daily-detail.html?date=2026-06-13"
     }
   ]
 }

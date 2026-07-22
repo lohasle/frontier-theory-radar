@@ -4,11 +4,29 @@
   "stage": "主流化",
   "updated_at": "2026-04-28",
   "key_insight": "[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)",
-  "paper_count": 173,
+  "paper_count": 176,
   "practice_count": 0,
   "path": "trend-detail.html?id=coding-agent",
   "markdown_path": "trends/coding-agent.md",
   "related_papers": [
+    {
+      "id": "copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
+      "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+      "detail_path": "paper-detail.html?id=copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 88.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：首次系统性地把'长上下文推理中模型反复复制输入而非真正求解'定义为一个可观测、可度量的失败模式（repetitive copying），并用…",
+      "source": "arXiv",
+      "published": "2026-07-21",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2607.19345v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19345v1"
+    },
     {
       "id": "can-generalist-agents-automate-data-curation",
       "title": "Can Generalist Agents Automate Data Curation?",
@@ -26,6 +44,24 @@
       "paperswithcode_url": "",
       "url": "https://arxiv.org/abs/2606.04261",
       "pdf_url": "https://arxiv.org/pdf/2606.04261"
+    },
+    {
+      "id": "coderescue-budget-calibrated-recovery-routing-for-coding-agents",
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+      "detail_path": "paper-detail.html?id=coderescue-budget-calibrated-recovery-routing-for-coding-agents",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "score": 86.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：直击编码 Agent 上线最痛的成本决策问题：执行失败后该继续用便宜模型重试还是升级到贵模型。提出的 budget-calibrated r…",
+      "source": "arXiv",
+      "published": "2026-07-21",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2607.19338v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19338v1"
     },
     {
       "id": "code2lora-hypernetwork-generated-adapters-for-code-language-models-under-software-evolution",
@@ -548,6 +584,24 @@
       "paperswithcode_url": "",
       "url": "http://arxiv.org/abs/2606.13673v1",
       "pdf_url": "https://arxiv.org/pdf/2606.13673v1"
+    },
+    {
+      "id": "agents-in-the-wild-where-research-meets-deployment",
+      "title": "Agents in the Wild: Where Research Meets Deployment",
+      "detail_path": "paper-detail.html?id=agents-in-the-wild-where-research-meets-deployment",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "score": 78.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：面向'Agent 从研究原型走向生产部署'阶段的综述/Tutorial，系统覆盖鲁棒性、安全、可靠性三类部署挑战，横跨软件工程、科学发现、金…",
+      "source": "arXiv",
+      "published": "2026-07-21",
+      "brief_cn": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "url": "http://arxiv.org/abs/2607.19336v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19336v1"
     },
     {
       "id": "on-policy-self-distillation-with-sampled-demonstrations-reduces-output-diversity",
@@ -3125,20 +3179,20 @@
     }
   ],
   "value_distribution": {
-    "immediate": 31,
-    "trend": 49,
+    "immediate": 33,
+    "trend": 50,
     "long_tail": 31,
     "ignore": 62
   },
   "top_paper": {
-    "id": "can-generalist-agents-automate-data-curation",
-    "title": "Can Generalist Agents Automate Data Curation?",
-    "detail_path": "paper-detail.html?id=can-generalist-agents-automate-data-curation",
-    "score": 87.0,
+    "id": "copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
+    "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+    "detail_path": "paper-detail.html?id=copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
+    "score": 88.0,
     "decision": "重点学习",
-    "value_type": "trend",
-    "value_type_label": "趋势价值",
-    "one_line_judgement": "值得继续观察：直击 AI 开发中最昂贵的人工环节——训练数据策展（data curation）。Curation-Bench 设计精巧：固定模型/训练流程…"
+    "value_type": "immediate",
+    "value_type_label": "即时价值",
+    "one_line_judgement": "今天值得试：首次系统性地把'长上下文推理中模型反复复制输入而非真正求解'定义为一个可观测、可度量的失败模式（repetitive copying），并用…"
   },
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

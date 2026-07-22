@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2607.19345v1": {
+      "score": 88,
+      "value_type": "immediate",
+      "reason": "首次系统性地把'长上下文推理中模型反复复制输入而非真正求解'定义为一个可观测、可度量的失败模式（repetitive copying），并用 evidence-aware RL 进行针对性修正。该失败模式在所有 frontier 长上下文 LLM 上普遍存在且随上下文增长恶化，直接命中 RAG 长文档问答、代码库级理解、法律/金融长文本处理等高频工程场景。方法层（把'是否真正引用证据'作为 RL reward 信号）可迁移到自研 reasoning 训练与 eval pipeline，工程可验证性强。唯一短板是摘要截断且无代码/benchmark 链接，证据强度依赖论文正文待核验。",
+      "matched_topics": ["context-engineering", "rag-knowledge", "llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.19338v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "直击编码 Agent 上线最痛的成本决策问题：执行失败后该继续用便宜模型重试还是升级到贵模型。提出的 budget-calibrated recovery routing 把'剩余预算'纳入路由判断，比传统 cascade（先廉价后升级）更贴近真实多步编码场景。对于自建或采购 coding agent 平台的团队，可直接转化为路由策略 A/B 实验与成本回归监控指标。证据来自执行环境反馈这一可复现设定，但论文未提供代码与 benchmark 入口，工程复现需自建沙箱。",
+      "matched_topics": ["coding-agent", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2607.19336v1": {
+      "score": 78,
+      "value_type": "trend",
+      "reason": "面向'Agent 从研究原型走向生产部署'阶段的综述/Tutorial，系统覆盖鲁棒性、安全、可靠性三类部署挑战，横跨软件工程、科学发现、金融等场景。短期价值不在于单一可复现方法，而在于提供部署 checklist、失败模式 taxonomy 和治理框架的参考骨架。适合沉淀为团队 agent 上线评审清单与安全基线文档。属于趋势资产而非即时可执行方法，证据以综述整合为主。",
+      "matched_topics": ["ai-agent", "llm-evaluation", "security-governance"]
+    },
+    "http://arxiv.org/abs/2607.19344v1": {
+      "score": 65,
+      "value_type": "long_tail",
+      "reason": "Appearance Pointers 为 Diffusion Transformer 提供了紧凑的区域级外观控制 token，解决了文生图中文本提示难以精确指定材质/身份/空间排布的痛点。方法新颖（pointer token 路由到空间区域），但对核心 LLM/Agent 工程栈的直接迁移价值有限，更偏创意工具与 CV/图形学场景。如果团队有 AIGC 设计工具或多模态生成需求可作为候选跟踪，否则作为长尾资产保存，等待代码开源或场景匹配。",
+      "matched_topics": ["multimodal-agent"]
+    },
+    "http://arxiv.org/abs/2607.19335v1": {
+      "score": 54,
+      "value_type": "long_tail",
+      "reason": "在 Hadamard 流形上构造 1-Lipschitz 神经网络（Busemann 函数 + 梯度下降型层），为非欧数据（如图嵌入、层次结构）提供可证明的鲁棒性与稳定性保证。理论贡献扎实，但与当前 LLM/Agent 工程实践距离最远，短期几乎不可直接落地。其'通过 Lipschitz 约束获得可证明鲁棒性'的思想可作为未来安全/对抗鲁棒性方向的长期参考，暂存长尾库。",
+      "matched_topics": []
+    }
+  }
+}

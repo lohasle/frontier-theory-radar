@@ -1,7 +1,739 @@
 {
-  "updated_at": "2026-07-22T04:34:04.459245",
-  "total": 489,
+  "updated_at": "2026-07-23T04:34:48.896938",
+  "total": 499,
   "papers": [
+    {
+      "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+      "authors": [
+        "Lizhe Fang",
+        "Weizhou Shen",
+        "Tianyi Tang",
+        "Yisen Wang"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19345v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19345v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive copying}, where models extensively copy text from the input into their reasoning traces rather than productively solving the problem. We show that this behavior is pervasive across frontier long-context LLMs and intensifies",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 88.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19345v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19345v1"
+        }
+      ],
+      "llm_reason": "首次系统性地把'长上下文推理中模型反复复制输入而非真正求解'定义为一个可观测、可度量的失败模式（repetitive copying），并用 evidence-aware RL 进行针对性修正。该失败模式在所有 frontier 长上下文 LLM 上普遍存在且随上下文增长恶化，直接命中 RAG 长文档问答、代码库级理解、法律/金融长文本处理等高频工程场景。方法层（把'是否真正引用证据'作为 RL reward 信号）可迁移到自研 reasoning 训练与 eval pipeline，工程可验证性强。唯一短板是摘要截断且无代码/benchmark 链接，证据强度依赖论文正文待核验。",
+      "id": "copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning",
+      "value_type": "immediate",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Context Engineering：Large language models that generate step-by-step reasoning traces have achieve…",
+      "one_line_judgement": "今天值得试：首次系统性地把'长上下文推理中模型反复复制输入而非真正求解'定义为一个可观测、可度量的失败模式（repetitive copying），并用…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "首次系统性地把'长上下文推理中模型反复复制输入而非真正求解'定义为一个可观测、可度量的失败模式（repetitive copying），并用 evidence-aware RL 进行针对性修正",
+      "related_trends": [
+        "context-engineering",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning"
+    },
+    {
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+      "authors": [
+        "Qijia He",
+        "Jiayi Cheng",
+        "Chenqian Le",
+        "Rui Wang",
+        "Xunmei Liu"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19338v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19338v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Coding agents increasingly operate in executable environments where a failed attempt produces actionable feedback rather than merely an incorrect answer. Existing cost-aware systems typically treat such failures as cascade decisions: try a cheap model first, then escalate hard cases to a stronger and more expensive model. In coding, however, execution feedback can also make further cheap-model recovery worthwhile, raising a budgeted deployment question: when should an agent spend more cheap comp",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "coding agent",
+        "benchmark"
+      ],
+      "score": 86.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19338v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19338v1"
+        }
+      ],
+      "llm_reason": "直击编码 Agent 上线最痛的成本决策问题：执行失败后该继续用便宜模型重试还是升级到贵模型。提出的 budget-calibrated recovery routing 把'剩余预算'纳入路由判断，比传统 cascade（先廉价后升级）更贴近真实多步编码场景。对于自建或采购 coding agent 平台的团队，可直接转化为路由策略 A/B 实验与成本回归监控指标。证据来自执行环境反馈这一可复现设定，但论文未提供代码与 benchmark 入口，工程复现需自建沙箱。",
+      "id": "coderescue-budget-calibrated-recovery-routing-for-coding-agents",
+      "value_type": "immediate",
+      "matched_topics": [
+        "coding-agent",
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "Coding Agent：Coding agents increasingly operate in executable environments where a failed a…",
+      "one_line_judgement": "今天值得试：直击编码 Agent 上线最痛的成本决策问题：执行失败后该继续用便宜模型重试还是升级到贵模型。提出的 budget-calibrated r…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "即时价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "直击编码 Agent 上线最痛的成本决策问题：执行失败后该继续用便宜模型重试还是升级到贵模型。提出的 budget-calibrated recovery routing 把'剩余预算'纳入路",
+      "related_trends": [
+        "coding-agent",
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=coderescue-budget-calibrated-recovery-routing-for-coding-agents"
+    },
+    {
+      "title": "Agents in the Wild: Where Research Meets Deployment",
+      "authors": [
+        "Grace Hui Yang",
+        "Pranav N. Venkit",
+        "Hooman Sedghamiz",
+        "Enrico Santus",
+        "Victor Dibia"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19336v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19336v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes to production scale deployments across domains such as software engineering, scientific discovery, and finance. While academic work has emphasized benchmarks and algorithmic innovation, deployment raises new challenges around robustness, safety, and reliability. This tutorial brings together research",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "evaluation",
+        "benchmark",
+        "planning"
+      ],
+      "score": 78.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19336v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19336v1"
+        }
+      ],
+      "llm_reason": "面向'Agent 从研究原型走向生产部署'阶段的综述/Tutorial，系统覆盖鲁棒性、安全、可靠性三类部署挑战，横跨软件工程、科学发现、金融等场景。短期价值不在于单一可复现方法，而在于提供部署 checklist、失败模式 taxonomy 和治理框架的参考骨架。适合沉淀为团队 agent 上线评审清单与安全基线文档。属于趋势资产而非即时可执行方法，证据以综述整合为主。",
+      "id": "agents-in-the-wild-where-research-meets-deployment",
+      "value_type": "trend",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 7.75,
+        "relevance": 9.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.7,
+        "trend_signal": 6.0,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging",
+      "brief_cn": "AI Agent：Agentic systems large language model (LLM) based architectures capable of reas…",
+      "one_line_judgement": "值得继续观察：面向'Agent 从研究原型走向生产部署'阶段的综述/Tutorial，系统覆盖鲁棒性、安全、可靠性三类部署挑战，横跨软件工程、科学发现、金…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "趋势价值",
+      "trend_stage_label": "萌芽",
+      "future_trigger": "出现多篇跟进论文、开源项目和工程博客共振",
+      "long_tail_summary": "面向'Agent 从研究原型走向生产部署'阶段的综述/Tutorial，系统覆盖鲁棒性、安全、可靠性三类部署挑战，横跨软件工程、科学发现、金融等场景。短期价值不在于单一可复现方法，而在于提供部",
+      "related_trends": [
+        "agentic-world-modeling",
+        "coding-agent"
+      ],
+      "detail_path": "paper-detail.html?id=agents-in-the-wild-where-research-meets-deployment"
+    },
+    {
+      "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+      "authors": [
+        "Rahul Sajnani",
+        "Yulia Gryaditskaya",
+        "Radomír Měch",
+        "Srinath Sridhar",
+        "Matheus Gadelha"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19344v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19344v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Controllable image generation remains challenging for creative professionals, who often require precise regional control over materials, object identities, and spatial arrangements that cannot be reliably achieved through text prompting alone. Diffusion Transformers (DiTs) can natively ingest heterogeneous tokens stemming from texts and images, but they lack mechanisms for determining where and how these tokens should influence the output. We introduce appearance pointers, compact tokens that gu",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "keywords": [
+        "multimodal"
+      ],
+      "score": 65.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19344v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19344v1"
+        }
+      ],
+      "llm_reason": "Appearance Pointers 为 Diffusion Transformer 提供了紧凑的区域级外观控制 token，解决了文生图中文本提示难以精确指定材质/身份/空间排布的痛点。方法新颖（pointer token 路由到空间区域），但对核心 LLM/Agent 工程栈的直接迁移价值有限，更偏创意工具与 CV/图形学场景。如果团队有 AIGC 设计工具或多模态生成需求可作为候选跟踪，否则作为长尾资产保存，等待代码开源或场景匹配。",
+      "id": "appearance-pointers-multimodal-region-control-of-diffusion-transformers",
+      "value_type": "long_tail",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "Multimodal Agent：Controllable image generation remains challenging for creative professionals, …",
+      "one_line_judgement": "值得先保存：Appearance Pointers 为 Diffusion Transformer 提供了紧凑的区域级外观控制 token，解决了文生图…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "Appearance Pointers 为 Diffusion Transformer 提供了紧凑的区域级外观控制 token，解决了文生图中文本提示难以精确指定材质/身份/空间排布的痛点。方",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=appearance-pointers-multimodal-region-control-of-diffusion-transformers"
+    },
+    {
+      "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
+      "authors": [
+        "Davide Murari",
+        "Marta Ghirardelli",
+        "Ben Adcock",
+        "Elena Celledoni",
+        "Brynjulf Owren"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19335v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19335v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Controlling the Lipschitz constant of a neural network is a standard way to promote robustness and stability. Most existing constraining strategies are designed for Euclidean spaces. In this work, we construct and analyze a class of 1-Lipschitz neural networks on Hadamard manifolds. Our layers are of gradient-descent type, $1$-Lipschitz, and quasi-$α$-firmly nonexpansive. The core building blocks of the proposed architecture are Busemann functions, and we exploit the properties of Busemann gradi",
+      "categories": [
+        "math.NA",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 54.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19335v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19335v1"
+        }
+      ],
+      "llm_reason": "在 Hadamard 流形上构造 1-Lipschitz 神经网络（Busemann 函数 + 梯度下降型层），为非欧数据（如图嵌入、层次结构）提供可证明的鲁棒性与稳定性保证。理论贡献扎实，但与当前 LLM/Agent 工程实践距离最远，短期几乎不可直接落地。其'通过 Lipschitz 约束获得可证明鲁棒性'的思想可作为未来安全/对抗鲁棒性方向的长期参考，暂存长尾库。",
+      "id": "1-lipschitz-neural-networks-on-hadamard-manifolds",
+      "value_type": "long_tail",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch",
+      "brief_cn": "前沿论文：Controlling the Lipschitz constant of a neural network is a standard way to pr…",
+      "one_line_judgement": "值得先保存：在 Hadamard 流形上构造 1-Lipschitz 神经网络（Busemann 函数 + 梯度下降型层），为非欧数据（如图嵌入、层次结…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "长尾价值",
+      "trend_stage_label": "长尾观察",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "long_tail_summary": "在 Hadamard 流形上构造 1-Lipschitz 神经网络（Busemann 函数 + 梯度下降型层），为非欧数据（如图嵌入、层次结构）提供可证明的鲁棒性与稳定性保证。理论贡献扎实，但",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=1-lipschitz-neural-networks-on-hadamard-manifolds"
+    },
+    {
+      "title": "Fundamental limits of distributed multiclass classification from simple binary decisions",
+      "authors": [
+        "Ioannis Papageorgiou",
+        "Srinivas Nomula",
+        "Ayalvadi Ganesh",
+        "Sidharth Jaggi",
+        "Parimal Parag"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19334v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19334v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We consider the problem of constructing a $K$-class classifier from the combination of $O(\\log K)$ simple binary classifiers -- this is a natural paradigm to construct a sophisticated classifier in a distributed manner with each agent performing a relatively straightforward task. We study the fundamental performance limits of such a classifier when the corresponding binary classifiers are hyperplanes. For a stylized Gaussian setting where the $K$ class centers are independent Gaussian points in ",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG",
+        "math.ST"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 33.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19334v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19334v1"
+        }
+      ],
+      "id": "fundamental-limits-of-distributed-multiclass-classification-from-simple-binary-decisions",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "AI Agent：We consider the problem of constructing a $K$-class classifier from the combin…",
+      "one_line_judgement": "当前可忽略：AI Agent：We consider the problem of constructing a $K$-class classifie…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "AI Agent：We consider the problem of constructing a $K$-class classifier from the combin…",
+      "related_trends": [
+        "agentic-world-modeling"
+      ],
+      "detail_path": "paper-detail.html?id=fundamental-limits-of-distributed-multiclass-classification-from-simple-binary-decisions"
+    },
+    {
+      "title": "ISO: An RLVR-Native Optimization Stack",
+      "authors": [
+        "Hanqing Zhu",
+        "Wenyan Cong",
+        "Zhizhou Sha",
+        "Sagnik Mukherjee",
+        "Xinyuan Song"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19331v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19331v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space updates remains poorly understood. Building on our prior analysis (Zhu et al., 2025), we study this missing layer through the singular structure of model weights and identify spectral inheritance: RLVR can reuse the base model's weight spectra while acquiring new behavior through changes in the associa",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 29.3,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19331v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19331v1"
+        }
+      ],
+      "id": "iso-an-rlvr-native-optimization-stack",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the…",
+      "one_line_judgement": "当前可忽略：前沿论文：Reinforcement learning with verifiable rewards (RLVR) is rapidly …",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=iso-an-rlvr-native-optimization-stack"
+    },
+    {
+      "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
+      "authors": [
+        "Yuchen Jiao",
+        "Na Li",
+        "Changxiao Cai",
+        "Yuxin Chen",
+        "Gen Li"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19333v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19333v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\pddim, for solving linear inverse problems with diffusion priors via a DDIM-type sampler. Our method requires only lightweight, coordinate-wise modifications to the standard DDIM update, while explicitly incorporating th",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 29.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19333v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19333v1"
+        }
+      ],
+      "id": "provable-diffusion-based-posterior-sampling-for-linear-inverse-problems-via-ddim",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Diffusion-based methods have achieved remarkable empirical success in solving …",
+      "one_line_judgement": "当前可忽略：前沿论文：Diffusion-based methods have achieved remarkable empirical succes…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Diffusion-based methods have achieved remarkable empirical success in solving …",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=provable-diffusion-based-posterior-sampling-for-linear-inverse-problems-via-ddim"
+    },
+    {
+      "title": "ROMS-IMLE: A Minimalist Approach to Competitive Single-Step Generative Modelling",
+      "authors": [
+        "Chirag Vashist",
+        "Ke Li"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19332v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19332v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Generative models have undergone many generations of evolution, from VAEs/GANs to diffusion/flow matching. Along the way, the underlying techniques have become more complicated and various beliefs about what drives strong empirical performance have taken hold. Due to the success of diffusion models and flow matching, one of the more common beliefs is the importance of transforming the noise distribution to the data distribution gradually through many small transformations. We ask whether this is",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 29.0,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19332v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19332v1"
+        }
+      ],
+      "id": "roms-imle-a-minimalist-approach-to-competitive-single-step-generative-modelling",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Generative models have undergone many generations of evolution, from VAEs/GANs…",
+      "one_line_judgement": "当前可忽略：前沿论文：Generative models have undergone many generations of evolution, f…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Generative models have undergone many generations of evolution, from VAEs/GANs…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=roms-imle-a-minimalist-approach-to-competitive-single-step-generative-modelling"
+    },
+    {
+      "title": "Associative Emotional Learning in Convolutional Neural Networks",
+      "authors": [
+        "Seowung Leem",
+        "Andreas Keil",
+        "Mingzhou Ding",
+        "Ruogu Fang"
+      ],
+      "published": "2026-07-21",
+      "updated": "2026-07-21",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.19327v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19327v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Associative emotional learning enables organisms to adaptively link pleasant or unpleasant outcomes to the presence of predictive stimuli. Whereas computational models such as the Rescorla-Wagner model have shed light on this important function, the limitations of these models are also known, especially when they are applied to neural data. The advent of deep neural networks has opened another avenue for modeling associative emotional learning. In this work we proposed a deep neural network mode",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.19327v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19327v1"
+        }
+      ],
+      "id": "associative-emotional-learning-in-convolutional-neural-networks",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise",
+      "brief_cn": "前沿论文：Associative emotional learning enables organisms to adaptively link pleasant o…",
+      "one_line_judgement": "当前可忽略：前沿论文：Associative emotional learning enables organisms to adaptively li…",
+      "first_seen_date": "2026-07-23",
+      "first_deep_dive_daily": "2026-07-23",
+      "value_type_label": "暂时忽略",
+      "trend_stage_label": "噪声",
+      "future_trigger": "待更多证据",
+      "long_tail_summary": "前沿论文：Associative emotional learning enables organisms to adaptively link pleasant o…",
+      "related_trends": [],
+      "detail_path": "paper-detail.html?id=associative-emotional-learning-in-convolutional-neural-networks"
+    },
     {
       "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
       "authors": [
