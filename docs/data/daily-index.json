@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-23T04:34:48.894532",
+  "updated_at": "2026-07-24T04:32:41.804457",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-24",
+      "title": "论文价值发现日报 - 2026-07-24",
+      "deep_dive_title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
+      "deep_dive_url": "http://arxiv.org/abs/2607.20402v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成三件事：画出团队现有 Agent 推理管线的感知-推理接口图并标注梯度可回传/硬切分环节、为可解释性安全审计排查'解释验证是否对虚假声明漏检'的盲点、在 RAG 检索架构选型文档中补充'单向量维度下界 vs 多向量检索'的理论参照。",
+      "max_uncertainty": "全部 5 篇论文的代码、benchmark、Papers with Code、OpenReview 链接均暂无；当前评分与分析基于 arXiv 摘要自述（多篇摘要截断），论文正文的实验规模、基线对比、消融研究与统计显著性尚待核验。SoftReason 的具体可微演绎机制、嵌入维度下界证明的常数因子、PG-KINN 的 PDE benchmark 规模均需正文确认。",
+      "one_line_judgement": "它消除了经典神经符号管线中'感知-推理'之间的离散接口，让潜在感知事实与知识图谱规则在同一可微框架内联合优化——直击 Agent 推理管线最大的工程瓶颈：梯度断裂导致错误无法端到端修正。",
+      "path": "daily-detail.html?date=2026-07-24"
+    },
     {
       "date": "2026-07-23",
       "title": "论文价值发现日报 - 2026-07-23",
@@ -378,19 +391,6 @@
       "max_uncertainty": "环境出站 HTTPS 被完全拦截（多主机 SSL_ERROR_SYSCALL），DNS 正常，疑似出站防火墙/代理策略，恢复时间未知。",
       "one_line_judgement": "待补充价值判断",
       "path": "daily-detail.html?date=2026-06-15"
-    },
-    {
-      "date": "2026-06-14",
-      "title": "论文价值发现日报 - 2026-06-14",
-      "deep_dive_title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
-      "deep_dive_url": "http://arxiv.org/abs/2606.13681v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "精读 EvoArena 的环境变化建模；审计当前 Agent 系统的工具接口执行粒度（HyperTool + SpatialClaw 双重启发）",
-      "max_uncertainty": "EvoArena 的完整评估指标和 benchmark 规模需确认（摘要截断）；Agents-K1 的知识图谱质量和端到端管线效率需实际验证；HyperTool 与 MCP 协议的具体兼容度需确认；SpatialClaw 的新接口方案细节和评测结果待完整论文",
-      "one_line_judgement": "首次系统化评估 LLM Agent 在动态环境中的记忆演化能力。现有评估几乎全部假设静态环境，但生产部署中 API 变更、依赖升级、文档更新是常态。EvoArena 建模终端/软件/知识库的渐进更新序列，直接评估 Agent 的记忆时效性、知识过期识别和行为自适应调整。",
-      "path": "daily-detail.html?date=2026-06-14"
     }
   ]
 }

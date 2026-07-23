@@ -1,0 +1,130 @@
+{
+  "id": "train-the-model-not-the-reader-decodability-supervision-for-verifiable-activation-explanations",
+  "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+  "authors": [
+    "Hiskias Dingeto"
+  ],
+  "source": "arXiv",
+  "published": "2026-07-22",
+  "url": "http://arxiv.org/abs/2607.20379v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.20379v1",
+  "code_url": "",
+  "benchmark_url": "",
+  "paperswithcode_url": "",
+  "openreview_url": "",
+  "first_seen_date": "2026-07-24",
+  "first_deep_dive_daily": "2026-07-24",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
+  "value_scores": {
+    "novelty": 4.8,
+    "relevance": 3.8,
+    "evidence": 4.5,
+    "engineering_testability": 3.5,
+    "trend_signal": 3.5,
+    "long_tail_potential": 3.5,
+    "actionability": 3.8,
+    "noise_risk": 2.4
+  },
+  "score": 82.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：揭示了一个被忽视但影响深远的可解释性盲点：自然语言自编码器的'重构评分'解释验证机制存在结构性不敏感——翻转某个具体声明如果不改变重构结果，…",
+  "one_line_essence": "揭示了一个被忽视但影响深远的可解释性盲点：自然语言自编码器的'重构评分'解释验证机制存在结构性不敏感——翻转某个具体声明如果不改变重构结果，该声明永远不会被惩罚，导致解释中可包含约2%的虚假声明却仍通过验证。提出的 decodability supervision 直接训练模型使其激活'可被解释'，而非事后训练解释器。这直击 LLM 可解释性与安全审计的工程痛点：如果解释验证机制本身漏检虚假声明，基于它构建的安全护栏就有系统性漏洞。对任何依赖 activation explanation 做安全审计/对齐监控的系统有直接方法论价值。证据来自 Qwen-2.5-7B 的真实 verbalizer 实验可复现设定，但代码暂无。",
+  "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+  "new_claim_or_method": "揭示了一个被忽视但影响深远的可解释性盲点：自然语言自编码器的'重构评分'解释验证机制存在结构性不敏感——翻转某个具体声明如果不改变重构结果，该声明永远不会被惩罚，导致解释中可包含约2%的虚假声明却仍通过验证。提出的 decodability supervision 直接训练模型使其激活'可被解释'，而非事后训练解释器。这直击 LLM 可解释性与安全审计的工程",
+  "research_position": "source_paper",
+  "engineering_testability": {
+    "has_code": false,
+    "has_benchmark": false,
+    "can_reproduce": false,
+    "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+    "engineering_scenarios": [
+      "AI Agent",
+      "Context Engineering",
+      "评测治理"
+    ]
+  },
+  "trend_relation": {
+    "status": "emerging",
+    "related_trends": [
+      "coding-agent"
+    ],
+    "evidence": [
+      "论文主题匹配固定研究方向"
+    ],
+    "uncertainties": [
+      "是否会出现更多开源实现与生产案例"
+    ]
+  },
+  "long_tail": {
+    "why_save": "揭示了一个被忽视但影响深远的可解释性盲点：自然语言自编码器的'重构评分'解释验证机制存在结构性不敏感——翻转某个具体声明如果不改变重构结果，该声明永远不会被惩罚，导致解释中可包含约2%的虚假声",
+    "future_trigger": [
+      "待更多证据"
+    ],
+    "possible_use_cases": [
+      "Prompt 设计",
+      "Skill 草案",
+      "评测方法",
+      "架构模式"
+    ],
+    "reusable_assets": [
+      "Prompt",
+      "Skill",
+      "Checklist",
+      "模板"
+    ],
+    "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+    "revisit_date": ""
+  },
+  "insights": {
+    "system_design": [
+      "先判断价值类型，再决定系统性投入。"
+    ],
+    "agent_engineering": [
+      "为 Agent 建立论文价值路由器。"
+    ],
+    "dev_process": [
+      "论文输出应沉淀为可执行资产。"
+    ],
+    "evaluation": [
+      "同时看方法与证据质量。"
+    ],
+    "platform_engineering": [
+      "长尾资产库可降低重复检索成本。"
+    ],
+    "personal_learning": [
+      "优先读能转化为未来复利的论文。"
+    ]
+  },
+  "actions": {
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
+    "trend_actions": [],
+    "long_tail_actions": [],
+    "ignore_reason": ""
+  },
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20379v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.20379v1"
+    }
+  ],
+  "detail_path": "paper-detail.html?id=train-the-model-not-the-reader-decodability-supervision-for-verifiable-activation-explanations",
+  "daily_path": "daily-detail.html?date=2026-07-24",
+  "trend_paths": [
+    "trend-detail.html?id=coding-agent"
+  ],
+  "long_tail_path": "long-tail.html",
+  "mermaid": {
+    "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+    "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+    "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+  }
+}

@@ -1,0 +1,603 @@
+{
+  "date": "2026-07-24",
+  "total": 10,
+  "generated_at": "2026-07-24T04:31:07.195974",
+  "papers": [
+    {
+      "title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
+      "authors": [
+        "Wael AbdAlmageed"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20402v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20402v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In many reasoning problems, the premises are not observed as discrete symbols, but must be inferred from high-dimensional inputs. Further, the predicate vocabulary, argument structure, and trusted evidence are supplied by a Knowledge Graph (KG), or rule definitions. Classical neuro-symbolic pipelines have a discrete interface between perception and deduction. We present a neuro-soft-symbolic architecture for differentiable deductive reasoning over latent perceptual facts and knowledge-provided p",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 85.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20402v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20402v1"
+        }
+      ],
+      "llm_reason": "提出全可微的神经-软-符号演绎推理架构（SoftReason），消除了经典神经符号管线中感知与演绎之间的离散接口瓶颈：潜在感知事实与知识图谱提供的谓词/规则直接在同一可微框架内联合优化。这一架构直击当前 AI Agent 推理管线最痛的'感知-推理断裂'问题——LLM 负责感知、符号引擎负责推理、两者梯度无法回传，导致错误无法端到端修正。对于构建 KG-augmented agent、可验证推理系统的团队，该架构提供了可借鉴的设计范式。理论创新度高（将演绎推理嵌入连续优化），工程可验证性中等（需自建 KG + 感知 encoder 原型）。证据强度依赖论文正文（摘要截断），代码/benchmark 暂无待核验。",
+      "id": "softreason-a-fully-differentiable-neuro-soft-symbolic-deductive-reasoning-architecture-over-high-dimensional-perceptual-data",
+      "value_type": "immediate",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+      "authors": [
+        "Hiskias Dingeto"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20379v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20379v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Natural-language autoencoders score explanations of hidden activations by reconstruction: an explanation is deemed faithful if the activation can be regenerated from it. The test is structurally insensitive to individual false claims: if flipping a claim does not change the reconstruction, the claim is never penalized. We show the test is passed in two ways, neither faithful. On a released Qwen-2.5-7B verbalizer, explanations reconstruct well above chance while ~2% of specific claims are reconst",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 82.0,
+      "decision": "重点学习",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20379v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20379v1"
+        }
+      ],
+      "llm_reason": "揭示了一个被忽视但影响深远的可解释性盲点：自然语言自编码器的'重构评分'解释验证机制存在结构性不敏感——翻转某个具体声明如果不改变重构结果，该声明永远不会被惩罚，导致解释中可包含约2%的虚假声明却仍通过验证。提出的 decodability supervision 直接训练模型使其激活'可被解释'，而非事后训练解释器。这直击 LLM 可解释性与安全审计的工程痛点：如果解释验证机制本身漏检虚假声明，基于它构建的安全护栏就有系统性漏洞。对任何依赖 activation explanation 做安全审计/对齐监控的系统有直接方法论价值。证据来自 Qwen-2.5-7B 的真实 verbalizer 实验可复现设定，但代码暂无。",
+      "id": "train-the-model-not-the-reader-decodability-supervision-for-verifiable-activation-explanations",
+      "value_type": "immediate",
+      "matched_topics": [
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "Near-Optimal Dimension Lower Bounds for Single-Vector Embeddings of Maximum Inner Product Similarity",
+      "authors": [
+        "Rajesh Jayaram",
+        "Honghao Lin",
+        "Vahab Mirrokni",
+        "David P. Woodruff"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20393v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20393v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Multi-vector embeddings represent items by point clouds and compare query and document point clouds using Chamfer similarity, whereas single-vector embeddings use ordinary inner products. For singleton queries, Chamfer becomes maximum inner product similarity (MAX-IP). In our setting, MUVERA gives dimension $m^{O(1/\\varepsilon^2)}$~\\cite{dhulipala2024muvera}, whereas the previous lower bound $(\\varepsilon^2m)^{Ω(1/\\varepsilon)}$~\\cite{jayaram2026expressive} left a gap between $1/\\varepsilon$ and",
+      "categories": [
+        "cs.DS",
+        "cs.IR"
+      ],
+      "keywords": [],
+      "score": 76.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20393v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20393v1"
+        }
+      ],
+      "llm_reason": "为单向量嵌入在最大内积相似度（MAX-IP）检索下的维度下界给出了近最优理论结果，弥合了 MUVERA（m^{O(1/ε²)} 维）与此前下界（(ε²m)^{Ω(1/ε)}）之间的理论差距。虽然本身是理论贡献，但其结论直接关系到 RAG 与向量检索基础设施的核心工程决策：单向量嵌入需要多高维度才能近似多向量检索（ColBERT/MUVERA 路线）的效果？这为团队在'轻量单向量 vs 重型多向量'检索架构选型上提供了理论参照线。属于趋势资产而非即时可执行方法——理论结论可指导架构选型与维度预算分配，但需配合实验验证才能落地具体阈值。证据强度高（数学证明），但与直接工程栈距离中等。",
+      "id": "near-optimal-dimension-lower-bounds-for-single-vector-embeddings-of-maximum-inner-product-similarity",
+      "value_type": "trend",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "LKValues: Aligning Large Language Models with Sri Lankan Societal Values",
+      "authors": [
+        "Nethmi Muthugala",
+        "Supryadi",
+        "Surangika Ranathunga",
+        "Nisansa de Silva",
+        "Ruijie Tao"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20410v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20410v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Value alignment of Large Language Models (LLMs) has been shown to be culturally biased toward Western norms. This results in the mishandling of local values in multilingual societies such as Sri Lanka that have their unique cultural dynamics. Existing benchmarks overlook Sri Lankan-contextualized values in its official language Sinhala, hindering culturally sensitive evaluation and fine-tuning. To bridge this gap, we propose LKValues, the first survey-grounded resource suite for Sri Lankan value",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 68.0,
+      "decision": "轻量试点",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20410v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20410v1"
+        }
+      ],
+      "llm_reason": "首个基于调查的斯里兰卡社会价值观对齐资源套件（LKValues），针对 LLM 价值对齐中的西方文化偏置问题。虽然斯里兰卡场景本身是区域性的，但其方法论——survey-grounded value benchmark + 本地语言（僧伽罗语）评测 + 文化敏感微调——是一个可迁移的框架，适用于任何需要跨文化价值对齐的全球化 LLM 产品。对于出海 AI 产品团队，这提供了一个'区域价值对齐'的工程模板。作为趋势资产：全球本地化价值对齐正在从'英文中心'向'多语言多文化'扩展，此工作是代表案例。短期直接落地价值有限（需自建本地数据），方法论参考价值高。代码/benchmark 待核验。",
+      "id": "lkvalues-aligning-large-language-models-with-sri-lankan-societal-values",
+      "value_type": "trend",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 5.4,
+        "engineering_testability": 3.5,
+        "trend_signal": 6.0,
+        "long_tail_potential": 5.35,
+        "asset_convertibility": 5.6,
+        "actionability": 4.4,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "emerging"
+    },
+    {
+      "title": "PG-KINN: A Physics-Informed Petrov-Galerkin Kolmogorov-Arnold Network for Solving Forward and Inverse PDEs",
+      "authors": [
+        "Amirhossein Sadr",
+        "Nima Soltani",
+        "Vahideh Moghtadaiee",
+        "Aida Pakniyat",
+        "Dara Rahmati"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20378v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20378v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Physics-informed learning of partial differential equations (PDEs) has been dominated by multilayer perceptrons (MLPs), whose spectral bias and dense parameterization limit both accuracy and interpretability. Kolmogorov Arnold Networks (KANs) mitigate these limitations because their learnable spline activations are structurally aligned with the piecewise-polynomial bases of classical discretizations. However, the way a PDE is cast into a loss functional is as decisive as the choice of approximat",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 62.0,
+      "decision": "持续观察",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20378v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20378v1"
+        }
+      ],
+      "llm_reason": "将 Petrov-Galerkin 弱形式与 Kolmogorov-Arnold 网络（KAN）结合用于求解正/逆 PDE，解决 MLP-based PINN 的谱偏差与参数密集问题。KAN 的可学习样条激活与经典分段多项式基函数结构对齐，使损失泛函的构造方式与逼近器选择同样重要。科学机器学习方向的创新工作，但与当前 LLM/Agent 工程栈的直接迁移距离较远，更多属于'下一代科学计算 AI'的长期参考。如果团队涉及物理仿真、工程仿真数字孪生或 AI for Science，可作为架构候选跟踪；否则作为长尾资产保存。benchmark 字段标注存在但具体链接待核验。",
+      "id": "pg-kinn-a-physics-informed-petrov-galerkin-kolmogorov-arnold-network-for-solving-forward-and-inverse-pdes",
+      "value_type": "long_tail",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "long_tail_watch"
+    },
+    {
+      "title": "FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization",
+      "authors": [
+        "Eva McCord",
+        "Ernest Pedapati",
+        "Zag ElSayed"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20382v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20382v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Clinical biomarker workflows in translational research settings often rely on spreadsheet-driven tracking, manual quality control (QC) reconciliation, and loosely integrated systems, resulting in limited state visibility, delayed reporting, and increased operational risk. These challenges are particularly pronounced in multi-day assays such as Luminex-based quantification of Fragile X Messenger Ribonucleoprotein (FMRP), where HIPAA-compliant data governance, deterministic workflow progression, a",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.ET",
+        "physics.med-ph",
+        "q-bio.NC"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 40.4,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20382v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20382v1"
+        }
+      ],
+      "id": "fmrp-lean-a-hipaa-compliant-ai-augmented-lims-architecture-for-end-to-end-clinical-assay-workflow-optimization",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "The ICSE 2026 Shadow PC: Training the Next Generation of Reviewers Through Deliberate Practice",
+      "authors": [
+        "Christian Kästner",
+        "Michael Hilton",
+        "Jonathan Bell",
+        "Francisco Gomes de Oliveira Neto"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20396v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20396v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Peer review is essential to software engineering research, yet reviewer training remains largely implicit. We describe the ICSE 2026 Shadow PC, a redesigned program emphasizing deliberate practice at scale. Key innovations include multi-phase structure with calibration and peer feedback, strict separation from the main PC, and a pathway toward leadership development. With 102 participants completing the program and reviewing 117 papers, 97% recommending the experience, and positive reception fro",
+      "categories": [
+        "cs.SE"
+      ],
+      "keywords": [],
+      "score": 36.6,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20396v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20396v1"
+        }
+      ],
+      "id": "the-icse-2026-shadow-pc-training-the-next-generation-of-reviewers-through-deliberate-practice",
+      "value_type": "ignore",
+      "matched_topics": [
+        "coding-agent",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Persian Pixel: A large-scale synthetic OCR dataset for Persian language",
+      "authors": [
+        "Pouria Mahdi",
+        "Haq Nawaz Malik"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20385v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20385v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Optical Character Recognition (OCR) for Persian remains substantially less mature than for Latin-script languages despite Persian being spoken by more than 110 million people across multiple countries. This gap arises from two fundamental challenges: the intrinsic complexity of the Perso-Arabic writing system and the limited availability of large-scale, high-quality annotated datasets. Persian script exhibits obligatory cursive connectivity, context-dependent glyph shaping, extensive ligatures, ",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 30.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20385v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20385v1"
+        }
+      ],
+      "id": "persian-pixel-a-large-scale-synthetic-ocr-dataset-for-persian-language",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
+      "authors": [
+        "Nicolas Kosanovic",
+        "Jordan Dowdy",
+        "Jean Chagas Vaz"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20399v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20399v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Full-sized humanoid robot capabilities have grown exponentially in recent years, aiming towards general-purpose deployment in human environments. A popular control method used by manufacturers utilizes Virtual Reality for upper-body teleoperation and Reinforcement Learning for lower-body balance and locomotion control. As a result, a single remote operator can see, manipulate, and navigate about a real, distant physical environment. This powerful control stack is often relegated to expensive ful",
+      "categories": [
+        "cs.RO",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 29.2,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20399v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20399v1"
+        }
+      ],
+      "id": "towards-miniature-humanoid-tele-loco-manipulation-using-virtual-reality-and-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Lipschitzian SLLNs for random functions",
+      "authors": [
+        "Lai Tian",
+        "Johannes O. Royset"
+      ],
+      "published": "2026-07-22",
+      "updated": "2026-07-22",
+      "source": "arXiv",
+      "url": "http://arxiv.org/abs/2607.20411v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20411v1",
+      "openreview_url": "",
+      "paperswithcode_url": "",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We prove strong laws of large numbers for locally Lipschitz functions in the Lipschitz pseudometric. Our results hold under either a topological or a model-theoretic condition, with the latter encompassing functions jointly definable in o-minimal structures but extending substantially beyond this class. Applications include uniform convergence of limiting and Clarke subdifferentials and finite-sample identification of solutions. Consequently, we identify broad classes of functions for which the ",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "math.ST"
+      ],
+      "keywords": [],
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.20411v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20411v1"
+        }
+      ],
+      "id": "lipschitzian-sllns-for-random-functions",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    }
+  ],
+  "scored_at": "2026-07-24"
+}

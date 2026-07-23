@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2607.20402v1": {
+      "score": 85,
+      "value_type": "immediate",
+      "reason": "提出全可微的神经-软-符号演绎推理架构（SoftReason），消除了经典神经符号管线中感知与演绎之间的离散接口瓶颈：潜在感知事实与知识图谱提供的谓词/规则直接在同一可微框架内联合优化。这一架构直击当前 AI Agent 推理管线最痛的'感知-推理断裂'问题——LLM 负责感知、符号引擎负责推理、两者梯度无法回传，导致错误无法端到端修正。对于构建 KG-augmented agent、可验证推理系统的团队，该架构提供了可借鉴的设计范式。理论创新度高（将演绎推理嵌入连续优化），工程可验证性中等（需自建 KG + 感知 encoder 原型）。证据强度依赖论文正文（摘要截断），代码/benchmark 暂无待核验。",
+      "matched_topics": ["ai-agent", "rag-knowledge"]
+    },
+    "http://arxiv.org/abs/2607.20379v1": {
+      "score": 82,
+      "value_type": "immediate",
+      "reason": "揭示了一个被忽视但影响深远的可解释性盲点：自然语言自编码器的'重构评分'解释验证机制存在结构性不敏感——翻转某个具体声明如果不改变重构结果，该声明永远不会被惩罚，导致解释中可包含约2%的虚假声明却仍通过验证。提出的 decodability supervision 直接训练模型使其激活'可被解释'，而非事后训练解释器。这直击 LLM 可解释性与安全审计的工程痛点：如果解释验证机制本身漏检虚假声明，基于它构建的安全护栏就有系统性漏洞。对任何依赖 activation explanation 做安全审计/对齐监控的系统有直接方法论价值。证据来自 Qwen-2.5-7B 的真实 verbalizer 实验可复现设定，但代码暂无。",
+      "matched_topics": ["llm-evaluation", "security-governance"]
+    },
+    "http://arxiv.org/abs/2607.20393v1": {
+      "score": 76,
+      "value_type": "trend",
+      "reason": "为单向量嵌入在最大内积相似度（MAX-IP）检索下的维度下界给出了近最优理论结果，弥合了 MUVERA（m^{O(1/ε²)} 维）与此前下界（(ε²m)^{Ω(1/ε)}）之间的理论差距。虽然本身是理论贡献，但其结论直接关系到 RAG 与向量检索基础设施的核心工程决策：单向量嵌入需要多高维度才能近似多向量检索（ColBERT/MUVERA 路线）的效果？这为团队在'轻量单向量 vs 重型多向量'检索架构选型上提供了理论参照线。属于趋势资产而非即时可执行方法——理论结论可指导架构选型与维度预算分配，但需配合实验验证才能落地具体阈值。证据强度高（数学证明），但与直接工程栈距离中等。",
+      "matched_topics": ["rag-knowledge", "inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.20410v1": {
+      "score": 68,
+      "value_type": "trend",
+      "reason": "首个基于调查的斯里兰卡社会价值观对齐资源套件（LKValues），针对 LLM 价值对齐中的西方文化偏置问题。虽然斯里兰卡场景本身是区域性的，但其方法论——survey-grounded value benchmark + 本地语言（僧伽罗语）评测 + 文化敏感微调——是一个可迁移的框架，适用于任何需要跨文化价值对齐的全球化 LLM 产品。对于出海 AI 产品团队，这提供了一个'区域价值对齐'的工程模板。作为趋势资产：全球本地化价值对齐正在从'英文中心'向'多语言多文化'扩展，此工作是代表案例。短期直接落地价值有限（需自建本地数据），方法论参考价值高。代码/benchmark 待核验。",
+      "matched_topics": ["llm-evaluation"]
+    },
+    "http://arxiv.org/abs/2607.20378v1": {
+      "score": 62,
+      "value_type": "long_tail",
+      "reason": "将 Petrov-Galerkin 弱形式与 Kolmogorov-Arnold 网络（KAN）结合用于求解正/逆 PDE，解决 MLP-based PINN 的谱偏差与参数密集问题。KAN 的可学习样条激活与经典分段多项式基函数结构对齐，使损失泛函的构造方式与逼近器选择同样重要。科学机器学习方向的创新工作，但与当前 LLM/Agent 工程栈的直接迁移距离较远，更多属于'下一代科学计算 AI'的长期参考。如果团队涉及物理仿真、工程仿真数字孪生或 AI for Science，可作为架构候选跟踪；否则作为长尾资产保存。benchmark 字段标注存在但具体链接待核验。",
+      "matched_topics": []
+    }
+  }
+}
