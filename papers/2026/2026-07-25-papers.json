@@ -1,27 +1,1788 @@
 {
   "date": "2026-07-25",
-  "source_status": "backfill_placeholder",
+  "source_status": "ok",
   "papers": [
     {
-      "title": "[补全占位] 此日期论文数据待重跑",
-      "authors": [],
+      "title": "Confidently Wrong: Exception Chain Collapse in Frontier LLM Rule Evaluation",
+      "authors": [
+        "Paul Simpson",
+        "John Kozak",
+        "Lisa Doake"
+      ],
       "published": "2026-07-25",
       "updated": "2026-07-25",
-      "source": "placeholder",
-      "url": "",
-      "pdf_url": "",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23386v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23386v1",
       "openreview_url": "",
-      "paperswithcode_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Confidently%20Wrong%3A%20Exception%20Chain%20Collapse%20in%20Frontier%20LLM%20Rule%20Evaluation",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "此日期的日报在定时任务迁移期间缺失，已用占位数据补全。arXiv API 恢复后可运行 ./run_daily.sh 2026-07-25 替换为真实论文数据。",
-      "categories": [],
-      "keywords": [],
-      "score": 28.5,
+      "abstract": "We document a failure class in frontier large language models -- exception chain collapse -- observed in eligibility evaluation under nested conditional rules of the form \"A is required UNLESS B applies, UNLESS C overrides B\". The failure reproduces at first observation, but its empirical surface is unstable: between March and April 2026 several failure cells closed silently under the same model alias, with no version bump (GPT-5.4 on construction insurance moved from 96.6% to 100%, same prompt and harness). For regulated workflows, frontier-model accuracy is a moving compliance boundary that ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG",
+        "inference"
+      ],
+      "score": 45.6,
       "decision": "暂时忽略",
       "links": [],
-      "id": "paper",
+      "id": "confidently-wrong-exception-chain-collapse-in-frontier-llm-rule-evaluation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 5.25,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "AlloBench: Measuring Online Tool Allocation Capability in LLM Agents",
+      "authors": [
+        "Daniel Wang",
+        "Andrew Xu"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23332v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23332v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=AlloBench%3A%20Measuring%20Online%20Tool%20Allocation%20Capability%20in%20LLM%20Agents",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Creating a reusable tool is an investment: an agent pays a fixed cost now in exchange for the potential of future reuse. Therefore, a user should prefer an agent that creates a small number of highly reusable tools, rather than many one-offs. We introduce a paired benchmark that tests whether LLM agents exhibit conscious allocation behavior under a fixed budget in two contexts: an abstract text-based formulation and a code-construction task. We find that every frontier model we test---Claude Haiku, Claude Opus, GPT-5.4-mini, and GPT-5.6 Sol---acts near-optimally in the abstract framing but fai",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark"
+      ],
+      "score": 43.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "allobench-measuring-online-tool-allocation-capability-in-llm-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "StageGuard: Physiologically Constrained Sleep Staging",
+      "authors": [
+        "Juntang Wang",
+        "Yihan Wang",
+        "Hao Wu",
+        "Jiayu Gao",
+        "Shixin Xu"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23284v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23284v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=StageGuard%3A%20Physiologically%20Constrained%20Sleep%20Staging",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Automated sleep staging is increasingly used in large-scale studies to derive sleep-architecture endpoints: total sleep time, REM latency, sleep efficiency, and bout-duration statistics. Deep learning models achieve epoch-level accuracy approaching inter-rater agreement, yet often produce hypnograms that violate physiological invariants, such as rare transitions (e.g., direct Wake -> REM) or excessively fragmented sequences. Such violations can bias downstream sleep metrics, regardless of overall accuracy. We propose StageGuard, a plug-and-play, backbone-agnostic structured-inference framework",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "RAG",
+        "inference"
+      ],
+      "score": 43.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "stageguard-physiologically-constrained-sleep-staging",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Co-Evolving Graph and Text Memory for Training-Free Multi-Hop Question Answering",
+      "authors": [
+        "Hieu Man",
+        "Thien Huu Nguyen"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23278v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23278v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Co-Evolving%20Graph%20and%20Text%20Memory%20for%20Training-Free%20Multi-Hop%20Question%20Answering",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Multi-hop question answering requires coordinating relational and textual evidence across reasoning steps, a combination neither a text corpus nor a knowledge graph can supply alone. Prior work often emphasizes only part of this loop: graph-augmented RAG retrieves from a pre-built or query-updated graph, KGQA systems search within topic-centered subgraphs, and memory-augmented agents maintain evolving memories without continuously reconciling graph memory with textual context. We propose Co-E, a training-free system built around synchronized bidirectional graph-text working memory. A synchroni",
+      "categories": [
+        "cs.CL",
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent",
+        "memory",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 43.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "co-evolving-graph-and-text-memory-for-training-free-multi-hop-question-answering",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "SeekJudge: A Practical Reward Framework for Reinforcement Learning in Computer-Use Agents",
+      "authors": [
+        "Yang Wan",
+        "Zhenhao Zhang",
+        "Jierui Wang",
+        "Linchao Zhu"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23263v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23263v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=SeekJudge%3A%20A%20Practical%20Reward%20Framework%20for%20Reinforcement%20Learning%20in%20Computer-U",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Deciding whether a trajectory actually fulfills its instruction governs how we measure computer-use agents on long-horizon graphical-user-interface tasks and how we train them with reinforcement learning. This judgment has long relied on rule-based evaluation, which struggles to align with human intention and goes stale when an app updates or its online content drifts. Existing model-based judges attempt to address these problems but still leave a performance gap to the rule-based evaluation. We propose the \\textbf{SeekJudge} framework, in which four role-specialized agents, a Condense, a Grou",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation"
+      ],
+      "score": 43.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "seekjudge-a-practical-reward-framework-for-reinforcement-learning-in-computer-use-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.8,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "TopoFE: topology-aware LLM-guided Automated Feature Engineering",
+      "authors": [
+        "Sha Li",
+        "Naren Ramakrishnan"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23286v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23286v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=TopoFE%3A%20topology-aware%20LLM-guided%20Automated%20Feature%20Engineering",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Automatic feature engineering (AutoFE) for tabular learning can be naturally formulated as a program synthesis problem, where the objective is to discover predictive feature transformations from an exponentially large search space. Recent advances in large language models (LLMs) have expanded the expressiveness of AutoFE by enabling feature program generation beyond predefined operator libraries. However, existing LLM-based approaches remain fundamentally limited by stateless generation and homogeneous search: feature proposals are produced from static prompts without accumulating search exper",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "memory"
+      ],
+      "score": 42.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "topofe-topology-aware-llm-guided-automated-feature-engineering",
+      "value_type": "ignore",
+      "matched_topics": [
+        "coding-agent",
+        "context-engineering",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "SPRKD: Effective Knowledge Distillation for Deep Neural Networks via Saddle Region Approximation",
+      "authors": [
+        "Aditya Dewan",
+        "Arjun Yogeswaran",
+        "Benjamin Fedoruk"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23346v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23346v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=SPRKD%3A%20Effective%20Knowledge%20Distillation%20for%20Deep%20Neural%20Networks%20via%20Saddle%20Regi",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern deep neural networks are potent catalysts for scientific and industrial impact, yet excessive parameter counts impede deployment in low-compute settings such as hospital equipment and energy infrastructure. Predominant knowledge distillation (KD) methods favor replication: smaller students mimic teacher output logits, yet empirically yield low task performance, hamper convergence, and act merely as regularization rather than substantive knowledge transfer. We propose Saddle Point Recruitment for Knowledge Distillation (SPRKD), reframing distillation from replication to employing teacher",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 42.4,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "sprkd-effective-knowledge-distillation-for-deep-neural-networks-via-saddle-region-approximation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving",
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "On AI Safety and Security Technical Debt in Engineering AI-Enabled Systems",
+      "authors": [
+        "Muhammad Tukur",
+        "Hayatullahi B. Adeyemo",
+        "Tao Chen",
+        "Nour Ali",
+        "Anis Zarrad"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23365v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23365v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=On%20AI%20Safety%20and%20Security%20Technical%20Debt%20in%20Engineering%20AI-Enabled%20Systems",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Artificial intelligence (AI) systems are increasingly deployed in high-stakes domains such as healthcare, autonomous driving, finance, and education. While these systems offer powerful data-driven and adaptive capabilities, their complexity, rapid evolution, and dependence on dynamic data pipelines introduce new forms of engineering liability collectively referred to as AI Technical Debts (AITDs). AITDs arise from root causes spanning data governance, model implementation, algorithm design, architectural decisions, operational processes, documentation practices, and testing adequacy. Unlike co",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "keywords": [],
+      "score": 41.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "on-ai-safety-and-security-technical-debt-in-engineering-ai-enabled-systems",
+      "value_type": "ignore",
+      "matched_topics": [
+        "data-engineering",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Explaining BiomedCLIP with Weighted Banzhaf Interactions Supported by Tree-Gram Parsing",
+      "authors": [
+        "Jakub Rymarski",
+        "Adam Rempała",
+        "Bartłomiej Sobieski",
+        "Przemysław Biecek"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23368v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23368v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Explaining%20BiomedCLIP%20with%20Weighted%20Banzhaf%20Interactions%20Supported%20by%20Tree-Gram%20",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vision-Language Models (VLMs) are demonstrating significant capabilities in medical tasks like radiology analysis, yet providing faithful and interpretable explanations remains a key consideration for their responsible deployment in clinical settings. However, existing explanation methods, such as the widely used FIxLIP framework, often struggle with the fine-grained nature of modern tokenizers. The tokenization problem fragments clinical concepts---splitting terms like \"saddle embolus\" into scattered, meaningless subwords---which leads to noisy, semantically incoherent cross-modal attribution",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 40.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "explaining-biomedclip-with-weighted-banzhaf-interactions-supported-by-tree-gram-parsing",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Context-Adaptive Inference: A Unified Statistical and Foundation-Model View",
+      "authors": [
+        "Yue Yao",
+        "Caleb N. Ellington",
+        "Jingyun Jia",
+        "Baiheng Chen",
+        "Dong Liu"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23304v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23304v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Context-Adaptive%20Inference%3A%20A%20Unified%20Statistical%20and%20Foundation-Model%20View",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern predictive systems are expected to adapt their behavior to the specific situation they are facing. A clinical model should not treat every patient the same; a retrieval-augmented model should change its answer when given different evidence; a mixture-of-experts model should route different inputs to different experts. We call this capability context-adaptive inference: before predicting, the system uses information about the current context to specialize its parameters or computation for that instance. This article provides a unified view of context-adaptive inference across three tradi",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ],
+      "keywords": [
+        "evaluation",
+        "inference"
+      ],
+      "score": 40.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "context-adaptive-inference-a-unified-statistical-and-foundation-model-view",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Rendering on Real Silicon: GPU Render-Timing as a Passive, AI-Resistant CAPTCHA Signal",
+      "authors": [
+        "David Noever",
+        "Forrest McKee"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23389v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23389v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Rendering%20on%20Real%20Silicon%3A%20GPU%20Render-Timing%20as%20a%20Passive%2C%20AI-Resistant%20CAPTCHA%20",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Conventional CAPTCHAs pose puzzles that modern AI systems increasingly solve, while behavioral and cryptographic-attestation defenses carry privacy or enrollment costs. We investigate an orthogonal signal: the physical timing behavior of a client's GPU under a controlled WebGL rendering workload. Unlike WebGL fingerprinting, which hashes pixel output into a static device identifier, we measure render-timing dynamics to classify rather than identify, leaking no persistent identifier. We characterize the in-the-wild adversary with a 12-hour passive deployment (207 unsolicited requests; 86% autom",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 40.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "rendering-on-real-silicon-gpu-render-timing-as-a-passive-ai-resistant-captcha-signal",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-k8s-platform",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "ESF-Bench: Benchmarking Challenging Slot-Filling Scenarios for Real-World Enterprise Applications",
+      "authors": [
+        "Toby Liang",
+        "Gopal Sarda",
+        "Sagar Davasam",
+        "Vikas Yadav"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23326v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23326v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=ESF-Bench%3A%20Benchmarking%20Challenging%20Slot-Filling%20Scenarios%20for%20Real-World%20Enterp",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The rapid rise of large language models (LLMs) has driven transformative adoption across enterprises. However, deploying these models in real-world settings presents unique challenges due to complex system constraints and unexpected user behaviors. Among these applications, slot filling is essential for converting unstructured input into structured, actionable data. In this work, we introduce ESF-Bench, a challenging Enterprise Slot Filling benchmark consisting of 810 multi-turn samples and 6530 slots over 8 unique domains. Curated using a taxonomy of the 57 most challenging slot-filling scena",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 40.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "esf-bench-benchmarking-challenging-slot-filling-scenarios-for-real-world-enterprise-applications",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 5.45,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "X-Stage: An Overlooked Pipeline Stage for Communication-Computation Overlap in DiT Inference",
+      "authors": [
+        "Jianwen Xian",
+        "Zhiyuan Xu",
+        "Yuchen Li",
+        "Ziliang Lai",
+        "Kang He"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23264v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23264v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=X-Stage%3A%20An%20Overlooked%20Pipeline%20Stage%20for%20Communication-Computation%20Overlap%20in%20D",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Fine-grained, device-initiated communication lets persistent GPU kernels in distributed diffusion transformer (DiT) inference issue remote stores and overlap data movement with Tensor Core computation. Existing systems schedule when communication is issued and when received data becomes consumable, but omit post-issue progress before remote-visible completion, making sender backpressure hard to predict. We identify X-Stage, a software-visible post-issue pipeline stage. Measurements on an eight-GPU node with a recent NVIDIA architecture show that short remote-store bursts drain as the issuer re",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 40.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "x-stage-an-overlooked-pipeline-stage-for-communication-computation-overlap-in-dit-inference",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving",
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Semantic Semi-Incremental Data-Association-Free Object SLAM",
+      "authors": [
+        "Yihao Zhang",
+        "Jungseok Hong",
+        "John J. Leonard"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23384v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23384v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Semantic%20Semi-Incremental%20Data-Association-Free%20Object%20SLAM",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Data association between landmark measurements and landmark variables has long been a central challenge in SLAM, as estimation accuracy depends critically on associating measurements with the correct landmark variables. Recent advances in deep learning have created new opportunities for the problem; data association can now leverage not only positional measurements but also semantic information about object landmarks, such as class labels from neural object detectors and feature vectors from visual foundation models. In this paper, we present a generalized data-association-free SLAM framework ",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 38.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "semantic-semi-incremental-data-association-free-object-slam",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 6.0,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "RareLens: Towards End-to-End Rare Disease Care via Aligning Divergent Large Language Model Reasoning",
+      "authors": [
+        "Xi Chen",
+        "Hongru Zhou",
+        "Shiyu Feng",
+        "Hanyu Zhou",
+        "Huahui Yi"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23290v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23290v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=RareLens%3A%20Towards%20End-to-End%20Rare%20Disease%20Care%20via%20Aligning%20Divergent%20Large%20Lang",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Rare diseases collectively affect an estimated 3.5% to 5.9% of the population, yet more than 70% of patients are misdiagnosed and many endure years of evaluation before a diagnosis is reached, because early presentations are nonspecific and relevant expertise is scarce and unevenly distributed. Artificial intelligence could provide support, but existing systems address isolated stages of care, overwhelmingly diagnosis. They typically depend on the results of downstream investigations, and they treat the variability between models as noise to be eliminated. Here we present RareLens, a system th",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "planning"
+      ],
+      "score": 38.2,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "rarelens-towards-end-to-end-rare-disease-care-via-aligning-divergent-large-language-model-reasoning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "PathRIR: Physics-Guided Acoustic Path Selection and Late-Tail Compensation for Fast Room Impulse Response Simulation",
+      "authors": [
+        "Shaoheng Xu",
+        "Chunyi Sun",
+        "Jihui Zhang",
+        "Amy Bastine",
+        "Prasanga N. Samarasinghe"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23293v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23293v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=PathRIR%3A%20Physics-Guided%20Acoustic%20Path%20Selection%20and%20Late-Tail%20Compensation%20for%20F",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Image-source-method (ISM)-based room impulse response (RIR) simulation is a useful and physically interpretable tool for acoustic scene modeling, but full-order ISM becomes computationally expensive as the reflection order and room complexity increase. We propose a physics-guided framework for fast RIR simulation that preserves the geometric structure of ISM while learning to retain only acoustically important image-source paths during online traversal. To recover energy removed by pruning, the proposed PathRIR uses a lightweight compensation multilayer perceptron to predict the missing late-t",
+      "categories": [
+        "eess.AS",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "keywords": [],
+      "score": 37.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "pathrir-physics-guided-acoustic-path-selection-and-late-tail-compensation-for-fast-room-impulse-response-simulation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Emergent Behaviour in Financial Markets",
+      "authors": [
+        "Omar Inverso",
+        "Emilio Tuosto",
+        "Dragisa Zunic"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23311v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23311v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Emergent%20Behaviour%20in%20Financial%20Markets",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Some properties of so-called complex or collective systems can be observed to emerge from the interactions of elementary agents. This phenomenon, known as emergent behaviour, has long since been studied in the most diverse disciplines, with recent growing awareness from the formal methods community about the opportunity of opening up to seemingly distant disciplines with appropriate technology for computer-aided reasoning. Different peculiar elements of complexity make automated reasoning on these systems particularly challenging. We consider electronic financial markets to drive our discussio",
+      "categories": [
+        "cs.MA"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 37.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "emergent-behaviour-in-financial-markets",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Towards LLM-assisted High-Quality Property Generation for Solidity Smart Contracts",
+      "authors": [
+        "Muhammad Wahid",
+        "Shahzaib Khan",
+        "Mashhood Ali",
+        "Muhammad Hassan",
+        "Muhammad Naiman Jalil"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23308v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23308v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Towards%20LLM-assisted%20High-Quality%20Property%20Generation%20for%20Solidity%20Smart%20Contrac",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The immutable nature of smart contracts makes it challenging to fix and patch bugs once they are deployed to a blockchain. This implies that security vulnerabilities may be exposed to possible exploitation for a longer period, necessitating comprehensive pre-deployment testing. Property-based testing combined with fuzzing has proven itself as a promising technique for uncovering vulnerabilities. Traditionally, system properties are written by human experts, which is time-consuming and consequently expensive.With the recent advancement in Large Language Models (LLMs) and their ability to 'under",
+      "categories": [
+        "cs.SE"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 37.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "towards-llm-assisted-high-quality-property-generation-for-solidity-smart-contracts",
+      "value_type": "ignore",
+      "matched_topics": [
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "IKS-Instruct: A 24,000-Example Multilingual Dataset for Teaching Language Models Indian Knowledge Systems",
+      "authors": [
+        "Shwetha Singaravelu",
+        "Gayathri Muruganantham",
+        "Lakshmi Rajendran",
+        "Santhosh Sivasubramani"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23322v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23322v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=IKS-Instruct%3A%20A%2024%2C000-Example%20Multilingual%20Dataset%20for%20Teaching%20Language%20Models",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Instruction tuning has become the standard method for adapting large language models to follow human intent, yet existing instruction datasets are dominated by English-language general-knowledge tasks and lack coverage of specialized pedagogical domains. This paper presents IKS-Instruct, a dataset of 24,795 instruction-response pairs for teaching language models to deliver educational content grounded in Indian Knowledge Systems (IKS). The dataset spans seven languages (English, Hindi, Sanskrit, Tamil, Telugu, Kannada, and Malayalam), covers 41 pedagogical techniques from the Vedic oral and ma",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "RAG"
+      ],
+      "score": 36.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "iks-instruct-a-24-000-example-multilingual-dataset-for-teaching-language-models-indian-knowledge-systems",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Online Fair Division with Budget Constraints",
+      "authors": [
+        "Saar Cohen",
+        "Nicholas Teh",
+        "Paul W. Goldberg",
+        "Michael J. Wooldridge"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23310v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23310v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Online%20Fair%20Division%20with%20Budget%20Constraints",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We study an online variant of discrete fair division under generalized assignment budget constraints. Goods arrive one at a time and must be assigned irrevocably to a feasible agent or to charity, which holds all unallocated goods, while fairness is evaluated only against budget-feasible subsets of every recipient's bundle. We first show that, without additional structure, no deterministic online algorithm can guarantee any fixed approximation to feasible envy-freeness, even in highly symmetric instances. We then identify bounded density spread as a structural condition that restores meaningfu",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "cs.LG",
+        "cs.MA",
+        "econ.TH"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark"
+      ],
+      "score": 35.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "online-fair-division-with-budget-constraints",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Learning Asymptotics with Convergence-Rate Guarantees using Linear Least Squares",
+      "authors": [
+        "Christos N. Efrem"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23287v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23287v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Learning%20Asymptotics%20with%20Convergence-Rate%20Guarantees%20using%20Linear%20Least%20Squares",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We introduce a new research area that is called Asymptotics Learning Theory (ALT) and combines optimization with asymptotic analysis. In particular, ALT provides a unified approach for computing unknown constants/parameters in proven asymptotic expansions using optimization theory. In this paper, we focus on a general asymptotic form which includes a broad class of asymptotics. Furthermore, we study two powerful numerical methods, namely, sliding Linear Least Squares (sLLSQ) and sliding Tikhonov Linear Least Squares (sT-LLSQ). For these techniques we rigorously prove asymptotic estimates that ",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.CO",
+        "math.NA"
+      ],
+      "keywords": [],
+      "score": 35.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "learning-asymptotics-with-convergence-rate-guarantees-using-linear-least-squares",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Joint Optimization for Greedy Longest-match Tokenization",
+      "authors": [
+        "Adhiraj Singh",
+        "Deepanshu Mody",
+        "Ghina Al Shdaifat",
+        "Hamza Alshamy",
+        "Adam Wiemerslage"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23362v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23362v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Joint%20Optimization%20for%20Greedy%20Longest-match%20Tokenization",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent work has shown that subword vocabularies can be trained to optimize compression for a specific inference rule rather than relying on greedy heuristics such as Byte Pair Encoding (BPE). We extend this approach to greedy left-to-right longest-match decoding, the fast and widely used inference rule underlying WordPiece. We introduce Joint Optimization for Greedy Longest-Match Tokenization (JOLT), which formulates vocabulary learning as an integer program over vocabulary-selection and segmentation-choice variables. Greedy-consistency constraints ensure that each optimized segmentation exact",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "inference"
+      ],
+      "score": 35.4,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "joint-optimization-for-greedy-longest-match-tokenization",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Inference-Time Consensus for Mitigating Hidden Behaviors from LLM Fine-Tuning",
+      "authors": [
+        "Adhyyan Narang",
+        "Artin Tajdini",
+        "Claire Zhang",
+        "Jamie Morgenstern"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23394v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23394v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Inference-Time%20Consensus%20for%20Mitigating%20Hidden%20Behaviors%20from%20LLM%20Fine-Tuning",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recent work shows that fine-tuning language models on even a small amount of poisoned data can install targeted misbehavior, and ostensibly benign data can transmit hidden preferences that generalize broadly. Standard defenses, such as data filtering, mixing in harmless data, and regularization, attenuate these effects but do not eliminate them. We instead pursue robustness through redundancy: collecting multiple datasets from different sources and only learning what is common between them. Thus, if only a subset of sources are malicious, the misbehavior will be blocked. In order to implement ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "inference-time-consensus-for-mitigating-hidden-behaviors-from-llm-fine-tuning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Key-Interval A*: Accelerating Grid Pathfinding via Structural Abstraction",
+      "authors": [
+        "Taiquan Sui"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23393v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23393v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Key-Interval%20A%2A%3A%20Accelerating%20Grid%20Pathfinding%20via%20Structural%20Abstraction",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Existing exact methods for 4-connected grid pathfinding reduce online search, but often either retain fine-grained search states or require substantial preprocessing. This paper presents Key-Interval A* (KIA*), an optimal pathfinding algorithm that uses lightweight preprocessing to construct and search over a compact interval-level abstraction of free space. KIA* represents free space using intervals: maximal contiguous runs of traversable cells. It extracts key intervals that capture structural boundary changes and connects them through contiguous non-key regions. KIA* then performs A*-style ",
+      "categories": [
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "key-interval-a-accelerating-grid-pathfinding-via-structural-abstraction",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Fair Division with Strictly Increasing Valuations: A Tight Threshold for Two-Agent EF1 and PO",
+      "authors": [
+        "Nicholas Teh"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23367v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23367v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Fair%20Division%20with%20Strictly%20Increasing%20Valuations%3A%20A%20Tight%20Threshold%20for%20Two-Age",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We study whether strictly positive marginal values restore the compatibility of envy-freeness up to one good (EF1) and Pareto optimality (PO) for indivisible goods. For two agents, we identify the exact threshold in the number of goods. Every instance with at most seven goods and strictly increasing valuations admits an allocation that is both EF1 and PO, without any submodularity assumption. In contrast, we construct an eight-good instance with normalized, integer-valued, strictly increasing, submodular valuations in which every EF1 allocation is strictly Pareto dominated. Thus, eight goods a",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "econ.TH"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "fair-division-with-strictly-increasing-valuations-a-tight-threshold-for-two-agent-ef1-and-po",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Enhancing Code Understanding for Impact Analysis by Combining Transformers and Program Dependence Graphs",
+      "authors": [
+        "Yanfu Yan",
+        "Nathan Cooper",
+        "Kevin Moran",
+        "Gabriele Bavota",
+        "Denys Poshyvanyk"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23355v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23355v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Enhancing%20Code%20Understanding%20for%20Impact%20Analysis%20by%20Combining%20Transformers%20and%20P",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Impact analysis (IA) is a critical software maintenance task that identifies the effects of a given set of code changes on a larger software project with the intention of avoiding potential adverse effects. IA is a cognitively challenging task that involves reasoning about the abstract relationships between various code constructs. Given its difficulty, researchers have worked to automate IA with approaches that primarily use coupling metrics as a measure of the \"connectedness\" of different parts of a software project. Many of these coupling metrics rely on static, dynamic, or evolutionary inf",
+      "categories": [
+        "cs.SE"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "enhancing-code-understanding-for-impact-analysis-by-combining-transformers-and-program-dependence-graphs",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "FILLER: Feature Imputation via Latent Location Exploration and Retrieval",
+      "authors": [
+        "Santu Mondal",
+        "Chayan Maitra",
+        "Rajat K. De"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23295v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23295v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=FILLER%3A%20Feature%20Imputation%20via%20Latent%20Location%20Exploration%20and%20Retrieval",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In real-world machine learning applications, incomplete observations create a fundamental challenge. Researchers have come up with several ideas to address this crucial problem. However, current models still face challenges in balancing scalability and structural consistency. This study proposes a feature imputation method, called FILLER, that deliberately searches the two-dimensional latent space produced by a generative model and fills the missing values with appropriate entries. The generative model is trained on fully observed data to generate samples from the latent space, and FILLER uses",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "filler-feature-imputation-via-latent-location-exploration-and-retrieval",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Approximate reservoir computing with a semiconductor laser for reducing energy consumption",
+      "authors": [
+        "Tatsuki Ito",
+        "Kazutaka Kanno",
+        "Satoshi Kawakami",
+        "Atsushi Uchida"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23288v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23288v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Approximate%20reservoir%20computing%20with%20a%20semiconductor%20laser%20for%20reducing%20energy%20c",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Photonic reservoir computing is a promising physical machine-learning technique for predicting time-series data. The quantization of the response signal from the reservoir is required for the implementation of photonic reservoir computing, and the number of quantization bits and sampling frequency need to be optimized to achieve high performance and low energy consumption. However, few studies have been reported to investigate the effect of bit quantization and sampling frequency. In this study, we introduce a concept of approximate reservoir computing with a semiconductor laser by quantizing ",
+      "categories": [
+        "physics.optics",
+        "cs.LG",
+        "nlin.CD"
+      ],
+      "keywords": [],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "approximate-reservoir-computing-with-a-semiconductor-laser-for-reducing-energy-consumption",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "What CLIP Knows but Cannot Say: Recovering Negation from Frozen Intermediate Features",
+      "authors": [
+        "Chen-Yi Lu",
+        "Yueh-Shao Chen",
+        "Somali Chaterji"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23271v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23271v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=What%20CLIP%20Knows%20but%20Cannot%20Say%3A%20Recovering%20Negation%20from%20Frozen%20Intermediate%20Fea",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Contrastive vision-language models such as CLIP map semantically opposite phrases (e.g., \"a dog\" vs. \"not a dog\") to nearly identical embeddings, rendering them insensitive to negation. We attribute this failure to a phenomenon we call Representational Collapse: by tracking compositional divergence and visual alignment across the CLIP text encoder, we show that middle layers build compositional syntax, but the final layers collapse this structure as visual alignment rises, producing a syntax-blind final representation. To recover the lost negation signal without altering pretrained weights, we",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 34.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "what-clip-knows-but-cannot-say-recovering-negation-from-frozen-intermediate-features",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Music-Source-Separation-Training (MSST): A Unified Framework for Training and Evaluating Music Demixing Models",
+      "authors": [
+        "Roman Solovyev",
+        "Ilya Kiselev",
+        "Alexander Stempkovskiy",
+        "Tatiana Gabruseva"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23395v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23395v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Music-Source-Separation-Training%20%28MSST%29%3A%20A%20Unified%20Framework%20for%20Training%20and%20Ev",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Music Source Separation (MSS), the task of recovering individual sound components (stems) from a polyphonic mixture, is central to applications ranging from karaoke and remixing to audio restoration and content production. The separation quality depends on engineering decisions across the entire pipeline: model choice, training data preparation and augmentation, loss function and metrics choice, training configuration, validation, and post-processing. This paper presents MSST (Music-Source-Separation-Training) - a universal open-source framework for MSS tasks, which unifies training, validatio",
+      "categories": [
+        "cs.SD",
+        "cs.LG",
+        "eess.AS"
+      ],
+      "keywords": [
+        "evaluation",
+        "inference"
+      ],
+      "score": 33.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "music-source-separation-training-msst-a-unified-framework-for-training-and-evaluating-music-demixing-models",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 6.35,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Training with (Swap) Regret Loss in a Single-Layer Self-Attention Model: A Case Study on the Probability Simplex",
+      "authors": [
+        "Chanwoo Park",
+        "Asuman Ozdaglar"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23333v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23333v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Training%20with%20%28Swap%29%20Regret%20Loss%20in%20a%20Single-Layer%20Self-Attention%20Model%3A%20A%20Case%20",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We revisit the regret loss framework introduced in Park et al. (2025), which uses decision-theoretic regret as a direct loss function for training models to make better decisions, through the lens of probability-simplex policies. Our first result shows that a single-layer self-attention model trained with regret loss admits a stationary point whose forward-pass exactly matches smoothed fictitious play with the appropriate stepsize that ensures no-regret behavior-i.e., for any given policy input, the model outputs the same update that smoothed fictitious play would produce. In parallel, we also",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 32.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "training-with-swap-regret-loss-in-a-single-layer-self-attention-model-a-case-study-on-the-probability-simplex",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Photonic reservoir computing with complex networks",
+      "authors": [
+        "Sion Park",
+        "Kohei Watabe",
+        "Satoshi Sunada",
+        "Tomoki Yamagami",
+        "Atsushi Uchida"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23285v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23285v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Photonic%20reservoir%20computing%20with%20complex%20networks",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Photonic reservoir computing has attracted increasing attention as a fast and low-cost approach for time-series prediction. Photonic reservoir computing utilizes the high speed, broad bandwidth, and spatial parallelism of light. However, the effect of the internal connection structure (network topology) on the computing performance has not been investigated for large-scale photonic reservoirs. In this study, we experimentally and numerically demonstrate photonic reservoir computing using a spatial light modulator to systematically evaluate the relationship between the network topology and the ",
+      "categories": [
+        "physics.optics",
+        "cs.LG",
+        "nlin.CD"
+      ],
+      "keywords": [
+        "memory"
+      ],
+      "score": 32.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "photonic-reservoir-computing-with-complex-networks",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Exploration of the generative capabilities of Boltzmann machines applied to social systems under the majority rule",
+      "authors": [
+        "Mauricio A. Valle",
+        "Gonzalo A. Ruz"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23349v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23349v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Exploration%20of%20the%20generative%20capabilities%20of%20Boltzmann%20machines%20applied%20to%20soci",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We study the generative capabilities of Boltzmann machines to recover systems governed by the majority rule under critical conditions. To this end, we train deep belief networks (DBNs) with different configurations, where the first layer can use Gaussian visible units with more than two states (i.e., non-binary units). We then allow the DBN to \"dream\" samples conditioned on visible units that we keep fixed, and we measure the deviation of this dreamed system from the real one. We also corroborate, using a discrete thermometer based on a convolutional network, that the reconstructions remain in",
+      "categories": [
+        "cs.LG",
+        "cs.CY"
+      ],
+      "keywords": [],
+      "score": 32.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "exploration-of-the-generative-capabilities-of-boltzmann-machines-applied-to-social-systems-under-the-majority-rule",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Patient-Agnostic Synthetic Pretraining for Efficient Patient-Specific Intraoperative 2D/3D Registration",
+      "authors": [
+        "Minheng Chen",
+        "Youyong Kong"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23343v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23343v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Patient-Agnostic%20Synthetic%20Pretraining%20for%20Efficient%20Patient-Specific%20Intraopera",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Intraoperative 2D/3D registration aligns preoperative CT volumes with intraoperative X-ray or fluoroscopic images and is essential for image-guided interventions. Recent learning-based and differentiable registration methods have shown promising accuracy, especially in patient-specific settings where abundant digitally reconstructed radiographs (DRRs) can be synthesized from the target CT. However, training a separate patient-specific model from scratch for every new patient is computationally inefficient and limits practical deployment. In this work, we propose an efficient patient-specific 2",
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "keywords": [],
+      "score": 32.4,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "patient-agnostic-synthetic-pretraining-for-efficient-patient-specific-intraoperative-2d-3d-registration",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "When Activation Oracles Learn Not to Read: Concept-Specific Blind Spots in Fine-Tuned Oracles",
+      "authors": [
+        "Tobias Bersia",
+        "Tatiana Gaintseva"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23379v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23379v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=When%20Activation%20Oracles%20Learn%20Not%20to%20Read%3A%20Concept-Specific%20Blind%20Spots%20in%20Fine-",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Activation Oracles (AOs) are language models trained to answer natural-language questions about another model's internal activations. They offer a flexible interface for reading hidden information from model states, especially when relevant information is internally represented but absent or incomplete in visible behavior. However, AOs are themselves learned systems: their answers are shaped by training data, objectives, and learned reporting behavior, rather than being neutral readouts of represented information. We study this in a controlled Taboo Word Guessing setting, where subject models ",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 32.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "when-activation-oracles-learn-not-to-read-concept-specific-blind-spots-in-fine-tuned-oracles",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -29,7 +1790,727 @@
         "problem_importance": 4.5,
         "relevance": 3.8,
         "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Logit-Coordinate Generative Models for Mixed Continuous-Categorical Tabular Data",
+      "authors": [
+        "Yuefei Shen",
+        "Xiaotong Shen"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23348v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23348v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Logit-Coordinate%20Generative%20Models%20for%20Mixed%20Continuous-Categorical%20Tabular%20Data",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Mixed continuous--categorical data pose a representation problem for continuous generative models. Flow Matching and Gaussian diffusion operate in Euclidean spaces, whereas categorical laws lie on probability simplices and may be highly imbalanced. We study a logit-coordinate framework that encodes categorical variables as smoothed natural parameters and combines them with transformed numerical variables. This yields common formulations of Logit Flow Matching and Logit Diffusion. We introduce a mixed-distribution discrepancy separating categorical marginal error from conditional continuous Was",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 32.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "logit-coordinate-generative-models-for-mixed-continuous-categorical-tabular-data",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Investigating the Visual Cues of CNNs for Vascular Segmentation: A Case Study in Microscopy and Fundus Imaging",
+      "authors": [
+        "Weslley dos Santos Silva",
+        "Cesar Henrique Comin"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23371v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23371v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Investigating%20the%20Visual%20Cues%20of%20CNNs%20for%20Vascular%20Segmentation%3A%20A%20Case%20Study%20in",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Vascular segmentation is a standard procedure for clinical diagnosis, yet the specific visual features determining model decisions remain poorly understood. This paper investigates the visual cues Convolutional Neural Networks (CNNs) use to segment blood vessels across two distinct imaging domains: fluorescence microscopy and retinal fundus photography. We employ a series of experiments to quantify the influence of shape, texture, and receptive field on segmentation performance. First, we isolate texture and intensity by evaluating performance on patches subjected to pixel shuffling and normal",
+      "categories": [
+        "eess.IV",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 31.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "investigating-the-visual-cues-of-cnns-for-vascular-segmentation-a-case-study-in-microscopy-and-fundus-imaging",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "When Can Depth Replace Precision? A Resource Theory of Quantized Neural Computation",
+      "authors": [
+        "Mojtaba Soltanalian"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23390v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23390v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=When%20Can%20Depth%20Replace%20Precision%3F%20A%20Resource%20Theory%20of%20Quantized%20Neural%20Computat",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "When can additional low-bit residual computation replace missing numerical precision for a fixed input-output map? We model a quantized residual system over a fixed horizon as a pure schedule selecting fields from a declared low-bit operation library, and use relaxed controls to characterize its infinite-depth limit. The distance from the target to the closed relaxed reachable set is the exact structural floor: no increase in depth can remove it for that library. Pure schedules approach the relaxed class at rate $O(D^{-1})$ under bounded-variation time dependence and $O(D^{-\\vartheta}+D^{-1})$",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "keywords": [],
+      "score": 31.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "when-can-depth-replace-precision-a-resource-theory-of-quantized-neural-computation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "BERT-based Models vs. Large Language Models for Low-Resource Named Entity Recognition: A Comparative Study on Marathi",
+      "authors": [
+        "Hariom Ingle",
+        "Ronit Ghode",
+        "Ishwari Gondkar",
+        "Jidnyasa Harad",
+        "Raviraj Joshi"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23344v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23344v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=BERT-based%20Models%20vs.%20Large%20Language%20Models%20for%20Low-Resource%20Named%20Entity%20Recogn",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Named Entity Recognition (NER) for low-resource languages such as Marathi remains a challenging task due to limited annotated resources and linguistic complexity. Although recent Large Language Models (LLMs) have demonstrated strong performance across a wide range of natural language processing tasks, their effectiveness for language-specific NER in low-resource settings remains uncertain. In this study, we fine-tune MahaBERT-v2 on different variants of the MahaNER dataset and systematically compare the performance of these models with an existing MahaNER baseline and prominent general-purpose",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 31.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "bert-based-models-vs-large-language-models-for-low-resource-named-entity-recognition-a-comparative-study-on-marathi",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Neural operator discovery from heterogeneous trajectories",
+      "authors": [
+        "Zituo Chen",
+        "Qiaofeng Li",
+        "Jiaxin Hu",
+        "Sili Deng"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23337v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23337v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Neural%20operator%20discovery%20from%20heterogeneous%20trajectories",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Neural operators provide data-driven mappings for modeling dynamical systems. Extending them to families of systems typically requires explicit conditioning variables such as physical parameters, geometries, or boundary conditions. In many real-world settings, these quantities are unobserved. Here, we formulate neural operator discovery (NOD) as the problem of learning both shared solution operators and system-specific variation directly from heterogeneous trajectories without access to labeled governing factors. We introduce a factorized latent-conditioning formulation that jointly learns a n",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 31.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "neural-operator-discovery-from-heterogeneous-trajectories",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Continuous surrogates versus threshold Boolean networks for modeling Arabidopsis ISR gene regulation",
+      "authors": [
+        "Gonzalo A. Ruz"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23289v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23289v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Continuous%20surrogates%20versus%20threshold%20Boolean%20networks%20for%20modeling%20Arabidopsis",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Gene regulatory network modeling often requires balancing predictive accuracy and mechanistic interpretability. In this work, we compare continuous surrogate models and a discrete mechanistic model on the same \\textit{Arabidopsis thaliana} induced systemic resistance (ISR) dataset, using both the raw continuous gene-expression measurements and their sign-binarized representation. The study considers eight defense-related genes measured over nine time points and evaluates two continuous predictors, Random Forest (RF) regression and a Multi-Layer Perceptron (MLP), against a threshold Boolean net",
+      "categories": [
+        "q-bio.MN",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 31.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "continuous-surrogates-versus-threshold-boolean-networks-for-modeling-arabidopsis-isr-gene-regulation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "From Signals to Behaviors: Evidence-Based Android Malware Detection",
+      "authors": [
+        "Shiwen Song",
+        "Yiheng Xiong",
+        "Sen Chen",
+        "Xiaofei Xie"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23272v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23272v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=From%20Signals%20to%20Behaviors%3A%20Evidence-Based%20Android%20Malware%20Detection",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Android malware remains a persistent threat, and detecting it accurately is a long-standing open problem. Whether an app is malicious depends on what it actually does and the context in which it does it, not on the surface signals it happens to exhibit. Existing detectors instead reason about proxies for behavior, such as learned features or local code slices, and flag whatever deviates from these proxies as malicious. But deviation is not maliciousness: benign apps that merely look unusual are over-flagged, evolving malware that looks ordinary slips through. We argue that detection should be ",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "keywords": [],
+      "score": 31.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "from-signals-to-behaviors-evidence-based-android-malware-detection",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Statistically Supported LLM Ingredient and Recipe Data Collection in Computational Nutrition",
+      "authors": [
+        "James Izzard",
+        "Hassan Eshkiki",
+        "Fabio Caraffini"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23273v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23273v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Statistically%20Supported%20LLM%20Ingredient%20and%20Recipe%20Data%20Collection%20in%20Computation",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Computational nutrition needs precise ingredient data, but current databases are incomplete, inconsistent, and built for human reference rather than automated reasoning. LLMs could help fill these gaps, but single-pass outputs are unreliable and can introduce silent errors into downstream computation. We present a quality-controlled LLM pipeline for ingredient data acquisition that combines robust statistical estimation, domain-specific invariant checks, and a web-fetch fallback. An illustrative Heap's Law fit to 233 recipes suggests that unique-ingredient growth is sub-linear and front-loaded",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.ET"
+      ],
+      "keywords": [],
+      "score": 30.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "statistically-supported-llm-ingredient-and-recipe-data-collection-in-computational-nutrition",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "BHARATI: Morphology-Aware Tokenizers for Classical Indian Languages with Subword Fertility Analysis",
+      "authors": [
+        "Poornima Kumaresan",
+        "Pavithra Muruganantham",
+        "Lakshmi Rajendran",
+        "Santhosh Sivasubramani"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23319v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23319v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=BHARATI%3A%20Morphology-Aware%20Tokenizers%20for%20Classical%20Indian%20Languages%20with%20Subword",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Standard subword tokenization algorithms such as Byte-Pair Encoding (BPE) and SentencePiece are trained predominantly on modern language corpora and produce inefficient segmentations when applied to classical Indian languages. Sanskrit, Tamil, and other classical Indic languages exhibit agglutinative morphology, productive sandhi (phonological fusion at word boundaries), and domain-specific vocabularies absent from general-purpose training data. This paper presents BHARATI, a set of SentencePiece BPE tokenizers trained on a balanced 781 MB corpus spanning seven languages (English, Hindi, Sansk",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 30.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "bharati-morphology-aware-tokenizers-for-classical-indian-languages-with-subword-fertility-analysis",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Directional Influence Function: Estimating Training Data Influence in Constrained Learning",
+      "authors": [
+        "Xin Wang",
+        "R. Tyrrell Rockafellar",
+        "Xuegang",
+        "Ban"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23388v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23388v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Directional%20Influence%20Function%3A%20Estimating%20Training%20Data%20Influence%20in%20Constraine",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "As constrained learning becomes increasingly common, models are trained under explicit feasibility requirements to enforce fairness, safety, robustness, regulariza- tion, and physics or logic constraints. Understanding how training samples in- fluence the model solution (e.g., learned parameters) is crucial for interpretability and robustness. The classical influence function (IF) estimates sample contribu- tions via local sensitivity analysis, measuring how the solution changes when a specific training sample is perturbed or removed. However, IF becomes unreli- able in constrained settings: d",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "directional-influence-function-estimating-training-data-influence-in-constrained-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "On the Impossibility of Unbiased and Length-Invariant Policy Optimization with Outcome Rewards",
+      "authors": [
+        "Fei Ding",
+        "Yongkang Zhang",
+        "Yuhao Liao",
+        "Zijian Zeng",
+        "Huiming Yang"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23364v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23364v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=On%20the%20Impossibility%20of%20Unbiased%20and%20Length-Invariant%20Policy%20Optimization%20with%20O",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Group Relative Policy Optimization (GRPO) is the dominant reinforcement learning algorithm for training reasoning capabilities in large language models, notably adopted by DeepSeek-R1. The recent improvement Dr. GRPO (COLM 2025) identifies the response-level length bias caused by per-trajectory length normalization in GRPO and proposes removing this normalization, claiming the resulting optimizer is \"unbiased.\" We show that this claim is incomplete. Specifically, we establish an impossibility theorem: under the standard outcome reward + GRPO setting, no length-based weighting scheme can simult",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "on-the-impossibility-of-unbiased-and-length-invariant-policy-optimization-with-outcome-rewards",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Hallucination Rates in Language Generation",
+      "authors": [
+        "Debmalya Panigrahi",
+        "Fan Wei",
+        "Ian Zhang"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23361v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23361v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Hallucination%20Rates%20in%20Language%20Generation",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Language generation in the limit is an elegant model introduced by Kleinberg and Mullainathan [KM24] to formally study language generation by an algorithm that learns solely based on example strings. In this model, an algorithm is said to correctly generate from a language if it never makes an error after some finite time. In contrast, even sophisticated language models are known to regularly hallucinate in practice. In this paper, we initiate the study of language generation in the limit with (infinite) hallucination, i.e., the algorithm may generate incorrect strings infinitely often, but th",
+      "categories": [
+        "cs.DS",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "hallucination-rates-in-language-generation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Does Graph Compression Preserve Signal Propagation?",
+      "authors": [
+        "Kawshik Banerjee",
+        "Khaled Mohammed Saifuddin"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23338v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23338v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Does%20Graph%20Compression%20Preserve%20Signal%20Propagation%3F",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Graph compression reduces the computational cost of graph learning, but its effect on signal propagation remains largely underexplored. Existing work evaluates compression through downstream task performance or structural preservation, neither of which directly captures how propagation dynamics change after compression. We study two fundamental compression paradigms, coarsening and sparsification, and ask whether they preserve the propagation behavior of the original graph. Across five datasets, varying compression rates, and propagation depths, we measure signal behavior through three complem",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "does-graph-compression-preserve-signal-propagation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Ordered Network Analysis of Epistemic Emotions during Collaborative Problem Solving",
+      "authors": [
+        "Sifatul Anindho",
+        "Videep Venkatesha",
+        "Jaclyn Ocumpaugh",
+        "Nathaniel Blanchard"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23317v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23317v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Ordered%20Network%20Analysis%20of%20Epistemic%20Emotions%20during%20Collaborative%20Problem%20Solv",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Investigating how affective states such as confusion and frustration persist and transition during co-situated collaborative problem solving (CPS) is important for understanding the dynamics of epistemic emotions. However, the accurate identification of affective states remain challenging as there is no gold-standard truth in this space. Here, we analyze affective states collected through retrospective cued-recall during an in-person CPS task. Using ordered network analysis (ONA), we examine (1) the overall ordered structure of affective states and how this structure differs across self-caught",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "ordered-network-analysis-of-epistemic-emotions-during-collaborative-problem-solving",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Bitcoin Price Direction Prediction via Regime-Aware Multi-Modal Fusion of Social Sentiment and Technical Features",
+      "authors": [
+        "Muhammad Abdullah Haroon"
+      ],
+      "published": "2026-07-25",
+      "updated": "2026-07-25",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2607.23370v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23370v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Bitcoin%20Price%20Direction%20Prediction%20via%20Regime-Aware%20Multi-Modal%20Fusion%20of%20Social",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Bitcoin price prediction on sub-daily timescales is a hard open problem in computational finance. Bitcoin exhibits fat-tailed returns, non-stationary dynamics, and a price discovery process influenced by social discourse on Reddit and Twitter. Conventional approaches fuse OHLCV technical features with sentiment via static concatenation, applying identical fusion weights regardless of market state. This is inconsistent with the behavioural finance literature, which shows that retail sentiment is most predictive during volatile periods and noisy during calm ones. This paper proposes Regime-Aware",
+      "categories": [
+        "cs.LG",
+        "cs.CE",
+        "econ.EM",
+        "stat.CO"
+      ],
+      "keywords": [],
+      "score": 26.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "bitcoin-price-direction-prediction-via-regime-aware-multi-modal-fusion-of-social-sentiment-and-technical-features",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 1.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.0,

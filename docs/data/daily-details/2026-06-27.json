@@ -19,9 +19,9 @@
   ],
   "candidate_papers": [
     {
-      "id": "paper",
-      "title": "[补全占位] 此日期论文数据待重跑",
-      "detail_path": "paper-detail.html?id=paper",
+      "id": "2026-07-28-arxiv",
+      "title": "[无新论文] 2026-07-28 arXiv 无新提交",
+      "detail_path": "paper-detail.html?id=2026-07-28-arxiv",
       "direction": "未分类",
       "value_type": "ignore",
       "value_type_label": "暂时忽略",
@@ -32,53 +32,53 @@
       "worth_deep_dive": false
     },
     {
-      "id": "softreason-a-fully-differentiable-neuro-soft-symbolic-deductive-reasoning-architecture-over-high-dimensional-perceptual-data",
-      "title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
-      "detail_path": "paper-detail.html?id=softreason-a-fully-differentiable-neuro-soft-symbolic-deductive-reasoning-architecture-over-high-dimensional-perceptual-data",
+      "id": "explainable-reinforcement-learning-via-physics-aware-policy-distillation",
+      "title": "Explainable Reinforcement Learning via Physics-Aware Policy Distillation",
+      "detail_path": "paper-detail.html?id=explainable-reinforcement-learning-via-physics-aware-policy-distillation",
       "direction": "未分类",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "score": 85.0,
-      "decision": "重点学习",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "score": 52.8,
+      "decision": "持续观察",
       "has_code": false,
       "has_benchmark": false,
-      "worth_deep_dive": true
+      "worth_deep_dive": false
     },
     {
-      "id": "train-the-model-not-the-reader-decodability-supervision-for-verifiable-activation-explanations",
-      "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
-      "detail_path": "paper-detail.html?id=train-the-model-not-the-reader-decodability-supervision-for-verifiable-activation-explanations",
+      "id": "a-corrective-agentic-hybrid-rag-and-an-operations-grounded-evaluation-for-a-scientific-facility",
+      "title": "A corrective agentic hybrid RAG and an operations-grounded evaluation for a scientific facility",
+      "detail_path": "paper-detail.html?id=a-corrective-agentic-hybrid-rag-and-an-operations-grounded-evaluation-for-a-scientific-facility",
       "direction": "未分类",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "score": 82.0,
-      "decision": "重点学习",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 45.1,
+      "decision": "暂时忽略",
       "has_code": false,
       "has_benchmark": false,
-      "worth_deep_dive": true
+      "worth_deep_dive": false
     },
     {
-      "id": "near-optimal-dimension-lower-bounds-for-single-vector-embeddings-of-maximum-inner-product-similarity",
-      "title": "Near-Optimal Dimension Lower Bounds for Single-Vector Embeddings of Maximum Inner Product Similarity",
-      "detail_path": "paper-detail.html?id=near-optimal-dimension-lower-bounds-for-single-vector-embeddings-of-maximum-inner-product-similarity",
+      "id": "agentic-permissions-policy-algebra-for-taint-confinement-in-llm-agents",
+      "title": "Agentic Permissions Policy Algebra for Taint Confinement in LLM Agents",
+      "detail_path": "paper-detail.html?id=agentic-permissions-policy-algebra-for-taint-confinement-in-llm-agents",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 76.0,
-      "decision": "轻量试点",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 44.9,
+      "decision": "暂时忽略",
       "has_code": false,
       "has_benchmark": false,
-      "worth_deep_dive": true
+      "worth_deep_dive": false
     },
     {
-      "id": "lkvalues-aligning-large-language-models-with-sri-lankan-societal-values",
-      "title": "LKValues: Aligning Large Language Models with Sri Lankan Societal Values",
-      "detail_path": "paper-detail.html?id=lkvalues-aligning-large-language-models-with-sri-lankan-societal-values",
+      "id": "clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
+      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+      "detail_path": "paper-detail.html?id=clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
       "direction": "未分类",
-      "value_type": "trend",
-      "value_type_label": "趋势价值",
-      "score": 68.0,
-      "decision": "轻量试点",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 44.6,
+      "decision": "暂时忽略",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": false
@@ -220,9 +220,32 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [],
+  "long_tail_saved": [
+    {
+      "id": "explainable-reinforcement-learning-via-physics-aware-policy-distillation",
+      "title": "Explainable Reinforcement Learning via Physics-Aware Policy Distillation",
+      "detail_path": "paper-detail.html?id=explainable-reinforcement-learning-via-physics-aware-policy-distillation",
+      "why_save": "AI Agent：In safety-critical sectors such as robotics and automotive engineering, the de…",
+      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
+      "possible_use_cases": [
+        "Prompt 设计",
+        "Skill 草案",
+        "评测方法",
+        "架构模式"
+      ],
+      "reusable_assets": [
+        "Prompt",
+        "Skill",
+        "Checklist",
+        "评测方法"
+      ],
+      "revisit_date": "2026-07-18"
+    }
+  ],
   "ignore_reasons": [
-    "[补全占位] 此日期论文数据待重跑：新意弱、证据弱或当前相关性有限。"
+    "[无新论文] 2026-07-28 arXiv 无新提交：新意弱、证据弱或当前相关性有限。",
+    "A corrective agentic hybrid RAG and an operations-grounded evaluation for a scientific facility：新意弱、证据弱或当前相关性有限。",
+    "Agentic Permissions Policy Algebra for Taint Confinement in LLM Agents：新意弱、证据弱或当前相关性有限。"
   ],
   "insights": {
     "system_design": [

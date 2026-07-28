@@ -1,27 +1,1840 @@
 {
   "date": "2026-06-16",
-  "source_status": "backfill_placeholder",
+  "source_status": "ok",
   "papers": [
     {
-      "title": "[补全占位] 此日期论文数据待重跑",
-      "authors": [],
+      "title": "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
+      "authors": [
+        "Yueying Li",
+        "Yuanfan Chen",
+        "Jiayang Chen",
+        "Esha Choukse",
+        "Haoran Qiu"
+      ],
       "published": "2026-06-16",
       "updated": "2026-06-16",
-      "source": "placeholder",
-      "url": "",
-      "pdf_url": "",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18431v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18431v1",
       "openreview_url": "",
-      "paperswithcode_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Beyond%20Prediction%3A%20Tail-Aware%20Scheduling%20for%20LLM%20Inference",
       "code_url": "",
       "benchmark_url": "",
       "project_url": "",
-      "abstract": "此日期的日报在定时任务迁移期间缺失，已用占位数据补全。arXiv API 恢复后可运行 ./run_daily.sh 2026-06-16 替换为真实论文数据。",
-      "categories": [],
-      "keywords": [],
-      "score": 28.5,
+      "abstract": "LLM serving exhibits extreme length variability, making size-based scheduling difficult in practice. Recent LLM schedulers approximate SJF/SRPT using predicted decode lengths or ranks and primarily report mean-centric metrics such as TTFT and TBT. We show that these prediction-driven policies can be fragile under distribution shifts, bursty arrivals, and GPU memory pressure, while offering limited control over the tail latency (P90-P99) that dominates user experience, even with perfect decode-length knowledge. We introduce a distribution-aware, prediction-free scheduling framework that replace",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "keywords": [
+        "memory",
+        "RAG"
+      ],
+      "score": 46.7,
       "decision": "暂时忽略",
       "links": [],
-      "id": "paper",
+      "id": "beyond-prediction-tail-aware-scheduling-for-llm-inference",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering",
+        "rag-knowledge",
+        "inference-serving",
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 7.1,
+        "relevance": 8.6,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework",
+      "authors": [
+        "Inderjeet Singh",
+        "Haitham Mahmoud",
+        "Andrés Murillo"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18532v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18532v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=AI%20Sandboxes%3A%20A%20Threat%20Model%2C%20Taxonomy%2C%20and%20Measurement%20Framework",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "AI systems are increasingly evaluated in bounded environments that combine isolation, simulation, instrumentation, supervision, and evidence capture. For physical AI, AIoT, and cyber-physical systems, this shift is not a matter of terminology: the system under test may sense, decide, actuate, communicate, and fail through physical processes, networked devices, and human operators. This article develops an assurance-oriented account of AI sandboxes as controlled environments for testing, evaluation, verification, and validation across digital AI, embodied autonomy, and cyber-physical deployment",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.RO",
+        "cs.SE"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 45.2,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "ai-sandboxes-a-threat-model-taxonomy-and-measurement-framework",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 6.35,
+        "trend_signal": 4.05,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "TS-Fault: Benchmarking Time Series Forecasters Against Structural Faults",
+      "authors": [
+        "Yuyang Zhao",
+        "Lian Xu",
+        "Hao Miao",
+        "Chenxi Liu",
+        "Hao Xue"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18539v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18539v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=TS-Fault%3A%20Benchmarking%20Time%20Series%20Forecasters%20Against%20Structural%20Faults",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Time series forecasting (TSF) underpins consequential decisions in energy, transportation, finance, and healthcare, yet TSF models are almost universally ranked by a single number (e.g., average error) on clean held-out data, under the implicit assumption that it predicts deployed reliability. However, real faults are not i.i.d noise but structured events with temporal shape, broken cross-variable dependencies, regime change coupled with missingness, and causal propagation across a sensing pipeline. Treating TSF robustness as a data-quality problem, we present TS-Fault, a benchmark that evalua",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 45.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "ts-fault-benchmarking-time-series-forecasters-against-structural-faults",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents",
+      "authors": [
+        "Ziyan Jiang",
+        "Li An",
+        "Yujian Liu",
+        "Jiabao Ji",
+        "Qiucheng Wu"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18448v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18448v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=VISUALSKILL%3A%20Multimodal%20Skills%20for%20Computer-Use%20Agents",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Computer-use agents (CUAs) approach human-level performance on standardised benchmarks but still struggle on long-horizon tasks and unseen software. Existing skill libraries address this with reusable skills, but represent the skill artifact as text only, despite the visual nature of GUI interaction. We propose VISUALSKILL: a hierarchical multimodal skill, tailored to each target application and organised as a central index over per-topic files, which the agent consumes through a load_topic MCP tool that fetches the relevant topic's text and figures on demand. We construct each skill with a tw",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "benchmark",
+        "RAG",
+        "multimodal"
+      ],
+      "score": 45.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "visualskill-multimodal-skills-for-computer-use-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "When Web Agents Finish but Still Fail: Reproducible Triggers and Trace Diagnostics for Parallel Web Exploration",
+      "authors": [
+        "Aagam Sogani",
+        "Botao Rui",
+        "Swetha Vaidyanathan",
+        "Rishi Agarwal",
+        "Minghao Yan"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-29",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.20724v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.20724v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=When%20Web%20Agents%20Finish%20but%20Still%20Fail%3A%20Reproducible%20Triggers%20and%20Trace%20Diagnosti",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Long-horizon web agents often fail in ways hidden by final-answer evaluation: they may visit useful pages, produce a well-formed answer, and terminate confidently while still missing fields, over-including unsupported items, or relying on stale evidence. We study these failures with Parallel WebBench, a parallel web-exploration benchmark containing 1,679 verified records: 350 manually curated parallel tasks and 1,329 reconstructed records with verified URL-based trajectories. We train WebExplorer-style agents with GRPO under human-only, balanced human-synthetic, and synthetic-heavy data mixtur",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 44.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "when-web-agents-finish-but-still-fail-reproducible-triggers-and-trace-diagnostics-for-parallel-web-exploration",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 5.4,
+        "engineering_testability": 4.7,
+        "trend_signal": 6.0,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications",
+      "authors": [
+        "Paresh Dashore",
+        "Shreyas Kulkarni",
+        "Uttam Gurram",
+        "Nadia Bathaee",
+        "Kartik Balasubramaniam"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18502v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18502v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Towards%20Scalable%20Customization%20and%20Deployment%20of%20Multi-Agent%20Systems%20for%20Enterpr",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language model (LLM)-based multi-agent systems demonstrate strong performance on complex reasoning and task execution, enabling broad enterprise applications. However, production deployment remains challenging due to domain-specific customization requirements and high latency and inference costs in agentic workflows. We propose a unified framework for customization and efficient deployment of multi-agent systems in real-world settings. The first stage, Agentic Model Customization, combines continual pretraining, supervised fine-tuning, and preference optimization to adapt a compact model",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "inference"
+      ],
+      "score": 44.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "towards-scalable-customization-and-deployment-of-multi-agent-systems-for-enterprise-applications",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 7.45,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 4.0,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "ToolChain-CRC: Conformal Risk Control for Agentic AI Under Retrieval and Tool-Use Drift",
+      "authors": [
+        "Jeffery Opoku",
+        "David Banahene"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18467v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18467v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=ToolChain-CRC%3A%20Conformal%20Risk%20Control%20for%20Agentic%20AI%20Under%20Retrieval%20and%20Tool-Us",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Modern AI agents retrieve documents, call tools, check intermediate information, and then produce a final answer or action. This creates a risk-control problem that is not visible from the final answer alone. A final response may look acceptable even when the retrieval was weak, a tool output was wrong, or an earlier step was unsupported. We propose ToolChain-CRC, a conformal risk-control method for retrieval-augmented and tool-using agents under drift. The method treats each agent run as a full trajectory of actions, observations, and final output. It builds step-level risk scores, combines t",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "agentic",
+        "benchmark",
+        "RAG"
+      ],
+      "score": 42.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "toolchain-crc-conformal-risk-control-for-agentic-ai-under-retrieval-and-tool-use-drift",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Montreal Forced Aligner and the state of speech-to-text alignment in 2026",
+      "authors": [
+        "Michael McAuliffe",
+        "Kaylynn Gunter",
+        "Michael Wagner",
+        "Morgan Sonderegger"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18466v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18466v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Montreal%20Forced%20Aligner%20and%20the%20state%20of%20speech-to-text%20alignment%20in%202026",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The Montreal Forced Aligner (MFA) was released in 2016 and has since become the most widely used tool for forced alignment in research and industry. In the decade since, MFA has undergone substantial development, including expanded coverage across more languages and dialects using larger open-source datasets, harmonized IPA dictionaries, model adaptation, cross-language phone remapping, and support utilities. This paper documents MFA 3.0's developments since version 1.0 and evaluates MFA's performance across English, Japanese, and Korean, benchmarked against classic and neural forced aligners.",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 41.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "montreal-forced-aligner-and-the-state-of-speech-to-text-alignment-in-2026",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "A Cross-Model VLM-Judge Protocol for Single-Image 3D Mesh Quality (and Why Cheap Proxies Fall Short)",
+      "authors": [
+        "Ali Asaria",
+        "Tony Salomone",
+        "Deep Gandhi"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18451v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18451v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=A%20Cross-Model%20VLM-Judge%20Protocol%20for%20Single-Image%203D%20Mesh%20Quality%20%28and%20Why%20Cheap",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Single-image-to-3D generators are improving quickly, but there is no agreed, human-free way to tell whether one generated mesh is better than another. Practitioners commonly rely on cheap automatic proxies (render-space CLIP similarity and mesh geometry-validity statistics), yet how well these track perceived quality is unestablished. We make two contributions. First, we propose and validate a reproducible VLM-judge evaluation protocol: a fixed 24-view headless render rig, two independent vision-language judge families, and a mandatory position-bias correction that queries both presentation or",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "evaluation",
+        "RAG"
+      ],
+      "score": 41.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "a-cross-model-vlm-judge-protocol-for-single-image-3d-mesh-quality-and-why-cheap-proxies-fall-short",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent",
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.7,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "PreUnlearn: Auditing Collateral Knowledge Damage Before Large Language Model Unlearning",
+      "authors": [
+        "Bo Su",
+        "Ankit Shah",
+        "Thai Le"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18473v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18473v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=PreUnlearn%3A%20Auditing%20Collateral%20Knowledge%20Damage%20Before%20Large%20Language%20Model%20Unl",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Machine unlearning for large language models (LLMs) aims to remove specified knowledge while preserving the rest of the model's capabilities. However, the boundary between knowledge to forget and knowledge to retain is often unclear, since related and even distant information may be entangled in the model. In this paper, we study LLM unlearning from a data-centric perspective and measure how unlearning effects propagate from the forget set to same-domain and distant-domain knowledge. We find a consistent decay pattern: collateral damage is strongest near the forget set, weakens with semantic d",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "evaluation"
+      ],
+      "score": 41.2,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "preunlearn-auditing-collateral-knowledge-damage-before-large-language-model-unlearning",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 6.45,
+        "relevance": 7.4,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 0.8,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Possible or Definite? A Benchmark for Evaluating Diagnostic Uncertainty Preservation in Clinical Text",
+      "authors": [
+        "Hongbo Du",
+        "Zixin Lu",
+        "Jiaming Qu"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18471v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18471v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Possible%20or%20Definite%3F%20A%20Benchmark%20for%20Evaluating%20Diagnostic%20Uncertainty%20Preserva",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models (LLMs) are increasingly used for clinical text tasks such as summarization and revision. While most studies evaluate the fluency and coherence of LLM-generated text, whether LLMs correctly preserve diagnostic uncertainty remains underexplored. In clinical practice, phrases such as ``possible pneumonia'' communicate the strength of available evidence and directly guide decisions about follow-up testing and treatment. Altering these uncertainty expressions can change the clinical meaning entirely. In this paper, we systematically evaluated this problem in two steps. First, ",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 40.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "possible-or-definite-a-benchmark-for-evaluating-diagnostic-uncertainty-preservation-in-clinical-text",
+      "value_type": "ignore",
+      "matched_topics": [
+        "llm-evaluation"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.6,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "PSyGenTAB: A Privacy-Preserving Framework for Synthetic Clinical Tabular Data Generation via Constrained Optimization",
+      "authors": [
+        "Arshia Ilaty",
+        "Hossein Shirazi",
+        "Manasi Chitale",
+        "Kedar Hegde",
+        "Dhanalakshmi Ramesh"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18518v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18518v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=PSyGenTAB%3A%20A%20Privacy-Preserving%20Framework%20for%20Synthetic%20Clinical%20Tabular%20Data%20Ge",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The development of medical AI is constrained by limited access to high-quality clinical data due to institutional silos and strict privacy regulations such as HIPAA and GDPR. Synthetic data generation offers a potential solution, but existing methods lack principled mechanisms to explicitly manage the privacy-utility trade-off, often degrading clinically meaningful patterns or risking patient re-identification. We present PSyGenTAB, a privacy-preserving generative framework that formulates synthetic healthcare data generation as a constrained optimization problem solved using the Augmented Lag",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "evaluation",
+        "benchmark",
+        "inference"
+      ],
+      "score": 40.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "psygentab-a-privacy-preserving-framework-for-synthetic-clinical-tabular-data-generation-via-constrained-optimization",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving",
+        "security-governance"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "As You Wish: Mission Planning with Formal Verification using LLMs in Precision Agriculture",
+      "authors": [
+        "Marcos Abel Zuzuárregui",
+        "Stefano Carpin"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18519v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18519v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=As%20You%20Wish%3A%20Mission%20Planning%20with%20Formal%20Verification%20using%20LLMs%20in%20Precision%20A",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Though robotic systems are now being commercialized and deployed in various industries, many of these systems are highly specialized and often require an advanced skill set to operate and ensure they perform as instructed. To mitigate this problem, we recently introduced a mission planner leveraging LLMs to synthesize mission plans in precision agriculture based on mission descriptions provided in natural language. While the system demonstrates impressive performance, it also suffers from the inherent ambiguities of natural language. In this paper, we extend our system to address this issue by",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "keywords": [
+        "RAG",
+        "planning"
+      ],
+      "score": 39.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "as-you-wish-mission-planning-with-formal-verification-using-llms-in-precision-agriculture",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "MCompassRAG: Topic Metadata as a Semantic Compass for Paragraph-Level Retrieval",
+      "authors": [
+        "Amirhossein Abaskohi",
+        "Raymond Li",
+        "Gaetano Cimino",
+        "Peter West",
+        "Giuseppe Carenini"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18508v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18508v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=MCompassRAG%3A%20Topic%20Metadata%20as%20a%20Semantic%20Compass%20for%20Paragraph-Level%20Retrieval",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Retrieval-augmented generation (RAG) systems depend critically on how documents are chunked and searched. Fine-grained chunks can improve retrieval precision but expand the search space, increasing latency and cost; larger chunks reduce the number of candidates but make dense similarity less reliable, as the representation for each chunk mixes multiple topics and introduces more semantic noise. This trade-off becomes especially limiting in deep research tasks, where retrieval must be both fast and precise across large, heterogeneous corpora. We introduce MCompassRAG, a metadata-guided retrieva",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG",
+        "inference"
+      ],
+      "score": 39.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "mcompassrag-topic-metadata-as-a-semantic-compass-for-paragraph-level-retrieval",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Quantum Annealing Enhanced Reinforcement Learning for Accurate Remaining Useful Lifetime Prediction",
+      "authors": [
+        "Manoranjan Gandhudi",
+        "Arunkumar V.",
+        "G. R. Anil",
+        "Gangadharan G. R"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18503v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18503v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Quantum%20Annealing%20Enhanced%20Reinforcement%20Learning%20for%20Accurate%20Remaining%20Useful%20",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Remaining useful life (RUL) estimation is central to predictive maintenance, where an unplanned failure can cost far more than the asset itself. Statistical degradation models miss the strong nonlinearity of real systems, and data-driven models often converge to suboptimal solutions in high-dimensional, non-convex search spaces. We propose a Quantum Annealing enhanced Q-Learning (QAQL) framework that couples the sampling behaviour of quantum annealing with the sequential decision making of Q-learning. Each Q-value update is encoded as a small quadratic unconstrained binary optimization (QUBO) ",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 39.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "quantum-annealing-enhanced-reinforcement-learning-for-accurate-remaining-useful-lifetime-prediction",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 6.2,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Do as the Romans Do: Learning Universal Behaviors from Heterogeneous Agents",
+      "authors": [
+        "Caleb Chang",
+        "Davin Win Kyi",
+        "Natasha Jaques",
+        "Karen Leung"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18537v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18537v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Do%20as%20the%20Romans%20Do%3A%20Learning%20Universal%20Behaviors%20from%20Heterogeneous%20Agents",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Humans often acquire new skills by observing others, since observed behaviors implicitly reveal how to act in an environment. However, observations drawn from a heterogeneous population introduce conflicting behavioral signals, making it difficult to determine which behaviors are worth imitating. We address this challenge with General Reward Inference and Disentanglement (GRID), a social learning method that extracts universally useful behaviors from a heterogeneous population of demonstrators pursuing different goals. GRID decomposes per-agent reward functions into a general reward, capturing",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "RAG",
+        "inference"
+      ],
+      "score": 38.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "do-as-the-romans-do-learning-universal-behaviors-from-heterogeneous-agents",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "CEO-Bench: Can Agents Play the Long Game?",
+      "authors": [
+        "Haozhe Chen",
+        "Karthik Narasimhan",
+        "Zhuang Liu"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-07-22",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18543v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.18543v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=CEO-Bench%3A%20Can%20Agents%20Play%20the%20Long%20Game%3F",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Language model agents are becoming proficient executors at isolated, short-horizon tasks such as software engineering and customer service. Yet real-world challenges require a combination of sophisticated skills that remain largely untested in agents: (1) navigating long horizons amid uncertainty; (2) acquiring information in noisy environments; (3) adapting to a changing world; (4) orchestrating multiple moving parts toward a coherent goal. We introduce CEO-Bench, which evaluates these capabilities together by simulating a representative real-world task: operating a startup for 500 days. An a",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 38.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "ceo-bench-can-agents-play-the-long-game",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent",
+        "coding-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.8,
+        "relevance": 6.2,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 2.2,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Exponentially many initializations to avoid barren plateaus",
+      "authors": [
+        "Ankit Kulshrestha",
+        "Ricard Puig",
+        "Diego García-Martín",
+        "Lukasz Cincio",
+        "Ilya Safro"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18515v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18515v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Exponentially%20many%20initializations%20to%20avoid%20barren%20plateaus",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Barren plateaus are stated as an average-case phenomenon: pick an ansatz, initialize it naively, and concentration follows. This has led to the common view that a potential cure for barren plateaus is simply to initialize the parameters more carefully. Here we show that the situation is subtler. We introduce a first-moment framework that gives a simple operator-level diagnostic for when an initialization may escape the fully concentrated barren-plateau fixed point, and for comparing the biases induced by different initialization strategies. Our framework recovers several known initialization s",
+      "categories": [
+        "quant-ph",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 37.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "exponentially-many-initializations-to-avoid-barren-plateaus",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Structured Representation Learning with Locally Linear Embeddings and Adaptive Feature Fusion",
+      "authors": [
+        "Somjit Nath",
+        "Jackson J Cone",
+        "Derek Nowrouzezahrai",
+        "Samira Ebrahimi Kahou"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18469v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18469v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Structured%20Representation%20Learning%20with%20Locally%20Linear%20Embeddings%20and%20Adaptive%20F",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Neuroscientific research has revealed that the brain encodes complex behaviors by leveraging structured, low-dimensional manifolds and dynamically fusing multiple sources of information through adaptive gating mechanisms. Inspired by these principles, we propose a novel reinforcement learning (RL) framework that encourages the disentanglement of dynamics-specific and reward-specific features, drawing direct parallels to how neural circuits separate and integrate information for efficient decision-making. Our approach leverages locally linear embeddings (LLEs) to capture the intrinsic, locally ",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 37.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "structured-representation-learning-with-locally-linear-embeddings-and-adaptive-feature-fusion",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "TMR-GGNN: Credit Card Fraud Detection based on Time-Aware Multi-Relational Guided Graph Neural Network",
+      "authors": [
+        "Rohit Tewari",
+        "Shubhankar Shilpi",
+        "Navin Chhibber",
+        "Devendra Singh Parmar",
+        "Sunil Khemka"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18444v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18444v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=TMR-GGNN%3A%20Credit%20Card%20Fraud%20Detection%20based%20on%20Time-Aware%20Multi-Relational%20Guide",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In recent years, credit card fraud detection has faced significant challenges due to highly imbalanced data, evolving fraud patterns, and complex relational structures among transaction entities. To address these issues, this research proposes a novel framework called Timeaware Multi Relational Guided Graph Neural Network (TMR GGNN). Particularly, the proposed TMR GGNN extends the encoder decoder Graph Neural Network GNN architecture by modeling heterogeneous interactions across customers, merchants, devices, and IPs over temporal windows. Subsequently, the proposed TMR GGNN approach construct",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 37.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "tmr-ggnn-credit-card-fraud-detection-based-on-time-aware-multi-relational-guided-graph-neural-network",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Veriphi: Attack-Guided Neural Network Verification with Dataset-Dependent Training Methods",
+      "authors": [
+        "Pratik Deshmukh",
+        "Kartik Arya",
+        "Vasili Savin"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18454v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18454v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Veriphi%3A%20Attack-Guided%20Neural%20Network%20Verification%20with%20Dataset-Dependent%20Traini",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We present Veriphi, a GPU-accelerated neural network verification system that combines fast adversarial attacks with formal bound certification using alpha,beta-CROWN methods. Through systematic experiments on MNIST and CIFAR-10 using three training methodologies (standard, adversarial, certified), we demonstrate that training method effectiveness is fundamentally dataset-dependent. Interval Bound Propagation (IBP) achieves 78% certified accuracy on simple MNIST (784 dimensions) but provides negligible certification performance on the more complex CIFAR-10 dataset, where PGD adversarial traini",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 37.7,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "veriphi-attack-guided-neural-network-verification-with-dataset-dependent-training-methods",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 4.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Ghost Vectors: Soft-Deleted Embeddings Remain Reconstructible in HNSW Vector Databases",
+      "authors": [
+        "Chandranil Chakraborttii",
+        "Jackeline García Alvarado",
+        "Sitora Abdulofizova",
+        "Shivanshu Dwivedi"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18497v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18497v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Ghost%20Vectors%3A%20Soft-Deleted%20Embeddings%20Remain%20Reconstructible%20in%20HNSW%20Vector%20Dat",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Retrieval-augmented generation (RAG) allows large language models to access external and private corpora for factual, domain-specific responses. Modern RAG pipelines use hierarchical navigable small world (HNSW) vector databases for efficient similarity search. When a user requests data deletion, the systems typically only mark the record as deleted, leaving the embedding on disk physically unchanged. This soft-delete operation raises compliance concerns under data-erasure and retention requirements such as GDPR Article 17 and HIPAA. Analysis on three HNSW implementations confirms that deleted",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.DB"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 37.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "ghost-vectors-soft-deleted-embeddings-remain-reconstructible-in-hnsw-vector-databases",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "The Illusion of Improvement: Reject Inference Strategies in Credit Scoring",
+      "authors": [
+        "Bruno Scarone",
+        "Ricardo Baeza-Yates"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18479v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=The%20Illusion%20of%20Improvement%3A%20Reject%20Inference%20Strategies%20in%20Credit%20Scoring",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reject inference methods are widely used to mitigate survival bias in credit scoring, yet their effectiveness remains poorly understood. We systematically evaluate several such methods and uncover a structural failure mode: in a natural retraining cycle, models whose accuracy improves while recall collapses create an illusion of improvement that leads practitioners to believe the system is getting better when, in fact, its rejection quality -- the ability to correctly screen out defaulters -- is deteriorating. We then propose a controlled exploration strategy that breaks the feedback loop with",
+      "categories": [
+        "cs.LG",
+        "cs.CY"
+      ],
+      "keywords": [
+        "evaluation",
+        "inference"
+      ],
+      "score": 37.3,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "the-illusion-of-improvement-reject-inference-strategies-in-credit-scoring",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 4.15,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Pointwise is Pointless? A Multimodal Ablation Study for Precipitation Nowcasting with Graph Neural Networks",
+      "authors": [
+        "Ophélia Miralles",
+        "Máté Mile",
+        "Christoffer Artturi",
+        "Thomas Nipen",
+        "Ivar Seierstad"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-18",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18436v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.18436v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Pointwise%20is%20Pointless%3F%20A%20Multimodal%20Ablation%20Study%20for%20Precipitation%20Nowcasting",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Sparse point observations are increasingly available for precipitation nowcasting, but it is unclear how much they improve dense radar-field forecasts. We partially address this question with a multimodal graph neural network nowcasting system over the Nordic radar domain. The model predicts rain rate every five minutes up to two hours ahead and is trained with different combinations of radar history, MEPS numerical weather prediction, Netatmo surface observations, MSG satellite channels, stochastic noise, and CRPS-based ensemble losses. The study is designed as an ablation of operationally re",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "keywords": [
+        "multimodal"
+      ],
+      "score": 37.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "pointwise-is-pointless-a-multimodal-ablation-study-for-precipitation-nowcasting-with-graph-neural-networks",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.95,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Evaluating Prompting-Based Defenses Against Domain-Camouflaged Injection Attacks",
+      "authors": [
+        "Aaditya Pai"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18530v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18530v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Evaluating%20Prompting-Based%20Defenses%20Against%20Domain-Camouflaged%20Injection%20Attacks",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Domain-camouflaged injection attacks embed malicious instructions in retrieved content using domain-appropriate vocabulary, evading standard detectors that rely on syntactic injection markers. When detection fails, practitioners need to know which defense architectures reduce attack success. We evaluate five prompting-based defenses (spotlighting, paraphrasing, prompt sandwiching, and two combinations) against domain-camouflaged injection across three model families (Claude Haiku, Llama 3.1 8B, Gemini 2.0 Flash) and three deployment domains (financial, legal, general) using 3,510 trials. Parap",
+      "categories": [
+        "cs.CR",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent",
+        "evaluation",
+        "benchmark"
+      ],
+      "score": 37.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "evaluating-prompting-based-defenses-against-domain-camouflaged-injection-attacks",
+      "value_type": "ignore",
+      "matched_topics": [
+        "context-engineering"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Beyond AHI: An Interpretable Causal-Discovery-Guided Framework for Sleep Recovery in Connected Health",
+      "authors": [
+        "Saba A. Farahani",
+        "Elahe Khatibi",
+        "Manoj Vishwanath",
+        "Amir M. Rahmani",
+        "Hung Cao"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18506v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18506v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Beyond%20AHI%3A%20An%20Interpretable%20Causal-Discovery-Guided%20Framework%20for%20Sleep%20Recover",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Objective sleep assessment relies on polysomnography (PSG), yet clinical impact is often better reflected in patient-reported outcomes (PROs) such as sleepiness and fatigue. Existing summary indices, including the Apnea-Hypopnea Index (AHI), provide limited insight into the multidomain physiology underlying functional recovery. We propose an interpretable, causal-discovery--guided framework for deriving a hierarchical Sleep Recovery Score (SRS) from multimodal PSG. Using two large population cohorts (MESA: n=1540; MrOS: n=825), we apply directed acyclic graph (DAG) learning to identify candida",
+      "categories": [
+        "cs.LG",
+        "eess.SP",
+        "stat.AP"
+      ],
+      "keywords": [
+        "RAG",
+        "multimodal"
+      ],
+      "score": 37.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "beyond-ahi-an-interpretable-causal-discovery-guided-framework-for-sleep-recovery-in-connected-health",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 6.2,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "MagpieTTS-LF: Inference-Time Long-Form Speech Generation Without Training on Long-Form data",
+      "authors": [
+        "Subhankar Ghosh",
+        "Jason Li",
+        "Paarth Neekhara",
+        "Shehzeen Hussain",
+        "Ryan Langman"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18485v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18485v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=MagpieTTS-LF%3A%20Inference-Time%20Long-Form%20Speech%20Generation%20Without%20Training%20on%20Lon",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Neural Text-to-Speech (TTS) systems achieve remarkable quality on short utterances but long-form speech generation shows prosodic drift, speaker inconsistencies and sentence boundary artifacts. Existing approaches either compress sequences, increase context length or naively concatenate independently synthesized chunks. We present an inference-time approach called MagpieTTS-LF that enables MagpieTTS to produce coherent long-form speech without model retraining. Our method introduces three key innovations: (1) soft attention priors to guide monotonic alignment while preserving past and future c",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "eess.AS"
+      ],
+      "keywords": [
+        "inference",
+        "planning"
+      ],
+      "score": 36.6,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "magpietts-lf-inference-time-long-form-speech-generation-without-training-on-long-form-data",
+      "value_type": "ignore",
+      "matched_topics": [
+        "inference-serving"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 5.0,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Sequential Hiring of Contingent Workers Through Learning-Based Optimization",
+      "authors": [
+        "Chris Lee",
+        "Xiuli Chao",
+        "Izak Duenyas"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-29",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18438v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.18438v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Sequential%20Hiring%20of%20Contingent%20Workers%20Through%20Learning-Based%20Optimization",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "In this paper, we study a sequential workforce management problem in a contingent labor setting with uncertainty in both worker production and labor supply. A firm seeks to maximize cumulative profit by maintaining an active team of fixed size while learning worker productivity over time. We emphasize two critical operational frictions in this problem: replacing workers is costly, and workers may not be available immediately for hiring because of, for example, prior job commitments, scheduling constraints, or onboarding procedures. Thus, hiring decisions take effect only after a random delay. ",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 35.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "sequential-hiring-of-contingent-workers-through-learning-based-optimization",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Engagement Intensity as a Learner-Modeling Signal for Adaptive AI Ethics Instruction",
+      "authors": [
+        "Yongkyung Oh",
+        "Lynn Talton",
+        "Alex Bui"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18548v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18548v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Engagement%20Intensity%20as%20a%20Learner-Modeling%20Signal%20for%20Adaptive%20AI%20Ethics%20Instruc",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Adaptive AI ethics instruction in graduate research training benefits from intake measures that reflect differences in prior LLM experience. Prior coursework or workshop attendance is an obvious candidate, but it is not clear whether it is associated with pre-instruction ratings on key AI perception items. We compare three candidate intake features, self-reported usage frequency, self-rated LLM familiarity, and prior AI education, across five baseline perception outcomes in 93 bioscience graduate and postdoctoral trainees enrolled in a required research ethics course. Usage frequency shows Hol",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "engagement-intensity-as-a-learner-modeling-signal-for-adaptive-ai-ethics-instruction",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Toward Simultaneously Optimal Regret in U-Calibration",
+      "authors": [
+        "Rafael Frongillo",
+        "Haipeng Luo",
+        "Nishant A. Mehta",
+        "Jon Schneider"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18527v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18527v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Toward%20Simultaneously%20Optimal%20Regret%20in%20U-Calibration",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "U-calibration studies online forecasting algorithms whose predictions can be consumed by any unknown downstream agent, guaranteeing sublinear regret simultaneously for all proper loss functions. Existing U-calibration algorithms achieve worst-case optimal $O(\\sqrt{T})$ regret for every bounded proper loss, but they fail to adapt to easier losses: as we show, even for smooth losses such as squared loss, they incur $Ω(\\sqrt{T})$ regret instead of the optimal $O(\\log T)$ regret. In this work, we show that this limitation is not inherent. Specifically, we design a single forecast algorithm that si",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "keywords": [
+        "agent"
+      ],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "toward-simultaneously-optimal-regret-in-u-calibration",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Compact Geometric Representations of Hierarchies",
+      "authors": [
+        "Prashant Gokhale",
+        "Piotr Indyk",
+        "Yuhao Liu",
+        "Sandeep Silwal",
+        "Tony Chang Wang"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18520v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18520v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Compact%20Geometric%20Representations%20of%20Hierarchies",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Computing geometric representations of data is a cornerstone of modern machine learning, typically achieved by training dual encoders which map queries and documents into a shared embedding space. Recent work of You et al. [NeurIPS '25] has extended this approach to hierarchical retrieval, where relevance is determined by the ancestor-descendant relationships in a Directed Acyclic Graph (DAG). While previous work has shown that valid embeddings exist when the number of descendants is small, these bounds degrade significantly for deep hierarchies, requiring dimensions as large as the total numb",
+      "categories": [
+        "stat.ML",
+        "cs.CG",
+        "cs.CL",
+        "cs.DS",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "compact-geometric-representations-of-hierarchies",
+      "value_type": "ignore",
+      "matched_topics": [
+        "rag-knowledge"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Multimodal Image Colorization: Quantifying the Impact of Text-Conditioned Guidance on Grayscale-to-Color Translation",
+      "authors": [
+        "Colten Reissmann",
+        "Hugo Garrido-Lestache Belinchon"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.20722v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.20722v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Multimodal%20Image%20Colorization%3A%20Quantifying%20the%20Impact%20of%20Text-Conditioned%20Guidan",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Grayscale images are commonly found in historical photography restoration, medical imaging, and artistic media. However, automatically applying color to these images remains a significant challenge in computer vision because many plausible colorizations can correspond to the same grayscale input. In this work, we quantify the effect of text conditioning on pixel-level and perceptual metrics for grayscale-to-color image models. Specifically, we compare two architectures, a U-Net and Stable Diffusion 1.5, each tested with and without CLIP text conditioning while holding all other variables const",
+      "categories": [
+        "cs.GR",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "multimodal-image-colorization-quantifying-the-impact-of-text-conditioned-guidance-on-grayscale-to-color-translation",
+      "value_type": "ignore",
+      "matched_topics": [
+        "multimodal-agent"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Mixed-Precision Communication-Avoiding SGD for Generalized Linear Models on GPUs",
+      "authors": [
+        "Aditya Devarakonda",
+        "Irene Simó Muñoz",
+        "Giulia Guidi"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18463v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18463v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Mixed-Precision%20Communication-Avoiding%20SGD%20for%20Generalized%20Linear%20Models%20on%20GPUs",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Distributed stochastic gradient descent (SGD) is limited by communication rather than computation, since each iteration requires an AllReduce across processes. Communication-avoiding SGD (CA-SGD) amortizes communication over $s$ iterations by replacing $s$ consecutive AllReduces with a single AllReduce of an $sb\\times sb$ Gram matrix, trading more computation and bandwidth for fewer synchronization points. Modern GPUs with matrix hardware and reduced-precision formats offset this by accelerating the Gram GEMM and shrinking BF16 traffic. We study mixed-precision CA-SGD for generalized linear mo",
+      "categories": [
+        "cs.DC",
+        "cs.LG",
+        "math.NA",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 34.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "mixed-precision-communication-avoiding-sgd-for-generalized-linear-models-on-gpus",
+      "value_type": "ignore",
+      "matched_topics": [
+        "ai-k8s-platform"
+      ],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 5.15,
+        "relevance": 5.0,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.8,
+        "actionability": 3.8,
+        "noise_risk": 1.2,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 3.6,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Designing L5: A Permacomputing Approach to Creative Coding",
+      "authors": [
+        "Lee Tusman",
+        "Kit Kuksenok"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18481v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18481v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Designing%20L5%3A%20A%20Permacomputing%20Approach%20to%20Creative%20Coding",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Creative coding libraries provide high-level tools that make computational and algorithmic art accessible to artists and learners. Processing/p5 is one such family of libraries, known for its beginner-friendly approach and wide reach across artistic and technical communities. L5 is a new member of this family, implemented in Lua using the LOVE framework. It applies permacomputing principles, a movement addressing sustainability in computing inspired by permaculture, bringing these values to a community of practice not historically centered on them. This paper explores L5's design decisions and",
+      "categories": [
+        "cs.SE",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "keywords": [],
+      "score": 34.1,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "designing-l5-a-permacomputing-approach-to-creative-coding",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Analytics for Quality Assurance for Item Pools (AQuAP): Monitoring and Maintaining Item Bank Health in AI-Driven Assessment Systems",
+      "authors": [
+        "Alina A. von Davier",
+        "Xiaowan Zhang",
+        "Yigal Attali",
+        "Yena Park",
+        "Jacqueline Church"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18536v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18536v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Analytics%20for%20Quality%20Assurance%20for%20Item%20Pools%20%28AQuAP%29%3A%20Monitoring%20and%20Maintaini",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The large-scale digitization of educational assessment has made the continuous oversight of item banks both essential and complex. This paper presents Analytics for Quality Assurance for Item Pools (AQuAP), a dashboard environment for monitoring item quality and item bank health. AQuAP supports the operational implementation of the large scale item generation procedures for high-stakes tests as included in the Item Factory, a framework for automated and human-supported test development. The paper describes AQuAP in relationship with the process of item development, outlines the broader metric ",
+      "categories": [
+        "stat.AP",
+        "cs.SE"
+      ],
+      "keywords": [],
+      "score": 33.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "analytics-for-quality-assurance-for-item-pools-aquap-monitoring-and-maintaining-item-bank-health-in-ai-driven-assessment-systems",
       "value_type": "ignore",
       "matched_topics": [],
       "score_breakdown": {
@@ -29,7 +1842,720 @@
         "problem_importance": 4.5,
         "relevance": 3.8,
         "evidence_strength": 4.5,
-        "engineering_testability": 3.5,
+        "engineering_testability": 5.8,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Concept Modulation Models: A Unified Framework for Identifiability and Extrapolation",
+      "authors": [
+        "Soheun Yi",
+        "Yizhou Lu",
+        "Chandler Squires",
+        "Pradeep Ravikumar"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18509v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18509v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Concept%20Modulation%20Models%3A%20A%20Unified%20Framework%20for%20Identifiability%20and%20Extrapola",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reliable generalization in conditional latent variable models requires understanding both identifiability and extrapolation: how observed variation across attributes determines latent structure, and how that structure determines distributions at unseen attributes. However, existing identifiability and extrapolation guarantees are largely model-specific, with separate analyses in nonlinear ICA, causal representation learning, perturbation modeling, and related conditional latent variable models. We introduce concept modulation models (CMMs), an attribute-indexed class of conditional generative ",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 32.9,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "concept-modulation-models-a-unified-framework-for-identifiability-and-extrapolation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Modeling Doppler Shifts in Radial-Velocity Data with Deep Learning toward Earth-mass Exoplanet Detection",
+      "authors": [
+        "Isidro Gómez-Vargas",
+        "Xavier Dumusque",
+        "Yinan Zhao",
+        "Khaled Al Moulla",
+        "Michael Cretignier"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18464v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18464v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Modeling%20Doppler%20Shifts%20in%20Radial-Velocity%20Data%20with%20Deep%20Learning%20toward%20Earth-",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Detecting the tiny Doppler shifts induced by Earth-mass planets in stellar radial-velocity measurements remains extremely challenging due to stellar activity. Many deep-learning methods performing well on simulated data remain difficult to apply reliably on real stellar spectra. The aim of this work is to develop a deep-learning framework that generalizes to real, unseen spectra and improves the detectability of Earth-mass planets in radial-velocity data. We train artificial neural networks on HARPS-N solar spectra with injected planetary signals, using physics-motivated spectral representatio",
+      "categories": [
+        "astro-ph.IM",
+        "astro-ph.EP",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 32.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "modeling-doppler-shifts-in-radial-velocity-data-with-deep-learning-toward-earth-mass-exoplanet-detection",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 5.25,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 5.4,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Overlapping Schwarz Attention: Hierarchical Attention via Domain Decomposition",
+      "authors": [
+        "Stephan Köhler",
+        "Oliver Rheinbach"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-07-19",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18525v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.18525v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Overlapping%20Schwarz%20Attention%3A%20Hierarchical%20Attention%20via%20Domain%20Decomposition",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "We propose a hierarchical attention mechanism based on two-level overlapping Schwarz domain decomposition. The method is motivated by domain decomposition methods in partial differential equations which combine local subdomain corrections with a coarse level that communicates global, long-range information. We test its usefulness in the context of finite-dimensional operator learning using a simple, one-dimensional diffusion problem. Although elementary, this problem provides a controlled sequence-to-sequence setting in which the exact nonlocal solution operator is known. After discretization,",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 31.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "overlapping-schwarz-attention-hierarchical-attention-via-domain-decomposition",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 5.0,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "When Does Trajectory-Level Supervision Permit Efficient Offline Reinforcement Learning?",
+      "authors": [
+        "Xuanfei Ren",
+        "Tengyang Xie"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18531v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18531v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=When%20Does%20Trajectory-Level%20Supervision%20Permit%20Efficient%20Offline%20Reinforcement%20Le",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Offline reinforcement learning is typically analyzed under process-level reward supervision, yet many sequential decision datasets record only trajectory-level outcomes. We develop a statistical theory for offline policy optimization from such outcome-level supervision. We first study the canonical setting where the target remains the expected cumulative reward, but each offline trajectory provides only a scalar label whose conditional mean is the cumulative return. We propose OPAC, a pessimistic actor-critic algorithm that learns a latent reward model and optimizes a policy from trajectory-le",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "when-does-trajectory-level-supervision-permit-efficient-offline-reinforcement-learning",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Neural Phase Correlation",
+      "authors": [
+        "Cole Reynolds"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18496v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18496v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Neural%20Phase%20Correlation",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Correspondence is fundamentally relational: it seeks the unknown transformation between two observations of a common scene, not the content of either. Yet the dominant learning-based methods do not represent the transformation as a first-class object in the architecture. They encode each image independently and let a learned similarity function or a deep decoder discover the mapping implicitly. Phase correlation is the canonical exception, measuring the inter-image relationship directly in the Fourier domain, but the rigidity of its fixed basis confines it to global translation. We introduce a",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 30.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "neural-phase-correlation",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "What Does the Weight Norm Control in Grokking? Logit-Scale Mediation under Cross-Entropy",
+      "authors": [
+        "Truong Xuan Khanh"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18465v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18465v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=What%20Does%20the%20Weight%20Norm%20Control%20in%20Grokking%3F%20Logit-Scale%20Mediation%20under%20Cross",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Grokking, the delayed jump from memorization to generalization, is usually tied to the weight norm: a smaller norm generalizes sooner. We ask what the norm actually controls. Holding the weight norm fixed by clamping and varying only an output temperature, we slide the grokking delay across its entire norm-induced range under cross-entropy; matching the effective logit scale back to baseline recovers about 85% of the delay at two moduli. Across a grid of norms and temperatures the delay collapses onto the logit scale alone (R2 = 0.97), with the norm adding 1-2% beyond it. The effect is loss-de",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [],
+      "score": 30.8,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "what-does-the-weight-norm-control-in-grokking-logit-scale-mediation-under-cross-entropy",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 5.4,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "On the Residual Scaling of Looped Transformers: Stability and Transferability",
+      "authors": [
+        "Shaowen Wang",
+        "Bingrui Li",
+        "Ge Zhang",
+        "Wenhao Huang",
+        "Shen Yan"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18524v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18524v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=On%20the%20Residual%20Scaling%20of%20Looped%20Transformers%3A%20Stability%20and%20Transferability",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Looped (weight-tied) Transformers apply a shared residual block $N$ times ($h \\leftarrow h + \\varepsilon\\,f(h)$, same $f$ at each step), increasing effective depth without adding parameters. Prior depth-scaling analyses prescribe $\\varepsilon = 1/\\!\\sqrt{L}$ for depth-$L$ residual networks. We show that this is insufficient for looped architectures: weight sharing makes residual updates correlated across iterations, requiring the stronger scaling $\\varepsilon = 1/N$. For multi-layer blocks ($L$ unique layers looped $N$ times), we derive a factored parameterization $\\varepsilon = λ/(N\\!\\sqrt{L}",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.5,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "on-the-residual-scaling-of-looped-transformers-stability-and-transferability",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Task-Restricted Symmetries in Recurrent Weight Space",
+      "authors": [
+        "Simon Dräger"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18457v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18457v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Task-Restricted%20Symmetries%20in%20Recurrent%20Weight%20Space",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Recurrent networks can contain substantial functional redundancy in weight space: changing a recurrent matrix may leave the input-output rollout nearly unchanged on a task distribution, while similar-scale changes can destroy the same behavior. We study this redundancy in one-layer tanh RNNs using ordered real Schur coordinates. The Schur form separates spectral blocks from directed nonnormal couplings, giving a diagnostic basis for structured ablations that keep the input and readout maps fixed. In a fixed-length copy task, selected nonnormal Schur couplings can be removed with little loss in",
+      "categories": [
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.4,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "task-restricted-symmetries-in-recurrent-weight-space",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.95,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Effects of sparsity and superposition on loss in simple autoencoders",
+      "authors": [
+        "Mriganka Basu Roy Chowdhury",
+        "Eric McLaughlin Weiner"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18538v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18538v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Effects%20of%20sparsity%20and%20superposition%20on%20loss%20in%20simple%20autoencoders",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "One of the major difficulties in the mechanistic interpretability of neural networks is the occurrence of polysemanticity, which suggests that each neuron is typically responsible for multiple different tasks, impeding a clean interpretation of their function. The seminal paper of Elhage et al. (2022) argues that this occurs due to superposition, a phenomenon where the neural network represents distinct features as non-orthogonal directions in a lower-dimensional space, a strategy that allows much greater compression of the data without sacrificing fidelity due to the feature sparsity of input",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "effects-of-sparsity-and-superposition-on-loss-in-simple-autoencoders",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Shrinkage priors for Bayesian Substitute Confounders",
+      "authors": [
+        "Yordan P. Raykov",
+        "Hengrui Luo",
+        "Justin D. Strait",
+        "Wasiur R. KhudaBukhsh"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18535v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18535v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Shrinkage%20priors%20for%20Bayesian%20Substitute%20Confounders",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Multi-cause observational studies contain information about unmeasured confounding through the dependence structure among causes. However, literal imputation of the unobserved confounder is often more complex than learning a lower-dimensional substitute score that preserves the shared assignment variation needed for stable causal adjustment. The deconfounder (Wang and Blei, 2019) and related substitute confounder methods exploit this idea, but flexible assignment models can fit the joint distribution of the causes while producing scores that over-encode the treatment vector, collapse overlap, ",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "math.ST"
+      ],
+      "keywords": [
+        "RAG"
+      ],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "shrinkage-priors-for-bayesian-substitute-confounders",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Sparsity Curse: Understanding RLVR Model Parameter Space from Model Merging",
+      "authors": [
+        "Chenrui Wu",
+        "Zexi Li",
+        "Jiajun Bu",
+        "Jiangchuan Liu",
+        "Haishuai Wang"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18521v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18521v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Sparsity%20Curse%3A%20Understanding%20RLVR%20Model%20Parameter%20Space%20from%20Model%20Merging",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Reinforcement Learning with Verifiable Reward (RLVR) has emerged as a powerful post-training paradigm that surpasses Supervised Fine-Tuning (SFT) in eliciting reasoning intelligence and resisting catastrophic forgetting. Recent studies further reveal that RLVR induces highly sparse and off-principal parameter updates compared to SFT. This naturally raises the question: does such sparsity make RLVR models more amenable to model merging? If so, model merging would offer a scalable, training-free path to aggregate diverse reasoning capabilities from independently trained RLVR models. Surprisingly",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "keywords": [
+        "benchmark",
+        "RAG"
+      ],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "sparsity-curse-understanding-rlvr-model-parameter-space-from-model-merging",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "N(CO)$^2$: Neural Combinatorial Optimization with Chance Constraints to Solve Stochastic Orienteering",
+      "authors": [
+        "Anas Saeed",
+        "Marcos Abel Zuzuárregui",
+        "Stefano Carpin"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18514v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18514v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=N%28CO%29%24%5E2%24%3A%20Neural%20Combinatorial%20Optimization%20with%20Chance%20Constraints%20to%20Solve%20St",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Neural combinatorial optimization (NCO) offers a promising alternative to traditional heuristic-based methods for solving complex graph optimization problems by proposing to learn heuristics through data. This class of problems frequently arises in automation, as it can be used to model a variety of applications. While NCO has been extensively studied for deterministic combinatorial optimization problems, there are only a few works that aim to solve stochastic combinatorial optimization problems. In this work, we present N(CO)$^2$: Neural Combinatorial Optimization with Chance cOnstraints to s",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "n-co-2-neural-combinatorial-optimization-with-chance-constraints-to-solve-stochastic-orienteering",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "SFT Overtraining Predicts Rank Inversion via Entropy Collapse Under RLVR",
+      "authors": [
+        "Siddharth Aphale",
+        "Kelly Liu"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-22",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18487v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.18487v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=SFT%20Overtraining%20Predicts%20Rank%20Inversion%20via%20Entropy%20Collapse%20Under%20RLVR",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "The standard heuristic of selecting the SFT checkpoint with the highest pass@1 for GRPO can fail when SFT compresses the rollout distribution. For binary rewards, the expected within group advantage variance is $p(1{-}p)(g{-}1)/g$; when early GRPO drives $p$ below $p^*(g)$, most groups have identical rewards and provide no group relative signal. We study SFT depth ladders for Qwen2.5-Coder-3B and DeepSeek-Coder-6.7B. We test Qwen2.5-Coder-3B across five depths and three seeds, and DeepSeek-Coder-6.7B across four matched depths and three seeds. On Qwen, pre RL pass@1 rises with SFT depth, but p",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "sft-overtraining-predicts-rank-inversion-via-entropy-collapse-under-rlvr",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "LLM Parameters for Math Across Languages: Shared or Separate?",
+      "authors": [
+        "Behzad Shomali",
+        "Luisa Victor",
+        "Tim Selbach",
+        "Ali Hamza Bashir",
+        "David Berghaus"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-16",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18453v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.18453v1",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=LLM%20Parameters%20for%20Math%20Across%20Languages%3A%20Shared%20or%20Separate%3F",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Large language models (LLMs) exhibit substantial cross-lingual variation in mathematical reasoning performance, but it remains unclear whether these differences reflect language-specific parameters or a shared mechanism that manifests differently by language. We present a cross-lingual mechanistic analysis of mathematical reasoning in LLMs, enabling us to localize and compare model parameters that support mathematical reasoning across languages. We find that the extracted math-associated parameters exhibit partial cross-lingual overlap, with the strongest overlap concentrated in intermediate m",
+      "categories": [
+        "cs.CL"
+      ],
+      "keywords": [],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "llm-parameters-for-math-across-languages-shared-or-separate",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "asset_convertibility": 4.0,
+        "actionability": 3.8,
+        "noise_risk": 2.4,
+        "weak_evidence_penalty": 5.0,
+        "low_relevance_penalty": 5.0,
+        "engineering_cost_penalty": 2.5,
+        "reproducibility_risk": 5.0
+      },
+      "trend_status": "noise"
+    },
+    {
+      "title": "Signature filtering: a lightweight enhancement for statistical watermark detection in large language models",
+      "authors": [
+        "Chih-Duo Hong",
+        "Yen-Pang Chen",
+        "Fang Yu"
+      ],
+      "published": "2026-06-16",
+      "updated": "2026-06-24",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2606.18430v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.18430v2",
+      "openreview_url": "",
+      "paperswithcode_url": "https://paperswithcode.com/search?q=Signature%20filtering%3A%20a%20lightweight%20enhancement%20for%20statistical%20watermark%20detecti",
+      "code_url": "",
+      "benchmark_url": "",
+      "project_url": "",
+      "abstract": "Statistical watermarks help organizations attribute large language model (LLM) outputs, yet existing detectors often struggle when watermark signals are weak, texts are repetitive, or watermarks are edited. We propose signature filtering, a detection-time module that enhances watermark detection without modifying watermark embedding and text generation. It learns a small set of ``signature'' tokens whose presence makes watermark tests unreliable, and removes these tokens before detection. The signatures are obtained by solving a mixed-integer linear program on a small training set, with constr",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "keywords": [
+        "benchmark"
+      ],
+      "score": 30.0,
+      "decision": "暂时忽略",
+      "links": [],
+      "id": "signature-filtering-a-lightweight-enhancement-for-statistical-watermark-detection-in-large-language-models",
+      "value_type": "ignore",
+      "matched_topics": [],
+      "score_breakdown": {
+        "novelty": 4.8,
+        "problem_importance": 4.5,
+        "relevance": 3.8,
+        "evidence_strength": 4.5,
+        "engineering_testability": 4.7,
         "trend_signal": 3.5,
         "long_tail_potential": 3.5,
         "asset_convertibility": 4.0,
