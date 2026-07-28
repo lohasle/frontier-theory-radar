@@ -67,6 +67,24 @@ function initPaperMoreMenus(root = document) {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
 }
 
+// Detect long-cell overflow and reveal "展开/收起" toggle only when text is actually clipped.
+function initLongCells(root = document) {
+  root.querySelectorAll('[data-long]').forEach(cell => {
+    const text = cell.querySelector('.long-cell-text');
+    const btn = cell.querySelector('.long-cell-toggle');
+    if (!text || !btn) return;
+    // Force layout, then compare scrollHeight vs clientHeight to decide if clamp is hiding content.
+    const overflows = text.scrollHeight - text.clientHeight > 1;
+    if (overflows) {
+      btn.hidden = false;
+      btn.addEventListener('click', () => {
+        const expanded = cell.classList.toggle('expanded');
+        btn.textContent = expanded ? '收起' : '展开';
+      });
+    }
+  });
+}
+
 // Attach to all .table-wrapper under a root: detect horizontal overflow → toggle .has-overflow
 // so the right-edge fade appears only when needed.
 function initTableOverflow(root = document) {
@@ -426,12 +444,30 @@ async function renderLongTailPage() {
   const data = await loadJSON('long-tail-index.json');
   if (!data) return showError('long-tail-root', '长尾库索引加载失败。');
   const items = maybeArray(data.items);
+  // Cell helpers: long text gets a 2-line clamp + toggle "展开/收起" affordance; missing values render as "—".
+  const ph = (v) => v && String(v).trim() ? escapeHtml(v) : '<span class="muted">—</span>';
+  const longCell = (v) => {
+    const text = (v && String(v).trim()) || '';
+    if (!text) return '<span class="muted">—</span>';
+    return `<div class="long-cell" data-long><div class="long-cell-text">${escapeHtml(text)}</div><button class="long-cell-toggle" type="button" hidden>展开</button></div>`;
+  };
   const html = `<div class="page-header"><h1>长尾库</h1><p>保存现在不火、没有成熟工程实践，但未来可能有价值的论文、方法、评测、反证和工程启发。</p></div>
     <div class="callout" style="margin-bottom:16px"><strong>为什么需要长尾库：</strong>不是所有有价值论文都会立刻形成趋势。长尾库用于保存未来可能变重要的论文、方法、评测、反证和工程启发。</div>
     <div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>方向</th><th>长尾价值类型</th><th>为什么保存</th><th>未来触发条件</th><th>可沉淀资产</th><th>复盘时间</th></tr></thead><tbody>
-    ${items.map(item => `<tr><td><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title || '')}</a></td><td>${escapeHtml(item.direction || '')}</td><td>${escapeHtml(item.long_tail_type || '')}</td><td>${escapeHtml(item.why_save || '')}</td><td>${escapeHtml(item.future_trigger || '')}</td><td>${escapeHtml(maybeArray(item.reusable_assets).join(' / ') || '')}</td><td>${escapeHtml(item.revisit_date || '')}</td></tr>`).join('') || '<tr><td colspan="7">暂无长尾论文</td></tr>'}
+    ${items.map(item => `<tr>
+      <td><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title || '')}</a></td>
+      <td>${ph(item.direction)}</td>
+      <td>${ph(item.long_tail_type)}</td>
+      <td>${longCell(item.why_save)}</td>
+      <td>${longCell(item.future_trigger)}</td>
+      <td>${ph(maybeArray(item.reusable_assets).join(' / '))}</td>
+      <td class="num">${ph(item.revisit_date)}</td>
+    </tr>`).join('') || '<tr><td colspan="7">暂无长尾论文</td></tr>'}
     </tbody></table></div>`;
   showState('long-tail-root', html);
+  initTableOverflow(el('long-tail-root'));
+  initColumnHover(el('long-tail-root'));
+  initLongCells(el('long-tail-root'));
 }
 
 async function renderInsightsPage() {
