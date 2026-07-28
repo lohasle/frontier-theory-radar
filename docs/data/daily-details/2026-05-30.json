@@ -19,6 +19,19 @@
   ],
   "candidate_papers": [
     {
+      "id": "paper",
+      "title": "[补全占位] 此日期论文数据待重跑",
+      "detail_path": "paper-detail.html?id=paper",
+      "direction": "未分类",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "has_code": false,
+      "has_benchmark": false,
+      "worth_deep_dive": false
+    },
+    {
       "id": "softreason-a-fully-differentiable-neuro-soft-symbolic-deductive-reasoning-architecture-over-high-dimensional-perceptual-data",
       "title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
       "detail_path": "paper-detail.html?id=softreason-a-fully-differentiable-neuro-soft-symbolic-deductive-reasoning-architecture-over-high-dimensional-perceptual-data",
@@ -66,19 +79,6 @@
       "value_type_label": "趋势价值",
       "score": 68.0,
       "decision": "轻量试点",
-      "has_code": false,
-      "has_benchmark": false,
-      "worth_deep_dive": false
-    },
-    {
-      "id": "pg-kinn-a-physics-informed-petrov-galerkin-kolmogorov-arnold-network-for-solving-forward-and-inverse-pdes",
-      "title": "PG-KINN: A Physics-Informed Petrov-Galerkin Kolmogorov-Arnold Network for Solving Forward and Inverse PDEs",
-      "detail_path": "paper-detail.html?id=pg-kinn-a-physics-informed-petrov-galerkin-kolmogorov-arnold-network-for-solving-forward-and-inverse-pdes",
-      "direction": "未分类",
-      "value_type": "long_tail",
-      "value_type_label": "长尾价值",
-      "score": 62.0,
-      "decision": "持续观察",
       "has_code": false,
       "has_benchmark": false,
       "worth_deep_dive": false
@@ -215,30 +215,9 @@
       "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
     }
   },
-  "long_tail_saved": [
-    {
-      "id": "pg-kinn-a-physics-informed-petrov-galerkin-kolmogorov-arnold-network-for-solving-forward-and-inverse-pdes",
-      "title": "PG-KINN: A Physics-Informed Petrov-Galerkin Kolmogorov-Arnold Network for Solving Forward and Inverse PDEs",
-      "detail_path": "paper-detail.html?id=pg-kinn-a-physics-informed-petrov-galerkin-kolmogorov-arnold-network-for-solving-forward-and-inverse-pdes",
-      "why_save": "将 Petrov-Galerkin 弱形式与 Kolmogorov-Arnold 网络（KAN）结合用于求解正/逆 PDE，解决 MLP-based PINN 的谱偏差与参数密集问题。KAN ",
-      "future_trigger": "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强",
-      "possible_use_cases": [
-        "Prompt 设计",
-        "Skill 草案",
-        "评测方法",
-        "架构模式"
-      ],
-      "reusable_assets": [
-        "Prompt",
-        "Skill",
-        "Checklist",
-        "评测方法"
-      ],
-      "revisit_date": "2026-06-20"
-    }
-  ],
+  "long_tail_saved": [],
   "ignore_reasons": [
-    "暂无明确忽略样本，但忽略标准仍需保留。"
+    "[补全占位] 此日期论文数据待重跑：新意弱、证据弱或当前相关性有限。"
   ],
   "insights": {
     "system_design": [

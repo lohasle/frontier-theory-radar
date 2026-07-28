@@ -78,13 +78,13 @@ python3 scripts/build_pages.py
 
 ## 最近 7 篇日报索引
 
+- [2026-07-28 · [补全占位] 此日期论文数据待重跑](daily-detail.html?date=2026-07-28) · 暂时忽略 · 暂时忽略
+- [2026-07-27 · [补全占位] 此日期论文数据待重跑](daily-detail.html?date=2026-07-27) · 暂时忽略 · 暂时忽略
+- [2026-07-26 · [补全占位] 此日期论文数据待重跑](daily-detail.html?date=2026-07-26) · 暂时忽略 · 暂时忽略
+- [2026-07-25 · [补全占位] 此日期论文数据待重跑](daily-detail.html?date=2026-07-25) · 暂时忽略 · 暂时忽略
 - [2026-07-24 · SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data](daily-detail.html?date=2026-07-24) · 即时价值 · 重点学习
 - [2026-07-23 · Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning](daily-detail.html?date=2026-07-23) · 即时价值 · 重点学习
 - [2026-07-22 · SWE-Pruner Pro: The Coder LLM Already Knows What to Prune](daily-detail.html?date=2026-07-22) · 即时价值 · 重点学习
-- [2026-07-21 · PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](daily-detail.html?date=2026-07-21) · 即时价值 · 重点学习
-- [2026-07-20 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-20) · 即时价值 · 重点学习
-- [2026-07-19 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-19) · 即时价值 · 重点学习
-- [2026-07-18 · Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](daily-detail.html?date=2026-07-18) · 即时价值 · 重点学习
 
 ## 当前重点趋势索引
 
