@@ -445,13 +445,6 @@ code, pre, .mono, .num, .kpi-number, .daily-row-date, .score {
 /* =========================================================================
    Tables — ruled, journal reference-table style
    ========================================================================= */
-.table-wrapper {
-  overflow-x: auto;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: 0;
-  box-shadow: none;
-}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -529,31 +522,135 @@ tbody tr:hover td { background: var(--paper-soft); }
 .filter-summary { margin: 6px 0 16px; }
 
 /* =========================================================================
-   Paper links — flat buttons
+   Paper links — compact inline links
    ========================================================================= */
-.link-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.link-row { display: flex; flex-wrap: wrap; gap: 4px 8px; }
 .paper-link {
   display: inline-flex;
   align-items: center;
-  padding: 4px 9px;
+  gap: 4px;
+  padding: 3px 9px;
   border: 1px solid var(--rule);
   background: var(--paper);
   color: var(--ink-soft);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+.paper-link:hover { background: var(--paper-soft); border-color: var(--ink-soft); color: var(--ink); text-decoration: none; }
+.paper-link.disabled { color: var(--rule); background: transparent; }
+
+/* Link cluster — primary link + "More ▾" popover, single row, never wraps */
+.link-cluster {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.paper-link-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  font-weight: 500;
+}
+.paper-link-primary:hover { background: #000; border-color: #000; color: var(--paper); }
+.paper-link-more {
+  cursor: pointer;
+  font: inherit;
+  background: var(--paper);
+  color: var(--ink-soft);
+}
+.paper-link-more .caret { font-size: 10px; transition: transform 0.15s ease; display: inline-block; }
+.paper-link-more[aria-expanded="true"] .caret { transform: rotate(180deg); }
+.paper-link-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 30;
+  min-width: 160px;
+  padding: 4px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(20, 20, 30, 0.12);
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+.paper-link-menu.open { display: flex; }
+.paper-link-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
   border-radius: 0;
+  text-align: left;
 }
-.paper-link:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent);
-  border-bottom-color: var(--accent);
+.paper-link-menu-item:hover { background: var(--paper-soft); color: var(--accent); border-color: transparent; }
+
+/* =========================================================================
+   Table column hover — academic journal style
+   ========================================================================= */
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-soft) var(--paper-soft);
 }
-.paper-link.disabled {
-  background: var(--paper-soft);
-  color: var(--ink-muted);
+.table-wrapper::-webkit-scrollbar { height: 8px; }
+.table-wrapper::-webkit-scrollbar-track { background: var(--paper-soft); }
+.table-wrapper::-webkit-scrollbar-thumb { background: var(--ink-soft); border-radius: 0; }
+
+/* Right-edge fade — tells the user the table scrolls horizontally */
+.table-wrapper.has-overflow::after {
+  content: '';
+  position: sticky;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, transparent, var(--paper));
   pointer-events: none;
+}
+
+/* Column hover — highlight the whole column on cell hover (thead + tbody in same col) */
+.table-wrapper table { border-collapse: separate; border-spacing: 0; }
+.table-wrapper tbody td { transition: background 0.12s ease; }
+.table-wrapper tbody tr:hover td { background: var(--paper-soft); }
+.table-wrapper tbody td:hover { background: var(--accent-soft) !important; }
+.table-wrapper th.col-hover, .table-wrapper td.col-hover { background: rgba(26, 58, 92, 0.06); }
+
+/* Cell sub-line (paper brief under title) */
+.cell-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+  line-height: 1.5;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* =========================================================================
@@ -769,3 +866,29 @@ h2, h3, h4 { margin-top: 1.4em; }
   .navbar-links.open { display: flex; }
   .navbar-links a { border-bottom: 1px solid var(--rule-soft) !important; }
 }
+
+/* Papers page table — widths sized for 8 columns to fit standard laptop viewports */
+body[data-page="papers"] .table-wrapper table {
+  table-layout: auto;
+  min-width: 1200px;
+}
+body[data-page="papers"] .table-wrapper th:nth-child(1),
+body[data-page="papers"] .table-wrapper td:nth-child(1) { min-width: 280px; }  /* 论文标题 */
+body[data-page="papers"] .table-wrapper th:nth-child(2),
+body[data-page="papers"] .table-wrapper td:nth-child(2) { min-width: 96px; }   /* 日期 */
+body[data-page="papers"] .table-wrapper th:nth-child(3),
+body[data-page="papers"] .table-wrapper td:nth-child(3) { min-width: 88px; }   /* 来源 */
+body[data-page="papers"] .table-wrapper th:nth-child(4),
+body[data-page="papers"] .table-wrapper td:nth-child(4) { min-width: 120px; }  /* 方向 */
+body[data-page="papers"] .table-wrapper th:nth-child(5),
+body[data-page="papers"] .table-wrapper td:nth-child(5) { min-width: 96px; }   /* 价值类型 */
+body[data-page="papers"] .table-wrapper th:nth-child(6),
+body[data-page="papers"] .table-wrapper td:nth-child(6) { min-width: 56px; text-align: right; }  /* 分数 */
+body[data-page="papers"] .table-wrapper th:nth-child(7),
+body[data-page="papers"] .table-wrapper td:nth-child(7) { min-width: 80px; }   /* 判断 */
+body[data-page="papers"] .table-wrapper th:nth-child(8),
+body[data-page="papers"] .table-wrapper td:nth-child(8) { min-width: 140px; }  /* 链接 */
+body[data-page="papers"] .table-wrapper th,
+body[data-page="papers"] .table-wrapper td { white-space: nowrap; }
+body[data-page="papers"] .table-wrapper td:nth-child(1) { white-space: normal; }  /* 论文标题列允许换行（带子说明） */
+body[data-page="papers"] .table-wrapper td .cell-sub { white-space: normal; }

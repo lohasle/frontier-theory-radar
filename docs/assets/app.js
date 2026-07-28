@@ -35,6 +35,74 @@ function initMobileMenu() {
   btn.addEventListener('click', () => menu.classList.toggle('open'));
 }
 
+// Paper-link "More ▾" popover — single delegated listener, closes on outside click / Escape.
+function initPaperMoreMenus(root = document) {
+  const openMenus = new Set();
+  const closeAll = () => {
+    openMenus.forEach(m => {
+      m.classList.remove('open');
+      const btn = m.previousElementSibling;
+      if (btn && btn.classList?.contains('paper-link-more')) btn.setAttribute('aria-expanded', 'false');
+    });
+    openMenus.clear();
+  };
+  root.addEventListener('click', (e) => {
+    const moreBtn = e.target.closest('[data-paper-more]');
+    if (moreBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const menu = moreBtn.nextElementSibling;
+      if (!menu) return;
+      const wasOpen = menu.classList.contains('open');
+      closeAll();
+      if (!wasOpen) {
+        menu.classList.add('open');
+        moreBtn.setAttribute('aria-expanded', 'true');
+        openMenus.add(menu);
+      }
+      return;
+    }
+    if (!e.target.closest('.paper-link-menu')) closeAll();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+}
+
+// Attach to all .table-wrapper under a root: detect horizontal overflow → toggle .has-overflow
+// so the right-edge fade appears only when needed.
+function initTableOverflow(root = document) {
+  root.querySelectorAll('.table-wrapper').forEach(wrap => {
+    const check = () => wrap.classList.toggle('has-overflow', wrap.scrollWidth > wrap.clientWidth + 1);
+    check();
+    window.addEventListener('resize', check);
+    // Also re-check on font load (changes layout)
+    if (document.fonts?.ready) document.fonts.ready.then(check);
+  });
+}
+
+// Column hover — highlight all cells in the same column when a td is hovered.
+// Adds a brief visual aid for scanning a table column (academic style).
+function initColumnHover(root = document) {
+  root.querySelectorAll('.table-wrapper table').forEach(table => {
+    table.addEventListener('mouseover', (e) => {
+      const td = e.target.closest('td, th');
+      if (!td) return;
+      const idx = td.cellIndex;
+      table.querySelectorAll('tr').forEach(tr => {
+        const cell = tr.children[idx];
+        if (cell) cell.classList.add('col-hover');
+      });
+    });
+    table.addEventListener('mouseout', (e) => {
+      const td = e.target.closest('td, th');
+      if (!td) return;
+      const idx = td.cellIndex;
+      const to = e.relatedTarget;
+      if (to && to.closest && to.closest(`td, th`)?.cellIndex === idx) return;
+      table.querySelectorAll('.col-hover').forEach(c => c.classList.remove('col-hover'));
+    });
+  });
+}
+
 function badgeClass(name = '') {
   if (['重点学习', '即时价值', 'immediate'].includes(name)) return 'badge-immediate';
   if (['轻量试点', '趋势价值', 'trend', 'rising'].includes(name)) return 'badge-trend';
@@ -46,15 +114,27 @@ function badgeClass(name = '') {
 
 function renderBadge(text, klass) { return `<span class="badge ${klass}">${escapeHtml(text)}</span>`; }
 function linkButton(label, url) { return url ? `<a class="paper-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>` : `<span class="paper-link disabled">${escapeHtml(label || '暂无')}</span>`; }
+// Paper link affordance: primary link (arXiv) as visible button, the rest as a "More ▾" popover.
+// This keeps the link column compact (one row, never wraps) regardless of how many URLs a paper has.
 function renderPaperLinks(paper) {
-  return `<div class="link-row">
-    ${linkButton('arXiv', paper.url)}
-    ${linkButton('PDF', paper.pdf_url)}
-    ${linkButton('OpenReview', paper.openreview_url)}
-    ${linkButton('Code', paper.code_url)}
-    ${linkButton('Benchmark', paper.benchmark_url)}
-    ${linkButton('Papers with Code', paper.paperswithcode_url)}
-  </div>`;
+  const primary = paper?.url || paper?.pdf_url;
+  if (!primary) return '<span class="muted">—</span>';
+  const primaryLabel = paper?.url ? 'arXiv' : 'PDF';
+
+  const secondary = [
+    paper?.url && paper?.pdf_url ? { label: 'PDF', href: paper.pdf_url } : null,
+    { label: 'OpenReview', href: paper?.openreview_url },
+    { label: 'Code', href: paper?.code_url },
+    { label: 'Benchmark', href: paper?.benchmark_url },
+    { label: 'Papers with Code', href: paper?.paperswithcode_url },
+  ].filter(x => x && x.href);
+
+  const primaryBtn = `<a class="paper-link paper-link-primary" href="${escapeHtml(primary)}" target="_blank" rel="noopener">${primaryLabel} ↗</a>`;
+  if (secondary.length === 0) return primaryBtn;
+
+  const moreBtn = `<button class="paper-link paper-link-more" type="button" aria-haspopup="true" aria-expanded="false" data-paper-more>更多 <span class="caret">▾</span></button>`;
+  const menu = `<div class="paper-link-menu" role="menu">${secondary.map(s => `<a class="paper-link paper-link-menu-item" href="${escapeHtml(s.href)}" target="_blank" rel="noopener" role="menuitem">${s.label} ↗</a>`).join('')}</div>`;
+  return `<div class="link-cluster">${primaryBtn}${moreBtn}${menu}</div>`;
 }
 function showState(id, html) { const node = el(id); if (node) node.innerHTML = html; }
 function showLoading(id) { showState(id, `<div class="loading"><div class="loading-spinner"></div><div>正在加载...</div></div>`); }
@@ -214,6 +294,9 @@ async function renderIndexPage() {
     </section>`;
 
   showState('index-root', sections);
+  initPaperMoreMenus(el('index-root'));
+  initTableOverflow(el('index-root'));
+  initColumnHover(el('index-root'));
 }
 
 async function renderDailyPage() {
@@ -285,10 +368,10 @@ async function renderPapersPage() {
   ${renderResultMeta(papers.length, filtered.length, query ? `关键词：${query}` : '')}
   <div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>日期</th><th>来源</th><th>方向</th><th>价值类型</th><th>分数</th><th>判断</th><th>链接</th></tr></thead><tbody>
   ${filtered.map(p => `<tr>
-    <td><a href="${escapeHtml(p.detail_path || '#')}">${escapeHtml(p.title || '')}</a><div class="muted">${escapeHtml(p.brief_cn || '')}</div></td>
+    <td><a href="${escapeHtml(p.detail_path || '#')}">${escapeHtml(p.title || '')}</a><div class="muted cell-sub">${escapeHtml(p.brief_cn || '')}</div></td>
     <td>${escapeHtml(p.first_seen_date || '')}</td>
     <td>${escapeHtml(p.source || '')}</td>
-    <td><div>${escapeHtml(maybeArray(p.matched_topics).join(' / ') || '未分类')}</div><div class="badge-group" style="margin-top:8px">${renderTopicChips(maybeArray(p.related_trends || []), true)}</div></td>
+    <td>${escapeHtml(maybeArray(p.matched_topics).join(' / ') || '未分类')}</td>
     <td>${renderBadge(p.value_type_label || '', badgeClass(p.value_type || ''))}</td>
     <td class="num">${escapeHtml(p.score || 0)}</td>
     <td>${renderBadge(p.decision || '待定', badgeClass(p.decision || ''))}</td>
@@ -296,6 +379,9 @@ async function renderPapersPage() {
   </tr>`).join('') || '<tr><td colspan="8">没有匹配的论文</td></tr>'}
   </tbody></table></div>`;
   showState('papers-root', html);
+  initPaperMoreMenus(el('papers-root'));
+  initTableOverflow(el('papers-root'));
+  initColumnHover(el('papers-root'));
   const apply = () => {
     const params = new URLSearchParams();
     const map = {
@@ -409,6 +495,9 @@ async function renderDailyDetailPage() {
 
   <section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">🚫</span>今日忽略理由</h2></div><div class="card"><ul class="note-list">${maybeArray(detail.ignore_reasons).map(x => `<li>${escapeHtml(x)}</li>`).join('') || '无'}</ul></div></section>`;
   showState('daily-detail-root', html);
+  initPaperMoreMenus(el('daily-detail-root'));
+  initTableOverflow(el('daily-detail-root'));
+  initColumnHover(el('daily-detail-root'));
 }
 
 async function renderPaperDetailPage() {
@@ -438,6 +527,9 @@ async function renderPaperDetailPage() {
   <section class="section columns-2"><div class="card"><div class="card-title">启发</div><ul class="note-list"><li><strong>系统设计：</strong>${escapeHtml(maybeArray(detail.insights?.system_design).join('；'))}</li><li><strong>Agent 工程：</strong>${escapeHtml(maybeArray(detail.insights?.agent_engineering).join('；'))}</li><li><strong>研发流程：</strong>${escapeHtml(maybeArray(detail.insights?.dev_process).join('；'))}</li><li><strong>评测方法：</strong>${escapeHtml(maybeArray(detail.insights?.evaluation).join('；'))}</li><li><strong>平台工程：</strong>${escapeHtml(maybeArray(detail.insights?.platform_engineering).join('；'))}</li><li><strong>个人学习：</strong>${escapeHtml(maybeArray(detail.insights?.personal_learning).join('；'))}</li></ul></div><div class="card"><div class="card-title">行动建议</div><ul class="note-list">${maybeArray(detail.actions?.immediate_actions).map(x => `<li>${escapeHtml(x)}</li>`).join('')}${maybeArray(detail.actions?.trend_actions).map(x => `<li>${escapeHtml(x)}</li>`).join('')}${maybeArray(detail.actions?.long_tail_actions).map(x => `<li>${escapeHtml(x)}</li>`).join('')}${detail.actions?.ignore_reason ? `<li>${escapeHtml(detail.actions.ignore_reason)}</li>` : ''}</ul></div></section>
   <section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">📊</span>评分拆解</h2></div><div class="table-wrapper"><table><tbody>${Object.entries(scores).map(([k,v]) => `<tr><td>${escapeHtml(k)}</td><td class="num">${escapeHtml(v)}</td></tr>`).join('')}</tbody></table></div></section>`;
   showState('paper-detail-root', html);
+  initPaperMoreMenus(el('paper-detail-root'));
+  initTableOverflow(el('paper-detail-root'));
+  initColumnHover(el('paper-detail-root'));
   await enhanceMermaid();
 }
 
@@ -465,6 +557,9 @@ async function renderTrendDetailPage() {
   <section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">📄</span>相关论文</h2><a href="papers.html?topic=${encodeURIComponent(maybeArray(detail.priority_topics)[0] || '')}">按主题查看论文库</a></div><div class="table-wrapper"><table><thead><tr><th>论文</th><th>来源</th><th>价值类型</th><th>分数</th><th>判断</th><th>链接</th></tr></thead><tbody>${relatedRows || '<tr><td colspan="6">暂无关联论文</td></tr>'}</tbody></table></div></section>
   <section class="section"><div class="section-header"><h2 class="section-title"><span class="section-icon">📘</span>趋势研究记录</h2></div><div class="card">${detail.raw_markdown_html || '<p>暂无趋势研究记录。</p>'}<div style="margin-top:16px"><a class="btn btn-secondary btn-sm" href="${escapeHtml(detail.markdown_path || '#')}">查看原始 Markdown</a></div></div></section>`;
   showState('trend-detail-root', html);
+  initPaperMoreMenus(el('trend-detail-root'));
+  initTableOverflow(el('trend-detail-root'));
+  initColumnHover(el('trend-detail-root'));
   await enhanceMermaid();
 }
 
