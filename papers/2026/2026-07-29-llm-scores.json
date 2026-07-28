@@ -1,0 +1,34 @@
+{
+  "by_url": {
+    "http://arxiv.org/abs/2607.24720v1": {
+      "score": 86,
+      "value_type": "immediate",
+      "reason": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单/多教师 on-policy 蒸馏系统性地隔离每个阶段的贡献。这对所有构建 Agent 的团队有直接方法论价值——当前业界普遍困惑'规划能力到底是基座模型带来的还是后训练/RL 蒸馏带来的'，这篇工作提供了可控实验范式来回答这个问题。工程价值高：多教师 on-policy agentic distillation 是可直接迁移到 Agent 训练管线的具体技术。证据强度中等偏高（受控环境+消融设计），但代码/benchmark 暂无待核验，摘要截断。",
+      "matched_topics": ["ai-agent", "context-engineering", "multimodal-agent"]
+    },
+    "http://arxiv.org/abs/2607.24717v1": {
+      "score": 80,
+      "value_type": "immediate",
+      "reason": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评分、格式转换等）。这直击 LLM 预训练数据工程的痛点：当前业界普遍用统一规则处理全量数据，但不同样本的质量、领域、噪声特性差异巨大，一刀切策略损失了大量信号。对任何自建预训练/继续预训练管线的团队，这是可借鉴的架构范式。作者团队（Shijie Xia、Pengfei Liu）在数据工程方向有积累。工程可验证性高（orchestrator 可用小模型实现，处理逻辑可独立验证），但完整效果需大规模预训练实验支撑，复现成本高。代码/benchmark 待核验。",
+      "matched_topics": ["data-engineering", "context-engineering"]
+    },
+    "http://arxiv.org/abs/2607.24743v1": {
+      "score": 73,
+      "value_type": "trend",
+      "reason": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法论价值超出医疗领域本身——'vision-centric MLLM + 与领域专家工作流对齐的评测协议'是一个可迁移到任何专业领域（工业质检、遥感、法务文档）的系统设计模板。对构建领域垂直多模态 Agent 的团队有架构参考价值。作为趋势资产：多模态 MLLM 正从'通用图文'向'专业领域异构影像'深化，评测从'通用 benchmark'向'领域工作流对齐'演进。短期直接落地需自建医疗影像+评测协议，门槛较高。代码/benchmark 暂无待核验。",
+      "matched_topics": ["multimodal-agent", "llm-evaluation", "ai-agent"]
+    },
+    "http://arxiv.org/abs/2607.24731v1": {
+      "score": 70,
+      "value_type": "trend",
+      "reason": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity 的目标是'分支级欠识别'的——正负条件分支的引导速度可能组合出相同的结果但对应完全不同的生成路径。这对所有做扩散模型蒸馏/加速部署的团队有直接价值：如果蒸馏目标本身欠识别，蒸馏出的学生模型可能存在隐性的生成质量退化。作者提出了重新思考 CFG 下 OPD 目标的方法论。属于推理加速/蒸馏方向的趋势资产，证据强度依赖论文正文的消融实验（摘要截断），代码/benchmark 待核验。",
+      "matched_topics": ["inference-serving"]
+    },
+    "http://arxiv.org/abs/2607.24714v1": {
+      "score": 66,
+      "value_type": "long_tail",
+      "reason": "首个用单一前沿 LLM（Claude Opus 4.7）从书面规格生成并迭代优化完整 Python 离子穿梭编译器代码的研究——从线性分段阱到带结点的复杂架构。作为 coding-agent 的真实案例，它证明了前沿 LLM 在'领域专家级代码生成+迭代精化'上的能力边界：能处理量子计算编译器这种高度专业、强约束的代码任务。对评估 LLM 作为代码生成/软件工程 Agent 的能力上限有参考价值。作为长尾资产：它不是可直接迁移的方法，而是一个'LLM 能力前沿的探测点'，可用于校准对 LLM 编码能力的预期。工程可验证性高（编译器代码可执行验证），但与主流 AI Agent 工程栈的直接迁移距离中等。代码待核验。",
+      "matched_topics": ["coding-agent", "ai-agent", "llm-evaluation"]
+    }
+  }
+}

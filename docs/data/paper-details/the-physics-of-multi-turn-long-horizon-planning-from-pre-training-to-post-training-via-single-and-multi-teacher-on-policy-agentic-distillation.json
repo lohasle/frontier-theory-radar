@@ -7,34 +7,34 @@
     "Kang Liu",
     "Jun Zhao"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-07-27",
   "url": "http://arxiv.org/abs/2607.24720v1",
   "pdf_url": "https://arxiv.org/pdf/2607.24720v1",
   "code_url": "",
   "benchmark_url": "",
-  "paperswithcode_url": "https://paperswithcode.com/search?q=The%20Physics%20of%20Multi-Turn%20Long-Horizon%20Planning%3A%20From%20Pre-training%20to%20Post-train",
+  "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-27",
-  "first_deep_dive_daily": "2026-07-27",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-29",
+  "first_deep_dive_daily": "2026-07-29",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
   "value_scores": {
     "novelty": 5.4,
     "relevance": 6.2,
     "evidence": 4.5,
-    "engineering_testability": 5.25,
+    "engineering_testability": 4.05,
     "trend_signal": 4.05,
     "long_tail_potential": 3.5,
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 41.2,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：AI Agent：Multi-turn long-horizon planning is critical for foundation m…",
-  "one_line_essence": "AI Agent：Multi-turn long-horizon planning is critical for foundation model agents, yet …",
+  "score": 86.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力…",
+  "one_line_essence": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单/多教师 on-policy 蒸馏系统性地隔离每个阶段的贡献。这对所有构建 Agent 的团队有直接方法论价值——当前业界普遍困惑'规划能力到底是基座模型带来的还是后训练/RL 蒸馏带来的'，这篇工作提供了可控实验范式来回答这个问题。工程价值高：多教师 on-policy agentic distillation 是可直接迁移到 Agent 训练管线的具体技术。证据强度中等偏高（受控环境+消融设计），但代码/benchmark 暂无待核验，摘要截断。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "AI Agent：Multi-turn long-horizon planning is critical for foundation model agents, yet …",
+  "new_claim_or_method": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单/多教师 on-policy 蒸馏系统性地隔离每个阶段的贡献。这对所有构建 Agent 的团队有直接方法论价值——当前业界普遍困惑'规划能力到底是基座模型带来的还是后训",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -48,9 +48,10 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [
-      "agentic-world-modeling"
+      "agentic-world-modeling",
+      "context-engineering"
     ],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -60,7 +61,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "AI Agent：Multi-turn long-horizon planning is critical for foundation model agents, yet …",
+    "why_save": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单",
     "future_trigger": [
       "待更多证据"
     ],
@@ -100,16 +101,30 @@
     ]
   },
   "actions": {
-    "immediate_actions": [],
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
     "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.24720v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.24720v1"
+    }
+  ],
   "detail_path": "paper-detail.html?id=the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation",
-  "daily_path": "daily-detail.html?date=2026-07-27",
+  "daily_path": "daily-detail.html?date=2026-07-29",
   "trend_paths": [
-    "trend-detail.html?id=agentic-world-modeling"
+    "trend-detail.html?id=agentic-world-modeling",
+    "trend-detail.html?id=context-engineering"
   ],
   "long_tail_path": "long-tail.html",
   "mermaid": {

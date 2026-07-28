@@ -8,34 +8,34 @@
     "Xianzhe Xu",
     "Lirong Wu"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-07-27",
   "url": "http://arxiv.org/abs/2607.24743v1",
   "pdf_url": "https://arxiv.org/pdf/2607.24743v1",
   "code_url": "",
   "benchmark_url": "",
-  "paperswithcode_url": "https://paperswithcode.com/search?q=ClinFusion%3A%20A%20Vision-Centric%20Multimodal%20LLM%20System%20for%20Holistic%20Medical%20Understa",
+  "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-27",
-  "first_deep_dive_daily": "2026-07-27",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-29",
+  "first_deep_dive_daily": "2026-07-29",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 7.4,
     "evidence": 4.95,
-    "engineering_testability": 5.25,
+    "engineering_testability": 4.05,
     "trend_signal": 4.05,
     "long_tail_potential": 3.5,
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 44.6,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：RAG / 知识系统：Multimodal large language models (MLLMs) hold immense poten…",
-  "one_line_essence": "RAG / 知识系统：Multimodal large language models (MLLMs) hold immense potential to revolutioni…",
+  "score": 73.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射…",
+  "one_line_essence": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法论价值超出医疗领域本身——'vision-centric MLLM + 与领域专家工作流对齐的评测协议'是一个可迁移到任何专业领域（工业质检、遥感、法务文档）的系统设计模板。对构建领域垂直多模态 Agent 的团队有架构参考价值。作为趋势资产：多模态 MLLM 正从'通用图文'向'专业领域异构影像'深化，评测从'通用 benchmark'向'领域工作流对齐'演进。短期直接落地需自建医疗影像+评测协议，门槛较高。代码/benchmark 暂无待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "RAG / 知识系统：Multimodal large language models (MLLMs) hold immense potential to revolutioni…",
+  "new_claim_or_method": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法论价值超出医疗领域本身——'vision-centric MLLM + 与领域专家工作流对齐的评测协议'是一个可迁移到任何专业领域（工业质检、遥感、法务文档）的系统设计",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,9 +49,8 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [
-      "context-engineering",
       "agentic-world-modeling",
       "coding-agent"
     ],
@@ -63,9 +62,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "RAG / 知识系统：Multimodal large language models (MLLMs) hold immense potential to revolutioni…",
+    "why_save": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -104,15 +103,27 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.24743v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.24743v1"
+    }
+  ],
   "detail_path": "paper-detail.html?id=clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
-  "daily_path": "daily-detail.html?date=2026-07-27",
+  "daily_path": "daily-detail.html?date=2026-07-29",
   "trend_paths": [
-    "trend-detail.html?id=context-engineering",
     "trend-detail.html?id=agentic-world-modeling",
     "trend-detail.html?id=coding-agent"
   ],

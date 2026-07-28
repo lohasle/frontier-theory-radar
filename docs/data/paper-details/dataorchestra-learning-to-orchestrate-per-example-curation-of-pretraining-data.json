@@ -7,34 +7,34 @@
     "Shijie Xia",
     "Pengfei Liu"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-07-27",
   "url": "http://arxiv.org/abs/2607.24717v1",
   "pdf_url": "https://arxiv.org/pdf/2607.24717v1",
   "code_url": "",
   "benchmark_url": "",
-  "paperswithcode_url": "https://paperswithcode.com/search?q=DataOrchestra%3A%20Learning%20to%20Orchestrate%20Per-Example%20Curation%20of%20Pretraining%20Data",
+  "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-27",
-  "first_deep_dive_daily": "2026-07-27",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-29",
+  "first_deep_dive_daily": "2026-07-29",
+  "value_type": "immediate",
+  "value_type_label": "即时价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 3.8,
     "evidence": 4.5,
-    "engineering_testability": 5.8,
+    "engineering_testability": 4.6,
     "trend_signal": 3.5,
     "long_tail_potential": 3.5,
     "actionability": 3.8,
     "noise_risk": 2.4
   },
-  "score": 31.9,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：前沿论文：Pretraining data processing is critical to the downstream perform…",
-  "one_line_essence": "前沿论文：Pretraining data processing is critical to the downstream performance of Large…",
+  "score": 80.0,
+  "decision": "重点学习",
+  "one_line_judgement": "今天值得试：提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 …",
+  "one_line_essence": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评分、格式转换等）。这直击 LLM 预训练数据工程的痛点：当前业界普遍用统一规则处理全量数据，但不同样本的质量、领域、噪声特性差异巨大，一刀切策略损失了大量信号。对任何自建预训练/继续预训练管线的团队，这是可借鉴的架构范式。作者团队（Shijie Xia、Pengfei Liu）在数据工程方向有积累。工程可验证性高（orchestrator 可用小模型实现，处理逻辑可独立验证），但完整效果需大规模预训练实验支撑，复现成本高。代码/benchmark 待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "前沿论文：Pretraining data processing is critical to the downstream performance of Large…",
+  "new_claim_or_method": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评分、格式转换等）。这直击 LLM 预训练数据工程的痛点：当前业界普遍用统一规则处理全量数据，但不同样本的质量、领域、噪声特性差异巨大，一刀切策略损失了大量信号。对任何自",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -48,8 +48,10 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
-    "related_trends": [],
+    "status": "emerging",
+    "related_trends": [
+      "context-engineering"
+    ],
     "evidence": [
       "论文主题匹配固定研究方向"
     ],
@@ -58,7 +60,7 @@
     ]
   },
   "long_tail": {
-    "why_save": "前沿论文：Pretraining data processing is critical to the downstream performance of Large…",
+    "why_save": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评",
     "future_trigger": [
       "待更多证据"
     ],
@@ -98,15 +100,30 @@
     ]
   },
   "actions": {
-    "immediate_actions": [],
+    "immediate_actions": [
+      "今天读摘要与方法",
+      "今天试最小实验",
+      "一周内沉淀为 Skill / Checklist"
+    ],
     "trend_actions": [],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.24717v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.24717v1"
+    }
+  ],
   "detail_path": "paper-detail.html?id=dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data",
-  "daily_path": "daily-detail.html?date=2026-07-27",
-  "trend_paths": [],
+  "daily_path": "daily-detail.html?date=2026-07-29",
+  "trend_paths": [
+    "trend-detail.html?id=context-engineering"
+  ],
   "long_tail_path": "long-tail.html",
   "mermaid": {
     "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",

@@ -8,34 +8,34 @@
     "Fangtai Wu",
     "Jinpeng Yu"
   ],
-  "source": "arxiv",
+  "source": "arXiv",
   "published": "2026-07-27",
   "url": "http://arxiv.org/abs/2607.24731v1",
   "pdf_url": "https://arxiv.org/pdf/2607.24731v1",
   "code_url": "",
   "benchmark_url": "",
-  "paperswithcode_url": "https://paperswithcode.com/search?q=Rethinking%20Classifier-Free%20Guidance%20in%20On-Policy%20Diffusion%20Distillation",
+  "paperswithcode_url": "",
   "openreview_url": "",
-  "first_seen_date": "2026-07-27",
-  "first_deep_dive_daily": "2026-07-27",
-  "value_type": "ignore",
-  "value_type_label": "暂时忽略",
+  "first_seen_date": "2026-07-29",
+  "first_deep_dive_daily": "2026-07-29",
+  "value_type": "trend",
+  "value_type_label": "趋势价值",
   "value_scores": {
     "novelty": 4.8,
     "relevance": 5.0,
     "evidence": 4.5,
-    "engineering_testability": 5.25,
+    "engineering_testability": 4.05,
     "trend_signal": 3.5,
-    "long_tail_potential": 4.15,
+    "long_tail_potential": 3.5,
     "actionability": 5.0,
     "noise_risk": 1.2
   },
-  "score": 37.3,
-  "decision": "暂时忽略",
-  "one_line_judgement": "当前可忽略：推理与服务：On-policy distillation (OPD) adapts diffusion models by querying…",
-  "one_line_essence": "推理与服务：On-policy distillation (OPD) adapts diffusion models by querying a teacher alo…",
+  "score": 70.0,
+  "decision": "轻量试点",
+  "one_line_judgement": "值得继续观察：揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，…",
+  "one_line_essence": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity 的目标是'分支级欠识别'的——正负条件分支的引导速度可能组合出相同的结果但对应完全不同的生成路径。这对所有做扩散模型蒸馏/加速部署的团队有直接价值：如果蒸馏目标本身欠识别，蒸馏出的学生模型可能存在隐性的生成质量退化。作者提出了重新思考 CFG 下 OPD 目标的方法论。属于推理加速/蒸馏方向的趋势资产，证据强度依赖论文正文的消融实验（摘要截断），代码/benchmark 待核验。",
   "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-  "new_claim_or_method": "推理与服务：On-policy distillation (OPD) adapts diffusion models by querying a teacher alo…",
+  "new_claim_or_method": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity 的目标是'分支级欠识别'的——正负条件分支的引导速度可能组合出相同的结果但对应完全不同的生成路径。这对所有做扩散模型蒸馏/加速部署的团队有直接价值：如果蒸馏目标本身欠识",
   "research_position": "source_paper",
   "engineering_testability": {
     "has_code": false,
@@ -49,7 +49,7 @@
     ]
   },
   "trend_relation": {
-    "status": "noise",
+    "status": "emerging",
     "related_trends": [],
     "evidence": [
       "论文主题匹配固定研究方向"
@@ -59,9 +59,9 @@
     ]
   },
   "long_tail": {
-    "why_save": "推理与服务：On-policy distillation (OPD) adapts diffusion models by querying a teacher alo…",
+    "why_save": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity ",
     "future_trigger": [
-      "待更多证据"
+      "出现多篇跟进论文、开源项目和工程博客共振"
     ],
     "possible_use_cases": [
       "Prompt 设计",
@@ -100,13 +100,26 @@
   },
   "actions": {
     "immediate_actions": [],
-    "trend_actions": [],
+    "trend_actions": [
+      "纳入趋势雷达",
+      "观察代码 / benchmark / 工程博客",
+      "7-30 天复盘"
+    ],
     "long_tail_actions": [],
-    "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+    "ignore_reason": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "arXiv",
+      "url": "http://arxiv.org/abs/2607.24731v1"
+    },
+    {
+      "label": "PDF",
+      "url": "https://arxiv.org/pdf/2607.24731v1"
+    }
+  ],
   "detail_path": "paper-detail.html?id=rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation",
-  "daily_path": "daily-detail.html?date=2026-07-27",
+  "daily_path": "daily-detail.html?date=2026-07-29",
   "trend_paths": [],
   "long_tail_path": "long-tail.html",
   "mermaid": {

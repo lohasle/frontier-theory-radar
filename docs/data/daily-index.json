@@ -1,7 +1,20 @@
 {
-  "updated_at": "2026-07-28T14:12:40.630824",
+  "updated_at": "2026-07-29T04:33:51.652914",
   "total": 30,
   "reports": [
+    {
+      "date": "2026-07-29",
+      "title": "论文价值发现日报 - 2026-07-29",
+      "deep_dive_title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
+      "deep_dive_url": "http://arxiv.org/abs/2607.24720v1",
+      "decision": "重点学习",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "daily_action": "完成三件事：画出团队现有 Agent 训练管线并标注规划能力的可能来源阶段、构建一个最小多轮规划评测任务用于消融归因、把 DataOrchestra 的逐样本编排思路写入预训练数据管线的改进 backlog。",
+      "max_uncertainty": "全部 5 篇论文的代码、benchmark、OpenReview、Papers with Code 链接均暂无；当前评分与分析基于 arXiv 摘要自述（多篇摘要截断），论文正文的实验规模、基线对比、消融研究与统计显著性尚待核验。多轮规划论文的受控环境具体设计、DataOrchestra 的 orchestrator 决策机制、ClinFusion 的评测协议细节均需正文确认。",
+      "one_line_judgement": "它把 Agent 多轮长程规划能力的习得过程做了'物理级'的拆解——用一个统一可控的多轮环境，将规划能力分解到预训练、对齐、智能体蒸馏三个阶段，并用单/多教师 on-policy 蒸馏隔离每个阶段的贡献。这回答了当前 Agent 工程化最被困惑的问题：规划能力到底是基座带来的、还是后训练带来的、还是蒸馏带来的？",
+      "path": "daily-detail.html?date=2026-07-29"
+    },
     {
       "date": "2026-07-28",
       "title": "论文价值发现日报 - 2026-07-28",
@@ -378,19 +391,6 @@
       "max_uncertainty": "缺少多源工程证据",
       "one_line_judgement": "它同时具备问题重要性、工程可验证性和研究资产转化价值。",
       "path": "daily-detail.html?date=2026-06-30"
-    },
-    {
-      "date": "2026-06-29",
-      "title": "论文价值发现日报 - 2026-06-29",
-      "deep_dive_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
-      "deep_dive_url": "http://arxiv.org/abs/2606.27369v1",
-      "decision": "重点学习",
-      "value_type": "immediate",
-      "value_type_label": "即时价值",
-      "daily_action": "三件事：列出 RiVER 最小实验（选已有打分器的任务→确认打分器确定性→当连续 reward 接 GRPO→对 SFT/DPO 基线比指标）；把 PEEU 的'探索→hindsight 复用'纳入自有 agent 框架的小模型规划增强观察清单；把世界模型幻觉覆盖度体检与序列概率≠正确性纳入上线前可靠性 checklist。",
-      "max_uncertainty": "外部可复现资产缺失是最大不确定性：除世界模型幻觉论文的 MMBench2 外，其余论文的代码、benchmark、Papers with Code、独立复现证据均暂无或待核验，当前判断主要基于 arXiv 摘要与作者/机构可信度（RiVER 属 RAG/对话 RL 方向、PEEU 属中科院 agent 方向、世界模型幻觉属 Hansen/Wang UCSD 团队、序列概率属 Geiping 马里兰团队），需持续跟踪作者主页与 GitHub。此外今日北京时间周一凌晨对应美东周日晚，arXiv 新一周投稿尚未上线，论文集合与周末重叠，无法提供新增量信号。",
-      "one_line_judgement": "它解锁了 RLVR（可验证奖励强化学习）最大的应用天花板——过去 RLVR 只能在'有标准答案的任务'（数学/代码）上用，而 RAG 召回质量、摘要质量、检索排序这类开放任务只有打分器、没有 ground-truth，长期用不上 RL。RiVER 把'可验证'从'知道正确答案'重新定义为'有一个确定的可执行打分信号（连续值也算）'，再用 group-relative RL 直接吃连续奖励。这对所有手里有打分函数却没有标准答案的 LLM 团队是即时可验证的杠杆。",
-      "path": "daily-detail.html?date=2026-06-29"
     }
   ]
 }

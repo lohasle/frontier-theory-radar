@@ -1,6 +1,1308 @@
 {
-  "updated_at": "2026-07-28T15:21:24.109869",
+  "updated_at": "2026-07-29T04:33:52.335579",
   "papers": {
+    "the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation": {
+      "id": "the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation",
+      "title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
+      "authors": [
+        "Tianyi Men",
+        "Zhuoran Jin",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24720v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24720v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 5.4,
+        "relevance": 6.2,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 86.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力…",
+      "one_line_essence": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单/多教师 on-policy 蒸馏系统性地隔离每个阶段的贡献。这对所有构建 Agent 的团队有直接方法论价值——当前业界普遍困惑'规划能力到底是基座模型带来的还是后训练/RL 蒸馏带来的'，这篇工作提供了可控实验范式来回答这个问题。工程价值高：多教师 on-policy agentic distillation 是可直接迁移到 Agent 训练管线的具体技术。证据强度中等偏高（受控环境+消融设计），但代码/benchmark 暂无待核验，摘要截断。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单/多教师 on-policy 蒸馏系统性地隔离每个阶段的贡献。这对所有构建 Agent 的团队有直接方法论价值——当前业界普遍困惑'规划能力到底是基座模型带来的还是后训",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "直击 Agent 工程化最核心的未解难题：多轮长程规划能力究竟在训练的哪个阶段获得、如何被塑造。论文构建了一个统一可控的多轮环境，将规划能力的习得分解为预训练、对齐、智能体蒸馏三个阶段，并用单",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24720v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24720v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data": {
+      "id": "dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data",
+      "title": "DataOrchestra: Learning to Orchestrate Per-Example Curation of Pretraining Data",
+      "authors": [
+        "Zhen Huang",
+        "Yikun Wang",
+        "Shijie Xia",
+        "Pengfei Liu"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24717v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24717v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "immediate",
+      "value_type_label": "即时价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 80.0,
+      "decision": "重点学习",
+      "one_line_judgement": "今天值得试：提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 …",
+      "one_line_essence": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评分、格式转换等）。这直击 LLM 预训练数据工程的痛点：当前业界普遍用统一规则处理全量数据，但不同样本的质量、领域、噪声特性差异巨大，一刀切策略损失了大量信号。对任何自建预训练/继续预训练管线的团队，这是可借鉴的架构范式。作者团队（Shijie Xia、Pengfei Liu）在数据工程方向有积累。工程可验证性高（orchestrator 可用小模型实现，处理逻辑可独立验证），但完整效果需大规模预训练实验支撑，复现成本高。代码/benchmark 待核验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评分、格式转换等）。这直击 LLM 预训练数据工程的痛点：当前业界普遍用统一规则处理全量数据，但不同样本的质量、领域、噪声特性差异巨大，一刀切策略损失了大量信号。对任何自",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "context-engineering"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "提出了 DataOrchestra——将预训练数据处理从'语料级固定策略'升级为'逐样本编排'的框架。orchestrator 对每个数据 chunk 决定执行哪些处理操作（过滤、去重、质量评",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [
+          "今天读摘要与方法",
+          "今天试最小实验",
+          "一周内沉淀为 Skill / Checklist"
+        ],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24717v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24717v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [
+        "trend-detail.html?id=context-engineering"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding": {
+      "id": "clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
+      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+      "authors": [
+        "Hangjie Yuan",
+        "Yichen Qian",
+        "Zhiwei Tang",
+        "Xianzhe Xu",
+        "Lirong Wu"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24743v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24743v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 7.4,
+        "evidence": 4.95,
+        "engineering_testability": 4.05,
+        "trend_signal": 4.05,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 73.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射…",
+      "one_line_essence": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法论价值超出医疗领域本身——'vision-centric MLLM + 与领域专家工作流对齐的评测协议'是一个可迁移到任何专业领域（工业质检、遥感、法务文档）的系统设计模板。对构建领域垂直多模态 Agent 的团队有架构参考价值。作为趋势资产：多模态 MLLM 正从'通用图文'向'专业领域异构影像'深化，评测从'通用 benchmark'向'领域工作流对齐'演进。短期直接落地需自建医疗影像+评测协议，门槛较高。代码/benchmark 暂无待核验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法论价值超出医疗领域本身——'vision-centric MLLM + 与领域专家工作流对齐的评测协议'是一个可迁移到任何专业领域（工业质检、遥感、法务文档）的系统设计",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "ClinFusion 将医疗多模态 LLM 部署重新定义为'以视觉为中心'的挑战：模型必须吸收异构 2D/3D 医学影像，评测协议须对齐放射科医生的临床实践并做细粒度、事实性驱动的评估。其方法",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24743v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24743v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation": {
+      "id": "rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation",
+      "title": "Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation",
+      "authors": [
+        "Bingnan Li",
+        "Haozhe Wang",
+        "Haozhong Xiong",
+        "Fangtai Wu",
+        "Jinpeng Yu"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24731v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24731v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "trend",
+      "value_type_label": "趋势价值",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 4.05,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 70.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得继续观察：揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，…",
+      "one_line_essence": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity 的目标是'分支级欠识别'的——正负条件分支的引导速度可能组合出相同的结果但对应完全不同的生成路径。这对所有做扩散模型蒸馏/加速部署的团队有直接价值：如果蒸馏目标本身欠识别，蒸馏出的学生模型可能存在隐性的生成质量退化。作者提出了重新思考 CFG 下 OPD 目标的方法论。属于推理加速/蒸馏方向的趋势资产，证据强度依赖论文正文的消融实验（摘要截断），代码/benchmark 待核验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity 的目标是'分支级欠识别'的——正负条件分支的引导速度可能组合出相同的结果但对应完全不同的生成路径。这对所有做扩散模型蒸馏/加速部署的团队有直接价值：如果蒸馏目标本身欠识",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "emerging",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "揭示了一个被忽视的技术盲点：在 on-policy 扩散蒸馏（OPD）中使用 classifier-free guidance（CFG）时，直接匹配教师/学生 guided velocity ",
+        "future_trigger": [
+          "出现多篇跟进论文、开源项目和工程博客共振"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [
+          "纳入趋势雷达",
+          "观察代码 / benchmark / 工程博客",
+          "7-30 天复盘"
+        ],
+        "long_tail_actions": [],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24731v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24731v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "efficient-llm-generated-shuttling-compilers-for-complex-trapped-ion-architectures": {
+      "id": "efficient-llm-generated-shuttling-compilers-for-complex-trapped-ion-architectures",
+      "title": "Efficient LLM-Generated Shuttling Compilers for Complex Trapped-Ion Architectures",
+      "authors": [
+        "Fabian Kreppel",
+        "Reza Salkhordeh",
+        "Ferdinand Schmidt-Kaler",
+        "André Brinkmann"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24714v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24714v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "long_tail",
+      "value_type_label": "长尾价值",
+      "value_scores": {
+        "novelty": 6.0,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 66.0,
+      "decision": "轻量试点",
+      "one_line_judgement": "值得先保存：首个用单一前沿 LLM（Claude Opus 4.7）从书面规格生成并迭代优化完整 Python 离子穿梭编译器代码的研究——从线性分段阱…",
+      "one_line_essence": "首个用单一前沿 LLM（Claude Opus 4.7）从书面规格生成并迭代优化完整 Python 离子穿梭编译器代码的研究——从线性分段阱到带结点的复杂架构。作为 coding-agent 的真实案例，它证明了前沿 LLM 在'领域专家级代码生成+迭代精化'上的能力边界：能处理量子计算编译器这种高度专业、强约束的代码任务。对评估 LLM 作为代码生成/软件工程 Agent 的能力上限有参考价值。作为长尾资产：它不是可直接迁移的方法，而是一个'LLM 能力前沿的探测点'，可用于校准对 LLM 编码能力的预期。工程可验证性高（编译器代码可执行验证），但与主流 AI Agent 工程栈的直接迁移距离中等。代码待核验。",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "首个用单一前沿 LLM（Claude Opus 4.7）从书面规格生成并迭代优化完整 Python 离子穿梭编译器代码的研究——从线性分段阱到带结点的复杂架构。作为 coding-agent 的真实案例，它证明了前沿 LLM 在'领域专家级代码生成+迭代精化'上的能力边界：能处理量子计算编译器这种高度专业、强约束的代码任务。对评估 LLM 作为代码生成/软件",
+      "research_position": "long_tail_insight",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "long_tail_watch",
+        "related_trends": [
+          "coding-agent",
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "首个用单一前沿 LLM（Claude Opus 4.7）从书面规格生成并迭代优化完整 Python 离子穿梭编译器代码的研究——从线性分段阱到带结点的复杂架构。作为 coding-agent ",
+        "future_trigger": [
+          "出现开源实现 / 被高质量论文引用 / 进入 benchmark / 与当前系统问题交集增强"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": "2026-08-19"
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [
+          "加入长尾库",
+          "标注未来触发条件",
+          "先沉淀 Prompt / Skill 草案"
+        ],
+        "ignore_reason": ""
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24714v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24714v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=efficient-llm-generated-shuttling-compilers-for-complex-trapped-ion-architectures",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [
+        "trend-detail.html?id=coding-agent",
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "erunderstand-evaluating-vision-language-models-on-structured-er-diagrams": {
+      "id": "erunderstand-evaluating-vision-language-models-on-structured-er-diagrams",
+      "title": "ERUnderstand: Evaluating Vision-Language Models on Structured ER Diagrams",
+      "authors": [
+        "Ali Ansari",
+        "Yasmin Mohammadi",
+        "Farnoush Nili",
+        "Parsa Esmaeilkhani",
+        "Longin Jan Latecki"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24707v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24707v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 5.4,
+        "relevance": 6.2,
+        "evidence": 4.95,
+        "engineering_testability": 3.5,
+        "trend_signal": 5.45,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 1.2
+      },
+      "score": 40.7,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to co…",
+      "one_line_essence": "Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to conceptual database design,…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to conceptual database design,…",
+      "research_position": "benchmark",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [
+          "agentic-world-modeling",
+          "coding-agent"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to conceptual database design,…",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24707v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24707v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=erunderstand-evaluating-vision-language-models-on-structured-er-diagrams",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling",
+        "trend-detail.html?id=coding-agent"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "kanex-translating-kolmogorov-arnold-networks-interpretability-to-medical-explainability": {
+      "id": "kanex-translating-kolmogorov-arnold-networks-interpretability-to-medical-explainability",
+      "title": "KANEx: Translating Kolmogorov-Arnold Networks' Interpretability to Medical Explainability",
+      "authors": [
+        "Krithi Shailya",
+        "Ananya Lakshmi Ravi",
+        "Venkatanathan K. V.",
+        "Sowmya S. Sundaram",
+        "Gokul S. Krishnan"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24730v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24730v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 5.0,
+        "evidence": 4.5,
+        "engineering_testability": 4.6,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 5.0,
+        "noise_risk": 1.2
+      },
+      "score": 37.2,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：Multimodal Agent：Computer vision models have become highly effective f…",
+      "one_line_essence": "Multimodal Agent：Computer vision models have become highly effective for medical applications, …",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "Multimodal Agent：Computer vision models have become highly effective for medical applications, …",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [
+          "agentic-world-modeling"
+        ],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "Multimodal Agent：Computer vision models have become highly effective for medical applications, …",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24730v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24730v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=kanex-translating-kolmogorov-arnold-networks-interpretability-to-medical-explainability",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [
+        "trend-detail.html?id=agentic-world-modeling"
+      ],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "certified-parallel-in-time-sinkhorn-for-dynamic-entropic-optimal-transport": {
+      "id": "certified-parallel-in-time-sinkhorn-for-dynamic-entropic-optimal-transport",
+      "title": "Certified Parallel-in-Time Sinkhorn for Dynamic Entropic Optimal Transport",
+      "authors": [
+        "Xinyang Wen"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24741v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24741v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：前沿论文：Dynamic applications, including optimal-transport Flow Matching, …",
+      "one_line_essence": "前沿论文：Dynamic applications, including optimal-transport Flow Matching, repeatedly so…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "前沿论文：Dynamic applications, including optimal-transport Flow Matching, repeatedly so…",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "前沿论文：Dynamic applications, including optimal-transport Flow Matching, repeatedly so…",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24741v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24741v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=certified-parallel-in-time-sinkhorn-for-dynamic-entropic-optimal-transport",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "learning-distributions-from-multiple-data-providers": {
+      "id": "learning-distributions-from-multiple-data-providers",
+      "title": "Learning Distributions from Multiple Data Providers",
+      "authors": [
+        "Jon Kleinberg",
+        "Amin Saberi",
+        "Xizhi Tan",
+        "Grigoris Velegkas"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24732v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24732v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：前沿论文：Motivated by learning from heterogeneous and overlapping data pro…",
+      "one_line_essence": "前沿论文：Motivated by learning from heterogeneous and overlapping data providers, we st…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "前沿论文：Motivated by learning from heterogeneous and overlapping data providers, we st…",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "前沿论文：Motivated by learning from heterogeneous and overlapping data providers, we st…",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24732v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24732v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=learning-distributions-from-multiple-data-providers",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
+    "global-convergence-of-dgm-and-pinn-algorithms-for-solving-nonlinear-pdes": {
+      "id": "global-convergence-of-dgm-and-pinn-algorithms-for-solving-nonlinear-pdes",
+      "title": "Global Convergence of DGM and PINN Algorithms for Solving Nonlinear PDEs",
+      "authors": [
+        "Justin Sirignano",
+        "Konstantinos Spiliopoulos",
+        "Samuel Cohen"
+      ],
+      "source": "arXiv",
+      "published": "2026-07-27",
+      "url": "http://arxiv.org/abs/2607.24726v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24726v1",
+      "code_url": "",
+      "benchmark_url": "",
+      "paperswithcode_url": "",
+      "openreview_url": "",
+      "first_seen_date": "2026-07-29",
+      "first_deep_dive_daily": "2026-07-29",
+      "value_type": "ignore",
+      "value_type_label": "暂时忽略",
+      "value_scores": {
+        "novelty": 4.8,
+        "relevance": 3.8,
+        "evidence": 4.5,
+        "engineering_testability": 3.5,
+        "trend_signal": 3.5,
+        "long_tail_potential": 3.5,
+        "actionability": 3.8,
+        "noise_risk": 2.4
+      },
+      "score": 28.5,
+      "decision": "暂时忽略",
+      "one_line_judgement": "当前可忽略：前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networ…",
+      "one_line_essence": "前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) ha…",
+      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
+      "new_claim_or_method": "前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) ha…",
+      "research_position": "source_paper",
+      "engineering_testability": {
+        "has_code": false,
+        "has_benchmark": false,
+        "can_reproduce": false,
+        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
+        "engineering_scenarios": [
+          "AI Agent",
+          "Context Engineering",
+          "评测治理"
+        ]
+      },
+      "trend_relation": {
+        "status": "noise",
+        "related_trends": [],
+        "evidence": [
+          "论文主题匹配固定研究方向"
+        ],
+        "uncertainties": [
+          "是否会出现更多开源实现与生产案例"
+        ]
+      },
+      "long_tail": {
+        "why_save": "前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) ha…",
+        "future_trigger": [
+          "待更多证据"
+        ],
+        "possible_use_cases": [
+          "Prompt 设计",
+          "Skill 草案",
+          "评测方法",
+          "架构模式"
+        ],
+        "reusable_assets": [
+          "Prompt",
+          "Skill",
+          "Checklist",
+          "模板"
+        ],
+        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
+        "revisit_date": ""
+      },
+      "insights": {
+        "system_design": [
+          "先判断价值类型，再决定系统性投入。"
+        ],
+        "agent_engineering": [
+          "为 Agent 建立论文价值路由器。"
+        ],
+        "dev_process": [
+          "论文输出应沉淀为可执行资产。"
+        ],
+        "evaluation": [
+          "同时看方法与证据质量。"
+        ],
+        "platform_engineering": [
+          "长尾资产库可降低重复检索成本。"
+        ],
+        "personal_learning": [
+          "优先读能转化为未来复利的论文。"
+        ]
+      },
+      "actions": {
+        "immediate_actions": [],
+        "trend_actions": [],
+        "long_tail_actions": [],
+        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
+      },
+      "references": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2607.24726v1"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.24726v1"
+        }
+      ],
+      "detail_path": "paper-detail.html?id=global-convergence-of-dgm-and-pinn-algorithms-for-solving-nonlinear-pdes",
+      "daily_path": "daily-detail.html?date=2026-07-29",
+      "trend_paths": [],
+      "long_tail_path": "long-tail.html",
+      "mermaid": {
+        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
+        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
+        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
+      }
+    },
     "2026-07-28-arxiv": {
       "id": "2026-07-28-arxiv",
       "title": "[无新论文] 2026-07-28 arXiv 无新提交",
@@ -476,131 +1778,6 @@
       "trend_paths": [
         "trend-detail.html?id=agentic-world-modeling",
         "trend-detail.html?id=context-engineering"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding": {
-      "id": "clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
-      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
-      "authors": [
-        "Hangjie Yuan",
-        "Yichen Qian",
-        "Zhiwei Tang",
-        "Xianzhe Xu",
-        "Lirong Wu"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24743v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24743v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=ClinFusion%3A%20A%20Vision-Centric%20Multimodal%20LLM%20System%20for%20Holistic%20Medical%20Understa",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 7.4,
-        "evidence": 4.95,
-        "engineering_testability": 5.25,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 44.6,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：RAG / 知识系统：Multimodal large language models (MLLMs) hold immense poten…",
-      "one_line_essence": "RAG / 知识系统：Multimodal large language models (MLLMs) hold immense potential to revolutioni…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "RAG / 知识系统：Multimodal large language models (MLLMs) hold immense potential to revolutioni…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "context-engineering",
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "RAG / 知识系统：Multimodal large language models (MLLMs) hold immense potential to revolutioni…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=clinfusion-a-vision-centric-multimodal-llm-system-for-holistic-medical-understanding",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [
-        "trend-detail.html?id=context-engineering",
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
       ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
@@ -1456,249 +2633,6 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "erunderstand-evaluating-vision-language-models-on-structured-er-diagrams": {
-      "id": "erunderstand-evaluating-vision-language-models-on-structured-er-diagrams",
-      "title": "ERUnderstand: Evaluating Vision-Language Models on Structured ER Diagrams",
-      "authors": [
-        "Ali Ansari",
-        "Yasmin Mohammadi",
-        "Farnoush Nili",
-        "Parsa Esmaeilkhani",
-        "Longin Jan Latecki"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24707v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24707v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=ERUnderstand%3A%20Evaluating%20Vision-Language%20Models%20on%20Structured%20ER%20Diagrams",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 5.4,
-        "relevance": 6.2,
-        "evidence": 4.95,
-        "engineering_testability": 4.7,
-        "trend_signal": 5.45,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 1.2
-      },
-      "score": 42.1,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to co…",
-      "one_line_essence": "Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to conceptual database design,…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to conceptual database design,…",
-      "research_position": "benchmark",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "agentic-world-modeling",
-          "coding-agent"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "Multimodal Agent：Entity-Relationship Diagrams (ERDs) are central to conceptual database design,…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=erunderstand-evaluating-vision-language-models-on-structured-er-diagrams",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling",
-        "trend-detail.html?id=coding-agent"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation": {
-      "id": "the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation",
-      "title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
-      "authors": [
-        "Tianyi Men",
-        "Zhuoran Jin",
-        "Kang Liu",
-        "Jun Zhao"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24720v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24720v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=The%20Physics%20of%20Multi-Turn%20Long-Horizon%20Planning%3A%20From%20Pre-training%20to%20Post-train",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 5.4,
-        "relevance": 6.2,
-        "evidence": 4.5,
-        "engineering_testability": 5.25,
-        "trend_signal": 4.05,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 41.2,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：AI Agent：Multi-turn long-horizon planning is critical for foundation m…",
-      "one_line_essence": "AI Agent：Multi-turn long-horizon planning is critical for foundation model agents, yet …",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "AI Agent：Multi-turn long-horizon planning is critical for foundation model agents, yet …",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "agentic-world-modeling"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "AI Agent：Multi-turn long-horizon planning is critical for foundation model agents, yet …",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=the-physics-of-multi-turn-long-horizon-planning-from-pre-training-to-post-training-via-single-and-multi-teacher-on-policy-agentic-distillation",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling"
-      ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
     "siren-towards-end-to-end-extreme-weather-early-warning-with-experience-grounded-llm-agents": {
       "id": "siren-towards-end-to-end-extreme-weather-early-warning-with-experience-grounded-llm-agents",
       "title": "SIREN: Towards End-to-End Extreme-Weather Early Warning with Experience-Grounded LLM Agents",
@@ -2168,127 +3102,6 @@
       "detail_path": "paper-detail.html?id=from-data-to-device-elmod-an-efficient-german-first-2-7b-language-model-for-mobile-inference",
       "daily_path": "daily-detail.html?date=2026-07-27",
       "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "kanex-translating-kolmogorov-arnold-networks-interpretability-to-medical-explainability": {
-      "id": "kanex-translating-kolmogorov-arnold-networks-interpretability-to-medical-explainability",
-      "title": "KANEx: Translating Kolmogorov-Arnold Networks' Interpretability to Medical Explainability",
-      "authors": [
-        "Krithi Shailya",
-        "Ananya Lakshmi Ravi",
-        "Venkatanathan K. V.",
-        "Sowmya S. Sundaram",
-        "Gokul S. Krishnan"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24730v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24730v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=KANEx%3A%20Translating%20Kolmogorov-Arnold%20Networks%27%20Interpretability%20to%20Medical%20Expla",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
-        "engineering_testability": 5.8,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 38.7,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：Multimodal Agent：Computer vision models have become highly effective f…",
-      "one_line_essence": "Multimodal Agent：Computer vision models have become highly effective for medical applications, …",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "Multimodal Agent：Computer vision models have become highly effective for medical applications, …",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [
-          "agentic-world-modeling"
-        ],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "Multimodal Agent：Computer vision models have become highly effective for medical applications, …",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=kanex-translating-kolmogorov-arnold-networks-interpretability-to-medical-explainability",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [
-        "trend-detail.html?id=agentic-world-modeling"
-      ],
       "long_tail_path": "long-tail.html",
       "mermaid": {
         "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
@@ -2886,123 +3699,6 @@
       "trend_paths": [
         "trend-detail.html?id=context-engineering"
       ],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation": {
-      "id": "rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation",
-      "title": "Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation",
-      "authors": [
-        "Bingnan Li",
-        "Haozhe Wang",
-        "Haozhong Xiong",
-        "Fangtai Wu",
-        "Jinpeng Yu"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24731v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24731v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=Rethinking%20Classifier-Free%20Guidance%20in%20On-Policy%20Diffusion%20Distillation",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
-        "engineering_testability": 5.25,
-        "trend_signal": 3.5,
-        "long_tail_potential": 4.15,
-        "actionability": 5.0,
-        "noise_risk": 1.2
-      },
-      "score": 37.3,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：推理与服务：On-policy distillation (OPD) adapts diffusion models by querying…",
-      "one_line_essence": "推理与服务：On-policy distillation (OPD) adapts diffusion models by querying a teacher alo…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "推理与服务：On-policy distillation (OPD) adapts diffusion models by querying a teacher alo…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "推理与服务：On-policy distillation (OPD) adapts diffusion models by querying a teacher alo…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=rethinking-classifier-free-guidance-in-on-policy-diffusion-distillation",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [],
       "long_tail_path": "long-tail.html",
       "mermaid": {
         "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
@@ -4309,119 +5005,6 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "certified-parallel-in-time-sinkhorn-for-dynamic-entropic-optimal-transport": {
-      "id": "certified-parallel-in-time-sinkhorn-for-dynamic-entropic-optimal-transport",
-      "title": "Certified Parallel-in-Time Sinkhorn for Dynamic Entropic Optimal Transport",
-      "authors": [
-        "Xinyang Wen"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24741v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24741v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=Certified%20Parallel-in-Time%20Sinkhorn%20for%20Dynamic%20Entropic%20Optimal%20Transport",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 5.0,
-        "evidence": 4.5,
-        "engineering_testability": 4.7,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 1.2
-      },
-      "score": 34.9,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：安全与治理：Dynamic applications, including optimal-transport Flow Matching,…",
-      "one_line_essence": "安全与治理：Dynamic applications, including optimal-transport Flow Matching, repeatedly so…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "安全与治理：Dynamic applications, including optimal-transport Flow Matching, repeatedly so…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "安全与治理：Dynamic applications, including optimal-transport Flow Matching, repeatedly so…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=certified-parallel-in-time-sinkhorn-for-dynamic-entropic-optimal-transport",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
     "stacking-the-deck-tunable-trainability-in-stacked-lcus": {
       "id": "stacking-the-deck-tunable-trainability-in-stacked-lcus",
       "title": "Stacking the Deck: Tunable Trainability in Stacked LCUs",
@@ -5125,238 +5708,6 @@
         "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
       }
     },
-    "dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data": {
-      "id": "dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data",
-      "title": "DataOrchestra: Learning to Orchestrate Per-Example Curation of Pretraining Data",
-      "authors": [
-        "Zhen Huang",
-        "Yikun Wang",
-        "Shijie Xia",
-        "Pengfei Liu"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24717v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24717v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=DataOrchestra%3A%20Learning%20to%20Orchestrate%20Per-Example%20Curation%20of%20Pretraining%20Data",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 5.8,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 2.4
-      },
-      "score": 31.9,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：前沿论文：Pretraining data processing is critical to the downstream perform…",
-      "one_line_essence": "前沿论文：Pretraining data processing is critical to the downstream performance of Large…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "前沿论文：Pretraining data processing is critical to the downstream performance of Large…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "前沿论文：Pretraining data processing is critical to the downstream performance of Large…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=dataorchestra-learning-to-orchestrate-per-example-curation-of-pretraining-data",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "efficient-llm-generated-shuttling-compilers-for-complex-trapped-ion-architectures": {
-      "id": "efficient-llm-generated-shuttling-compilers-for-complex-trapped-ion-architectures",
-      "title": "Efficient LLM-Generated Shuttling Compilers for Complex Trapped-Ion Architectures",
-      "authors": [
-        "Fabian Kreppel",
-        "Reza Salkhordeh",
-        "Ferdinand Schmidt-Kaler",
-        "André Brinkmann"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24714v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24714v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=Efficient%20LLM-Generated%20Shuttling%20Compilers%20for%20Complex%20Trapped-Ion%20Architecture",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 6.0,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 4.7,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 2.4
-      },
-      "score": 31.6,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：前沿论文：Trapped-ion quantum computers rely on shuttling compilers, which …",
-      "one_line_essence": "前沿论文：Trapped-ion quantum computers rely on shuttling compilers, which cast an input…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "前沿论文：Trapped-ion quantum computers rely on shuttling compilers, which cast an input…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "前沿论文：Trapped-ion quantum computers rely on shuttling compilers, which cast an input…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=efficient-llm-generated-shuttling-compilers-for-complex-trapped-ion-architectures",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
     "when-can-you-correct-distribution-drift-in-temporal-graph-generation-a-sharpening-drift-tension-and-an-impossibility-for-observation-based-correction": {
       "id": "when-can-you-correct-distribution-drift-in-temporal-graph-generation-a-sharpening-drift-tension-and-an-impossibility-for-observation-based-correction",
       "title": "When Can You Correct Distribution Drift in Temporal Graph Generation? A Sharpening--Drift Tension and an Impossibility for Observation-Based Correction",
@@ -5465,237 +5816,6 @@
       },
       "references": [],
       "detail_path": "paper-detail.html?id=when-can-you-correct-distribution-drift-in-temporal-graph-generation-a-sharpening-drift-tension-and-an-impossibility-for-observation-based-correction",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "learning-distributions-from-multiple-data-providers": {
-      "id": "learning-distributions-from-multiple-data-providers",
-      "title": "Learning Distributions from Multiple Data Providers",
-      "authors": [
-        "Jon Kleinberg",
-        "Amin Saberi",
-        "Xizhi Tan",
-        "Grigoris Velegkas"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24732v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24732v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=Learning%20Distributions%20from%20Multiple%20Data%20Providers",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 4.7,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 2.4
-      },
-      "score": 30.0,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：前沿论文：Motivated by learning from heterogeneous and overlapping data pro…",
-      "one_line_essence": "前沿论文：Motivated by learning from heterogeneous and overlapping data providers, we st…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "前沿论文：Motivated by learning from heterogeneous and overlapping data providers, we st…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "前沿论文：Motivated by learning from heterogeneous and overlapping data providers, we st…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=learning-distributions-from-multiple-data-providers",
-      "daily_path": "daily-detail.html?date=2026-07-27",
-      "trend_paths": [],
-      "long_tail_path": "long-tail.html",
-      "mermaid": {
-        "value_discovery": "flowchart TD\nP[论文] --> V[价值判断]\nV --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> A[立即学习 / 试点]\nT --> R[纳入趋势雷达 / 持续观察]\nL --> S[沉淀启发 / 加入长尾库]\nN --> X[保留最小索引]",
-        "evidence": "flowchart TD\nP[论文] --> Q[底层问题]\nP --> M[新命题 / 新方法]\nP --> G[研究位置]\nP --> E[工程可验证性]\nP --> C[趋势关联]\nP --> L[长尾价值]",
-        "actions": "flowchart TD\nV[价值类型] --> I[即时价值]\nV --> T[趋势价值]\nV --> L[长尾价值]\nV --> N[暂时忽略]\nI --> I1[30分钟学习]\nI --> I2[2小时实践]\nI --> I3[1周研究]\nT --> T1[纳入趋势雷达]\nT --> T2[设置观察问题]\nT --> T3[周期复盘]\nL --> L1[加入长尾库]\nL --> L2[标注触发条件]\nL --> L3[沉淀 Prompt / Skill / Checklist]\nN --> N1[记录忽略理由]\nN --> N2[保留最小索引]"
-      }
-    },
-    "global-convergence-of-dgm-and-pinn-algorithms-for-solving-nonlinear-pdes": {
-      "id": "global-convergence-of-dgm-and-pinn-algorithms-for-solving-nonlinear-pdes",
-      "title": "Global Convergence of DGM and PINN Algorithms for Solving Nonlinear PDEs",
-      "authors": [
-        "Justin Sirignano",
-        "Konstantinos Spiliopoulos",
-        "Samuel Cohen"
-      ],
-      "source": "arxiv",
-      "published": "2026-07-27",
-      "url": "http://arxiv.org/abs/2607.24726v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24726v1",
-      "code_url": "",
-      "benchmark_url": "",
-      "paperswithcode_url": "https://paperswithcode.com/search?q=Global%20Convergence%20of%20DGM%20and%20PINN%20Algorithms%20for%20Solving%20Nonlinear%20PDEs",
-      "openreview_url": "",
-      "first_seen_date": "2026-07-27",
-      "first_deep_dive_daily": "2026-07-27",
-      "value_type": "ignore",
-      "value_type_label": "暂时忽略",
-      "value_scores": {
-        "novelty": 4.8,
-        "relevance": 3.8,
-        "evidence": 4.5,
-        "engineering_testability": 4.7,
-        "trend_signal": 3.5,
-        "long_tail_potential": 3.5,
-        "actionability": 3.8,
-        "noise_risk": 2.4
-      },
-      "score": 30.0,
-      "decision": "暂时忽略",
-      "one_line_judgement": "当前可忽略：前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networ…",
-      "one_line_essence": "前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) ha…",
-      "core_problem": "如何把论文信号转成能指导架构、Agent、评测与平台实践的研究资产。",
-      "new_claim_or_method": "前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) ha…",
-      "research_position": "source_paper",
-      "engineering_testability": {
-        "has_code": false,
-        "has_benchmark": false,
-        "can_reproduce": false,
-        "minimum_experiment": "摘要精读 + Prompt 试验 / 评测脚本 / 最小 PoC",
-        "engineering_scenarios": [
-          "AI Agent",
-          "Context Engineering",
-          "评测治理"
-        ]
-      },
-      "trend_relation": {
-        "status": "noise",
-        "related_trends": [],
-        "evidence": [
-          "论文主题匹配固定研究方向"
-        ],
-        "uncertainties": [
-          "是否会出现更多开源实现与生产案例"
-        ]
-      },
-      "long_tail": {
-        "why_save": "前沿论文：The Deep Galerkin Method (DGM) and Physics Informed Neural Networks (PINNs) ha…",
-        "future_trigger": [
-          "待更多证据"
-        ],
-        "possible_use_cases": [
-          "Prompt 设计",
-          "Skill 草案",
-          "评测方法",
-          "架构模式"
-        ],
-        "reusable_assets": [
-          "Prompt",
-          "Skill",
-          "Checklist",
-          "模板"
-        ],
-        "revisit_condition": "出现开源实现 / 高质量引用 / benchmark 收录 / 与当前场景交集增强",
-        "revisit_date": ""
-      },
-      "insights": {
-        "system_design": [
-          "先判断价值类型，再决定系统性投入。"
-        ],
-        "agent_engineering": [
-          "为 Agent 建立论文价值路由器。"
-        ],
-        "dev_process": [
-          "论文输出应沉淀为可执行资产。"
-        ],
-        "evaluation": [
-          "同时看方法与证据质量。"
-        ],
-        "platform_engineering": [
-          "长尾资产库可降低重复检索成本。"
-        ],
-        "personal_learning": [
-          "优先读能转化为未来复利的论文。"
-        ]
-      },
-      "actions": {
-        "immediate_actions": [],
-        "trend_actions": [],
-        "long_tail_actions": [],
-        "ignore_reason": "新意弱、证据弱、相关性有限，当前不建议投入。"
-      },
-      "references": [],
-      "detail_path": "paper-detail.html?id=global-convergence-of-dgm-and-pinn-algorithms-for-solving-nonlinear-pdes",
       "daily_path": "daily-detail.html?date=2026-07-27",
       "trend_paths": [],
       "long_tail_path": "long-tail.html",
