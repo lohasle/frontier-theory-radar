@@ -78,7 +78,7 @@ async function enhanceMermaid() {
     return;
   }
   try {
-    window.mermaid.initialize({ startOnLoad: false, theme: 'base', securityLevel: 'loose', themeVariables: { primaryColor: '#ede9fe', primaryTextColor: '#1e1b4b', primaryBorderColor: '#c4b5fd', lineColor: '#7c3aed', secondaryColor: '#ecfeff', tertiaryColor: '#f8fafc' } });
+    window.mermaid.initialize({ startOnLoad: false, theme: 'base', securityLevel: 'loose', themeVariables: { primaryColor: '#f7f5f0', primaryTextColor: '#1a1a2e', primaryBorderColor: '#d4d0c8', lineColor: '#1a3a5c', secondaryColor: '#e8f0f7', tertiaryColor: '#fdfcfa', fontFamily: 'Georgia, "Source Serif Pro", serif' } });
     await window.mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
     document.querySelectorAll('.mermaid-fallback').forEach(n => n.style.display = 'none');
   } catch (e) {
@@ -153,7 +153,7 @@ async function renderIndexPage() {
 
   let sections = '';
   sections += `<section class="hero">
-      <div class="hero-badge"><span class="dot"></span>论文价值发现工作台</div>
+      <div class="hero-badge"><span class="dot"></span>FRONTIER THEORY RADAR</div>
       <h1>${escapeHtml(data.site_title || '前沿理论驱动技术雷达日报')}</h1>
       <p>${escapeHtml(data.site_subtitle || '')}</p>
       <div class="hero-actions">
