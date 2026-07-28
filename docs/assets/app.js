@@ -384,7 +384,7 @@ async function renderPapersPage() {
     `<label>最低分 <select id="paper-filter-score"><option value="0">不限</option><option value="50" ${minScore===50?'selected':''}>50+</option><option value="65" ${minScore===65?'selected':''}>65+</option><option value="80" ${minScore===80?'selected':''}>80+</option></select></label>`,
   ])}
   ${renderResultMeta(papers.length, filtered.length, query ? `关键词：${query}` : '')}
-  <div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>日期</th><th>来源</th><th>方向</th><th>价值类型</th><th>分数</th><th>判断</th><th>链接</th></tr></thead><tbody>
+  <div class="table-wrapper"><table><colgroup><col><col><col><col><col><col><col><col></colgroup><thead><tr><th>论文标题</th><th>日期</th><th>来源</th><th>方向</th><th>价值类型</th><th>分数</th><th>判断</th><th>链接</th></tr></thead><tbody>
   ${filtered.map(p => `<tr>
     <td><a href="${escapeHtml(p.detail_path || '#')}">${escapeHtml(p.title || '')}</a><div class="muted cell-sub">${escapeHtml(p.brief_cn || '')}</div></td>
     <td>${escapeHtml(p.first_seen_date || '')}</td>
@@ -453,7 +453,7 @@ async function renderLongTailPage() {
   };
   const html = `<div class="page-header"><h1>长尾库</h1><p>保存现在不火、没有成熟工程实践，但未来可能有价值的论文、方法、评测、反证和工程启发。</p></div>
     <div class="callout" style="margin-bottom:16px"><strong>为什么需要长尾库：</strong>不是所有有价值论文都会立刻形成趋势。长尾库用于保存未来可能变重要的论文、方法、评测、反证和工程启发。</div>
-    <div class="table-wrapper"><table><thead><tr><th>论文标题</th><th>方向</th><th>长尾价值类型</th><th>为什么保存</th><th>未来触发条件</th><th>可沉淀资产</th><th>复盘时间</th></tr></thead><tbody>
+    <div class="table-wrapper"><table><colgroup><col><col><col><col><col><col><col></colgroup><thead><tr><th>论文标题</th><th>方向</th><th>长尾价值类型</th><th>为什么保存</th><th>未来触发条件</th><th>可沉淀资产</th><th>复盘时间</th></tr></thead><tbody>
     ${items.map(item => `<tr>
       <td><a href="${escapeHtml(item.detail_path || '#')}">${escapeHtml(item.title || '')}</a></td>
       <td>${ph(item.direction)}</td>
