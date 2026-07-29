@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **Moved to [aiutil/frontier-theory-radar](https://github.com/aiutil/frontier-theory-radar). This repository is archived and no longer updated.**
+>
+> **本项目已迁移至 [aiutil/frontier-theory-radar](https://github.com/aiutil/frontier-theory-radar)。本仓库已归档，不再更新。**
+
 # 前沿理论驱动技术雷达日报
 
 > 面向资深架构师与 AI 研究员的论文价值发现系统。
